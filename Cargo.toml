@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+bevy = { version = "0.19.1" , default-features = false, features = ["async_executor", "async-io", "bevy_anti_alias", "bevy_camera",
+"bevy_core_pipeline", "bevy_gizmos", "bevy_mesh", "bevy_log", "bevy_scene", "bevy_shader", "bevy_sprite", "bevy_text", "bevy_state", "bevy_sprite_render",
+"bevy_color", "bevy_camera_controller", "bevy_asset", "bevy_gizmos_render", "bevy_gltf", "bevy_image", "bevy_light", "bevy_pbr", "bevy_window", "bevy_winit", "bevy_ui", "bevy_ui_debug", "bevy_ui_render",
+"bevy_post_process", "bevy_render", "2d_bevy_render", "3d_bevy_render"] }
+bevy_kira_audio = { version = "0.26.0", features = ["mp3", "wav", "ogg"] }
+rand = "0.10.2"
