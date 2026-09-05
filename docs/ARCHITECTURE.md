@@ -1,6 +1,6 @@
 # Aggregate architecture
 
-## Implemented foundation
+## Implemented boundaries
 
 The workspace follows explicit responsibility boundaries. Project crates use the `aggregate-` prefix; internal types describe their actual role (`UiButton`, `TooltipContent`, `SimulationClock`). The standard developer executable remains `xtask`.
 
@@ -11,11 +11,16 @@ aggregate-client -> aggregate-ui -> Bevy
                  -> aggregate-localization -> Fluent
 
 aggregate-simulation-core -> bevy_ecs
+                          -> aggregate-world
+                          -> aggregate-scenario -> aggregate-world
+                          -> aggregate-economy  -> aggregate-world
 
 xtask -> Cargo commands
 ```
 
-UI components receive localized strings from the client. No UI component can mutate simulation state. The simulation owns a separate World and advances only through explicit calls; it does not import rendering, windows, fonts or client code. The current schedule only advances a logical clock. Domain time resolution is undecided.
+UI components receive localized strings from the client. The client is still a component preview and has no simulation dependency. The simulation owns one authoritative World and advances one logical day per explicit `step` call; it does not import rendering, windows, fonts or client code. A logical day is independent of real time and has no historical calendar mapping yet.
+
+`aggregate-world` owns definitions, typed identifiers and serializable state. `aggregate-scenario` owns JSON loading and validation. `aggregate-economy` implements pure allocation and recipe calculations without mutating state. `aggregate-simulation-core` composes those calculations into ECS phases and owns command validation, committed state, reports, persistence and replay. No domain crate needs to depend on another domain's implementation to share the world contracts.
 
 ## UI approach
 
@@ -37,29 +42,49 @@ Large-list virtualization, text editing/IME acceptance, screen-reader acceptance
 
 Fluent catalogs live in `locales/{ko-KR,en-US}/interface.ftl`. The localization crate has no rendering dependency. Missing selected-language messages fall back to English; missing keys and formatting errors are explicit errors. The client logs those errors and displays a diagnostic key rather than silently blank text.
 
-Bundled catalogs currently contain argument-free UI messages. Tests check matching keys and successful formatting in both languages. When parameterized news and terms are added, extend validation to variable contracts, plural/select variants and references. Simulation events must ultimately store typed facts and domain IDs, not rendered localized sentences. Font fallback beyond the bundled character coverage remains to be designed.
+Bundled catalogs currently contain argument-free UI messages. Tests check matching keys and successful formatting in both languages. Simulation events already store typed facts and domain IDs; their localized presentation is not connected yet. When parameterized news and terms are added, extend validation to variable contracts, plural/select variants and references. Font fallback beyond the bundled character coverage remains to be designed.
 
-## Planned simulation integration (not implemented)
+## Native simulation model
 
-Economy, education, population, logistics, military, politics and diplomacy will operate on one logical authoritative simulation World. Components, tables and graphs have explicit source owners. The client submits domain commands and reads completed query results; UI state is not a second editable authority.
+Mechanisms are Rust functions and systems. Serde maps JSON presets and saves to typed Rust data; it is not a rule language. Rhai, other scripting engines and a custom DSL are deferred. Content parameters can change without changing the algorithms, while a new mechanism currently requires Rust implementation and a build.
 
-Add domain crates when concrete mechanisms and contracts are implemented. Do not create empty crates for every future feature. Do not create cyclic Cargo dependencies to represent reciprocal social/economic effects. Exchange typed requests/results through domain-owned contracts and compose schedules above them.
+Definitions describe goods, per-level staffing, per-worker-day input/output recipes and construction costs. State describes countries, provinces, population groups, completed facilities and active construction projects. Goods are counted in integer scenario units; population, workers, stock and work quantities use checked `u64` arithmetic. Production operates in whole worker-day batches. The fixture values in `scenarios/foundation.json` are synthetic and have no empirical calibration.
 
-Distinguish:
+`GoodId` and `FacilityDefinitionId` are typed string keys for authored content. `CountryId` and `ProvinceId` are also string keys in the current preset model. `FacilityId` and `PopulationGroupId` wrap UUIDs for instances. The caller assigns a new facility UUID before submitting a command, and replay reuses that recorded value. The core does not generate random identities during a day. Nil, duplicate and conflicting instance IDs are rejected; ECS entity IDs are never persisted or used as domain identities.
 
-- Definition parameters and policies, which may be declared as data.
-- Persisted state, changed by its owning mechanism.
-- Derived metrics, calculated from authoritative inputs.
-- Competing-resource allocation and graph/equilibrium solvers, implemented as explicit Rust algorithms.
+Scenario loading rejects unsupported versions, unknown fields and references, invalid quantities and unsupported aggregate ranges, with field paths and source paths when loaded from a file. Scenarios begin at day zero without pending construction; commands create projects. Saved snapshots can contain validated projects in progress.
 
-Any future declarative rule format must define units, scope, input phase/time, allowed operations, diagnostics and provenance. Rust traits alone do not reveal numeric dependencies. Temporal feedback and same-step algebraic cycles require explicit modeling choices. A generic string-to-number store or unrestricted mutation DSL is not the foundation.
+## Commands and daily execution
 
-The user operates through construction, policies and automation with optional detailed intervention. Scenario editing may expose finer state but must validate and record changes. Shared action validation must serve player UI, AI and automation.
+`StartConstruction` runs between complete days. It checks province ownership, the definition, the requested workforce, instance identity and the proposed state's invariants before publication. Required goods are reserved up front. Rejected commands leave stockpiles, projects and command history unchanged. The successful command records its day, sequence and typed input, and returns construction-cost flows and a construction-started event.
 
-## Next integration milestone
+Each day follows an explicit schedule:
 
-Define stable IDs, a validated scenario schema, source ownership and command/query contracts before wiring a management screen. Select an actual model and test assumptions before implementing university investment or mobilization. Verify conservation, invalid command rejection, save/resume and replay at that stage. Avoid labeling fixture values as simulated results.
+1. **Begin day:** create proposed province stockpiles and an empty report.
+2. **Labor allocation:** aggregate each province's workforce and share it across operating facilities and construction requests. Shortages use proportional allocation with largest remainders; UUID order breaks ties. No worker is assigned twice.
+3. **Production:** process lower `production_priority` first, then facility UUID. Each facility consumes available inputs and produces only with its active workers. Outputs are available to later facilities and household consumption that day. Priority affects input order, not workforce allocation. Assigned workers blocked by missing inputs are not reassigned during that day.
+4. **Construction:** spend allocated worker-days and report completions. Project priority is inherited by the completed facility and does not prioritize construction labor.
+5. **Consumption:** satisfy household staple demand from the remaining stockpile and report unmet demand.
+6. **Commit:** publish stockpiles, project progress, completed facilities and the new day only after all phases succeed. A newly completed facility first produces on the following day.
+
+Before commit, stock and progress changes live in a temporary day plan. A checked arithmetic or planning failure discards those proposals without changing authoritative state or advancing time. Stable IDs and ordered maps determine results rather than ECS insertion order. No randomness is currently involved.
+
+Reports contain typed production, construction and consumption facts, with goods-flow causes and referenced domain IDs. Food shortages do not automatically change population, mortality or migration. Population groups currently supply fixed population and workforce counts. Prices, wages, government budgets, trade and transport are not implemented.
+
+## Saves and replay
+
+`save_json` includes the original scenario and definitions, the current snapshot, the full accepted command log, a save schema version and a native ruleset version. `from_save_json` validates versions, state and command sequence/day ordering. Unsupported versions are rejected; migrations are not implemented. Loading validates the snapshot directly rather than replaying its entire history, so it does not prove that an edited snapshot was produced by the supplied log.
+
+Replay starts from the initial scenario, advances the same daily schedule, and submits recorded commands through normal validation at their recorded days. UUIDs and consecutive command sequences remain stable. Replay is defined for the current ruleset; changing native rule semantics or execution order requires a ruleset-version change.
+
+`state_hash` hashes the normalized snapshot with BLAKE3 after sorting state vectors by persistent ID and serializing ordered maps. It excludes definitions, rules, command history, reports and ECS layout. Compare hashes within the same scenario and ruleset; the hash is a state-comparison aid, not save authentication. The headless example verifies its final state against both save/load and command replay.
+
+## Next integration
+
+Connect a management screen to validated commands, snapshots and completed reports so changes can be inspected with their causes. UI state must not become a second simulation authority. Education, logistics, military, politics and diplomacy can then add concrete mechanisms against shared contracts; do not create empty domain crates or cyclic Cargo dependencies to represent reciprocal effects.
+
+Any eventual rule language will need explicit scope, units, input time, permitted effects and diagnostics. Rust traits do not discover numeric dependencies, and feedback loops require deliberate temporal or solver semantics. Current code uses explicit typed mechanisms rather than a generic string-to-number store.
 
 ## Validation boundaries
 
-Compilation, automated tests, native runtime inspection, performance measurement and remote CI are distinct evidence. Current tests establish the minimal clock and UI/localization behavior only. They do not establish economic realism, large-world performance, cross-platform determinism or playable simulation functionality.
+Compilation, automated tests, native runtime inspection, performance measurement and remote CI are distinct evidence. Simulation tests cover resource accounting, deterministic allocation/order, command rejection, failure atomicity, construction timing and save/replay behavior. They do not establish economic realism, large-world performance, cross-platform determinism or playable simulation functionality. The existing UI preview has not yet exercised these domain flows.

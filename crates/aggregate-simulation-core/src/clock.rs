@@ -1,25 +1,13 @@
 use bevy_ecs::prelude::Resource;
-use std::{error::Error, fmt};
 
-/// A logical step, deliberately not yet assigned an hour/day/month duration.
+/// Whole elapsed days since the scenario start. Rendering never advances this clock.
 #[derive(Resource, Debug, Default, Clone, Copy, PartialEq, Eq)]
 pub struct SimulationClock {
-    pub(crate) tick: u64,
+    pub(crate) day: u64,
 }
 
 impl SimulationClock {
-    pub fn tick(self) -> u64 {
-        self.tick
+    pub fn day(self) -> u64 {
+        self.day
     }
 }
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub struct TickOverflow;
-
-impl fmt::Display for TickOverflow {
-    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
-        formatter.write_str("simulation tick exhausted its representable range")
-    }
-}
-
-impl Error for TickOverflow {}

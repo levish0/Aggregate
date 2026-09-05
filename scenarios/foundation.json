@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "foundation",
+  "name": "Artificial production and construction fixture",
+  "rules": {
+    "staple_good": "grain",
+    "consumption_per_person_day": 1
+  },
+  "definitions": {
+    "goods": [
+      { "id": "grain", "name": "Grain" },
+      { "id": "timber", "name": "Timber" },
+      { "id": "tools", "name": "Tools" }
+    ],
+    "facilities": [
+      {
+        "id": "grain_farm",
+        "name": "Grain farm",
+        "workers_per_level": 15,
+        "inputs_per_worker_day": {},
+        "outputs_per_worker_day": { "grain": 3 },
+        "construction": {
+          "worker_days": 20,
+          "max_workers": 10,
+          "goods": { "timber": 10, "tools": 5 }
+        }
+      },
+      {
+        "id": "logging_camp",
+        "name": "Logging camp",
+        "workers_per_level": 2,
+        "inputs_per_worker_day": {},
+        "outputs_per_worker_day": { "timber": 2 },
+        "construction": {
+          "worker_days": 15,
+          "max_workers": 5,
+          "goods": { "tools": 5 }
+        }
+      },
+      {
+        "id": "tool_workshop",
+        "name": "Tool workshop",
+        "workers_per_level": 3,
+        "inputs_per_worker_day": { "timber": 1 },
+        "outputs_per_worker_day": { "tools": 1 },
+        "construction": {
+          "worker_days": 25,
+          "max_workers": 5,
+          "goods": { "timber": 15, "tools": 5 }
+        }
+      }
+    ]
+  },
+  "initial_state": {
+    "day": 0,
+    "countries": [{ "id": "example_republic", "name": "Example Republic" }],
+    "provinces": [
+      {
+        "id": "north_valley",
+        "country": "example_republic",
+        "name": "North Valley",
+        "stockpile": { "grain": 120, "timber": 40, "tools": 20 }
+      },
+      {
+        "id": "south_ridge",
+        "country": "example_republic",
+        "name": "South Ridge",
+        "stockpile": { "grain": 180, "timber": 40, "tools": 20 }
+      }
+    ],
+    "population_groups": [
+      { "id": "00000000-0000-0000-0000-000000000065", "province": "north_valley", "population": 40, "workforce": 20 },
+      { "id": "00000000-0000-0000-0000-000000000066", "province": "south_ridge", "population": 60, "workforce": 30 }
+    ],
+    "facilities": [
+      { "id": "00000000-0000-0000-0000-000000000001", "province": "north_valley", "definition": "grain_farm", "level": 1, "production_priority": 20 },
+      { "id": "00000000-0000-0000-0000-000000000002", "province": "north_valley", "definition": "logging_camp", "level": 1, "production_priority": 10 },
+      { "id": "00000000-0000-0000-0000-000000000003", "province": "north_valley", "definition": "tool_workshop", "level": 1, "production_priority": 10 },
+      { "id": "00000000-0000-0000-0000-000000000004", "province": "south_ridge", "definition": "grain_farm", "level": 2, "production_priority": 20 },
+      { "id": "00000000-0000-0000-0000-000000000005", "province": "south_ridge", "definition": "logging_camp", "level": 1, "production_priority": 10 },
+      { "id": "00000000-0000-0000-0000-000000000006", "province": "south_ridge", "definition": "tool_workshop", "level": 1, "production_priority": 10 }
+    ],
+    "construction_projects": []
+  }
+}

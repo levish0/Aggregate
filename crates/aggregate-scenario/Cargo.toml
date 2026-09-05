@@ -1,18 +1,14 @@
 [package]
-name = "aggregate-simulation-core"
+name = "aggregate-scenario"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
-bevy_ecs.workspace = true
 aggregate-world.workspace = true
-aggregate-scenario.workspace = true
-aggregate-economy.workspace = true
-serde.workspace = true
 serde_json.workspace = true
 serde_path_to_error.workspace = true
-blake3.workspace = true
+uuid.workspace = true
 
 [lints]
 workspace = true

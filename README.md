@@ -2,7 +2,9 @@
 
 An extensible nation simulation with a native Bevy interface.
 
-This repository currently contains the **workspace and interface foundation**, not a playable nation simulation. The native interface includes a main menu, component preview, Korean/English switching, session display settings, keyboard navigation and nested tooltips with timed locking. Its original procedural map is decorative, not province data.
+The first headless simulation connects a shared workforce, production, consumption and construction through explicit Rust rules. It loads a validated scenario, records commands, and supports save/resume and deterministic command replay. The bundled scenario is a small synthetic fixture, not a calibrated economic model or a playable nation simulation.
+
+The native interface remains a separate component preview with a main menu, Korean/English switching, session display settings, keyboard navigation and nested tooltips with timed locking. It is not yet connected to simulation results. Its original procedural map is decorative, not province data.
 
 ## Run
 
@@ -23,6 +25,26 @@ Pretendard and the initial Fluent catalogs are included in the executable. No sy
 
 Language, interface scale and reduced motion are session settings. They are not persisted yet. The scale control offers 80–140%; smaller windows also fit the reference layout automatically.
 
+## Headless simulation
+
+Run the bundled scenario and construction command for ten logical days:
+
+```sh
+cargo run -p aggregate-simulation-core --example headless --locked
+```
+
+Provide scenario and command files, a final day, and an optional save destination:
+
+```sh
+cargo run -p aggregate-simulation-core --example headless --locked -- scenarios/foundation.json scenarios/foundation.commands.json 30 target/foundation-save.json
+```
+
+Replace the paths with your own files. [The scenario](scenarios/foundation.json) defines goods, facilities, population groups and province stockpiles. [The command file](scenarios/foundation.commands.json) starts construction with a caller-assigned facility UUID. Commands are ordered by day and consecutive sequence; use an empty JSON array for a run without commands. The example prints workforce and food-shortfall reports and compares its final state with a save/load and command replay.
+
+Facilities and construction share each province's workforce. Construction reserves goods immediately, consumes worker-days, and begins production on the day after completion. Production and households draw from actual province stockpiles; food shortfalls are reported without inventing deaths or migration. There are no prices, wages, finance, trade or demographic transitions yet.
+
+Rules are implemented directly in Rust. Serde handles preset and save data only; scripting and a DSL are deferred.
+
 ## Workspace
 
 | Crate | Responsibility |
@@ -30,10 +52,13 @@ Language, interface scale and reduced motion are session settings. They are not 
 | `aggregate-client` | App startup, screens, navigation and decorative background |
 | `aggregate-ui` | Native Bevy UI theme, fonts, panels, buttons, focus and tooltips |
 | `aggregate-localization` | Fluent catalogs and locale selection; no Bevy dependency |
-| `aggregate-simulation-core` | An independent ECS World and explicit logical clock; no renderer |
+| `aggregate-world` | Typed definitions, persistent identities and serializable world state; no ECS dependency |
+| `aggregate-scenario` | JSON loading, reference checks and scenario/snapshot validation |
+| `aggregate-economy` | Pure Rust workforce allocation, production and consumption calculations |
+| `aggregate-simulation-core` | Authoritative ECS World, daily phases, commands, reports, saves and replay; no renderer |
 | `xtask` | Development checks and the headless example |
 
-The client does not yet depend on the simulation core. No economic, education, military, population, save-game or modding model has been implemented. A simulation tick deliberately has no fixed calendar duration yet.
+The client does not yet depend on the simulation core. Education, military, politics, diplomacy and user-authored rule execution remain future mechanisms.
 
 See [architecture](docs/ARCHITECTURE.md) for dependency boundaries and planned integration, and [memory](memory/README.md) for verified milestones.
 

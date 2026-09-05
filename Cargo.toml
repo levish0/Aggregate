@@ -19,6 +19,9 @@ module_inception = "allow"
 # Internal crates
 aggregate-localization = { path = "crates/aggregate-localization" }
 aggregate-ui = { path = "crates/aggregate-ui" }
+aggregate-world = { path = "crates/aggregate-world" }
+aggregate-scenario = { path = "crates/aggregate-scenario" }
+aggregate-economy = { path = "crates/aggregate-economy" }
 
 # External dependencies
 # Native 2D rendering and UI. Add 3D features when the first 3D consumer exists.
@@ -31,7 +34,7 @@ rand = "0.10.2"
 anyhow = "1.0.104"
 chrono = { version = "0.4.45", features = ["serde"] }
 chrono-tz = "0.10.4"
-uuid = { version = "1.26.0", features = ["v7", "v4"] }
+uuid = { version = "1.26.0", features = ["v7", "v4", "serde"] }
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.23", features = ["json", "env-filter"] }
 tracing-appender = "0.2.5"

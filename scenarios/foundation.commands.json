@@ -1,0 +1,15 @@
+[
+  {
+    "day": 0,
+    "sequence": 1,
+    "command": {
+      "type": "start_construction",
+      "country": "example_republic",
+      "province": "north_valley",
+      "facility": "00000000-0000-0000-0000-000000000010",
+      "definition": "grain_farm",
+      "workers": 10,
+      "production_priority": 20
+    }
+  }
+]

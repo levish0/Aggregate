@@ -1,58 +1,121 @@
-use crate::{SimulationClock, TickOverflow};
+use crate::{
+    SimulationClock,
+    command::{RecordedCommand, SimulationCommand},
+    error::SimulationError,
+    report::{CommandOutcome, DayReport},
+    schedule::create_schedule,
+    world_storage::{self, DayWork},
+};
+use aggregate_scenario::validate_scenario;
+use aggregate_world::{Scenario, WorldSnapshot};
 use bevy_ecs::prelude::*;
 
-/// Owns the authoritative World. Calls to `step` are independent of wall-clock time.
-/// Domain schedules will be added after their resource and phase contracts are defined.
+/// Owns one authoritative ECS World. All public commands run between complete days.
+/// No domain calculation depends on a renderer, wall-clock time, or ECS entity IDs.
 pub struct Simulation {
-    world: World,
+    pub(crate) world: World,
     schedule: Schedule,
-}
-
-impl Default for Simulation {
-    fn default() -> Self {
-        let mut world = World::new();
-        world.init_resource::<SimulationClock>();
-        let mut schedule = Schedule::default();
-        schedule.add_systems(advance_clock);
-        Self { world, schedule }
-    }
+    pub(crate) initial_scenario: Scenario,
+    pub(crate) commands: Vec<RecordedCommand>,
 }
 
 impl Simulation {
+    pub fn from_scenario(mut scenario: Scenario) -> Result<Self, SimulationError> {
+        validate_scenario(&scenario)?;
+        scenario.initial_state.normalize();
+        Ok(Self::from_validated_state(
+            scenario.clone(),
+            &scenario.initial_state,
+            Vec::new(),
+        ))
+    }
+
+    pub(crate) fn from_validated_state(
+        scenario: Scenario,
+        state: &WorldSnapshot,
+        commands: Vec<RecordedCommand>,
+    ) -> Self {
+        Self {
+            world: world_storage::create_world(&scenario, state),
+            schedule: create_schedule(),
+            initial_scenario: scenario,
+            commands,
+        }
+    }
+
     pub fn clock(&self) -> SimulationClock {
         *self.world.resource::<SimulationClock>()
     }
 
-    pub fn step(&mut self) -> Result<SimulationClock, TickOverflow> {
-        self.clock().tick.checked_add(1).ok_or(TickOverflow)?;
+    pub fn snapshot(&mut self) -> WorldSnapshot {
+        world_storage::snapshot(&mut self.world)
+    }
+
+    pub fn command_log(&self) -> &[RecordedCommand] {
+        &self.commands
+    }
+
+    pub fn execute(
+        &mut self,
+        command: SimulationCommand,
+    ) -> Result<CommandOutcome, SimulationError> {
+        let sequence = u64::try_from(self.commands.len())
+            .ok()
+            .and_then(|length| length.checked_add(1))
+            .ok_or_else(|| SimulationError::CommandRejected("command sequence exhausted".into()))?;
+        let outcome = crate::command::execute_command(
+            &mut self.world,
+            &command,
+            sequence,
+            &self.initial_scenario,
+        )?;
+        self.commands.push(RecordedCommand {
+            day: self.clock().day(),
+            sequence,
+            command,
+        });
+        Ok(outcome)
+    }
+
+    pub fn step(&mut self) -> Result<DayReport, SimulationError> {
+        let next_day = self.clock().day().saturating_add(1);
         self.schedule.run(&mut self.world);
-        Ok(self.clock())
-    }
-}
-
-fn advance_clock(mut clock: ResMut<SimulationClock>) {
-    clock.tick += 1;
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn worlds_advance_independently_without_a_renderer() {
-        let mut first = Simulation::default();
-        let second = Simulation::default();
-        for tick in 1..=100 {
-            assert_eq!(first.step().unwrap().tick(), tick);
+        let mut work = self.world.resource_mut::<DayWork>();
+        if let Some((phase, reason)) = work.failure.take() {
+            return Err(SimulationError::DayFailed {
+                day: next_day,
+                phase,
+                reason,
+            });
         }
-        assert_eq!(second.clock().tick(), 0);
+        Ok(work
+            .report
+            .take()
+            .expect("successful commit creates a day report"))
     }
 
-    #[test]
-    fn overflow_fails_without_mutating_the_world() {
-        let mut simulation = Simulation::default();
-        simulation.world.resource_mut::<SimulationClock>().tick = u64::MAX;
-        assert_eq!(simulation.step(), Err(TickOverflow));
-        assert_eq!(simulation.clock().tick(), u64::MAX);
+    /// Replay uses the same validated command path. Log order is semantic, never ECS order.
+    pub fn replay(
+        scenario: Scenario,
+        commands: &[RecordedCommand],
+        through_day: u64,
+    ) -> Result<Self, SimulationError> {
+        crate::save::validate_command_log(commands, through_day)?;
+        let mut simulation = Self::from_scenario(scenario)?;
+        for record in commands {
+            while simulation.clock().day() < record.day {
+                simulation.step()?;
+            }
+            let outcome = simulation.execute(record.command.clone())?;
+            if outcome.sequence != record.sequence {
+                return Err(SimulationError::InvalidReplay(
+                    "command sequence mismatch".into(),
+                ));
+            }
+        }
+        while simulation.clock().day() < through_day {
+            simulation.step()?;
+        }
+        Ok(simulation)
     }
 }
