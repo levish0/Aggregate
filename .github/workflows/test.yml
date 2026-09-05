@@ -11,6 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: Install Bevy platform dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++ pkg-config libx11-dev libudev-dev libwayland-dev libxkbcommon-dev
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
@@ -20,6 +25,4 @@ jobs:
           workspaces: "."
 
       - name: Run tests
-        env:
-          SPICEDB_ENDPOINT: 127.0.0.1:50051
-        run: cargo test --workspace --all-targets -- --nocapture
+        run: cargo test --workspace --all-targets --locked

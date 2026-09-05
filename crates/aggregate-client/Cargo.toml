@@ -1,0 +1,12 @@
+[package]
+name = "aggregate-client"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+[dependencies]
+bevy.workspace = true
+aggregate-ui.workspace = true
+aggregate-localization.workspace = true
+anyhow = "1.0.104"
+[lints]
+workspace = true

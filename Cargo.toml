@@ -1,12 +1,47 @@
-[package]
-name = "Aggregate"
+[workspace]
+resolver = "3"
+members = ["crates/*", "xtask"]
+default-members = ["crates/aggregate-client"]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+authors = ["Levi Laine <levi.laine.me@gmail.com"]
+repository = "https://github.com/levish0/Aggregate"
+rust-version = "1.98.0"
+description = "An extensible nation simulation with a native Bevy interface"
 
-[dependencies]
-bevy = { version = "0.19.1" , default-features = false, features = ["async_executor", "async-io", "bevy_anti_alias", "bevy_camera",
-"bevy_core_pipeline", "bevy_gizmos", "bevy_mesh", "bevy_log", "bevy_scene", "bevy_shader", "bevy_sprite", "bevy_text", "bevy_state", "bevy_sprite_render",
-"bevy_color", "bevy_camera_controller", "bevy_asset", "bevy_gizmos_render", "bevy_gltf", "bevy_image", "bevy_light", "bevy_pbr", "bevy_window", "bevy_winit", "bevy_ui", "bevy_ui_debug", "bevy_ui_render",
-"bevy_post_process", "bevy_render", "2d_bevy_render", "3d_bevy_render"] }
+[workspace.lints.clippy]
+too_many_arguments = "allow"
+module_inception = "allow"
+
+[workspace.dependencies]
+# Internal crates
+aggregate-localization = { path = "crates/aggregate-localization" }
+aggregate-ui = { path = "crates/aggregate-ui" }
+
+# External dependencies
+# Native 2D rendering and UI. Add 3D features when the first 3D consumer exists.
+bevy = { version = "0.19.1", default-features = false, features = ["2d", "ui"] }
+bevy_ecs = "0.19.1"
+fluent-bundle = "0.16"
+unic-langid = "0.9"
 bevy_kira_audio = { version = "0.26.0", features = ["mp3", "wav", "ogg"] }
 rand = "0.10.2"
+anyhow = "1.0.104"
+chrono = { version = "0.4.45", features = ["serde"] }
+chrono-tz = "0.10.4"
+uuid = { version = "1.26.0", features = ["v7", "v4"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["json", "env-filter"] }
+tracing-appender = "0.2.5"
+blake3 = "1.8.7"
+zstd = "0.13.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_path_to_error = "0.1.20"
+serde_with = "3.22.0"
+serde_json = "1.0.151"
+serde_json_canonicalizer = "0.3.2"
+
+[profile.dev]
+debug = 0

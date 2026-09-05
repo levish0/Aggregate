@@ -1,0 +1,12 @@
+[package]
+name = "aggregate-localization"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+fluent-bundle.workspace = true
+unic-langid.workspace = true
+
+[lints]
+workspace = true
