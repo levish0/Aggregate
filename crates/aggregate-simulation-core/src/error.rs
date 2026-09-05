@@ -5,6 +5,12 @@ use std::{error::Error, fmt};
 pub enum SimulationError {
     Scenario(ScenarioError),
     CommandRejected(String),
+    InsufficientConstructionGoods {
+        province: aggregate_world::ProvinceId,
+        good: aggregate_world::GoodId,
+        required: u64,
+        available: u64,
+    },
     DayFailed {
         day: u64,
         phase: &'static str,
@@ -19,6 +25,15 @@ impl fmt::Display for SimulationError {
         match self {
             Self::Scenario(error) => error.fmt(formatter),
             Self::CommandRejected(reason) => write!(formatter, "command rejected: {reason}"),
+            Self::InsufficientConstructionGoods {
+                province,
+                good,
+                required,
+                available,
+            } => write!(
+                formatter,
+                "command rejected: province {province}, good {good}: construction needs {required}, available {available}"
+            ),
             Self::DayFailed { day, phase, reason } => {
                 write!(formatter, "day {day}, {phase}: {reason}")
             }

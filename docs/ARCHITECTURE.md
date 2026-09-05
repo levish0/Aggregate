@@ -9,6 +9,8 @@ Current dependencies:
 ```text
 aggregate-client -> aggregate-ui -> Bevy
                  -> aggregate-localization -> Fluent
+                 -> aggregate-simulation-core
+                 -> aggregate-scenario / aggregate-world
 
 aggregate-simulation-core -> bevy_ecs
                           -> aggregate-world
@@ -18,7 +20,7 @@ aggregate-simulation-core -> bevy_ecs
 xtask -> Cargo commands
 ```
 
-UI components receive localized strings from the client. The client is still a component preview and has no simulation dependency. The simulation owns one authoritative World and advances one logical day per explicit `step` call; it does not import rendering, windows, fonts or client code. A logical day is independent of real time and has no historical calendar mapping yet.
+UI components receive localized strings from the client. The client owns a management session around the core and presents its snapshots and completed reports. The simulation owns one authoritative World and advances one logical day per explicit `step` call; it does not import rendering, windows, fonts or client code. A logical day is independent of real time and has no historical calendar mapping yet.
 
 `aggregate-world` owns definitions, typed identifiers and serializable state. `aggregate-scenario` owns JSON loading and validation. `aggregate-economy` implements pure allocation and recipe calculations without mutating state. `aggregate-simulation-core` composes those calculations into ECS phases and owns command validation, committed state, reports, persistence and replay. No domain crate needs to depend on another domain's implementation to share the world contracts.
 
@@ -26,7 +28,7 @@ UI components receive localized strings from the client. The client is still a c
 
 Use Bevy's native layout, text, input, asset and rendering facilities. Project components provide a cohesive game interface above those facilities. Do not introduce egui or reimplement a graphics engine. Victoria 3 is a reference for information density, panel hierarchy, map framing and visual ambition; existing game assets are not source material for distribution.
 
-The first interface is a **component preview**, deliberately without fabricated treasury, population or simulation outcomes. It verifies the reusable presentation foundation before domain integration. It does not claim Victoria 3-level art completeness.
+The component preview remains available to inspect reusable controls. The management screen uses actual population, stockpiles, labor reports and construction progress from the bundled scenario. It does not claim Victoria 3-level art completeness or economic calibration.
 
 `aggregate-ui` owns theme tokens, bundled fonts, primitive construction, button state, focus and tooltip presentation. `aggregate-client/screens` owns page composition. `aggregate-client/interaction` maps UI activations to interface actions. Only screen/tab/language changes rebuild a screen; state labels and selection update in place. Scroll is confined to the pointed-at pane.
 
@@ -36,13 +38,25 @@ Tooltips have an explicit waiting/visible/locked state stack. The defaults are a
 
 Motion uses Bevy easing curves with per-instance state: interruptible hover transitions, a small elastic release on button labels, panel entrance and smooth scrolling. Hitboxes stay stable. Reduced motion finishes visual transitions immediately without disabling functional tooltip timers. The user's local osu!lazer reference was inspected for interaction timing and transition composition (RoundedButton, FormButton, SwitchButton and OsuButton); no reference code or assets were copied.
 
-Large-list virtualization, text editing/IME acceptance, screen-reader acceptance and game data bindings are future work. Settings are session-only. The reference layout is 1280x800 with automatic fitting and a user scale multiplier.
+Large-list virtualization, text editing/IME acceptance and screen-reader acceptance are future work. Settings are session-only. The reference layout is 1280x800 with automatic fitting and a user scale multiplier.
 
 ## Localization
 
 Fluent catalogs live in `locales/{ko-KR,en-US}/interface.ftl`. The localization crate has no rendering dependency. Missing selected-language messages fall back to English; missing keys and formatting errors are explicit errors. The client logs those errors and displays a diagnostic key rather than silently blank text.
 
-Bundled catalogs currently contain argument-free UI messages. Tests check matching keys and successful formatting in both languages. Simulation events already store typed facts and domain IDs; their localized presentation is not connected yet. When parameterized news and terms are added, extend validation to variable contracts, plural/select variants and references. Font fallback beyond the bundled character coverage remains to be designed.
+Bundled catalogs contain UI labels and parameterized management messages. Tests check matching keys and successful formatting with the management variable contract in both languages; missing required event variables fail explicitly. `FluentArgs` is re-exported by the localization crate for callers. The client formats typed event facts and resource shortages at display time, so existing news changes language with the interface. Bundled scenario names have catalog keys; the authored display name is the fallback when no catalog entry exists. Advanced plural/select contracts and font fallback beyond the bundled character coverage remain to be designed.
+
+## Management session and screen
+
+`aggregate-client/management/session.rs` owns a `Simulation`, its current snapshot, definitions, last completed report and typed news history. The snapshot is a read cache refreshed only after core operations, not an editable second authority. `ManagementViewState` owns the selected province separately. The client starts the bundled scenario paused at day zero and manages its first country.
+
+`ManagementAction` components route existing `ButtonActivated` messages to province selection, construction, single-day stepping and run/pause. Construction supplies a new UUID, requests the definition's maximum builders, and reuses the lowest existing production priority for that building kind (100 when none exists). The core validates and commits the command. `SimulationError::InsufficientConstructionGoods` carries province/good IDs and required/available quantities for localized feedback; other engine errors retain their diagnostic detail. Rejected commands change neither stockpiles nor news.
+
+Run mode requests approximately one day per real second, at most one per frame; slow frames do not trigger catch-up bursts. Single-day stepping pauses playback. Leaving management pauses it and clears accumulated playback time. Returning or changing locale/selection preserves the core session. A failed day pauses automatically and presents the error.
+
+The header shows country totals and the current day. The selected province shows its current stocks and the last completed day's labor, food and facility staffing results. Day-zero observations are explicitly unavailable. Stock deltas exclude construction commands submitted between days; their tooltip explains this boundary. Left-side construction bars show remaining worker-days; the right-side news list renders typed starts, completions and shortages newest first. Command results remain visible above the scrollable content.
+
+Screen roots rebuild only for navigation, preview tabs, locale or font changes. Management labels and progress update in place, with change detection avoiding idle-frame work. Construction rows rebuild when membership changes; news rows rebuild when the event count changes. Scroll containers and controls survive simulation ticks. There is no virtualization or bounded news retention yet. Client preset selection, save/load controls and persistence across application restarts remain future work.
 
 ## Native simulation model
 
@@ -81,10 +95,10 @@ Replay starts from the initial scenario, advances the same daily schedule, and s
 
 ## Next integration
 
-Connect a management screen to validated commands, snapshots and completed reports so changes can be inspected with their causes. UI state must not become a second simulation authority. Education, logistics, military, politics and diplomacy can then add concrete mechanisms against shared contracts; do not create empty domain crates or cyclic Cargo dependencies to represent reciprocal effects.
+Add preset selection and save/load controls to the management session, then richer province/facility inspection. UI state must not become a second simulation authority. Education, logistics, military, politics and diplomacy can add concrete mechanisms against shared contracts; do not create empty domain crates or cyclic Cargo dependencies to represent reciprocal effects.
 
 Any eventual rule language will need explicit scope, units, input time, permitted effects and diagnostics. Rust traits do not discover numeric dependencies, and feedback loops require deliberate temporal or solver semantics. Current code uses explicit typed mechanisms rather than a generic string-to-number store.
 
 ## Validation boundaries
 
-Compilation, automated tests, native runtime inspection, performance measurement and remote CI are distinct evidence. Simulation tests cover resource accounting, deterministic allocation/order, command rejection, failure atomicity, construction timing and save/replay behavior. They do not establish economic realism, large-world performance, cross-platform determinism or playable simulation functionality. The existing UI preview has not yet exercised these domain flows.
+Compilation, automated tests, native runtime inspection, performance measurement and remote CI are distinct evidence. Core tests cover resource accounting, deterministic allocation/order, command rejection, failure atomicity, construction timing and save/replay. Client tests exercise actual button messages through the core and back into text, preserve controls/session state, and verify playback. The opt-in Windows graphical test runs the native client and captures menu, construction, completion and English/small-window states. These checks do not establish economic realism, large-world performance, cross-platform determinism or a complete nation simulation.

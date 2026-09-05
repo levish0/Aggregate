@@ -2,4 +2,5 @@
 mod catalog;
 mod language;
 pub use catalog::Localization;
+pub use fluent_bundle::FluentArgs;
 pub use language::Language;

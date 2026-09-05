@@ -1,4 +1,5 @@
 mod main_menu;
+pub mod management;
 mod preview;
 mod settings;
 
@@ -19,6 +20,7 @@ pub fn rebuild(
     mut commands: Commands,
     state: Res<InterfaceState>,
     fonts: Res<UiFonts>,
+    session: Res<crate::management::ManagementSession>,
     roots: Query<Entity, With<ScreenRoot>>,
     mut previous: Local<
         Option<(
@@ -48,6 +50,7 @@ pub fn rebuild(
         .id();
     match state.screen {
         Screen::MainMenu => main_menu::build(&mut commands, root, &fonts, &state),
+        Screen::Management => management::build(&mut commands, root, &fonts, &state, &session),
         Screen::Preview => preview::build(&mut commands, root, &fonts, &state),
         Screen::Settings => settings::build(&mut commands, root, &fonts, &state),
     }

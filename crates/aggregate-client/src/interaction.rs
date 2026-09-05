@@ -27,6 +27,7 @@ pub fn apply_actions(
         .chain(escape.then_some(InterfaceAction::Back))
     {
         match action {
+            InterfaceAction::OpenManagement => state.screen = Screen::Management,
             InterfaceAction::OpenPreview => state.screen = Screen::Preview,
             InterfaceAction::OpenSettings => state.screen = Screen::Settings,
             InterfaceAction::Back => state.screen = Screen::MainMenu,
@@ -51,6 +52,7 @@ pub fn apply_actions(
         if matches!(
             action,
             InterfaceAction::OpenPreview
+                | InterfaceAction::OpenManagement
                 | InterfaceAction::OpenSettings
                 | InterfaceAction::Back
                 | InterfaceAction::SwitchLanguage

@@ -87,9 +87,12 @@ pub(crate) fn execute_command(
     for (good, amount) in &definition_data.construction.goods {
         let available = stockpile.stockpile.get(good).copied().unwrap_or(0);
         if available < *amount {
-            return Err(reject(format!(
-                "province {province}, good {good}: construction needs {amount}, available {available}"
-            )));
+            return Err(SimulationError::InsufficientConstructionGoods {
+                province: province.clone(),
+                good: good.clone(),
+                required: *amount,
+                available,
+            });
         }
         stockpile.stockpile.insert(good.clone(), available - amount);
         goods_flows.push(GoodsFlow {

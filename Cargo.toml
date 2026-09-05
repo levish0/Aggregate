@@ -22,6 +22,7 @@ aggregate-ui = { path = "crates/aggregate-ui" }
 aggregate-world = { path = "crates/aggregate-world" }
 aggregate-scenario = { path = "crates/aggregate-scenario" }
 aggregate-economy = { path = "crates/aggregate-economy" }
+aggregate-simulation-core = { path = "crates/aggregate-simulation-core" }
 
 # External dependencies
 # Native 2D rendering and UI. Add 3D features when the first 3D consumer exists.

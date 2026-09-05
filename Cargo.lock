@@ -99,9 +99,13 @@ name = "aggregate-client"
 version = "0.1.0"
 dependencies = [
  "aggregate-localization",
+ "aggregate-scenario",
+ "aggregate-simulation-core",
  "aggregate-ui",
+ "aggregate-world",
  "anyhow",
  "bevy",
+ "uuid",
 ]
 
 [[package]]

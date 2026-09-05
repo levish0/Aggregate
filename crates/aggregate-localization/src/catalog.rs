@@ -76,8 +76,8 @@ mod tests {
     use super::*;
     use std::collections::BTreeSet;
 
-    // This catalog uses only top-level, argument-free messages. The formatter below verifies
-    // every message, not just parsing. Extend this contract when parameterized messages land.
+    // All messages are top-level. Exercise formatting with the management variable contract
+    // in both catalogs: missing or misspelled variables must fail, not render diagnostic text.
     fn keys(source: &str) -> BTreeSet<&str> {
         source
             .lines()
@@ -91,8 +91,53 @@ mod tests {
         assert_eq!(keys(KOREAN), keys(ENGLISH));
         for language in [Language::Korean, Language::English] {
             let catalog = Localization::new(language).unwrap();
+            let mut arguments = FluentArgs::new();
+            for name in [
+                "day",
+                "cost",
+                "workers",
+                "work",
+                "inputs",
+                "outputs",
+                "facility",
+                "error",
+                "province",
+                "good",
+                "amount",
+                "production",
+                "construction",
+                "idle",
+                "required",
+                "available",
+                "consumed",
+                "shortfall",
+                "level",
+            ] {
+                arguments.set(name, "7");
+            }
             for key in keys(ENGLISH) {
-                assert!(!catalog.text(key).unwrap().is_empty(), "{key}");
+                assert!(
+                    !catalog.format(key, Some(&arguments)).unwrap().is_empty(),
+                    "{key}"
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn management_event_variables_are_required_and_rendered_in_both_languages() {
+        for language in [Language::Korean, Language::English] {
+            let catalog = Localization::new(language).unwrap();
+            assert!(catalog.text("management-news-shortage").is_err());
+            let mut arguments = FluentArgs::new();
+            arguments.set("province", "North Valley");
+            arguments.set("good", "Grain");
+            arguments.set("amount", "13");
+            let text = catalog
+                .format("management-news-shortage", Some(&arguments))
+                .unwrap();
+            for value in ["North Valley", "Grain", "13"] {
+                assert!(text.contains(value));
             }
         }
     }

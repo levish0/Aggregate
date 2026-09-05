@@ -1,5 +1,6 @@
 app-subtitle = 국가 운영 시뮬레이터
-foundation-label = 인터페이스 기반 · 0.1
+foundation-label = AGGREGATE · 0.1
+menu-management = 국가 관리
 menu-preview = 인터페이스 살펴보기
 menu-settings = 설정
 menu-exit = 나가기
@@ -7,7 +8,7 @@ menu-back = 돌아가기
 menu-title = 국가의 미래를 그리다
 menu-description = 사람과 제도, 산업과 영토.
     서로 연결된 세계를 위한 첫 번째 기반.
-menu-footnote = 개발 중인 인터페이스 · 시뮬레이션 플레이는 아직 제공되지 않습니다.
+menu-footnote = 소규모 개발 시나리오 · 관리 화면으로 돌아오면 진행하던 상태가 유지됩니다.
 preview-title = 국가 운영 인터페이스
 preview-subtitle = 공통 컴포넌트 미리보기
 nav-overview = 개요
@@ -61,3 +62,56 @@ sidebar-two-body = 선택·포커스·비활성 상태를 모든 화면에서 �
 sidebar-three = 독립된 표현 계층
 sidebar-three-body = UI 컴포넌트는 시뮬레이션 원본 상태를 소유하지 않습니다.
 map-caption = 가상 지도 · 장식용 도안
+
+management-title = 국가 운영
+management-population = 인구
+management-workforce = 노동력
+management-provinces = 지역
+management-day = { $day }일째
+management-report-day = 마지막 완료일: { $day }일
+management-no-report = 하루를 진행하면 실제 결과가 표시됩니다.
+management-play = 진행 · 1배
+management-pause = 일시 정지
+management-step = 하루 진행
+management-scenario-note = 개발 시나리오
+    두 지역에서 건설과 생산, 소비를 관리합니다.
+management-stockpiles = 지역 재고
+management-production = 생산과 확장
+management-construction = 건설 진행
+management-news = 국가 소식
+management-news-description = 건설과 물자 부족을 발생한 시점에 기록합니다. 최신 소식부터 표시됩니다.
+management-no-news = 아직 새로운 소식이 없습니다.
+management-build = 건설
+management-no-inputs = 없음
+management-recipe = 건설 자재: { $cost }
+    건설 인력 최대 { $workers }명 · 작업량 { $work }인일
+    노동자 1명당 하루: { $inputs } → { $outputs }
+management-ready = 이 지역에 건설할 건물을 선택하세요.
+management-command-accepted = { $facility } 건설을 시작했습니다. 자재가 차감되었습니다.
+management-command-error = 실행할 수 없습니다: { $error }
+management-insufficient-goods = 건설을 실행할 수 없습니다: { $province }의 { $good } 필요량 { $required }, 현재 재고 { $available }.
+management-news-started = 건설 시작 · { $province }
+    { $facility }에 필요한 자재가 투입되었습니다. 건설과 생산이 같은 노동력을 나누어 사용합니다.
+management-news-completed = 건설 완료 · { $province }
+    { $facility } 시설은 다음 날부터 생산에 참여합니다.
+management-news-shortage = 식량 부족 · { $province }
+    충족하지 못한 수요: { $good } { $amount }.
+management-allocation = 생산 { $production }명 · 건설 { $construction }명 · 미가동 { $idle }명 / 노동력 { $workers }명
+management-before-allocation = 가용 노동력 { $workers }명 · 첫날부터 인력이 배분됩니다.
+management-food = 식량: 필요 { $required } · 소비 { $consumed } · 부족 { $shortfall }
+management-stock-change = 지난 완료일 { $amount }
+management-facility-staffing = 총 { $level }단계 · 지난 완료일 가동 인력 { $workers }명
+management-project-progress = 남은 작업량 { $work }인일 · 건설 인력 최대 { $workers }명
+management-no-construction = 이 지역에서 진행 중인 건설이 없습니다.
+management-labor-title = 하나의 노동력
+management-labor-help = 생산과 건설은 같은 노동력을 사용합니다. 필요한 인력이 가용 노동력보다 많으면 수요에 비례해 배분됩니다. 원자재가 부족하면 배정받은 인력도 가동하지 못할 수 있습니다. 새 건물도 완공 후 운영할 인력이 필요합니다.
+management-stock-help = 현재 재고는 즉시 사용할 수 있는 수량입니다. 건설은 명령이 승인될 때 자재를 소비합니다. 아래 증감은 마지막 완료일의 생산량에서 생산 투입과 가계 소비를 뺀 값이며, 날짜 사이에 실행한 건설 명령의 비용은 포함하지 않습니다.
+world-country-example-republic = 예시 공화국
+world-province-north-valley = 북부 계곡
+world-province-south-ridge = 남부 능선
+world-good-grain = 곡물
+world-good-timber = 목재
+world-good-tools = 도구
+world-facility-grain-farm = 곡물 농장
+world-facility-logging-camp = 벌목장
+world-facility-tool-workshop = 도구 공방

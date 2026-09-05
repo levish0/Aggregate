@@ -4,7 +4,7 @@ An extensible nation simulation with a native Bevy interface.
 
 The first headless simulation connects a shared workforce, production, consumption and construction through explicit Rust rules. It loads a validated scenario, records commands, and supports save/resume and deterministic command replay. The bundled scenario is a small synthetic fixture, not a calibrated economic model or a playable nation simulation.
 
-The native interface remains a separate component preview with a main menu, Korean/English switching, session display settings, keyboard navigation and nested tooltips with timed locking. It is not yet connected to simulation results. Its original procedural map is decorative, not province data.
+The native management screen runs that simulation: select a province, inspect stockpiles and workforce, construct buildings, and advance time. Construction progress and national dispatches reflect actual commands and completed days. The component preview remains available separately. Both use Korean/English localization, native controls and timed tooltips. The original procedural map is decorative, not province geography.
 
 ## Run
 
@@ -13,6 +13,10 @@ Rust 1.98 or newer is required. From the repository root:
 ```sh
 cargo run -p aggregate-client
 ```
+
+Choose **국가 관리 / Manage the country** from the main menu. The bundled scenario starts paused at day zero. **하루 진행 / Advance 1 day** runs one day and pauses; **진행 / Run** advances approximately one day per real second. Construction uses the selected province's materials and competes with existing production for workers. The sidebar tracks remaining work and the right panel records starts, completions and food shortages.
+
+Leaving management pauses time. Returning, selecting another province, changing language or opening settings preserves the session. The client currently starts the bundled scenario only; preset selection and save/load controls are not yet available. Closing the application discards the in-memory session.
 
 Pretendard and the initial Fluent catalogs are included in the executable. No system font installation or working-directory asset lookup is required.
 
@@ -49,7 +53,7 @@ Rules are implemented directly in Rust. Serde handles preset and save data only;
 
 | Crate | Responsibility |
 | --- | --- |
-| `aggregate-client` | App startup, screens, navigation and decorative background |
+| `aggregate-client` | App startup, management session, command dispatch, localized screens and decorative background |
 | `aggregate-ui` | Native Bevy UI theme, fonts, panels, buttons, focus and tooltips |
 | `aggregate-localization` | Fluent catalogs and locale selection; no Bevy dependency |
 | `aggregate-world` | Typed definitions, persistent identities and serializable world state; no ECS dependency |
@@ -58,7 +62,7 @@ Rules are implemented directly in Rust. Serde handles preset and save data only;
 | `aggregate-simulation-core` | Authoritative ECS World, daily phases, commands, reports, saves and replay; no renderer |
 | `xtask` | Development checks and the headless example |
 
-The client does not yet depend on the simulation core. Education, military, politics, diplomacy and user-authored rule execution remain future mechanisms.
+The client submits core commands and reads snapshots/reports; UI components do not own simulation state. Education, military, politics, diplomacy and user-authored rule execution remain future mechanisms.
 
 See [architecture](docs/ARCHITECTURE.md) for dependency boundaries and planned integration, and [memory](memory/README.md) for verified milestones.
 
@@ -67,6 +71,12 @@ See [architecture](docs/ARCHITECTURE.md) for dependency boundaries and planned i
 ```sh
 cargo run -p xtask -- check
 cargo run -p xtask -- headless
+```
+
+On Windows, the opt-in graphical acceptance test opens the real client, activates its management controls, and saves screenshots under `target/screenshots/`:
+
+```sh
+cargo test -p aggregate-client native_management_capture --locked -- --ignored --nocapture
 ```
 
 `just run`, `just check`, `just headless` and `just fmt` are equivalent conveniences when Just is installed. CI is configured for workspace-wide checks. Linux builds need the platform development packages listed in the workflows; see [Bevy's Linux dependencies](https://github.com/bevyengine/bevy/blob/main/docs/linux_dependencies.md).

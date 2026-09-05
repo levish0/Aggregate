@@ -1,5 +1,6 @@
 app-subtitle = A NATION SIMULATION
-foundation-label = INTERFACE FOUNDATION · 0.1
+foundation-label = AGGREGATE · 0.1
+menu-management = Manage the country
 menu-preview = Explore the interface
 menu-settings = Settings
 menu-exit = Exit
@@ -7,7 +8,7 @@ menu-back = Back
 menu-title = Shape a nation's future
 menu-description = People and institutions. Industry and territory.
     A foundation for an interconnected world.
-menu-footnote = Interface in development. Simulation gameplay is not available yet.
+menu-footnote = A small development scenario. Your session continues when you return to management.
 preview-title = The national interface
 preview-subtitle = COMMON COMPONENT PREVIEW
 nav-overview = Overview
@@ -61,3 +62,56 @@ sidebar-two-body = Selection, focus and disabled states work consistently across
 sidebar-three = Independent presentation
 sidebar-three-body = UI components do not own authoritative simulation state.
 map-caption = FICTIONAL MAP · DECORATIVE STUDY
+
+management-title = NATIONAL ADMINISTRATION
+management-population = Population
+management-workforce = Workforce
+management-provinces = Provinces
+management-day = Day { $day }
+management-report-day = Last completed day: { $day }
+management-no-report = Advance a day to see actual results.
+management-play = Run · 1×
+management-pause = Pause
+management-step = Advance 1 day
+management-scenario-note = Development scenario
+    Manage construction, production and consumption in two provinces.
+management-stockpiles = Province stockpiles
+management-production = Production & expansion
+management-construction = Construction in progress
+management-news = National dispatches
+management-news-description = Construction and shortages, recorded as they happen. Newest first.
+management-no-news = No dispatches yet.
+management-build = Construct
+management-no-inputs = None
+management-recipe = Construction: { $cost }
+    Up to { $workers } builders · { $work } worker-days
+    Per worker/day: { $inputs } → { $outputs }
+management-ready = Choose a building to begin construction in this province.
+management-command-accepted = Construction accepted: { $facility }. Materials have been consumed.
+management-command-error = Unable to execute: { $error }
+management-insufficient-goods = Unable to construct in { $province }: { $good } requires { $required }, available { $available }.
+management-news-started = Construction started · { $province }
+    { $facility } has received its materials. Builders share the province's workforce.
+management-news-completed = Construction completed · { $province }
+    { $facility } begins production on the following day.
+management-news-shortage = Food shortage · { $province }
+    Unmet demand: { $good } { $amount }.
+management-allocation = Production { $production } · Construction { $construction } · Inactive { $idle } / { $workers } workers
+management-before-allocation = { $workers } workers available · Allocation begins on the first day.
+management-food = Food: required { $required } · consumed { $consumed } · shortfall { $shortfall }
+management-stock-change = Last day { $amount }
+management-facility-staffing = Total level { $level } · Active workers last day: { $workers }
+management-project-progress = { $work } worker-days remaining · Up to { $workers } builders
+management-no-construction = No active construction in this province.
+management-labor-title = One shared workforce
+management-labor-help = Production and construction share the same workers. When demand exceeds the workforce, workers are divided proportionally. Missing materials can leave assigned workers inactive. A new building needs workers to operate after completion.
+management-stock-help = Stock is available immediately. Construction consumes materials when accepted. The change below is production minus production inputs and household consumption from the last completed day; it excludes construction commands between days.
+world-country-example-republic = Example Republic
+world-province-north-valley = North Valley
+world-province-south-ridge = South Ridge
+world-good-grain = Grain
+world-good-timber = Timber
+world-good-tools = Tools
+world-facility-grain-farm = Grain farm
+world-facility-logging-camp = Logging camp
+world-facility-tool-workshop = Tool workshop

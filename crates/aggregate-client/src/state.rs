@@ -5,6 +5,7 @@ use bevy::prelude::*;
 pub enum Screen {
     #[default]
     MainMenu,
+    Management,
     Preview,
     Settings,
 }
@@ -44,6 +45,19 @@ impl Default for InterfaceState {
 }
 
 impl InterfaceState {
+    pub fn format(&self, key: &str, values: &[(&str, String)]) -> String {
+        let mut arguments = aggregate_localization::FluentArgs::new();
+        for (name, value) in values {
+            arguments.set(*name, value.as_str());
+        }
+        self.localization
+            .format(key, Some(&arguments))
+            .unwrap_or_else(|error| {
+                error!("{error}");
+                format!("[{key}]")
+            })
+    }
+
     pub fn text(&self, key: &str) -> String {
         self.localization.text(key).unwrap_or_else(|error| {
             error!("{error}");
@@ -54,6 +68,7 @@ impl InterfaceState {
 
 #[derive(Component, Clone, Copy, PartialEq, Eq)]
 pub enum InterfaceAction {
+    OpenManagement,
     OpenPreview,
     OpenSettings,
     Back,
