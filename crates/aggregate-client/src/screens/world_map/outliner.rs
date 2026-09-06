@@ -58,7 +58,7 @@ pub fn rebuild(
         root,
         Node {
             flex_direction: FlexDirection::Column,
-            row_gap: px(8),
+            row_gap: px(3),
             width: percent(100),
             ..default()
         },
@@ -72,16 +72,6 @@ pub fn rebuild(
             interface.text("map-select-hint"),
             14.,
             theme::TEXT,
-            false,
-        );
-        ui::rule(&mut commands, column);
-        ui::text(
-            &mut commands,
-            column,
-            &fonts,
-            interface.text("map-controls"),
-            13.,
-            theme::MUTED,
             false,
         );
         return;
@@ -110,6 +100,15 @@ pub fn rebuild(
             &region.name,
             UiButton::secondary(100 + index as u32),
         );
+        commands.entity(button).insert(Node {
+            width: percent(100),
+            min_height: px(28),
+            padding: UiRect::axes(px(8), px(4)),
+            align_items: AlignItems::Center,
+            justify_content: JustifyContent::Start,
+            flex_shrink: 0.,
+            ..default()
+        });
         commands.entity(button).insert(JumpToRegion {
             region: region.id.clone(),
             country: country.clone(),

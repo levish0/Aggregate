@@ -46,7 +46,10 @@ pub fn refresh(
     else {
         return;
     };
-    let retained = matches!(view.tab, InspectionTab::Buildings | InspectionTab::Construction);
+    let retained = matches!(
+        view.tab,
+        InspectionTab::Buildings | InspectionTab::Construction
+    );
     let key = (
         root,
         map.selected_index,
@@ -54,10 +57,22 @@ pub fn refresh(
         view.tab,
         interface.localization.language(),
         if retained { 0 } else { session.snapshot.day },
-        if retained { 0 } else { session.snapshot.facilities.len() },
-        if retained { 0 } else { session.snapshot.construction_projects.len() },
+        if retained {
+            0
+        } else {
+            session.snapshot.facilities.len()
+        },
+        if retained {
+            0
+        } else {
+            session.snapshot.construction_projects.len()
+        },
         if retained { 0 } else { session.revision },
-        if retained { 0 } else { session.inspection_revision },
+        if retained {
+            0
+        } else {
+            session.inspection_revision
+        },
         view.page,
     );
     if previous.as_ref() == Some(&key) {
@@ -205,7 +220,9 @@ pub fn refresh(
         false,
         31,
     );
-    let title = if map.inspect_country {
+    let title = if view.tab == InspectionTab::Construction {
+        Some(interface.text("inspection-construction"))
+    } else if map.inspect_country {
         country.map(|country| {
             interface
                 .localization
@@ -448,7 +465,6 @@ pub fn refresh(
                     "—".into()
                 },
             );
-
         }
         InspectionTab::Territory => {
             let mut terrains = BTreeMap::<&str, usize>::new();
@@ -465,7 +481,6 @@ pub fn refresh(
                 metric(&mut commands, body, &fonts, &label, count.to_string());
             }
             ui::rule(&mut commands, body);
-
         }
         InspectionTab::Programs => {
             let scope = if map.inspect_country {

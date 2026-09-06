@@ -20,8 +20,9 @@ pub fn build(
     state: &InterfaceState,
     session: &crate::management::ManagementSession,
 ) {
-    super::country_labels::build(commands, root);
-    if !session.geographic { return; }
+    if !session.geographic {
+        return;
+    }
     let header = ui::panel(
         commands,
         root,
@@ -194,10 +195,30 @@ pub fn build(
         commands.entity(button).insert(action);
     }
     for (icon, label, action, order) in [
-        (Icon::Queue, "inspection-construction-shortcut", super::inspection::InspectionAction::Construction, 5),
-        (Icon::Population, "inspection-population", super::inspection::InspectionAction::NationalTab(super::inspection::InspectionTab::Population), 6),
+        (
+            Icon::Queue,
+            "inspection-construction-shortcut",
+            super::inspection::InspectionAction::Construction,
+            5,
+        ),
+        (
+            Icon::Population,
+            "inspection-population",
+            super::inspection::InspectionAction::NationalTab(
+                super::inspection::InspectionTab::Population,
+            ),
+            6,
+        ),
     ] {
-        let button = icon_button(commands, rail, fonts, state, icon, label, UiButton::secondary(order));
+        let button = icon_button(
+            commands,
+            rail,
+            fonts,
+            state,
+            icon,
+            label,
+            UiButton::secondary(order),
+        );
         commands.entity(button).insert(action);
     }
     super::inspection::build(commands, root);

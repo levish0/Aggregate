@@ -1,5 +1,7 @@
 # Aggregate milestones
 
+- [2026-09-06 — Cartographic lettering and construction interface](2026-09-06-cartographic-lettering-and-construction-interface.md): flat country lettering fitted inside territory, non-overlapping toasts, retained construction controls, industry supply, 46-layer terrain, schema changes and native validation.
+
 - [2026-09-06 — Simulation worker and performance](2026-09-06-simulation-worker-performance.md): economy program extraction, authoritative background worker, paged read models, speeds 1–5, Criterion/CI measurements, native large-world acceptance, terrain material arrays and remaining 2026 initialization work.
 
 - [2026-09-06 — Programs and inspection windows](2026-09-06-programs-and-inspection-windows.md): Rust programs, modern ownership baseline, administrative inspection, monochrome windows, licensed flags, diagnostics and current validation limits; supersedes earlier UI/ownership status.

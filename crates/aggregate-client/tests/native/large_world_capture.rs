@@ -43,6 +43,25 @@ fn native_large_world_capture() {
     assert_eq!(app.run(), AppExit::Success);
 }
 
+type NativeCaptureInput<'w, 's> = (
+    Single<'w, 's, &'static mut Window>,
+    ResMut<'w, ButtonInput<MouseButton>>,
+    ResMut<'w, bevy::input::mouse::AccumulatedMouseMotion>,
+    ResMut<'w, ButtonInput<KeyCode>>,
+    Query<
+        'w,
+        's,
+        (&'static ComputedNode, &'static UiGlobalTransform),
+        With<crate::screens::world_map::notifications::NotificationToast>,
+    >,
+    Query<
+        'w,
+        's,
+        (&'static ComputedNode, &'static UiGlobalTransform),
+        With<crate::screens::world_map::MapOutlinerPanel>,
+    >,
+);
+
 fn drive(
     mut commands: Commands,
     mut capture: ResMut<LargeWorldCapture>,
@@ -59,14 +78,9 @@ fn drive(
     inspection_buttons: Query<(Entity, &InspectionAction)>,
     panels: Query<&ComputedNode, With<InspectionRoot>>,
     camera: Res<MapCameraController>,
-    input: (
-        Single<&mut Window>,
-        ResMut<ButtonInput<MouseButton>>,
-        ResMut<bevy::input::mouse::AccumulatedMouseMotion>,
-        ResMut<ButtonInput<KeyCode>>,
-    ),
+    input: NativeCaptureInput<'_, '_>,
 ) {
-    let (mut window, mut mouse, mut motion, mut keys) = input;
+    let (mut window, mut mouse, mut motion, mut keys, toasts, outliners) = input;
     capture.frames += 1;
     assert!(
         capture.started.elapsed().as_secs() < 120,
@@ -185,21 +199,37 @@ fn drive(
                 capture.building_site = Some(province.clone());
             }
             capture.building_button = Some(entity);
-            for _ in 0..3 { activated.write(ButtonActivated(entity)); }
+            for _ in 0..3 {
+                activated.write(ButtonActivated(entity));
+            }
             capture.phase = 8;
             capture.frames = 0;
         }
         8 if capture.frames >= 10 && !session.is_busy() => {
             assert_eq!(interface.screen, Screen::WorldMap);
-            assert_eq!(session.snapshot.construction_projects.iter().filter(|project| Some(&project.province) == capture.building_site.as_ref()).count(), 3);
-            assert!(management_buttons.contains(capture.building_button.unwrap()), "construction updates must retain the existing card controls");
+            assert_eq!(
+                session
+                    .snapshot
+                    .construction_projects
+                    .iter()
+                    .filter(|project| Some(&project.province) == capture.building_site.as_ref())
+                    .count(),
+                3
+            );
+            assert!(
+                management_buttons.contains(capture.building_button.unwrap()),
+                "construction updates must retain the existing card controls"
+            );
             keys.press(KeyCode::KeyB);
             capture.phase = 9;
             capture.frames = 0;
         }
         9 if capture.frames >= 10 => {
             keys.release(KeyCode::KeyB);
-            assert!(inspection_buttons.iter().any(|(_, action)| matches!(action, InspectionAction::Tab(InspectionTab::Construction))));
+            assert!(inspection_buttons.iter().any(|(_, action)| matches!(
+                action,
+                InspectionAction::Tab(InspectionTab::Construction)
+            )));
             let cursor = Vec2::new(window.width() * 0.60, window.height() * 0.55);
             window.set_cursor_position(Some(cursor));
             capture.camera_target = camera.target;
@@ -209,6 +239,16 @@ fn drive(
             capture.frames = 0;
         }
         10 if capture.frames >= 2 => {
+            let (node, transform) = outliners.single().unwrap();
+            let panel = Rect::from_center_size(transform.translation, node.size());
+            assert!(!toasts.is_empty(), "construction feedback must be visible");
+            for (node, transform) in &toasts {
+                let toast = Rect::from_center_size(transform.translation, node.size());
+                assert!(
+                    toast.max.x <= panel.min.x,
+                    "toasts must sit to the left of the outliner"
+                );
+            }
             mouse.release(MouseButton::Middle);
             assert!(camera.target.distance(capture.camera_target) > 1.);
             assert_eq!(interface.screen, Screen::WorldMap);

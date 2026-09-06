@@ -125,7 +125,7 @@ map-atlas = 세계 / 지형과 영토
 map-mode-terrain = 지형 지도
 map-mode-political = 정치 지도
 map-select-province = 지역 선택
-map-select-hint = 지도의 지역을 선택하면 소속 국가와 지형을 확인할 수 있습니다.
+map-select-hint = 지도에서 주를 선택하세요.
 map-hover-hint = 지도를 가리켜 지역을 살펴보세요
 map-loading = 지형과 지역 정보를 불러오는 중…
 map-load-failed = 지도를 불러오지 못했습니다
@@ -141,8 +141,7 @@ map-controls = Tab 누르기 · 세계 보기
     휠 버튼 드래그 · 이동
     우클릭 드래그 · 기울기 / 회전 · 놓으면 방향 복귀
     WASD / 방향키 · 이동
-    Alt+2 · 정치 지도
-    좌클릭 · 지역 선택
+    좌클릭 · 주 선택
 terrain-plains = 평원
 terrain-hills = 구릉
 terrain-mountain = 산악
@@ -222,3 +221,5 @@ inspection-construction-applied = 일일 진행 { $work } · 건설업 공급 { 
 inspection-construction-shortcut = 건설 · B
 
 notification-dismiss = 알림 닫기
+notification-construction-started = { $province } · { $facility } 건설 시작
+notification-construction-completed = { $province } · { $facility } 건설 완료

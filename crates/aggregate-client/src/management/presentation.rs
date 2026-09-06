@@ -26,7 +26,14 @@ pub fn province_name(
                 .name_key
                 .as_ref()
                 .and_then(|key| state.localization.text(key).ok())
-                .unwrap_or_else(|| province.name.split(" · ").next().unwrap_or(&province.name).to_owned())
+                .unwrap_or_else(|| {
+                    province
+                        .name
+                        .split(" · ")
+                        .next()
+                        .unwrap_or(&province.name)
+                        .to_owned()
+                })
         })
         .unwrap_or_else(|| id.to_string())
 }
@@ -77,13 +84,27 @@ pub fn recipe_description(
         &[
             ("cost", quantities(&definition.construction.goods)),
             ("workers", definition.construction.max_workers.to_string()),
-            ("work", definition.construction.construction_points.to_string()),
+            (
+                "work",
+                definition.construction.construction_points.to_string(),
+            ),
             ("inputs", quantities(&definition.inputs_per_worker_day)),
             ("outputs", quantities(&definition.outputs_per_worker_day)),
         ],
     );
     if definition.construction_points_per_worker_day > 0 {
-        description.push_str(&format!("\n{}", state.format("inspection-construction-service", &[("work", (u128::from(definition.workers_per_level) * u128::from(definition.construction_points_per_worker_day)).to_string())])));
+        description.push_str(&format!(
+            "\n{}",
+            state.format(
+                "inspection-construction-service",
+                &[(
+                    "work",
+                    (u128::from(definition.workers_per_level)
+                        * u128::from(definition.construction_points_per_worker_day))
+                    .to_string()
+                )]
+            )
+        ));
     }
     description
 }
@@ -172,6 +193,34 @@ pub fn event_text(
                 ("amount", amount.to_string()),
             ],
         ),
+    }
+}
+
+/// Compact action feedback; the future news feed has a separate presentation contract.
+pub fn notification_text(
+    session: &ManagementSession,
+    state: &InterfaceState,
+    event: &SimulationEvent,
+) -> String {
+    match event {
+        SimulationEvent::ConstructionStarted { province, facility }
+        | SimulationEvent::ConstructionCompleted { province, facility } => {
+            let name = instance_definition(session, facility)
+                .map(|id| facility_name(session, state, id))
+                .unwrap_or_else(|| facility.to_string());
+            state.format(
+                if matches!(event, SimulationEvent::ConstructionStarted { .. }) {
+                    "notification-construction-started"
+                } else {
+                    "notification-construction-completed"
+                },
+                &[
+                    ("province", province_name(session, state, province)),
+                    ("facility", name),
+                ],
+            )
+        }
+        _ => event_text(session, state, event),
     }
 }
 

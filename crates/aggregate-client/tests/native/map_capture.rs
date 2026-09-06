@@ -39,7 +39,9 @@ fn native_map_capture() {
     )
     .unwrap();
     let mut app = crate::create_app();
-    app.world_mut().resource_mut::<crate::management::ManagementSession>().geographic = true;
+    app.world_mut()
+        .resource_mut::<crate::management::ManagementSession>()
+        .geographic = true;
     app.insert_resource(bevy::winit::WinitSettings::continuous())
         .init_resource::<MapCapture>()
         .add_systems(
@@ -49,6 +51,18 @@ fn native_map_capture() {
     assert_eq!(app.run(), AppExit::Success);
 }
 
+type NativeCaptureInput<'w, 's> = (
+    ResMut<'w, ButtonInput<MouseButton>>,
+    ResMut<'w, ButtonInput<KeyCode>>,
+    ResMut<'w, bevy::input::mouse::AccumulatedMouseMotion>,
+    Query<
+        'w,
+        's,
+        &'static Transform,
+        With<crate::screens::world_map::country_labels::CountryLabel>,
+    >,
+);
+
 fn drive_capture(
     mut commands: Commands,
     mut capture: ResMut<MapCapture>,
@@ -57,16 +71,12 @@ fn drive_capture(
     mut interface: ResMut<InterfaceState>,
     mut window: Single<&mut Window>,
     camera: Single<(&Camera, &GlobalTransform), With<MapCamera>>,
-    input: (
-        ResMut<ButtonInput<MouseButton>>,
-        ResMut<ButtonInput<KeyCode>>,
-        ResMut<bevy::input::mouse::AccumulatedMouseMotion>,
-    ),
+    input: NativeCaptureInput<'_, '_>,
     mut exit: MessageWriter<AppExit>,
     mut controller: ResMut<MapCameraController>,
     window_layout: (Res<UiScale>, DockedInspectorQuery),
 ) {
-    let (mut mouse, mut keys, mut motion) = input;
+    let (mut mouse, mut keys, mut motion, lettering) = input;
     capture.frame += 1;
     assert!(
         state.error.is_none(),
@@ -107,7 +117,9 @@ fn drive_capture(
             assert_eq!(state.selected_index, capture.expected_index);
             mouse.release(MouseButton::Left);
         }
-        if frame == 90 { controller.desired_distance = 600.; }
+        if frame == 90 {
+            controller.desired_distance = 600.;
+        }
         if frame == 105 {
             let (_, node, transform) = window_layout.1.single().unwrap();
             let scale = window.scale_factor() * window_layout.0.0;
@@ -213,6 +225,17 @@ fn drive_capture(
             motion.delta = Vec2::new(70., -20.);
         }
         if frame == 225 {
+            assert!(
+                !lettering.is_empty(),
+                "country names must be prepared before camera acceptance"
+            );
+            assert!(
+                lettering
+                    .iter()
+                    .all(|transform| transform.rotation == Quat::IDENTITY
+                        && transform.scale == Vec3::ONE),
+                "camera rotation must not billboard or resize map lettering"
+            );
             assert!((controller.yaw - capture.initial_yaw).abs() > 0.1);
             assert!((controller.pitch - capture.initial_pitch).abs() > 0.01);
             assert_eq!(controller.target, capture.initial_target);
@@ -251,13 +274,45 @@ fn drive_capture(
             controller.desired_distance = 60.;
             window.set_cursor_position(Some(Vec2::new(720., 450.)));
         }
+        if frame == 345 {
+            let country = map
+                .0
+                .catalog
+                .countries
+                .iter()
+                .find(|country| country.key == "CHN")
+                .unwrap();
+            let index = map
+                .0
+                .catalog
+                .provinces
+                .iter()
+                .position(|province| {
+                    province.owner.as_ref() == Some(&country.id) && !province.water
+                })
+                .unwrap()
+                + 1;
+            let uv = map.0.provinces.centroids[index];
+            controller.target =
+                Vec3::new(uv.x * map.0.terrain.size.x, 0., uv.y * map.0.terrain.size.y);
+            controller.distance = 600.;
+            controller.desired_distance = 600.;
+            controller.pitch = 0.9;
+            controller.yaw = 0.;
+        }
+        if frame == 390 {
+            controller.pitch = 1.05;
+            controller.yaw = 0.45;
+        }
         let name = match frame {
             60 => Some("world-map-terrain-ko.png"),
             85 => Some("world-map-select-ko.png"),
             130 => Some("world-map-political-ko.png"),
             190 => Some("world-map-overview-ko.png"),
             290 => Some("world-map-small-en.png"),
-            330 => Some("world-map-province-hover.png"),
+            330 => Some("world-map-state-hover.png"),
+            370 => Some("world-map-asia-en.png"),
+            410 => Some("world-map-asia-rotated-en.png"),
             _ => None,
         };
         if let Some(name) = name {
@@ -278,7 +333,7 @@ fn drive_capture(
                 },
             );
         }
-        if frame > 360 && capture.captures == 6 {
+        if frame > 425 && capture.captures == 8 {
             exit.write(AppExit::Success);
         }
     }

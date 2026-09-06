@@ -125,7 +125,7 @@ map-atlas = WORLD / TERRAIN & TERRITORY
 map-mode-terrain = Terrain map
 map-mode-political = Political map
 map-select-province = Select a region
-map-select-hint = Select a province on the map to inspect its country and terrain.
+map-select-hint = Select a state on the map.
 map-hover-hint = Point at the map to explore a region
 map-loading = Loading terrain and provinces…
 map-load-failed = Unable to load the map
@@ -141,8 +141,7 @@ map-controls = Hold Tab · World overview
     Middle drag · Pan
     Right drag · Tilt / rotate; heading returns on release
     WASD / Arrow keys · Pan
-    Alt+2 · Political map
-    Left click · Select province
+    Left click · Select state
 terrain-plains = Plains
 terrain-hills = Hills
 terrain-mountain = Mountains
@@ -222,3 +221,5 @@ inspection-construction-applied = Daily progress { $work } · sector contributio
 inspection-construction-shortcut = Construction · B
 
 notification-dismiss = Dismiss notification
+notification-construction-started = { $province } · { $facility } construction started
+notification-construction-completed = { $province } · { $facility } completed

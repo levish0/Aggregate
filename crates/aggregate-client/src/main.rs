@@ -60,6 +60,9 @@ fn create_app() -> App {
     let view = session.initial_view();
     app.add_plugins(AggregateUiPlugin)
         .add_plugins(aggregate_map_view::MapViewPlugin { asset_root })
+        .add_plugins(MaterialPlugin::<
+            screens::world_map::country_labels::material::CountryLetteringMaterial,
+        >::default())
         .init_resource::<state::InterfaceState>()
         .init_resource::<world_setup::WorldSetup>()
         .init_resource::<country_presentation::CountryFlags>()
@@ -88,9 +91,15 @@ fn create_app() -> App {
                         screens::world_map::inspection::refresh,
                         screens::world_map::inspection::update_buildings,
                         screens::world_map::inspection::update_queue,
-                    ).chain(),
+                    )
+                        .chain(),
                     screens::world_map::outliner::rebuild,
-                    (screens::world_map::country_labels::update, screens::world_map::update_labels, screens::world_map::update_clock_controls).chain(),
+                    (
+                        screens::world_map::country_labels::update,
+                        screens::world_map::update_labels,
+                        screens::world_map::update_clock_controls,
+                    )
+                        .chain(),
                     screens::world_map::notifications::refresh,
                     screens::management::update_management_lists,
                     screens::management::update_management_labels,
