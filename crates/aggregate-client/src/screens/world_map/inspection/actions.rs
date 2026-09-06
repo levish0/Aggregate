@@ -16,17 +16,21 @@ pub fn apply_actions(
             continue;
         };
         match action {
-            InspectionAction::Tab(tab) => view.tab = *tab,
+            InspectionAction::Tab(tab) => { view.tab = *tab; view.page = 0; }
+            InspectionAction::Page(page) => view.page = *page,
             InspectionAction::Country => {
+                view.page = 0;
                 map.inspect_country = true;
                 view.tab = InspectionTab::Overview;
             }
             InspectionAction::State => {
+                view.page = 0;
                 map.inspect_country = false;
                 view.tab = InspectionTab::Overview;
             }
             InspectionAction::Close => map.selected_index = 0,
             InspectionAction::Province(index) => {
+                view.page = 0;
                 map.selected_index = *index;
                 map.inspect_country = false;
                 if let Some(loaded) = &loaded

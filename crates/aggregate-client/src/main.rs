@@ -72,6 +72,7 @@ fn create_app() -> App {
                     interaction::apply_actions,
                     world_setup::apply_actions,
                     world_setup::finish_initialization,
+                    management::poll_simulation,
                     management::apply_management_actions,
                     management::advance_running_session,
                     management::update_speed_controls,

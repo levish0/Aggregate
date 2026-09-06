@@ -60,11 +60,12 @@ pub fn advance_running_session(
     if !(state.screen == Screen::Management || (state.screen == Screen::WorldMap && session.geographic))
         || !session.running || setup.is_some_and(|setup| setup.open)
     {
-        session.running = false;
+        if session.running { session.running = false; }
         *elapsed = 0.;
         return;
     }
     *elapsed += time.delta_secs();
+    if session.is_busy() { *elapsed = 0.; return; }
     if *elapsed >= session.speed.seconds_per_day() {
         *elapsed = 0.;
         session.step();

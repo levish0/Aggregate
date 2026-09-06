@@ -22,6 +22,8 @@ type InspectionRefreshKey = (
     usize,
     usize,
     u64,
+    u64,
+    usize,
 );
 
 pub fn refresh(
@@ -54,6 +56,8 @@ pub fn refresh(
         session.snapshot.facilities.len(),
         session.snapshot.construction_projects.len(),
         session.revision,
+        session.inspection_revision,
+        view.page,
     );
     if previous.as_ref() == Some(&key) {
         return;
@@ -341,7 +345,8 @@ pub fn refresh(
             );
             ui::rule(&mut commands, body);
             if map.inspect_country {
-                for (index, id) in state_ids.iter().enumerate() {
+                let range = list_page(&mut commands, body, &fonts, &interface, view.page, state_ids.len());
+                for (index, id) in state_ids.iter().enumerate().skip(range.start).take(range.len()) {
                     let entry = &administration.0.states[*id];
                     let state = &catalog.states[entry.catalog_index];
                     let name = catalog
@@ -399,7 +404,8 @@ pub fn refresh(
                     "—".into()
                 },
             );
-            for group in &groups {
+            let range = list_page(&mut commands, body, &fonts, &interface, view.page, groups.len());
+            for group in groups.iter().skip(range.start).take(range.len()) {
                 metric(
                     &mut commands,
                     body,
@@ -424,7 +430,8 @@ pub fn refresh(
                 metric(&mut commands, body, &fonts, &label, count.to_string());
             }
             ui::rule(&mut commands, body);
-            for (order, index) in indices.iter().enumerate() {
+            let range = list_page(&mut commands, body, &fonts, &interface, view.page, indices.len());
+            for (order, index) in indices.iter().enumerate().skip(range.start).take(range.len()) {
                 let province = &catalog.provinces[*index as usize - 1];
                 let terrain = interface
                     .localization
@@ -454,7 +461,7 @@ pub fn refresh(
             };
             if let Some(scope) = scope {
                 match session.inspect_programs(&scope) {
-                    Ok(sections) => {
+                    Ok(Some(sections)) => {
                         if sections.is_empty() {
                             ui::text(
                                 &mut commands,
@@ -499,6 +506,7 @@ pub fn refresh(
                             }
                         }
                     }
+                    Ok(None) => { ui::text(&mut commands, body, &fonts, interface.text("simulation-processing"), 14., theme::MUTED, false); }
                     Err(error) => {
                         error!(%error, "Program inspection failed");
                         ui::text(
@@ -542,4 +550,22 @@ pub fn refresh(
             39,
         );
     }
+}
+
+fn list_page(commands: &mut Commands, parent: Entity, fonts: &UiFonts, interface: &InterfaceState, requested: usize, count: usize) -> std::ops::Range<usize> {
+    let last = count.saturating_sub(1) / 32;
+    let page = requested.min(last);
+    if last > 0 {
+        let row = layout::row(commands, parent, 8.);
+        for (key, target, enabled, order) in [
+            ("list-previous", page.saturating_sub(1), page > 0, 70),
+            ("list-next", page + 1, page < last, 71),
+        ] {
+            let mut style = aggregate_ui::button::UiButton::secondary(order); style.enabled = enabled;
+            let button = ui::button(commands, row, fonts, &interface.text(key), style);
+            commands.entity(button).insert(InspectionAction::Page(target));
+        }
+        ui::text(commands, row, fonts, format!("{} / {}", page + 1, last + 1), 12., theme::MUTED, false);
+    }
+    page * 32..((page + 1) * 32).min(count)
 }

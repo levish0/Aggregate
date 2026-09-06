@@ -21,6 +21,7 @@ pub enum InspectionTab {
 #[derive(Resource, Default)]
 pub struct InspectionView {
     pub tab: InspectionTab,
+    pub page: usize,
 }
 
 #[derive(Component)]
@@ -30,6 +31,7 @@ pub struct InspectionContent;
 #[derive(Component, Clone)]
 pub enum InspectionAction {
     Tab(InspectionTab),
+    Page(usize),
     Country,
     State,
     Province(u32),

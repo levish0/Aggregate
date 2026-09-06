@@ -12,6 +12,7 @@ pub enum ManagementAction {
     StepDay,
     ToggleRunning,
     SetSpeed(super::SimulationSpeed),
+    ProvincePage(usize),
 }
 
 pub fn apply_management_actions(
@@ -53,6 +54,10 @@ pub fn apply_management_actions(
             }
             ManagementAction::ToggleRunning => session.running = !session.running,
             ManagementAction::SetSpeed(speed) => session.speed = *speed,
+            ManagementAction::ProvincePage(page) => {
+                let count = session.index.countries.get(&session.player_country).map_or(0, |country| country.province_indices.len());
+                session.province_page = (*page).min(count.saturating_sub(1) / 32);
+            }
         }
     }
 }

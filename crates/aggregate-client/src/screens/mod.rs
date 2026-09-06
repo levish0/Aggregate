@@ -29,10 +29,11 @@ pub fn rebuild(
             crate::state::PreviewTab,
             aggregate_localization::Language,
             uuid::Uuid,
+            usize,
         )>,
     >,
 ) {
-    let view = (state.screen, state.tab, state.localization.language(), session.session_id);
+    let view = (state.screen, state.tab, state.localization.language(), session.session_id, session.province_page);
     if *previous == Some(view) && !fonts.is_changed() {
         return;
     }

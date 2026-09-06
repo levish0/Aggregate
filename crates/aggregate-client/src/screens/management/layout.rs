@@ -214,12 +214,27 @@ pub fn build(
         true,
     );
     ui::rule(commands, navigation);
+    let count = session.index.countries.get(&session.player_country).map_or(0, |country| country.province_indices.len());
+    let last_page = count.saturating_sub(1) / 32;
+    if last_page > 0 {
+        for (key, page, enabled, order) in [
+            ("list-previous", session.province_page.saturating_sub(1), session.province_page > 0, 7),
+            ("list-next", session.province_page + 1, session.province_page < last_page, 8),
+        ] {
+            let mut style = UiButton::secondary(order); style.enabled = enabled;
+            let button = ui::button(commands, navigation, fonts, &state.text(key), style);
+            commands.entity(button).insert(ManagementAction::ProvincePage(page));
+        }
+        ui::text(commands, navigation, fonts, format!("{} / {}", session.province_page + 1, last_page + 1), 12., theme::MUTED, false);
+    }
     for (index, province) in session
         .snapshot
         .provinces
         .iter()
         .filter(|province| province.country == session.player_country)
         .enumerate()
+        .skip(session.province_page * 32)
+        .take(32)
     {
         management_button(
             commands,

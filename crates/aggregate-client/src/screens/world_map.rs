@@ -161,23 +161,7 @@ pub fn update_labels(
                     interface.text("map-loading")
                 }
             }
-            MapLabel::Population => {
-                let owned: std::collections::BTreeSet<_> = session
-                    .snapshot
-                    .provinces
-                    .iter()
-                    .filter(|province| province.country == session.player_country)
-                    .map(|province| &province.id)
-                    .collect();
-                session
-                    .snapshot
-                    .population_groups
-                    .iter()
-                    .filter(|group| owned.contains(&group.province))
-                    .map(|group| u128::from(group.population))
-                    .sum::<u128>()
-                    .to_string()
-            }
+            MapLabel::Population => session.index.countries.get(&session.player_country).map_or(0, |country| country.population).to_string(),
             MapLabel::Day => interface.format(
                 "management-day",
                 &[("day", session.snapshot.day.to_string())],
