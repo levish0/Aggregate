@@ -4,5 +4,5 @@
     grid_columns: 1024,
     world_width: 2048.0,
     sea_level_raw: 4884,
-    height_scale: 8.0,
+    height_scale: 10.0,
 )
