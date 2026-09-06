@@ -5,6 +5,7 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+tracing.workspace = true
 bevy_ecs.workspace = true
 aggregate-world.workspace = true
 aggregate-scenario.workspace = true

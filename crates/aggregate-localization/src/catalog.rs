@@ -109,6 +109,8 @@ mod tests {
                 "idle",
                 "required",
                 "available",
+                "active",
+                "requested",
                 "consumed",
                 "shortfall",
                 "level",

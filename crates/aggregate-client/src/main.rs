@@ -1,4 +1,5 @@
 mod backdrop;
+mod diagnostics;
 mod interaction;
 mod management;
 #[cfg(all(test, target_os = "windows"))]
@@ -27,6 +28,7 @@ fn create_app() -> App {
     app.insert_resource(ClearColor(aggregate_ui::theme::INK))
         .add_plugins(
             DefaultPlugins
+                .set(diagnostics::log_plugin())
                 .set(AssetPlugin {
                     file_path: asset_root.to_string_lossy().into_owned(),
                     ..default()
@@ -53,7 +55,10 @@ fn create_app() -> App {
         .init_resource::<state::InterfaceState>()
         .insert_resource(session)
         .insert_resource(view)
-        .add_systems(Startup, (setup_camera, backdrop::setup))
+        .add_systems(
+            Startup,
+            (setup_camera, backdrop::setup, diagnostics::log_startup),
+        )
         .add_systems(
             Update,
             (

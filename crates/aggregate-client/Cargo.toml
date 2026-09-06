@@ -13,5 +13,8 @@ aggregate-world.workspace = true
 aggregate-map-view.workspace = true
 uuid.workspace = true
 anyhow = "1.0.104"
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tracing-appender.workspace = true
 [lints]
 workspace = true

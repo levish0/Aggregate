@@ -90,6 +90,11 @@ fn visible_build_and_time_buttons_drive_core_without_recreating_controls() {
             .iter()
             .any(|text| text.contains("건설 시작"))
     );
+    assert!(
+        texts(&mut app)
+            .iter()
+            .any(|text| text.contains("다음 일일 노동력 배정 대기"))
+    );
     activate(&mut app, ManagementAction::StepDay);
     let session = app.world().resource::<ManagementSession>();
     assert!(session.last_report.as_ref().unwrap().provinces[0].construction_workers > 0);
@@ -98,6 +103,11 @@ fn visible_build_and_time_buttons_drive_core_without_recreating_controls() {
         initial.population_groups
     );
     assert!(app.world().get::<UiButton>(button).is_some());
+    assert!(
+        texts(&mut app)
+            .iter()
+            .any(|text| text.contains("지난 작업일:"))
+    );
     for _ in 0..20 {
         if app
             .world()
