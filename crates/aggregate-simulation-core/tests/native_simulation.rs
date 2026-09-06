@@ -183,6 +183,9 @@ fn finishing_jobs_cannot_round_to_zero_forever_when_local_workforce_exists() {
         simulation.execute(command).unwrap();
     }
     for _ in 0..2 {
+        if simulation.snapshot().construction_projects.is_empty() {
+            break;
+        }
         let report = simulation.step().unwrap();
         let province = report
             .provinces
