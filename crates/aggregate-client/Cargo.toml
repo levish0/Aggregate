@@ -3,6 +3,8 @@ name = "aggregate-client"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
+[features]
+engine-tracing = ["bevy/trace"]
 [dependencies]
 bevy.workspace = true
 aggregate-ui.workspace = true

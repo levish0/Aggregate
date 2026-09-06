@@ -5,6 +5,7 @@ use crate::{
 use aggregate_economy::plan_consumption;
 use bevy_ecs::prelude::*;
 
+#[tracing::instrument(level = "trace", skip_all)]
 pub(super) fn consume_goods(rules: Res<SimulationRules>, mut work: ResMut<DayWork>) {
     if work.failure.is_some() {
         return;

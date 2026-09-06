@@ -15,5 +15,8 @@ serde_json.workspace = true
 serde_path_to_error.workspace = true
 blake3.workspace = true
 
+[dev-dependencies]
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+
 [lints]
 workspace = true

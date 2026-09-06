@@ -7,6 +7,7 @@ use aggregate_world::ProvinceId;
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
 
+#[tracing::instrument(level = "trace", skip_all)]
 pub(super) fn advance_construction(
     projects: Query<&ConstructionProject>,
     mut work: ResMut<DayWork>,

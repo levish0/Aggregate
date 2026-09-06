@@ -6,6 +6,7 @@ use aggregate_world::ProvinceId;
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
 
+#[tracing::instrument(level = "trace", skip_all)]
 pub(super) fn allocate_workers(
     population: Query<&PopulationGroup>,
     facilities: Query<&Facility>,

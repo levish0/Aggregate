@@ -8,7 +8,7 @@ menu-back = 돌아가기
 menu-title = 국가의 미래를 그리다
 menu-description = 사람과 제도, 산업과 영토.
     서로 연결된 세계를 위한 첫 번째 기반.
-menu-footnote = 소규모 개발 시나리오 · 관리 화면으로 돌아오면 진행하던 상태가 유지됩니다.
+menu-footnote = 소규모 개발용 세계 · 관리 화면으로 돌아오면 진행하던 상태가 유지됩니다.
 preview-title = 국가 운영 인터페이스
 preview-subtitle = 공통 컴포넌트 미리보기
 nav-overview = 개요
@@ -73,7 +73,7 @@ management-no-report = 하루를 진행하면 실제 결과가 표시됩니다.
 management-play = 진행 · 1배
 management-pause = 일시 정지
 management-step = 하루 진행
-management-scenario-note = 개발 시나리오
+management-scenario-note = 개발용 세계
     두 지역에서 건설과 생산, 소비를 관리합니다.
 management-stockpiles = 지역 재고
 management-production = 생산과 확장

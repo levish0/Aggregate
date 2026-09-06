@@ -5,6 +5,7 @@ use crate::{
 use aggregate_economy::plan_production;
 use bevy_ecs::prelude::*;
 
+#[tracing::instrument(level = "trace", skip_all)]
 pub(super) fn produce_goods(
     facilities: Query<&Facility>,
     definitions: Res<DefinitionRegistry>,

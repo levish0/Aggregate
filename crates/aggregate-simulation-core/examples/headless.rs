@@ -6,6 +6,12 @@ const EXAMPLE_SCENARIO: &str = include_str!("../../../scenarios/foundation.json"
 const EXAMPLE_COMMANDS: &str = include_str!("../../../scenarios/foundation.commands.json");
 
 fn main() -> Result<(), Box<dyn Error>> {
+    tracing_subscriber::fmt()
+        .with_env_filter(
+            tracing_subscriber::EnvFilter::try_from_default_env().unwrap_or_else(|_| "warn".into()),
+        )
+        .with_writer(std::io::stderr)
+        .init();
     let arguments: Vec<_> = env::args().skip(1).collect();
     if arguments
         .first()

@@ -8,7 +8,7 @@ menu-back = Back
 menu-title = Shape a nation's future
 menu-description = People and institutions. Industry and territory.
     A foundation for an interconnected world.
-menu-footnote = A small development scenario. Your session continues when you return to management.
+menu-footnote = A small development world. Your session continues when you return to management.
 preview-title = The national interface
 preview-subtitle = COMMON COMPONENT PREVIEW
 nav-overview = Overview
@@ -73,7 +73,7 @@ management-no-report = Advance a day to see actual results.
 management-play = Run · 1×
 management-pause = Pause
 management-step = Advance 1 day
-management-scenario-note = Development scenario
+management-scenario-note = Development world
     Manage construction, production and consumption in two provinces.
 management-stockpiles = Province stockpiles
 management-production = Production & expansion
