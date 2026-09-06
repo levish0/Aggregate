@@ -1,7 +1,7 @@
 //! Heroicons 24 solid, retained as SVG sources and rendered at 4x for native UI.
 use bevy::prelude::*;
 
-#[derive(Component, Clone, Copy)]
+#[derive(Component, Clone, Copy, PartialEq, Eq)]
 pub enum Icon {
     Government,
     Buildings,
@@ -68,7 +68,7 @@ pub fn icon(
     entity
 }
 
-pub fn load(server: Res<AssetServer>, mut icons: Query<(&Icon, &mut ImageNode), Added<Icon>>) {
+pub fn load(server: Res<AssetServer>, mut icons: Query<(&Icon, &mut ImageNode), Changed<Icon>>) {
     for (icon, mut image) in &mut icons {
         image.image = server.load(icon.path());
     }

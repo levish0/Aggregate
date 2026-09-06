@@ -1,3 +1,4 @@
+mod controls;
 pub mod inspection;
 mod layout;
 pub mod news;
@@ -112,22 +113,38 @@ pub fn update_clock_controls(
         &crate::management::ManagementAction,
         &Children,
         &mut aggregate_ui::button::UiButton,
+        Option<&mut aggregate_ui::tooltip::TooltipContent>,
     )>,
-    mut labels: Query<&mut Text, With<aggregate_ui::button::ButtonLabel>>,
+    mut icons: Query<&mut aggregate_ui::icon::Icon>,
 ) {
     if interface.screen != Screen::WorldMap {
         return;
     }
-    for (action, children, mut button) in &mut buttons {
+    for (action, children, mut button, tooltip) in &mut buttons {
         if matches!(action, crate::management::ManagementAction::ToggleRunning) {
-            button.selected = session.running;
+            if button.selected != session.running {
+                button.selected = session.running;
+            }
+            let icon = if session.running {
+                aggregate_ui::icon::Icon::Pause
+            } else {
+                aggregate_ui::icon::Icon::Play
+            };
+            if let Some(mut tooltip) = tooltip {
+                let label = interface.text(if session.running {
+                    "management-pause"
+                } else {
+                    "management-play"
+                });
+                if tooltip.title != label {
+                    tooltip.title = label;
+                }
+            }
             for child in children {
-                if let Ok(mut text) = labels.get_mut(*child) {
-                    **text = interface.text(if session.running {
-                        "management-pause"
-                    } else {
-                        "management-play"
-                    });
+                if let Ok(mut current) = icons.get_mut(*child)
+                    && *current != icon
+                {
+                    *current = icon;
                 }
             }
         }

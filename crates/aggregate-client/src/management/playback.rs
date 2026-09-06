@@ -41,7 +41,7 @@ pub fn speed_controls(
             commands,
             parent,
             Node {
-                width: px(40),
+                width: px(32),
                 flex_shrink: 0.,
                 ..default()
             },
@@ -50,6 +50,16 @@ pub fn speed_controls(
         style.enabled = enabled;
         style.selected = session.speed == speed;
         let button = ui::button(commands, slot, fonts, &(index + 1).to_string(), style);
+        commands.entity(button).insert(Node {
+            width: px(32),
+            height: px(36),
+            min_height: px(36),
+            padding: UiRect::all(px(3)),
+            border: UiRect::all(px(1)),
+            align_items: AlignItems::Center,
+            justify_content: JustifyContent::Center,
+            ..default()
+        });
         commands
             .entity(button)
             .insert(ManagementAction::SetSpeed(speed));

@@ -1,11 +1,12 @@
-use super::components::metric;
 use crate::{
     management::{
         ManagementAction, ManagementSession, construction::construction_site, presentation,
     },
     state::InterfaceState,
 };
-use aggregate_ui::{button::UiButton, components as ui, fonts::UiFonts, theme};
+use aggregate_ui::{
+    button::UiButton, components as ui, fonts::UiFonts, theme, tooltip::TooltipContent,
+};
 use aggregate_world::ProvinceId;
 use bevy::prelude::*;
 use std::collections::{BTreeMap, BTreeSet};
@@ -23,7 +24,7 @@ pub(super) fn build(
         return;
     }
     let mut levels = BTreeMap::new();
-    let mut stocks = BTreeMap::new();
+    let mut queues = BTreeMap::new();
     for facility in session
         .snapshot
         .facilities
@@ -32,49 +33,90 @@ pub(super) fn build(
     {
         *levels.entry(&facility.definition).or_insert(0u128) += u128::from(facility.level);
     }
-    for province in session
+    for project in session
         .snapshot
-        .provinces
+        .construction_projects
         .iter()
-        .filter(|province| provinces.contains(&province.id))
+        .filter(|project| provinces.contains(&project.province))
     {
-        for (good, quantity) in &province.stockpile {
-            *stocks.entry(good).or_insert(0u128) += u128::from(*quantity);
-        }
+        *queues.entry(&project.definition).or_insert(0u64) += 1;
     }
-    for (good, quantity) in stocks {
-        metric(
-            commands,
-            parent,
-            fonts,
-            &presentation::good_name(session, interface, good),
-            quantity.to_string(),
-        );
-    }
-    ui::rule(commands, parent);
     let owned = session.snapshot.provinces.iter().any(|province| {
         provinces.contains(&province.id) && province.country == session.player_country
     });
+    let grid = ui::node(
+        commands,
+        parent,
+        Node {
+            width: percent(100),
+            flex_wrap: FlexWrap::Wrap,
+            column_gap: px(8),
+            row_gap: px(8),
+            ..default()
+        },
+    );
     for (order, definition) in session.definitions.facilities.iter().enumerate() {
         let name = presentation::facility_name(session, interface, &definition.id);
-        metric(
+        let card = ui::panel(
             commands,
-            parent,
-            fonts,
-            &name,
-            levels.get(&definition.id).copied().unwrap_or(0).to_string(),
+            grid,
+            Node {
+                width: percent(48),
+                min_height: px(170),
+                padding: UiRect::all(px(10)),
+                flex_direction: FlexDirection::Column,
+                row_gap: px(8),
+                flex_shrink: 0.,
+                ..default()
+            },
         );
+        aggregate_ui::icon::icon(
+            commands,
+            card,
+            aggregate_ui::icon::Icon::Buildings,
+            32.,
+            theme::TEXT,
+        );
+        ui::text(commands, card, fonts, &name, 14., theme::TEXT, true);
+        ui::text(
+            commands,
+            card,
+            fonts,
+            interface.format(
+                "inspection-building-level",
+                &[(
+                    "level",
+                    levels.get(&definition.id).copied().unwrap_or(0).to_string(),
+                )],
+            ),
+            18.,
+            theme::TEXT,
+            true,
+        );
+        if let Some(count) = queues.get(&definition.id) {
+            ui::text(
+                commands,
+                card,
+                fonts,
+                format!("{} · {count}", interface.text("inspection-construction")),
+                12.,
+                theme::MUTED,
+                false,
+            );
+        }
+        commands.entity(card).insert(TooltipContent {
+            title: name,
+            body: presentation::recipe_description(session, interface, definition),
+            hint: String::new(),
+            locking_label: interface.text("tooltip-locking"),
+            locked_label: interface.text("tooltip-locked"),
+            links: vec![],
+        });
         if owned {
             let site = construction_site(session, provinces, definition);
             let mut style = UiButton::secondary(400 + order as u32);
             style.enabled = site.is_some();
-            let button = ui::button(
-                commands,
-                parent,
-                fonts,
-                &interface.format("inspection-build-level", &[("building", name)]),
-                style,
-            );
+            let button = ui::button(commands, card, fonts, "+", style);
             if let Some(province) = site {
                 commands
                     .entity(button)
@@ -82,16 +124,17 @@ pub(super) fn build(
                         province,
                         definition: definition.id.clone(),
                     });
+            } else {
+                ui::text(
+                    commands,
+                    card,
+                    fonts,
+                    interface.text("inspection-material-shortage"),
+                    11.,
+                    theme::MUTED,
+                    false,
+                );
             }
-            ui::text(
-                commands,
-                parent,
-                fonts,
-                presentation::recipe_description(session, interface, definition),
-                12.,
-                theme::MUTED,
-                false,
-            );
         }
     }
     if owned {
@@ -105,45 +148,12 @@ pub(super) fn build(
             false,
         );
     }
-    ui::rule(commands, parent);
-    for project in session
-        .snapshot
-        .construction_projects
-        .iter()
-        .filter(|project| provinces.contains(&project.province))
-    {
-        let active = session
-            .last_report
-            .as_ref()
-            .and_then(|report| {
-                report
-                    .constructions
-                    .iter()
-                    .find(|report| report.facility == project.facility_id)
-            })
-            .map(|report| report.active_workers)
-            .unwrap_or(0);
-        metric(
-            commands,
-            parent,
-            fonts,
-            &presentation::facility_name(session, interface, &project.definition),
-            interface.format(
-                "inspection-project-progress",
-                &[
-                    ("work", project.remaining_worker_days.to_string()),
-                    ("active", active.to_string()),
-                    ("requested", project.requested_workers.to_string()),
-                ],
-            ),
-        );
-    }
-    if let crate::management::SessionFeedback::Error(error) = &session.feedback {
+    if let crate::management::SessionFeedback::Error(_) = &session.feedback {
         ui::text(
             commands,
             parent,
             fonts,
-            error.to_string(),
+            presentation::feedback(session, interface),
             13.,
             theme::TEXT,
             false,

@@ -9,9 +9,9 @@ fn fixture_with_one_operating_farm(capacity: u64) -> Scenario {
     scenario.initial_state.facilities.truncate(1);
     scenario.definitions.facilities[0].workers_per_level = capacity;
     scenario.definitions.facilities[1].construction.max_workers = 20;
-    scenario.definitions.facilities[1].construction.worker_days = 20;
+    scenario.definitions.facilities[1].construction.construction_points = 20;
     scenario.definitions.facilities[2].construction.max_workers = 20;
-    scenario.definitions.facilities[2].construction.worker_days = 20;
+    scenario.definitions.facilities[2].construction.construction_points = 20;
     scenario
 }
 
@@ -20,14 +20,14 @@ fn project(
     definition: &str,
     province: &str,
     requested_workers: u64,
-    remaining_worker_days: u64,
+    remaining_construction_points: u64,
 ) -> ConstructionProjectState {
     ConstructionProjectState {
         facility_id: FacilityId::from(Uuid::from_u128(identifier)),
         province: province.parse::<ProvinceId>().unwrap(),
         definition: FacilityDefinitionId::from(definition),
         requested_workers,
-        remaining_worker_days,
+        remaining_construction_points,
         production_priority: 10,
     }
 }

@@ -18,6 +18,7 @@ pub fn apply_actions(
     mut setup: ResMut<crate::world_setup::WorldSetup>,
     initialization: Option<Res<crate::world_setup::WorldInitializationTask>>,
     mut session: ResMut<crate::management::ManagementSession>,
+    loaded: Option<Res<aggregate_map_view::LoadedWorldMap>>,
 ) {
     let requested: Vec<_> = activated
         .read()
@@ -29,6 +30,7 @@ pub fn apply_actions(
     if escape && setup.open {
         if initialization.is_none() {
             setup.open = false;
+            state.screen = Screen::MainMenu;
         }
         return;
     }
@@ -50,16 +52,42 @@ pub fn apply_actions(
     {
         info!(?action, screen = ?state.screen, "Interface action requested");
         match action {
-            InterfaceAction::OpenManagement => state.screen = Screen::Management,
-            InterfaceAction::OpenWorldMap => state.screen = Screen::WorldMap,
+            InterfaceAction::OpenManagement => {
+                if session.geographic {
+                    state.screen = Screen::WorldMap;
+                    if let Some(loaded) = &loaded
+                        && let Some(index) =
+                            loaded.0.catalog.provinces.iter().position(|province| {
+                                !province.water
+                                    && province.owner.as_ref() == Some(&session.player_country)
+                            })
+                    {
+                        map.selected_index = index as u32 + 1;
+                        map.inspect_country = true;
+                    }
+                } else {
+                    state.screen = Screen::WorldMap;
+                    setup.open = true;
+                }
+            }
+            InterfaceAction::OpenWorldMap => {
+                state.screen = Screen::WorldMap;
+                setup.open = !session.geographic;
+            },
             InterfaceAction::ConfigureWorld => {
                 state.screen = Screen::WorldMap;
                 setup.open = true;
                 session.running = false;
             }
             InterfaceAction::OpenPreview => state.screen = Screen::Preview,
-            InterfaceAction::OpenSettings => state.screen = Screen::Settings,
-            InterfaceAction::Back => state.screen = Screen::MainMenu,
+            InterfaceAction::OpenSettings => {
+                state.return_screen = state.screen;
+                state.screen = Screen::Settings;
+            },
+            InterfaceAction::Back => {
+                state.screen = if state.screen == Screen::Settings { state.return_screen } else { Screen::MainMenu };
+                if state.screen == Screen::MainMenu { session.running = false; }
+            },
             InterfaceAction::Exit => {
                 exit.write(AppExit::Success);
             }

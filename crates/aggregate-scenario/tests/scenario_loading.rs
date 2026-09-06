@@ -153,10 +153,10 @@ fn workforce_and_zero_quantities_are_validated() {
     );
 
     let mut scenario = fixture();
-    scenario.definitions.facilities[0].construction.worker_days = 0;
+    scenario.definitions.facilities[0].construction.construction_points = 0;
     assert_eq!(
         validate_scenario(&scenario).unwrap_err().field_path,
-        "definitions.facilities[0].construction.worker_days"
+        "definitions.facilities[0].construction.construction_points"
     );
 }
 

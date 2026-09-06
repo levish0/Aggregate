@@ -30,7 +30,7 @@ pub fn definitions() -> ContentDefinitions {
         inputs_per_worker_day: amounts(inputs),
         outputs_per_worker_day: amounts(outputs),
         construction: ConstructionDefinition {
-            worker_days: work,
+            construction_points: work,
             max_workers,
             goods: amounts(cost),
         },

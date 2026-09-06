@@ -24,6 +24,17 @@ struct MapCapture {
     window_pointer: Vec2,
 }
 
+type DockedInspectorQuery<'w, 's> = Query<
+    'w,
+    's,
+    (
+        &'static Node,
+        &'static ComputedNode,
+        &'static UiGlobalTransform,
+    ),
+    With<crate::screens::world_map::inspection::InspectionRoot>,
+>;
+
 #[test]
 #[ignore = "opens a native window and requires the local map assets and a graphics adapter"]
 fn native_map_capture() {
@@ -32,6 +43,7 @@ fn native_map_capture() {
     )
     .unwrap();
     let mut app = crate::create_app();
+    app.world_mut().resource_mut::<crate::management::ManagementSession>().geographic = true;
     app.insert_resource(bevy::winit::WinitSettings::continuous())
         .init_resource::<MapCapture>()
         .add_systems(
@@ -61,14 +73,7 @@ fn drive_capture(
     ),
     mut exit: MessageWriter<AppExit>,
     mut controller: ResMut<MapCameraController>,
-    window_layout: (
-        Res<UiScale>,
-        Query<(
-            &aggregate_ui::window::FloatingWindow,
-            &ComputedNode,
-            &UiGlobalTransform,
-        )>,
-    ),
+    window_layout: (Res<UiScale>, DockedInspectorQuery),
 ) {
     let (mut mouse, mut keys, mut motion) = input;
     capture.frame += 1;
@@ -79,12 +84,7 @@ fn drive_capture(
     );
     if capture.frame == 35 {
         interface.reduced_motion = true;
-        let entity = buttons
-            .iter()
-            .find(|(_, action)| **action == InterfaceAction::OpenWorldMap)
-            .unwrap()
-            .0;
-        activated.write(ButtonActivated(entity));
+        interface.screen = crate::state::Screen::WorldMap;
     }
     if let Some(map) = map
         && !state.loading
@@ -153,8 +153,8 @@ fn drive_capture(
             let (_, node, _) = window_layout.1.single().unwrap();
             let size = node.size() / (window.scale_factor() * window_layout.0.0);
             assert!(
-                (size - capture.window_size - Vec2::new(70., 35.)).length() < 2.,
-                "window border resize: {size:?}"
+                (size - capture.window_size).length() < 2.,
+                "docked inspector must not resize from a map drag: {size:?}"
             );
             assert_eq!(state.selected_index, capture.expected_index);
             mouse.release(MouseButton::Left);
@@ -189,8 +189,8 @@ fn drive_capture(
             let position = (transform.translation - node.size() / 2.)
                 / (window.scale_factor() * window_layout.0.0);
             assert!(
-                (position - capture.window_position - Vec2::new(40., 24.)).length() < 2.,
-                "window title drag: {position:?}"
+                (position - capture.window_position).length() < 2.,
+                "inspector stays docked: {position:?}"
             );
             mouse.release(MouseButton::Left);
         }

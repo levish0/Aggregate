@@ -37,7 +37,7 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
         let demand = project
             .0
             .requested_workers
-            .min(project.0.remaining_worker_days);
+            .min(project.0.remaining_construction_points);
         let total = reserved.entry(project.0.province.clone()).or_default();
         *total = total
             .checked_add(allocated)
@@ -88,26 +88,26 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
             .get(&project.0.facility_id)
             .copied()
             .unwrap_or(0);
-        let actual = allocated.min(project.0.remaining_worker_days);
+        let actual = allocated.min(project.0.remaining_construction_points);
         let total = province
             .report
             .construction_workers
             .checked_add(actual)
             .ok_or("construction workforce overflow")?;
         province.report.construction_workers = total;
-        let remaining = project.0.remaining_worker_days - actual;
+        let remaining = project.0.remaining_construction_points - actual;
         if actual
             < project
                 .0
                 .requested_workers
-                .min(project.0.remaining_worker_days)
+                .min(project.0.remaining_construction_points)
         {
-            tracing::debug!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, active_workers = actual, remaining_worker_days = remaining, committed = false, "Construction plan limited by local workforce");
+            tracing::debug!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, active_workers = actual, remaining_construction_points = remaining, committed = false, "Construction plan limited by local workforce");
         }
         work.constructions.insert(
             project.0.facility_id.clone(),
             ConstructionProgress {
-                remaining_worker_days: remaining,
+                remaining_construction_points: remaining,
             },
         );
         work.report
@@ -119,9 +119,9 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
                 requested_workers: project
                     .0
                     .requested_workers
-                    .min(project.0.remaining_worker_days),
+                    .min(project.0.remaining_construction_points),
                 active_workers: actual,
-                remaining_worker_days: remaining,
+                remaining_construction_points: remaining,
             });
         if remaining == 0 {
             work.report

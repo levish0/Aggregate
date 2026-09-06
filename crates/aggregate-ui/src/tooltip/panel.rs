@@ -39,8 +39,13 @@ pub(super) fn spawn_panel(
     viewport: Vec2,
     phase: &TooltipPhase,
 ) {
-    let width = 340_f32.min((viewport.x - 24.).max(1.));
-    let estimated_height = 240. + content.links.len() as f32 * 58.;
+    let hint = content.is_hint();
+    let width = (if hint { 180_f32 } else { 340_f32 }).min((viewport.x - 24.).max(1.));
+    let estimated_height = if hint {
+        44.
+    } else {
+        240. + content.links.len() as f32 * 58.
+    };
     let right = anchor.max.x + 8.;
     let left = if right + width <= viewport.x - 12. {
         right
@@ -61,7 +66,7 @@ pub(super) fn spawn_panel(
                 width: px(width),
                 max_height: px((viewport.y - top - 12.).max(1.)),
                 overflow: Overflow::scroll_y(),
-                padding: UiRect::all(px(20)),
+                padding: UiRect::all(px(if hint { 10. } else { 20. })),
                 border: UiRect::all(px(1)),
                 flex_direction: FlexDirection::Column,
                 row_gap: px(12),
@@ -85,10 +90,19 @@ pub(super) fn spawn_panel(
         root,
         fonts,
         &content.title,
-        20.,
+        if hint { 13. } else { 20. },
         theme::ACCENT_BRIGHT,
         true,
     );
+    if hint {
+        commands
+            .entity(root)
+            .remove::<crate::layout::UiPointerBlocker>();
+        commands
+            .entity(root)
+            .insert((bevy::ui::FocusPolicy::Pass, Pickable::IGNORE));
+        return;
+    }
     components::text(
         commands,
         root,

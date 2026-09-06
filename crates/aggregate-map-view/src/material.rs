@@ -34,6 +34,8 @@ pub struct MapTerrainMaterial {
     #[texture(13)]
     #[sampler(14)]
     pub terrain_weights: Handle<Image>,
+    #[texture(15)]
+    pub terrain_indices: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]

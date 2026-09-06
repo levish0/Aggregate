@@ -17,7 +17,7 @@ pub(super) fn action(
         commands,
         parent,
         fonts,
-        if matches!(action, InspectionAction::Close) {
+        if matches!(action, InspectionAction::Close | InspectionAction::Tab(_)) {
             ""
         } else {
             label
@@ -28,6 +28,9 @@ pub(super) fn action(
     let icon = match action {
         InspectionAction::Tab(InspectionTab::Overview) => Some(Icon::Chart),
         InspectionAction::Tab(InspectionTab::Buildings) => Some(Icon::Buildings),
+        InspectionAction::Tab(InspectionTab::Construction) | InspectionAction::Construction => {
+            Some(Icon::Queue)
+        }
         InspectionAction::Tab(InspectionTab::Population) => Some(Icon::Population),
         InspectionAction::Tab(InspectionTab::Territory) => Some(Icon::Map),
         InspectionAction::Tab(InspectionTab::Programs) => Some(Icon::Programs),
@@ -37,6 +40,19 @@ pub(super) fn action(
     };
     if let Some(icon) = icon {
         aggregate_ui::icon::icon(commands, button, icon, 16., theme::TEXT);
+    }
+    if matches!(action, InspectionAction::Tab(_)) {
+        commands.entity(button).insert((
+            Name::new(label.to_string()),
+            aggregate_ui::tooltip::TooltipContent {
+                title: label.into(),
+                body: String::new(),
+                hint: String::new(),
+                locking_label: String::new(),
+                locked_label: String::new(),
+                links: vec![],
+            },
+        ));
     }
     let compact = matches!(
         action,

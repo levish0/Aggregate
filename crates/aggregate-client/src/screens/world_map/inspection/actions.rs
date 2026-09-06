@@ -10,12 +10,25 @@ pub fn apply_actions(
     mut map: ResMut<MapViewState>,
     loaded: Option<Res<LoadedWorldMap>>,
     mut camera: ResMut<MapCameraController>,
+    session: Res<crate::management::ManagementSession>,
 ) {
     for event in activated.read() {
         let Ok(action) = actions.get(event.0) else {
             continue;
         };
         match action {
+            InspectionAction::Construction => {
+                if let Some(loaded) = &loaded
+                    && let Some(index) = loaded.0.catalog.provinces.iter().position(|province| {
+                        !province.water && province.owner.as_ref() == Some(&session.player_country)
+                    })
+                {
+                    map.selected_index = index as u32 + 1;
+                    map.inspect_country = true;
+                    view.tab = InspectionTab::Construction;
+                    view.page = 0;
+                }
+            }
             InspectionAction::Tab(tab) => {
                 view.tab = *tab;
                 view.page = 0;

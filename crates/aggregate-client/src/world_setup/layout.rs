@@ -207,31 +207,6 @@ pub fn rebuild(
         1220,
     );
     ui::rule(&mut commands, panel);
-    let mut button = UiButton::secondary(1230);
-    button.selected = setup.public_health;
-    let toggle = ui::button(
-        &mut commands,
-        panel,
-        &fonts,
-        &interface.text(if setup.public_health {
-            "setup-health-enabled"
-        } else {
-            "setup-health-disabled"
-        }),
-        button,
-    );
-    commands
-        .entity(toggle)
-        .insert(SetupAction::TogglePublicHealth);
-    ui::text(
-        &mut commands,
-        panel,
-        &fonts,
-        interface.text("setup-health-description"),
-        12.,
-        theme::MUTED,
-        false,
-    );
     if let Some(error) = &setup.error {
         ui::text(&mut commands, panel, &fonts, error, 13., theme::TEXT, false);
     }

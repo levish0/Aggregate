@@ -14,7 +14,7 @@ use bevy::{
 pub fn apply_actions(
     mut commands: Commands,
     mut setup: ResMut<WorldSetup>,
-    interface: Res<InterfaceState>,
+    mut interface: ResMut<InterfaceState>,
     map: Option<Res<LoadedWorldMap>>,
     task: Option<Res<WorldInitializationTask>>,
     mut changes: MessageReader<SelectChanged>,
@@ -58,30 +58,18 @@ pub fn apply_actions(
             continue;
         };
         match action {
-            SetupAction::Close => setup.open = false,
-            SetupAction::TogglePublicHealth => {
-                setup.public_health = !setup.public_health;
-                setup.revision += 1;
-            }
+            SetupAction::Close => { setup.open = false; interface.screen = Screen::MainMenu; },
             SetupAction::Start => {
                 let (Some(map), Some(country)) = (map.as_ref(), setup.country.clone()) else {
                     continue;
                 };
                 let map = map.0.clone();
                 let settings = setup.settings.clone();
-                let health = setup.public_health;
                 setup.error = None;
-                info!(country = %country, public_health = health, population_per_province = settings.population_per_province, "World initialization requested");
+                info!(country = %country, population_per_province = settings.population_per_province, "World initialization requested");
                 commands.insert_resource(WorldInitializationTask(
                     AsyncComputeTaskPool::get().spawn(async move {
-                        let mut programs: Vec<
-                            std::sync::Arc<dyn aggregate_programs::SimulationProgram>,
-                        > = vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)];
-                        if health {
-                            programs.push(std::sync::Arc::new(
-                                aggregate_public_health::PublicHealthProgram::default(),
-                            ));
-                        }
+                        let programs: Vec<std::sync::Arc<dyn aggregate_programs::SimulationProgram>> = vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)];
                         let definitions = aggregate_programs::ProgramRuntime::collect_definitions(
                             programs.clone(),
                         )?;

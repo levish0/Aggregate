@@ -17,7 +17,7 @@ pub(crate) fn commit_day(
         province.0.stockpile.clone_from(stockpile);
     }
     for (entity, mut project) in &mut projects {
-        let remaining = work.constructions[&project.0.facility_id].remaining_worker_days;
+        let remaining = work.constructions[&project.0.facility_id].remaining_construction_points;
         if remaining == 0 {
             commands.spawn(Facility(FacilityState {
                 id: project.0.facility_id.clone(),
@@ -28,7 +28,7 @@ pub(crate) fn commit_day(
             }));
             commands.entity(entity).despawn();
         } else {
-            project.0.remaining_worker_days = remaining;
+            project.0.remaining_construction_points = remaining;
         }
     }
     let province_reports = work

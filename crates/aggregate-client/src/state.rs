@@ -22,6 +22,7 @@ pub enum PreviewTab {
 #[derive(Resource)]
 pub struct InterfaceState {
     pub screen: Screen,
+    pub return_screen: Screen,
     pub tab: PreviewTab,
     pub localization: Localization,
     pub scale: f32,
@@ -34,6 +35,7 @@ impl Default for InterfaceState {
     fn default() -> Self {
         Self {
             screen: Screen::MainMenu,
+            return_screen: Screen::MainMenu,
             tab: PreviewTab::Overview,
             localization: Localization::new(Language::Korean)
                 .expect("validated bundled translations"),

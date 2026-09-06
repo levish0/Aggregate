@@ -30,7 +30,7 @@ fn project() -> ConstructionProjectState {
             .unwrap(),
         definition: FacilityDefinitionId::from("grain_farm"),
         requested_workers: 10,
-        remaining_worker_days: 10,
+        remaining_construction_points: 10,
         production_priority: 10,
     }
 }
@@ -91,7 +91,7 @@ fn in_progress_projects_cannot_reuse_facility_ids_or_exceed_their_definition() {
     );
 
     scenario.initial_state.construction_projects[0] = project();
-    scenario.initial_state.construction_projects[0].remaining_worker_days = 21;
+    scenario.initial_state.construction_projects[0].remaining_construction_points = 21;
     let error = validate_world_state(
         &scenario.definitions,
         &scenario.rules,
@@ -100,7 +100,7 @@ fn in_progress_projects_cannot_reuse_facility_ids_or_exceed_their_definition() {
     .unwrap_err();
     assert_eq!(
         error.field_path,
-        "state.construction_projects[0].remaining_worker_days"
+        "state.construction_projects[0].remaining_construction_points"
     );
 }
 

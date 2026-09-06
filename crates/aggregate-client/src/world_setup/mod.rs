@@ -11,7 +11,6 @@ pub struct WorldSetup {
     pub open: bool,
     pub country: Option<CountryId>,
     pub settings: WorldInitializationSettings,
-    pub public_health: bool,
     pub error: Option<String>,
     pub revision: u64,
 }
@@ -32,5 +31,4 @@ pub enum SetupSelect {
 pub enum SetupAction {
     Close,
     Start,
-    TogglePublicHealth,
 }

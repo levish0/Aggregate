@@ -3,7 +3,7 @@ use crate::state::{InterfaceAction, InterfaceState};
 use aggregate_ui::{button::UiButton, components as ui, fonts::UiFonts, theme};
 use bevy::prelude::*;
 
-pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &InterfaceState) {
+pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &InterfaceState, has_session: bool) {
     let shade = ui::node(
         commands,
         root,
@@ -126,30 +126,9 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         UiButton::primary(0),
         InterfaceAction::ConfigureWorld,
     );
-    action_button(
-        commands,
-        panel,
-        fonts,
-        &state.text("menu-world-map"),
-        UiButton::secondary(1),
-        InterfaceAction::OpenWorldMap,
-    );
-    action_button(
-        commands,
-        panel,
-        fonts,
-        &state.text("menu-management"),
-        UiButton::secondary(6),
-        InterfaceAction::OpenManagement,
-    );
-    action_button(
-        commands,
-        panel,
-        fonts,
-        &state.text("menu-preview"),
-        UiButton::secondary(2),
-        InterfaceAction::OpenPreview,
-    );
+    if has_session {
+        action_button(commands, panel, fonts, &state.text("menu-continue"), UiButton::secondary(1), InterfaceAction::OpenWorldMap);
+    }
     action_button(
         commands,
         panel,

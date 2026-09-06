@@ -30,6 +30,7 @@ pub(super) struct TooltipEntry {
     pub phase: TooltipPhase,
     elapsed: f32,
     away: f32,
+    lockable: bool,
 }
 
 impl TooltipEntry {
@@ -53,7 +54,7 @@ pub struct TooltipState {
 }
 
 impl TooltipState {
-    pub(super) fn enter(&mut self, source: Entity, parent: Option<Entity>) {
+    pub(super) fn enter(&mut self, source: Entity, parent: Option<Entity>, lockable: bool) {
         if self.suppressed == Some(source)
             || self.entries.iter().any(|entry| entry.source == source)
         {
@@ -76,12 +77,13 @@ impl TooltipState {
             phase: TooltipPhase::Waiting,
             elapsed: 0.,
             away: 0.,
+            lockable,
         });
     }
 
     pub(super) fn activate(&mut self, source: Entity, parent: Option<Entity>) {
         self.suppressed = None;
-        self.enter(source, parent);
+        self.enter(source, parent, true);
         if let Some(entry) = self.entries.iter_mut().find(|entry| entry.source == source) {
             entry.phase = TooltipPhase::Locked;
         }
@@ -106,7 +108,9 @@ impl TooltipState {
         if active == Some(entry.source) || over_panel == Some(entry.source) {
             entry.away = 0.;
             entry.elapsed += seconds;
-            entry.phase = if entry.elapsed >= settings.show_delay + settings.lock_duration {
+            entry.phase = if entry.lockable
+                && entry.elapsed >= settings.show_delay + settings.lock_duration
+            {
                 TooltipPhase::Locked
             } else if entry.elapsed >= settings.show_delay {
                 TooltipPhase::Visible
@@ -152,7 +156,7 @@ mod tests {
         let settings = TooltipSettings::default();
         let source = entity(1);
         let mut state = TooltipState::default();
-        state.enter(source, None);
+        state.enter(source, None, true);
         state.advance(Some(source), None, 0.1, &settings);
         assert_eq!(state.entries[0].phase, TooltipPhase::Waiting);
         state.advance(Some(source), None, 0.4, &settings);
@@ -165,17 +169,29 @@ mod tests {
     }
 
     #[test]
+    fn short_hint_never_locks_and_disappears_after_departure() {
+        let settings = TooltipSettings::default();
+        let source = entity(1);
+        let mut state = TooltipState::default();
+        state.enter(source, None, false);
+        state.advance(Some(source), None, 10., &settings);
+        assert_eq!(state.entries[0].phase, TooltipPhase::Visible);
+        state.advance(None, None, settings.departure_grace, &settings);
+        assert!(state.entries.is_empty());
+    }
+
+    #[test]
     fn nesting_requires_locked_parent_and_escape_dismisses_only_deepest() {
         let (root, child) = (entity(1), entity(2));
         let mut state = TooltipState::default();
-        state.enter(root, None);
-        state.enter(child, Some(root));
+        state.enter(root, None, true);
+        state.enter(child, Some(root), true);
         assert_eq!(state.entries.len(), 1);
         state.activate(root, None);
         state.activate(child, Some(root));
         assert_eq!(state.entries.len(), 2);
         state.dismiss_deepest();
-        state.enter(child, Some(root));
+        state.enter(child, Some(root), true);
         assert_eq!(state.entries.len(), 1);
         assert!(state.dismissed_this_frame);
         state.activate(child, Some(root));
@@ -187,7 +203,7 @@ mod tests {
         let settings = TooltipSettings::default();
         let (root, child) = (entity(1), entity(2));
         let mut state = TooltipState::default();
-        state.enter(root, None);
+        state.enter(root, None, true);
         state.advance(Some(root), None, 0.4, &settings);
         state.advance(None, None, 0.1, &settings);
         assert_eq!(state.entries.len(), 1);

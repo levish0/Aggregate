@@ -91,7 +91,7 @@ pub(crate) fn execute_command(
         province: province.clone(),
         definition: definition.clone(),
         requested_workers: *workers,
-        remaining_worker_days: definition_data.construction.worker_days,
+        remaining_construction_points: definition_data.construction.construction_points,
         production_priority: *production_priority,
     };
     // Validate shared totals, including the capacity of pending buildings, through the same

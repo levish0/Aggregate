@@ -8,21 +8,16 @@ pub fn build(commands: &mut Commands, root: Entity) {
         root,
         Node {
             position_type: PositionType::Absolute,
-            left: px(92),
-            top: px(94),
-            bottom: px(140),
+            left: px(60),
+            top: px(84),
+            bottom: px(48),
             width: px(390),
+            max_width: percent(34),
             flex_direction: FlexDirection::Column,
             ..default()
         },
     );
-    commands.entity(panel).insert((
-        MapInspectionPanel,
-        UiPointerBlocker,
-        InspectionRoot,
-        aggregate_ui::window::FloatingWindow {
-            key: "territory-inspection".into(),
-            minimum_size: Vec2::new(340., 300.),
-        },
-    ));
+    commands
+        .entity(panel)
+        .insert((MapInspectionPanel, UiPointerBlocker, InspectionRoot));
 }

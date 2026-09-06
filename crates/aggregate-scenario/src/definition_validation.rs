@@ -60,8 +60,8 @@ pub(crate) fn validate_definitions(
             &format!("{path}.outputs_per_worker_day"),
         )?;
         require_positive(
-            facility.construction.worker_days,
-            &format!("{path}.construction.worker_days"),
+            facility.construction.construction_points,
+            &format!("{path}.construction.construction_points"),
         )?;
         require_positive(
             facility.construction.max_workers,

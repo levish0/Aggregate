@@ -29,7 +29,7 @@ pub struct ConstructionDayReport {
     pub facility: FacilityId,
     pub requested_workers: u64,
     pub active_workers: u64,
-    pub remaining_worker_days: u64,
+    pub remaining_construction_points: u64,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

@@ -22,6 +22,7 @@ fn native_management_capture() {
         std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../target/screenshots");
     std::fs::create_dir_all(directory).unwrap();
     let mut app = crate::create_app();
+    app.world_mut().resource_mut::<crate::state::InterfaceState>().screen = crate::state::Screen::Management;
     app.insert_resource(bevy::winit::WinitSettings::continuous())
         .init_resource::<CaptureRun>()
         .add_systems(
@@ -43,7 +44,6 @@ fn drive_capture(
 ) {
     run.frame += 1;
     let interface_action = match run.frame {
-        35 => Some(InterfaceAction::OpenManagement),
         185 => Some(InterfaceAction::SwitchLanguage),
         _ => None,
     };

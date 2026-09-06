@@ -193,12 +193,12 @@ pub(crate) fn validate_state(
             ));
         }
         require_positive(
-            project.remaining_worker_days,
-            &format!("{project_path}.remaining_worker_days"),
+            project.remaining_construction_points,
+            &format!("{project_path}.remaining_construction_points"),
         )?;
-        if project.remaining_worker_days > definition.construction.worker_days {
+        if project.remaining_construction_points > definition.construction.construction_points {
             return Err(ScenarioError::new(
-                format!("{project_path}.remaining_worker_days"),
+                format!("{project_path}.remaining_construction_points"),
                 "exceeds the definition's total construction work",
             ));
         }
@@ -219,7 +219,7 @@ pub(crate) fn validate_state(
             &format!("{project_path}.definition"),
         )?;
         let construction_labor_demand =
-            project.requested_workers.min(project.remaining_worker_days);
+            project.requested_workers.min(project.remaining_construction_points);
         add_checked(
             province_current_labor_demand
                 .entry(&project.province)

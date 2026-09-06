@@ -97,7 +97,7 @@ fn plan(
                 requested_workers: project
                     .0
                     .requested_workers
-                    .min(project.0.remaining_worker_days),
+                    .min(project.0.remaining_construction_points),
             });
     }
     for (province_id, province) in &mut work.provinces {

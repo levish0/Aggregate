@@ -88,11 +88,19 @@ pub(crate) fn update_tooltips(
     if let Some(source) = active
         && let Ok(target) = targets.get(source)
     {
-        state.enter(source, target.parent.map(|parent| parent.0));
+        state.enter(
+            source,
+            target.parent.map(|parent| parent.0),
+            !target.content.is_hint(),
+        );
     }
     for event in activated.read() {
         if let Ok(target) = targets.get(event.0) {
-            state.activate(event.0, target.parent.map(|parent| parent.0));
+            if target.content.is_hint() {
+                state.clear();
+            } else {
+                state.activate(event.0, target.parent.map(|parent| parent.0));
+            }
         }
     }
     if input.keys.just_pressed(KeyCode::Escape) {

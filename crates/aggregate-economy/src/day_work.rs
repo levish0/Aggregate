@@ -10,7 +10,7 @@ pub(crate) struct ProvincePlan {
 }
 
 pub(crate) struct ConstructionProgress {
-    pub remaining_worker_days: u64,
+    pub remaining_construction_points: u64,
 }
 
 /// Only proposed stockpile/progress changes are staged; authoritative entities are unchanged

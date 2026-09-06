@@ -121,7 +121,7 @@ mod tests {
             inputs_per_worker_day: goods(&[("coal", 2), ("ore", 3)]),
             outputs_per_worker_day: goods(&[("steel", 4)]),
             construction: ConstructionDefinition {
-                worker_days: 50,
+                construction_points: 50,
                 max_workers: 10,
                 goods: goods(&[("steel", 5)]),
             },

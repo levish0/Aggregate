@@ -13,7 +13,7 @@ pub struct GoodDefinition {
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct ConstructionDefinition {
-    pub worker_days: u64,
+    pub construction_points: u64,
     pub max_workers: u64,
     pub goods: BTreeMap<GoodId, u64>,
 }

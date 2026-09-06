@@ -50,7 +50,7 @@ pub struct ConstructionProjectState {
     pub province: ProvinceId,
     pub definition: FacilityDefinitionId,
     pub requested_workers: u64,
-    pub remaining_worker_days: u64,
+    pub remaining_construction_points: u64,
     /// Production priority inherited by the completed facility, not construction labor priority.
     pub production_priority: u32,
 }

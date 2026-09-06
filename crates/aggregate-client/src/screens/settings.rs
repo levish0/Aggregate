@@ -138,6 +138,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         UiButton::secondary(4),
         InterfaceAction::ToggleMotion,
     );
+    action_button(commands, panel, fonts, &state.text("menu-preview"), UiButton::secondary(6), InterfaceAction::OpenPreview);
     ui::rule(commands, panel);
     action_button(
         commands,

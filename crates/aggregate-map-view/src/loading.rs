@@ -233,6 +233,12 @@ pub fn finish_loading(
                 settings.is_srgb = false;
             })
             .load("gfx/map/compiled/terrain_weights.png"),
+        terrain_indices: server
+            .load_builder()
+            .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
+                settings.is_srgb = false;
+            })
+            .load("gfx/map/compiled/terrain_indices.png"),
         water_color: server.load("gfx/map/water/watercolor_rgb_waterspec_a.dds"),
         river_distance: server
             .load_builder()
@@ -246,6 +252,7 @@ pub fn finish_loading(
         terrain_material.terrain_diffuse.clone(),
         terrain_material.terrain_normal.clone(),
         terrain_material.terrain_weights.clone(),
+        terrain_material.terrain_indices.clone(),
         terrain_material.water_color.clone(),
         terrain_material.river_distance.clone(),
     ]));

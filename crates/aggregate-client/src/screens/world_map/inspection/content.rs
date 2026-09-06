@@ -147,7 +147,19 @@ pub fn refresh(
         },
     );
     commands.entity(content).insert(InspectionContent);
-    let breadcrumb = aggregate_ui::window::title_bar(&mut commands, content, root);
+    let breadcrumb = ui::node(
+        &mut commands,
+        content,
+        Node {
+            width: percent(100),
+            min_height: px(42),
+            padding: UiRect::all(px(8)),
+            column_gap: px(8),
+            align_items: AlignItems::Center,
+            flex_shrink: 0.,
+            ..default()
+        },
+    );
     let heading = ui::node(
         &mut commands,
         content,
@@ -247,6 +259,7 @@ pub fn refresh(
     for (index, (tab, label)) in [
         (InspectionTab::Overview, "inspection-overview"),
         (InspectionTab::Buildings, "inspection-buildings"),
+        (InspectionTab::Construction, "inspection-construction"),
         (InspectionTab::Population, "inspection-population"),
         (InspectionTab::Territory, "inspection-territory"),
         (InspectionTab::Programs, "inspection-programs"),
@@ -400,6 +413,15 @@ pub fn refresh(
             &session,
             &province_ids,
             has_statistics,
+        ),
+        InspectionTab::Construction => super::construction_queue::build(
+            &mut commands,
+            body,
+            &fonts,
+            &interface,
+            &session,
+            &province_ids,
+            view.page,
         ),
         InspectionTab::Population => {
             metric(
@@ -601,7 +623,7 @@ pub fn refresh(
     }
 }
 
-fn list_page(
+pub(super) fn list_page(
     commands: &mut Commands,
     parent: Entity,
     fonts: &UiFonts,

@@ -1,8 +1,6 @@
-use super::{MapLabel, MapModeSelect, outliner::MapOutliner};
-use crate::{
-    screens::action_button,
-    state::{InterfaceAction, InterfaceState},
-};
+use super::{MapLabel, MapModeSelect, controls::icon_button, outliner::MapOutliner};
+use crate::state::{InterfaceAction, InterfaceState};
+use aggregate_ui::icon::Icon;
 use aggregate_ui::{
     button::UiButton,
     components as ui,
@@ -19,6 +17,7 @@ pub fn build(
     state: &InterfaceState,
     session: &crate::management::ManagementSession,
 ) {
+    if !session.geographic { return; }
     let header = ui::panel(
         commands,
         root,
@@ -77,23 +76,10 @@ pub fn build(
         false,
     );
     commands.entity(totals).insert(MapLabel::Status);
-    for (label, marker) in [
-        ("management-population", MapLabel::Population),
-        ("map-elapsed-time", MapLabel::Day),
-    ] {
-        let column = layout::column(commands, header, 2.);
-        ui::text(
-            commands,
-            column,
-            fonts,
-            state.text(label),
-            11.,
-            theme::MUTED,
-            false,
-        );
-        let value = ui::text(commands, column, fonts, "—", 18., theme::TEXT, true);
-        commands.entity(value).insert(marker);
-    }
+    let population = layout::row(commands, header, 7.);
+    aggregate_ui::icon::icon(commands, population, Icon::Population, 20., theme::TEXT);
+    let value = ui::text(commands, population, fonts, "—", 18., theme::TEXT, true);
+    commands.entity(value).insert(MapLabel::Population);
     ui::node(
         commands,
         header,
@@ -102,69 +88,65 @@ pub fn build(
             ..default()
         },
     );
-    for (key, action, order) in [
-        ("setup-new-world", InterfaceAction::ConfigureWorld, 0),
-        ("settings-language", InterfaceAction::SwitchLanguage, 1),
-        ("menu-back", InterfaceAction::Back, 2),
-    ] {
-        let slot = ui::node(
-            commands,
-            header,
-            Node {
-                width: px(112),
-                ..default()
-            },
-        );
-        action_button(
-            commands,
-            slot,
-            fonts,
-            &state.text(key),
-            UiButton::secondary(order),
-            action,
-        );
-    }
 
-    let clock = ui::node(
-        commands,
-        root,
-        Node {
-            position_type: PositionType::Absolute,
-            right: px(260),
-            top: px(84),
-            column_gap: px(6),
-            align_items: AlignItems::Center,
-            ..default()
-        },
-    );
-    commands.entity(clock).insert(UiPointerBlocker);
-    for (key, action, order) in [
+    let time_column = layout::column(commands, header, 3.);
+    let date = ui::text(commands, time_column, fonts, "", 14., theme::TEXT, true);
+    commands.entity(date).insert(MapLabel::Day);
+    let clock = layout::row(commands, time_column, 4.);
+    for (icon, key, action, order) in [
         (
+            Icon::Play,
             "management-step",
             crate::management::ManagementAction::StepDay,
             10,
         ),
         (
+            Icon::Play,
             "management-play",
             crate::management::ManagementAction::ToggleRunning,
             11,
         ),
     ] {
-        let slot = ui::node(
-            commands,
-            clock,
-            Node {
-                width: px(115),
-                ..default()
-            },
-        );
         let mut style = UiButton::secondary(order);
         style.enabled = session.geographic;
-        let button = ui::button(commands, slot, fonts, &state.text(key), style);
+        let button = icon_button(commands, clock, fonts, state, icon, key, style);
+        let is_step = matches!(action, crate::management::ManagementAction::StepDay);
+        commands.entity(button).insert(action);
+        if is_step {
+            let bar = ui::node(
+                commands,
+                button,
+                Node {
+                    width: px(2),
+                    height: px(14),
+                    flex_shrink: 0.,
+                    ..default()
+                },
+            );
+            commands.entity(bar).insert(BackgroundColor(theme::TEXT));
+        }
+    }
+    crate::management::speed_controls(commands, clock, fonts, session, session.geographic, 20);
+    for (icon, key, action, order) in [
+        (
+            Icon::Globe,
+            "settings-language",
+            InterfaceAction::SwitchLanguage,
+            1,
+        ),
+        (Icon::Close, "menu-back", InterfaceAction::Back, 2),
+    ] {
+        let button = icon_button(
+            commands,
+            header,
+            fonts,
+            state,
+            icon,
+            key,
+            UiButton::secondary(order),
+        );
         commands.entity(button).insert(action);
     }
-
-    crate::management::speed_controls(commands, clock, fonts, session, session.geographic, 20);
 
     let rail = ui::panel(
         commands,
@@ -172,52 +154,53 @@ pub fn build(
         Node {
             position_type: PositionType::Absolute,
             left: px(0),
-            top: px(120),
-            padding: UiRect::all(px(8)),
-            width: px(82),
+            top: px(84),
+            padding: UiRect::all(px(7)),
+            width: px(52),
             flex_direction: FlexDirection::Column,
             row_gap: px(9),
             ..default()
         },
     );
     commands.entity(rail).insert(UiPointerBlocker);
-    for (label, action, order) in [
-        ("map-nav-management", InterfaceAction::OpenManagement, 3),
-        ("map-nav-settings", InterfaceAction::OpenSettings, 4),
+
+    for (icon, label, action, order) in [
+        (
+            Icon::Government,
+            "map-nav-management",
+            InterfaceAction::OpenManagement,
+            3,
+        ),
+        (
+            Icon::Settings,
+            "map-nav-settings",
+            InterfaceAction::OpenSettings,
+            4,
+        ),
     ] {
-        let button = action_button(
+        let button = icon_button(
             commands,
             rail,
             fonts,
-            &state.text(label),
+            state,
+            icon,
+            label,
             UiButton::secondary(order),
-            action,
         );
-        commands.entity(button).insert(Node {
-            width: percent(100),
-            min_height: px(60),
-            padding: UiRect::all(px(5)),
-            border: UiRect::all(px(1)),
-            border_radius: BorderRadius::all(px(3)),
-            flex_direction: FlexDirection::ColumnReverse,
-            row_gap: px(4),
-            align_items: AlignItems::Center,
-            justify_content: JustifyContent::Center,
-            ..default()
-        });
-        aggregate_ui::icon::icon(
-            commands,
-            button,
-            if action == InterfaceAction::OpenManagement {
-                aggregate_ui::icon::Icon::Government
-            } else {
-                aggregate_ui::icon::Icon::Settings
-            },
-            22.,
-            theme::TEXT,
-        );
+        commands.entity(button).insert(action);
     }
-
+    let queue = icon_button(
+        commands,
+        rail,
+        fonts,
+        state,
+        Icon::Queue,
+        "inspection-construction",
+        UiButton::secondary(5),
+    );
+    commands
+        .entity(queue)
+        .insert(super::inspection::InspectionAction::Construction);
     super::inspection::build(commands, root);
 
     let outliner = ui::panel(

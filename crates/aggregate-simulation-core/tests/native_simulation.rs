@@ -61,7 +61,7 @@ fn workers_blocked_by_production_inputs_finish_waiting_construction_without_doub
         .find(|definition| definition.id == "grain_farm".into())
         .unwrap();
     recipe.construction.goods.clear();
-    recipe.construction.worker_days = 1;
+    recipe.construction.construction_points = 1;
     recipe.construction.max_workers = 1;
     let mut simulation = economic_simulation(fixture).unwrap();
     for number in [100, 101] {
@@ -173,7 +173,7 @@ fn finishing_jobs_cannot_round_to_zero_forever_when_local_workforce_exists() {
         .iter_mut()
         .find(|definition| definition.id == "grain_farm".into())
         .unwrap();
-    recipe.construction.worker_days = 1;
+    recipe.construction.construction_points = 1;
     recipe.construction.max_workers = 1;
     let mut simulation = economic_simulation(fixture).unwrap();
     for number in [100, 101] {
@@ -491,7 +491,7 @@ fn capacity_boundary_scenario(
             "grain_farm" => {
                 definition.workers_per_level = new_capacity;
                 definition.construction.max_workers = construction_workers;
-                definition.construction.worker_days = construction_workers;
+                definition.construction.construction_points = construction_workers;
             }
             _ => {}
         }

@@ -1,6 +1,7 @@
 mod actions;
 mod buildings;
 mod components;
+mod construction_queue;
 mod content;
 mod layout;
 pub use actions::apply_actions;
@@ -13,6 +14,7 @@ pub enum InspectionTab {
     #[default]
     Overview,
     Buildings,
+    Construction,
     Population,
     Territory,
     Programs,
@@ -33,6 +35,7 @@ pub enum InspectionAction {
     Tab(InspectionTab),
     Page(usize),
     Country,
+    Construction,
     State,
     Province(u32),
     Close,
