@@ -16,6 +16,8 @@ struct ProvinceStyle {
 @group(#{MATERIAL_BIND_GROUP}) @binding(8) var rock_sampler: sampler;
 @group(#{MATERIAL_BIND_GROUP}) @binding(9) var water_color: texture_2d<f32>;
 @group(#{MATERIAL_BIND_GROUP}) @binding(10) var water_sampler: sampler;
+@group(#{MATERIAL_BIND_GROUP}) @binding(11) var river_distance_map: texture_2d<f32>;
+@group(#{MATERIAL_BIND_GROUP}) @binding(12) var river_sampler: sampler;
 
 fn province_at(pixel: vec2<i32>) -> u32 {
     let dimensions=vec2<i32>(textureDimensions(province_indices));
@@ -68,6 +70,9 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let grass = textureSample(grass_detail,grass_sampler,fract(in.world_position.xz*0.12)).rgb;
     let rock_detail_color = textureSample(rock_detail,rock_sampler,fract(in.world_position.xz*0.16)).rgb;
     let sea = textureSample(water_color,water_sampler,in.uv).rgb;
+    let river = textureSample(river_distance_map,river_sampler,in.uv).rg;
+    let river_width = 0.25 + river.g * 1.35;
+    let river_coverage = 1.0-smoothstep(river_width-footprint*0.6,river_width+footprint*0.6,river.r*16.0);
     var color = atlas * (0.72+light*0.40);
     let detail = mix(grass,rock_detail_color,smoothstep(0.04,0.40,1.0-normal.y));
     color *= clamp(detail*1.4+0.55,vec3<f32>(0.62),vec3<f32>(1.40));
@@ -91,6 +96,7 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     if !water { color *= 1.0-country_outline*0.55; }
     if !water && selection.z != 0u { color *= 1.0-state_outline*0.22; }
     color = mix(color,vec3<f32>(0.40,0.55,0.52),coast_outline*0.3);
+    if !water { color = mix(color,vec3<f32>(0.045,0.19,0.26),river_coverage*0.80); }
     if id == selection.y && id != 0u { color = mix(color,vec3<f32>(0.78,0.69,0.38),0.24); }
     let selected_state = styles[selection.x].grouping.w;
     let selected_country = styles[selection.x].grouping.y;

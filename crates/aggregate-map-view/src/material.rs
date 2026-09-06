@@ -28,6 +28,9 @@ pub struct MapTerrainMaterial {
     #[texture(9)]
     #[sampler(10)]
     pub water_color: Handle<Image>,
+    #[texture(11)]
+    #[sampler(12)]
+    pub river_distance: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]

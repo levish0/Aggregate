@@ -75,7 +75,7 @@ fn drive_capture(
             .0;
         activated.write(ButtonActivated(entity));
     }
-    if let Some(map) = map {
+    if let Some(map) = map && !state.loading {
         capture.ready_frames += 1;
         let frame = capture.ready_frames;
         // Choose an actual on-screen land pixel. Recover the ID through the camera ray,

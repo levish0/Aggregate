@@ -137,6 +137,8 @@ pub fn update_labels(
             MapLabel::Status => {
                 if let Some(error) = &state.error {
                     format!("{}\n{error}", interface.text("map-load-failed"))
+                } else if state.loading {
+                    interface.text("map-loading")
                 } else if let Some(map) = &map {
                     interface.format(
                         "map-counts",

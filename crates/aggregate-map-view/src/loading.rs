@@ -21,6 +21,27 @@ use tracing::Instrument;
 #[derive(Resource)]
 pub struct MapLoadTask(Task<Result<PreparedWorldMap, String>>);
 
+#[derive(Resource)]
+pub struct PendingMapTextures(Vec<Handle<Image>>);
+
+pub fn finish_textures(mut commands: Commands, pending: Option<Res<PendingMapTextures>>, server: Res<AssetServer>, mut state: ResMut<MapViewState>) {
+    let Some(pending) = pending else { return; };
+    if pending.0.iter().all(|handle| server.is_loaded_with_dependencies(handle.id())) {
+        state.loading = false;
+        commands.remove_resource::<PendingMapTextures>();
+        info!("Map textures ready");
+    }
+    for handle in &pending.0 {
+        if let Some(bevy::asset::LoadState::Failed(error)) = server.get_load_state(handle.id()) {
+            state.error = Some(format!("map texture: {error}"));
+            state.loading = false;
+            error!(%error, "Map texture loading failed");
+            commands.remove_resource::<PendingMapTextures>();
+            break;
+        }
+    }
+}
+
 struct PreparedWorldMap {
     map: WorldMap,
     province_texture: Vec<u8>,
@@ -106,10 +127,10 @@ pub fn finish_loading(
         return;
     };
     commands.remove_resource::<MapLoadTask>();
-    state.loading = false;
     let prepared = match result {
         Ok(map) => map,
         Err(error) => {
+            state.loading = false;
             error!(%error, "Map preparation failed");
             state.error = Some(error);
             return;
@@ -188,7 +209,7 @@ pub fn finish_loading(
             ),
         });
     }
-    let material = materials.add(MapTerrainMaterial {
+    let terrain_material = MapTerrainMaterial {
         selection: UVec4::ZERO,
         province_indices: image,
         province_styles: buffers.add(ShaderBuffer::from(styles)),
@@ -196,7 +217,10 @@ pub fn finish_loading(
         grass_detail: server.load("gfx/map/terrain/grasslands_01_diffuse.dds"),
         rock_detail: server.load("gfx/map/terrain/rocks_01_diffuse.dds"),
         water_color: server.load("gfx/map/water/watercolor_rgb_waterspec_a.dds"),
-    });
+        river_distance: server.load_builder().with_settings(|settings: &mut bevy::image::ImageLoaderSettings| { settings.is_srgb = false; }).load("map_data/river_distance.png"),
+    };
+    commands.insert_resource(PendingMapTextures(vec![terrain_material.color_map.clone(),terrain_material.grass_detail.clone(),terrain_material.rock_detail.clone(),terrain_material.water_color.clone(),terrain_material.river_distance.clone()]));
+    let material = materials.add(terrain_material);
     for mesh in prepared_meshes {
         let mesh = meshes.add(mesh);
         for copy in -2..=2 {

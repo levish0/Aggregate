@@ -61,6 +61,7 @@ impl Plugin for MapViewPlugin {
                 (
                     loading::start_loading,
                     loading::finish_loading,
+                    loading::finish_textures,
                     table::spawn_table,
                     camera::control,
                     camera::update_camera,
