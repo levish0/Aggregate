@@ -1,12 +1,8 @@
 use crate::{
     SimulationClock,
-    command::{RecordedCommand, SimulationCommand},
-    error::SimulationError,
-    report::{CommandOutcome, DayReport},
-    schedule::create_schedule,
-    world_storage::{self, DayWork},
+    RecordedCommand, SimulationCommand, SimulationError, CommandOutcome, DayReport,
 };
-use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram};
+use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram, world_storage};
 use aggregate_scenario::validate_scenario;
 use aggregate_world::{Scenario, WorldSnapshot};
 use bevy_ecs::prelude::*;
@@ -16,7 +12,6 @@ use std::sync::Arc;
 /// No domain calculation depends on a renderer, wall-clock time, or ECS entity IDs.
 pub struct Simulation {
     pub(crate) world: World,
-    schedule: Schedule,
     pub(crate) initial_scenario: Scenario,
     pub(crate) commands: Vec<RecordedCommand>,
     pub(crate) programs: ProgramRuntime,
@@ -31,6 +26,7 @@ impl Simulation {
         simulation.programs =
             ProgramRuntime::initialize(programs, &simulation.initial_scenario.initial_state)
                 .map_err(SimulationError::InvalidPrograms)?;
+        simulation.programs.install(&mut simulation.world).map_err(SimulationError::InvalidPrograms)?;
         Ok(simulation)
     }
 
@@ -66,7 +62,6 @@ impl Simulation {
     ) -> Self {
         Self {
             world: world_storage::create_world(&scenario, state),
-            schedule: create_schedule(),
             initial_scenario: scenario,
             commands,
             programs: ProgramRuntime::default(),
@@ -94,7 +89,7 @@ impl Simulation {
             .ok()
             .and_then(|length| length.checked_add(1))
             .ok_or_else(|| SimulationError::CommandRejected("command sequence exhausted".into()))?;
-        let outcome = crate::command::execute_command(
+        let outcome = self.programs.execute_command(
             &mut self.world,
             &command,
             sequence,
@@ -120,7 +115,10 @@ impl Simulation {
 
     #[tracing::instrument(level = "debug", skip_all, fields(day = self.clock().day().saturating_add(1)))]
     pub fn step(&mut self) -> Result<DayReport, SimulationError> {
-        let next_day = self.clock().day().saturating_add(1);
+        let next_day = self.clock().day().checked_add(1).ok_or_else(|| SimulationError::DayFailed {
+            day: self.clock().day(), phase: "clock", reason: "simulation day exhausted".into(),
+        })?;
+        self.world.resource_mut::<world_storage::WorkforceLimits>().0.clear();
         let prepared_programs = if self.programs.is_empty() {
             None
         } else {
@@ -135,9 +133,7 @@ impl Simulation {
                 .clone_from(&prepared.workforce_limits);
             Some(prepared)
         };
-        self.schedule.run(&mut self.world);
-        let mut work = self.world.resource_mut::<DayWork>();
-        if let Some((phase, reason)) = work.failure.take() {
+        if let Err((phase, reason)) = self.programs.prepare_ecs(&mut self.world) {
             tracing::error!(day = next_day, phase, %reason, "Daily calculation failed; state not committed");
             return Err(SimulationError::DayFailed {
                 day: next_day,
@@ -145,10 +141,8 @@ impl Simulation {
                 reason,
             });
         }
-        let report = work
-            .report
-            .take()
-            .expect("successful commit creates a day report");
+        let report = self.programs.commit_ecs(&mut self.world, next_day);
+        self.world.resource_mut::<SimulationClock>().day = next_day;
         tracing::debug!(
             day = report.day,
             events = report.events.len(),

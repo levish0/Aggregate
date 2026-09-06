@@ -5,7 +5,7 @@ use aggregate_programs::{
 use aggregate_world::FacilityState;
 use bevy_ecs::prelude::*;
 
-pub(super) fn commit_day(
+pub(crate) fn commit_day(
     mut commands: Commands,
     mut provinces: Query<&mut Province>,
     mut projects: Query<(Entity, &mut ConstructionProject)>,

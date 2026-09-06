@@ -3,9 +3,8 @@ use aggregate_geography::GeographyCatalog;
 use aggregate_world::*;
 use std::collections::BTreeMap;
 
-pub fn initialize_world(catalog: &GeographyCatalog, settings: &WorldInitializationSettings) -> Result<Scenario, String> {
+pub fn initialize_world(catalog: &GeographyCatalog, settings: &WorldInitializationSettings, definitions: ContentDefinitions) -> Result<Scenario, String> {
     settings.validate()?;
-    let definitions = crate::content::definitions();
     let regions: BTreeMap<_, _> = catalog.regions.iter().map(|region| (&region.id, &region.name)).collect();
     let countries = catalog.countries.iter().map(|country| CountryState {
         id: country.id.clone(), name: country.key.clone(), name_key: Some(format!("country-{}", country.key.to_lowercase())),

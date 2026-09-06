@@ -1,13 +1,13 @@
-use crate::{Simulation, SimulationError, command::RecordedCommand};
+use crate::{Simulation, SimulationError, RecordedCommand};
 use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram};
 use aggregate_scenario::{validate_scenario, validate_world_state};
 use aggregate_world::{Scenario, WorldSnapshot};
 use serde::{Deserialize, Serialize};
 use std::sync::Arc;
 
-pub const SAVE_SCHEMA_VERSION: u32 = 3;
+pub const SAVE_SCHEMA_VERSION: u32 = 4;
 /// Increment when the semantics/order of native rules change. Saves include their definitions.
-pub const RULESET_VERSION: &str = "aggregate-native-economy/2";
+pub const RULESET_VERSION: &str = "aggregate-program-runtime/1";
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -82,6 +82,7 @@ impl Simulation {
         let mut simulation =
             Self::from_validated_state(save.scenario, &save.current_state, save.commands);
         simulation.programs = programs;
+        simulation.programs.install(&mut simulation.world).map_err(SimulationError::InvalidPrograms)?;
         tracing::info!(
             day = simulation.clock().day(),
             commands = simulation.commands.len(),

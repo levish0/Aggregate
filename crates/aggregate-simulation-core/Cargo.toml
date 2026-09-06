@@ -9,7 +9,6 @@ tracing.workspace = true
 bevy_ecs.workspace = true
 aggregate-world.workspace = true
 aggregate-scenario.workspace = true
-aggregate-economy.workspace = true
 aggregate-programs.workspace = true
 serde.workspace = true
 serde_json.workspace = true
@@ -17,6 +16,7 @@ serde_path_to_error.workspace = true
 blake3.workspace = true
 
 [dev-dependencies]
+aggregate-economy.workspace = true
 tracing-subscriber = { workspace = true, features = ["env-filter"] }
 
 [lints]

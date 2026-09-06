@@ -6,6 +6,7 @@ rust-version.workspace = true
 [features]
 engine-tracing = ["bevy/trace"]
 [dependencies]
+aggregate-economy.workspace = true
 bevy.workspace = true
 aggregate-ui.workspace = true
 aggregate-localization.workspace = true

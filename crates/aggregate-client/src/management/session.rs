@@ -53,7 +53,7 @@ impl ManagementSession {
             .expect("validated bundled scenario");
         let player_country = scenario.initial_state.countries[0].id.clone();
         let definitions = scenario.definitions.clone();
-        let mut simulation = Simulation::from_scenario(scenario).expect("validated scenario");
+        let mut simulation = Simulation::from_scenario_with_programs(scenario, vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)]).expect("validated scenario");
         let snapshot = simulation.snapshot();
         Self {
             simulation,

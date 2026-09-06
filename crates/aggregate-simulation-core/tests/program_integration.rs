@@ -69,9 +69,9 @@ fn scenario() -> Scenario {
 #[test]
 fn module_effects_are_opt_in_and_save_resume_replay_preserve_owned_state() {
     let provider: Arc<dyn SimulationProgram> = Arc::new(program("test.workforce", 5));
-    let mut baseline = Simulation::from_scenario(scenario()).unwrap();
+    let mut baseline = with_programs(scenario(), Vec::new()).unwrap();
     let mut simulation =
-        Simulation::from_scenario_with_programs(scenario(), vec![provider.clone()]).unwrap();
+        with_programs(scenario(), vec![provider.clone()]).unwrap();
     assert_eq!(baseline.step().unwrap().provinces[0].available_workers, 20);
     let before = simulation.snapshot().population_groups;
     assert_eq!(simulation.step().unwrap().provinces[0].available_workers, 5);
@@ -80,25 +80,25 @@ fn module_effects_are_opt_in_and_save_resume_replay_preserve_owned_state() {
         before,
         "temporary availability must not destroy population/workforce"
     );
-    assert_eq!(simulation.program_states()[0].payload["days"], 1);
+    assert_eq!(simulation.program_states().iter().find(|state| state.manifest.id == "test.workforce").unwrap().payload["days"], 1);
     let save = simulation.save_json().unwrap();
     assert!(
         Simulation::from_save_json(&save).is_err(),
         "missing program must never silently disappear from a save"
     );
-    let mut resumed = Simulation::from_save_json_with_programs(
+    let mut resumed = restore_programs(
         &save,
         vec![provider.clone(), Arc::new(program("test.disabled", 0))],
     )
     .unwrap();
     assert_eq!(
         resumed.program_states().len(),
-        1,
+        2,
         "installed extras remain disabled"
     );
     assert_eq!(resumed.step().unwrap(), simulation.step().unwrap());
     let mut replayed =
-        Simulation::replay_with_programs(scenario(), &[], 2, vec![provider]).unwrap();
+        Simulation::replay_with_programs(scenario(), &[], 2, with_economy(vec![provider])).unwrap();
     assert_eq!(
         replayed.state_hash().unwrap(),
         simulation.state_hash().unwrap()
@@ -114,7 +114,7 @@ fn module_effects_are_opt_in_and_save_resume_replay_preserve_owned_state() {
         },
         ..program("test.workforce", 5)
     });
-    assert!(Simulation::from_save_json_with_programs(&save, vec![changed]).is_err());
+    assert!(restore_programs(&save, vec![changed]).is_err());
 }
 
 #[test]
@@ -125,7 +125,7 @@ fn modules_reject_cycles_conflicts_missing_or_incompatible_dependencies() {
         version: "^1".parse().unwrap(),
     });
     assert!(
-        Simulation::from_scenario_with_programs(scenario(), vec![Arc::new(first.clone())]).is_err()
+        with_programs(scenario(), vec![Arc::new(first.clone())]).is_err()
     );
     let mut second = program("test.second", 12);
     second.manifest.dependencies.push(ProgramDependency {
@@ -133,7 +133,7 @@ fn modules_reject_cycles_conflicts_missing_or_incompatible_dependencies() {
         version: "^1".parse().unwrap(),
     });
     assert!(
-        Simulation::from_scenario_with_programs(
+        with_programs(
             scenario(),
             vec![Arc::new(first.clone()), Arc::new(second.clone())]
         )
@@ -142,7 +142,7 @@ fn modules_reject_cycles_conflicts_missing_or_incompatible_dependencies() {
     second.manifest.dependencies.clear();
     second.manifest.version = Version::new(2, 0, 0);
     assert!(
-        Simulation::from_scenario_with_programs(
+        with_programs(
             scenario(),
             vec![Arc::new(first.clone()), Arc::new(second)]
         )
@@ -151,14 +151,14 @@ fn modules_reject_cycles_conflicts_missing_or_incompatible_dependencies() {
     first.manifest.dependencies.clear();
     first.manifest.conflicts.push("test.second".into());
     assert!(
-        Simulation::from_scenario_with_programs(
+        with_programs(
             scenario(),
             vec![Arc::new(first), Arc::new(program("test.second", 12))]
         )
         .is_err()
     );
     assert!(
-        Simulation::from_scenario_with_programs(
+        with_programs(
             scenario(),
             vec![
                 Arc::new(program("test.same", 12)),
@@ -177,12 +177,12 @@ fn order_is_stable_limits_combine_and_failed_modules_commit_nothing() {
         id: "test.first".into(),
         version: "^1".parse().unwrap(),
     });
-    let mut forward = Simulation::from_scenario_with_programs(
+    let mut forward = with_programs(
         scenario(),
         vec![Arc::new(first.clone()), Arc::new(second.clone())],
     )
     .unwrap();
-    let mut reverse = Simulation::from_scenario_with_programs(
+    let mut reverse = with_programs(
         scenario(),
         vec![Arc::new(second.clone()), Arc::new(first.clone())],
     )
@@ -190,7 +190,7 @@ fn order_is_stable_limits_combine_and_failed_modules_commit_nothing() {
     assert_eq!(forward.step().unwrap(), reverse.step().unwrap());
     assert_eq!(forward.step().unwrap().provinces[0].available_workers, 8);
     second.fail = true;
-    let mut failing = Simulation::from_scenario_with_programs(
+    let mut failing = with_programs(
         scenario(),
         vec![Arc::new(first), Arc::new(second)],
     )
@@ -199,7 +199,7 @@ fn order_is_stable_limits_combine_and_failed_modules_commit_nothing() {
     assert!(failing.step().is_err());
     assert_eq!(before, failing.state_hash().unwrap());
     assert_eq!(failing.clock().day(), 0);
-    let mut invalid = Simulation::from_scenario_with_programs(
+    let mut invalid = with_programs(
         scenario(),
         vec![Arc::new(program("test.invalid", 21))],
     )
@@ -215,7 +215,7 @@ fn core_failure_also_discards_successfully_prepared_module_state() {
     fixture.initial_state.provinces[0]
         .stockpile
         .insert("grain".into(), u64::MAX);
-    let mut simulation = Simulation::from_scenario_with_programs(
+    let mut simulation = with_programs(
         fixture,
         vec![Arc::new(program("test.workforce", 20))],
     )
@@ -223,5 +223,16 @@ fn core_failure_also_discards_successfully_prepared_module_state() {
     let before = simulation.state_hash().unwrap();
     assert!(simulation.step().is_err());
     assert_eq!(before, simulation.state_hash().unwrap());
-    assert_eq!(simulation.program_states()[0].payload["days"], 0);
+    assert_eq!(simulation.program_states().iter().find(|state| state.manifest.id == "test.workforce").unwrap().payload["days"], 0);
+}
+
+fn with_economy(mut programs: Vec<Arc<dyn SimulationProgram>>) -> Vec<Arc<dyn SimulationProgram>> {
+    programs.push(Arc::new(aggregate_economy::EconomyProgram));
+    programs
+}
+fn with_programs(scenario: Scenario, programs: Vec<Arc<dyn SimulationProgram>>) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+    Simulation::from_scenario_with_programs(scenario, with_economy(programs))
+}
+fn restore_programs(source: &str, programs: Vec<Arc<dyn SimulationProgram>>) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+    Simulation::from_save_json_with_programs(source, with_economy(programs))
 }

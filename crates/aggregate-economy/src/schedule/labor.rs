@@ -1,5 +1,5 @@
 use crate::day_work::DayWork;
-use crate::world_storage::{
+use aggregate_programs::world_storage::{
     ConstructionProject, DefinitionRegistry, Facility, PopulationGroup, WorkforceLimits,
 };
 use crate::{LaborRequest, allocate_labor};

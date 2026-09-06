@@ -63,12 +63,12 @@ fn workers_blocked_by_production_inputs_finish_waiting_construction_without_doub
     recipe.construction.goods.clear();
     recipe.construction.worker_days = 1;
     recipe.construction.max_workers = 1;
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     for number in [100, 101] {
         let mut command = build_command();
         let SimulationCommand::StartConstruction {
             facility, workers, ..
-        } = &mut command;
+        } = &mut command else { unreachable!("construction fixture") };
         *facility = facility_id(number);
         *workers = 1;
         simulation.execute(command).unwrap();
@@ -96,13 +96,13 @@ fn workers_blocked_by_production_inputs_finish_waiting_construction_without_doub
             .filter(|facility| facility.facility == facility_id(3))
             .all(|facility| facility.outputs.values().all(|amount| *amount == 0))
     );
-    let mut resumed = Simulation::from_save_json(&simulation.save_json().unwrap()).unwrap();
+    let mut resumed = restore_economy(&simulation.save_json().unwrap()).unwrap();
     assert_eq!(resumed.step().unwrap(), simulation.step().unwrap());
 }
 
 #[test]
 fn production_and_consumption_have_explicit_balanced_goods_flows() {
-    let mut simulation = Simulation::from_scenario(scenario()).unwrap();
+    let mut simulation = economic_simulation(scenario()).unwrap();
     let before = simulation.snapshot();
     let report = simulation.step().unwrap();
     let after = simulation.snapshot();
@@ -172,12 +172,12 @@ fn finishing_jobs_cannot_round_to_zero_forever_when_local_workforce_exists() {
         .unwrap();
     recipe.construction.worker_days = 1;
     recipe.construction.max_workers = 1;
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     for number in [100, 101] {
         let mut command = build_command();
         let SimulationCommand::StartConstruction {
             facility, workers, ..
-        } = &mut command;
+        } = &mut command else { unreachable!("construction fixture") };
         *facility = facility_id(number);
         *workers = 1;
         simulation.execute(command).unwrap();
@@ -204,9 +204,9 @@ fn finishing_jobs_cannot_round_to_zero_forever_when_local_workforce_exists() {
 #[test]
 fn construction_uses_real_stock_and_competes_with_existing_jobs() {
     let fixture = scenario();
-    let mut baseline = Simulation::from_scenario(fixture.clone()).unwrap();
+    let mut baseline = economic_simulation(fixture.clone()).unwrap();
     let baseline_report = baseline.step().unwrap();
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     let before = simulation.snapshot();
     let result = simulation.execute(build_command()).unwrap();
     assert_eq!(result.sequence, 1);
@@ -267,13 +267,13 @@ fn rejected_commands_do_not_partially_spend_stock_or_append_history() {
         .find(|province| province.id.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6")
         .unwrap();
     north.stockpile.insert("tools".into(), 0); // timber validates first; later failure must undo nothing.
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     let before = simulation.snapshot();
     assert!(simulation.execute(build_command()).is_err());
     assert_eq!(simulation.snapshot(), before);
     assert!(simulation.command_log().is_empty());
     let mut foreign = build_command();
-    let SimulationCommand::StartConstruction { country, .. } = &mut foreign;
+    let SimulationCommand::StartConstruction { country, .. } = &mut foreign else { unreachable!("construction fixture") };
     *country = "00000000-0000-0000-0000-0000000003e7".parse().unwrap();
     assert!(simulation.execute(foreign).is_err());
     assert_eq!(simulation.snapshot(), before);
@@ -281,7 +281,7 @@ fn rejected_commands_do_not_partially_spend_stock_or_append_history() {
 
 #[test]
 fn repeated_facility_id_is_rejected_without_double_spending() {
-    let mut simulation = Simulation::from_scenario(scenario()).unwrap();
+    let mut simulation = economic_simulation(scenario()).unwrap();
     simulation.execute(build_command()).unwrap();
     let before = simulation.snapshot();
     assert!(simulation.execute(build_command()).is_err());
@@ -292,18 +292,18 @@ fn repeated_facility_id_is_rejected_without_double_spending() {
 #[test]
 fn save_resume_and_command_replay_match_uninterrupted_execution() {
     let fixture = scenario();
-    let mut uninterrupted = Simulation::from_scenario(fixture.clone()).unwrap();
+    let mut uninterrupted = economic_simulation(fixture.clone()).unwrap();
     uninterrupted.step().unwrap();
     uninterrupted.execute(build_command()).unwrap();
     uninterrupted.step().unwrap();
     let save = uninterrupted.save_json().unwrap();
-    let mut resumed = Simulation::from_save_json(&save).unwrap();
+    let mut resumed = restore_economy(&save).unwrap();
     assert!(!resumed.snapshot().construction_projects.is_empty());
     for _ in 0..12 {
         assert_eq!(uninterrupted.step().unwrap(), resumed.step().unwrap());
     }
     assert_eq!(uninterrupted.snapshot(), resumed.snapshot());
-    let mut replayed = Simulation::replay(
+    let mut replayed = replay_economy(
         fixture,
         uninterrupted.command_log(),
         uninterrupted.clock().day(),
@@ -324,8 +324,8 @@ fn definition_and_entity_insertion_order_does_not_change_results() {
     reordered.initial_state.provinces.reverse();
     reordered.initial_state.population_groups.reverse();
     reordered.initial_state.facilities.reverse();
-    let mut first = Simulation::from_scenario(fixture).unwrap();
-    let mut second = Simulation::from_scenario(reordered).unwrap();
+    let mut first = economic_simulation(fixture).unwrap();
+    let mut second = economic_simulation(reordered).unwrap();
     first.execute(build_command()).unwrap();
     second.execute(build_command()).unwrap();
     for _ in 0..10 {
@@ -365,7 +365,7 @@ fn lower_production_priority_reserves_scarce_inputs_first() {
         .unwrap()
         .stockpile
         .insert("timber".into(), 1);
-    let report = Simulation::from_scenario(fixture).unwrap().step().unwrap();
+    let report = economic_simulation(fixture).unwrap().step().unwrap();
     assert_eq!(
         report
             .facilities
@@ -399,7 +399,7 @@ fn failed_day_leaves_all_authoritative_state_unchanged() {
             },
         );
     }
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     let before = simulation.snapshot();
     let error = simulation.step().unwrap_err();
     assert!(error.to_string().contains("overflow"));
@@ -414,7 +414,7 @@ fn food_shortage_is_reported_without_inventing_demographic_changes() {
     for province in &mut fixture.initial_state.provinces {
         province.stockpile.insert("grain".into(), 0);
     }
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     let before = simulation.snapshot().population_groups;
     let report = simulation.step().unwrap();
     assert!(
@@ -429,17 +429,17 @@ fn food_shortage_is_reported_without_inventing_demographic_changes() {
 
 #[test]
 fn saves_reject_bad_versions_references_and_replay_order() {
-    let mut simulation = Simulation::from_scenario(scenario()).unwrap();
+    let mut simulation = economic_simulation(scenario()).unwrap();
     let saved = simulation.save_json().unwrap();
     let mut invalid: serde_json::Value = serde_json::from_str(&saved).unwrap();
     invalid["ruleset_version"] = "unsupported".into();
-    assert!(Simulation::from_save_json(&invalid.to_string()).is_err());
+    assert!(restore_economy(&invalid.to_string()).is_err());
     invalid = serde_json::from_str(&saved).unwrap();
     invalid["current_state"]["provinces"][0]["country"] = "unknown_country".into();
-    assert!(Simulation::from_save_json(&invalid.to_string()).is_err());
-    assert!(Simulation::from_save_json(&(saved + " trailing")).is_err());
+    assert!(restore_economy(&invalid.to_string()).is_err());
+    assert!(restore_economy(&(saved + " trailing")).is_err());
     assert!(
-        Simulation::replay(
+        replay_economy(
             scenario(),
             &[RecordedCommand {
                 day: 0,
@@ -454,11 +454,11 @@ fn saves_reject_bad_versions_references_and_replay_order() {
 
 #[test]
 fn exhausted_day_counter_fails_without_mutation() {
-    let mut original = Simulation::from_scenario(scenario()).unwrap();
+    let mut original = economic_simulation(scenario()).unwrap();
     let mut saved: serde_json::Value =
         serde_json::from_str(&original.save_json().unwrap()).unwrap();
     saved["current_state"]["day"] = u64::MAX.into();
-    let mut simulation = Simulation::from_save_json(&saved.to_string()).unwrap();
+    let mut simulation = restore_economy(&saved.to_string()).unwrap();
     let before = simulation.snapshot();
     assert!(simulation.step().is_err());
     assert_eq!(simulation.snapshot(), before);
@@ -494,12 +494,12 @@ fn capacity_boundary_scenario(
 #[test]
 fn construction_rejects_future_country_capacity_overflow_before_spending() {
     let fixture = capacity_boundary_scenario(u64::MAX - 1, 2, 1);
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     let before = simulation.snapshot();
     let mut command = build_command();
     let SimulationCommand::StartConstruction {
         province, workers, ..
-    } = &mut command;
+    } = &mut command else { unreachable!("construction fixture") };
     *province = "01a07577-e209-7938-8120-efb504849d04".parse().unwrap();
     *workers = 1;
     assert!(matches!(
@@ -515,10 +515,10 @@ fn construction_rejects_future_country_capacity_overflow_before_spending() {
 #[test]
 fn construction_rejects_combined_labor_overflow_before_spending() {
     let fixture = capacity_boundary_scenario(u64::MAX - 1, 1, 2);
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     let before = simulation.snapshot();
     let mut command = build_command();
-    let SimulationCommand::StartConstruction { workers, .. } = &mut command;
+    let SimulationCommand::StartConstruction { workers, .. } = &mut command else { unreachable!("construction fixture") };
     *workers = 2;
     assert!(simulation.execute(command).is_err());
     assert_eq!(simulation.snapshot(), before);
@@ -528,12 +528,12 @@ fn construction_rejects_combined_labor_overflow_before_spending() {
 #[test]
 fn pending_projects_reserve_capacity_for_later_construction_commands() {
     let fixture = capacity_boundary_scenario(u64::MAX - 2, 1, 1);
-    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    let mut simulation = economic_simulation(fixture).unwrap();
     for id in 100..102 {
         let mut command = build_command();
         let SimulationCommand::StartConstruction {
             facility, workers, ..
-        } = &mut command;
+        } = &mut command else { unreachable!("construction fixture") };
         *facility = facility_id(id);
         *workers = 1;
         simulation.execute(command).unwrap();
@@ -542,11 +542,24 @@ fn pending_projects_reserve_capacity_for_later_construction_commands() {
     let mut command = build_command();
     let SimulationCommand::StartConstruction {
         facility, workers, ..
-    } = &mut command;
+    } = &mut command else { unreachable!("construction fixture") };
     *facility = facility_id(102);
     *workers = 1;
     assert!(simulation.execute(command).is_err());
     assert_eq!(simulation.snapshot(), before);
-    let mut resumed = Simulation::from_save_json(&simulation.save_json().unwrap()).unwrap();
+    let mut resumed = restore_economy(&simulation.save_json().unwrap()).unwrap();
     assert_eq!(resumed.snapshot(), before);
+}
+
+fn economy_programs() -> Vec<std::sync::Arc<dyn aggregate_programs::SimulationProgram>> {
+    vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)]
+}
+fn economic_simulation(scenario: Scenario) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+    Simulation::from_scenario_with_programs(scenario, economy_programs())
+}
+fn restore_economy(source: &str) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+    Simulation::from_save_json_with_programs(source, economy_programs())
+}
+fn replay_economy(scenario: Scenario, commands: &[RecordedCommand], through_day: u64) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+    Simulation::replay_with_programs(scenario, commands, through_day, economy_programs())
 }

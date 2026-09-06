@@ -35,9 +35,10 @@ pub fn apply_actions(
                 setup.error = None;
                 info!(country = %country, public_health = health, population_per_province = settings.population_per_province, "World initialization requested");
                 commands.insert_resource(WorldInitializationTask(AsyncComputeTaskPool::get().spawn(async move {
-                    let scenario = aggregate_world_generation::initialize_world(&map.catalog, &settings)?;
-                    let mut programs: Vec<std::sync::Arc<dyn aggregate_programs::SimulationProgram>> = Vec::new();
+                    let mut programs: Vec<std::sync::Arc<dyn aggregate_programs::SimulationProgram>> = vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)];
                     if health { programs.push(std::sync::Arc::new(aggregate_public_health::PublicHealthProgram::default())); }
+                    let definitions = aggregate_programs::ProgramRuntime::collect_definitions(programs.clone())?;
+                    let scenario = aggregate_world_generation::initialize_world(&map.catalog, &settings, definitions)?;
                     ManagementSession::geographic(scenario, country, programs).map_err(|error|error.to_string())
                 })));
                 break;
