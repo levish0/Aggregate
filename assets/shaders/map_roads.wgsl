@@ -5,7 +5,7 @@
 @fragment
 fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let sample = textureSample(road_diffuse,road_sampler,in.uv);
-    let edge = smoothstep(0.0,0.2,in.uv.y)*(1.0-smoothstep(0.8,1.0,in.uv.y));
+    let edge = smoothstep(0.0,0.32,in.uv.y)*(1.0-smoothstep(0.68,1.0,in.uv.y));
     let fade = 1.0-smoothstep(150.0,280.0,length(view.world_position-in.world_position.xyz));
-    return vec4<f32>(mix(sample.rgb,vec3<f32>(0.36,0.32,0.24),0.4),sample.a*edge*fade*0.85);
+    return vec4<f32>(mix(sample.rgb,vec3<f32>(0.22,0.18,0.12),0.3),sample.a*edge*fade*0.85);
 }

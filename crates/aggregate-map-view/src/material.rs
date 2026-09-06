@@ -102,7 +102,7 @@ pub fn update_selection(
         let view = Vec4::new(
             blend * blend * (3. - 2. * blend),
             crate::clouds::opacity(camera.distance),
-            0.,
+            material.view.z,
             0.,
         );
         if material.view != view {

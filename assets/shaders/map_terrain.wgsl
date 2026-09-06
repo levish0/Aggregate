@@ -1,5 +1,6 @@
 #import bevy_pbr::forward_io::VertexOutput
 #import bevy_pbr::mesh_view_bindings::{view, globals}
+#import "shaders/map_cloud_density.wgsl"::{cloud_field}
 
 struct ProvinceStyle {
     terrain: vec4<f32>,
@@ -108,12 +109,15 @@ fn terrain_surface(uv: vec2<f32>, detail_uv: vec2<f32>, dx: vec2<f32>, dy: vec2<
 }
 
 fn terrain_soft_light(detail: vec3<f32>, tint: vec3<f32>) -> vec3<f32> {
-    return (1.0-2.0*tint)*detail*detail + 2.0*tint*detail;
+    // Artistic color-map blending is evaluated in display space, then returned to linear light.
+    let base = pow(max(detail,vec3<f32>(0.0)),vec3<f32>(1.0/2.2));
+    let blend = pow(max(tint,vec3<f32>(0.0)),vec3<f32>(1.0/2.2));
+    return pow(max((1.0-2.0*blend)*base*base+2.0*blend*base,vec3<f32>(0.0)),vec3<f32>(2.2));
 }
 
 fn water_surface(uv: vec2<f32>, world: vec3<f32>, dx: vec2<f32>, dy: vec2<f32>) -> vec3<f32> {
     let drift = globals.time * vec2<f32>(0.008,-0.004);
-    let wave_uv = world.xz * 0.32;
+    let wave_uv = world.xz * 0.3125;
     let flow_sample = textureSample(water_flow,water_flow_sampler,uv).rgb;
     let flow = (flow_sample.rg*2.0-1.0)*vec2<f32>(1.0,-1.0)*flow_sample.b;
     // Two bounded phases avoid accumulating distortion as a session gets longer.
@@ -202,7 +206,7 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let roughness = clamp(surface.properties.a,0.2,1.0);
     let specular = pow(max(dot(shaded_normal,normalize(sun+eye)),0.0),mix(96.0,4.0,roughness))
         * surface.properties.b * (1.0-roughness) * 0.15;
-    var color = albedo*light*1.6+vec3<f32>(specular);
+    var color = albedo*light*1.05+vec3<f32>(specular);
     {
         let political = styles[ids.x].political.rgb*weights.x + styles[ids.y].political.rgb*weights.y + styles[ids.z].political.rgb*weights.z + styles[ids.w].political.rgb*weights.w;
         let political_surface = mix(political, vec3<f32>(0.93,0.90,0.81),0.24);
@@ -225,8 +229,9 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
         color = mix(color,vec3<f32>(1.0),selected_coverage*0.12);
         color = mix(color,vec3<f32>(1.0),selection_outline*0.92);
     }
-    let cloud_uv = (in.world_position.xz+vec2<f32>(-0.5,-0.35)*max(3.5-in.world_position.y,0.0)/0.85)/110.0+globals.time*vec2<f32>(0.0003,0.00008);
-    let cloud_shadow = smoothstep(0.28,0.92,textureSample(cloud_density,cloud_sampler,cloud_uv).g);
+    let shadow_position = in.world_position.xz+vec2<f32>(-0.5,-0.35)*max(3.5-in.world_position.y,0.0)/0.85;
+    let shadow_field = cloud_field(shadow_position,map_view.z,globals.time,cloud_density,cloud_sampler);
+    let cloud_shadow = smoothstep(0.28,0.92,shadow_field.density);
     color *= 1.0-cloud_shadow*0.16*map_view.y;
     return vec4<f32>(color,1.0);
 }

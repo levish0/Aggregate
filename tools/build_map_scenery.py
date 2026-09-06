@@ -96,6 +96,14 @@ def build_roads():
     segments = []
     for item in map(dict, document[0x5f5]):
         points = [nodes[index] for index in item[0x5f7]]
+        # Corner-cutting preserves corridor endpoints while rounding source control points.
+        points = np.asarray(points, dtype=np.float64)
+        for _ in range(2):
+            rounded = [points[0]]
+            for a, b in zip(points, points[1:]):
+                rounded.extend((a*.75+b*.25, a*.25+b*.75))
+            rounded.append(points[-1])
+            points = np.asarray(rounded)
         for start, end in zip(points, points[1:]):
             segments.append((start[0]/8192, 1-start[1]/3616, end[0]/8192, 1-end[1]/3616))
     write_records("road_segments.bin", b"AGRD", segments)

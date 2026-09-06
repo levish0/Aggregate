@@ -75,9 +75,9 @@ pub fn prepare(root: &Path, map: &WorldMap) -> Result<PreparedScenery, String> {
         let radius = height * if kind < 0.5 { 0.38 } else { 0.65 };
         let geometry = chunk(&mut forests, position);
         let color = if kind < 0.5 {
-            [0.12, 0.22, 0.085, 1.]
+            [0.035, 0.070, 0.020, 1.]
         } else {
-            [0.20, 0.29, 0.095, 1.]
+            [0.065, 0.115, 0.028, 1.]
         };
         // Small map-scale canopy meshes, sharing authored placements; no entity per tree.
         for face in 0..6 {
@@ -96,14 +96,14 @@ pub fn prepare(root: &Path, map: &WorldMap) -> Result<PreparedScenery, String> {
         let end = Vec2::new(end_u, end_v) * map.terrain.size;
         let length = start.distance(end);
         // Naval routes in the shared spline source are not roads.
-        if !(0.01..20.).contains(&length) {
+        if !(0.0001..20.).contains(&length) {
             continue;
         }
         let steps = (length / 0.4).ceil() as u32;
         if (0..=steps).any(|step| !land(map, start.lerp(end, step as f32 / steps as f32))) {
             continue;
         }
-        let offset = (end - start).normalize().perp() * 0.055;
+        let offset = (end - start).normalize().perp() * 0.10;
         let geometry = chunk(&mut roads, (start + end) * 0.5);
         for step in 0..steps {
             let a = start.lerp(end, step as f32 / steps as f32);
