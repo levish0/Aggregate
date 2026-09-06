@@ -52,7 +52,7 @@ fn file_log_layer(app: &mut App) -> Option<BoxedLayer> {
         }
     };
     let (writer, guard) = tracing_appender::non_blocking(writer);
-    app.insert_non_send_resource(FileLogGuard { _worker: guard });
+    app.insert_non_send(FileLogGuard { _worker: guard });
     Some(Box::new(
         tracing_subscriber::fmt::layer()
             .json()
@@ -68,6 +68,12 @@ pub fn log_startup() {
     info!(
         version = env!("CARGO_PKG_VERSION"),
         process_id = std::process::id(),
+        session_id = %uuid::Uuid::now_v7(),
+        operating_system = std::env::consts::OS,
+        architecture = std::env::consts::ARCH,
+        ruleset = aggregate_simulation_core::RULESET_VERSION,
+        save_schema = aggregate_simulation_core::SAVE_SCHEMA_VERSION,
+        preset_schema = aggregate_world::SCENARIO_SCHEMA_VERSION,
         "Aggregate started"
     );
 }
