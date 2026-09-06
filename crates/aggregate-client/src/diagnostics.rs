@@ -65,6 +65,14 @@ fn file_log_layer(app: &mut App) -> Option<BoxedLayer> {
 }
 
 pub fn log_startup() {
+    static PANIC_LOGGING: std::sync::Once = std::sync::Once::new();
+    PANIC_LOGGING.call_once(|| {
+        let previous = std::panic::take_hook();
+        std::panic::set_hook(Box::new(move |information| {
+            tracing::error!(target: "aggregate_client::panic", panic = %information, "Application panic");
+            previous(information);
+        }));
+    });
     info!(
         version = env!("CARGO_PKG_VERSION"),
         process_id = std::process::id(),
