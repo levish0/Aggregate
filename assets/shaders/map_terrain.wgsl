@@ -118,7 +118,7 @@ fn water_surface(uv: vec2<f32>, world: vec3<f32>, dx: vec2<f32>, dy: vec2<f32>) 
     let fresnel = 0.04+0.65*pow(1.0-max(dot(eye,normal),0.0),5.0);
     let source = textureSample(water_color,water_sampler,uv);
     let reflection = vec3<f32>(0.24,0.36,0.54);
-    let specular = pow(max(dot(normal,halfway),0.0),96.0) * source.a * 0.7;
+    let specular = pow(max(dot(normal,halfway),0.0),96.0) * source.a * 0.14;
     let ripple_light = 0.72+0.45*max(dot(normal,light),0.0);
     return mix(source.rgb*0.78,reflection,fresnel)*ripple_light + vec3<f32>(specular);
 }
@@ -187,7 +187,7 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let roughness = clamp(surface.properties.a,0.2,1.0);
     let specular = pow(max(dot(shaded_normal,normalize(sun+eye)),0.0),mix(96.0,4.0,roughness))
         * surface.properties.b * (1.0-roughness) * 0.15;
-    var color = albedo*light+vec3<f32>(specular);
+    var color = albedo*light*1.6+vec3<f32>(specular);
     if !water {
         let political = styles[ids.x].political.rgb*weights.x + styles[ids.y].political.rgb*weights.y + styles[ids.z].political.rgb*weights.z + styles[ids.w].political.rgb*weights.w;
         let political_surface = mix(political, vec3<f32>(0.93,0.90,0.81),0.24);
