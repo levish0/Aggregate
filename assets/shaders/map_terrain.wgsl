@@ -31,6 +31,9 @@ struct ProvinceStyle {
 @group(#{MATERIAL_BIND_GROUP}) @binding(21) var water_normal: texture_2d<f32>;
 @group(#{MATERIAL_BIND_GROUP}) @binding(22) var water_normal_sampler: sampler;
 
+@group(#{MATERIAL_BIND_GROUP}) @binding(23) var cloud_density: texture_2d<f32>;
+@group(#{MATERIAL_BIND_GROUP}) @binding(24) var cloud_sampler: sampler;
+
 struct TerrainSurface {
     diffuse: vec3<f32>,
     normal: vec3<f32>,
@@ -210,5 +213,8 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
         color = mix(color,vec3<f32>(1.0),selected_coverage*0.12);
         color = mix(color,vec3<f32>(1.0),selection_outline*0.92);
     }
+    let cloud_uv = (in.world_position.xz+vec2<f32>(-0.5,-0.35)*(14.0-in.world_position.y)/0.85)/180.0+globals.time*vec2<f32>(0.0003,0.00008);
+    let cloud_shadow = smoothstep(0.1,0.7,textureSample(cloud_density,cloud_sampler,cloud_uv).g);
+    color *= 1.0-cloud_shadow*0.16*(1.0-map_view.x);
     return vec4<f32>(color,1.0);
 }

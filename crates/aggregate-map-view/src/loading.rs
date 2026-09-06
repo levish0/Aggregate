@@ -57,6 +57,7 @@ struct PreparedWorldMap {
     map: WorldMap,
     province_texture: Vec<u8>,
     meshes: Vec<Mesh>,
+    scenery: crate::scenery::PreparedScenery,
 }
 
 pub fn start_loading(
@@ -109,10 +110,12 @@ pub fn start_loading(
                     mesh_count = meshes.len(),
                     "Map meshes prepared"
                 );
+                let scenery = crate::scenery::prepare(&root, &map)?;
                 Ok(PreparedWorldMap {
                     map,
                     province_texture,
                     meshes,
+                    scenery,
                 })
             }
             .instrument(span),
@@ -130,6 +133,8 @@ pub fn finish_loading(
     mut buffers: ResMut<Assets<ShaderBuffer>>,
     mut materials: ResMut<Assets<MapTerrainMaterial>>,
     mut controller: ResMut<MapCameraController>,
+    mut forest_materials: ResMut<Assets<crate::scenery::ForestMaterial>>,
+    mut road_materials: ResMut<Assets<crate::scenery::RoadMaterial>>,
 ) {
     let Some(mut task) = task else {
         return;
@@ -151,6 +156,7 @@ pub fn finish_loading(
         map,
         province_texture,
         meshes: prepared_meshes,
+        scenery,
     } = prepared;
     let image = images.add(Image::new(
         Extent3d {
@@ -226,16 +232,17 @@ pub fn finish_loading(
         province_indices: image,
         province_styles: buffers.add(ShaderBuffer::from(styles)),
         color_map: server.load("gfx/map/textures/colormap.dds"),
-        terrain_diffuse: terrain_array(&server, "gfx/map/derived/terrain_diffuse.dds", true),
-        terrain_normal: terrain_array(&server, "gfx/map/derived/terrain_normal.dds", false),
-        terrain_properties: terrain_array(&server, "gfx/map/derived/terrain_material.dds", false),
+        terrain_diffuse: repeating_texture(&server, "gfx/map/derived/terrain_diffuse.dds", true),
+        terrain_normal: repeating_texture(&server, "gfx/map/derived/terrain_normal.dds", false),
+        terrain_properties: repeating_texture(&server, "gfx/map/derived/terrain_material.dds", false),
         terrain_relief: server
             .load_builder()
             .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
                 settings.is_srgb = false;
             })
             .load("gfx/map/derived/terrain_relief.dds"),
-        water_normal: terrain_array(&server, "gfx/map/water/ambient_normal.dds", false),
+        cloud_density: repeating_texture(&server, "gfx/map/fog_of_war/cloud.dds", false),
+        water_normal: repeating_texture(&server, "gfx/map/water/ambient_normal.dds", false),
         terrain_weights: server
             .load_builder()
             .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
@@ -263,6 +270,7 @@ pub fn finish_loading(
         terrain_material.terrain_properties.clone(),
         terrain_material.terrain_relief.clone(),
         terrain_material.water_normal.clone(),
+        terrain_material.cloud_density.clone(),
         terrain_material.terrain_weights.clone(),
         terrain_material.terrain_indices.clone(),
         terrain_material.water_color.clone(),
@@ -280,6 +288,11 @@ pub fn finish_loading(
             ));
         }
     }
+    let forest = forest_materials.add(crate::scenery::ForestMaterial { tint: Vec4::ONE });
+    let road = road_materials.add(crate::scenery::RoadMaterial {
+        diffuse: repeating_texture(&server,"gfx/map/spline_network/road_paved_diffuse.dds",true),
+    });
+    crate::scenery::spawn(&mut commands,scenery,map.terrain.size.x,&mut meshes,forest,road);
     controller.target = Vec3::new(map.terrain.size.x * 0.51, 0., map.terrain.size.y * 0.24);
     controller.distance = 360.;
     controller.desired_distance = 360.;
@@ -288,7 +301,7 @@ pub fn finish_loading(
     commands.insert_resource(LoadedWorldMap(Arc::new(map)));
 }
 
-fn terrain_array(server: &AssetServer, path: &'static str, is_srgb: bool) -> Handle<Image> {
+pub(crate) fn repeating_texture(server: &AssetServer, path: &'static str, is_srgb: bool) -> Handle<Image> {
     server
         .load_builder()
         .with_settings(move |settings: &mut bevy::image::ImageLoaderSettings| {

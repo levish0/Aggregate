@@ -1,8 +1,10 @@
 //! Native terrain rendering and interaction.
 mod camera;
+mod clouds;
 mod loading;
 mod material;
 mod overview;
+mod scenery;
 mod table;
 mod terrain_mesh;
 
@@ -53,6 +55,9 @@ impl Plugin for MapViewPlugin {
             .init_resource::<MapViewState>()
             .init_resource::<MapCameraController>()
             .add_plugins(MaterialPlugin::<MapTerrainMaterial>::default())
+            .add_plugins(MaterialPlugin::<clouds::MapCloudMaterial>::default())
+            .add_plugins(MaterialPlugin::<scenery::ForestMaterial>::default())
+            .add_plugins(MaterialPlugin::<scenery::RoadMaterial>::default())
             .add_plugins(MaterialPlugin::<table::MapTableMaterial>::default())
             .init_gizmo_group::<overview::OverviewGizmos>()
             .add_systems(Startup, (camera::setup, overview::configure))
@@ -63,9 +68,11 @@ impl Plugin for MapViewPlugin {
                     loading::finish_loading,
                     loading::finish_textures,
                     table::spawn_table,
+                    clouds::spawn_clouds,
                     camera::control,
                     camera::update_camera,
                     material::update_selection,
+                    scenery::update_visibility,
                 )
                     .chain()
                     .in_set(MapViewSystems),

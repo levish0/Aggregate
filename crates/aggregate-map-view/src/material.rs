@@ -47,6 +47,9 @@ pub struct MapTerrainMaterial {
     #[texture(21)]
     #[sampler(22)]
     pub water_normal: Handle<Image>,
+    #[texture(23)]
+    #[sampler(24)]
+    pub cloud_density: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]
