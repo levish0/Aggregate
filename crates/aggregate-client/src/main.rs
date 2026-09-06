@@ -82,6 +82,8 @@ fn create_app() -> App {
                     screens::world_map::inspection::refresh,
                     screens::world_map::outliner::rebuild,
                     screens::world_map::update_labels,
+                    screens::world_map::update_clock_controls,
+                    screens::world_map::news::refresh,
                     screens::management::update_management_lists,
                     screens::management::update_management_labels,
                     interaction::update_live_labels,

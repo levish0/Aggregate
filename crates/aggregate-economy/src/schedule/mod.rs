@@ -1,13 +1,14 @@
-mod commit;
+use crate::day_work::{DayWork, ProvincePlan};
+pub(crate) mod commit;
 mod construction;
 mod consumption;
 mod labor;
 mod production;
 
-use crate::{
+use aggregate_programs::{
     SimulationClock,
-    report::{DayReport, ProvinceDayReport},
-    world_storage::{DayWork, Province, ProvincePlan},
+    {DayReport, ProvinceDayReport},
+    world_storage::Province,
 };
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
@@ -42,7 +43,6 @@ pub(crate) fn create_schedule() -> Schedule {
         production::produce_goods.in_set(SimulationPhase::Production),
         construction::advance_construction.in_set(SimulationPhase::Construction),
         consumption::consume_goods.in_set(SimulationPhase::Consumption),
-        commit::commit_day.in_set(SimulationPhase::Commit),
     ));
     schedule
 }

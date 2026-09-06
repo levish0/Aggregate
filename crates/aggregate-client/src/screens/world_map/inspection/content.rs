@@ -21,6 +21,7 @@ type InspectionRefreshKey = (
     u64,
     usize,
     usize,
+    u64,
 );
 
 pub fn refresh(
@@ -52,6 +53,7 @@ pub fn refresh(
         session.snapshot.day,
         session.snapshot.facilities.len(),
         session.snapshot.construction_projects.len(),
+        session.revision,
     );
     if previous.as_ref() == Some(&key) {
         return;
@@ -373,38 +375,7 @@ pub fn refresh(
                 );
             }
         }
-        InspectionTab::Buildings => {
-            for facility in &facilities {
-                let definition = session
-                    .definitions
-                    .facilities
-                    .iter()
-                    .find(|definition| definition.id == facility.definition);
-                let name = definition
-                    .map(|definition| definition.name.clone())
-                    .unwrap_or_else(|| facility.definition.to_string());
-                metric(
-                    &mut commands,
-                    body,
-                    &fonts,
-                    &name,
-                    facility.level.to_string(),
-                );
-            }
-            for project in &projects {
-                metric(
-                    &mut commands,
-                    body,
-                    &fonts,
-                    &project.definition.to_string(),
-                    format!(
-                        "{} · {}",
-                        interface.text("inspection-remaining-work"),
-                        project.remaining_worker_days
-                    ),
-                );
-            }
-        }
+        InspectionTab::Buildings => super::buildings::build(&mut commands, body, &fonts, &interface, &session, &province_ids, has_statistics),
         InspectionTab::Population => {
             metric(
                 &mut commands,

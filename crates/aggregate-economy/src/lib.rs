@@ -4,6 +4,12 @@ mod consumption;
 mod error;
 mod labor;
 mod production;
+mod command;
+mod day_work;
+mod schedule;
+mod program;
+pub mod content;
+pub use program::EconomyProgram;
 
 pub use consumption::{ConsumptionOutcome, plan_consumption};
 pub use error::EconomyError;

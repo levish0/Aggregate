@@ -1,33 +1,7 @@
-use crate::{
-    error::SimulationError,
-    report::{CommandOutcome, GoodsFlow, GoodsFlowCause, SimulationEvent},
-    world_storage::{self, ConstructionProject, DefinitionRegistry, Facility, Province},
-};
+use aggregate_programs::{SimulationCommand,SimulationError,CommandOutcome,GoodsFlow,GoodsFlowCause,SimulationEvent,world_storage::{self,ConstructionProject,DefinitionRegistry,Facility,Province}};
 use aggregate_scenario::validate_world_state;
 use aggregate_world::*;
 use bevy_ecs::prelude::*;
-use serde::{Deserialize, Serialize};
-
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-#[serde(tag = "type", rename_all = "snake_case", deny_unknown_fields)]
-pub enum SimulationCommand {
-    StartConstruction {
-        country: CountryId,
-        province: ProvinceId,
-        facility: FacilityId,
-        definition: FacilityDefinitionId,
-        workers: u64,
-        production_priority: u32,
-    },
-}
-
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-#[serde(deny_unknown_fields)]
-pub struct RecordedCommand {
-    pub day: u64,
-    pub sequence: u64,
-    pub command: SimulationCommand,
-}
 
 /// Commands execute serially between days. Validate every input and reserve every cost before
 /// committing anything. The same entry point will serve player, AI and automation commands.
@@ -44,7 +18,7 @@ pub(crate) fn execute_command(
         definition,
         workers,
         production_priority,
-    } = command;
+    } = command else { return Err(SimulationError::CommandRejected("unsupported economy command".into())); };
     let reject = |reason: String| SimulationError::CommandRejected(reason);
     if facility.0.is_nil() {
         return Err(reject("facility ID must not be the nil UUID".into()));

@@ -1,6 +1,7 @@
 pub mod inspection;
 mod layout;
 pub mod outliner;
+pub mod news;
 use crate::{
     backdrop::CartographicBackdrop,
     state::{InterfaceState, Screen},
@@ -89,8 +90,10 @@ pub fn configure_keyboard_policy(
     keys: Res<ButtonInput<KeyCode>>,
     mut policy: ResMut<aggregate_ui::button::UiKeyboardPolicy>,
     mut map: ResMut<MapViewState>,
+    setup: Res<crate::world_setup::WorldSetup>,
 ) {
     policy.reserve_plain_tab = interface.screen == Screen::WorldMap
+        && !setup.open
         && !select.any_open
         && !keys.any_pressed([KeyCode::ControlLeft, KeyCode::ControlRight]);
     if interface.screen != Screen::WorldMap {
@@ -99,6 +102,16 @@ pub fn configure_keyboard_policy(
     if keys.any_pressed([KeyCode::AltLeft, KeyCode::AltRight]) && keys.just_pressed(KeyCode::Digit2)
     {
         map.political = true;
+    }
+}
+
+pub fn update_clock_controls(session: Res<crate::management::ManagementSession>,interface: Res<InterfaceState>,mut buttons: Query<(&crate::management::ManagementAction,&Children,&mut aggregate_ui::button::UiButton)>,mut labels: Query<&mut Text,With<aggregate_ui::button::ButtonLabel>>) {
+    if interface.screen != Screen::WorldMap { return; }
+    for (action,children,mut button) in &mut buttons {
+        if matches!(action,crate::management::ManagementAction::ToggleRunning) {
+            button.selected = session.running;
+            for child in children { if let Ok(mut text) = labels.get_mut(*child) { **text = interface.text(if session.running { "management-pause" } else { "management-play" }); } }
+        }
     }
 }
 

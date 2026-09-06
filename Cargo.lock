@@ -128,7 +128,12 @@ dependencies = [
 name = "aggregate-economy"
 version = "0.1.0"
 dependencies = [
+ "aggregate-programs",
+ "aggregate-scenario",
  "aggregate-world",
+ "bevy_ecs",
+ "serde_json",
+ "tracing",
  "uuid",
 ]
 
@@ -172,7 +177,9 @@ dependencies = [
 name = "aggregate-programs"
 version = "0.1.0"
 dependencies = [
+ "aggregate-scenario",
  "aggregate-world",
+ "bevy_ecs",
  "semver",
  "serde",
  "serde_json",

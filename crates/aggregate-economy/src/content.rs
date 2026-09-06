@@ -2,7 +2,7 @@ use aggregate_world::*;
 use std::collections::BTreeMap;
 
 /// Small authored economy for the geographic sandbox; independent of test fixtures.
-pub(super) fn definitions() -> ContentDefinitions {
+pub fn definitions() -> ContentDefinitions {
     let goods = [("grain","Grain"),("timber","Timber"),("tools","Tools")].into_iter().map(|(id,name)|GoodDefinition { id: GoodId(id.into()), name: name.into() }).collect();
     let amounts = |items: &[(&str,u64)]| -> BTreeMap<GoodId,u64> { items.iter().map(|(key,value)|(GoodId((*key).into()),*value)).collect() };
     let facility = |id: &str,name: &str,workers,inputs: &[(&str,u64)],outputs: &[(&str,u64)],work,max_workers,cost: &[(&str,u64)]| FacilityDefinition {

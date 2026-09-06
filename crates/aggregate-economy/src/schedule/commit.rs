@@ -1,6 +1,6 @@
-use crate::{
-    SimulationClock,
-    world_storage::{ConstructionProject, DayWork, Facility, Province},
+use crate::day_work::DayWork;
+use aggregate_programs::{
+    world_storage::{ConstructionProject, Facility, Province},
 };
 use aggregate_world::FacilityState;
 use bevy_ecs::prelude::*;
@@ -9,7 +9,6 @@ pub(super) fn commit_day(
     mut commands: Commands,
     mut provinces: Query<&mut Province>,
     mut projects: Query<(Entity, &mut ConstructionProject)>,
-    mut clock: ResMut<SimulationClock>,
     mut work: ResMut<DayWork>,
 ) {
     if work.failure.is_some() {
@@ -34,7 +33,6 @@ pub(super) fn commit_day(
             project.0.remaining_worker_days = remaining;
         }
     }
-    clock.day = work.day;
     let province_reports = work
         .provinces
         .values()

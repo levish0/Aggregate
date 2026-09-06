@@ -1,5 +1,6 @@
 mod actions;
 mod components;
+mod buildings;
 mod content;
 mod layout;
 pub use actions::apply_actions;

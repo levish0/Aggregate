@@ -1,8 +1,9 @@
-use crate::{
-    report::{GoodsFlow, GoodsFlowCause, SimulationEvent},
-    world_storage::{DayWork, SimulationRules},
+use crate::day_work::DayWork;
+use aggregate_programs::{
+    {GoodsFlow, GoodsFlowCause, SimulationEvent},
+    world_storage::SimulationRules,
 };
-use aggregate_economy::plan_consumption;
+use crate::plan_consumption;
 use bevy_ecs::prelude::*;
 
 #[tracing::instrument(level = "trace", skip_all)]

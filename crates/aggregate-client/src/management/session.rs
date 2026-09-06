@@ -32,6 +32,7 @@ pub struct ManagementSession {
     pub running: bool,
     pub session_id: uuid::Uuid,
     pub geographic: bool,
+    pub revision: u64,
 }
 
 #[derive(Resource)]
@@ -65,6 +66,7 @@ impl ManagementSession {
             running: false,
             session_id: uuid::Uuid::now_v7(),
             geographic: false,
+            revision: 0,
         }
     }
 
@@ -75,10 +77,9 @@ impl ManagementSession {
         let definitions = scenario.definitions.clone();
         let mut simulation = Simulation::from_scenario_with_programs(scenario, programs)?;
         let snapshot = simulation.snapshot();
-        Ok(Self { simulation, snapshot, definitions, player_country, last_report: None, news: Vec::new(), feedback: SessionFeedback::Ready, running: false, session_id: uuid::Uuid::now_v7(), geographic: true })
+        Ok(Self { simulation, snapshot, definitions, player_country, last_report: None, news: Vec::new(), feedback: SessionFeedback::Ready, running: false, session_id: uuid::Uuid::now_v7(), geographic: true, revision: 0 })
     }
 
-    pub fn enabled_programs(&self) -> Vec<aggregate_programs::SavedProgramState> { self.simulation.program_states() }
 
     pub fn initial_view(&self) -> ManagementViewState {
         ManagementViewState {
@@ -94,6 +95,7 @@ impl ManagementSession {
     }
 
     pub fn start_construction(&mut self, province: &ProvinceId, definition: &FacilityDefinitionId) {
+        self.revision += 1;
         let Some(recipe) = self
             .definitions
             .facilities
@@ -135,14 +137,20 @@ impl ManagementSession {
     }
 
     pub fn step(&mut self) {
+        self.revision += 1;
         match self.simulation.step() {
             Ok(report) => {
                 self.snapshot = self.simulation.snapshot();
+                let owned: std::collections::BTreeSet<_> = self.snapshot.provinces.iter().filter(|province|province.country == self.player_country).map(|province|&province.id).collect();
                 self.news
-                    .extend(report.events.iter().cloned().map(|event| NewsEntry {
+                    .extend(report.events.iter().filter(|event| {
+                        let (SimulationEvent::ConstructionStarted { province, .. } | SimulationEvent::ConstructionCompleted { province, .. } | SimulationEvent::FoodShortfall { province, .. }) = event;
+                        owned.contains(province)
+                    }).cloned().map(|event| NewsEntry {
                         day: report.day,
                         event,
                     }));
+                if self.news.len() > 200 { self.news.drain(..self.news.len()-200); }
                 self.last_report = Some(report);
                 if matches!(self.feedback, SessionFeedback::Error(_)) {
                     self.feedback = SessionFeedback::Ready;

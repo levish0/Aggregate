@@ -1,7 +1,8 @@
+use crate::day_work::DayWork;
 use crate::world_storage::{
-    ConstructionProject, DayWork, DefinitionRegistry, Facility, PopulationGroup, WorkforceLimits,
+    ConstructionProject, DefinitionRegistry, Facility, PopulationGroup, WorkforceLimits,
 };
-use aggregate_economy::{LaborRequest, allocate_labor};
+use crate::{LaborRequest, allocate_labor};
 use aggregate_world::{FacilityId, ProvinceId};
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;

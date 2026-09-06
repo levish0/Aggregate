@@ -1,4 +1,16 @@
-//! Native extension contracts. No renderer, ECS access, or dynamic-library ABI.
+//! Native game-program contracts, shared world protocol and transactional execution.
+//! Programs are trusted Rust implementations; no renderer or dynamic-library ABI.
+mod clock;
+mod command;
+mod error;
+mod report;
+mod execution;
+pub mod world_storage;
+pub use clock::SimulationClock;
+pub use command::{SimulationCommand,RecordedCommand};
+pub use error::SimulationError;
+pub use report::*;
+pub use execution::ProgramExecution;
 mod inspection;
 mod manifest;
 pub use inspection::{InspectionMetric, InspectionScope, InspectionSection, MetricValue};

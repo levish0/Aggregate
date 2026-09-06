@@ -23,6 +23,8 @@ pub struct ProgramPlan {
 /// never mutate the engine or perform external side effects inside a calculation.
 /// All persistent state belongs in the payload, not interior mutable trait fields.
 pub trait SimulationProgram: Send + Sync {
+    fn install(&self, _world: &mut bevy_ecs::world::World) -> Result<Option<Box<dyn crate::ProgramExecution>>, String> { Ok(None) }
+    fn definitions(&self) -> aggregate_world::ContentDefinitions { aggregate_world::ContentDefinitions { goods: Vec::new(), facilities: Vec::new() } }
     fn manifest(&self) -> ProgramManifest;
     fn initialize(&self, world: &WorldSnapshot) -> Result<Value, String>;
     fn validate_state(&self, world: &WorldSnapshot, state: &Value) -> Result<(), String>;

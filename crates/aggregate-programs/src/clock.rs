@@ -3,7 +3,7 @@ use bevy_ecs::prelude::Resource;
 /// Whole elapsed days since the scenario start. Rendering never advances this clock.
 #[derive(Resource, Debug, Default, Clone, Copy, PartialEq, Eq)]
 pub struct SimulationClock {
-    pub(crate) day: u64,
+    pub day: u64,
 }
 
 impl SimulationClock {

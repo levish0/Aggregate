@@ -129,7 +129,7 @@ pub fn build(
     commands.entity(clock).insert(UiPointerBlocker);
     for (key, action, order) in [
         ("management-step", crate::management::ManagementAction::StepDay, 10),
-        ("management-run", crate::management::ManagementAction::ToggleRunning, 11),
+        ("management-play", crate::management::ManagementAction::ToggleRunning, 11),
     ] {
         let slot = ui::node(commands,clock,Node { width: px(115), ..default() });
         let mut style = UiButton::secondary(order); style.enabled = session.geographic;
@@ -198,7 +198,7 @@ pub fn build(
             position_type: PositionType::Absolute,
             right: px(14),
             top: px(100),
-            bottom: px(150),
+            bottom: px(370),
             width: px(232),
             padding: UiRect::all(px(14)),
             flex_direction: FlexDirection::Column,
@@ -209,6 +209,11 @@ pub fn build(
     commands
         .entity(outliner)
         .insert((UiPointerBlocker, super::MapOutlinerPanel));
+    let news = ui::panel(commands,root,Node { position_type: PositionType::Absolute, right: px(14), bottom: px(140), height: px(214), width: px(232), padding: UiRect::all(px(12)), flex_direction: FlexDirection::Column, row_gap: px(8), ..default() });
+    commands.entity(news).insert(UiPointerBlocker);
+    ui::text(commands,news,fonts,state.text("map-news-title"),16.,theme::TEXT,true);
+    let feed = layout::scroll_area(commands,news,Node { width: percent(100), min_height: px(0), flex_grow: 1., flex_direction: FlexDirection::Column, ..default() });
+    commands.entity(feed).insert(super::news::NewsFeed);
     ui::text(
         commands,
         outliner,
@@ -297,3 +302,4 @@ pub fn build(
     );
     commands.entity(text).insert(MapLabel::Hover);
 }
+

@@ -6,6 +6,8 @@ rust-version.workspace = true
 
 [dependencies]
 aggregate-world.workspace = true
+aggregate-scenario.workspace = true
+bevy_ecs.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 semver.workspace = true

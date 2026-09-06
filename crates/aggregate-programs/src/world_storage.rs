@@ -1,62 +1,32 @@
 use crate::{
     SimulationClock,
-    report::{DayReport, ProvinceDayReport},
 };
 use aggregate_world::*;
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
 
 #[derive(Component)]
-pub(crate) struct Country(pub CountryState);
+pub struct Country(pub CountryState);
 #[derive(Component)]
-pub(crate) struct Province(pub ProvinceState);
+pub struct Province(pub ProvinceState);
 #[derive(Component)]
-pub(crate) struct PopulationGroup(pub PopulationGroupState);
+pub struct PopulationGroup(pub PopulationGroupState);
 #[derive(Component)]
-pub(crate) struct Facility(pub FacilityState);
+pub struct Facility(pub FacilityState);
 #[derive(Component)]
-pub(crate) struct ConstructionProject(pub ConstructionProjectState);
+pub struct ConstructionProject(pub ConstructionProjectState);
 
 #[derive(Resource)]
-pub(crate) struct DefinitionRegistry {
+pub struct DefinitionRegistry {
     pub facilities: BTreeMap<FacilityDefinitionId, FacilityDefinition>,
 }
 #[derive(Resource)]
-pub(crate) struct SimulationRules(pub WorldRules);
+pub struct SimulationRules(pub WorldRules);
 
 #[derive(Resource, Default)]
-pub(crate) struct WorkforceLimits(pub BTreeMap<PopulationGroupId, u64>);
+pub struct WorkforceLimits(pub BTreeMap<PopulationGroupId, u64>);
 
-pub(crate) struct ProvincePlan {
-    pub stockpile: BTreeMap<GoodId, u64>,
-    pub allocations: BTreeMap<FacilityId, u64>,
-    pub report: ProvinceDayReport,
-}
-
-pub(crate) struct ConstructionProgress {
-    pub remaining_worker_days: u64,
-}
-
-/// Only proposed stockpile/progress changes are staged; authoritative entities are unchanged
-/// until every phase succeeds. There is no full-world clone or rollback per simulation day.
-#[derive(Resource, Default)]
-pub(crate) struct DayWork {
-    pub day: u64,
-    pub provinces: BTreeMap<ProvinceId, ProvincePlan>,
-    pub constructions: BTreeMap<FacilityId, ConstructionProgress>,
-    pub report: Option<DayReport>,
-    pub failure: Option<(&'static str, String)>,
-}
-
-impl DayWork {
-    pub fn fail(&mut self, phase: &'static str, reason: impl ToString) {
-        if self.failure.is_none() {
-            self.failure = Some((phase, reason.to_string()));
-        }
-    }
-}
-
-pub(crate) fn create_world(scenario: &Scenario, state: &WorldSnapshot) -> World {
+pub fn create_world(scenario: &Scenario, state: &WorldSnapshot) -> World {
     let mut world = World::new();
     world.insert_resource(SimulationClock { day: state.day });
     world.insert_resource(SimulationRules(scenario.rules.clone()));
@@ -68,7 +38,6 @@ pub(crate) fn create_world(scenario: &Scenario, state: &WorldSnapshot) -> World 
             .map(|definition| (definition.id.clone(), definition.clone()))
             .collect(),
     });
-    world.init_resource::<DayWork>();
     world.init_resource::<WorkforceLimits>();
     for country in &state.countries {
         world.spawn(Country(country.clone()));
@@ -88,7 +57,7 @@ pub(crate) fn create_world(scenario: &Scenario, state: &WorldSnapshot) -> World 
     world
 }
 
-pub(crate) fn snapshot(world: &mut World) -> WorldSnapshot {
+pub fn snapshot(world: &mut World) -> WorldSnapshot {
     let mut state = WorldSnapshot {
         day: world.resource::<SimulationClock>().day(),
         countries: world
