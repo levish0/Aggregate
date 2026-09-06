@@ -38,7 +38,10 @@ pub struct ManagementViewState {
 }
 
 impl ManagementSession {
-    pub fn inspect_programs(&mut self, scope: &aggregate_programs::InspectionScope) -> Result<Vec<aggregate_programs::InspectionSection>, SimulationError> {
+    pub fn inspect_programs(
+        &mut self,
+        scope: &aggregate_programs::InspectionScope,
+    ) -> Result<Vec<aggregate_programs::InspectionSection>, SimulationError> {
         self.simulation.inspect_programs(scope)
     }
 

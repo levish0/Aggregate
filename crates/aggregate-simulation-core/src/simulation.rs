@@ -38,9 +38,14 @@ impl Simulation {
         self.programs.snapshot()
     }
 
-    pub fn inspect_programs(&mut self, scope: &aggregate_programs::InspectionScope) -> Result<Vec<aggregate_programs::InspectionSection>, SimulationError> {
+    pub fn inspect_programs(
+        &mut self,
+        scope: &aggregate_programs::InspectionScope,
+    ) -> Result<Vec<aggregate_programs::InspectionSection>, SimulationError> {
         let snapshot = self.snapshot();
-        self.programs.inspect(scope, &snapshot).map_err(SimulationError::InvalidPrograms)
+        self.programs
+            .inspect(scope, &snapshot)
+            .map_err(SimulationError::InvalidPrograms)
     }
 
     pub fn from_scenario(mut scenario: Scenario) -> Result<Self, SimulationError> {
@@ -98,7 +103,12 @@ impl Simulation {
         .inspect_err(|error| {
             tracing::warn!(?command, reason = %error, "Simulation command rejected");
         })?;
-        tracing::info!(day = self.clock().day(), sequence, ?command, "Simulation command accepted");
+        tracing::info!(
+            day = self.clock().day(),
+            sequence,
+            ?command,
+            "Simulation command accepted"
+        );
         crate::diagnostics::log_committed_event(self.clock().day(), &outcome.event);
         self.commands.push(RecordedCommand {
             day: self.clock().day(),

@@ -35,7 +35,10 @@ fn file_log_layer(app: &mut App) -> Option<BoxedLayer> {
                 .join("Aggregate/logs")
         });
     if let Err(error) = std::fs::create_dir_all(&directory) {
-        eprintln!("Cannot create Aggregate log directory {}: {error}", directory.display());
+        eprintln!(
+            "Cannot create Aggregate log directory {}: {error}",
+            directory.display()
+        );
         return None;
     }
     let writer = match RollingFileAppender::builder()

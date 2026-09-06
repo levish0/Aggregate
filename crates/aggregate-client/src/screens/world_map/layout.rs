@@ -27,7 +27,13 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         },
     );
     commands.entity(header).insert(UiPointerBlocker);
-    aggregate_ui::icon::icon(commands, header, aggregate_ui::icon::Icon::Globe, 30., theme::TEXT);
+    aggregate_ui::icon::icon(
+        commands,
+        header,
+        aggregate_ui::icon::Icon::Globe,
+        30.,
+        theme::TEXT,
+    );
     let title = layout::column(commands, header, 2.);
     ui::text(
         commands,
@@ -124,7 +130,17 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
             justify_content: JustifyContent::Center,
             ..default()
         });
-        aggregate_ui::icon::icon(commands, button, if action == InterfaceAction::OpenManagement { aggregate_ui::icon::Icon::Government } else { aggregate_ui::icon::Icon::Settings }, 22., theme::TEXT);
+        aggregate_ui::icon::icon(
+            commands,
+            button,
+            if action == InterfaceAction::OpenManagement {
+                aggregate_ui::icon::Icon::Government
+            } else {
+                aggregate_ui::icon::Icon::Settings
+            },
+            22.,
+            theme::TEXT,
+        );
     }
 
     super::inspection::build(commands, root);

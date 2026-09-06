@@ -28,7 +28,12 @@ pub trait SimulationProgram: Send + Sync {
     fn validate_state(&self, world: &WorldSnapshot, state: &Value) -> Result<(), String>;
     fn plan_day(&self, context: &ProgramContext<'_>, state: &Value) -> Result<ProgramPlan, String>;
 
-    fn inspect(&self, _scope: &crate::InspectionScope, _world: &WorldSnapshot, _state: &Value) -> Result<Vec<crate::InspectionSection>, String> {
+    fn inspect(
+        &self,
+        _scope: &crate::InspectionScope,
+        _world: &WorldSnapshot,
+        _state: &Value,
+    ) -> Result<Vec<crate::InspectionSection>, String> {
         Ok(Vec::new())
     }
 }

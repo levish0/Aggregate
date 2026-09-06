@@ -70,7 +70,6 @@ impl Default for ButtonMotion {
     }
 }
 
-
 pub fn keyboard_navigation(
     keys: Res<ButtonInput<KeyCode>>,
     policy: Option<Res<UiKeyboardPolicy>>,

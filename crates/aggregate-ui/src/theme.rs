@@ -12,8 +12,18 @@ pub const DISABLED: Color = Color::srgb(0.35, 0.37, 0.40);
 pub const TITLE_BAR: Color = Color::srgba(0.16, 0.17, 0.19, 0.90);
 
 pub fn panel_gradient() -> BackgroundGradient {
-    BackgroundGradient::from(LinearGradient { angle: 0.25, stops: vec![PANEL_LIGHT.into(), PANEL.into()], ..default() })
+    BackgroundGradient::from(LinearGradient {
+        angle: 0.25,
+        stops: vec![PANEL_LIGHT.into(), PANEL.into()],
+        ..default()
+    })
 }
 pub fn shadow() -> BoxShadow {
-    BoxShadow(vec![ShadowStyle { color: Color::BLACK.with_alpha(0.30), x_offset: px(0), y_offset: px(8), spread_radius: px(0), blur_radius: px(16) }])
+    BoxShadow(vec![ShadowStyle {
+        color: Color::BLACK.with_alpha(0.30),
+        x_offset: px(0),
+        y_offset: px(8),
+        spread_radius: px(0),
+        blur_radius: px(16),
+    }])
 }

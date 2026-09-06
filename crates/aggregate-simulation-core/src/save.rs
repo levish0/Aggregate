@@ -33,7 +33,12 @@ impl Simulation {
         };
         let encoded = serde_json::to_string_pretty(&save)
             .map_err(|error| SimulationError::InvalidSave(error.to_string()))?;
-        tracing::info!(day = save.current_state.day, bytes = encoded.len(), programs = save.programs.len(), "Save serialized");
+        tracing::info!(
+            day = save.current_state.day,
+            bytes = encoded.len(),
+            programs = save.programs.len(),
+            "Save serialized"
+        );
         Ok(encoded)
     }
 
@@ -77,7 +82,11 @@ impl Simulation {
         let mut simulation =
             Self::from_validated_state(save.scenario, &save.current_state, save.commands);
         simulation.programs = programs;
-        tracing::info!(day = simulation.clock().day(), commands = simulation.commands.len(), "Save restored");
+        tracing::info!(
+            day = simulation.clock().day(),
+            commands = simulation.commands.len(),
+            "Save restored"
+        );
         Ok(simulation)
     }
 

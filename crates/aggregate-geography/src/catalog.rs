@@ -84,8 +84,14 @@ impl GeographyCatalog {
         let mut region_keys = BTreeSet::new();
         let mut state_groups = BTreeSet::new();
         for state in &self.states {
-            ensure!(countries.contains(&state.country) && regions.contains(&state.region), "unknown state country or region");
-            ensure!(state_groups.insert((&state.region, &state.country)), "duplicate country portion of a region");
+            ensure!(
+                countries.contains(&state.country) && regions.contains(&state.region),
+                "unknown state country or region"
+            );
+            ensure!(
+                state_groups.insert((&state.region, &state.country)),
+                "duplicate country portion of a region"
+            );
         }
         let mut occupied_groups = BTreeSet::new();
         for country in &self.countries {
@@ -120,12 +126,20 @@ impl GeographyCatalog {
                     .is_none_or(|region| regions.contains(region)),
                 "unknown province region"
             );
-            if !province.water && let (Some(region), Some(owner)) = (&province.region, &province.owner) {
-                ensure!(state_groups.contains(&(region, owner)), "owned land province has no administrative state");
+            if !province.water
+                && let (Some(region), Some(owner)) = (&province.region, &province.owner)
+            {
+                ensure!(
+                    state_groups.contains(&(region, owner)),
+                    "owned land province has no administrative state"
+                );
                 occupied_groups.insert((region, owner));
             }
         }
-        ensure!(occupied_groups == state_groups, "administrative state contains no land provinces");
+        ensure!(
+            occupied_groups == state_groups,
+            "administrative state contains no land provinces"
+        );
         Ok(())
     }
 }

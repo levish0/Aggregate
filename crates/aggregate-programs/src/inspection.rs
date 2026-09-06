@@ -3,7 +3,11 @@ use aggregate_world::{CountryId, ProvinceId, StateId};
 /// Domain scope; render entities and screen coordinates never enter a program.
 pub enum InspectionScope {
     Country(CountryId),
-    State { id: StateId, country: CountryId, provinces: Vec<ProvinceId> },
+    State {
+        id: StateId,
+        country: CountryId,
+        provinces: Vec<ProvinceId>,
+    },
     Province(ProvinceId),
 }
 

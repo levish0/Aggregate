@@ -59,10 +59,7 @@ fn create_app() -> App {
         .init_resource::<screens::world_map::inspection::InspectionView>()
         .insert_resource(session)
         .insert_resource(view)
-        .add_systems(
-            Startup,
-            (setup_camera, backdrop::setup),
-        )
+        .add_systems(Startup, (setup_camera, backdrop::setup))
         .add_systems(
             Update,
             (

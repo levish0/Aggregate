@@ -98,14 +98,27 @@ impl ProgramRuntime {
         self.programs.is_empty()
     }
 
-    pub fn inspect(&self, scope: &crate::InspectionScope, world: &WorldSnapshot) -> Result<Vec<crate::InspectionSection>, String> {
+    pub fn inspect(
+        &self,
+        scope: &crate::InspectionScope,
+        world: &WorldSnapshot,
+    ) -> Result<Vec<crate::InspectionSection>, String> {
         let mut sections = Vec::new();
         let mut identities = BTreeSet::new();
         for program in &self.programs {
             let id = &program.saved.manifest.id;
-            for section in program.implementation.inspect(scope, world, &program.saved.payload).map_err(|error| format!("{id} inspection: {error}"))? {
-                if !section.id.starts_with(&format!("{id}.")) || !identities.insert(section.id.clone()) {
-                    return Err(format!("{id} has an invalid or duplicate inspection section {}", section.id));
+            for section in program
+                .implementation
+                .inspect(scope, world, &program.saved.payload)
+                .map_err(|error| format!("{id} inspection: {error}"))?
+            {
+                if !section.id.starts_with(&format!("{id}."))
+                    || !identities.insert(section.id.clone())
+                {
+                    return Err(format!(
+                        "{id} has an invalid or duplicate inspection section {}",
+                        section.id
+                    ));
                 }
                 sections.push(section);
             }
@@ -190,7 +203,9 @@ impl ProgramRuntime {
 
 type ResolvedProgram = (ProgramManifest, Arc<dyn SimulationProgram>);
 
-fn resolve(implementations: Vec<Arc<dyn SimulationProgram>>) -> Result<Vec<ResolvedProgram>, String> {
+fn resolve(
+    implementations: Vec<Arc<dyn SimulationProgram>>,
+) -> Result<Vec<ResolvedProgram>, String> {
     let mut programs = BTreeMap::new();
     for implementation in implementations {
         let manifest = implementation.manifest();

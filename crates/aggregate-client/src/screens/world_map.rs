@@ -1,5 +1,5 @@
-mod layout;
 pub mod inspection;
+mod layout;
 pub mod outliner;
 use crate::{
     backdrop::CartographicBackdrop,
@@ -153,7 +153,6 @@ pub fn update_labels(
             MapLabel::Hover => {
                 region_name(state.hovered_index).unwrap_or_else(|| interface.text("map-hover-hint"))
             }
-
         };
         if text.0 != value {
             text.0 = value;

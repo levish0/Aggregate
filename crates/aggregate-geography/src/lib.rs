@@ -1,14 +1,14 @@
 //! Persistent geography and CPU map queries, independent of rendering and simulation clocks.
+mod administration;
 mod cache;
 mod catalog;
 mod heightfield;
 mod picking;
 mod raster;
 mod terrain_settings;
-mod administration;
 
-pub use catalog::{GeographyCatalog, MapCountry, MapProvince, MapRegion, MapState};
 pub use administration::{AdministrativeIndex, StateGeography};
+pub use catalog::{GeographyCatalog, MapCountry, MapProvince, MapRegion, MapState};
 pub use heightfield::Heightfield;
 pub use raster::ProvinceRaster;
 pub use terrain_settings::TerrainSettings;

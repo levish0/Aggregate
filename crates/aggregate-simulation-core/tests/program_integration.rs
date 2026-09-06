@@ -97,7 +97,8 @@ fn module_effects_are_opt_in_and_save_resume_replay_preserve_owned_state() {
         "installed extras remain disabled"
     );
     assert_eq!(resumed.step().unwrap(), simulation.step().unwrap());
-    let mut replayed = Simulation::replay_with_programs(scenario(), &[], 2, vec![provider]).unwrap();
+    let mut replayed =
+        Simulation::replay_with_programs(scenario(), &[], 2, vec![provider]).unwrap();
     assert_eq!(
         replayed.state_hash().unwrap(),
         simulation.state_hash().unwrap()
@@ -189,9 +190,11 @@ fn order_is_stable_limits_combine_and_failed_modules_commit_nothing() {
     assert_eq!(forward.step().unwrap(), reverse.step().unwrap());
     assert_eq!(forward.step().unwrap().provinces[0].available_workers, 8);
     second.fail = true;
-    let mut failing =
-        Simulation::from_scenario_with_programs(scenario(), vec![Arc::new(first), Arc::new(second)])
-            .unwrap();
+    let mut failing = Simulation::from_scenario_with_programs(
+        scenario(),
+        vec![Arc::new(first), Arc::new(second)],
+    )
+    .unwrap();
     let before = failing.state_hash().unwrap();
     assert!(failing.step().is_err());
     assert_eq!(before, failing.state_hash().unwrap());

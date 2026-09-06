@@ -1,6 +1,6 @@
 use crate::{
-    LoadedWorldMap, LoadedAdministration, MapAssetRoot, MapCameraController, MapTerrainMaterial, MapViewState,
-    TerrainMaterialHandle,
+    LoadedAdministration, LoadedWorldMap, MapAssetRoot, MapCameraController, MapTerrainMaterial,
+    MapViewState, TerrainMaterialHandle,
     material::{ProvinceStyle, terrain_color},
     terrain_mesh,
 };
@@ -146,7 +146,13 @@ pub fn finish_loading(
         .map(|(i, r)| (&r.id, i as u32 + 1))
         .collect();
     let administration = aggregate_geography::AdministrativeIndex::new(&map.catalog);
-    let state_indices: BTreeMap<_, _> = map.catalog.states.iter().enumerate().map(|(index, state)| (&state.id, index as u32 + 1)).collect();
+    let state_indices: BTreeMap<_, _> = map
+        .catalog
+        .states
+        .iter()
+        .enumerate()
+        .map(|(index, state)| (&state.id, index as u32 + 1))
+        .collect();
     let mut styles = vec![ProvinceStyle {
         terrain: Vec4::new(0.025, 0.095, 0.15, 1.),
         political: Vec4::ZERO,
@@ -174,7 +180,11 @@ pub fn finish_loading(
                     .unwrap_or(0),
                 country.map(|(index, _)| *index).unwrap_or(0),
                 u32::from(province.water),
-                administration.state_for_province(province_index as u32 + 1).and_then(|id| state_indices.get(id)).copied().unwrap_or(0),
+                administration
+                    .state_for_province(province_index as u32 + 1)
+                    .and_then(|id| state_indices.get(id))
+                    .copied()
+                    .unwrap_or(0),
             ),
         });
     }

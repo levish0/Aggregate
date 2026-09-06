@@ -2,7 +2,24 @@
 use bevy::prelude::*;
 
 #[derive(Component, Clone, Copy)]
-pub enum Icon { Government, Buildings, Population, Globe, Map, Settings, Close, Programs, Chart, Education, Health, Military, Goods, Queue, Play, Pause }
+pub enum Icon {
+    Government,
+    Buildings,
+    Population,
+    Globe,
+    Map,
+    Settings,
+    Close,
+    Programs,
+    Chart,
+    Education,
+    Health,
+    Military,
+    Goods,
+    Queue,
+    Play,
+    Pause,
+}
 
 impl Icon {
     fn path(self) -> &'static str {
@@ -27,12 +44,32 @@ impl Icon {
     }
 }
 
-pub fn icon(commands: &mut Commands, parent: Entity, icon: Icon, size: f32, color: Color) -> Entity {
-    let entity = commands.spawn((icon, ImageNode { color, ..default() }, Node { width: px(size), height: px(size), flex_shrink: 0., ..default() }, Pickable::IGNORE)).id();
+pub fn icon(
+    commands: &mut Commands,
+    parent: Entity,
+    icon: Icon,
+    size: f32,
+    color: Color,
+) -> Entity {
+    let entity = commands
+        .spawn((
+            icon,
+            ImageNode { color, ..default() },
+            Node {
+                width: px(size),
+                height: px(size),
+                flex_shrink: 0.,
+                ..default()
+            },
+            Pickable::IGNORE,
+        ))
+        .id();
     commands.entity(parent).add_child(entity);
     entity
 }
 
 pub fn load(server: Res<AssetServer>, mut icons: Query<(&Icon, &mut ImageNode), Added<Icon>>) {
-    for (icon, mut image) in &mut icons { image.image = server.load(icon.path()); }
+    for (icon, mut image) in &mut icons {
+        image.image = server.load(icon.path());
+    }
 }

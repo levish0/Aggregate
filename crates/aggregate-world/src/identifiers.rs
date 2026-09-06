@@ -8,16 +8,22 @@ use uuid::Uuid;
 pub struct StateId(pub Uuid);
 
 impl From<Uuid> for StateId {
-    fn from(value: Uuid) -> Self { Self(value) }
+    fn from(value: Uuid) -> Self {
+        Self(value)
+    }
 }
 
 impl FromStr for StateId {
     type Err = uuid::Error;
-    fn from_str(value: &str) -> Result<Self, Self::Err> { Uuid::parse_str(value).map(Self) }
+    fn from_str(value: &str) -> Result<Self, Self::Err> {
+        Uuid::parse_str(value).map(Self)
+    }
 }
 
 impl fmt::Display for StateId {
-    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result { self.0.fmt(formatter) }
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        self.0.fmt(formatter)
+    }
 }
 
 /// Persistent country identity, independent of its name, tag or ECS allocation.
