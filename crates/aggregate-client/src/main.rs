@@ -1,4 +1,5 @@
 mod backdrop;
+mod country_presentation;
 mod diagnostics;
 mod interaction;
 mod management;
@@ -56,10 +57,12 @@ fn create_app() -> App {
     app.add_plugins(AggregateUiPlugin)
         .add_plugins(aggregate_map_view::MapViewPlugin { asset_root })
         .init_resource::<state::InterfaceState>()
+        .init_resource::<country_presentation::CountryFlags>()
         .init_resource::<screens::world_map::inspection::InspectionView>()
         .insert_resource(session)
         .insert_resource(view)
         .add_systems(Startup, (setup_camera, backdrop::setup))
+        .add_systems(PostUpdate, country_presentation::load_flags)
         .add_systems(
             Update,
             (

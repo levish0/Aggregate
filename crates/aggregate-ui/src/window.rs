@@ -32,6 +32,27 @@ impl WindowInteraction {
     pub fn is_captured(&self) -> bool { self.capture.is_some() }
 }
 
+/// Shared title bar: callers add their title and window action buttons as children.
+pub fn title_bar(commands: &mut Commands, parent: Entity, window: Entity) -> Entity {
+    let entity = commands.spawn((
+        Node {
+            width: percent(100),
+            min_height: px(40),
+            flex_shrink: 0.,
+            align_items: AlignItems::Center,
+            column_gap: px(10),
+            padding: UiRect::axes(px(12), px(6)),
+            border: UiRect::bottom(px(1)),
+            ..default()
+        },
+        BackgroundColor(crate::theme::TITLE_BAR),
+        BorderColor::all(crate::theme::BORDER),
+        WindowDragHandle(window),
+    )).id();
+    commands.entity(parent).add_child(entity);
+    entity
+}
+
 pub fn interact(
     mut commands: Commands,
     windows: Query<(Entity, &Window)>,

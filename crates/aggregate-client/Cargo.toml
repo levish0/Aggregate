@@ -15,6 +15,7 @@ aggregate-world.workspace = true
 aggregate-map-view.workspace = true
 aggregate-programs.workspace = true
 uuid.workspace = true
+ron.workspace = true
 anyhow = "1.0.104"
 tracing.workspace = true
 tracing-subscriber.workspace = true

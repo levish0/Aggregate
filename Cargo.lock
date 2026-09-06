@@ -115,6 +115,7 @@ dependencies = [
  "aggregate-world",
  "anyhow",
  "bevy",
+ "ron",
  "tracing",
  "tracing-appender",
  "tracing-subscriber",
