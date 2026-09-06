@@ -202,12 +202,12 @@ pub fn control(
             orientation * movement.normalize_or_zero() * distance * time.delta_secs() * 0.65;
     }
     controller.target.x = controller.target.x.rem_euclid(map.0.terrain.size.x);
-    controller.target.z = controller.target.z.clamp(0., map.0.terrain.size.y);
-    // Five shared copies cover this horizontal field of view at any canonical target.
+    controller.target.z = controller.target.z.clamp(-map.0.terrain.size.y * 0.18, map.0.terrain.size.y * 1.18);
+    // Bound the far ground-plane edge to less than one world width, including tilt.
     let aspect = window.width() / window.height().max(1.);
-    let maximum_distance = (map.0.terrain.size.x * 1.8
-        / ((PerspectiveProjection::default().fov * 0.5).tan() * aspect))
-        .min(2400.);
+    let tangent = (PerspectiveProjection::default().fov * 0.5).tan();
+    let tilt_factor = (1. - tangent / controller.pitch.tan()).max(0.15);
+    let maximum_distance = (map.0.terrain.size.x * 0.49 * tilt_factor / (tangent * aspect)).max(45.);
     controller.desired_distance = controller.desired_distance.min(maximum_distance);
     let factor = if state.reduced_motion {
         1.

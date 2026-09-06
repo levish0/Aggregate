@@ -34,6 +34,8 @@ pub struct MapTerrainMaterial {
     #[texture(13)]
     #[sampler(14)]
     pub terrain_weights: Handle<Image>,
+    #[uniform(16)]
+    pub view: Vec4,
     #[texture(15)]
     pub terrain_indices: Handle<Image>,
 }
@@ -68,6 +70,7 @@ pub fn terrain_color(name: &str, water: bool) -> Vec4 {
 
 pub fn update_selection(
     state: Res<MapViewState>,
+    camera: Res<crate::MapCameraController>,
     handle: Option<Res<TerrainMaterialHandle>>,
     mut materials: ResMut<Assets<MapTerrainMaterial>>,
 ) {
@@ -80,6 +83,9 @@ pub fn update_selection(
             u32::from(state.political),
             u32::from(state.inspect_country),
         );
+        let blend = ((camera.distance - 130.) / 400.).clamp(0., 1.);
+        let view = Vec4::new(blend * blend * (3. - 2. * blend), 0., 0., 0.);
+        if material.view != view { material.view = view; }
         if material.selection != selection {
             material.selection = selection;
         }

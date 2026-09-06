@@ -1,4 +1,4 @@
-use super::{MapLabel, MapModeSelect, controls::icon_button, outliner::MapOutliner};
+use super::{MapLabel, controls::icon_button, outliner::MapOutliner};
 use crate::state::{InterfaceAction, InterfaceState};
 use aggregate_ui::icon::Icon;
 use aggregate_ui::{
@@ -6,7 +6,7 @@ use aggregate_ui::{
     components as ui,
     fonts::UiFonts,
     layout::{self, UiPointerBlocker},
-    select, theme,
+    theme,
 };
 use bevy::prelude::*;
 
@@ -238,48 +238,6 @@ pub fn build(
         },
     );
     commands.entity(list).insert(MapOutliner);
-
-    let dock = ui::panel(
-        commands,
-        root,
-        Node {
-            position_type: PositionType::Absolute,
-            bottom: px(60),
-            left: percent(50),
-            padding: UiRect::axes(px(18), px(10)),
-            align_items: AlignItems::Center,
-            column_gap: px(16),
-            ..default()
-        },
-    );
-    commands.entity(dock).insert(UiPointerBlocker);
-    ui::text(
-        commands,
-        dock,
-        fonts,
-        state.text("map-lens-title"),
-        13.,
-        theme::ACCENT,
-        false,
-    );
-    let mode = select::root(commands, dock, "terrain", 180.);
-    commands.entity(mode).insert(MapModeSelect);
-    select::trigger(commands, mode, fonts, &state.text("map-mode-terrain"), 0);
-    let content = select::content_at(commands, mode, true);
-    for (key, value, order) in [
-        ("map-mode-terrain", "terrain", 10),
-        ("map-mode-political", "political", 11),
-    ] {
-        select::item(
-            commands,
-            content,
-            mode,
-            fonts,
-            &state.text(key),
-            value,
-            order,
-        );
-    }
 
     let hover = ui::panel(
         commands,

@@ -221,6 +221,7 @@ pub fn finish_loading(
         });
     }
     let terrain_material = MapTerrainMaterial {
+        view: Vec4::ZERO,
         selection: UVec4::ZERO,
         province_indices: image,
         province_styles: buffers.add(ShaderBuffer::from(styles)),

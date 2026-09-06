@@ -20,6 +20,7 @@ struct ProvinceStyle {
 @group(#{MATERIAL_BIND_GROUP}) @binding(12) var river_sampler: sampler;
 @group(#{MATERIAL_BIND_GROUP}) @binding(13) var terrain_weights: texture_2d<f32>;
 @group(#{MATERIAL_BIND_GROUP}) @binding(14) var terrain_weights_sampler: sampler;
+@group(#{MATERIAL_BIND_GROUP}) @binding(16) var<uniform> map_view: vec4<f32>;
 @group(#{MATERIAL_BIND_GROUP}) @binding(15) var terrain_indices: texture_2d<f32>;
 
 struct TerrainSurface {
@@ -72,14 +73,6 @@ fn coverage(group: u32, channel: u32, ids: vec4<u32>, weights: vec4<f32>) -> f32
     return dot(select(vec4<f32>(0.0), vec4<f32>(1.0), matches), weights);
 }
 
-fn province_coverage(province: u32, ids: vec4<u32>, weights: vec4<f32>, fraction: vec2<f32>, footprint: f32) -> f32 {
-    if province == 0u { return 0.0; }
-    let values = select(vec4<f32>(0.0), vec4<f32>(1.0), ids == vec4<u32>(province));
-    let gradient = vec2<f32>(mix(values.y-values.x, values.w-values.z, fraction.y), mix(values.z-values.x, values.w-values.y, fraction.x));
-    let signed_distance = (dot(values, weights)-0.5) / max(length(gradient),0.001);
-    return smoothstep(-footprint*0.6,footprint*0.6,signed_distance);
-}
-
 fn boundary(group: u32, channel: u32, ids: vec4<u32>, weights: vec4<f32>, fraction: vec2<f32>, footprint: f32) -> f32 {
     let values = select(vec4<f32>(0.0), vec4<f32>(1.0), vec4<bool>(styles[ids.x].grouping[channel] == group, styles[ids.y].grouping[channel] == group, styles[ids.z].grouping[channel] == group, styles[ids.w].grouping[channel] == group));
     let gradient = vec2<f32>(mix(values.y-values.x, values.w-values.z, fraction.y), mix(values.z-values.x, values.w-values.y, fraction.x));
@@ -128,23 +121,26 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     var color = mix(atlas,surface.diffuse,0.60)*light;
     if !water {
         let political = styles[ids.x].political.rgb*weights.x + styles[ids.y].political.rgb*weights.y + styles[ids.z].political.rgb*weights.z + styles[ids.w].political.rgb*weights.w;
-        if selection.z != 0u { color = mix(color,political*light,0.58); }
+        let political_surface = mix(political, vec3<f32>(0.93,0.90,0.81),0.24);
+        color = mix(color,political_surface*(0.80+light*0.20),0.10+map_view.x*0.82);
     } else {
         let waves = sin(in.world_position.x*0.7)*sin(in.world_position.z*0.9)*0.0006;
         color = mix(vec3<f32>(0.025,0.10,0.18),sea,0.6)+waves;
     }
     if !water { color *= 1.0-country_outline*0.55; }
-    if !water && selection.z != 0u { color *= 1.0-state_outline*0.22; }
+    if !water { color *= 1.0-state_outline*(0.16+map_view.x*0.06); }
     color = mix(color,vec3<f32>(0.40,0.55,0.52),coast_outline*0.3);
     if !water { color = mix(color,vec3<f32>(0.025,0.09,0.12),river_coverage*0.85); }
-    let hovered_coverage = province_coverage(selection.y,ids,weights,fraction,footprint);
-    color = mix(color,vec3<f32>(1.0),hovered_coverage*0.12);
+    let hovered_group = styles[selection.y].grouping.w;
+    if hovered_group != 0u && !water {
+        let hover_coverage = coverage(hovered_group,3u,ids,weights);
+        let hover_outline = boundary(hovered_group,3u,ids,weights,fraction,footprint);
+        color = mix(color,vec3<f32>(1.0),hover_coverage*0.08);
+        color = mix(color,vec3<f32>(1.0),hover_outline*0.8);
+    }
     if selected_group != 0u {
         color = mix(color,vec3<f32>(1.0),selected_coverage*0.12);
         color = mix(color,vec3<f32>(1.0),selection_outline*0.92);
-    } else {
-        let selected_province_coverage = province_coverage(selection.x,ids,weights,fraction,footprint);
-        color = mix(color,vec3<f32>(1.0),selected_province_coverage*0.20);
     }
     return vec4<f32>(color,1.0);
 }

@@ -1,12 +1,12 @@
 use crate::management::NotificationEntry;
 
-pub(super) struct Toast {
+pub struct Toast {
     pub entry: NotificationEntry,
     pub remaining: f32,
 }
 
 #[derive(Default)]
-pub(super) struct NotificationState {
+pub struct NotificationState {
     pub session: uuid::Uuid,
     pub seen: u64,
     pub active: Vec<Toast>,

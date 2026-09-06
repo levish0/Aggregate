@@ -447,23 +447,7 @@ pub fn refresh(
                     "—".into()
                 },
             );
-            let range = list_page(
-                &mut commands,
-                body,
-                &fonts,
-                &interface,
-                view.page,
-                groups.len(),
-            );
-            for group in groups.iter().skip(range.start).take(range.len()) {
-                metric(
-                    &mut commands,
-                    body,
-                    &fonts,
-                    &group.id.to_string(),
-                    group.population.to_string(),
-                );
-            }
+
         }
         InspectionTab::Territory => {
             let mut terrains = BTreeMap::<&str, usize>::new();
@@ -480,36 +464,7 @@ pub fn refresh(
                 metric(&mut commands, body, &fonts, &label, count.to_string());
             }
             ui::rule(&mut commands, body);
-            let range = list_page(
-                &mut commands,
-                body,
-                &fonts,
-                &interface,
-                view.page,
-                indices.len(),
-            );
-            for (order, index) in indices
-                .iter()
-                .enumerate()
-                .skip(range.start)
-                .take(range.len())
-            {
-                let province = &catalog.provinces[*index as usize - 1];
-                let terrain = interface
-                    .localization
-                    .text(&format!("terrain-{}", province.terrain))
-                    .unwrap_or_else(|_| province.terrain.clone());
-                let label = format!("#{:06X} · {terrain}", province.raster_color);
-                action(
-                    &mut commands,
-                    body,
-                    &fonts,
-                    &label,
-                    InspectionAction::Province(*index),
-                    *index == map.selected_index,
-                    500 + order as u32,
-                );
-            }
+
         }
         InspectionTab::Programs => {
             let scope = if map.inspect_country {
