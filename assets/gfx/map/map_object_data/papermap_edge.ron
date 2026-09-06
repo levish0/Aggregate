@@ -1,0 +1,22 @@
+(schema_version: 1, entries: [
+    Property(key: "object", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("edgeofworld_papermap")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "pdxmesh", operator: Assign, value: Text("edgeofworld_papermap_mesh")),
+        Property(key: "count", operator: Assign, value: Number("2")),
+        Property(key: "transform", operator: Assign, value: Text("4096.000000 -150.000000 11480.000000 0.000000 0.000000 0.000000 1.000000 10.000000 10.000000 10.000000\n4096.000000 -150.000000 -7800.000000 0.000000 0.000000 0.000000 1.000000 10.000000 10.000000 10.000000\n")),
+    ])),
+    Property(key: "object", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("papermap_endofworld")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "pdxmesh", operator: Assign, value: Text("edgeofworld_mesh")),
+        Property(key: "count", operator: Assign, value: Number("4")),
+        Property(key: "transform", operator: Assign, value: Text("4002.761230 1.000000 8674.119141 0.000000 0.000000 0.000000 0.000000 10.000000 10.000000 10.000000\n3974.397705 1.000000 8695.252930 0.000000 0.000000 0.000000 0.000000 10.000000 10.000000 10.000000\n3981.868896 1.000000 8695.639648 0.000000 0.000000 0.000000 0.000000 10.000000 10.000000 10.000000\n4096.000000 1.000000 -5202.000000 -0.000000 -0.000000 -0.000000 0.000000 10.000000 10.000000 10.000000\n")),
+    ])),
+])

@@ -1,0 +1,818 @@
+// Source line 1: ################################################################
+// Source line 2: ####				TRADE ROUTE GRAPHICS					#####
+// Source line 3: ################################################################
+// Source line 5: ################################################################
+// Source line 6: ####				PASSANGER TRAIN							#####
+// Source line 7: ################################################################
+// Source line 155: ################################################################
+// Source line 156: ####				MINING TRAIN							#####
+// Source line 157: ################################################################
+// Source line 550: ################################################################
+// Source line 551: ####				FORESTRY TRAIN							#####
+// Source line 552: ################################################################
+// Source line 828: ################################################################
+// Source line 829: ####				TRADE ROUTE GRAPHICS END				#####
+// Source line 830: ################################################################
+// Source line 836: ################################################################
+// Source line 837: ####				MILITARY MOBILIZATION					#####
+// Source line 838: ################################################################
+// Source line 935: ################################################################
+// Source line 936: ####			MILITARY MOBILIZATION END					#####
+// Source line 937: ################################################################
+(schema_version: 1, entries: [
+    Property(key: "passenger_train", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("railroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("1.0")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("15.0")),
+        Property(key: "routes_to_caravans_ratio", operator: Assign, value: Number("0.2")),
+        Property(key: "max_count", operator: Assign, value: Number("30")),
+        Property(key: "max_path_length", operator: Assign, value: Number("5")),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "gfx_passanger_train_trigger", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "experimental_or_steam", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "gfx_experimental_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                        Property(key: "gfx_steam_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                    ])),
+                ])),
+            ])),
+            Property(key: "electrical", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_electrical_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "diesel", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_diesel_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "steam_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_02", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_03", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_04", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_04_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_05", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_05_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "electric_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("electrical")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_electric_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.85")),
+            ])),
+            Property(key: "diesel_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("diesel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_diesel_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2.1")),
+            ])),
+            Property(key: "passenger_wagon_1", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("european_train_passenger_wagon_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.74")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:transportation", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("6")),
+                ])),
+            ])),
+            Property(key: "passenger_wagon_2", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("european_train_passenger_wagon_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.74")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:transportation", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("6")),
+                ])),
+            ])),
+            Property(key: "passenger_wagon_3", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("european_train_passenger_wagon_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.74")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:transportation", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("6")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "mining_train", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("railroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("1.0")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("15.0")),
+        Property(key: "routes_to_caravans_ratio", operator: Assign, value: Number("0.2")),
+        Property(key: "max_count", operator: Assign, value: Number("30")),
+        Property(key: "max_path_length", operator: Assign, value: Number("5")),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "gfx_mining_train_trigger", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "experimental_or_steam", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "gfx_experimental_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                        Property(key: "gfx_steam_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                    ])),
+                ])),
+            ])),
+            Property(key: "electrical", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_electrical_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "diesel", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_diesel_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "coal", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "has_building", operator: Assign, value: Symbol("building_coal_mine")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "iron", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "has_building", operator: Assign, value: Symbol("building_iron_mine")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "steel", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "has_building", operator: Assign, value: Symbol("building_steel_mill")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "sulfur", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "has_building", operator: Assign, value: Symbol("building_sulfur_mine")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "steam_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_02", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_03", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_04", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_04_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_05", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_05_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "electric_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("electrical")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_electric_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.85")),
+            ])),
+            Property(key: "diesel_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("diesel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_diesel_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2.1")),
+            ])),
+            Property(key: "cargo_coal_wagon_1", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("coal")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_coal_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:coal", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_coal_wagon_2", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("coal")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_coal_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:coal", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_coal_wagon_3", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("coal")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_coal_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:coal", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_iron_wagon_1", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("iron")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_iron_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:iron", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_iron_wagon_2", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("iron")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_iron_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:iron", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_iron_wagon_3", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("iron")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_iron_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:iron", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_steel_wagon_1", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("steel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_steel_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:steel", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_steel_wagon_2", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("steel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_steel_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:steel", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_steel_wagon_3", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("steel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_steel_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:steel", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_steel_wagon_4", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("steel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_steel_04_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:steel", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_sulfur_wagon_1", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("sulfur")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_sulfur_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:sulfur", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("4")),
+                ])),
+            ])),
+            Property(key: "cargo_sulfur_wagon_2", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("sulfur")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_sulfur_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:sulfur", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("4")),
+                ])),
+            ])),
+            Property(key: "cargo_sulfur_wagon_3", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("sulfur")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_sulfur_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.05")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:sulfur", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("4")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "forestry_train", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("railroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("1.0")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("15.0")),
+        Property(key: "routes_to_caravans_ratio", operator: Assign, value: Number("0.2")),
+        Property(key: "max_count", operator: Assign, value: Number("30")),
+        Property(key: "max_path_length", operator: Assign, value: Number("5")),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "gfx_forestry_train_trigger", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "experimental_or_steam", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "gfx_experimental_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                        Property(key: "gfx_steam_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                    ])),
+                ])),
+            ])),
+            Property(key: "electrical", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_electrical_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "diesel", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_diesel_locomotive_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "log", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "has_building", operator: Assign, value: Symbol("building_logging_camp")),
+                        Property(key: "any_scope_building", operator: Assign, value: Block([Property(key: "has_active_production_method", operator: Assign, value: Symbol("pm_no_hardwood"))])),
+                    ])),
+                ])),
+            ])),
+            Property(key: "hardwood", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "has_building", operator: Assign, value: Symbol("building_logging_camp")),
+                        Property(key: "NOT", operator: Assign, value: Block([Property(key: "any_scope_building", operator: Assign, value: Block([Property(key: "has_active_production_method", operator: Assign, value: Symbol("pm_no_hardwood"))]))])),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "steam_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_02", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_03", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_04", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_04_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "steam_locomotive_05", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("experimental_or_steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_train_locomotive_05_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "electric_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("electrical")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_electric_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.85")),
+            ])),
+            Property(key: "diesel_locomotive_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("diesel")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_diesel_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("2.1")),
+            ])),
+            Property(key: "cargo_log_wagon_1", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("log")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_log_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:wood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_log_wagon_2", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("log")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_log_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:wood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_log_wagon_3", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("log")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_log_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:wood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_log_wagon_4", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("log")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_log_04_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:wood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_hardwood_wagon_1", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("hardwood")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_hardwood_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:hardwood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_hardwood_wagon_2", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("hardwood")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_hardwood_02_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:hardwood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_hardwood_wagon_3", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("hardwood")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_hardwood_03_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:hardwood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+            Property(key: "cargo_hardwood_wagon_4", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("hardwood")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("train_cargo_hardwood_04_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.6")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:hardwood", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("1000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("5")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_mobilization_railroad", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("railroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("1.0")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("15.0")),
+        Property(key: "routes_to_caravans_ratio", operator: Assign, value: Number("0.2")),
+        Property(key: "max_count", operator: Assign, value: Number("30")),
+        Property(key: "max_path_length", operator: Assign, value: Number("5")),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "is_at_war", operator: Assign, value: Boolean(true)),
+            Property(key: "any_military_formation", operator: Assign, value: Block([
+                Property(key: "is_mobilized", operator: Assign, value: Boolean(true)),
+            ])),
+        ])),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "artillery", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "market", operator: Assign, value: Block([
+                        Property(key: "mg:artillery", operator: Assign, value: Block([Property(key: "market_goods_sell_orders", operator: GreaterThan, value: Number("5"))])),
+                    ])),
+                ])),
+            ])),
+            Property(key: "more_artillery", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "market", operator: Assign, value: Block([
+                        Property(key: "mg:artillery", operator: Assign, value: Block([Property(key: "market_goods_sell_orders", operator: GreaterThan, value: Number("20"))])),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "front_turret_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("artillery")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_armoredcart_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.4")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "integer_range", operator: Assign, value: Block([
+                        Property(key: "min", operator: Assign, value: Number("0")),
+                        Property(key: "max", operator: Assign, value: Number("1")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "military_locomotive_01", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_armoredlocomotive_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "infantry_wagon_01", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_infantrycart_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.4")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "market", operator: Assign, value: Block([
+                        Property(key: "mg:small_arms", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("500")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("6")),
+                ])),
+            ])),
+            Property(key: "artillery_transport_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("more_artillery")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_artillery_shrapnel_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.4")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "market", operator: Assign, value: Block([
+                        Property(key: "mg:artillery", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("200")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("3")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

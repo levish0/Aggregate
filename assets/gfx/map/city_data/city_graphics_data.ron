@@ -1,0 +1,69 @@
+// Source line 2:  Randomly pick mesh
+// Source line 3:  Multiplier of revolution entities spawning
+// Source line 6:  Lowest standard of living value for pretty visuals
+// Source line 7:  Highest standard of living value for pretty visuals
+// Source line 9:  Chance for building to activate light at night
+// Source line 11:  Key of urban center building
+// Source line 13:  Light colors in order ( Index 0 uses the default light color in 00_graphics.txt )
+// Source line 14:  Index 1 - Gas Lights
+// Source line 15:  Index 2 - Electric Lights
+// Source line 16:  Index 3 -
+// Source line 17:  Index 4 -
+// Source line 18:  Index 5 -
+// Source line 19:  Index 6 -
+// Source line 20:  Index 7 -
+(schema_version: 1, entries: [
+    Property(key: "city_revolution_entity_default", operator: Assign, value: Block([
+        Item(Text("revolution_barricade_small_mesh")),
+        Item(Text("revolution_barricade_mid_mesh")),
+        Item(Text("revolution_barricade_large_mesh")),
+    ])),
+    Property(key: "city_revolution_entity_amount", operator: Assign, value: Number("0.45")),
+    Property(key: "city_default_centerpiece_construction_entity", operator: Assign, value: Text("building_construction_skyscraper_entity")),
+    Property(key: "city_prettyvisuals_min", operator: Assign, value: Number("5.0")),
+    Property(key: "city_prettyvisuals_max", operator: Assign, value: Number("15.0")),
+    Property(key: "city_night_light_chance", operator: Assign, value: Number("0.6")),
+    Property(key: "city_building_urbancenter", operator: Assign, value: Text("building_urban_center")),
+    Property(key: "city_lights_color_1", operator: Assign, value: Block([
+        Item(Number("1.0")),
+        Item(Number("0.24")),
+        Item(Number("0.035")),
+        Item(Number("10.0")),
+    ])),
+    Property(key: "city_lights_color_2", operator: Assign, value: Block([
+        Item(Number("1.0")),
+        Item(Number("0.5")),
+        Item(Number("0.3")),
+        Item(Number("11.0")),
+    ])),
+    Property(key: "city_lights_color_3", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "city_lights_color_4", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "city_lights_color_5", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "city_lights_color_6", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "city_lights_color_7", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+])

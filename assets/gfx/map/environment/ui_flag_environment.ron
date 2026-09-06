@@ -1,0 +1,21 @@
+// Source line 1: 
+// Source line 2:  Top flag environment settings
+// Source line 3: 
+// Source line 5:  Sun
+// Source line 8: 			+Right/-Left    Height  -Front/+Back
+// Source line 11:  Cubemap
+(schema_version: 1, entries: [
+    Property(key: "sun_color", operator: Assign, value: Block([
+        Item(Number("1.0")),
+        Item(Number("1.0")),
+        Item(Number("1.0")),
+    ])),
+    Property(key: "sun_intensity", operator: Assign, value: Number("5.0")),
+    Property(key: "sun_direction", operator: Assign, value: Block([
+        Item(Number("-0.33")),
+        Item(Number("1.0")),
+        Item(Number("-0.9")),
+    ])),
+    Property(key: "cubemap_intensity", operator: Assign, value: Number("0.4")),
+    Property(key: "cubemap", operator: Assign, value: Text("gfx/map/environment/cubemap_blackbottom.dds")),
+])

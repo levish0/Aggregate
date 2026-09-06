@@ -1,8 +1,11 @@
 use crate::{
-    report::SimulationEvent,
+    report::{ConstructionDayReport, SimulationEvent},
     world_storage::{ConstructionProgress, ConstructionProject, DayWork},
 };
+use aggregate_economy::{LaborRequest, allocate_labor};
+use aggregate_world::ProvinceId;
 use bevy_ecs::prelude::*;
+use std::collections::BTreeMap;
 
 pub(super) fn advance_construction(
     projects: Query<&ConstructionProject>,
@@ -11,8 +14,64 @@ pub(super) fn advance_construction(
     if work.failure.is_some() {
         return;
     }
+    if let Err(reason) = plan(&projects, &mut work) {
+        work.fail("construction", reason);
+    }
+}
+
+fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<(), String> {
     let mut ordered: Vec<_> = projects.iter().collect();
     ordered.sort_by(|left, right| left.0.facility_id.cmp(&right.0.facility_id));
+    let mut deficits: BTreeMap<ProvinceId, Vec<LaborRequest>> = BTreeMap::new();
+    let mut reserved: BTreeMap<ProvinceId, u64> = BTreeMap::new();
+    for project in &ordered {
+        let province = &work.provinces[&project.0.province];
+        let allocated = province
+            .allocations
+            .get(&project.0.facility_id)
+            .copied()
+            .unwrap_or(0);
+        let demand = project
+            .0
+            .requested_workers
+            .min(project.0.remaining_worker_days);
+        let total = reserved.entry(project.0.province.clone()).or_default();
+        *total = total
+            .checked_add(allocated)
+            .ok_or("reserved construction workforce overflow")?;
+        deficits
+            .entry(project.0.province.clone())
+            .or_default()
+            .push(LaborRequest {
+                facility_id: project.0.facility_id.clone(),
+                requested_workers: demand
+                    .checked_sub(allocated)
+                    .ok_or("construction allocation exceeds demand")?,
+            });
+    }
+    // Production has already planned its actual work. Reuse only workers who did no
+    // production, preserving original construction allocations and per-project caps.
+    for (province_id, requests) in deficits {
+        let province = work
+            .provinces
+            .get_mut(&province_id)
+            .expect("validated province");
+        let available = province
+            .report
+            .available_workers
+            .checked_sub(province.report.production_workers)
+            .and_then(|workers| workers.checked_sub(reserved[&province_id]))
+            .ok_or("daily workforce overallocated")?;
+        for allocation in allocate_labor(available, &requests).map_err(|error| error.to_string())? {
+            let current = province
+                .allocations
+                .entry(allocation.facility_id)
+                .or_default();
+            *current = current
+                .checked_add(allocation.allocated_workers)
+                .ok_or("construction workforce overflow")?;
+        }
+    }
     for project in ordered {
         let province = work
             .provinces
@@ -24,10 +83,11 @@ pub(super) fn advance_construction(
             .copied()
             .unwrap_or(0);
         let actual = allocated.min(project.0.remaining_worker_days);
-        let Some(total) = province.report.construction_workers.checked_add(actual) else {
-            work.fail("construction", "construction workforce overflow");
-            return;
-        };
+        let total = province
+            .report
+            .construction_workers
+            .checked_add(actual)
+            .ok_or("construction workforce overflow")?;
         province.report.construction_workers = total;
         let remaining = project.0.remaining_worker_days - actual;
         work.constructions.insert(
@@ -36,6 +96,19 @@ pub(super) fn advance_construction(
                 remaining_worker_days: remaining,
             },
         );
+        work.report
+            .as_mut()
+            .expect("initialized report")
+            .constructions
+            .push(ConstructionDayReport {
+                facility: project.0.facility_id.clone(),
+                requested_workers: project
+                    .0
+                    .requested_workers
+                    .min(project.0.remaining_worker_days),
+                active_workers: actual,
+                remaining_worker_days: remaining,
+            });
         if remaining == 0 {
             work.report
                 .as_mut()
@@ -47,4 +120,5 @@ pub(super) fn advance_construction(
                 });
         }
     }
+    Ok(())
 }

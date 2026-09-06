@@ -77,6 +77,13 @@ fn visible_build_and_time_buttons_drive_core_without_recreating_controls() {
     );
     assert_eq!(session.snapshot.provinces[0].stockpile[&"tools".into()], 15);
     assert_eq!(session.snapshot.construction_projects.len(), 1);
+    assert_eq!(
+        session.snapshot.construction_projects[0]
+            .facility_id
+            .0
+            .get_version_num(),
+        7
+    );
     assert_eq!(session.news.len(), 1);
     assert!(
         texts(&mut app)
@@ -122,7 +129,7 @@ fn province_selection_routes_construction_and_refreshes_visible_stocks() {
     let mut app = app();
     activate(
         &mut app,
-        ManagementAction::SelectProvince("south_ridge".into()),
+        ManagementAction::SelectProvince("01a07577-e209-7938-8120-efb504849d04".parse().unwrap()),
     );
     activate(
         &mut app,
@@ -130,8 +137,10 @@ fn province_selection_routes_construction_and_refreshes_visible_stocks() {
     );
     let session = app.world().resource::<ManagementSession>();
     assert_eq!(
-        session.snapshot.construction_projects[0].province.0,
-        "south_ridge"
+        session.snapshot.construction_projects[0]
+            .province
+            .to_string(),
+        "01a07577-e209-7938-8120-efb504849d04"
     );
     assert_eq!(
         session.snapshot.provinces[0].stockpile[&"timber".into()],

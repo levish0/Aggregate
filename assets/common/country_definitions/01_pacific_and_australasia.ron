@@ -1,0 +1,1087 @@
+// Source line 59:  Halia, for Bougainville
+// Source line 70:  Bilua
+// Source line 81:  Bulungan
+// Source line 92:  Kutai
+// Source line 103:  Fiji
+// Source line 114:  Micronesia
+// Source line 126:  Vanuatu
+// Source line 137:  Nauru
+// Source line 148:  Tahiti
+// Source line 160:  Aotearoa
+// Source line 171:  Uluru
+// Source line 183:  New South Wales
+// Source line 194:  Western Australia
+// Source line 205:  South Australia
+// Source line 216:  United Tribes of New Zealand
+// Source line 228:  Noongar
+// Source line 240:  Kaurna
+// Source line 252:  Gamilaraay
+// Source line 308:  Siak
+// Source line 320:  Pontianak
+// Source line 332:  Sambas
+// Source line 344:  Jambi
+// Source line 356:  Yogyakarta
+// Source line 368:  Surakarta
+// Source line 380:  Buton
+// Source line 392:  Selangor
+// Source line 404:  Perak
+// Source line 416:  Sulu
+// Source line 428:  Sulawesi
+// Source line 440:  Tidore
+// Source line 452:  Sintang
+// Source line 464:  Banjar
+// Source line 476:  Indonesia
+// Source line 488:  Maguindanao
+// Source line 500:  Yuanzhumin
+// Source line 511:  Polynesia
+// Source line 522:  Wati
+// Source line 534:  Mirning
+// Source line 546:  Mindanao
+// Source line 558:  Kulinic
+// Source line 569:  Karnic
+// Source line 580:  Wiradjuri
+// Source line 591:  Kurnai
+// Source line 602:  Yura
+// Source line 613:  Paakintyi 
+// Source line 624:  Yorta Yorta
+// Source line 635:  Kartu
+// Source line 646:  Kanyara–Mantharta
+// Source line 657:  Ngayarda
+// Source line 668:  Ngumpin-Yapa
+// Source line 679:  Jarrak
+// Source line 690:  Nyulnyulan
+// Source line 701:  Worrorran
+// Source line 712:  Ngarru
+// Source line 723:  Garawa
+// Source line 734:  Mirndi
+// Source line 745:  Arnhem
+// Source line 756:  Yolngu
+// Source line 767:  Wardaman
+// Source line 778:  Daly
+// Source line 789:  Larrakia, Darwin Region
+// Source line 800:  Arrernte
+// Source line 811:  Mara
+// Source line 822:  Kalkatungu
+// Source line 833:  Mayi
+// Source line 844:  Dyribal
+// Source line 855:  Waka-Gabi
+// Source line 866:  Pama
+(schema_version: 1, entries: [
+    Property(key: "HAW", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("48")),
+            Item(Number("169")),
+            Item(Number("96")),
+        ])),
+        Property(key: "tier", operator: Assign, value: Symbol("kingdom")),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("hawaiian")),
+        ])),
+        Property(key: "religion", operator: Assign, value: Symbol("protestant")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_HAWAIIAN_ISLANDS")),
+        Property(key: "is_named_from_capital", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "NTU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("62")),
+            Item(Number("92")),
+            Item(Number("54")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("maori")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_SOUTH_ISLAND")),
+    ])),
+    Property(key: "NTO", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("148")),
+            Item(Number("185")),
+            Item(Number("190")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("maori")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTH_ISLAND")),
+    ])),
+    Property(key: "KNK", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("190")),
+            Item(Number("173")),
+            Item(Number("103")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_KANAK")),
+    ])),
+    Property(key: "PPU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("81")),
+            Item(Number("97")),
+            Item(Number("170")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_EASTERN_NEW_GUINEA")),
+    ])),
+    Property(key: "HLA", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("210")),
+            Item(Number("184")),
+            Item(Number("220")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_BOUGAINVILLE")),
+    ])),
+    Property(key: "BLA", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("140")),
+            Item(Number("166")),
+            Item(Number("75")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_SOLOMON_ISLANDS")),
+    ])),
+    Property(key: "BLG", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("140")),
+            Item(Number("166")),
+            Item(Number("75")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("bornean")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_EAST_BORNEO")),
+    ])),
+    Property(key: "KTI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("137")),
+            Item(Number("88")),
+            Item(Number("58")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("bornean")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_EAST_BORNEO")),
+    ])),
+    Property(key: "FJI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("159")),
+            Item(Number("173")),
+            Item(Number("219")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_FIJI")),
+    ])),
+    Property(key: "MCR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("248")),
+            Item(Number("218")),
+            Item(Number("99")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("micronesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_EAST_MICRONESIA")),
+    ])),
+    Property(key: "VNT", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("37")),
+            Item(Number("214")),
+            Item(Number("50")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_VANUATU")),
+    ])),
+    Property(key: "NRU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("231")),
+            Item(Number("131")),
+            Item(Number("17")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("melanesian")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NAURU")),
+    ])),
+    Property(key: "PLY", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("176")),
+            Item(Number("62")),
+            Item(Number("136")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("polynesian")),
+        ])),
+        Property(key: "religion", operator: Assign, value: Symbol("protestant")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_TAHITI")),
+    ])),
+    Property(key: "AOT", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("47")),
+            Item(Number("140")),
+            Item(Number("191")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("kingdom")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("maori")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTH_ISLAND")),
+    ])),
+    Property(key: "ULR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("112")),
+            Item(Number("54")),
+            Item(Number("16")),
+        ])),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "NSW", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("114")),
+            Item(Number("165")),
+            Item(Number("203")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NEW_SOUTH_WALES")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("australian")),
+        ])),
+    ])),
+    Property(key: "WAS", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("118")),
+            Item(Number("115")),
+            Item(Number("97")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("australian")),
+        ])),
+    ])),
+    Property(key: "SAS", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("170")),
+            Item(Number("90")),
+            Item(Number("128")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_SOUTH_AUSTRALIA")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("australian")),
+        ])),
+    ])),
+    Property(key: "UNT", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("170")),
+            Item(Number("167")),
+            Item(Number("151")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTH_ISLAND")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("maori")),
+        ])),
+        Property(key: "religion", operator: Assign, value: Symbol("protestant")),
+    ])),
+    Property(key: "NNG", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("209")),
+            Item(Number("160")),
+            Item(Number("107")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "KAU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("245")),
+            Item(Number("212")),
+            Item(Number("134")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_SOUTH_AUSTRALIA")),
+    ])),
+    Property(key: "GML", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("77")),
+            Item(Number("204")),
+            Item(Number("68")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NEW_SOUTH_WALES")),
+    ])),
+    Property(key: "AST", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("77")),
+            Item(Number("139")),
+            Item(Number("106")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("kingdom")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NEW_SOUTH_WALES")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("australian")),
+        ])),
+    ])),
+    Property(key: "NZL", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("90")),
+            Item(Number("250")),
+            Item(Number("127")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTH_ISLAND")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("australian")),
+        ])),
+    ])),
+    Property(key: "TAS", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("224")),
+            Item(Number("194")),
+            Item(Number("152")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_VICTORIA")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("australian")),
+        ])),
+    ])),
+    Property(key: "DEI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("20")),
+            Item(Number("80")),
+            Item(Number("80")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("colonial")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("dutch")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WEST_JAVA")),
+    ])),
+    Property(key: "SAK", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("21")),
+            Item(Number("196")),
+            Item(Number("68")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("sumatran")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTH_SUMATRA")),
+    ])),
+    Property(key: "PON", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("255")),
+            Item(Number("102")),
+            Item(Number("102")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("bornean")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WEST_BORNEO")),
+    ])),
+    Property(key: "SMB", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("102")),
+            Item(Number("102")),
+            Item(Number("255")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("bornean")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WEST_BORNEO")),
+    ])),
+    Property(key: "JMB", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("223")),
+            Item(Number("228")),
+            Item(Number("192")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("sumatran")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTH_SUMATRA")),
+    ])),
+    Property(key: "YOG", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("201")),
+            Item(Number("28")),
+            Item(Number("54")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("javan")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_CENTRAL_JAVA")),
+    ])),
+    Property(key: "SRK", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("239")),
+            Item(Number("51")),
+            Item(Number("64")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("javan")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_CENTRAL_JAVA")),
+    ])),
+    Property(key: "BTN", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("209")),
+            Item(Number("203")),
+            Item(Number("31")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("moluccan")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_CELEBES")),
+    ])),
+    Property(key: "SEL", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("249")),
+            Item(Number("215")),
+            Item(Number("61")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("malay")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_MALAYA")),
+    ])),
+    Property(key: "PRK", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("76")),
+            Item(Number("122")),
+            Item(Number("117")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("malay")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_MALAYA")),
+    ])),
+    Property(key: "SUL", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("89")),
+            Item(Number("164")),
+            Item(Number("144")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("moro")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_MINDANAO")),
+    ])),
+    Property(key: "SLW", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("153")),
+            Item(Number("0")),
+            Item(Number("0")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("moluccan")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_CELEBES")),
+    ])),
+    Property(key: "TID", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("176")),
+            Item(Number("232")),
+            Item(Number("64")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("moluccan")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_MOLUCCAS")),
+    ])),
+    Property(key: "STG", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("255")),
+            Item(Number("255")),
+            Item(Number("0")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("bornean")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WEST_BORNEO")),
+    ])),
+    Property(key: "BNJ", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("171")),
+            Item(Number("175")),
+            Item(Number("40")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("bornean")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_EAST_BORNEO")),
+    ])),
+    Property(key: "IDN", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0")),
+            Item(Number("128")),
+            Item(Number("128")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("recognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("empire")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("balinese")),
+            Item(Symbol("batak")),
+            Item(Symbol("bornean")),
+            Item(Symbol("dayak")),
+            Item(Symbol("javan")),
+            Item(Symbol("malay")),
+            Item(Symbol("moluccan")),
+            Item(Symbol("sumatran")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WEST_JAVA")),
+    ])),
+    Property(key: "MGD", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("119")),
+            Item(Number("32")),
+            Item(Number("29")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("moro")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_MINDANAO")),
+    ])),
+    Property(key: "YUZ", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("97")),
+            Item(Number("44")),
+            Item(Number("96")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("yuanzhumin")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_FORMOSA")),
+    ])),
+    Property(key: "PNS", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("244")),
+            Item(Number("140")),
+            Item(Number("30")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("unrecognized")),
+        Property(key: "tier", operator: Assign, value: Symbol("empire")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("hawaiian")),
+            Item(Symbol("maori")),
+            Item(Symbol("melanesian")),
+            Item(Symbol("polynesian")),
+            Item(Symbol("micronesian")),
+            Item(Symbol("yuanzhumin")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_HAWAIIAN_ISLANDS")),
+    ])),
+    Property(key: "WTI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("54")),
+            Item(Number("112")),
+            Item(Number("16")),
+        ])),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "MRN", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("113")),
+            Item(Number("211")),
+        ])),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "MND", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("255")),
+            Item(Number("255")),
+            Item(Number("204")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("lumad")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_MINDANAO")),
+    ])),
+    Property(key: "KLN", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("27")),
+            Item(Number("1")),
+            Item(Number("230")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_VICTORIA")),
+    ])),
+    Property(key: "KNC", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("236")),
+            Item(Number("232")),
+            Item(Number("85")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NEW_SOUTH_WALES")),
+    ])),
+    Property(key: "WDJ", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("140")),
+            Item(Number("70")),
+            Item(Number("67")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NEW_SOUTH_WALES")),
+    ])),
+    Property(key: "KRI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("132")),
+            Item(Number("202")),
+            Item(Number("127")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_VICTORIA")),
+    ])),
+    Property(key: "YUR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("218")),
+            Item(Number("76")),
+            Item(Number("144")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_SOUTH_AUSTRALIA")),
+    ])),
+    Property(key: "PAA", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("77")),
+            Item(Number("68")),
+            Item(Number("204")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NEW_SOUTH_WALES")),
+    ])),
+    Property(key: "YYT", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("198")),
+            Item(Number("164")),
+            Item(Number("98")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_VICTORIA")),
+    ])),
+    Property(key: "KTU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("244")),
+            Item(Number("126")),
+            Item(Number("55")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "KYN", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("73")),
+            Item(Number("229")),
+            Item(Number("248")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "NYR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("70")),
+            Item(Number("16")),
+            Item(Number("219")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "NYP", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("18")),
+            Item(Number("141")),
+            Item(Number("110")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "JRR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("113")),
+            Item(Number("111")),
+            Item(Number("2")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "NYL", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("167")),
+            Item(Number("238")),
+            Item(Number("241")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "WRR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("206")),
+            Item(Number("205")),
+            Item(Number("45")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_WESTERN_AUSTRALIA")),
+    ])),
+    Property(key: "NGU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("92")),
+            Item(Number("142")),
+            Item(Number("220")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "GRW", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("190")),
+            Item(Number("16")),
+            Item(Number("32")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "MDI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("147")),
+            Item(Number("72")),
+            Item(Number("6")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "ARH", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("232")),
+            Item(Number("48")),
+            Item(Number("233")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "YGU", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("78")),
+            Item(Number("11")),
+            Item(Number("105")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "WRD", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("178")),
+            Item(Number("188")),
+            Item(Number("126")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "DLY", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("178")),
+            Item(Number("121")),
+            Item(Number("123")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "LRR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("238")),
+            Item(Number("127")),
+            Item(Number("130")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "ARR", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("182")),
+            Item(Number("165")),
+            Item(Number("254")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_NORTHERN_TERRITORY")),
+    ])),
+    Property(key: "MRA", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("55")),
+            Item(Number("24")),
+            Item(Number("41")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_QUEENSLAND")),
+    ])),
+    Property(key: "KKT", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("132")),
+            Item(Number("219")),
+            Item(Number("205")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_QUEENSLAND")),
+    ])),
+    Property(key: "MYI", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("78")),
+            Item(Number("146")),
+            Item(Number("22")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_QUEENSLAND")),
+    ])),
+    Property(key: "DYB", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("238")),
+            Item(Number("39")),
+            Item(Number("2")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_QUEENSLAND")),
+    ])),
+    Property(key: "WKB", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("252")),
+            Item(Number("112")),
+            Item(Number("227")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_QUEENSLAND")),
+    ])),
+    Property(key: "PMA", operator: Assign, value: Block([
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("207")),
+            Item(Number("182")),
+            Item(Number("66")),
+        ])),
+        Property(key: "country_type", operator: Assign, value: Symbol("decentralized")),
+        Property(key: "tier", operator: Assign, value: Symbol("principality")),
+        Property(key: "cultures", operator: Assign, value: Block([
+            Item(Symbol("aborigine")),
+        ])),
+        Property(key: "capital", operator: Assign, value: Symbol("STATE_QUEENSLAND")),
+    ])),
+])

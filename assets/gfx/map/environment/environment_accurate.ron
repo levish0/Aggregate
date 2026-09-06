@@ -1,0 +1,31 @@
+// Source line 2: # Global environment settings
+// Source line 4:  Sun
+// Source line 7: 	+Right/-Left	Height  -Front/+Back
+// Source line 9:  Offset overrides
+// Source line 13:  Cubemap
+(schema_version: 1, entries: [
+    Property(key: "sun_color", operator: Assign, value: Block([
+        Item(Number("1.02")),
+        Item(Number("0.98")),
+        Item(Number("0.96")),
+    ])),
+    Property(key: "sun_intensity", operator: Assign, value: Number("8.0")),
+    Property(key: "sun_direction", operator: Assign, value: Block([
+        Item(Number("-0.5")),
+        Item(Number("0.55")),
+        Item(Number("0.9")),
+    ])),
+    Property(key: "shadow_direction_offset", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "water_sun_direction_offset", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "cubemap_intensity", operator: Assign, value: Number("2.0")),
+    Property(key: "cubemap", operator: Assign, value: Text("gfx/map/environment/cubemap_blackbottom.dds")),
+    Property(key: "cubemap_y_rotation", operator: Assign, value: Number("190")),
+])

@@ -1,0 +1,1736 @@
+// Source line 1: ## Textures ###
+// Source line 2:  Standard
+// Source line 3:  Player
+// Source line 4:  Usually: Can interact
+// Source line 5:  Usually: Cannot interact, but valid
+// Source line 6:  Usually: Active, cannot deactivate
+// Source line 7:  Usually: Active, cannot deactivate
+// Source line 8:  Usually: Active, cannot deactivate
+// Source line 9:  Usually: placeholder
+// Source line 11:  Diplo
+// Source line 12:  Player
+// Source line 13:  Player Warleader
+// Source line 14:  Ally
+// Source line 15:  Ally Warleader
+// Source line 16:  Enemy
+// Source line 17:  Enemy Warleader
+// Source line 19:  Relations
+// Source line 20:  Hostile
+// Source line 21:  Cold
+// Source line 22:  Poor
+// Source line 23:  Neutral
+// Source line 24:  Friendly
+// Source line 25:  Amicable
+// Source line 26:  Cordial
+// Source line 28:  Attitude
+// Source line 29:  Belligerent | Domineering
+// Source line 30:  Antagonistic | Rebellious
+// Source line 31:  Wary
+// Source line 32:  Disinterested
+// Source line 33:  Cautious
+// Source line 34:  Conciliatory | Cooperative
+// Source line 35:  Loyal | Protective
+// Source line 36:  Genial
+// Source line 38:  Interests
+// Source line 39:  Interest Tier 1
+// Source line 40:  Interest Tier 2
+// Source line 41:  Interest Tier 3
+// Source line 42:  Interest Tier 4
+// Source line 43:  Interest Tier 5
+// Source line 45: # Interactions ##
+// Source line 46:  Market
+// Source line 47:  Trade route connected
+// Source line 49:  Conscripts
+// Source line 50:  Activated, Cannot deactivate
+// Source line 52:  Construction
+// Source line 53:  Can build + currently building
+// Source line 54:  Can not build + currently building
+// Source line 56:  Diplomatic action
+// Source line 57:  Activated,Can Deactivate
+// Source line 58:  Activated, Cannot Deactivate
+// Source line 60:  Diplomaitc play
+// Source line 61:  Activated, Cannot Deactivate
+// Source line 63:  Establish Colony
+// Source line 64:  Activated, Can Deactivate
+// Source line 66:  Issue Decree
+// Source line 67:  Activated, Can Deactivate
+// Source line 69:  Incorporate State
+// Source line 70:  Activated, Can Deactivate
+// Source line 71:  Activated, Cannot Deactivate (Fully incorporated)
+// Source line 73:  Move Capital
+// Source line 74:  Current Capital
+// Source line 76:  Move Market Capital
+// Source line 77:  Current Capital
+// Source line 87:  special behaviour, overriden in code
+// Source line 103:  special behaviour, overriden in code
+// Source line 110: soundeffect = "snapshot:/Dynamic/low_pass_world"
+// Source line 167:  Texture usage
+// Source line 170:  Texture slots
+// Source line 210:  Texture usage
+// Source line 213:  Texture slots
+// Source line 241:  Texture usage
+// Source line 244:  Texture slots
+// Source line 260:  Hidden map mode, because it is currently unoptimized / unlocalized / for debug
+// Source line 269:  Hidden!
+// Source line 273:  Texture usage
+// Source line 276:  Texture slots
+// Source line 277:  Player country
+// Source line 278:  Other country, occupied by player
+// Source line 279:  Your country, occupied by enemy
+// Source line 280:  Other country, which has given player military access
+// Source line 281:  Other country, occupied by country that has given player military access
+// Source line 282:  Other country, at war with you (never gives military access)
+// Source line 299:  Texture usage
+// Source line 302:  Texture slots
+// Source line 329:  Texture usage
+// Source line 332:  Texture slots
+// Source line 529:  unreachable marker: building_potential_marker
+// Source line 542:  unreachable marker: building_potential_marker
+// Source line 565:  Texture usage
+// Source line 568:  Texture slots
+// Source line 595:  Texture usage
+// Source line 598:  Texture slots
+// Source line 688:  Texture usage
+// Source line 692:  Texture slots
+// Source line 693:  Can Activate
+// Source line 694:  Cannot Activate, but is valid
+// Source line 708:  Texture usage
+// Source line 712:  Texture slots
+// Source line 713:  Can Activate
+// Source line 714:  Cannot Activate, but is valid
+// Source line 715:  Cannot deactivate
+// Source line 728:  Texture usage
+// Source line 732:  Texture slots
+// Source line 733:  Can Activate
+// Source line 734:  Cannot Activate, but is valid
+// Source line 748:  Texture usage
+// Source line 752:  Texture slots
+// Source line 753:  Can Activate
+// Source line 754:  Active Connection
+// Source line 755:  Cannot Activate, but is valid
+// Source line 756:  This is you (player)
+// Source line 770:  Texture usage
+// Source line 774:  Texture slots
+// Source line 775:  Can Activate
+// Source line 776:  Cannot Activate, but is valid
+// Source line 790:  Texture usage
+// Source line 794:  Texture slots
+// Source line 795:  Can Activate
+// Source line 796:  Cannot Activate, but is valid
+// Source line 809:  Texture usage
+// Source line 813:  Texture slots
+// Source line 814:  Can Activate
+// Source line 815:  Cannot Activate, but is valid
+// Source line 828:  Texture usage
+// Source line 832:  Texture slots
+// Source line 833:  Can recruit
+// Source line 834:  Cannot recruit, but is valid
+// Source line 847:  Texture usage
+// Source line 851:  Texture slots
+// Source line 852:  Can recruit
+// Source line 853:  Cannot recruit, but is valid
+// Source line 868:  Texture usage
+// Source line 872:  Texture slots
+// Source line 887:  Texture usage
+// Source line 891:  Texture slots
+// Source line 892:  Can activate
+// Source line 893:  Cannot Activate, but is valid
+// Source line 894:  Activated, cannot deactivate
+// Source line 907:  Texture usage
+// Source line 911:  Texture slots
+// Source line 913:  Can activate
+// Source line 914:  Cannot Activate, but is valid
+// Source line 915:  Activated, can deactivate
+// Source line 921:  Build buildings mapmode
+// Source line 932:  Texture usage
+// Source line 936:  Texture slots
+// Source line 937:  Can build
+// Source line 938:  Can build + currently building
+// Source line 939:  Can not build
+// Source line 940:  Can not build + currently building
+// Source line 953:  Texture usage
+// Source line 957:  Texture slots
+// Source line 958:  Can Activate
+// Source line 959:  Can Deactivate
+// Source line 960:  Cannot Activate
+// Source line 961:  Active - Cannot Deactivate
+// Source line 962:  This is you (player)
+// Source line 975:  Texture usage
+// Source line 979:  Texture slots
+// Source line 980:  Can Activate
+// Source line 981:  Cannot Activate, but is valid
+// Source line 982:  Activated, Cannot Deactivate
+// Source line 996:  Texture usage
+// Source line 1000:  Texture slots
+// Source line 1001:  Can Activate
+// Source line 1002:  Cannot Activate, but is valid
+// Source line 1003:  Activated, Cannot Deactivate
+// Source line 1016:  Texture usage
+// Source line 1020:  Texture slots
+// Source line 1021:  Can Activate
+// Source line 1022:  Can Deactivate
+// Source line 1023:  Cannot Activate, but is valid
+// Source line 1037:  Texture usage
+// Source line 1041:  Texture slots
+// Source line 1042:  Can Activate
+// Source line 1043:  Can Deactivate
+// Source line 1044:  Cannot Activate, but is valid
+// Source line 1058:  Texture usage
+// Source line 1062:  Texture slots
+// Source line 1063:  Can Activate
+// Source line 1064:  Can Deactivate
+// Source line 1065:  Cannot Activate, but is valid
+// Source line 1066:  Active - Cannot Deactivate (Fully incorporated)
+// Source line 1080:  Texture usage
+// Source line 1084:  Texture slots
+// Source line 1085:  Can move
+// Source line 1086:  Cannot move, but is valid
+// Source line 1087:  Current Capital
+// Source line 1101:  Texture usage
+// Source line 1105:  Texture slots
+// Source line 1106:  Can move
+// Source line 1107:  Cannot move, but is valid
+// Source line 1108:  Current Capital
+// Source line 1121:  Texture usage
+// Source line 1125:  Texture slots
+// Source line 1126:  Can move
+// Source line 1127:  Cannot move, but is valid
+// Source line 1128:  Current Capital
+// Source line 1170:  Texture usage
+// Source line 1174:  Texture slots
+// Source line 1175:  Can activate
+// Source line 1176:  Cannot activate, but is valid
+// Source line 1177:  Cannot deactivate
+// Source line 1191:  Texture usage
+// Source line 1195:  Texture slots
+// Source line 1196:  Can activate
+// Source line 1197:  Cannot activate, but is valid
+// Source line 1198:  Cannot deactivate
+// Source line 1261:  Texture usage
+// Source line 1264:  Texture slots
+(schema_version: 1, entries: [
+    Property(key: "@this_is_you", operator: Assign, value: Text("this_is_you.dds")),
+    Property(key: "@color_green", operator: Assign, value: Text("ph_green.dds")),
+    Property(key: "@color_red", operator: Assign, value: Text("ph_red.dds")),
+    Property(key: "@color_orange", operator: Assign, value: Text("orange.dds")),
+    Property(key: "@color_yellow", operator: Assign, value: Text("ph_yellow.dds")),
+    Property(key: "@color_blue", operator: Assign, value: Text("ph_blue.dds")),
+    Property(key: "@color_pink", operator: Assign, value: Text("ph_pink.dds")),
+    Property(key: "@war_this_is_you", operator: Assign, value: Text("you_military.dds")),
+    Property(key: "@war_this_is_you_warleader", operator: Assign, value: Text("you_warleader.dds")),
+    Property(key: "@war_ally", operator: Assign, value: Text("ally_military.dds")),
+    Property(key: "@war_ally_warleader", operator: Assign, value: Text("ally_warleader.dds")),
+    Property(key: "@war_enemy", operator: Assign, value: Text("enemy_military.dds")),
+    Property(key: "@war_enemy_warleader", operator: Assign, value: Text("enemy_warleader.dds")),
+    Property(key: "@hostile", operator: Assign, value: Text("hostile.dds")),
+    Property(key: "@cold", operator: Assign, value: Text("cold.dds")),
+    Property(key: "@poor", operator: Assign, value: Text("poor.dds")),
+    Property(key: "@neutral", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "@friendly", operator: Assign, value: Text("friendly.dds")),
+    Property(key: "@amicable", operator: Assign, value: Text("amicable.dds")),
+    Property(key: "@cordial", operator: Assign, value: Text("cordial.dds")),
+    Property(key: "@belligerent_domineering", operator: Assign, value: Text("belligerent_domineering.dds")),
+    Property(key: "@antagonistic_rebellious", operator: Assign, value: Text("antagonistic_rebellious.dds")),
+    Property(key: "@wary", operator: Assign, value: Text("wary.dds")),
+    Property(key: "@disinterested", operator: Assign, value: Text("disinterested.dds")),
+    Property(key: "@cautious", operator: Assign, value: Text("cautious.dds")),
+    Property(key: "@conciliatory_cooperative", operator: Assign, value: Text("conciliatory_cooperative.dds")),
+    Property(key: "@loyal_protective", operator: Assign, value: Text("loyal_protective.dds")),
+    Property(key: "@genial", operator: Assign, value: Text("genial.dds")),
+    Property(key: "@interest_tier_1", operator: Assign, value: Text("strategic_region_interest_levels_map_patterns/strategic_region_interest_level_1.dds")),
+    Property(key: "@interest_tier_2", operator: Assign, value: Text("strategic_region_interest_levels_map_patterns/strategic_region_interest_level_2_engaged.dds")),
+    Property(key: "@interest_tier_3", operator: Assign, value: Text("strategic_region_interest_levels_map_patterns/strategic_region_interest_level_3_influential.dds")),
+    Property(key: "@interest_tier_4", operator: Assign, value: Text("strategic_region_interest_levels_map_patterns/strategic_region_interest_level_4_pervasive.dds")),
+    Property(key: "@interest_tier_5", operator: Assign, value: Text("strategic_region_interest_levels_map_patterns/strategic_region_interest_level_5_hegemonic.dds")),
+    Property(key: "@market_connection_active", operator: Assign, value: Text("import_export.dds")),
+    Property(key: "@conscripts_active", operator: Assign, value: Text("conscripts_interaction.dds")),
+    Property(key: "@can_build_active", operator: Assign, value: Text("hammer_green.dds")),
+    Property(key: "@cannot_build_active", operator: Assign, value: Text("hammer_orange.dds")),
+    Property(key: "@diplomatic_action_active", operator: Assign, value: Text("diplomatic_actions_blue.dds")),
+    Property(key: "@diplomatic_action_orange", operator: Assign, value: Text("diplomatic_actions_orange.dds")),
+    Property(key: "@diplomatic_play_active", operator: Assign, value: Text("diplomatic_play.dds")),
+    Property(key: "@establish_colony_active", operator: Assign, value: Text("establish_colony.dds")),
+    Property(key: "@issue_decree_active", operator: Assign, value: Text("issue_decree.dds")),
+    Property(key: "@incorporate_state_active", operator: Assign, value: Text("incorporate_state_blue.dds")),
+    Property(key: "@incorporate_state_incorporated", operator: Assign, value: Text("incorporate_state_orange.dds")),
+    Property(key: "@move_capital_current", operator: Assign, value: Text("move_capital.dds")),
+    Property(key: "@move_market_capital_current", operator: Assign, value: Text("move_market_capital.dds")),
+    Property(key: "mm_default", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_names", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("city_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("input_goods_shortage_summary_marker")),
+            Item(Symbol("state_effect_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("colony_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+            Item(Symbol("diplomatic_play_marker")),
+            Item(Symbol("harvest_condition_region_marker")),
+            Item(Symbol("fleet_formation_marker")),
+        ])),
+        Property(key: "map_tooltip_offset", operator: Assign, value: Symbol("state")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(false)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/countries_at_peace.dds")),
+    ])),
+    Property(key: "mm_ongoing_diplo_play", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_names", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("naval_battle_marker")),
+            Item(Symbol("strait_marker")),
+            Item(Symbol("colony_marker")),
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("hq_marker")),
+            Item(Symbol("diplomatic_play_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("input_goods_shortage_summary_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("state_effect_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+            Item(Symbol("invasion_marker")),
+            Item(Symbol("harvest_condition_region_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+        ])),
+        Property(key: "map_tooltip_offset", operator: Assign, value: Symbol("state")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/countries_in_conflict.dds")),
+    ])),
+    Property(key: "mm_strategic_region", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("strategic_regions")),
+        Property(key: "map_names", operator: Assign, value: Symbol("strategic_regions")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("strategic_region_marker")),
+            Item(Symbol("diplomatic_play_marker")),
+            Item(Symbol("naval_battle_marker")),
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("sea_node_movement_marker")),
+            Item(Symbol("front_movement_marker")),
+            Item(Symbol("hq_movement_marker")),
+            Item(Symbol("invasion_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("diplomacy")),
+            Item(Symbol("strategic_region")),
+        ])),
+        Property(key: "map_tooltip_offset", operator: Assign, value: Symbol("strategic_region")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_state", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("states")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+            Item(Symbol("city_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+            Item(Symbol("state_infra_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("budget")),
+            Item(Symbol("country")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("states")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_building_relationship", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_names", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("building_relationship_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("city_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("input_goods_shortage_summary_marker")),
+            Item(Symbol("state_effect_marker")),
+            Item(Symbol("sea_node_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/building_relationships.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_interest", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("interests")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("interests")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("interests")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("interest_marker")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("strategic_regions")),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("diplomacy")),
+            Item(Symbol("country")),
+            Item(Symbol("strategic_region")),
+            Item(Symbol("military")),
+        ])),
+        Property(key: "map_tooltip_offset", operator: Assign, value: Symbol("strategic_region")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@interest_tier_1")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@interest_tier_2")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@interest_tier_3")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@interest_tier_4")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@interest_tier_5")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/interests.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_theater", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_theaters")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_names", operator: Assign, value: Symbol("theaters")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("sea_node_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("strategic_region")),
+        ])),
+        Property(key: "map_tooltip_offset", operator: Assign, value: Symbol("theater")),
+        Property(key: "debug", operator: Assign, value: Boolean(true)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_military", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("naval_battle_marker")),
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("past_naval_battle_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("hq_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("invasion_marker")),
+            Item(Symbol("interest_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+            Item(Symbol("state_effect_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("military")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@war_this_is_you")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@war_this_is_you_warleader")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@war_ally")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@war_ally_warleader")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@war_enemy")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@war_enemy_warleader")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_orange")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_military_formation", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("naval_battle_marker")),
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("sea_node_movement_marker")),
+            Item(Symbol("front_movement_marker")),
+            Item(Symbol("hq_movement_marker")),
+            Item(Symbol("invasion_marker")),
+            Item(Symbol("interest_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+            Item(Symbol("state_effect_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("military")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@war_this_is_you")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@war_this_is_you_warleader")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@war_ally")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@war_ally_warleader")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@war_enemy")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@war_enemy_warleader")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_orange")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_formation.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_player_military_access", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_military_access")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("player_military_access")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("player_military_access")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("naval_battle_marker")),
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("hq_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("invasion_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("military")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@war_ally")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@war_enemy")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@war_ally_warleader")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@war_ally")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@war_enemy_warleader")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_access.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_military_with_past_battles", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("naval_battle_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("past_battle_marker")),
+            Item(Symbol("past_naval_battle_marker")),
+            Item(Symbol("hq_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("invasion_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@war_this_is_you")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@war_this_is_you_warleader")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@war_ally")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@war_ally_warleader")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@war_enemy")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@war_enemy_warleader")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_blue")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_formation.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_peace_deal", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("player_alliances")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("event_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("war_goal_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@war_this_is_you")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@war_this_is_you_warleader")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@war_ally")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@war_ally_warleader")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@war_enemy")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@war_enemy_warleader")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_blue")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/diplomatic.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_interest_group", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("ig_strength")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("interestgroup_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/relations.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_population_nationally", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_population")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("revolutionary_movement_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("buildings")),
+            Item(Symbol("population")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/national_population.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_population", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("population")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("population")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/global_population.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_literacy", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("literacy")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("buildings")),
+            Item(Symbol("population")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/literacy.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_pollution", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("pollution")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("employment_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("buildings")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/pollution_impact.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_obstinance", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("obstinance")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("obstinance_marker")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/obstinance.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_culture", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("culture_population")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("homeland_marker")),
+            Item(Symbol("national_awakening_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/cultures.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_religion", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("religion_population")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/religions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_culture_nationally", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_culture_population")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("homeland_marker")),
+            Item(Symbol("national_awakening_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/specific_culture_nationally.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_culture_overview", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("culture_overview")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("culture_overview_minority")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("national_awakening_marker")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("cultures")),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("society")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/cultures.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_religion_overview", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("religion_overview")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("religion_overview_minority")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "map_names", operator: Assign, value: Symbol("religions")),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("society")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/religions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_religion_nationally", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_religion_population")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/specific_culture_nationally.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_goods_production", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("goods_production")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("state_production_of_goods_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("goods")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_goods_consumption", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("goods_consumption")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("state_consumption_of_goods_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("goods")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/consumption.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_goods_potentials", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_goods_potentials")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("state_potential_of_goods_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("goods")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/potentials.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_goods_local_prices", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("goods_local_prices")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("state_price_of_goods_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("goods")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/generic_icons/money.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_country_attitude", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("country_attitude")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("country_attitude")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("country_attitude")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("country_diplomacy_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("country")),
+            Item(Symbol("diplomacy")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "is_visible_to_countryless_observer", operator: Assign, value: Boolean(false)),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@belligerent_domineering")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@antagonistic_rebellious")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@cautious")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@disinterested")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@wary")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@conciliatory_cooperative")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@loyal_protective")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@genial")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/attitude.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_country_relations", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("country_relations")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("country_relations")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("country_relations")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("country_diplomacy_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("country")),
+            Item(Symbol("diplomacy")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "is_visible_to_countryless_observer", operator: Assign, value: Boolean(false)),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@hostile")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@cold")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@poor")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@cordial")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@amicable")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@friendly")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@neutral")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/relations.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_technology", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("technology_progress")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_infamy", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("country_infamy")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("military")),
+            Item(Symbol("country")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/infamy.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_trade", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("market_access")),
+        Property(key: "map_names", operator: Assign, value: Symbol("markets")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("world_market_hub_marker")),
+            Item(Symbol("market_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+            Item(Symbol("harvest_condition_region_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("market")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/markets.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_market_areas", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("market_areas")),
+        Property(key: "map_names", operator: Assign, value: Symbol("market_areas")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("world_market_hub_marker")),
+            Item(Symbol("market_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("harvest_condition_region_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("market")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/market_areas.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_province_template_terrain", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("province_terrain")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_theater_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_theaters")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_names", operator: Assign, value: Symbol("theaters")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("hq_marker")),
+            Item(Symbol("sea_node_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_state_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_orange")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production_in_states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_country_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production_in_states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_market_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("markets")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("sea_node_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@market_connection_active")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/markets.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_strategic_region_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("interest_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_naval_mission_sea_regions_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("interest_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_command_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production_in_states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_recruit_generals_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_access.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_recruit_admirals_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_access.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_create_formation_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("strategic_regions")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_formation.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_activate_conscripts_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@conscripts_active")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military_formation.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_designate_strategic_objective", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strategic_objective_marker")),
+            Item(Symbol("battle_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+            Item(Symbol("hq_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("invasion_marker")),
+            Item(Symbol("war_goal_marker")),
+            Item(Symbol("naval_mission_marker")),
+            Item(Symbol("enemy_naval_mission_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@color_blue")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_construction_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "use_alternate_country_borders", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@can_build_active")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_orange")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@cannot_build_active")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production_in_states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_diplomatic_action_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@diplomatic_action_active")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@diplomatic_action_orange")),
+        Property(key: "alternate_color_green", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/diplomatic.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_diplomatic_play_country_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@diplomatic_play_active")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/diplomatic.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_diplomatic_play_state_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@diplomatic_play_active")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/diplomatic.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_establish_colony_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+            Item(Symbol("colony_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@establish_colony_active")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/migration.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_issue_decree_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@issue_decree_active")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/political.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_incorporate_state_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@incorporate_state_active")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@incorporate_state_incorporated")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_move_capital_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@move_capital_current")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_move_market_capital_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@move_market_capital_current")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_reset_production_methods_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("states")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("building_potential_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("input_goods_shortage_summary_marker")),
+            Item(Symbol("sea_infra_marker")),
+            Item(Symbol("state_infra_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@move_capital_current")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production_in_states.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_harvest_conditions", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("harvest_conditions")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("harvest_condition_region_marker")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("countries")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("market")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("harvest_conditions")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/harvest_conditions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_global_starvation", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("global_starvation")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("famine_marker")),
+            Item(Symbol("harvest_condition_region_marker")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("market")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/starvation.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_hq_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("strait_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_orange")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/strategic_regions.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_front_interaction", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("none")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("land_formation_marker")),
+            Item(Symbol("fleet_formation_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("interactive")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(true)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_red_as_gradient_border", operator: Assign, value: Boolean(true)),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@color_green")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@color_red")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@color_orange")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/military.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_budget", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_names", operator: Assign, value: Symbol("countries")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("state_budget_balance_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("budget")),
+        ])),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/budget.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_political", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("clout_nationally")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("lobby_marker")),
+            Item(Symbol("interestgroup_marker")),
+            Item(Symbol("decree_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/political.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_loyalists", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("loyalists")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("population")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/loyalists.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_diplomatic", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("country_attitude")),
+        Property(key: "map_painting_mode_secondary", operator: Assign, value: Symbol("country_attitude")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("country_attitude")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("strait_marker")),
+            Item(Symbol("country_diplomacy_marker")),
+            Item(Symbol("colony_marker")),
+            Item(Symbol("diplomatic_play_marker")),
+            Item(Symbol("war_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("diplomacy")),
+            Item(Symbol("country")),
+        ])),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode_extra")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "is_visible_to_countryless_observer", operator: Assign, value: Boolean(false)),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("occupation")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "use_mapmode_textures", operator: Assign, value: Boolean(true)),
+        Property(key: "primary_color_red", operator: Assign, value: Symbol("@belligerent_domineering")),
+        Property(key: "primary_color_green", operator: Assign, value: Symbol("@antagonistic_rebellious")),
+        Property(key: "primary_color_blue", operator: Assign, value: Symbol("@cautious")),
+        Property(key: "primary_color_alpha", operator: Assign, value: Symbol("@disinterested")),
+        Property(key: "secondary_color_red", operator: Assign, value: Symbol("@wary")),
+        Property(key: "secondary_color_green", operator: Assign, value: Symbol("@conciliatory_cooperative")),
+        Property(key: "secondary_color_blue", operator: Assign, value: Symbol("@loyal_protective")),
+        Property(key: "secondary_color_alpha", operator: Assign, value: Symbol("@genial")),
+        Property(key: "alternate_color_red", operator: Assign, value: Symbol("@this_is_you")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/diplomatic.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_standard_of_living", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("standard_of_living")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("population")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/standard_of_living.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_radicals", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("radicals")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+            Item(Symbol("state_effect_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("population")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/radicals.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_production", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("gdp")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("input_goods_shortage_summary_marker")),
+            Item(Symbol("employment_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("production_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("buildings")),
+        ])),
+        Property(key: "use_alternate_country_borders", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/production.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_gdp", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("gdp")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("construction_queue_marker")),
+            Item(Symbol("event_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("budget")),
+            Item(Symbol("buildings")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/global_gdp.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_gdp_nationally", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("gdp_nationally")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("event_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("budget")),
+            Item(Symbol("buildings")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "is_visible_to_countryless_observer", operator: Assign, value: Boolean(false)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/national_gdp.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_gdp_ownership_ratio", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("gdp_ownership_ratio")),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("event_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("budget")),
+            Item(Symbol("buildings")),
+        ])),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "is_visible_to_countryless_observer", operator: Assign, value: Boolean(false)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/gdp_ownership.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_migration", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("migration")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+            Item(Symbol("state_migration_target_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("society")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/migration.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_power_blocs", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("power_blocs")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("all_power_bloc_country_leverage_marker")),
+            Item(Symbol("power_bloc_leader_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("power_bloc")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("power_blocs")),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("power_blocs")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(true)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/all_powerblocs.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_power_bloc_leverage", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("power_blocs")),
+        Property(key: "map_painting_mode_alternate", operator: Assign, value: Symbol("colonizable_provinces")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("specific_power_bloc_country_leverage_marker")),
+            Item(Symbol("power_bloc_leader_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("power_bloc")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("power_blocs")),
+        Property(key: "map_texture_mode", operator: Assign, value: Symbol("power_blocs_leverage")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(false)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("mapmode")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(true)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/selected_powerbloc.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_migration_pull", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("migration_pull")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+            Item(Symbol("state_migration_target_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("buildings")),
+            Item(Symbol("society")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "is_visible_to_countryless_observer", operator: Assign, value: Boolean(false)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/migration_attraction.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_state_mass_migration_pull", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("state_mass_migration_pull")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+            Item(Symbol("state_migration_target_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("society")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("states")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/mass_migration_potential_targets.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_mass_migration_pull", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("mass_migration_pull")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("colony_marker")),
+            Item(Symbol("state_migration_target_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("society")),
+        ])),
+        Property(key: "map_names", operator: Assign, value: Symbol("countries")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("heatmap")),
+        Property(key: "has_fog_of_war", operator: Assign, value: Boolean(false)),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/mass_migration_attraction.dds")),
+        Property(key: "soundeffect", operator: Assign, value: Text("snapshot:/Dynamic/low_pass_world")),
+    ])),
+    Property(key: "mm_players", operator: Assign, value: Block([
+        Property(key: "map_painting_mode", operator: Assign, value: Symbol("player_country")),
+        Property(key: "map_names", operator: Assign, value: Symbol("player")),
+        Property(key: "map_markers", operator: Assign, value: Block([
+            Item(Symbol("battle_marker")),
+            Item(Symbol("construction_marker")),
+            Item(Symbol("construction_summary_marker")),
+            Item(Symbol("event_marker")),
+            Item(Symbol("front_marker")),
+            Item(Symbol("city_marker")),
+            Item(Symbol("input_shortage_marker")),
+            Item(Symbol("input_goods_shortage_summary_marker")),
+            Item(Symbol("state_effect_marker")),
+            Item(Symbol("sea_node_marker")),
+            Item(Symbol("colony_marker")),
+            Item(Symbol("revolutionary_movement_marker")),
+        ])),
+        Property(key: "map_mode_lists", operator: Assign, value: Block([
+            Item(Symbol("diplomacy")),
+        ])),
+        Property(key: "map_tooltip_offset", operator: Assign, value: Symbol("state")),
+        Property(key: "is_visible", operator: Assign, value: Boolean(true)),
+        Property(key: "show_formation_movement_arrows", operator: Assign, value: Boolean(false)),
+        Property(key: "gradient_border_settings", operator: Assign, value: Symbol("default")),
+        Property(key: "icon", operator: Assign, value: Text("gfx/interface/icons/map_mode_icons/players.dds")),
+    ])),
+])

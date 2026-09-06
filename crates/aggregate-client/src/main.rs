@@ -3,6 +3,8 @@ mod interaction;
 mod management;
 #[cfg(all(test, target_os = "windows"))]
 mod native_capture;
+#[cfg(all(test, target_os = "windows"))]
+mod native_map_capture;
 mod screens;
 mod state;
 
@@ -18,12 +20,17 @@ fn main() {
 }
 
 fn create_app() -> App {
+    let asset_root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../assets");
     let session = management::ManagementSession::foundation();
     let view = session.initial_view();
     let mut app = App::new();
     app.insert_resource(ClearColor(aggregate_ui::theme::INK))
         .add_plugins(
             DefaultPlugins
+                .set(AssetPlugin {
+                    file_path: asset_root.to_string_lossy().into_owned(),
+                    ..default()
+                })
                 .set(bevy::winit::WinitPlugin {
                     run_on_any_thread: cfg!(test),
                 })
@@ -42,6 +49,7 @@ fn create_app() -> App {
                 }),
         )
         .add_plugins(AggregateUiPlugin)
+        .add_plugins(aggregate_map_view::MapViewPlugin { asset_root })
         .init_resource::<state::InterfaceState>()
         .insert_resource(session)
         .insert_resource(view)
@@ -54,13 +62,19 @@ fn create_app() -> App {
                     management::apply_management_actions,
                     management::advance_running_session,
                     screens::rebuild,
+                    screens::world_map::configure_view,
+                    screens::world_map::outliner::apply_jumps,
+                    screens::world_map::outliner::rebuild,
+                    screens::world_map::update_labels,
                     screens::management::update_management_lists,
                     screens::management::update_management_labels,
                     interaction::update_live_labels,
                 )
                     .chain()
-                    .after(UiSystems::Interaction),
+                    .after(UiSystems::Interaction)
+                    .before(aggregate_map_view::MapViewSystems),
                 interaction::responsive_scale.after(interaction::apply_actions),
+                screens::world_map::configure_keyboard_policy.before(UiSystems::Interaction),
                 backdrop::resize,
                 take_screenshot,
             ),
@@ -69,7 +83,14 @@ fn create_app() -> App {
 }
 
 fn setup_camera(mut commands: Commands) {
-    commands.spawn(Camera2d);
+    commands.spawn((
+        Camera2d,
+        Camera {
+            order: 1,
+            ..default()
+        },
+        IsDefaultUiCamera,
+    ));
 }
 
 fn take_screenshot(mut commands: Commands, keys: Res<ButtonInput<KeyCode>>) {

@@ -1,0 +1,52 @@
+// Source line 1:  Main Sun & Moon | Effects on sun during day night cycle
+// Source line 2:  Radius of sun rotation around axis
+// Source line 3:  Center of the sun rotation
+// Source line 5:  Sunset color
+// Source line 6:  Sunset water brightness (has to be manually adjusted)
+// Source line 7:  Smoothstep min of sunset for color
+// Source line 8:  Smoothstep max of sunset for color
+// Source line 10:  Smoothstep min of sunset for intensity
+// Source line 11:  Smoothstep max of sunset for intensity
+// Source line 13:  Will be removed
+// Source line 14:  Min/Max angle of moon at night
+// Source line 16:  Smoothstep min of "nightvalue" which affects moon intensity
+// Source line 17:  Smoothstep max of "nightvalue" which affects moon intensity
+// Source line 18:  Moon diffuse
+// Source line 19:  Moon intensity
+// Source line 20:  Moon min height (miss-labeled)
+// Source line 21:  Night Cubbemap intensity
+// Source line 22:  Night water brightness (has to be manually adjusted)
+(schema_version: 1, entries: [
+    Property(key: "sun_rotation_radius", operator: Assign, value: Number("0.5")),
+    Property(key: "sun_rotation_axis", operator: Assign, value: Block([
+        Item(Number("-0.5")),
+        Item(Number("0.0")),
+        Item(Number("0.9")),
+    ])),
+    Property(key: "sunset_sun_color", operator: Assign, value: Block([
+        Item(Number("1.0")),
+        Item(Number("0.4")),
+        Item(Number("0.4")),
+    ])),
+    Property(key: "sunset_water_intensity", operator: Assign, value: Number("0.1")),
+    Property(key: "sunset_color_min_value", operator: Assign, value: Number("0.2")),
+    Property(key: "sunset_color_max_value", operator: Assign, value: Number("1.0")),
+    Property(key: "sunset_intensity_min_value", operator: Assign, value: Number("0.5")),
+    Property(key: "sunset_intensity_max_value", operator: Assign, value: Number("1.0")),
+    Property(key: "debug_daynight_time", operator: Assign, value: Number("0.0")),
+    Property(key: "night_angle_minmax", operator: Assign, value: Block([
+        Item(Number("0.3")),
+        Item(Number("0.6")),
+    ])),
+    Property(key: "night_intensity_min_value", operator: Assign, value: Number("0.0")),
+    Property(key: "night_intensity_max_value", operator: Assign, value: Number("0.5")),
+    Property(key: "night_sun_color", operator: Assign, value: Block([
+        Item(Number("0.35")),
+        Item(Number("0.41")),
+        Item(Number("0.62")),
+    ])),
+    Property(key: "night_sun_intensity", operator: Assign, value: Number("4.0")),
+    Property(key: "night_sun_max_height", operator: Assign, value: Number("0.1")),
+    Property(key: "night_cubemap_intensity", operator: Assign, value: Number("2.5")),
+    Property(key: "night_water_intensity", operator: Assign, value: Number("0.3")),
+])

@@ -27,13 +27,18 @@ fn advance(app: &mut App, seconds: f32) {
 
 fn interface_app() -> App {
     let mut app = App::new();
-    app.init_resource::<Assets<Font>>()
-        .init_resource::<Time<Real>>()
-        .init_resource::<ButtonInput<KeyCode>>()
-        .init_resource::<ButtonInput<MouseButton>>()
-        .init_resource::<UiScale>()
-        .add_message::<MouseWheel>()
-        .add_plugins(AggregateUiPlugin);
+    app.add_plugins((
+        bevy::asset::AssetPlugin::default(),
+        bevy::image::ImagePlugin::default(),
+    ))
+    .init_asset::<bevy::shader::Shader>()
+    .init_resource::<Assets<Font>>()
+    .init_resource::<Time<Real>>()
+    .init_resource::<ButtonInput<KeyCode>>()
+    .init_resource::<ButtonInput<MouseButton>>()
+    .init_resource::<UiScale>()
+    .add_message::<MouseWheel>()
+    .add_plugins(AggregateUiPlugin);
     app.world_mut().spawn(Window::default());
     app
 }

@@ -102,6 +102,9 @@ management-food = 식량: 필요 { $required } · 소비 { $consumed } · 부족
 management-stock-change = 지난 완료일 { $amount }
 management-facility-staffing = 총 { $level }단계 · 지난 완료일 가동 인력 { $workers }명
 management-project-progress = 남은 작업량 { $work }인일 · 건설 인력 최대 { $workers }명
+management-project-awaiting-allocation = 다음 일일 노동력 배정 대기
+management-project-workers = 지난 작업일: 지역 노동자 { $active } / { $requested }명 투입
+management-project-labor-shortage = 지난 작업일: { $active } / { $requested }명 투입 · 지역 노동력 부족
 management-no-construction = 이 지역에서 진행 중인 건설이 없습니다.
 management-labor-title = 하나의 노동력
 management-labor-help = 생산과 건설은 같은 노동력을 사용합니다. 필요한 인력이 가용 노동력보다 많으면 수요에 비례해 배분됩니다. 원자재가 부족하면 배정받은 인력도 가동하지 못할 수 있습니다. 새 건물도 완공 후 운영할 인력이 필요합니다.
@@ -115,3 +118,47 @@ world-good-tools = 도구
 world-facility-grain-farm = 곡물 농장
 world-facility-logging-camp = 벌목장
 world-facility-tool-workshop = 도구 공방
+
+menu-world-map = 세계 지도
+map-title = 세계 지도
+map-atlas = 세계 / 지형과 영토
+map-mode-terrain = 지형 지도
+map-mode-political = 정치 지도
+map-select-province = 지역 선택
+map-select-hint = 지도의 지역을 선택하면 소속 국가와 지형을 확인할 수 있습니다.
+map-hover-hint = 지도를 가리켜 지역을 살펴보세요
+map-loading = 지형과 지역 정보를 불러오는 중…
+map-load-failed = 지도를 불러오지 못했습니다
+map-counts = { $provinces }개 프로빈스 · { $regions }개 지역
+map-country = 소속 국가
+map-terrain = 지형
+map-water = 수역
+map-land = 육지
+map-unassigned = 미지정
+map-controls-title = 지도 탐색
+map-controls = Tab 누르기 · 세계 보기
+    휠 · 확대 / 축소
+    휠 버튼 드래그 · 이동
+    우클릭 드래그 · 기울기 / 회전 · 놓으면 방향 복귀
+    WASD / 방향키 · 이동
+    Alt+2 · 정치 지도
+    좌클릭 · 지역 선택
+terrain-plains = 평원
+terrain-hills = 구릉
+terrain-mountain = 산악
+terrain-mountains = 산악
+terrain-desert = 사막
+terrain-jungle = 밀림
+terrain-forest = 숲
+terrain-snow = 설원
+terrain-tundra = 툰드라
+terrain-ocean = 대양
+terrain-lake = 호수
+terrain-wetland = 습지
+terrain-unknown = 미분류
+map-overview-hint = 이동할 위치를 클릭한 뒤 Tab을 놓으세요
+map-keyboard = Tab 누르기 · 세계 보기    Ctrl+Tab · UI 이동    Esc · 뒤로
+map-nav-management = 관리
+map-nav-settings = 설정
+map-outliner-title = 지역 목록
+map-lens-title = 지도 모드

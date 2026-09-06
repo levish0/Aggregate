@@ -1,0 +1,816 @@
+// Source line 1:  Post effect for camera height and volumes
+// Source line 3:  Console commands:
+// Source line 4:  Tweak post
+// Source line 5:  Reload posteffectvolumes
+// Source line 6:  PostEffectVolumes.Enabled
+// Source line 7:  PostEffectVolumes.ForceUpdate
+// Source line 8:  Draw.DebugPostEffectVolumes
+// Source line 10: # References
+// Source line 11:  - Fog
+// Source line 12:  fog_max = 1.0
+// Source line 13:  fog_color = { 1.0 1.0 1.0 }
+// Source line 14:  fog_begin = 1.0
+// Source line 15:  fog_end = 1000.0
+// Source line 17:  - HDR
+// Source line 18:  hdr_min_adjustment = 0.50
+// Source line 19:  hdr_max_adjustment = 1.00
+// Source line 20:  hdr_adjustment_speed = 15.00
+// Source line 21:  tonemap_middlegrey = 0.5
+// Source line 22:  tonemap_whiteluminance = 0.5
+// Source line 23:  exposure = 0.5
+// Source line 25:  - Bloom
+// Source line 26:  bloom_strength
+// Source line 27:  bloom_steepness
+// Source line 28:  bloom_threshold 
+// Source line 30:  - Color
+// Source line 31:  hue_offset = -0.00
+// Source line 32:  saturation_scale = 1.0
+// Source line 33:  value_scale = 1.0
+// Source line 34:  colorbalance = { 1.00 1.00 1.00 }
+// Source line 35:  levels_min = hsv{ 0.00 0.00 0.00 }
+// Source line 36:  levels_max = hsv{ 0.00 0.00 1.00 }
+// Source line 37: #
+// Source line 40: ## Global post volume
+// Source line 44:  Settings
+// Source line 49:  Color values adjusment
+// Source line 50:  Color values adjusment
+// Source line 51:  Color balance
+// Source line 61:  Settings
+// Source line 66:  Color values adjusment
+// Source line 67:  Color balance
+// Source line 72: ## Height volumes ###
+// Source line 73:  zoom_volume_01
+// Source line 78:  Settings
+// Source line 83:  zoom_volume_01_night
+// Source line 88:  Settings
+// Source line 93:  zoom_volume_02
+// Source line 98:  Settings
+// Source line 104:  zoom_volume_02_night
+// Source line 109:  Settings
+// Source line 115:  zoom_volume_03
+// Source line 120:  Settings
+// Source line 125:  zoom_volume_03_night
+// Source line 130:  Settings
+// Source line 135:  zoom_volume_04
+// Source line 140:  Settings
+// Source line 145:  zoom_volume_04_night
+// Source line 150:  Settings
+// Source line 155:  zoom_volume_05
+// Source line 160:  Settings
+// Source line 165:  zoom_volume_05_night
+// Source line 170:  Settings
+// Source line 175:  zoom_volume_06
+// Source line 180:  Settings
+// Source line 185:  zoom_volume_06_night
+// Source line 190:  Settings
+// Source line 195:  zoom_volume_07
+// Source line 200:  Settings
+// Source line 205:  zoom_volume_07_night
+// Source line 210:  Settings
+// Source line 215:  Step Papermap, >800					# Papermap
+// Source line 220:  Settings
+// Source line 223:  Color values adjusment
+// Source line 224:  Color values adjusment
+// Source line 225:  Color balance
+// Source line 233: ## Area volumes ###
+// Source line 234:  Great Britain
+// Source line 239:  Settings
+// Source line 240:  Desaturated
+// Source line 242:  Color values adjusment
+// Source line 243:  Color values adjusment
+// Source line 244:  Color balance
+// Source line 250:  Cold
+// Source line 255:  Settings
+// Source line 258:  Color values adjusment
+// Source line 259:  Color values adjusment
+// Source line 260: 	colorbalance = { 0.9 0.99 1.13 }	# Color balance
+// Source line 261:  Color balance
+// Source line 267:  Desert
+// Source line 272:  Settings
+// Source line 275:  Color values adjusment
+// Source line 276:  Color values adjusment
+// Source line 277:  Color balance
+// Source line 280: 	fog_color = { 0.59 0.757 0.81 }
+// Source line 284:  Australia
+// Source line 289:  Settings
+// Source line 292:  Color values adjusment
+// Source line 293:  Color values adjusment
+// Source line 294:  Color balance
+// Source line 300:  Asia
+// Source line 305:  Settings
+// Source line 308:  Color values adjusment
+// Source line 309:  Color values adjusment
+// Source line 310:  Color balance
+// Source line 316:  South America
+// Source line 321:  Settings
+// Source line 324:  Color values adjusment
+// Source line 325:  Color values adjusment
+// Source line 326:  Color balance
+// Source line 332:  Africa
+// Source line 337:  Settings
+// Source line 340:  Color values adjusment
+// Source line 341:  Color values adjusment
+// Source line 342:  Color balance
+// Source line 350: # Area volumes locations ###
+// Source line 351:  These are the classic 'post processing volumes' which can be placed around the world
+// Source line 352:  These are locations only, use settings above to change their effects
+// Source line 355:  Great Britain
+// Source line 366:  Cold
+// Source line 422:  Desert
+// Source line 460:  South America
+// Source line 471:  North-East America
+// Source line 483:  Asia
+// Source line 504:  Africa
+// Source line 527: # Height volume locations ##
+// Source line 528: 
+// Source line 529:  "height" is when the values start to apply
+// Source line 530:  "fade_distance" is the blending distance until fully applied
+// Source line 531:  ie. actual height is height + fade_distance
+// Source line 538:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 539:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 547:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 548:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 556:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 557:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 565:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 566:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 574:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 575:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 583:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 584:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 592:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 593:  The lenght of the "camera zoom" value before the volume takes half effect
+// Source line 602:  Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
+// Source line 603:  The lenght of the "camera zoom" value before the volume takes half effect
+(schema_version: 1, entries: [
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("default")),
+        Property(key: "lut", operator: Assign, value: Text("gfx/map/post_effects/colorcorrection_neutral.tga")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.95")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.1")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("1.0")),
+            Item(Number("0.03")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.95")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.04")),
+            Item(Number("0.95")),
+            Item(Number("0.9")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.75")),
+            Item(Number("0.77")),
+            Item(Number("0.83")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("night")),
+        Property(key: "lut", operator: Assign, value: Text("gfx/map/post_effects/colorcorrection_night.tga")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.75")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.0")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("0.96")),
+            Item(Number("1.05")),
+        ])),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_01")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("0")),
+        Property(key: "fog_end", operator: Assign, value: Number("500")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_01_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("0")),
+        Property(key: "fog_end", operator: Assign, value: Number("500")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_02")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("30")),
+        Property(key: "fog_end", operator: Assign, value: Number("500")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_02_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("30")),
+        Property(key: "fog_end", operator: Assign, value: Number("500")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_03")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("50")),
+        Property(key: "fog_end", operator: Assign, value: Number("700")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_03_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("50")),
+        Property(key: "fog_end", operator: Assign, value: Number("700")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_04")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("60")),
+        Property(key: "fog_end", operator: Assign, value: Number("1800")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_04_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("60")),
+        Property(key: "fog_end", operator: Assign, value: Number("1800")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_05")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("70")),
+        Property(key: "fog_end", operator: Assign, value: Number("2400")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_05_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("70")),
+        Property(key: "fog_end", operator: Assign, value: Number("2400")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_06")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("80")),
+        Property(key: "fog_end", operator: Assign, value: Number("3600")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_06_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("80")),
+        Property(key: "fog_end", operator: Assign, value: Number("3600")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_07")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "fog_begin", operator: Assign, value: Number("150")),
+        Property(key: "fog_end", operator: Assign, value: Number("4000")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_07_night")),
+        Property(key: "inherit", operator: Assign, value: Symbol("night")),
+        Property(key: "fog_begin", operator: Assign, value: Number("150")),
+        Property(key: "fog_end", operator: Assign, value: Number("4000")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Symbol("zoom_volume_papermap")),
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("1.0")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.00")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("1.0")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("1.0")),
+            Item(Number("1.0")),
+        ])),
+        Property(key: "fog_begin", operator: Assign, value: Number("150")),
+        Property(key: "fog_end", operator: Assign, value: Number("4000")),
+        Property(key: "fog_max", operator: Assign, value: Number("0.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("gb_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.78")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.1")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.25")),
+            Item(Number("0.02")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.95")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("0.95")),
+            Item(Number("0.93")),
+            Item(Number("1.0")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.74")),
+            Item(Number("0.76")),
+            Item(Number("0.88")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("cold_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.8")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.0")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.17")),
+            Item(Number("1.0")),
+            Item(Number("0.04")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.2")),
+            Item(Number("0.1")),
+            Item(Number("0.8")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("0.9")),
+            Item(Number("0.99")),
+            Item(Number("1.03")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.74")),
+            Item(Number("0.76")),
+            Item(Number("0.8")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("desert_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.85")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.1")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.00")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.93")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.03")),
+            Item(Number("0.97")),
+            Item(Number("0.93")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.8")),
+            Item(Number("0.79")),
+            Item(Number("0.78")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("au_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.85")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.05")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.5")),
+            Item(Number("0.2")),
+            Item(Number("0.03")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.52")),
+            Item(Number("0.17")),
+            Item(Number("1.0")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("0.96")),
+            Item(Number("1.01")),
+            Item(Number("0.9")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.79")),
+            Item(Number("0.79")),
+            Item(Number("0.78")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("asia_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.9")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.05")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.9")),
+            Item(Number("0.3")),
+            Item(Number("0.05")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.9")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.03")),
+            Item(Number("0.95")),
+            Item(Number("0.9")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.79")),
+            Item(Number("0.78")),
+            Item(Number("0.76")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("sa_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.95")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.1")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.02")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("0.91")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.01")),
+            Item(Number("0.98")),
+            Item(Number("0.9")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.747")),
+            Item(Number("0.763")),
+            Item(Number("0.78")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("35.0")),
+    ])),
+    Property(key: "posteffect_values", operator: Assign, value: Block([
+        Property(key: "inherit", operator: Assign, value: Symbol("default")),
+        Property(key: "name", operator: Assign, value: Symbol("africa_volume")),
+        Property(key: "saturation_scale", operator: Assign, value: Number("0.9")),
+        Property(key: "value_scale", operator: Assign, value: Number("1.05")),
+        Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.4")),
+            Item(Number("0.00")),
+        ]))),
+        Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+            Item(Number("0.52")),
+            Item(Number("0.14")),
+            Item(Number("0.93")),
+        ]))),
+        Property(key: "colorbalance", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("1.01")),
+            Item(Number("0.9")),
+        ])),
+        Property(key: "fog_color", operator: Assign, value: Block([
+            Item(Number("0.76")),
+            Item(Number("0.75")),
+            Item(Number("0.77")),
+        ])),
+        Property(key: "fog_max", operator: Assign, value: Number("30.0")),
+    ])),
+    Property(key: "posteffect_volumes", operator: Assign, value: Block([
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Great Britain")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("gb_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3980.0")),
+                Item(Number("200.0")),
+                Item(Number("2750.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("400.0")),
+                Item(Number("1000.0")),
+                Item(Number("300.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("60.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Northern Area 01")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("8076.0")),
+                Item(Number("200.0")),
+                Item(Number("3150.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("7785.0")),
+                Item(Number("1000.0")),
+                Item(Number("750.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Northern Area 02")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("200.0")),
+                Item(Number("3150.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("500.0")),
+                Item(Number("1000.0")),
+                Item(Number("750.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Northern Area 03")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4000.0")),
+                Item(Number("200.0")),
+                Item(Number("3250.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("7660.0")),
+                Item(Number("1000.0")),
+                Item(Number("700.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Northern Area 05")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("8190.0")),
+                Item(Number("200.0")),
+                Item(Number("2900.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1380.0")),
+                Item(Number("1000.0")),
+                Item(Number("1000.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("300.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Northern Area America Transition")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1500.0")),
+                Item(Number("200.0")),
+                Item(Number("3000.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("3500.0")),
+                Item(Number("1000.0")),
+                Item(Number("1500.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("300.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Northern Area Europe Asia Transition")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("5900.0")),
+                Item(Number("200.0")),
+                Item(Number("3000.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("3440.0")),
+                Item(Number("1000.0")),
+                Item(Number("900.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("300.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Sahara")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("desert_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4700.0")),
+                Item(Number("200.0")),
+                Item(Number("1900.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("2200.0")),
+                Item(Number("1000.0")),
+                Item(Number("625.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Australia")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("au_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("7200.0")),
+                Item(Number("200.0")),
+                Item(Number("620.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1400.0")),
+                Item(Number("1000.0")),
+                Item(Number("1200.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Navajo")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("desert_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1650.0")),
+                Item(Number("200.0")),
+                Item(Number("2090.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("480.0")),
+                Item(Number("1000.0")),
+                Item(Number("310.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("North East Africa")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("desert_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("5400.0")),
+                Item(Number("200.0")),
+                Item(Number("1450.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("875.0")),
+                Item(Number("1000.0")),
+                Item(Number("900.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("South America")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("sa_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2700.0")),
+                Item(Number("200.0")),
+                Item(Number("850.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1800.0")),
+                Item(Number("900.0")),
+                Item(Number("2000.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("North East America")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("cold_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2340.0")),
+                Item(Number("200.0")),
+                Item(Number("2500.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("900.0")),
+                Item(Number("1000.0")),
+                Item(Number("1000.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("300.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Asia")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("asia_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("6800.0")),
+                Item(Number("200.0")),
+                Item(Number("1950.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1400.0")),
+                Item(Number("1000.0")),
+                Item(Number("1050.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("SEA")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("asia_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("6900.0")),
+                Item(Number("200.0")),
+                Item(Number("1500.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1400.0")),
+                Item(Number("1000.0")),
+                Item(Number("550.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Africa Rainforest")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("sa_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4350.0")),
+                Item(Number("200.0")),
+                Item(Number("1275.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1200.0")),
+                Item(Number("1000.0")),
+                Item(Number("450.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("Africa Southern")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("africa_volume")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("night")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4700.0")),
+                Item(Number("200.0")),
+                Item(Number("700.0")),
+            ])),
+            Property(key: "size", operator: Assign, value: Block([
+                Item(Number("1000.0")),
+                Item(Number("1000.0")),
+                Item(Number("500.0")),
+            ])),
+            Property(key: "fade_distance", operator: Assign, value: Number("100.0")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_01")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_01")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_01_night")),
+            Property(key: "height", operator: Assign, value: Number("0")),
+            Property(key: "fade_distance", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_02")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_02")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_02_night")),
+            Property(key: "height", operator: Assign, value: Number("37")),
+            Property(key: "fade_distance", operator: Assign, value: Number("50")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_03")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_03")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_03_night")),
+            Property(key: "height", operator: Assign, value: Number("87")),
+            Property(key: "fade_distance", operator: Assign, value: Number("63")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_04")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_04")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_04_night")),
+            Property(key: "height", operator: Assign, value: Number("150")),
+            Property(key: "fade_distance", operator: Assign, value: Number("100")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_05")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_05")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_05_night")),
+            Property(key: "height", operator: Assign, value: Number("250")),
+            Property(key: "fade_distance", operator: Assign, value: Number("100")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_06")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_06")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_06_night")),
+            Property(key: "height", operator: Assign, value: Number("350")),
+            Property(key: "fade_distance", operator: Assign, value: Number("100")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_07")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_07")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_07_night")),
+            Property(key: "height", operator: Assign, value: Number("500")),
+            Property(key: "fade_distance", operator: Assign, value: Number("200")),
+        ])),
+        Property(key: "posteffect_height_volume", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("zoom_volume_papermap")),
+            Property(key: "posteffect_values_day", operator: Assign, value: Symbol("zoom_volume_papermap")),
+            Property(key: "posteffect_values_night", operator: Assign, value: Symbol("zoom_volume_papermap")),
+            Property(key: "height", operator: Assign, value: Number("700")),
+            Property(key: "fade_distance", operator: Assign, value: Number("200")),
+        ])),
+    ])),
+])

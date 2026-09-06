@@ -1,0 +1,22 @@
+// Source line 1:  Entries for particle types that attach to buildings in a city
+// Source line 2:  It contains extra info for the particles, e.g. the cut-off values for the optimization
+// Source line 3:  If there is no extra info for a particle type, the default values are used
+// Source line 5: city_building_vfx = {
+// Source line 6:     particle = "particle_name"         # name of the particle type that attaches to a building with the locator
+// Source line 7:                                        # name can be found in .asset files in "gfx/models/buildings/", entity -> particles -> locator_x -> value (e.g. "locator_chimney" = "infrastructure/factory_smoke")
+// Source line 8: 
+// Source line 9:     max_visible = -1                   # maximum visible instances of the particle type; default = -1 - no limit
+// Source line 10:     max_distance = 0                   # maximum distance to the city which to show particles on; default = 0 - no limit
+// Source line 11: }
+(schema_version: 1, entries: [
+    Property(key: "factory_smoke", operator: Assign, value: Block([
+        Property(key: "particle", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        Property(key: "max_visible", operator: Assign, value: Number("150")),
+        Property(key: "max_distance", operator: Assign, value: Number("80")),
+    ])),
+    Property(key: "factory_smoke_medium", operator: Assign, value: Block([
+        Property(key: "particle", operator: Assign, value: Text("infrastructure/factory_smoke_medium")),
+        Property(key: "max_visible", operator: Assign, value: Number("80")),
+        Property(key: "max_distance", operator: Assign, value: Number("100")),
+    ])),
+])

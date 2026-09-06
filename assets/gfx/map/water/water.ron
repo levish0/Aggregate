@@ -1,0 +1,112 @@
+// Source line 11:  Base
+// Source line 12:  Color at low angle
+// Source line 13:  Most visible at high angle, when looking from above
+// Source line 14:  Color faded in the more you zoom out.
+// Source line 15:  How much affect color map has as you zoom out. 1.0 = Nothing
+// Source line 16:  At what camera height the tinting starts
+// Source line 17:  At what camera height the tinting is full
+// Source line 20:  Cubemap related
+// Source line 21:  Amount of reflection from the sky
+// Source line 24:  Amount of reflection when zoomed out
+// Source line 27:  Reflection blurry ness. The higher it is, the more the eflections "ignore" normals more to be less distorted the higher the value is.
+// Source line 29:  Specular highlight settings
+// Source line 30:  Not to high, then it causes bloom spikes.
+// Source line 32:  How much gloss base you have when you zoom out.
+// Source line 33:  Specular intensity
+// Source line 36:  Foam effect
+// Source line 37:  Size of foam, lower value is bigger in size
+// Source line 38:  How much the foam should be distorted
+// Source line 39:  Foam fade on beaches low = no cut of. 1.0 very smooth cut of.
+// Source line 41:  Scale of the mask which generates some randomness to where foam appears.
+// Source line 42:  The speed of the noise moving over the map
+// Source line 45:  Refraction and extra
+// Source line 49:  Lower value, more refractions closer to shore.
+// Source line 50:  Sharpness of refraction mask
+// Source line 53:  Detail level of refractions
+// Source line 67:  Layers
+(schema_version: 1, entries: [
+    Property(key: "WaterColorTexturePath", operator: Assign, value: Text("gfx/map/water/watercolor_rgb_waterspec_a.dds")),
+    Property(key: "AmbientNormalTexturePath", operator: Assign, value: Text("gfx/map/water/ambient_normal.dds")),
+    Property(key: "FlowMapTexturePath", operator: Assign, value: Text("gfx/map/water/flowmap.dds")),
+    Property(key: "FlowNormalTexturePath", operator: Assign, value: Text("gfx/map/water/flow_normal_temporary.dds")),
+    Property(key: "CubeMapTexturePath", operator: Assign, value: Text("gfx/map/water/citrus_orchard_road_puresky_16f.dds")),
+    Property(key: "FoamTexturePath", operator: Assign, value: Text("gfx/map/water/foam.dds")),
+    Property(key: "FoamRampTexturePath", operator: Assign, value: Text("gfx/map/water/foam_ramp.dds")),
+    Property(key: "FoamMapTexturePath", operator: Assign, value: Text("gfx/map/water/foam_map.dds")),
+    Property(key: "FoamNoiseTexturePath", operator: Assign, value: Text("gfx/map/water/foam_noise.dds")),
+    Property(key: "WaterColorShallow", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+        Item(Number("0.55")),
+        Item(Number("0.5")),
+        Item(Number("0.1")),
+    ]))),
+    Property(key: "WaterColorDeep", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+        Item(Number("0.62")),
+        Item(Number("0.9")),
+        Item(Number("0.1")),
+    ]))),
+    Property(key: "WaterColorMapTint", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+        Item(Number("0.58")),
+        Item(Number("0.4")),
+        Item(Number("0.3")),
+    ]))),
+    Property(key: "WaterColorMapTintAlpha", operator: Assign, value: Number("0.800000")),
+    Property(key: "WaterColorMapTintStartHeight", operator: Assign, value: Number("0.000000")),
+    Property(key: "WaterColorMapTintEndHeight", operator: Assign, value: Number("600.000000")),
+    Property(key: "WaterDiffuseMultiplier", operator: Assign, value: Number("1.000000")),
+    Property(key: "WaterCubemapIntensity", operator: Assign, value: Number("0.3500000")),
+    Property(key: "WaterFresnelBias", operator: Assign, value: Number("0.01000")),
+    Property(key: "WaterZoomedOutFresnelBiasOffset", operator: Assign, value: Number("0.0250000")),
+    Property(key: "WaterFresnelPow", operator: Assign, value: Number("4.000000")),
+    Property(key: "WaterZoomedOutFresnelPowOffset", operator: Assign, value: Number("-50.000000")),
+    Property(key: "WaterReflectionFlatten", operator: Assign, value: Number("0.000000")),
+    Property(key: "WaterGlossBase", operator: Assign, value: Number("0.80000")),
+    Property(key: "WaterGlossScale", operator: Assign, value: Number("3.000000")),
+    Property(key: "WaterZoomedOutGlossScaleOffset", operator: Assign, value: Number("0.000000")),
+    Property(key: "WaterSpecular", operator: Assign, value: Number("0.005")),
+    Property(key: "WaterSpecularFactor", operator: Assign, value: Number("0.025")),
+    Property(key: "WaterFoamScale", operator: Assign, value: Number("1.2")),
+    Property(key: "WaterFoamDistortFactor", operator: Assign, value: Number("-0.10000")),
+    Property(key: "WaterFoamShoreMaskDepth", operator: Assign, value: Number("0.000000")),
+    Property(key: "WaterFoamShoreMaskSharpness", operator: Assign, value: Number("0.00000")),
+    Property(key: "WaterFoamNoiseScale", operator: Assign, value: Number("0.060000")),
+    Property(key: "WaterFoamNoiseSpeed", operator: Assign, value: Number("-0.010000")),
+    Property(key: "WaterFoamStrength", operator: Assign, value: Number("2.0")),
+    Property(key: "WaterZoomedInHeight", operator: Assign, value: Number("0.000000")),
+    Property(key: "WaterZoomedOutHeight", operator: Assign, value: Number("10000.000000")),
+    Property(key: "WaterRefractionShoreMaskDepth", operator: Assign, value: Number("0.800000")),
+    Property(key: "WaterRefractionShoreMaskSharpness", operator: Assign, value: Number("0.800000")),
+    Property(key: "WaterRefractionFadeStart", operator: Assign, value: Number("0.000000")),
+    Property(key: "WaterRefractionFadeEnd", operator: Assign, value: Number("150.000000")),
+    Property(key: "WaterRefractionScale", operator: Assign, value: Number("200.000000")),
+    Property(key: "WaterFlowSpeed", operator: Assign, value: Number("0.0850000")),
+    Property(key: "WaterZoomedOutFlowSpeedOffset", operator: Assign, value: Number("0.150000")),
+    Property(key: "WaterFlowNormalScale", operator: Assign, value: Number("0.400000")),
+    Property(key: "WaterFlowNormalFlatten", operator: Assign, value: Number("1.000000")),
+    Property(key: "WaterFadeShoreMaskDepth", operator: Assign, value: Number("0.100000")),
+    Property(key: "WaterFadeShoreMaskSharpness", operator: Assign, value: Number("9.000000")),
+    Property(key: "WaterSeeThroughDensity", operator: Assign, value: Number("0.400000")),
+    Property(key: "WaterSeeThroughDensityAngleOffset", operator: Assign, value: Number("0.40000")),
+    Property(key: "WaterSeeThroughShoreMaskDepth", operator: Assign, value: Number("2.000000")),
+    Property(key: "WaterSeeThroughShoreMaskSharpness", operator: Assign, value: Number("0.150000")),
+    Property(key: "WaterWave1.Scale", operator: Assign, value: Block([
+        Item(Number("0.5000000")),
+        Item(Number("0.5000000")),
+    ])),
+    Property(key: "WaterWave1.Rotation", operator: Assign, value: Number("-0.350000")),
+    Property(key: "WaterWave1.Speed", operator: Assign, value: Number("0.0075000")),
+    Property(key: "WaterWave1.NormalFlatten", operator: Assign, value: Number("1.500000")),
+    Property(key: "WaterWave2.Scale", operator: Assign, value: Block([
+        Item(Number("10.000000")),
+        Item(Number("3.000000")),
+    ])),
+    Property(key: "WaterWave2.Rotation", operator: Assign, value: Number("-1.600000")),
+    Property(key: "WaterWave2.Speed", operator: Assign, value: Number("0.050000")),
+    Property(key: "WaterWave2.NormalFlatten", operator: Assign, value: Number("1.000000")),
+    Property(key: "WaterWave3.Scale", operator: Assign, value: Block([
+        Item(Number("6.000000")),
+        Item(Number("6.000000")),
+    ])),
+    Property(key: "WaterWave3.Rotation", operator: Assign, value: Number("1.725000")),
+    Property(key: "WaterWave3.Speed", operator: Assign, value: Number("0.020000")),
+    Property(key: "WaterWave3.NormalFlatten", operator: Assign, value: Number("1.000000")),
+])

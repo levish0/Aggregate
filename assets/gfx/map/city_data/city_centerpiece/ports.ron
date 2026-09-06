@@ -1,0 +1,3529 @@
+// Source line 12:  Empty
+// Source line 13:  1 port
+// Source line 14:  1 shipyard
+// Source line 15:  1 wharf
+// Source line 17:  2 wharves
+// Source line 18:  3 wharves
+// Source line 19:  1 port 1 wharf
+// Source line 20:  2 wharves 1 port
+// Source line 21:  2 ports
+// Source line 22:  2 ports 1 wharf
+// Source line 23:  3 ports
+// Source line 24:  1 shipyard 1 wharf
+// Source line 25:  2 wharves 1 shipyard
+// Source line 26:  1 port 1 shipyard
+// Source line 27:  1 port 1 shipyard 1 wharf
+// Source line 28:  2 ports 1 shipyard
+// Source line 29:  2 shipyards
+// Source line 30:  2 shipyards 1 wharf
+// Source line 31:  2 shipyards 1 port
+// Source line 32:  3 shipyards
+// Source line 36:  A bigger center entity that attaches 3 entities
+// Source line 39:  A smaller center entity that attaches 2 entities
+// Source line 77:  Empty
+// Source line 78:  1 port
+// Source line 79:  1 shipyard
+// Source line 80:  1 wharf
+// Source line 82:  2 wharves
+// Source line 83:  3 wharves
+// Source line 84:  1 port 1 wharf
+// Source line 85:  2 wharves 1 port
+// Source line 86:  2 ports
+// Source line 87:  2 ports 1 wharf
+// Source line 88:  3 ports
+// Source line 89:  1 shipyard 1 wharf
+// Source line 90:  2 wharves 1 shipyard
+// Source line 91:  1 port 1 shipyard
+// Source line 92:  1 port 1 shipyard 1 wharf
+// Source line 93:  2 ports 1 shipyard
+// Source line 94:  2 shipyards 1 wharf
+// Source line 95:  2 shipyards 1 port
+// Source line 96:  3 shipyards
+// Source line 100:  A bigger center entity that attaches 3 entities
+// Source line 103:  A smaller center entity that attaches 2 entities
+// Source line 140:  Empty
+// Source line 141:  1 port
+// Source line 142:  1 shipyard
+// Source line 143:  1 wharf
+// Source line 145:  2 wharves
+// Source line 146:  3 wharves
+// Source line 147:  1 port 1 wharf
+// Source line 148:  2 wharves 1 port
+// Source line 149:  2 ports
+// Source line 150:  2 ports 1 wharf
+// Source line 151:  3 ports
+// Source line 152:  1 shipyard 1 wharf
+// Source line 153:  2 wharves 1 shipyard
+// Source line 154:  1 port 1 shipyard
+// Source line 155:  1 port 1 shipyard 1 wharf
+// Source line 156:  2 ports 1 shipyard
+// Source line 157:  2 shipyards 1 wharf
+// Source line 158:  2 shipyards 1 port
+// Source line 159:  3 shipyards
+// Source line 163:  A bigger center entity that attaches 3 entities
+// Source line 166:  A smaller center entity that attaches 2 entities
+// Source line 199:  Empty
+// Source line 256:  Empty
+// Source line 257:  1 port
+// Source line 258:  1 shipyard
+// Source line 259:  1 wharf
+// Source line 261:  2 wharves
+// Source line 262:  3 wharves
+// Source line 263:  1 port 1 wharf
+// Source line 264:  2 wharves 1 port
+// Source line 265:  2 ports
+// Source line 266:  2 ports 1 wharf
+// Source line 267:  3 ports
+// Source line 268:  1 shipyard 1 wharf
+// Source line 269:  2 wharves 1 shipyard
+// Source line 270:  1 port 1 shipyard
+// Source line 271:  1 port 1 shipyard 1 wharf
+// Source line 272:  2 ports 1 shipyard
+// Source line 273:  2 shipyards 1 wharf
+// Source line 274:  2 shipyards 1 port
+// Source line 275:  3 shipyards
+// Source line 279:  A bigger center entity that attaches 3 entities
+// Source line 282:  A smaller center entity that attaches 2 entities
+// Source line 308: ########################################################################################################################################################################
+// Source line 309: ########################################################### 		WORLD MARKET 			#############################################################################
+// Source line 310: ########################################################################################################################################################################
+// Source line 332:  Empty
+// Source line 333:  1 port
+// Source line 334:  1 shipyard
+// Source line 335:  1 wharf
+// Source line 337:  2 wharves
+// Source line 338:  3 wharves
+// Source line 339:  1 port 1 wharf
+// Source line 340:  2 wharves 1 port
+// Source line 341:  2 ports
+// Source line 342:  2 ports 1 wharf
+// Source line 343:  3 ports
+// Source line 344:  1 shipyard 1 wharf
+// Source line 345:  2 wharves 1 shipyard
+// Source line 346:  1 port 1 shipyard
+// Source line 347:  1 port 1 shipyard 1 wharf
+// Source line 348:  2 ports 1 shipyard
+// Source line 349:  2 shipyards
+// Source line 350:  2 shipyards 1 wharf
+// Source line 351:  2 shipyards 1 port
+// Source line 352:  3 shipyards
+// Source line 401:  Empty
+// Source line 402:  1 port
+// Source line 403:  1 shipyard
+// Source line 404:  1 wharf
+// Source line 406:  2 wharves
+// Source line 407:  3 wharves
+// Source line 408:  1 port 1 wharf
+// Source line 409:  2 wharves 1 port
+// Source line 410:  2 ports
+// Source line 411:  2 ports 1 wharf
+// Source line 412:  3 ports
+// Source line 413:  1 shipyard 1 wharf
+// Source line 414:  2 wharves 1 shipyard
+// Source line 415:  1 port 1 shipyard
+// Source line 416:  1 port 1 shipyard 1 wharf
+// Source line 417:  2 ports 1 shipyard
+// Source line 418:  2 shipyards 1 wharf
+// Source line 419:  2 shipyards 1 port
+// Source line 420:  3 shipyards
+// Source line 468:  Empty
+// Source line 469:  1 port
+// Source line 470:  1 shipyard
+// Source line 471:  1 wharf
+// Source line 473:  2 wharves
+// Source line 474:  3 wharves
+// Source line 475:  1 port 1 wharf
+// Source line 476:  2 wharves 1 port
+// Source line 477:  2 ports
+// Source line 478:  2 ports 1 wharf
+// Source line 479:  3 ports
+// Source line 480:  1 shipyard 1 wharf
+// Source line 481:  2 wharves 1 shipyard
+// Source line 482:  1 port 1 shipyard
+// Source line 483:  1 port 1 shipyard 1 wharf
+// Source line 484:  2 ports 1 shipyard
+// Source line 485:  2 shipyards 1 wharf
+// Source line 486:  2 shipyards 1 port
+// Source line 487:  3 shipyards
+// Source line 531:  Empty
+// Source line 600:  Empty
+// Source line 601:  1 port
+// Source line 602:  1 shipyard
+// Source line 603:  1 wharf
+// Source line 605:  2 wharves
+// Source line 606:  3 wharves
+// Source line 607:  1 port 1 wharf
+// Source line 608:  2 wharves 1 port
+// Source line 609:  2 ports
+// Source line 610:  2 ports 1 wharf
+// Source line 611:  3 ports
+// Source line 612:  1 shipyard 1 wharf
+// Source line 613:  2 wharves 1 shipyard
+// Source line 614:  1 port 1 shipyard
+// Source line 615:  1 port 1 shipyard 1 wharf
+// Source line 616:  2 ports 1 shipyard
+// Source line 617:  2 shipyards 1 wharf
+// Source line 618:  2 shipyards 1 port
+// Source line 619:  3 shipyards
+(schema_version: 1, entries: [
+    Property(key: "african_port_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_port")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("1")),
+            Item(Number("1")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-2.0")),
+                Item(Number("0")),
+                Item(Number("-1.642")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-1.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.0")),
+                Item(Number("0")),
+                Item(Number("-1.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_s")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_centerpiece_01_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_centerpiece_02_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("___")),
+                    Item(Symbol("_f_")),
+                    Item(Symbol("_p_")),
+                    Item(Symbol("_s_")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("s_s")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_s")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_port_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_port")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_port")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("1")),
+            Item(Number("1")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.7")),
+                Item(Number("0")),
+                Item(Number("-0.56")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-0.56")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.7")),
+                Item(Number("0")),
+                Item(Number("-0.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_centerpiece_01_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_centerpiece_02_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("___")),
+                    Item(Symbol("_f_")),
+                    Item(Symbol("_p_")),
+                    Item(Symbol("_s_")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_port_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_port")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("1")),
+            Item(Number("1")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.7")),
+                Item(Number("0")),
+                Item(Number("-0.56")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-0.56")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.7")),
+                Item(Number("0")),
+                Item(Number("-0.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_port_centerpiece_01_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_port_centerpiece_02_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("___")),
+                    Item(Symbol("_f_")),
+                    Item(Symbol("_p_")),
+                    Item(Symbol("_s_")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_port_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_port")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("1")),
+            Item(Number("1")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_port")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("000")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("001")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("002")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("003")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("010")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("011")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("012")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("020")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("021")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("030")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("100")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("101")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("102")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("110")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("111")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("120")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("200")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("201")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("210")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("300")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("000")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("001")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_2f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("002")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_3f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("003")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_1d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("010")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_1d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("011")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_1d_2f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("012")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_2d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("020")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_2d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("021")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_3d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("030")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("100")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_0d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("101")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_0d_2f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("102")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_1d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("110")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_1d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("111")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_2d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("120")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_2s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("200")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_2s_0d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("201")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_2s_1d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("210")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_3s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("300")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_port_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_port")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("1")),
+            Item(Number("1")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.7")),
+                Item(Number("0")),
+                Item(Number("-1.54")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-1.54")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.7")),
+                Item(Number("0")),
+                Item(Number("-1.54")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_centerpiece_01_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_centerpiece_02_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("___")),
+                    Item(Symbol("_f_")),
+                    Item(Symbol("_p_")),
+                    Item(Symbol("_s_")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "african_worldmarket_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_port")),
+        Property(key: "priority", operator: Assign, value: Number("20")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "is_world_market_hub", operator: Assign, value: Boolean(true)),
+                Property(key: "num_world_market_hub_trade_center_levels", operator: GreaterThanOrEqual, value: Number("5")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_s")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("generic_worldmarket_01_entity")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("s_s")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_s")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_worldmarket_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_port")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_port")),
+        Property(key: "priority", operator: Assign, value: Number("20")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "is_world_market_hub", operator: Assign, value: Boolean(true)),
+                Property(key: "num_world_market_hub_trade_center_levels", operator: GreaterThanOrEqual, value: Number("5")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("generic_worldmarket_01_entity")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_worldmarket_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_port")),
+        Property(key: "priority", operator: Assign, value: Number("20")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "is_world_market_hub", operator: Assign, value: Boolean(true)),
+                Property(key: "num_world_market_hub_trade_center_levels", operator: GreaterThanOrEqual, value: Number("5")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.0")),
+                Item(Number("0")),
+                Item(Number("0.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.0")),
+                Item(Number("0")),
+                Item(Number("0.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("generic_worldmarket_01_entity")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_dockyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_urban_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_worldmarket_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_port")),
+        Property(key: "priority", operator: Assign, value: Number("20")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "is_world_market_hub", operator: Assign, value: Boolean(true)),
+                Property(key: "num_world_market_hub_trade_center_levels", operator: GreaterThanOrEqual, value: Number("5")),
+            ])),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_port")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("000")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("001")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("002")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("003")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("010")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("011")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("012")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("020")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("021")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("030")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("100")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("101")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("102")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("110")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("111")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("120")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("200")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("201")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("210")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Number("300")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("generic_worldmarket_01_entity")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("000")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("001")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_2f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("002")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_0d_3f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("003")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_1d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("010")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_1d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("011")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_1d_2f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("012")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_2d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("020")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_2d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("021")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_0s_3d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("030")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("100")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_0d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("101")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_0d_2f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("102")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_1d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("110")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_1d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("111")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_1s_2d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("120")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_2s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("200")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_2s_0d_1f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("201")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_2s_1d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("210")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_port_01_3s_0d_0f_entity")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Number("300")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_worldmarket_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_port")),
+        Property(key: "priority", operator: Assign, value: Number("20")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "is_world_market_hub", operator: Assign, value: Boolean(true)),
+                Property(key: "num_world_market_hub_trade_center_levels", operator: GreaterThanOrEqual, value: Number("5")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.0")),
+                Item(Number("0")),
+                Item(Number("-0.50")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "composition_group", operator: Assign, value: Block([
+            Property(key: "building_types", operator: Assign, value: Block([
+                Item(Symbol("building_port")),
+                Item(Symbol("building_shipyard")),
+                Item(Symbol("building_fishing_wharf")),
+            ])),
+            Property(key: "levels", operator: Assign, value: Block([
+                Item(Number("1")),
+                Item(Number("4")),
+                Item(Number("9")),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("___")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_p_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_s_")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("_f_")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("f_f")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fff")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("0")),
+                    Item(Number("3")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fpf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("0")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("p_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("0")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ppp")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("3")),
+                    Item(Number("0")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_f")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("fsf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("1")),
+                    Item(Number("2")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("s_p")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("spf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("1")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("psp")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("2")),
+                    Item(Number("1")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("ssf")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("2")),
+                    Item(Number("1")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sps")),
+                Property(key: "ratios", operator: Assign, value: Block([
+                    Item(Number("1")),
+                    Item(Number("2")),
+                    Item(Number("0")),
+                ])),
+            ])),
+            Property(key: "composition", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Symbol("sss")),
+                Property(key: "levels", operator: Assign, value: Block([
+                    Item(Number("0")),
+                    Item(Number("3")),
+                    Item(Number("0")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("generic_worldmarket_01_entity")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_left")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_f")),
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("s_f")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("fsf")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_center")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_p_")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("sps")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_s_")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("psp")),
+                    Item(Symbol("ssf")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("_f_")),
+                    Item(Symbol("fff")),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("pos_right")),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_docks_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_port")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("p_p")),
+                    Item(Symbol("ppp")),
+                    Item(Symbol("s_p")),
+                    Item(Symbol("psp")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_shipyard_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_shipyard")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("sps")),
+                    Item(Symbol("sss")),
+                ])),
+            ])),
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_port_fishingwharf_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_fishing_wharf")),
+                Property(key: "compositions", operator: Assign, value: Block([
+                    Item(Symbol("f_f")),
+                    Item(Symbol("fff")),
+                    Item(Symbol("p_f")),
+                    Item(Symbol("fpf")),
+                    Item(Symbol("ppf")),
+                    Item(Symbol("s_f")),
+                    Item(Symbol("fsf")),
+                    Item(Symbol("spf")),
+                    Item(Symbol("ssf")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

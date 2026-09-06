@@ -1,0 +1,11 @@
+(schema_version: 1, entries: [
+    Property(key: "figurehead_eagle", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("figurehead_eagle_entity")),
+    ])),
+    Property(key: "figurehead_poseidon", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("figurehead_poseidon_entity")),
+    ])),
+    Property(key: "figurehead_shield", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("figurehead_shield_entity")),
+    ])),
+])

@@ -1,0 +1,63 @@
+(schema_version: 1, entries: [
+    Property(key: "military_train_01", operator: Assign, value: Block([
+        Property(key: "valid_connections", operator: Assign, value: Block([
+            Item(Symbol("railway")),
+        ])),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "artillery", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "market", operator: Assign, value: Block([
+                        Property(key: "mg:artillery", operator: Assign, value: Block([Property(key: "market_goods_sell_orders", operator: GreaterThan, value: Number("5"))])),
+                    ])),
+                ])),
+            ])),
+            Property(key: "more_artillery", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "market", operator: Assign, value: Block([
+                        Property(key: "mg:artillery", operator: Assign, value: Block([Property(key: "market_goods_sell_orders", operator: GreaterThan, value: Number("20"))])),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "front_turret_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("artillery")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_armoredcart_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.4")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "integer_range", operator: Assign, value: Block([
+                        Property(key: "min", operator: Assign, value: Number("0")),
+                        Property(key: "max", operator: Assign, value: Number("1")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "military_locomotive_01", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_armoredlocomotive_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("2")),
+            ])),
+            Property(key: "infantry_wagon_01", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_infantrycart_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.4")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_deploy_count")),
+                ])),
+            ])),
+            Property(key: "artillery_transport_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("more_artillery")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_transport_railroad_artillery_shrapnel_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.4")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_artillery_deploy_count")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

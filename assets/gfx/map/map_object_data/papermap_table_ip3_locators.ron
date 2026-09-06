@@ -1,0 +1,170 @@
+(schema_version: 1, entries: [
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("ip3_1")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("1500.000000")),
+                    Item(Number("70.000000")),
+                    Item(Number("5000.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("ip3_2")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("7300.000000")),
+                    Item(Number("75.000000")),
+                    Item(Number("4839.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("ip3_3")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("1024.000000")),
+                    Item(Number("75.000000")),
+                    Item(Number("-1200.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("ip3_4")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4976.000000")),
+                    Item(Number("75.000000")),
+                    Item(Number("-1300.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                    Item(Number("100.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("papermap_table_bottom_ip3_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("-139.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("papermap_table_top_ip3_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("papermap_layer")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("3754.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

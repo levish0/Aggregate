@@ -75,10 +75,10 @@ fn trailing_json_and_unsupported_schema_are_rejected() {
     let error = parse_scenario(&format!("{FOUNDATION} {{}}")).unwrap_err();
     assert_eq!(error.field_path, "$");
     let mut scenario = fixture();
-    scenario.schema_version = 2;
+    scenario.schema_version = 999;
     let error = validate_scenario(&scenario).unwrap_err();
     assert_eq!(error.field_path, "schema_version");
-    assert!(error.message.contains("expected 1"));
+    assert!(error.message.contains("expected 2"));
 }
 
 #[test]
@@ -108,7 +108,7 @@ fn duplicate_ids_and_blank_names_are_rejected_at_the_bad_entry() {
 #[test]
 fn unknown_state_and_recipe_references_are_rejected() {
     let mut scenario = fixture();
-    scenario.initial_state.population_groups[0].province = ProvinceId::from("missing");
+    scenario.initial_state.population_groups[0].province = ProvinceId::from(Uuid::from_u128(999));
     assert_eq!(
         validate_scenario(&scenario).unwrap_err().field_path,
         "initial_state.population_groups[0].province"

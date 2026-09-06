@@ -1,0 +1,14 @@
+[package]
+name = "aggregate-map-view"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+bevy.workspace = true
+aggregate-geography.workspace = true
+aggregate-world.workspace = true
+bytemuck.workspace = true
+
+[lints]
+workspace = true

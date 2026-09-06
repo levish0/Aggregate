@@ -1,0 +1,27 @@
+(schema_version: 1, entries: [
+    Property(key: "zeppelin_01", operator: Assign, value: Block([
+        Property(key: "entities", operator: Assign, value: Block([
+            Property(key: "skin_1", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("zeppelin_02_entity")),
+                Property(key: "possible", operator: Assign, value: Block([])),
+                Property(key: "weight", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("1")),
+                ])),
+            ])),
+            Property(key: "skin_2", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("zeppelin_02_alt01_entity")),
+                Property(key: "possible", operator: Assign, value: Block([])),
+                Property(key: "weight", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("1")),
+                ])),
+            ])),
+        ])),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "has_technology_researched", operator: Assign, value: Symbol("zeppelins")),
+        ])),
+        Property(key: "entity_length", operator: Assign, value: Number("3.0")),
+        Property(key: "speed", operator: Assign, value: Number("0.5")),
+        Property(key: "max_count", operator: Assign, value: Number("100")),
+        Property(key: "height", operator: Assign, value: Number("2.0")),
+    ])),
+])

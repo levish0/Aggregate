@@ -1,0 +1,115 @@
+// Source line 1: diorama_entity_example = {
+// Source line 2: 	# The asset to show
+// Source line 3: 	entity = "military_barricade_irregular_01_entity"
+// Source line 4: 
+// Source line 5: 	# Group is used in diorama script to determine which entities to pick the entity from for each diorama locator
+// Source line 6: 	group = "barricade"
+// Source line 7: 
+// Source line 8: 	# Trigger to check if the current entity is valid to show in the diorama
+// Source line 9: 	# root - country of the unit
+// Source line 10: 	# scope:country - country of the unit (same as root)
+// Source line 11: 	# scope:culture - culture of the unit
+// Source line 12: 	# scope:combat_unit_type - combat unit type
+// Source line 13: 	trigger = {
+// Source line 14: 		scope:country = {
+// Source line 15: 			has_technology_researched = rifling
+// Source line 16: 		}
+// Source line 17: 		scope:culture ?= {
+// Source line 18: 			has_culture_graphics = european
+// Source line 19: 		}
+// Source line 20: 		scope:combat_unit_type ?= unit_type:combat_unit_type_irregular_infantry
+// Source line 21: 	}
+// Source line 22: }
+// Source line 26: ################################################################
+// Source line 27: ####					GENERAL UNITS						#####
+// Source line 28: ################################################################
+// Source line 30: ################################################
+// Source line 31: ##       			Carlists!	     		  ###
+// Source line 32: ################################################
+// Source line 34:  
+// Source line 44: ################################################
+// Source line 45: ##       			European     			  ###
+// Source line 46: ################################################
+// Source line 70: ################################################
+// Source line 71: ##       			African     			  ###
+// Source line 72: ################################################
+// Source line 87: ################################################
+// Source line 88: ##       			Arabic     				  ###
+// Source line 89: ################################################
+// Source line 105: ################################################
+// Source line 106: ##       			East Asian     			  ###
+// Source line 107: ################################################
+// Source line 123: ################################################
+// Source line 124: ##       			South Asian     		  ###
+// Source line 125: ################################################
+(schema_version: 1, entries: [
+    Property(key: "military_infantry_carlist_general_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_carlists_general_entity")),
+        Property(key: "group", operator: Assign, value: Text("general")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:country", operator: Assign, value: Block([
+                Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+            ])),
+            Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics")),
+        ])),
+    ])),
+    Property(key: "military_infantry_european_general_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_european_general_entity")),
+        Property(key: "group", operator: Assign, value: Text("general")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Exists, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+            ])),
+            Property(key: "scope:country", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "NOT", operator: Assign, value: Block([
+                        Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+                    ])),
+                    Property(key: "AND", operator: Assign, value: Block([
+                        Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+                        Property(key: "NOT", operator: Assign, value: Block([Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics"))])),
+                    ])),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_infantry_african_general_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_african_general_entity")),
+        Property(key: "group", operator: Assign, value: Text("general")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Exists, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_infantry_arabic_general_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_general_entity")),
+        Property(key: "group", operator: Assign, value: Text("general")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Exists, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Exists, value: Symbol("unit_type:combat_unit_type_irregular_infantry")),
+        ])),
+    ])),
+    Property(key: "military_infantry_eastasian_general_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_general_entity")),
+        Property(key: "group", operator: Assign, value: Text("general")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Exists, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Exists, value: Symbol("unit_type:combat_unit_type_irregular_infantry")),
+        ])),
+    ])),
+    Property(key: "military_infantry_southasian_general_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_general_entity")),
+        Property(key: "group", operator: Assign, value: Text("general")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Exists, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Exists, value: Symbol("unit_type:combat_unit_type_irregular_infantry")),
+        ])),
+    ])),
+])

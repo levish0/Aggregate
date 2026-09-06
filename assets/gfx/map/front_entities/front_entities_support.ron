@@ -1,0 +1,256 @@
+// Source line 1: diorama_entity_example = {
+// Source line 2: 	# The asset to show
+// Source line 3: 	entity = "military_barricade_irregular_01_entity"
+// Source line 4: 
+// Source line 5: 	# Group is used in diorama script to determine which entities to pick the entity from for each diorama locator
+// Source line 6: 	group = "barricade"
+// Source line 7: 
+// Source line 8: 	# Trigger to check if the current entity is valid to show in the diorama
+// Source line 9: 	# root - country of the unit
+// Source line 10: 	# scope:country - country of the unit (same as root)
+// Source line 11: 	# scope:culture - culture of the unit
+// Source line 12: 	# scope:combat_unit_type - combat unit type
+// Source line 13: 	trigger = {
+// Source line 14: 		scope:country = {
+// Source line 15: 			has_technology_researched = rifling
+// Source line 16: 		}
+// Source line 17: 		scope:culture = {
+// Source line 18: 			has_culture_graphics = european
+// Source line 19: 		}
+// Source line 20: 		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+// Source line 21: 	}
+// Source line 22: }
+// Source line 26: ################################################################
+// Source line 27: ####						MISC ASSETS						#####
+// Source line 28: ################################################################
+// Source line 30: ## Aerial Recon ###
+// Source line 46: ## Flamethrower ###
+// Source line 166: ## Machinegunner ###
+// Source line 286: ## Chemical Warfare ###
+// Source line 318: ## Medic ###
+(schema_version: 1, entries: [
+    Property(key: "generic_aerial_bleriotxi_01_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("generic_aerial_bleriotxi_01_entity")),
+        Property(key: "group", operator: Assign, value: Text("aerialrecon")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_aerial_recon")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_european_flamethrower_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_european_flamethrower_entity")),
+        Property(key: "group", operator: Assign, value: Text("flamethrower")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("french")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("brazilian")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("balkan")),
+                ])),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_flamethrowers")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_african_flamethrower_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_african_flamethrower_entity")),
+        Property(key: "group", operator: Assign, value: Text("flamethrower")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_flamethrowers")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_arabic_flamethrower_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_arabic_flamethrower_entity")),
+        Property(key: "group", operator: Assign, value: Text("flamethrower")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_flamethrowers")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_eastasian_flamethrower_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_eastasian_flamethrower_entity")),
+        Property(key: "group", operator: Assign, value: Text("flamethrower")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_flamethrowers")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_southasian_flamethrower_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_southasian_flamethrower_entity")),
+        Property(key: "group", operator: Assign, value: Text("flamethrower")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_flamethrowers")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_nativeamerican_flamethrower_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_nativeamerican_flamethrower_entity")),
+        Property(key: "group", operator: Assign, value: Text("flamethrower")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("decentralised_americas")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("polynesian")),
+                ])),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_flamethrowers")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_european_machinegunner_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_european_machinegunner_entity")),
+        Property(key: "group", operator: Assign, value: Text("machinegunner")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(false)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("french")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("brazilian")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("balkan")),
+                ])),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_machinegunners")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_african_machinegunner_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_african_machinegunner_entity")),
+        Property(key: "group", operator: Assign, value: Text("machinegunner")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(false)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_machinegunners")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_arabic_machinegunner_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_arabic_machinegunner_entity")),
+        Property(key: "group", operator: Assign, value: Text("machinegunner")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(false)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_machinegunners")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_eastasian_machinegunner_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_eastasian_machinegunner_entity")),
+        Property(key: "group", operator: Assign, value: Text("machinegunner")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(false)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_machinegunners")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_southasian_machinegunner_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_southasian_machinegunner_entity")),
+        Property(key: "group", operator: Assign, value: Text("machinegunner")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(false)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_machinegunners")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_nativeamerican_machinegunner_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_nativeamerican_machinegunner_entity")),
+        Property(key: "group", operator: Assign, value: Text("machinegunner")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(false)),
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("decentralised_americas")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("polynesian")),
+                ])),
+            ])),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_machinegunners")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_chemical_warfare_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_chemical_warfare_entity")),
+        Property(key: "group", operator: Assign, value: Text("chemical_warfare")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_chemical_weapons")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_support_chemical_warfare_cloud_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_support_chemical_warfare_cloud_entity")),
+        Property(key: "group", operator: Assign, value: Text("chemical_warfare_cloud")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:attacker", operator: Assign, value: Boolean(true)),
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_chemical_weapons")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_medical_fieldhospitals_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_medical_fieldhospitals_entity")),
+        Property(key: "group", operator: Assign, value: Text("fieldhospital")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:military_formation", operator: Assign, value: Block([
+                Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_field_hospitals")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_medical_firstaid_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_medical_firstaid_entity")),
+        Property(key: "group", operator: Assign, value: Text("firstaid")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "OR", operator: Assign, value: Block([
+                Property(key: "scope:military_formation", operator: Assign, value: Block([
+                    Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_field_hospitals")),
+                ])),
+                Property(key: "scope:military_formation", operator: Assign, value: Block([
+                    Property(key: "has_mobilization_option", operator: Assign, value: Symbol("mobilization_option:mobilization_option_first_aid")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

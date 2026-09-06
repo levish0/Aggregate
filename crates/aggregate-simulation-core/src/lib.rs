@@ -13,8 +13,8 @@ pub use clock::SimulationClock;
 pub use command::{RecordedCommand, SimulationCommand};
 pub use error::SimulationError;
 pub use report::{
-    CommandOutcome, DayReport, FacilityDayReport, GoodsFlow, GoodsFlowCause, ProvinceDayReport,
-    SimulationEvent,
+    CommandOutcome, ConstructionDayReport, DayReport, FacilityDayReport, GoodsFlow, GoodsFlowCause,
+    ProvinceDayReport, SimulationEvent,
 };
 pub use save::{RULESET_VERSION, SAVE_SCHEMA_VERSION};
 pub use schedule::SimulationPhase;

@@ -1,0 +1,132 @@
+// Source line 1: 
+// Source line 2:  Ship viewer environment settings
+// Source line 3: 
+// Source line 5: ####### Light ########
+// Source line 6:  Sun
+// Source line 9: 	+Right/-Left	Height  -Front/+Back
+// Source line 11:  Offset overrides
+// Source line 13: shadow_direction_offset = { 0.0 0.0 0.0 }
+// Source line 16:  Shadow sharpness
+// Source line 19:  Cubemap
+// Source line 24: ####### Postprocessing ########
+// Source line 25:  Color settings	(Keep neutral, use posteffect volumes instead)
+// Source line 26:  Hue
+// Source line 27:  Saturation
+// Source line 28:  Brightness value
+// Source line 29:  Color control
+// Source line 30:  Can be used for color/value control (levels)
+// Source line 31:  Can be used for color/value control (levels)
+// Source line 33:  Tonemap reference (Choose one)
+// Source line 34: tonemap_function = "Reinhard"
+// Source line 35: tonemap_function = "Filmic_Hable"			# Old Hable filmic formula
+// Source line 36: tonemap_function = "FilmicACES_Narkowicz"	# Seems to have the most fitting balance
+// Source line 37: tonemap_function = "FilmicACES_Hill"		# Similar to Narkowicz, whites are less saturated and brighter
+// Source line 38:  Custom tonemap, Uses curve variables below
+// Source line 50:  Only used with fixed exposure
+// Source line 52:  Fog
+// Source line 53:  (Overwritten by post posteffect_volumes.txt)
+// Source line 54:  (Overwritten by post posteffect_volumes.txt)
+// Source line 55:  (Overwritten by post posteffect_volumes.txt)
+// Source line 56:  (Overwritten by post posteffect_volumes.txt)
+// Source line 59: ####### Graphics ########
+// Source line 60:  Bloom
+// Source line 62:  Not used
+// Source line 65:  Map global SSAO settings
+// Source line 69:  Settings
+// Source line 70:  Sample iterations
+// Source line 71:  Radius for sample point, less means tighter samples and crisper edges
+// Source line 72:  Culling distance
+// Source line 73:  Depth distance for sample point
+// Source line 74:  Culling distance, should be based on scale of the world
+// Source line 76:  Shifts the final results towards less overall occlusion
+// Source line 77:  Bias to adjust occlusion errors on final result
+// Source line 78:  Strength/Hardness of the occlusion
+// Source line 79:  Final Blend amount (practically opacity)
+// Source line 81:  Blur
+// Source line 83:  Blur of the noise
+// Source line 84:  Does nothing when above 0
+// Source line 85:  Results as a sharpening of occluders edgs
+(schema_version: 1, entries: [
+    Property(key: "sun_color", operator: Assign, value: Block([
+        Item(Number("1.02")),
+        Item(Number("0.98")),
+        Item(Number("0.96")),
+    ])),
+    Property(key: "sun_intensity", operator: Assign, value: Number("5.0")),
+    Property(key: "sun_direction", operator: Assign, value: Block([
+        Item(Number("-0.5")),
+        Item(Number("0.55")),
+        Item(Number("0.9")),
+    ])),
+    Property(key: "shadow_direction_offset", operator: Assign, value: Block([
+        Item(Number("-0.48")),
+        Item(Number("0.0")),
+        Item(Number("-1.45")),
+    ])),
+    Property(key: "water_sun_direction_offset", operator: Assign, value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ])),
+    Property(key: "shadowmap_kernelscale", operator: Assign, value: Number("1.0")),
+    Property(key: "cubemap_intensity", operator: Assign, value: Number("2.5")),
+    Property(key: "cubemap", operator: Assign, value: Text("gfx/map/environment/cubemap_blackbottom.dds")),
+    Property(key: "cubemap_y_rotation", operator: Assign, value: Number("260")),
+    Property(key: "hue_offset", operator: Assign, value: Number("0.0")),
+    Property(key: "saturation_scale", operator: Assign, value: Number("1.0")),
+    Property(key: "value_scale", operator: Assign, value: Number("1.0")),
+    Property(key: "colorbalance", operator: Assign, value: Block([
+        Item(Number("1.0")),
+        Item(Number("1.0")),
+        Item(Number("1.0")),
+    ])),
+    Property(key: "levels_min", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+    ]))),
+    Property(key: "levels_max", operator: Assign, value: Tagged(tag: "hsv", value: Block([
+        Item(Number("0.0")),
+        Item(Number("0.0")),
+        Item(Number("1.0")),
+    ]))),
+    Property(key: "tonemap_function", operator: Assign, value: Text("Uncharted")),
+    Property(key: "tonemap_curve", operator: Assign, value: Block([
+        Property(key: "shoulder_strength", operator: Assign, value: Number("0.318")),
+        Property(key: "linear_strength", operator: Assign, value: Number("0.145")),
+        Property(key: "linear_angle", operator: Assign, value: Number("0.148")),
+        Property(key: "toe_strength", operator: Assign, value: Number("0.423")),
+        Property(key: "toe_numerator", operator: Assign, value: Number("0.025")),
+        Property(key: "toe_denominator", operator: Assign, value: Number("0.288")),
+        Property(key: "linear_white", operator: Assign, value: Number("4.20")),
+    ])),
+    Property(key: "exposure_function", operator: Assign, value: Text("FixedExposure")),
+    Property(key: "exposure", operator: Assign, value: Number("1.0")),
+    Property(key: "fog_color", operator: Assign, value: Block([
+        Item(Number("0.75")),
+        Item(Number("0.75")),
+        Item(Number("0.75")),
+    ])),
+    Property(key: "fog_begin", operator: Assign, value: Number("0.0")),
+    Property(key: "fog_end", operator: Assign, value: Number("0.0")),
+    Property(key: "fog_max", operator: Assign, value: Number("0.0")),
+    Property(key: "bloom_strength", operator: Assign, value: Number("0.25")),
+    Property(key: "bloom_steepness", operator: Assign, value: Number("1.0")),
+    Property(key: "bloom_threshold", operator: Assign, value: Number("1.0")),
+    Property(key: "ssao", operator: Assign, value: Block([
+        Property(key: "enabled", operator: Assign, value: Boolean(true)),
+        Property(key: "samples", operator: Assign, value: Number("8")),
+        Property(key: "radius", operator: Assign, value: Number("0.11")),
+        Property(key: "max_radius", operator: Assign, value: Number("1.0")),
+        Property(key: "depth_distance", operator: Assign, value: Number("0.01")),
+        Property(key: "max_depth", operator: Assign, value: Number("0.8")),
+        Property(key: "apply_scale", operator: Assign, value: Number("1.00")),
+        Property(key: "apply_bias", operator: Assign, value: Number("0.63")),
+        Property(key: "apply_power", operator: Assign, value: Number("50.0")),
+        Property(key: "blend_factor", operator: Assign, value: Number("0.9")),
+        Property(key: "blur_enabled", operator: Assign, value: Boolean(true)),
+        Property(key: "blur_width", operator: Assign, value: Number("5.0")),
+        Property(key: "blur_scale", operator: Assign, value: Number("1.0")),
+        Property(key: "blur_depth_power", operator: Assign, value: Number("1.0")),
+    ])),
+])

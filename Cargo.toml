@@ -19,14 +19,19 @@ module_inception = "allow"
 # Internal crates
 aggregate-localization = { path = "crates/aggregate-localization" }
 aggregate-ui = { path = "crates/aggregate-ui" }
+aggregate-asset-data = { path = "crates/aggregate-asset-data" }
+aggregate-geography = { path = "crates/aggregate-geography" }
+aggregate-map-view = { path = "crates/aggregate-map-view" }
 aggregate-world = { path = "crates/aggregate-world" }
 aggregate-scenario = { path = "crates/aggregate-scenario" }
 aggregate-economy = { path = "crates/aggregate-economy" }
 aggregate-simulation-core = { path = "crates/aggregate-simulation-core" }
 
 # External dependencies
-# Native 2D rendering and UI. Add 3D features when the first 3D consumer exists.
-bevy = { version = "0.19.1", default-features = false, features = ["2d", "ui"] }
+# Native terrain rendering and interface.
+bevy = { version = "0.19.1", default-features = false, features = ["2d", "3d", "ui", "dds"] }
+glam = "0.32.1"
+image = { version = "0.25.10", default-features = false, features = ["png"] }
 bevy_ecs = "0.19.1"
 fluent-bundle = "0.16"
 unic-langid = "0.9"
@@ -35,17 +40,19 @@ rand = "0.10.2"
 anyhow = "1.0.104"
 chrono = { version = "0.4.45", features = ["serde"] }
 chrono-tz = "0.10.4"
-uuid = { version = "1.26.0", features = ["v7", "v4", "serde"] }
+uuid = { version = "1.26.0", features = ["v7", "serde"] }
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.23", features = ["json", "env-filter"] }
 tracing-appender = "0.2.5"
 blake3 = "1.8.7"
+bytemuck = "1.25.2"
 zstd = "0.13.3"
 serde = { version = "1.0.229", features = ["derive"] }
 serde_path_to_error = "0.1.20"
 serde_with = "3.22.0"
 serde_json = "1.0.151"
 serde_json_canonicalizer = "0.3.2"
+ron = "0.12.2"
 
 [profile.dev]
 debug = 0

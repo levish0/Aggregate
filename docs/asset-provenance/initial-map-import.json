@@ -1,0 +1,3629 @@
+{
+  "source_game_path": "D:/SteamLibrary/steamapps/common/Victoria 3/game",
+  "copied_at_utc": "2026-09-06T06:10:02.6366609Z",
+  "groups": [
+    "map_data",
+    "gfx/map",
+    "common/country_definitions",
+    "common/history/states"
+  ],
+  "file_count": 723,
+  "total_bytes": 1828520823.0,
+  "files": [
+    {
+      "path": "map_data/adjacencies.csv",
+      "bytes": 12375,
+      "sha256": "0EEB26C7E0BF93A605E8E070F2B67BEDA001E20B49BF3BDB5B7098CFECD46406"
+    },
+    {
+      "path": "map_data/default.map",
+      "bytes": 1432,
+      "sha256": "7600F12005DD5F6986A13E9523B055A73E79D03AC2A101F4FE5E832F7F67D101"
+    },
+    {
+      "path": "map_data/heightmap.heightmap",
+      "bytes": 294,
+      "sha256": "483EF54259231AAD6EDDD4231F4FA969F13D69ACFB5F0612A02877BEFB3B6BCD"
+    },
+    {
+      "path": "map_data/heightmap.png",
+      "bytes": 52487093,
+      "sha256": "C223F89D07B4963EB76AC3195C150329387911B4BCE6F2A5A5772080C9368342"
+    },
+    {
+      "path": "map_data/indirection_heightmap.png",
+      "bytes": 19416,
+      "sha256": "848AAD93FA7626D062382E4B5D0236589805CF3749F0701978C675A9437DBF62"
+    },
+    {
+      "path": "map_data/nodes.dat",
+      "bytes": 11184800,
+      "sha256": "2D1A69B6D8DB2C06B5FEA010BB00E1B29B0B9BFCAD47AD9DAFD804BD7ABF0BD5"
+    },
+    {
+      "path": "map_data/packed_heightmap.png",
+      "bytes": 30437402,
+      "sha256": "332FF3A6404DA49D72F17FCCF0C7BED96F6832F9436C0F426B30FAF2DF00AF4C"
+    },
+    {
+      "path": "map_data/province_terrains.txt",
+      "bytes": 703616,
+      "sha256": "0DC8DEC8FF9FD5F778CC8737BC9C298CEE3BE3C710DADA1AC307BC03CD4D80B8"
+    },
+    {
+      "path": "map_data/provinces.png",
+      "bytes": 2851510,
+      "sha256": "E3911FD80A40C6B297A68F66E898D9B187863B64483A9608123606143EE2EA78"
+    },
+    {
+      "path": "map_data/rivers.png",
+      "bytes": 292666,
+      "sha256": "CE28F82E19925D8F4CCA834EE0BFBCB079B37597F22B23D8F1A9D7393BB41F25"
+    },
+    {
+      "path": "map_data/state_regions/00_west_europe.txt",
+      "bytes": 56322,
+      "sha256": "272B757789390D16EB34A083C15EDDFC8C471B3121198E4C634B57F9615E40E8"
+    },
+    {
+      "path": "map_data/state_regions/01_south_europe.txt",
+      "bytes": 40881,
+      "sha256": "CAE1CD7DF5334A1DF6D49A7BB4F992C564CADA7EFD13E2C9330BCAA30B1FCEE7"
+    },
+    {
+      "path": "map_data/state_regions/02_east_europe.txt",
+      "bytes": 14153,
+      "sha256": "B647241DD5DC5CB23BE3C27F58503EF93D36F7B33BD1FA522980C4CF94844CE5"
+    },
+    {
+      "path": "map_data/state_regions/03_north_africa.txt",
+      "bytes": 48164,
+      "sha256": "35390B56CCFD815B0DABDCAF72B5B89E780479EC457211013501BDA2BB0A1672"
+    },
+    {
+      "path": "map_data/state_regions/04_subsaharan_africa.txt",
+      "bytes": 79472,
+      "sha256": "99AC6E11396735E0EB070D31C15325AA4166316F3F980285FFAF72C8FE4A6151"
+    },
+    {
+      "path": "map_data/state_regions/05_north_america.txt",
+      "bytes": 160614,
+      "sha256": "4B41E1068DA7187EDF34A6C932354D51779E36233D43C102F61E7FC72909EB42"
+    },
+    {
+      "path": "map_data/state_regions/06_central_america.txt",
+      "bytes": 12471,
+      "sha256": "DB3A3C9BCB97FDFD7F681453370DD9B9F53D8E6544FD2DD981A9CF842D5F2A81"
+    },
+    {
+      "path": "map_data/state_regions/07_south_america.txt",
+      "bytes": 77139,
+      "sha256": "5B05A7EE6D44B63298F051D24360A4ED52410BF203B43D94CFE166F0A514F0F8"
+    },
+    {
+      "path": "map_data/state_regions/08_middle_east.txt",
+      "bytes": 39347,
+      "sha256": "9AA599499C4AA988EF4703C1E89B848D7EB4B7DFC3B565BD55D751CEB029ADDF"
+    },
+    {
+      "path": "map_data/state_regions/09_central_asia.txt",
+      "bytes": 24880,
+      "sha256": "96C7B59AB0693B938763266EA7D8A30541BE4C0812C15E6E45116D9F6B15F19A"
+    },
+    {
+      "path": "map_data/state_regions/10_india.txt",
+      "bytes": 34140,
+      "sha256": "6F0FE162B94355F48B2CA7F9B9624CD9CD1537851254ED190350C4A8E0733C56"
+    },
+    {
+      "path": "map_data/state_regions/11_east_asia.txt",
+      "bytes": 74644,
+      "sha256": "83AD07FEE7A6D5A065B7E99995CBDF0CF77C0C46A26A335D3166C21CF2D51B19"
+    },
+    {
+      "path": "map_data/state_regions/12_indonesia.txt",
+      "bytes": 27680,
+      "sha256": "B0C7F911D9BFA762135871E572C8C96E7B0F05A3F514939FD239B93940E15612"
+    },
+    {
+      "path": "map_data/state_regions/13_australasia.txt",
+      "bytes": 30250,
+      "sha256": "A6B5659472B2E92958B8233D82EE3EAB125C12F4EE76DE86858EB10A30B2550D"
+    },
+    {
+      "path": "map_data/state_regions/14_siberia.txt",
+      "bytes": 87530,
+      "sha256": "20F80975D229968F10F9C1088B399286E57AC15A83A986A69B602947B847D44D"
+    },
+    {
+      "path": "map_data/state_regions/15_russia.txt",
+      "bytes": 95496,
+      "sha256": "CBFCBCCFB8D5A9D760BBEDD55A12804FDF88678995EE774D217CE353D0A985C8"
+    },
+    {
+      "path": "map_data/state_regions/99_seas.txt",
+      "bytes": 12528,
+      "sha256": "9C40FDBCE7C7C2A5715C4E84A11291F8B7A04A8C5EEE891381B3DE8FE610A383"
+    },
+    {
+      "path": "map_data/state_regions/state_regions.md",
+      "bytes": 3420,
+      "sha256": "118B7F87213C2D28C6B3DE13B1E277720065A50AC271DD0D9574CFBED4DE73ED"
+    },
+    {
+      "path": "gfx/map/air_graphics/00_example.txt",
+      "bytes": 812,
+      "sha256": "604D4598B42CB53E9E989F10D9D193E394F485155085FD1A18B1AA3044BD5BDA"
+    },
+    {
+      "path": "gfx/map/air_graphics/01_zeppelin.txt",
+      "bytes": 390,
+      "sha256": "82CC91A07E2F668006D3BAD39F53F41649E44C0EAF28092391F3531F35D1DE55"
+    },
+    {
+      "path": "gfx/map/army_dioramas/military_diorama_battle.txt",
+      "bytes": 64783,
+      "sha256": "FB97F2C50A088A53F55DE99A9D9A38EADC8E8286A2C59567A9A8CA4295DE8CED"
+    },
+    {
+      "path": "gfx/map/army_dioramas/military_diorama_frontline.txt",
+      "bytes": 30394,
+      "sha256": "4FC468A175F764E11B6AA49EAED3A54E988A07ECC113A2EB0D4C4E13A27BEA24"
+    },
+    {
+      "path": "gfx/map/borders/border_country_highlight.dds",
+      "bytes": 43820,
+      "sha256": "9B6C8EDAA682C705D30056E7B0B34A507E48343EE38EC5CAB4A6D4F62644FCD1"
+    },
+    {
+      "path": "gfx/map/borders/border_country.dds",
+      "bytes": 43856,
+      "sha256": "51A18F6AEBDFF91B372A87B47B23DC8F23E5CA9B7547706820B44F7CCE6B13A2"
+    },
+    {
+      "path": "gfx/map/borders/border_diplomatic_play_ally.dds",
+      "bytes": 131200,
+      "sha256": "9C7F282DAC9D59AA9C518F19D9616F28AD6AC45F04F3BC38E12ED52E0DB36FE2"
+    },
+    {
+      "path": "gfx/map/borders/border_diplomatic_play_enemy.dds",
+      "bytes": 131200,
+      "sha256": "98884CCC6F5AA7E68F1C231E32F0B3EAACD684CAC0F48F5BECA1199631C9FA1A"
+    },
+    {
+      "path": "gfx/map/borders/border_hostile_theater_both.dds",
+      "bytes": 131200,
+      "sha256": "417C3FFF55722BC387CB947B3FC0850C33A20496346F162ECC6D593B55505266"
+    },
+    {
+      "path": "gfx/map/borders/border_hostile_theater_first.dds",
+      "bytes": 131200,
+      "sha256": "35DB84C26A2E2B95FE1B8ACEDDE4A5797F68D07E2268D45B54451383EA759008"
+    },
+    {
+      "path": "gfx/map/borders/border_hostile_theater_none.dds",
+      "bytes": 131200,
+      "sha256": "98884CCC6F5AA7E68F1C231E32F0B3EAACD684CAC0F48F5BECA1199631C9FA1A"
+    },
+    {
+      "path": "gfx/map/borders/border_hostile_theater_second.dds",
+      "bytes": 131200,
+      "sha256": "C6A83A59157139556E114706767C389E4F8E33B3FF5EC0A9BB2461998947AD83"
+    },
+    {
+      "path": "gfx/map/borders/border_impassable.dds",
+      "bytes": 11088,
+      "sha256": "77FE28544012623293388F907015079DD159F8E181FB1710198CC6F2C1506D5F"
+    },
+    {
+      "path": "gfx/map/borders/border_province.dds",
+      "bytes": 19472,
+      "sha256": "3848A304E06B87DE5E856C4E0CD273F5D69DFC304B5D1175A73763AFE6A01750"
+    },
+    {
+      "path": "gfx/map/borders/border_sea_highlight.dds",
+      "bytes": 43856,
+      "sha256": "62AF453A06B65EB23197CC53081145EC8DFF49D52BDBA5C980D79E348F44EF2B"
+    },
+    {
+      "path": "gfx/map/borders/border_sea.dds",
+      "bytes": 11052,
+      "sha256": "12DC94892BB2ADA87D1730451E55D6E6D790F34C8C45770012310073941FE682"
+    },
+    {
+      "path": "gfx/map/borders/border_state_highlight.dds",
+      "bytes": 43820,
+      "sha256": "F2C9DAFE55DE6625F73B96B20E87B1FCADDFDCAD05A16963C827C42B9061A2EB"
+    },
+    {
+      "path": "gfx/map/borders/border_state_region_country_highlight.dds",
+      "bytes": 43820,
+      "sha256": "A36D0220377C8CF282E32600D593EE803EAC1AAB4382A51F97FA5DDEF0303FC6"
+    },
+    {
+      "path": "gfx/map/borders/border_state_region_highlight.dds",
+      "bytes": 4224,
+      "sha256": "932DD396708972E577BA6A316253ADE1880DE9365C3CF99CDDEB87B1D2B3D1A8"
+    },
+    {
+      "path": "gfx/map/borders/border_state_region_sea_highlight.dds",
+      "bytes": 16512,
+      "sha256": "6C293F1DCF7DD7F76E800DCC6472A75E14A33E692567BD5B396007B80D69E8AA"
+    },
+    {
+      "path": "gfx/map/borders/border_state.dds",
+      "bytes": 8320,
+      "sha256": "41C9557A37B86BDFFD783F93CAA495A8A1E23BE69FEBEA53100DA83E5CD5DEF3"
+    },
+    {
+      "path": "gfx/map/borders/border_war_flatmap.dds",
+      "bytes": 349680,
+      "sha256": "E6936E35AB7130FCF0B12F09113433CC7BB67696F2B6638928C316E2BC3D86F1"
+    },
+    {
+      "path": "gfx/map/borders/settings.vertical_borders",
+      "bytes": 1483,
+      "sha256": "5D7C6DAE6D8FBEC7F344EEA498980F0E92642BBE3CDCC5FF9A8DC194C22EAEB1"
+    },
+    {
+      "path": "gfx/map/borders/vertical_border_cloud_lut.dds",
+      "bytes": 4224,
+      "sha256": "EBABA8FF12DA661CD813AA8408469D636630AA8375C446C2AB9A3B52551D515E"
+    },
+    {
+      "path": "gfx/map/borders/vertical_border_cloud.dds",
+      "bytes": 262272,
+      "sha256": "692E370ED5696A0EE3C8E6B0459CFAAFE464BCBD69FAB891AD35F8ECF8974DD7"
+    },
+    {
+      "path": "gfx/map/borders/vertical_border_fade.dds",
+      "bytes": 349680,
+      "sha256": "2A8E0CD94222BB8AB38F18A16FFDC7B4367C1160DFD5B0627F709534FEAA7C7D"
+    },
+    {
+      "path": "gfx/map/borders/vertical_border_smoke.dds",
+      "bytes": 349680,
+      "sha256": "56822DA39AE5A031263F2676DC47D0EFD6040A8D6DAD9615748FB8E6B8470255"
+    },
+    {
+      "path": "gfx/map/borders/front_graphics/00_example.txt",
+      "bytes": 1334,
+      "sha256": "F255CC647E14845066EE01715C9997AC32F76CDF533EEE092981108023A03934"
+    },
+    {
+      "path": "gfx/map/borders/front_graphics/01_battle_type.txt",
+      "bytes": 164,
+      "sha256": "569B230A35948256F01966188AE7CBE9C3E4C845841C639F2479B3AF9CC1100C"
+    },
+    {
+      "path": "gfx/map/borders/front_graphics/02_after_battle_type.txt",
+      "bytes": 448,
+      "sha256": "A880957ADC4CFE056B391F411D87612F3FF9DFEDC9608AD5476A67468FDDD83C"
+    },
+    {
+      "path": "gfx/map/building_config/american_buildings_dlc.txt",
+      "bytes": 341,
+      "sha256": "189064F32554F6749E43257D9278F0165C36402CA5BE63BC0A5654A2775B66B6"
+    },
+    {
+      "path": "gfx/map/building_config/default.txt",
+      "bytes": 38866,
+      "sha256": "BED19E5AEC6C456F8356331C25D13725B81D28A66EB64DE4899F15A9CCB16342"
+    },
+    {
+      "path": "gfx/map/city_data/city_graphics_data.settings",
+      "bytes": 1207,
+      "sha256": "F1DD6D2B3A0A391BCE452EAC5565456156478A68912A5BE4ECFD8F41E4F98B1A"
+    },
+    {
+      "path": "gfx/map/city_data/city_building_vfx/default.txt",
+      "bytes": 1050,
+      "sha256": "0612B536012860C887639A10E311510C490D1ACA57B077A55039CA9CD4A62DB1"
+    },
+    {
+      "path": "gfx/map/city_data/city_centerpiece/cities.txt",
+      "bytes": 3015,
+      "sha256": "419E4F749F826AE4C554EE3F96ECD7E627507760010863425ACEDD86D19C99DA"
+    },
+    {
+      "path": "gfx/map/city_data/city_centerpiece/city_centerpiece.md",
+      "bytes": 4127,
+      "sha256": "2502A07472464930F7076D580AB2BFEF3618B0C2647EED9CBCEDA790AD0D41FA"
+    },
+    {
+      "path": "gfx/map/city_data/city_centerpiece/farms.txt",
+      "bytes": 941,
+      "sha256": "954085D221F2B7126DC3EEC8A1B5AC80F6DDAB4651415961E07830D881FA64D2"
+    },
+    {
+      "path": "gfx/map/city_data/city_centerpiece/mines.txt",
+      "bytes": 841,
+      "sha256": "F48A62A6DE4690FCECCE2A511E9E7CC4AF891E5A29ED63940EBC86A6C5EB490F"
+    },
+    {
+      "path": "gfx/map/city_data/city_centerpiece/ports.txt",
+      "bytes": 33924,
+      "sha256": "E5D3659738207B3B46CAB7B7D73C056FC5EB3A3F473B25E321BDF3BC3705BD2B"
+    },
+    {
+      "path": "gfx/map/city_data/city_centerpiece/wood.txt",
+      "bytes": 802,
+      "sha256": "2D82ECBB463C6E1F07E42C16A1B5C5F810D193A8421AE2CDF27757FB40A697D7"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/00_example.txt",
+      "bytes": 3269,
+      "sha256": "4573CBD35192228DE65DB1D4A352C6F842E042F1C14A52D739D49E91054DC9FE"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/african_city.txt",
+      "bytes": 3093,
+      "sha256": "E3379B7E703561F7000AB5A3ACC79230BE2733FB6309F50BDC039859282CB2A0"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/african_farm.txt",
+      "bytes": 2081,
+      "sha256": "1606C7FBDCA05EAB3AF721C43F088F1E2062DDF0AD29D80E0FBB87E46EA1637B"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/african_mine.txt",
+      "bytes": 1482,
+      "sha256": "B2A9F41098502735D64C1711F3E89364D4AD8443B9AE542E5CFA18CAD1FC1876"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/african_port.txt",
+      "bytes": 1147,
+      "sha256": "0616D12D55E7D263D79C7A0F96782158407DF00345184BDAD0907512110896D1"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/african_wood.txt",
+      "bytes": 1238,
+      "sha256": "4B10E85CF7B11A943387BC522700577B015D7CB118715D25A9254AB32EB13F06"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/american_mining_oilrig.txt",
+      "bytes": 1540,
+      "sha256": "C29152FAA199D192FB36F16559B4524E261C951F17A8CA3C4781A1CED264FC32"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/arabic_city.txt",
+      "bytes": 2994,
+      "sha256": "526D73FC5EA557EA63DEFFA725B559FA612F14C41995AB25D65FDBACF748E10E"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/arabic_farm.txt",
+      "bytes": 2051,
+      "sha256": "63D351F79613E4476605B3B5EDC08FA422FFA2C4318A76BF3F40E2B27748209B"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/arabic_mine.txt",
+      "bytes": 1510,
+      "sha256": "5FC90DFF80023B76987974EE540197E4B75FB3C538E282E1008458BD326E9639"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/arabic_port.txt",
+      "bytes": 1136,
+      "sha256": "2C0049EDCFE8D5C35DECB272B2FD46057F616B47D7689348C329DA766BF3167E"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/arabic_wood.txt",
+      "bytes": 1222,
+      "sha256": "4D28ACEB9107514C343ABA44549D9513769E63555B00D04924E1DF4DD5FC840C"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/asian_city.txt",
+      "bytes": 2975,
+      "sha256": "78B80A5860CC70094BDF1FBCA76D102E1147F9D3086A75B0078DD69B006EE1F3"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/asian_farm.txt",
+      "bytes": 2035,
+      "sha256": "4D562701C6BDBD2CC037137A2C2201CCE0CE6C83DD2B741DBF5D4F43BFE06477"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/asian_mine.txt",
+      "bytes": 1450,
+      "sha256": "166F559C345066677F3D03EB3B8F15984B58C8095FD6ECB69B46CA300B824307"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/asian_port.txt",
+      "bytes": 1080,
+      "sha256": "DE9EA48D7E82E70FA666A6F5AE76686181EA715EC58844576EDA23CB2BA2E94C"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/asian_wood.txt",
+      "bytes": 1207,
+      "sha256": "CD93E0B9949F16CC4C9A178D3F44BED84E93555D531A22C8A34C61B45F1560A7"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/default_city.txt",
+      "bytes": 3023,
+      "sha256": "3ABA9B048053621AFAF4A070A7F580F7AAAF78BC086787AD59C46526FBE26F2F"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/default_farm.txt",
+      "bytes": 2354,
+      "sha256": "C1C24E48DCE0B99559744E17D2A3EA0FD8FB1DCF88EE14E9DA7184E3E613A7A1"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/default_mine.txt",
+      "bytes": 1553,
+      "sha256": "56E9F5E56A860EE33C821D29492A0E085AF1AEB73B1A2163869B6A28AB1CB18F"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/default_port.txt",
+      "bytes": 1228,
+      "sha256": "CF4F65A145DB2A5D064AF9E746E3D1880357ABB75EE3649DF6AAE7D5046BDE55"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/default_wood.txt",
+      "bytes": 1240,
+      "sha256": "D406EB4F8132B6AF6CFC93503C20C2993E4B6A8464D784B5C1F32EC8256B27FC"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/default.txt",
+      "bytes": 1005,
+      "sha256": "737DF0CF108AC64B874947E815096B2D521AB68E82E3B2D9DAE9A3AA0A21879A"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/latin_city.txt",
+      "bytes": 3107,
+      "sha256": "FBC49772A37D337AE6ADA1FE1FF0045942A53E9A67CC056B792DB7A44892910B"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/latin_farm.txt",
+      "bytes": 2092,
+      "sha256": "9EB64CDC6C9D89F46ECBCDAB0E2019F20748A0320273977937DC5F12BF532987"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/latin_mine.txt",
+      "bytes": 1518,
+      "sha256": "8C8554E79EAAB5465E3314461634F5426612D66EE57B2129F163F61A9306A0D2"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/latin_port.txt",
+      "bytes": 1198,
+      "sha256": "6F409DFF558C28DED61F7F661E3DF6C27019E1B77DE7459B3A6006226109CB53"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/latin_wood.txt",
+      "bytes": 1282,
+      "sha256": "2AE67093C5AECB8099A3634D2643A5967D481E10CC5C50BDB689C32DDDFF236F"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/southasian_city.txt",
+      "bytes": 3006,
+      "sha256": "68E51CDD0C6088ADE99DA61F33DB85BFC2080093430295DEC8E4C166AE8AEECE"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/southasian_farm.txt",
+      "bytes": 2059,
+      "sha256": "4B8A10716CE1446BF104583FB84D0D85B5BC8B3FE1F7E9873AAB769FFAFA1910"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/southasian_mine.txt",
+      "bytes": 1515,
+      "sha256": "09A7C6771BC8B28438A2E0AE84B7D274E810CDAF53445245A5BB1DA12E03A126"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/southasian_port.txt",
+      "bytes": 1144,
+      "sha256": "11834E429DBA2B47F2028CA5418BE25BEA979083B0528AE77F47D761651738DD"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/southasian_wood.txt",
+      "bytes": 1230,
+      "sha256": "9C9A7C553EE54A8141F51411E20194B0D3C663E80B8192751BCD00B7B856779C"
+    },
+    {
+      "path": "gfx/map/city_data/city_types/wild_west_farm.txt",
+      "bytes": 2309,
+      "sha256": "B91A17CA2CD89D95BF07405A625D2A467B8D92BF123C6DECF8CAC158038B0B6A"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/00_example.txt",
+      "bytes": 533,
+      "sha256": "F5DFDE8FA9F3445802D51B9F4CE6E5820A25C3E3B513E87AFCB0E0F6FAE189AA"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/01_fireworks.txt",
+      "bytes": 202,
+      "sha256": "18CBA19D7FB43A6EA512EB8DD2E74136A09F4E149B6EBFC68B9265837223918E"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/02_unrest.txt",
+      "bytes": 296,
+      "sha256": "4BF106F71AB159A6E8722EF042F7B930A1F73ED20BE274C6349CAFF5A7F32DD4"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/03_revolution.txt",
+      "bytes": 81,
+      "sha256": "4CEB38A3F1A85B2D002B464080CB64C2A006A45CF9F56BFDEC3C120B8F65E54E"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/04_smog.txt",
+      "bytes": 358,
+      "sha256": "AECD04475BD597ACE19A42D75A30FB3EA7DF88B28F2D5DC6F7C6AEDA2A4FC23C"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/05_devastation.txt",
+      "bytes": 374,
+      "sha256": "87933E6A947A961A07DDF8D6F8F6F44364B87EBA2C95FB6EC75B89B8DC2F1AFE"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/06_conscription.txt",
+      "bytes": 130,
+      "sha256": "EE86908EB24F7E00A47252B60558C35EB05F52A4FA0DB89D07C869308FE30B31"
+    },
+    {
+      "path": "gfx/map/city_data/city_vfx/07_mobilization.txt",
+      "bytes": 105,
+      "sha256": "A5097366B9261EEABABF497511211F6D81A21B7053AA68CE2679B281D570CB53"
+    },
+    {
+      "path": "gfx/map/dynamic_masks/common_noise.dds",
+      "bytes": 174904,
+      "sha256": "727056820DDA4697158ACF7E60808FD0B06F692DDF5C5D37EAA2FAC073315C78"
+    },
+    {
+      "path": "gfx/map/dynamic_masks/devastation_vfx_lut.dds",
+      "bytes": 4224,
+      "sha256": "27AFD6BE781DCDC02BE7E1A7C20C637FCF69888109E740CBB251AEB86952F880"
+    },
+    {
+      "path": "gfx/map/dynamic_masks/devastation.settings",
+      "bytes": 528,
+      "sha256": "1FF0831C0E8363FC1EE00D29F7461461A6363C22C2A62182F7480692D513AF25"
+    },
+    {
+      "path": "gfx/map/dynamic_masks/exclusion_mask.dds",
+      "bytes": 19749224,
+      "sha256": "B28F3D8D7B4C1830A1E03319496F277A9F6CD79AFF13FD65CAB68B90123ED974"
+    },
+    {
+      "path": "gfx/map/dynamic_masks/pollution.settings",
+      "bytes": 1147,
+      "sha256": "348BEFB827F229B11D454598109D648942BEC7F06026D67016E04ADA0DE111EA"
+    },
+    {
+      "path": "gfx/map/dynamic_masks/terrain_effects.settings",
+      "bytes": 175,
+      "sha256": "4BDF4DCC0102CC8163A195D7FD8F5A251F59CF0802D2C2CC6394CFD543C41765"
+    },
+    {
+      "path": "gfx/map/environment/cubemap_blackbottom.dds",
+      "bytes": 8388728,
+      "sha256": "7F0D4C776513A280A4809848152998D989B2E7048FFBEAB771E976F0B7D288C8"
+    },
+    {
+      "path": "gfx/map/environment/cubemap_clouds_even.dds",
+      "bytes": 8388728,
+      "sha256": "61690649B5BC6B45A8140206B1729D26D16C4DDE8CCFC07992E8D51E3EF90E1B"
+    },
+    {
+      "path": "gfx/map/environment/cubemap_clouds.dds",
+      "bytes": 8388728,
+      "sha256": "88CA12733BA75BCA7D36CE5DC14E4C15821B6C5C6FB86A2BE93F29CD0DF2C4E9"
+    },
+    {
+      "path": "gfx/map/environment/cubemap_pb_statues.dds",
+      "bytes": 1048784,
+      "sha256": "4E766B15B8F242E8AE9BD03FB862D61C0C3C99A35D33D1671F1629EDCD5FC9B4"
+    },
+    {
+      "path": "gfx/map/environment/daynight_settings.txt",
+      "bytes": 1229,
+      "sha256": "814B1484E7DF42EAE7653AC06947E3C2528C89EAEE3D7877A2CD70B964D797FA"
+    },
+    {
+      "path": "gfx/map/environment/environment_accurate.txt",
+      "bytes": 384,
+      "sha256": "4D79560D6C1484D7474200CD494D7FEDBA16B7D4195CE353231921E79FCB0D74"
+    },
+    {
+      "path": "gfx/map/environment/environment_backsun.txt",
+      "bytes": 337,
+      "sha256": "455B95202400777019443626DD354CD75B65D59DFB71E449EEF9A4CCBCEA2BD5"
+    },
+    {
+      "path": "gfx/map/environment/environment_game.txt",
+      "bytes": 675,
+      "sha256": "5D832D30C9BF0F0482212AC788F0FAE074D7B98E7F14A735C7D062A9EE2FAFBD"
+    },
+    {
+      "path": "gfx/map/environment/environment_greyscale.txt",
+      "bytes": 71,
+      "sha256": "4AC4F6B64864B674126ED94F2694F021FFFAA7701D9B368D7A65E501E6275030"
+    },
+    {
+      "path": "gfx/map/environment/environment.txt",
+      "bytes": 3711,
+      "sha256": "76170F1E45FEC58CDADDDF298E116C1307E0D99BE315A1CA8E9007440510D821"
+    },
+    {
+      "path": "gfx/map/environment/ui_flag_environment.txt",
+      "bytes": 262,
+      "sha256": "540E5A6A6C7D6EABAD5EA34CA2AE4C22D76F124631A6110BCD4D7B235950D293"
+    },
+    {
+      "path": "gfx/map/environment/ui_power_bloc_statues_environment.txt",
+      "bytes": 2823,
+      "sha256": "88713ABA860C0C7C9A769C1BA913D0A28F56592D74FC340C0A98D961A01F0600"
+    },
+    {
+      "path": "gfx/map/environment/ui_ship_viewer_environment.txt",
+      "bytes": 2815,
+      "sha256": "720631C00AEB9AC021DD9EA7BD66C5A1B54FDF8135D1E8572242A70536053590"
+    },
+    {
+      "path": "gfx/map/flagship_ornaments/00_figureheads.txt",
+      "bytes": 190,
+      "sha256": "2D6EF4C6AEAD9B85699A628BB245DC2D3C61F59DA7A5E54E47BC0E36F74781D8"
+    },
+    {
+      "path": "gfx/map/fleet_dioramas/fleet_diorama.md",
+      "bytes": 2262,
+      "sha256": "047C540520B46C7076F2F928F500FEED60AE621AD63DD2D72D3ED8E013514079"
+    },
+    {
+      "path": "gfx/map/fleet_dioramas/fleet_dioramas.txt",
+      "bytes": 8584,
+      "sha256": "4AE552097AD54F029427A6793D3942A0DC9DB1248FF685B186389D1605D97A5B"
+    },
+    {
+      "path": "gfx/map/fleet_dioramas/mission_dioramas.txt",
+      "bytes": 2430,
+      "sha256": "29E5E76CEDD6027D09DBC32A2A0D1FC56D562D4EAD19337C73B6AE1D8DE4A6B7"
+    },
+    {
+      "path": "gfx/map/fleet_entities/01_fleet_entities.txt",
+      "bytes": 106046,
+      "sha256": "59E0D19DACB517B3A25FFB52050F07BBFC740C22E492CD3CBA5BAA2B92190B7D"
+    },
+    {
+      "path": "gfx/map/fleet_entities/fleet_entities.md",
+      "bytes": 3716,
+      "sha256": "CBA16F379C67DB7D202461185AAE83765F3C05199DA5BC51E5CC19BD59B2E28A"
+    },
+    {
+      "path": "gfx/map/fog_of_war/cloud_normal.dds",
+      "bytes": 22369776,
+      "sha256": "6E37744A7F8A2DF8EA1F63BBA79B2D9153DA53D698CE78676E8D5BAFB1ED64CF"
+    },
+    {
+      "path": "gfx/map/fog_of_war/cloud.dds",
+      "bytes": 22369776,
+      "sha256": "E0CBF84F0A399AF3AAD034FD679387C7AA4DA3187529C5446F96AC5ABC126A24"
+    },
+    {
+      "path": "gfx/map/fog_of_war/fog_of_war.settings",
+      "bytes": 1988,
+      "sha256": "6458A89014D18B6E4EF3768AF0F44910E7C2FD3B0058BA1562C6346EBEE0D516"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_artillery_props.txt",
+      "bytes": 2737,
+      "sha256": "718AE50AD157A99598BC1109AF7267C1760518711BDB22759C64155BFAA830AD"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_artillery.txt",
+      "bytes": 1967,
+      "sha256": "A74E6BF43C908CABA186EC96E9E92D4AD19918D8AE9A5EDF76AD80882624D406"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_barricades.txt",
+      "bytes": 2805,
+      "sha256": "EE9A3EF4E6C4CB74DFB4262B64BD7DBDF6B807A2F8F6A969D6DE011714EFD2BA"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_basecamps.txt",
+      "bytes": 1030,
+      "sha256": "614C85BB80C0C1D36F420196B9A4B0CC47C092DC27388F780EA61685CBBDEDC5"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_cavalry.txt",
+      "bytes": 10380,
+      "sha256": "429E051343EC45745D0CFCB6201A6D94D5EBA336688CFBCDBFF530DEDA821E8D"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_generals.txt",
+      "bytes": 3350,
+      "sha256": "484A2BCB3C99D997FD21B028B7932D09A632223A9E30B3F7EC4833282E51779A"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_infantry.txt",
+      "bytes": 20673,
+      "sha256": "1A4BB92B2307497D98982A9C2CBCFCC04C99B7890E11C5B131CBB02381734D70"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_misc.txt",
+      "bytes": 1012,
+      "sha256": "D4D4F95B58F9CA97625BDB260BB1F6702854C2EE0F0B74A4327D878CB17D2751"
+    },
+    {
+      "path": "gfx/map/front_entities/front_entities_support.txt",
+      "bytes": 7304,
+      "sha256": "9E821E8047242688491E2068CF670B0E309A16D5A7EC81DF20BB4B85C5AA58B8"
+    },
+    {
+      "path": "gfx/map/gradient_border_settings/gradient_border_settings.txt",
+      "bytes": 7548,
+      "sha256": "D861E9266F7E9209CF9CBF7FF1F5DC1F3D5EBBEE41A8A33E0CE42F2FA7E774F0"
+    },
+    {
+      "path": "gfx/map/map_modes/map_modes.md",
+      "bytes": 448,
+      "sha256": "8A43DCA70F99979F0D704243E52ABEB2EDD4575EA417042E7798C741AFF2691F"
+    },
+    {
+      "path": "gfx/map/map_modes/map_modes.txt",
+      "bytes": 46557,
+      "sha256": "DFEC29D811B1F78B85B075745198E23C1153F6A7B3496416A19A4875D83FEF34"
+    },
+    {
+      "path": "gfx/map/map_object_data/african_lighthouse_01.bin",
+      "bytes": 2480,
+      "sha256": "8FCD05ACB808AA2C4E711933D315A1CAA67E63F7915A625F862C6F7C0EC4E2DF"
+    },
+    {
+      "path": "gfx/map/map_object_data/american_unique_buildings.txt",
+      "bytes": 632,
+      "sha256": "E1CA3C86E15427BF5B628909DA82262DEF46EB6B8D71C109991EA9DCA591AB08"
+    },
+    {
+      "path": "gfx/map/map_object_data/ap1_unique_buildings.txt",
+      "bytes": 1294,
+      "sha256": "FCEEA1E16FBC0611F5C646F3FC970130FF4982585DD1911F3D6413C91911B743"
+    },
+    {
+      "path": "gfx/map/map_object_data/arabic_lighthouse_01.bin",
+      "bytes": 2440,
+      "sha256": "015F68DE01B878F622877050E40C949B69714511D6CCDF086989B009386A02D5"
+    },
+    {
+      "path": "gfx/map/map_object_data/asian_lighthouse_01.bin",
+      "bytes": 3720,
+      "sha256": "E2F59C46AC113F6D17CA6628DEF16241957441333A69FE4C94F8C81FA385ED2C"
+    },
+    {
+      "path": "gfx/map/map_object_data/bird_vulture_01.bin",
+      "bytes": 6360,
+      "sha256": "F826C313DEB0FE10BD8FF270D4AE647CC5FA902620498FE7AB11DE7F5349F4A5"
+    },
+    {
+      "path": "gfx/map/map_object_data/bp1_unique_buildings.txt",
+      "bytes": 320,
+      "sha256": "2696E76921E9D30F45833F42A72C3ED3BEF63551FFAFB2A12B8795B1BF7BDDA7"
+    },
+    {
+      "path": "gfx/map/map_object_data/bush_01_generator_1_0.bin",
+      "bytes": 2116440,
+      "sha256": "D2CBCB2BCBE62F3875B4F09778366CBE0C9BD20397E442A9FAD99B47C1BA6517"
+    },
+    {
+      "path": "gfx/map/map_object_data/bush_01_generator_1_1.bin",
+      "bytes": 903440,
+      "sha256": "17563AD0D621AFEAC9BE1563E5BC7A04FCD3F3B56A1574CB9190320EB42AD64C"
+    },
+    {
+      "path": "gfx/map/map_object_data/bush_01_generator_2_0.bin",
+      "bytes": 5131080,
+      "sha256": "02CD19F99EA5FB6B048BA1048A6B29479DAA6182D92D6982170E0EFE83B8F7E7"
+    },
+    {
+      "path": "gfx/map/map_object_data/bush_01_generator_2_1.bin",
+      "bytes": 2194440,
+      "sha256": "D0E6E96500FB3DF34A9A5804FACA9B814FF2902AE479384B459B8783075388EC"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_01.bin",
+      "bytes": 40,
+      "sha256": "C856F4DA3510E121314E6C7B740F5126FD89ECA04F2310819BA39F04C58584A7"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_02.bin",
+      "bytes": 80,
+      "sha256": "FFFEF485CA4E722898F920E2445ED2B0ED2B40D70CDB78FC4EB0915B41E6A8D9"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_03.bin",
+      "bytes": 80,
+      "sha256": "4891A805482FC2E890CD2EECD53BA2588E786DD5C84597DD5FC52C80125AEB4A"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_04.bin",
+      "bytes": 40,
+      "sha256": "EF047CEFE2B9CAE1B6B88488DFC070B7ED085CE962AA2A2F0D34BA5CB10BEC4A"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_05.bin",
+      "bytes": 120,
+      "sha256": "416A1AB596B858CA4F7875D293A1BEBBE869A6E096F68ABF59DCAD683A6BE380"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_06.bin",
+      "bytes": 40,
+      "sha256": "A411AA0DE26BA3F7C96FAFD24F5D756CF0B138191738E78181C07E6C1FECB2C9"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_07.bin",
+      "bytes": 240,
+      "sha256": "460A5EA4162147C03B640539AB299F144B5B0F85AF4FF2C8833014B2A9A8E764"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_08.bin",
+      "bytes": 280,
+      "sha256": "0FFB60684D533F9D61F292E26D8AC73035E87A9D82FE880081D4E50AB0D18F31"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_09.bin",
+      "bytes": 80,
+      "sha256": "0D7BECE979087F98A72076BC108B727F539B9CB60B7956A83FB3E6F4A7293073"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_10.bin",
+      "bytes": 240,
+      "sha256": "F34A3B296BC45AE39827AE1C59754821C9C9CA238B3EA44F7C1EEFD4C46D4541"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_11.bin",
+      "bytes": 40,
+      "sha256": "EC976AD3EE43B948ABBDB2746AA8782984999D7FAB3B89901F562EDED33F73AC"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_12.bin",
+      "bytes": 200,
+      "sha256": "356C278C5B85C33C0309CA89379B5181E4607C13B28613CCF39F617946BE47F1"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_13.bin",
+      "bytes": 320,
+      "sha256": "D0B5BEBE7DB72FF104410255CDEC939AD31042D1EA342CB704B62CE2864264E9"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_14.bin",
+      "bytes": 480,
+      "sha256": "54BC32F3A26A858C110F3ABA5ACAD623B72BD8A58C05FE74413A8C31F5A0D800"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_15.bin",
+      "bytes": 40,
+      "sha256": "8FF8C7416F218A99D4D868B0B7513FAEB859EB4517EE10EAC5D5102A98DDA816"
+    },
+    {
+      "path": "gfx/map/map_object_data/canyon_16.bin",
+      "bytes": 200,
+      "sha256": "147CC05481584A6D40D922503237D1347ADEC99FFD185D48B1C5FCF3B778609E"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_dense_generator_1_0.bin",
+      "bytes": 442200,
+      "sha256": "57A162575C6FC28099863EB918E04ECA6B556E668E793ACA0CDCDD854F44BF80"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_dense_generator_1_1.bin",
+      "bytes": 189360,
+      "sha256": "719978E114159FB4AC51F6123EDDEF295DBA956BA4CAAD2F727A0A99B9D5699E"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_dense_generator_2_0.bin",
+      "bytes": 618960,
+      "sha256": "E2CDD9D170D5495DABF56F2384810D5E1FDC128094D0FF793F9EEDD506F25D86"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_dense_generator_2_1.bin",
+      "bytes": 265600,
+      "sha256": "78C5C3857845ED6781D8D3C3B3CDD564666BACBD4391CF6BB7D730F38B01CF2B"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_dense_generator_3_0.bin",
+      "bytes": 584840,
+      "sha256": "C4DF420D2C9594BE0F6D1A6288D3A408D584D1D2A812A055C319C8895DE8EF9E"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_dense_generator_3_1.bin",
+      "bytes": 244600,
+      "sha256": "DC676F231FDC7304E18180C3603718D1AF929814F94C7BDDF6F87E80E7699198"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_sparse_generator_1_0.bin",
+      "bytes": 23360,
+      "sha256": "BFEEA181AE2693B6989AB04D924E1AB2798ED03E11EFD09E98A9593DA92826E8"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_sparse_generator_1_1.bin",
+      "bytes": 10080,
+      "sha256": "007AF49C1809FB8FD72B10A1AAD59F16BFAC231820C5904B3175E1CF6288FADA"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_sparse_generator_2_0.bin",
+      "bytes": 36040,
+      "sha256": "15B59461665E1B2B24D74ED3E890A9E48BE4372CE03F5E4DEA064A87071CC7F4"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_sparse_generator_2_1.bin",
+      "bytes": 15200,
+      "sha256": "1F49B931B700F114B466BFC288F8F0C891AC59B5AD05E8BAC8C0FFEA0013F1A6"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_sparse_generator_3_0.bin",
+      "bytes": 32720,
+      "sha256": "58A2F380BC32302D3CB0D93AB826A4D07C0BCAD1A4A12123FDB73791F6A6BE6F"
+    },
+    {
+      "path": "gfx/map/map_object_data/cypress_mediterranean_sparse_generator_3_1.bin",
+      "bytes": 16360,
+      "sha256": "6CD2FB86B152B917BABE18B85AB29261A3C2613B215474AD6CD41CBABA47D658"
+    },
+    {
+      "path": "gfx/map/map_object_data/env_effects.txt",
+      "bytes": 48517,
+      "sha256": "070D68B96DE16BD5BE86F2455E06C6835387EB3267D4C0171A25B31ED0766B50"
+    },
+    {
+      "path": "gfx/map/map_object_data/european_dynamic_farmland_objects_generator_1_0.bin",
+      "bytes": 495840,
+      "sha256": "937BC67DE2F6E094E03E3BE334F69BEA58C9FA048C491A1F8061599C5CE02F13"
+    },
+    {
+      "path": "gfx/map/map_object_data/european_dynamic_farmland_objects_generator_1_1.bin",
+      "bytes": 500920,
+      "sha256": "02EEB7CEA10C93DF04BB41E0B8125D7E3E1B304244B7ED8194ABCB352E33B2C2"
+    },
+    {
+      "path": "gfx/map/map_object_data/european_dynamic_farmland_objects_generator_1_2.bin",
+      "bytes": 493600,
+      "sha256": "3321FE7E2A6CD60807E91E58CFBADF21214B12760B19F0CD310E4A2BD3AD5B61"
+    },
+    {
+      "path": "gfx/map/map_object_data/european_dynamic_farmland_objects_generator_1_3.bin",
+      "bytes": 498600,
+      "sha256": "6458FE414BA36BF9EE67AD1139303C581C66A9BDEB0F84DDB09F17D6BAC5725C"
+    },
+    {
+      "path": "gfx/map/map_object_data/european_dynamic_farmland_objects_generator_1_4.bin",
+      "bytes": 208880,
+      "sha256": "A1295C4A249323FF62558A07F1D3BF21560CA7BA3E7AD67BCD40AF8F8CDD5E90"
+    },
+    {
+      "path": "gfx/map/map_object_data/european_lighthouse_01.bin",
+      "bytes": 6200,
+      "sha256": "0625D641CE4C8DB1E33A8702179CCBE154E186336575773538891B169CBFF5F3"
+    },
+    {
+      "path": "gfx/map/map_object_data/fortification_locators.txt",
+      "bytes": 95095,
+      "sha256": "BF00349E96A5E3C5982E0AE7402F6BCC1D1B89583D4A44BBED61DAF797222CCE"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated_map_object_locators_city.txt",
+      "bytes": 109648,
+      "sha256": "DEAC804A5DBB66C20B795A400F8F3EB8A3098D08A8A66CDCDB5B5A2F35C0896F"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated_map_object_locators_farm.txt",
+      "bytes": 109632,
+      "sha256": "FB33EB5F78EDE407BFCBA19086E086A1DB5EF3CFC0A58E443A5BBC6ACA53DB2D"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated_map_object_locators_mine.txt",
+      "bytes": 109532,
+      "sha256": "65962FADB80603585AE09A6417BCDFB762C1EC22C6EE08F606F5B52F62A78073"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated_map_object_locators_port.txt",
+      "bytes": 60249,
+      "sha256": "3AE4305410DEDE64D006AEBBA80D1F23FF58CBCFA56200CC8EA90862E3070134"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated_map_object_locators_wood.txt",
+      "bytes": 109610,
+      "sha256": "EB9CC0F9D8A6B6467EF9CDC3E7BA346848BD06B4040941020428B2F3E58C0F86"
+    },
+    {
+      "path": "gfx/map/map_object_data/lakes.txt",
+      "bytes": 1674,
+      "sha256": "963087BC9D335C1BF5072293045C50EFE92DD8179F05C8434172BFBE9FAD1C2F"
+    },
+    {
+      "path": "gfx/map/map_object_data/latin_lighthouse_01.bin",
+      "bytes": 3280,
+      "sha256": "72D78A182EEFDEEDB11981B38C976C6800A265806917987FD55CBC5D925C8FF5"
+    },
+    {
+      "path": "gfx/map/map_object_data/layers.txt",
+      "bytes": 3223,
+      "sha256": "668FFC3774D2C5E60D7476D65308B7DFF3ED019B0FC6A9F2CD6D632CFB77DC4B"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_1_0.bin",
+      "bytes": 148200,
+      "sha256": "809EC1ED16CCC6DFE3F78096ED0A5B0AFFC62042A529C4951C3CB9774293D7B7"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_1_1.bin",
+      "bytes": 152520,
+      "sha256": "46BB86E841701A152F228EAF4E0A98169513572DD1BF52BED36643312D1B115D"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_1_2.bin",
+      "bytes": 154800,
+      "sha256": "6F71C46CA68DBC5C4A5AB28C2F192C79F519273A847A514918825D4FFBA33EB9"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_1_3.bin",
+      "bytes": 154280,
+      "sha256": "EFC6A4820AE82F43E8F28A55DBC0E9804C8DFBC63AAEE9006B5BD9E19B4D009E"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_1_4.bin",
+      "bytes": 153280,
+      "sha256": "DFFD026E91323029EF3EB0B1C0DF168F1FB34B4287E74994B407E5F52AB61075"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_2_0.bin",
+      "bytes": 361240,
+      "sha256": "6518D0B46AE318CD776F5775217A010B7CD745BEFE6821A926F6B86F08B574E4"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_2_1.bin",
+      "bytes": 358840,
+      "sha256": "9D98D65CF8741417D53AF83BB64D74154EED7C0C93A0047103AD894822BF8117"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_2_2.bin",
+      "bytes": 366520,
+      "sha256": "A1BA23BF68C474810D9433BCFC4AEA2DBABC8C3D0D8D342CD88E7AE4089BB61D"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_2_3.bin",
+      "bytes": 360320,
+      "sha256": "56B3AF992C2C34FFFDF4D509338F6F036FD853C6E04E3850F37ADE16DB360707"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_2_4.bin",
+      "bytes": 361640,
+      "sha256": "1EF2F44BE978A28AFB7B1C856DFC71FD6AEAD4D34F02824068FBA5F04CB4FC44"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_3_0.bin",
+      "bytes": 453360,
+      "sha256": "85BEE1E945F809848CB32B3BC28720DA3D24E7B00B31D852C7D9961CB2A29541"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_3_1.bin",
+      "bytes": 456560,
+      "sha256": "C88D8961AAA24C08FE834E37CB243DB2883AD883556C5596E3FF4A664672541A"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_3_2.bin",
+      "bytes": 445560,
+      "sha256": "55A3C921ACECF6F684E707BECB821A692B5CD232C233D1F5E942670418FD84E7"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_3_3.bin",
+      "bytes": 451560,
+      "sha256": "34858C248DCC4D89E625B30276BF8CB41EB1554248D18FF59DC34216E7DC409C"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_dense_generator_3_4.bin",
+      "bytes": 451640,
+      "sha256": "4A66CC2BB2B09AA211DADC40E94F9F8E1DB5A8903DB0286942D23C7A6D7E03B8"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_1_0.bin",
+      "bytes": 170160,
+      "sha256": "A7186CB09AAD6A5B4AF5CCD9B84E1F23C33E1C3FFF0CEC0393A2D1C84C819CFA"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_1_1.bin",
+      "bytes": 169560,
+      "sha256": "B037E0EC4CF00C991F7D543DC811B6F3AAAFF601426B9803BC40850BAB0A5302"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_1_2.bin",
+      "bytes": 171600,
+      "sha256": "4666F99F6DC5AD126B2C04DFE550D26716FA1B1DCB9DA89AD9B6B2D04617FF92"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_1_3.bin",
+      "bytes": 171280,
+      "sha256": "A38233E20C24D0D0A41DD1C9688D07B932CC0D3F9B4606E4AEDD8A158BAAAD81"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_1_4.bin",
+      "bytes": 164520,
+      "sha256": "2B4A1462A25BDC9916EE4BEC1E3F77900EED8AC8B7487A184596C81075A50A23"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_2_0.bin",
+      "bytes": 482200,
+      "sha256": "541D22165D5172F7B6396EE0D8483A48986D2FF0B13B2DE9F57EAB978F3CF00F"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_2_1.bin",
+      "bytes": 467880,
+      "sha256": "EE84DD8D5D5BC7E6FBCCC3758B82B881A5A67B34F5466A6CD2063B92123A1B96"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_2_2.bin",
+      "bytes": 469760,
+      "sha256": "69CFF498B6C2B7C81CDF26D357EB4624FB78704A65D095AE2DC45F786FBC0945"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_2_3.bin",
+      "bytes": 466640,
+      "sha256": "34AEBDAA18035BE95993BC43D3E6BE591BA6E9CAA8771EE0941E16CCB3D611EC"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_2_4.bin",
+      "bytes": 466960,
+      "sha256": "0EAD2E7418332C926E0D26F7933E262259BBE75F01A84E56CDB67BB96D7F2B7B"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_3_0.bin",
+      "bytes": 550960,
+      "sha256": "2B1B3B97BA0FEDEC87685C2FD12CABCC4D170E58F7B170274C9195222AB0A830"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_3_1.bin",
+      "bytes": 553520,
+      "sha256": "41EF223AF5684477949754322DA63D0FC903FF3E894652943EE647C76934116E"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_3_2.bin",
+      "bytes": 558440,
+      "sha256": "551E111BCCBBDBE6007994FB4176A2C8F28958C1F68C5DECFB48205866B7CA09"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_3_3.bin",
+      "bytes": 563320,
+      "sha256": "9B82465557E313CCF7F3D9BC49BE468F5765C17ABC96C3B1D8A9AA2FCED66ABE"
+    },
+    {
+      "path": "gfx/map/map_object_data/oak_generator_3_4.bin",
+      "bytes": 553960,
+      "sha256": "EE73695AE089A10C711311B90391083A962E24AA6025ED9E6898C0EF7D0A3361"
+    },
+    {
+      "path": "gfx/map/map_object_data/papermap_edge.txt",
+      "bytes": 977,
+      "sha256": "EDDB21FEF37F879DB921882CC882E052DDB38B4EC332A7E9B69790F6DA2AB146"
+    },
+    {
+      "path": "gfx/map/map_object_data/papermap_extensions_locators.txt",
+      "bytes": 1344,
+      "sha256": "FF37FD01446492D80F8D8518FB266D23763F5DA6C65E42FD31D131E73CDD34B7"
+    },
+    {
+      "path": "gfx/map/map_object_data/papermap_items_locators.txt",
+      "bytes": 1677,
+      "sha256": "A4BD75AFC718FEF3541F196419BEC86F22108FDC43B18280590D9F651332DF0B"
+    },
+    {
+      "path": "gfx/map/map_object_data/papermap_table_ip2_locators.txt",
+      "bytes": 1365,
+      "sha256": "7CE4F7A539C42FF66073F424228AC0DC4592AB81CC3AFFA2E843AA2464A754FA"
+    },
+    {
+      "path": "gfx/map/map_object_data/papermap_table_ip3_locators.txt",
+      "bytes": 1928,
+      "sha256": "9570EBFC0819E4572CB9CF49A16BD696EE26BCD8613E6773CD5158D9D6641B95"
+    },
+    {
+      "path": "gfx/map/map_object_data/papermap_table_ip4_locators.txt",
+      "bytes": 1925,
+      "sha256": "A14C8CBCE75B36FF6069495B0A3232C719E664F8C2729CF5410F8DADD8C0A02F"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_1_1.bin",
+      "bytes": 438800,
+      "sha256": "5FF1E01A9D6FEB27D37667533919F87D52DE3F8781A0641520C1CCC2D5B66605"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_1_2.bin",
+      "bytes": 443600,
+      "sha256": "FD44C4BF27C00FAF3536B2E1562E2E192D280C22B63C21FE3F38508563C5B1A4"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_1_3.bin",
+      "bytes": 433120,
+      "sha256": "E20092C309BBB64B5F4C732DF09A5DA721E5575EEF144242A6485EDED4C9567D"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_1_4.bin",
+      "bytes": 438200,
+      "sha256": "445235E250A92A3D617DAAF2E86C495C235C24AFF583402ADD0D0BD55A66042E"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_2_1.bin",
+      "bytes": 2285960,
+      "sha256": "55012FC79A9E509D4C46E3DE85E53B2CCBFD70439B8FA36EDF66BE077A2155A4"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_2_2.bin",
+      "bytes": 2284800,
+      "sha256": "BF8863036E5F70BF69BF5E6687FFB328C084F7DAC40DA41E8F2774CAA13C163C"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_2_3.bin",
+      "bytes": 2283280,
+      "sha256": "4DF6157C0CB282F553248C80F4768BD29BB5EE1D0056EAD2F25168A5D86D09FF"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_2_4.bin",
+      "bytes": 2294040,
+      "sha256": "AB459575929F0384EE0FE4026BC90E84A79EA76248884F6A04431004E2F25881"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_3_0.bin",
+      "bytes": 1761480,
+      "sha256": "EBC7D83D611BAC6C7A60F5C256261BE3D5231E464FDBA41EBA856417470E8680"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_3_1.bin",
+      "bytes": 1757560,
+      "sha256": "8B7436BCFEBD93B22C1B6EBC737BAE31A5347E26D9C266BE6F87603592FA7239"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_3_2.bin",
+      "bytes": 1757040,
+      "sha256": "EFF6F4CF42B81C6A8C3E51B88CDB9B412673B3F50917BAF44DAB964127637976"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_3_3.bin",
+      "bytes": 1781800,
+      "sha256": "35E46110D3487E2D5A7968883D684A4D01E7DC40CC8A42007CF6FF76950DDD59"
+    },
+    {
+      "path": "gfx/map/map_object_data/pine_dense_generator_3_4.bin",
+      "bytes": 1769600,
+      "sha256": "4605BF15B2C4518D091C98A836EB36FC84B3BF79D812BDDE4808FC77261A37F9"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_armed_forces_0.bin",
+      "bytes": 683800,
+      "sha256": "CACAF839E9569FAFBDB0F61FFDFD312EA7C1A2BFCAFAB34C7B97B0FF7637815E"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_armed_forces_1.bin",
+      "bytes": 518800,
+      "sha256": "C229BF39EFB0BD31DEAD630C2E9CE48420990B9DB5C1FEB2939DBADD220408D9"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_armed_forces_2.bin",
+      "bytes": 519240,
+      "sha256": "CAFEF2180062883CCC1A69A41D1C23373310B7BABFEE09D2E136B5A68AA1C211"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_devout_0.bin",
+      "bytes": 704040,
+      "sha256": "EE1965736F0A5B816168B75D751E63B2B29FE48ABF8E7D3254D2B5874F243A97"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_devout_1.bin",
+      "bytes": 523120,
+      "sha256": "E3A56DB937D35EA4D920BAFE9623B503B2C99264E6ADE9C9D8532814E8530223"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_devout_2.bin",
+      "bytes": 518080,
+      "sha256": "2DCFD500DB549878B3442F35622C61DEA45B1AF6805109A5D0F0A403B921E4F7"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_industrialists_0.bin",
+      "bytes": 708800,
+      "sha256": "0F5E52EF1261807972C2A48D392E87B7FC72CE356386D57828651E9C832E2FEA"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_industrialists_1.bin",
+      "bytes": 538840,
+      "sha256": "ED3592FF1D0172534C4E29A6F420ACD08C1AA4F9E0618BC84DCE2F2E4FD2B2AB"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_industrialists_2.bin",
+      "bytes": 532760,
+      "sha256": "9364301026CFC25E2EB5B3A79429A346694EE7A3DFE255FBBC6BA2A2CE38D84C"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_intelligentsia_0.bin",
+      "bytes": 733000,
+      "sha256": "4908DD3D54437670EDB2D9DB1647A544DB74EEFE0371979C8285CB32BE9304C8"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_intelligentsia_1.bin",
+      "bytes": 540160,
+      "sha256": "E0A89517D14B63DA528BCCFC993A9E87BE608824977D4E62810DDF7025EF0855"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_intelligentsia_2.bin",
+      "bytes": 548760,
+      "sha256": "29F1EE6F78A8146D4A438B2B43888E92868366FF7F657DD09C676073B4E7D645"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_landowners_0.bin",
+      "bytes": 752280,
+      "sha256": "0771D5F6620FE5C762898C4BA4ED7D2D404A4FC0DAB196517CBF828B19725C3B"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_landowners_1.bin",
+      "bytes": 555280,
+      "sha256": "BC366D8C6008C542DF7DD52D64C63DA46AD34547C1F9B128E904ADFD76845BE5"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_landowners_2.bin",
+      "bytes": 566160,
+      "sha256": "FFB508A5772C002596229B80F157BF2567BA66AFD7F989029F26B7FEB3C2F3FC"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_petty_bourgeoisie_0.bin",
+      "bytes": 750120,
+      "sha256": "1CA901609EEC49A81DD20A04BE42867F3E7CE73D205B0067AFBBFC537497AA18"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_petty_bourgeoisie_1.bin",
+      "bytes": 563880,
+      "sha256": "670C1AE4EEE7AA117A87CBA68886CE45BB490210D771CF75B92835E9FD06DED1"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_petty_bourgeoisie_2.bin",
+      "bytes": 563520,
+      "sha256": "08251B2F0366F877FE3016CDB20D94EDCE010427E666E55D7FCB38FDB3C18C63"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_rural_folk_0.bin",
+      "bytes": 734040,
+      "sha256": "14F43FC4802F798D594143556C8679EE465AA6612E23432C84C61E2AAD2F38B8"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_rural_folk_1.bin",
+      "bytes": 543960,
+      "sha256": "834C54BED4A8DD138F80F2A2209969A984802672DF558D79C414643004383C1E"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_rural_folk_2.bin",
+      "bytes": 542960,
+      "sha256": "4E2540521FFC90955A0425FC0409F86F909979059DC88156C66DD6BD0C42828D"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_trade_unions_0.bin",
+      "bytes": 753920,
+      "sha256": "188BC35E361D53F1ACC43861FE7D5B6E7C4A2CD6260B67EE9A0C76D610098C71"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_trade_unions_1.bin",
+      "bytes": 552640,
+      "sha256": "2BFCCB4A3A2B6EB21276D3745DD4ABE8BCA464413F8912ADE6DBBAA4C35ECCE6"
+    },
+    {
+      "path": "gfx/map/map_object_data/revolution_mapobject_generator_trade_unions_2.bin",
+      "bytes": 559560,
+      "sha256": "522B9F0C268FF2449AF02D61C4F67E5DBA48B32A671FECD9012E82944D4E1FB6"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_granite_03.bin",
+      "bytes": 520,
+      "sha256": "C1B627DBC77FE0D249733C1F95CC7A7B26663E96326CE3C7363A3104A7CAC6C2"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_granite_04.bin",
+      "bytes": 800,
+      "sha256": "3780E2CD5BD3FF0CE00AC52114F371481F2E77208CA6566B61777F6BC95D1B5E"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_granite_05.bin",
+      "bytes": 800,
+      "sha256": "9536E507E7A80B773EEED39D4E52A027F41429EA4DB64A76CBDBF4436C4FF215"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_granite_06.bin",
+      "bytes": 960,
+      "sha256": "01409FA201F8996AD7E050737396D7361AD901887D093BE1E134468EFDFFA6D0"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_sandstone_01.bin",
+      "bytes": 280,
+      "sha256": "28478F283292D803D7B193A81678B135B8CA93EBEC4582DA36D7220E57036D9E"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_sandstone_03.bin",
+      "bytes": 1000,
+      "sha256": "2A6C59375FAA87898DB84D4AC3827144957ED0F2AAAA81D9A27A9FC707889A7F"
+    },
+    {
+      "path": "gfx/map/map_object_data/rockformation_sandstone_06.bin",
+      "bytes": 280,
+      "sha256": "6D1C4BFB230A520B18428E3CA66CBC2B68D6BA5798B4649EF60ACAC5E3740403"
+    },
+    {
+      "path": "gfx/map/map_object_data/rubber_lodge_01.bin",
+      "bytes": 40,
+      "sha256": "476302FB554163A7ED0123DAE455B357D102A939CC9A239B98C2717DF90E08A2"
+    },
+    {
+      "path": "gfx/map/map_object_data/sandstone_monument.txt",
+      "bytes": 299,
+      "sha256": "23E4C89BF6D1A2FF68206BD64CBF85209ED54F347063A5C1155782BDD8F1AD3F"
+    },
+    {
+      "path": "gfx/map/map_object_data/seagull_01.bin",
+      "bytes": 13880,
+      "sha256": "886F717FF7F342CC39CF1F8F192DDB6169AF1DA4C4CF28C3653014B97958CB43"
+    },
+    {
+      "path": "gfx/map/map_object_data/smoke_chimney_01.bin",
+      "bytes": 80,
+      "sha256": "C5A7798F5172585669E22D668D320F7AF08C2D03AF296F06B7DB9EBB6FE72283"
+    },
+    {
+      "path": "gfx/map/map_object_data/static.txt",
+      "bytes": 8205,
+      "sha256": "545DC1E0E6916F1A269AABB3D071967E1A289E2378D91C53A7011D4EE343E2A1"
+    },
+    {
+      "path": "gfx/map/map_object_data/unique_buildings.txt",
+      "bytes": 7729,
+      "sha256": "CD4AA27E2523C3A7B990016E85AB07F57B265A48478EB0B4C5A717F3C9267321"
+    },
+    {
+      "path": "gfx/map/map_object_data/whale_01.bin",
+      "bytes": 640,
+      "sha256": "5E553F2740B37BC989EF674A2D9FBEB64C796B8ECF561EDDAF07EE44F596B16A"
+    },
+    {
+      "path": "gfx/map/map_object_data/whale_white_01.bin",
+      "bytes": 40,
+      "sha256": "8E7D150C010D372BB03A5A22DD8A8FE1A9F0310D8FF8C3D759113F7A66C93E1E"
+    },
+    {
+      "path": "gfx/map/map_object_data/wonder_great_wall_of_china.txt",
+      "bytes": 20471,
+      "sha256": "53255343324F5B79DB0E9E5BCA66596F82A2E00AFD751AEFA1EB6992F1548A38"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/african_dynamic_farmland_objects_generator_1.txt",
+      "bytes": 689495,
+      "sha256": "720B989BA1FE6B1F2D33E42BE69284E4E217B741284F7F14E615735E665D0CC7"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/african_dynamic_forestry_objects_generator_1.txt",
+      "bytes": 66830,
+      "sha256": "098E4BCB7ECCD7543E54ABC5BCD13DCE5EFED795EB8B7E5D59318013CE24A129"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/african_dynamic_forestry_objects_generator_2.txt",
+      "bytes": 791959,
+      "sha256": "F2B4D89D0B530E165743DCC6A954A0DD23FF5AE9F3EB4D90EF60D817106F82DF"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/african_dynamic_mining_objects_generator_1.txt",
+      "bytes": 184533,
+      "sha256": "7BB380D7AA99E1EBE82289376BDFA84F1F980F3BD4351EFE25AFE1679FA9B20B"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/arabic_dynamic_farmland_objects_generator_1.txt",
+      "bytes": 816261,
+      "sha256": "5EA3962B4D30B8E203E7EC4CBECF22239CBA205393BF111FF4E91C2F850551D5"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/arabic_dynamic_forestry_objects_generator_1.txt",
+      "bytes": 22369,
+      "sha256": "DEF6491CB77A08EE6AA5C0AE507B66A3C691697787E8B1ABDE5EB8D17FBB33F7"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/arabic_dynamic_forestry_objects_generator_2.txt",
+      "bytes": 186499,
+      "sha256": "5AFF49854D3D1DC2FEF3E8A823A1EC71B37000A162FE53EDF9FF647552DEE694"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/arabic_dynamic_mining_objects_generator_1.txt",
+      "bytes": 295794,
+      "sha256": "7EA82B37701B9C5DF55660AAA2D3B5DC833F2C19771E00F828689235291C74F4"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/asian_dynamic_farmland_objects_generator_1.txt",
+      "bytes": 873456,
+      "sha256": "A98CC339931E7A2FD2900E654DEA13F7B5AB9272E80F4196E08AF19C78C693DA"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/asian_dynamic_forestry_objects_generator_1.txt",
+      "bytes": 43503,
+      "sha256": "B24E19D2DD5038DB369F3451009C4A8F59FB2A74EACBA8054B33544AA4007E15"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/asian_dynamic_forestry_objects_generator_2.txt",
+      "bytes": 426328,
+      "sha256": "9E84F528FD01EB9C793A9DCE1D447EA30CF0BA6E21AC3CBE562A5D06C76257A9"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/asian_dynamic_mining_objects_generator_1.txt",
+      "bytes": 170620,
+      "sha256": "50763FFA96789588A208A36980528FAE3726744C94A39EE1573135FF68FCC938"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/baobab_generator_1.txt",
+      "bytes": 147080,
+      "sha256": "13D8249C8A4D1BD7DE4E9ED237587970AEAA40078A5EF9FDBAEF17EBC35E268D"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/baobab_generator_2.txt",
+      "bytes": 308313,
+      "sha256": "0AE50BA9C9565A95D69BD291A92487BA25C94C8330864A77441A19BC9EF96A42"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/baobab_generator_3.txt",
+      "bytes": 679547,
+      "sha256": "9AEA54C97FFFE393B02C47F80E6409887B4C905C34CB5F09782DCE469F1C7EBF"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/bush_01_generator_1.txt",
+      "bytes": 485,
+      "sha256": "962C4B5C06B125B7BE296EA14C570152F0DF5AFBEBA43750FE9456EB4A32D94A"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/bush_01_generator_2.txt",
+      "bytes": 481,
+      "sha256": "5626F9446A667A6A80D2C1E2F00AAC3842FE505D7AD946405B6D4A52508F0E84"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/bush_02_generator_1.txt",
+      "bytes": 343080,
+      "sha256": "6526917251645459093FEF57EF23083E6B61A6EE76A625448E2347AF4F68C8A3"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/bush_02_generator_2.txt",
+      "bytes": 1149088,
+      "sha256": "9202A0B26E243C2D906A871470699BFA951488FBB0C7F8A3A22FEB0A5B1C1E7D"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/bush_dry_02_generator_1.txt",
+      "bytes": 119356,
+      "sha256": "2E6F03D05BDA513C30984197FFDC1A91BD0D2712F20C370756B4162E7D02021F"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/bush_dry_02_generator_2.txt",
+      "bytes": 168384,
+      "sha256": "FB30F55C60FCE903F221F4FB5B383FBD0CED1C17FE1370E2CDF707D08D787F67"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_dense_generator_1.txt",
+      "bytes": 1637439,
+      "sha256": "9B4960DA228839B0D36B3A16FF06B74A60BDFBC83A70C2EE25B98779E5156AC3"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_dense_generator_2.txt",
+      "bytes": 2468309,
+      "sha256": "629165A92E57A28B38C3A25078FBA35D1D7E4DEE1E090D11CBB51DBEA09944C2"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_dense_generator_3.txt",
+      "bytes": 2425940,
+      "sha256": "3162CC12D48352789256DBEBE28412F8C6A60EDFBA51680AD0224223D4F84DE1"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_1.txt",
+      "bytes": 585,
+      "sha256": "B481A5A1EC8E29216936E7B2662EC13E0604E5E6374FAC2EABA526EE0727AD71"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_2.txt",
+      "bytes": 599,
+      "sha256": "90EE979946756CEF250727A1381A7E7BC6380CB42965C72E286881C825764178"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_3.txt",
+      "bytes": 595,
+      "sha256": "377679D779B2B78FACBEFD90E8A4B9F8DB9A425E17954F6A7D8153DB158E692E"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_1.txt",
+      "bytes": 589,
+      "sha256": "93901CB62BAE6B4EDD94924CBA8AF3B8E6458CBD22AE999BA3DBC1859F9800A7"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_2.txt",
+      "bytes": 603,
+      "sha256": "02AC359741FF9987BCE6A04308CB23E90BE695A82B3F09AC66BB282B39BBC38D"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_3.txt",
+      "bytes": 599,
+      "sha256": "8718578132EE3368ED63874E1F474DEA28365B3E0ECB1E4CB62ADC7743B7372B"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/european_dynamic_farmland_objects_generator_1.txt",
+      "bytes": 11348097,
+      "sha256": "EFB95692BA225A45DB8699806F5068099C025ED2142C85CA1B0BC95C2BEFFECD"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/european_dynamic_forestry_objects_generator_1.txt",
+      "bytes": 1257090,
+      "sha256": "A85DB1E428C1FA716953C71021B5709539BB45534E0DA711C89C4AC3906CA26C"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/european_dynamic_forestry_objects_generator_2.txt",
+      "bytes": 5879104,
+      "sha256": "A021236F0D74BAFA2941327C9EE582F85F93824244D00A50AD3BA4A5A396A54E"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/european_dynamic_mining_objects_generator_1.txt",
+      "bytes": 799006,
+      "sha256": "19D97AE4DD5FFD432522D5088F86CCE5C9E59183B1B94303DE61040C8BB03E02"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/iceberg_generator_1.txt",
+      "bytes": 40381,
+      "sha256": "66B36DB5F18EAD22A9C6590C7686C07CC4CEE58D6F2E83D059FE89AE61CAFAD7"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/latin_dynamic_farmland_objects_generator_1.txt",
+      "bytes": 1052605,
+      "sha256": "95378820718F0F872C031C5CC23B9E2DB5C77745BD2B3ED7F88F0215C9B373D0"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/latin_dynamic_forestry_objects_generator_1.txt",
+      "bytes": 84838,
+      "sha256": "C167A3C0A699D9F34AE5F2604050F659144B7C7589E11BF026DFB79E3D9E5743"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/latin_dynamic_forestry_objects_generator_2.txt",
+      "bytes": 1360383,
+      "sha256": "C1A855E08F85603AABB6F197445E8C9748D27C87B1C66F14BD965AC10AB07937"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/latin_dynamic_mining_objects_generator_1.txt",
+      "bytes": 183139,
+      "sha256": "37EB452B4057BBA79F4BBF3F3956089C3F8F68BFBED42D79E13A51E96E37AE55"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/oak_dense_generator_1.txt",
+      "bytes": 1194,
+      "sha256": "D10986CC4EDFFA7B1AD66301D153E47C27AE7EC7DA92D5DF52F39ADFB5E48B43"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/oak_dense_generator_2.txt",
+      "bytes": 1229,
+      "sha256": "99263855D50CDE9797D79F75A54436122B3A6E8D81E84D1A7540D4F6EAC5E6D5"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/oak_dense_generator_3.txt",
+      "bytes": 1219,
+      "sha256": "7902EAF95063FC46C20FAF7C3E84778060EE1BE6799801E2FF33811B2E8067EE"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/oak_generator_1.txt",
+      "bytes": 1134,
+      "sha256": "6D8DDAD051B74E95B35B3F8C8AB98FA82D5E82F7688A90B42101CF051F916D4F"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/oak_generator_2.txt",
+      "bytes": 1169,
+      "sha256": "BF303F3F5BD5813FB6E5A3D84DD1CD815EB2D19018E90E85304EE30BD2EFAC56"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/oak_generator_3.txt",
+      "bytes": 1159,
+      "sha256": "89D7F2C91D01EE96C9E2B2A500B050705C0AB4942218BB879DA6FE705778BA40"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/palm_dense_generator_1.txt",
+      "bytes": 434201,
+      "sha256": "8AF6E362D6018B441403DF2EEF5788EF274DD89DAAB0218F202326103A5E43B6"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/palm_dense_generator_2.txt",
+      "bytes": 904003,
+      "sha256": "05878F7BE763EB7BE7659A04A6591119E8465786A39F2DB0D28488448BBED108"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/palm_dense_generator_3.txt",
+      "bytes": 831699,
+      "sha256": "8071A2985383F6EF2ED3DE4D39725DC129DCB8B030284DD1CD0271ACB3A09549"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/pine_dense_generator_1.txt",
+      "bytes": 1128,
+      "sha256": "EEFDBC15FFAD814A5BCBCB044147CE54991233CF2392FB55E1F7AE663A221AEB"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/pine_dense_generator_2.txt",
+      "bytes": 1163,
+      "sha256": "0CA7A0FA89AEC3127E32F26B10343824DC32DCDD98D4A2F822B3B37CAEB37C2A"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/pine_dense_generator_3.txt",
+      "bytes": 1228,
+      "sha256": "6FBCB8F007FCB5D07617E805E362C740E07677FB2117E1427970FF55CC27377F"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/pine_sparse_generator_1.txt",
+      "bytes": 262564,
+      "sha256": "7B97A924851FBD8BA3F37B0842893871773BA31BEBA71B523FDA95CF23D97987"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/pine_sparse_generator_2.txt",
+      "bytes": 1148009,
+      "sha256": "5CA8DA44F91B63F6D8A22F9D9BF4AA9614BB19DE67C474EB0390E530E6407EC6"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/pine_sparse_generator_3.txt",
+      "bytes": 1219480,
+      "sha256": "DD63CA159E436164868138A226207A572CC3A98E9C5ED4E74D3795855391C38E"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/rainforest_generator_1.txt",
+      "bytes": 6957745,
+      "sha256": "C0468C8590CEA80A08128EEF0546D0D818676CD5619E519FCEECAA0CE527E821"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/rainforest_generator_2.txt",
+      "bytes": 13654967,
+      "sha256": "12AD278367566284153C40963EBFC7EABEAA8E5D29B1849AD506CD2D33FF8174"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/rainforest_generator_3.txt",
+      "bytes": 25637280,
+      "sha256": "BCE962CC6B9DF0C9325704C0D2AE54781495542E0D5391E564D3660112FDAC61"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/rainforest_sparse_generator_1.txt",
+      "bytes": 713517,
+      "sha256": "B372CA71F3D237BE5D7C0B0795C30423550347ECF925BFD87DD0C9EAF54FC33F"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/rainforest_sparse_generator_2.txt",
+      "bytes": 1092316,
+      "sha256": "37BE657A5255D12536BB7E3AC92F431CA7E9557D798ABA77579E4620CB403B4C"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/rainforest_sparse_generator_3.txt",
+      "bytes": 1043776,
+      "sha256": "8930D2044508940DC4B148EE0AF5C04FA2A103380DCF823B40A6862807D001BF"
+    },
+    {
+      "path": "gfx/map/map_object_data/generated/savanna_tree_generator_1.txt",
+      "bytes": 156422,
+      "sha256": "537A9EED0BB50D72BCC15CBE3490ADF6FD6723805EFF659D243551A6EBE43DBC"
+    },
+    {
+      "path": "gfx/map/map_painting/ally_military.dds",
+      "bytes": 349680,
+      "sha256": "C2891ED950C655CCC3949755D0C8F881F02DCCA3545845B1B797441EF662CC7A"
+    },
+    {
+      "path": "gfx/map/map_painting/ally_warleader.dds",
+      "bytes": 349680,
+      "sha256": "0F713438C18C63B66D5C876C16944961E897590FD1368648BEA5989E87964EB3"
+    },
+    {
+      "path": "gfx/map/map_painting/amicable.dds",
+      "bytes": 349680,
+      "sha256": "8EBB3ADBF64B9FD9D4C1D5DBE4FAFBE293D47A58DC74F750A284F59D79099260"
+    },
+    {
+      "path": "gfx/map/map_painting/antagonistic_rebellious.dds",
+      "bytes": 349680,
+      "sha256": "6545DBDBF22070CCC8DB05BD3B45EBBF5B61A7E7D9598BCE91D032EB66FEB2A9"
+    },
+    {
+      "path": "gfx/map/map_painting/belligerent_domineering.dds",
+      "bytes": 349680,
+      "sha256": "C4F79597678F136FE78002AD7F816D23C32DFC0B80788EBEBCBAE38492F2A554"
+    },
+    {
+      "path": "gfx/map/map_painting/cautious.dds",
+      "bytes": 349680,
+      "sha256": "33E09BCE3179ACBAC03F2F078DC5A9C431968DF14BC59EC0939D5951928B3A5E"
+    },
+    {
+      "path": "gfx/map/map_painting/cold.dds",
+      "bytes": 349680,
+      "sha256": "0EBB3A3274420123FF52DC2FC209032AE4C4AA5BEFB41EDA09A32E17EED593CF"
+    },
+    {
+      "path": "gfx/map/map_painting/conciliatory_cooperative.dds",
+      "bytes": 349680,
+      "sha256": "91ED712F6596ABC780C9378A5ADD01F34C8097B8F7F88A459582B33735791BB2"
+    },
+    {
+      "path": "gfx/map/map_painting/conscripts_interaction.dds",
+      "bytes": 349680,
+      "sha256": "9DE324E88B60F71096EDB13BC022CBEFC78DFAFD591A7DC7C0BF9E77B17CB0BD"
+    },
+    {
+      "path": "gfx/map/map_painting/cordial.dds",
+      "bytes": 349680,
+      "sha256": "6B00B2477395377732E0C254FC49D6E3B4394D0F673F61730CD9056A71CCF702"
+    },
+    {
+      "path": "gfx/map/map_painting/declare_interest_blue.dds",
+      "bytes": 349680,
+      "sha256": "B064540948A6FF48881DBC3124D37CA758A18091F6B7C691525B193D03E03939"
+    },
+    {
+      "path": "gfx/map/map_painting/declare_interest_orange.dds",
+      "bytes": 349680,
+      "sha256": "13F4C0D7251F42DFE4E296FD1276D39A8BBD13D9EBAC4878A6948585E93B97E5"
+    },
+    {
+      "path": "gfx/map/map_painting/diplomatic_actions_blue.dds",
+      "bytes": 349680,
+      "sha256": "90A8035ED028A99FD9FC3F95526951AEC6BEFD65A77B0A4BAB3CF755A4DA65FE"
+    },
+    {
+      "path": "gfx/map/map_painting/diplomatic_actions_orange.dds",
+      "bytes": 349680,
+      "sha256": "A010EA183DC0B580A018C55208F22E5273A6C5604FED04DAE1F0E4050CC7510E"
+    },
+    {
+      "path": "gfx/map/map_painting/diplomatic_play.dds",
+      "bytes": 349680,
+      "sha256": "7CCA31A7031573B5A8E5A32E2F69F0FC9D98BFC2616FFD9F19D3301D9CE86111"
+    },
+    {
+      "path": "gfx/map/map_painting/disinterested.dds",
+      "bytes": 349680,
+      "sha256": "CFE48AF2C16F7D5CC97969CEC58C8AFB1BC679DDE670270E8230DC54B2F10FC2"
+    },
+    {
+      "path": "gfx/map/map_painting/enemy_military.dds",
+      "bytes": 349680,
+      "sha256": "B6E81D46311EFF8144E88A232D79D3FCB49E96CF54AC318F92F2AC8C0161AC58"
+    },
+    {
+      "path": "gfx/map/map_painting/enemy_warleader.dds",
+      "bytes": 349680,
+      "sha256": "D480E1704183ACB8654AB4CB7F96C84B4915CA7CA92C83CD614A984566ABAE8B"
+    },
+    {
+      "path": "gfx/map/map_painting/establish_colony.dds",
+      "bytes": 349680,
+      "sha256": "54D01CB7104882FF46C93871D3226E8B4301265FFFF33DC24EE2B6DC847EF744"
+    },
+    {
+      "path": "gfx/map/map_painting/friendly.dds",
+      "bytes": 349680,
+      "sha256": "0FA2601C63CBA72D09618018DDC2DA1B61B24B4057486384237E54BE29046D36"
+    },
+    {
+      "path": "gfx/map/map_painting/genial.dds",
+      "bytes": 349680,
+      "sha256": "1586BC14988F800A2176E41B53BFA40D3B37E4CAEE8AC1AF3B1B38C64E887D20"
+    },
+    {
+      "path": "gfx/map/map_painting/hammer_green.dds",
+      "bytes": 349680,
+      "sha256": "EE7A9CE04D6E1245E19EFAEA60B00D60B486D5B1D5B4E222294D8226207972DC"
+    },
+    {
+      "path": "gfx/map/map_painting/hammer_orange.dds",
+      "bytes": 349680,
+      "sha256": "216152AB57A302D858A17AD847B8148D7D9752A946221954B2F97D8F169761E2"
+    },
+    {
+      "path": "gfx/map/map_painting/hostile.dds",
+      "bytes": 349680,
+      "sha256": "CFC01D9392AF17B66B232EB947010D83A5A6471270E69BF8E8E02C4D375B117E"
+    },
+    {
+      "path": "gfx/map/map_painting/import_export.dds",
+      "bytes": 349680,
+      "sha256": "C80B4561A45073F0912ECCE5414D1BF970F5E64D5772BAFA1F4F9D78423E2839"
+    },
+    {
+      "path": "gfx/map/map_painting/incorporate_state_blue.dds",
+      "bytes": 349680,
+      "sha256": "8832A0214FF9CF4B4F3B4CDFFEC8197644825880D20CF73466F23CFDF54B382B"
+    },
+    {
+      "path": "gfx/map/map_painting/incorporate_state_orange.dds",
+      "bytes": 349680,
+      "sha256": "323B1F55CF75EB432171ED40E9AC0A12F3A444C714C5D61816C4F60093573B05"
+    },
+    {
+      "path": "gfx/map/map_painting/issue_decree.dds",
+      "bytes": 349680,
+      "sha256": "4051391DFB02B289D86ADED80B49E33BB6F86F42E7AB9DDF6B23F29BA57F6C3E"
+    },
+    {
+      "path": "gfx/map/map_painting/loyal_protective.dds",
+      "bytes": 349680,
+      "sha256": "DF057D03198265866978FD563CD838A13EC1C8D8BAEB75B71E1E6F907C803FF1"
+    },
+    {
+      "path": "gfx/map/map_painting/move_capital.dds",
+      "bytes": 349680,
+      "sha256": "75F7932AB3A542A60417D1DC18F9632D802B077E6E212BAA0406B04A96FEB0EC"
+    },
+    {
+      "path": "gfx/map/map_painting/move_market_capital.dds",
+      "bytes": 349680,
+      "sha256": "A50BEEB673CF9F33069970B8D20FB06CAFA6AFFFDCAA71116CA7965322B15448"
+    },
+    {
+      "path": "gfx/map/map_painting/neutral.dds",
+      "bytes": 349680,
+      "sha256": "F0160542B27BC111CF5B91E92D3D9E220117B3FBDDCEB6D0C08057109DFCB913"
+    },
+    {
+      "path": "gfx/map/map_painting/orange.dds",
+      "bytes": 349680,
+      "sha256": "B907B91076504B9CE46CEFA2B375A75A68FFDE631E7BFD4433DAFA2F2E7FDA94"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_alternate_alpha.dds",
+      "bytes": 349680,
+      "sha256": "8A915D452C56D47AAB07E50E6529EC5C91EDC65A8ED421C2AC2097D47AB3F3FE"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_alternate_blue.dds",
+      "bytes": 349680,
+      "sha256": "C2F9064D773A7D60E0A5835DEA8481566A59B375DC210E2DAD3546FB19248D89"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_alternate_green.dds",
+      "bytes": 349680,
+      "sha256": "637FBA2884E2BD79E927F9E1785E0F42123203EC827249C130A00CA2ED94F6BB"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_alternate_red.dds",
+      "bytes": 349680,
+      "sha256": "48ADCF0789140A41519E759A766EE74BAA50CCFD8DA964077EE05B7011E12964"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_blue.dds",
+      "bytes": 349680,
+      "sha256": "B9510D4C99FE9C91B207B353E5D0D0329DCF1463E9258D1D18925539C016425A"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_green.dds",
+      "bytes": 349680,
+      "sha256": "883FC3492C5CB4EC0DDC4E0E540AE94A6F7D79588FBF32418CBB2EF18138DA90"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_pink.dds",
+      "bytes": 349680,
+      "sha256": "C3E34E3E1E80D3E4987C6CEFD2286DFC3182DBAE1FA934C0C2CCA39DCE053913"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_primary_alpha.dds",
+      "bytes": 349680,
+      "sha256": "F8FC125AE511062002D8D063DAB4092435A0B2620FC81FFCF1EF47269538370E"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_primary_blue.dds",
+      "bytes": 349680,
+      "sha256": "32880CB210153786BF50EAD879DD4C413946E9DD655E4D61777424D4A944CE59"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_primary_green.dds",
+      "bytes": 349680,
+      "sha256": "4D6BB480E62DE3197B68DA9DF1F58F190DC747990B24590E75BBA6EF6AB7CB10"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_primary_red.dds",
+      "bytes": 349680,
+      "sha256": "70320006E0DEC50BA9D3C1C854E60E9EDC3C82743BDCCB86B56C866720F9C98A"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_red.dds",
+      "bytes": 349680,
+      "sha256": "BB7FEDAD7DCF5C04BF7CC75A01F3115C7E8A60BF3A240CB63A9C7123641A5010"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_secondary_alpha.dds",
+      "bytes": 349680,
+      "sha256": "A3DCA1AF20E47DB569B9DB67201014BA6DD3AD33F288C6610C1F2779A5D1F288"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_secondary_blue.dds",
+      "bytes": 349680,
+      "sha256": "97E5959795712BB7C100B9CDB9B51C791521E22DA61E0E3D0F87E05E69E1211E"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_secondary_green.dds",
+      "bytes": 349680,
+      "sha256": "434463B80A01E46DC935EED6F0834C0AAB52B6479134EDCFD3F942046A85E597"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_secondary_red.dds",
+      "bytes": 349680,
+      "sha256": "892F9E28C80641730DC3A6769D8AE10BA5C14A20ECF5973894822AB9BD72FB62"
+    },
+    {
+      "path": "gfx/map/map_painting/ph_yellow.dds",
+      "bytes": 349680,
+      "sha256": "7F9F3EAB7C748216672D8B46FA615E538E1E53D1AAEB036F6395AFDEB5817A8E"
+    },
+    {
+      "path": "gfx/map/map_painting/poor.dds",
+      "bytes": 349680,
+      "sha256": "C6D5B3F3348160BE5762D5BD1DE79F1E0541A0E98E9D8C50726DAE210288A9DB"
+    },
+    {
+      "path": "gfx/map/map_painting/this_is_you.dds",
+      "bytes": 349680,
+      "sha256": "16934E24A19BC1E02F02F7D1B8E5CB9388F3B1759D6CDA3230FB6EAE7FD9A1F8"
+    },
+    {
+      "path": "gfx/map/map_painting/wary.dds",
+      "bytes": 349680,
+      "sha256": "5C01E51B05862FEF0C39F2E4609F4DFCA1EB7545152532B91A13B1CE13822031"
+    },
+    {
+      "path": "gfx/map/map_painting/you_military.dds",
+      "bytes": 349680,
+      "sha256": "77B2086AE306E002AF566C2AD19FC8F2E7DD86D3FD0FFC566A1BB95955350CE5"
+    },
+    {
+      "path": "gfx/map/map_painting/you_warleader.dds",
+      "bytes": 349680,
+      "sha256": "5E622CCA346B3BBDDB2F65DEE7E8D3B368FD02CFBEFB2487891228820534236D"
+    },
+    {
+      "path": "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_bad.dds",
+      "bytes": 1398228,
+      "sha256": "3E182EE75D810C9FEE39387C197D4C8DD62E9E958444846051B36670476CEFA9"
+    },
+    {
+      "path": "gfx/map/map_painting/harvest_conditions_map_patterns/harvest_conditions_good.dds",
+      "bytes": 1398228,
+      "sha256": "AE66886D722B9625DE02C481972963253592D74257067E369A56D086C6B2E2FD"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_blockade.dds",
+      "bytes": 349680,
+      "sha256": "57F0FC84ED025C2C2BBC80203887459381453A545F1B5D153991F5E0A7B4F18F"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_hunt_pirates.dds",
+      "bytes": 349680,
+      "sha256": "16E5530E42BB60F1554556937B287F643A754F9A43AC6C4FDCFF5D9214BC62F8"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_intercept.dds",
+      "bytes": 349680,
+      "sha256": "4E7E53E53F161AC7711811CE65BEE0F371DEDD980E0A8A166E787FACDE26AFD7"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_piracy.dds",
+      "bytes": 349680,
+      "sha256": "C5E77136D6BAAE2407909B71F679AA174530A4FE29C157E136091F69C008377F"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_port_bombardment.dds",
+      "bytes": 349680,
+      "sha256": "3952939ED54F44F3B2489A5253EA68CE8A81B357F0EA947B887FE19ACF76919D"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_project_power.dds",
+      "bytes": 349680,
+      "sha256": "6F10340445773882AAB3D4995A9F2996D98A46020974D95BD2EDD8593773A715"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_protect_supply.dds",
+      "bytes": 349680,
+      "sha256": "1F9C6DE9D8972D4A5186AC6AE7C35A826E9668A39DF73A8DCC4B3E6C53B03ED0"
+    },
+    {
+      "path": "gfx/map/map_painting/naval_missions_map_patterns/naval_mission_raid_supply.dds",
+      "bytes": 349680,
+      "sha256": "3DDE16B3C0FD788186529280809544D84D8C6805FE3BA53D78A593EA7B529167"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_01.dds",
+      "bytes": 1398228,
+      "sha256": "0800ACDA04022F4B91F2450209D2606B1BBDE2C263C57E6CB2EEDD807C1ED54E"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_02.dds",
+      "bytes": 1398228,
+      "sha256": "B0B0BE68C95A38126CD0F0E324861EDB80F3157C6BC28E3B1B5B8F46567A6873"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_03.dds",
+      "bytes": 1398228,
+      "sha256": "704FE9945DC20641D6337F9D74631B887E6F38D5FE302E948EF4B9C6BE554E59"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_04.dds",
+      "bytes": 1398228,
+      "sha256": "8379E0E74C844E2BCF73B3982104CFEB1172BB615F19A6A20502D92383CE2455"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_05.dds",
+      "bytes": 1398228,
+      "sha256": "0BF8894D736C1E82D47CA6D6D33AFC29A654801418126800C5B720C5FB294F8C"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_06.dds",
+      "bytes": 1398228,
+      "sha256": "8083F67901F3B28DB74DB59AA47A312E6C7E7BF94A4D444687A70BE792C84CE4"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_07.dds",
+      "bytes": 1398228,
+      "sha256": "D0492A147610F3915A1C06CEC42B832C1ACDEC629925FA0A9D2A393B9547F0CF"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_08.dds",
+      "bytes": 1398228,
+      "sha256": "57AF77EC42C02F7CFC4765F35585114D85E914288B013A31A2C9C3CA9EC70B38"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_09.dds",
+      "bytes": 1398228,
+      "sha256": "A88579D7A7286BACB158C088D2C430A2507035FEB46D2ADC7520ADA214366572"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_10.dds",
+      "bytes": 1398228,
+      "sha256": "BDC181F090469E689EF952E47FE70E103EB06184AC3B1AEED55165C61BF6C971"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_11.dds",
+      "bytes": 1398228,
+      "sha256": "CD935ABFB159AF3225C0D692652E96C6C3DED983E1DA50CB20F2C73B81768EAC"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_12.dds",
+      "bytes": 1398228,
+      "sha256": "90B12642AEE93B428264BEAB8233224B2ED4491BC3000D23C501864BF804CAF6"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_13.dds",
+      "bytes": 1398228,
+      "sha256": "E9EDDDBE974D19DD60752E0ADC7A1F99A57E53FE1D044531FC16E057033954E0"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_14.dds",
+      "bytes": 1398228,
+      "sha256": "780C671CE58467867DCA20E1AB84BB5B9E28526C8BCAB3F0E97E6EAF80DD6C43"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_15.dds",
+      "bytes": 1398228,
+      "sha256": "32ABD3067B6E732F6F52D17F31ECE5122E6E9037B4C0012EBDBD6A5F45E0261F"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_16.dds",
+      "bytes": 1398228,
+      "sha256": "C639735FA4CB41E778C8116ADB3770E7862A665D650FF819BCAC5F553228119C"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_17.dds",
+      "bytes": 1398228,
+      "sha256": "CCDE3F0FDC4FB4D4BCEE2B059CA8DBB54DAD7DCCD9091D6AB1D0F925956288EA"
+    },
+    {
+      "path": "gfx/map/map_painting/powerblocs_map_patterns/pb_pattern_18.dds",
+      "bytes": 1398228,
+      "sha256": "FB0E9648E188E56DA8A98EDBDB64106271A25605B767C8D403441643A0AB5A02"
+    },
+    {
+      "path": "gfx/map/map_painting/sea_conditions_map_patterns/sea_conditions_bad.dds",
+      "bytes": 1398228,
+      "sha256": "659D32DADA7B35EAAD55D9E94838D534C44E87757C0A4EE29C9218D06FEB7A53"
+    },
+    {
+      "path": "gfx/map/map_painting/sea_conditions_map_patterns/sea_conditions_good.dds",
+      "bytes": 1398228,
+      "sha256": "02449A7D4E107AC894628C2F7BCE4B95AB1E9B8AEBDCE0834EFD9883E56420E0"
+    },
+    {
+      "path": "gfx/map/map_painting/strategic_region_interest_levels_map_patterns/strategic_region_interest_level_0.dds",
+      "bytes": 349680,
+      "sha256": "E6220B9A133CCDD3FA35C1DABD99F71987165212A7E6D4550CE7239B5FD4EA55"
+    },
+    {
+      "path": "gfx/map/map_painting/strategic_region_interest_levels_map_patterns/strategic_region_interest_level_1.dds",
+      "bytes": 349680,
+      "sha256": "4D27B3046B7C61972FDA88E54793AEEFB0E1E6152AAEDF79E9969723D099BB0E"
+    },
+    {
+      "path": "gfx/map/map_painting/strategic_region_interest_levels_map_patterns/strategic_region_interest_level_2_engaged.dds",
+      "bytes": 349680,
+      "sha256": "618CE749ABBC3E8C7641D75DE55E843186E9D64AACAA77242EC27F72928A85E4"
+    },
+    {
+      "path": "gfx/map/map_painting/strategic_region_interest_levels_map_patterns/strategic_region_interest_level_3_influential.dds",
+      "bytes": 349680,
+      "sha256": "E3FAFEB7BB101CE742F8C8084834077CB6090134EA77925BA846737714FD1111"
+    },
+    {
+      "path": "gfx/map/map_painting/strategic_region_interest_levels_map_patterns/strategic_region_interest_level_4_pervasive.dds",
+      "bytes": 349680,
+      "sha256": "A40FC29D8839291448BFED4A553CB83C8C68D41313A57BDC59358969EC4FF82E"
+    },
+    {
+      "path": "gfx/map/map_painting/strategic_region_interest_levels_map_patterns/strategic_region_interest_level_5_hegemonic.dds",
+      "bytes": 349680,
+      "sha256": "59866C484CAFEF9775566ED0507223FF6E080C58953AFFD710FE2AF1FCD182E3"
+    },
+    {
+      "path": "gfx/map/masks/manifest.json",
+      "bytes": 268,
+      "sha256": "5475A56C3D9782B7E50BB8334EB331CD4B2CE53825A58482FE3E52881D57E9FB"
+    },
+    {
+      "path": "gfx/map/masks/mask_dynamic_farmland.png",
+      "bytes": 4692838,
+      "sha256": "B06A6F990AC0B9A904861CCB24B7334F810B963F78FFA58F03824B1A96BE5C97"
+    },
+    {
+      "path": "gfx/map/masks/mask_dynamic_forestry.png",
+      "bytes": 3096230,
+      "sha256": "5FACAD2EA8B1D108966289C01772ACE645ACFA8658F88D64FF9DE333F784076D"
+    },
+    {
+      "path": "gfx/map/masks/mask_dynamic_mining.png",
+      "bytes": 547568,
+      "sha256": "9AFABB85D72B002C3F293A2CF1A3E0F328DD19A431AC7E8581D28D0DCDB1A2CF"
+    },
+    {
+      "path": "gfx/map/movement_arrows/movearrow_move.dds",
+      "bytes": 1398256,
+      "sha256": "EF3A1DE8C1F53832B9739C6B5E03A1FFC384B929561E7EFFD0C381BED8E658B2"
+    },
+    {
+      "path": "gfx/map/movement_arrows/reinforce_arrow_color.dds",
+      "bytes": 192,
+      "sha256": "4A13F2FA34F177D9EE0EF7AB8AC517B620CB6D624961E4E6E1AB0E7AA6AB2C99"
+    },
+    {
+      "path": "gfx/map/movement_arrows/supply_arrow_color.dds",
+      "bytes": 192,
+      "sha256": "5E0CAF6E586B8C3A9EE2D54BF3E6AED4CC946D296F581EC0338F2311136A4635"
+    },
+    {
+      "path": "gfx/map/post_effects/colorcorrection_neutral.tga",
+      "bytes": 98348,
+      "sha256": "59027E57EFD949AD5286EAD704B573E680A70643E48CCC43D0C2033135A51728"
+    },
+    {
+      "path": "gfx/map/post_effects/colorcorrection_night.tga",
+      "bytes": 98348,
+      "sha256": "63980B2E1A69D0E06AEA64637E28E1BBB0133CFC61083F9EE0950C022444AE33"
+    },
+    {
+      "path": "gfx/map/post_effects/posteffect_volumes.txt",
+      "bytes": 13613,
+      "sha256": "D6B512BE561CCF8DD60D6337E376834AFB301F5EB3B9891E25B49F96EA2F1812"
+    },
+    {
+      "path": "gfx/map/power_block_statues/accessories/00_accessories.txt",
+      "bytes": 3084,
+      "sha256": "5E9F62BD43AE346EF9ED9BF32B89796421E4E445937C6C7F66DEFE6A3860EC8F"
+    },
+    {
+      "path": "gfx/map/power_block_statues/accessories/accessories.md",
+      "bytes": 121,
+      "sha256": "4B45DD14610ABB595F4A2CF2A2B7AA15048C22E3638AC3E3C637BC58D471BF3E"
+    },
+    {
+      "path": "gfx/map/power_block_statues/heroes/00_heroes.txt",
+      "bytes": 118895,
+      "sha256": "4EFB5356835B261B3C3CC236EBE724FC1A24B3A3FF8F26C5FE052EF6ED49852F"
+    },
+    {
+      "path": "gfx/map/power_block_statues/heroes/heroes.md",
+      "bytes": 845,
+      "sha256": "272FCB500FB9F2B3BC56FAE1EFC64E1F4383D3F89E5C9241AD94DE89DAAEF363"
+    },
+    {
+      "path": "gfx/map/power_block_statues/pedestals/00_pedestals.txt",
+      "bytes": 1188,
+      "sha256": "655AA26A61C3DB54E907349E4D9F9F8D667A92499259219015A2606656C59093"
+    },
+    {
+      "path": "gfx/map/power_block_statues/pedestals/pedestals.md",
+      "bytes": 414,
+      "sha256": "ED73E9AFBFCF2D5F4F7EF5E08764BED4EEDE2166CECD317BBCF781B2BE20A861"
+    },
+    {
+      "path": "gfx/map/rivers/river_bottom_diffuse.dds",
+      "bytes": 699536,
+      "sha256": "366FEDFFBECB7EB94BB1BE679B0AC71964B44D80DB27D5FDAC097FB6F3F15CF3"
+    },
+    {
+      "path": "gfx/map/rivers/river_bottom_normal.dds",
+      "bytes": 699536,
+      "sha256": "65669F16C19CCFEBAA976170EDE2B0EE58A1C27BEE5FAF362B64B093E592B61F"
+    },
+    {
+      "path": "gfx/map/rivers/river_bottom_properties.dds",
+      "bytes": 699536,
+      "sha256": "CAECFC70F210ECB9B036309181470E80001934872F5559E216DAD781800E76D2"
+    },
+    {
+      "path": "gfx/map/rivers/rivers.settings",
+      "bytes": 625,
+      "sha256": "6AA08E38BD86B4248C1A8426C0EEDBABE8A3EAA1815A68C67C6F975067918664"
+    },
+    {
+      "path": "gfx/map/rivers/riverwater.settings",
+      "bytes": 3702,
+      "sha256": "6D15D56ADD8143F378F9C130DB00674FCB5A07E1B4E5D424C1286FD5869FED2C"
+    },
+    {
+      "path": "gfx/map/spline_network/game_road_data.txt",
+      "bytes": 34455,
+      "sha256": "4F9619F92F181B6BB85E6CDA25AFB9B6CD46A6EF904DE5A9EEC357E70BBE1F9B"
+    },
+    {
+      "path": "gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds",
+      "bytes": 5648,
+      "sha256": "9CDC48FF37E3E338DD0370411B83578AD342F8333F951DE86896C0676BEFD765"
+    },
+    {
+      "path": "gfx/map/spline_network/naval_route_diffuse_flatmap.dds",
+      "bytes": 5648,
+      "sha256": "272B63665DC2680EA05D3DA47EE17E947CC832BB742D01531EEEE233D3B57B29"
+    },
+    {
+      "path": "gfx/map/spline_network/naval_route_diffuse_highlight.dds",
+      "bytes": 22032,
+      "sha256": "C9DE357FCA522426D1632BC3EF7B667D9F608EB3F5A92AF85FDFF823A0BD39C5"
+    },
+    {
+      "path": "gfx/map/spline_network/naval_route_diffuse.dds",
+      "bytes": 22032,
+      "sha256": "3099762A5012E72EDB4E7D04A2FA8EBE81DA56F98BABB0EA5FE047A296CBA5FC"
+    },
+    {
+      "path": "gfx/map/spline_network/naval_route_properties.dds",
+      "bytes": 144,
+      "sha256": "2471EF7D5FDADA36DC0EA4884F794321597425B60719065611F3273DEC6E053C"
+    },
+    {
+      "path": "gfx/map/spline_network/road_dirt_diffuse.dds",
+      "bytes": 699536,
+      "sha256": "8D5D74ED049E757188225A76FBD8756C88D1B960272C3DA7BD52AB515BB58E15"
+    },
+    {
+      "path": "gfx/map/spline_network/road_dirt_normal.dds",
+      "bytes": 699536,
+      "sha256": "F3BC1F52EC2BB649A52A8671A7B92C2347D2703C0E50D17D1A29565293191DE4"
+    },
+    {
+      "path": "gfx/map/spline_network/road_dirt_properties.dds",
+      "bytes": 699536,
+      "sha256": "07C9684930558E7A30C2ECED9FF224113408BAE4E1B17CEDE321EDE9F87DDE4D"
+    },
+    {
+      "path": "gfx/map/spline_network/road_paved_diffuse.dds",
+      "bytes": 699536,
+      "sha256": "110CBD9FB6BE0A058E66E70699860AE62F2865579C6B9CA940965F94A104C19B"
+    },
+    {
+      "path": "gfx/map/spline_network/road_paved_normal.dds",
+      "bytes": 699536,
+      "sha256": "F8757715BDECC8586DAD10136D220E874496F25AB9C841D0005FC47CD4AA6AE2"
+    },
+    {
+      "path": "gfx/map/spline_network/road_paved_properties.dds",
+      "bytes": 699536,
+      "sha256": "E16B1C64404AC6B8DFFE1BB36BFFE98D3092564ED7094EB5580675C0AAEDA976"
+    },
+    {
+      "path": "gfx/map/spline_network/road_rail_ground_diffuse.dds",
+      "bytes": 699536,
+      "sha256": "1AE8C86A4702023F7935552AA05F860973ED62DA5A099426E748810A14050116"
+    },
+    {
+      "path": "gfx/map/spline_network/road_rail_ground_normal.dds",
+      "bytes": 699536,
+      "sha256": "193DC417869CAD55A9D0AA293A252C4CE5CDEA538A29E7888B73D00363448BDD"
+    },
+    {
+      "path": "gfx/map/spline_network/road_rail_ground_properties.dds",
+      "bytes": 699536,
+      "sha256": "713024E0ED2E389382B5CACEEF90E118F37A876461D98ED21265E8E20BBBE6CC"
+    },
+    {
+      "path": "gfx/map/spline_network/road_rail_rails_diffuse.dds",
+      "bytes": 699536,
+      "sha256": "2EEC6901516085DBBB7F81CEE6091FB7B46937E2BF44D71747B8D80DD6396159"
+    },
+    {
+      "path": "gfx/map/spline_network/road_rail_rails_normal.dds",
+      "bytes": 699536,
+      "sha256": "193DC417869CAD55A9D0AA293A252C4CE5CDEA538A29E7888B73D00363448BDD"
+    },
+    {
+      "path": "gfx/map/spline_network/road_rail_rails_properties.dds",
+      "bytes": 699536,
+      "sha256": "713024E0ED2E389382B5CACEEF90E118F37A876461D98ED21265E8E20BBBE6CC"
+    },
+    {
+      "path": "gfx/map/spline_network/spline_network.splnet",
+      "bytes": 1646344,
+      "sha256": "91C0957B4898CA4DB6B66584D0AB1DB1A6039825E9FD635B7A5C1E69068CF2B1"
+    },
+    {
+      "path": "gfx/map/spline_network/military_route_graphics/00_example.md",
+      "bytes": 2577,
+      "sha256": "78BE9E2E9A3C3A5E93C8F913649F3FA48B174A22322FA6B44A4B98731FD13707"
+    },
+    {
+      "path": "gfx/map/spline_network/military_route_graphics/01_road_vehicles.txt",
+      "bytes": 15601,
+      "sha256": "EB21C6B04D8C73901A9DA6AA9933E2AFBD1077ADE64AD67096B110D29BA0B157"
+    },
+    {
+      "path": "gfx/map/spline_network/military_route_graphics/02_railroad_vehicles.txt",
+      "bytes": 1169,
+      "sha256": "D2C0F3A72D95FDB6C5DA071712A2AF0A10775EFF518774A76F509F7116C76D38"
+    },
+    {
+      "path": "gfx/map/spline_network/route_graphics/00_example.md",
+      "bytes": 2076,
+      "sha256": "174EFCCD2D218CFDE006DF2EB49C5E386EEA3899BE2922A4333EA937BB5CC284"
+    },
+    {
+      "path": "gfx/map/spline_network/route_graphics/01_road_vehicles.txt",
+      "bytes": 17970,
+      "sha256": "91A33EDA3D49A64516349A6E88CE5226A3458F5930BC84DB1368D65DC9575938"
+    },
+    {
+      "path": "gfx/map/spline_network/route_graphics/02_railroad_vehicles.txt",
+      "bytes": 16234,
+      "sha256": "8380E99CC44995C0D9E295D06B7B9494DB8873AC263CA3F7DE2FB3739340E000"
+    },
+    {
+      "path": "gfx/map/spline_network/route_graphics/03_naval_vehicles.txt",
+      "bytes": 1695,
+      "sha256": "722B14A6CA3AA8F09B836E953661FC7FE3D532E09B08EE2C7945B63B9CB175CD"
+    },
+    {
+      "path": "gfx/map/spline_network/route_graphics/03_sailingships.txt",
+      "bytes": 878,
+      "sha256": "362C805871E397BF33A6628E38825008C1EBBABF0DDEAA740EDEDA3EC6293AE0"
+    },
+    {
+      "path": "gfx/map/spline_network/spline_styles/00_default.txt",
+      "bytes": 7138,
+      "sha256": "E15FA209A52CD938FAFF0585D2CC5D3206B13EB91C914529B62D119FEDED2256"
+    },
+    {
+      "path": "gfx/map/spline_network/spline_types/00_default.txt",
+      "bytes": 1599,
+      "sha256": "E0C008E474C911ECC733E9B9A827EF4E74587ECC209A3BAF33FBB5E176B85B3F"
+    },
+    {
+      "path": "gfx/map/terrain/beach_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "B8EC3F95B2AF49962A30A9C2C507F0CACC561C1C9B7F052702116DAED0A6BAF3"
+    },
+    {
+      "path": "gfx/map/terrain/beach_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "1F77F230C591F1DC9714610620524D7939AC4BB4EB0D9050D67914F755056340"
+    },
+    {
+      "path": "gfx/map/terrain/beach_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "828BD7267C70404957216CF4526FCC1480F5D72E475C3488C3697A17996B77EC"
+    },
+    {
+      "path": "gfx/map/terrain/beach_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "E244164F1D371F7CC64A2EC1F4D757D2BF5013801CB52553728C7DC4EBAB23A4"
+    },
+    {
+      "path": "gfx/map/terrain/beach_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "0285F88A9E85491F0BC118B5AD4BB08C684A21C5EB03D94F9A27483DD916F9D6"
+    },
+    {
+      "path": "gfx/map/terrain/beach_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "898291EEACC8A7C59F4A566F239CCC7A02A73574F50C30772AE22F5BBB5090C6"
+    },
+    {
+      "path": "gfx/map/terrain/beach_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "7F377DFE8517BE95D64F8587EB998564C3EB7ED9995044D9865E17FFDEE513DE"
+    },
+    {
+      "path": "gfx/map/terrain/beach_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "E4C4CEA4C48759147B5467327D52C4554F05ECB6F439B303D5EB35719ED04A37"
+    },
+    {
+      "path": "gfx/map/terrain/beach_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "04E02C964C8585D3FB9BE2876A35A55BAF1A086035AF5EB3D914D81E0DD2EC79"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "D8E3D2C0850C16E6947A90E652142E064E6E44B3777E0C6E31CDD4AFD93374FA"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "B7AD4639A565D23D885ABBA61C5E4EDC6D8E690E8DE15A68CDDDFEAF3345EA3D"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "60BCABD4E1BA0261557C55C52300625F62E2471886CF02998A776A3ECD7BA293"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "FE83A538941F13E3D3F4CA5BBFA83969DDDD672AB2BD0A01B72FB42E69C824DB"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "95341398EE8248505E7543862AA7524E16747DDCE8E7FC8E7D71A255BBFB007C"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "9B1947F6B250932BC865DFCD55A2FB5A0A622565234FBC0804E072EAC62BB95D"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_06_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "BEBC554A3DFBE8738B4C54D95AC341C00F0D6519545B6374C2F2E99F38BFA9C2"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_06_normal.dds",
+      "bytes": 5592560,
+      "sha256": "E281E101E863AE24796A1795B195DAEB41850D27625D60DB4A50F7475277380F"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_06_properties.dds",
+      "bytes": 5592560,
+      "sha256": "1FCF8BDABDDE1CF2A7C46B591D413A5D686855C16F569C98405110CF9654657E"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_07_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "38323B25925C95616DA6BE3D0D7DB0669241EB9DC9ABC569CC950E081EFB74C5"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_07_normal.dds",
+      "bytes": 5592560,
+      "sha256": "58FD0A04A5ECA0B1693BFCDC0754BF6E96F53E15E7203EC69D486500077F54DD"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_granite_07_properties.dds",
+      "bytes": 5592560,
+      "sha256": "4D6799BD8615298DCC8191118C6BD21BE804C3DBB44EE0C7B1D740A1F4710480"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_limestone_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "40C3C9FCAA3C33E8BB9AFD07CBF22DF36B0383B5E6A9B88F46AF4F9F45166178"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_limestone_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "E0C8AFB37A280A5CADC242DBA65D21BCF4EF6D5F82C31045C0C0E1C6BB2BE1E7"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_limestone_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "1A13EC5900BDDE8F1D81789E32D6A0D0FDF11F7FE374C8A52335E4D61A8CCFEE"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_limestone_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "3F3DC62C7221E02EF75B25B8741D066851E23D7B842D90EDBC473F9A44BCBFFE"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_limestone_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "002D4E0906A47F49878E331B324B1CE2CE2D394F1C42943280512FC817D5E51F"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_limestone_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "049FA3FBCE0B44C245EC8AD0B80A6B506728BD687D9796B67DB8F9A4FAF9FF90"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "0041B5C833DC509796922BB98AA37729AA786949DEA8AE644444FBD59DDD29DE"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "E91918339C6861998B3449944DDF926B1335F4796763CCAB65E9C7A110C36073"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "469FDC38510BA12025CAE9829436D82A2FF975C70AE1FCC97885B7796191899A"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_04_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "65FF92D7FCC49F49287C0949D432017C39696E78FDFF0F84554218FC5CF054DD"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_04_normal.dds",
+      "bytes": 5592560,
+      "sha256": "753705F4374D3B9DD917C9FD7B9F27BA8AA613499A3C087D9EA338538044A0D3"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_04_properties.dds",
+      "bytes": 5592560,
+      "sha256": "8A85CEED450E6364C3AD449327A1BFD0C61B1F1AF5B28F8D1299FA737D28A870"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_05_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "45BACF70EC1BE3C1BA1858C645BFE094EFAAFEB4611C4248559226D5214BF3AC"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_05_normal.dds",
+      "bytes": 5592560,
+      "sha256": "075B79B65FFBE708E20AA0AF985EADB495D31B3889F9773D4F55DA7F20988AB1"
+    },
+    {
+      "path": "gfx/map/terrain/cliff_sandstone_05_properties.dds",
+      "bytes": 5592560,
+      "sha256": "850D713A35AFA88EC3407C075C78CEA1FB01A1D19CFD8ABBE4C53576B9475C81"
+    },
+    {
+      "path": "gfx/map/terrain/desert_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "4AB617778D0366CA99D42C4B2A0F82B4B31D766EFA1E4B9E24EB01ECD0A11685"
+    },
+    {
+      "path": "gfx/map/terrain/desert_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "69A4812B6F8458E54FE08F26DDA201A5D608FD73E3539D4A77F2882AEBB50716"
+    },
+    {
+      "path": "gfx/map/terrain/desert_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "DC00A42710A469652D465834E56AFE0F41254C0DD8DAB26D4113FDCF86F66C57"
+    },
+    {
+      "path": "gfx/map/terrain/desert_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "E0CB74B31D3413B37222996FC4AC440F5D19EE7501F8A2382EA853AD21A39EBE"
+    },
+    {
+      "path": "gfx/map/terrain/desert_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "A471F811F9C4E0B055D25CCEEF8174120A656FAC47AA02219D687A55349E9DC8"
+    },
+    {
+      "path": "gfx/map/terrain/desert_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "A985F24F425F4948425CC9803584A8ACDCC9FC0349E230DB6FFAE25425917DDB"
+    },
+    {
+      "path": "gfx/map/terrain/desert_04_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "BFA356379EE56A0693858E7BCC00B1A8AF4ED9F39BD44A733ECB8217CE536535"
+    },
+    {
+      "path": "gfx/map/terrain/desert_04_normal.dds",
+      "bytes": 5592560,
+      "sha256": "6C1C3E2B969E89ADBCB6B76978BB809767C705A2CB3A81A9C5A9DFA6E7AACC3B"
+    },
+    {
+      "path": "gfx/map/terrain/desert_04_properties.dds",
+      "bytes": 5592560,
+      "sha256": "D795C9B2DCDC38E304DAE272679EB3A9FFAE1C679D871B27D4A8D8C8133D19BB"
+    },
+    {
+      "path": "gfx/map/terrain/desert_05_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "13105642AA128311DAB20A7FF4CA5690B705434C950BFAF32D92BD5C2CB4C330"
+    },
+    {
+      "path": "gfx/map/terrain/desert_05_normal.dds",
+      "bytes": 5592560,
+      "sha256": "30BE4EEA20B1A97FACD1AF2DC0FA09A7541529D9C14E1E68BA4883D16B46D7B9"
+    },
+    {
+      "path": "gfx/map/terrain/desert_05_properties.dds",
+      "bytes": 5592560,
+      "sha256": "7170369D7EFB19EEF569D6AD635CC0C5DDA7732284712EA444826DD74E185C6C"
+    },
+    {
+      "path": "gfx/map/terrain/desert_06_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "73EE49370E262733D73481505D7CAD84536D0E6757F7D5AC8FC21E928DAE7397"
+    },
+    {
+      "path": "gfx/map/terrain/desert_06_normal.dds",
+      "bytes": 5592560,
+      "sha256": "5DC9EE942C598A8967717A170A5537EACD09C3D1207E60AB69C11F90441C26B1"
+    },
+    {
+      "path": "gfx/map/terrain/desert_06_properties.dds",
+      "bytes": 5592560,
+      "sha256": "40DFB252FAD652EA833F3C991673181737574B2A11B86B9DF0BA88147AE08168"
+    },
+    {
+      "path": "gfx/map/terrain/detail_data.settings",
+      "bytes": 66,
+      "sha256": "90AFCCD8A5BF3665DD49A1577E93197420AFDEC8F426960FEDF052505188F7DC"
+    },
+    {
+      "path": "gfx/map/terrain/detail_index.tga",
+      "bytes": 118489132,
+      "sha256": "67FA7CD906D04169BFA24488FE259AC26C2FAFE6AD920E926FFB1A0975A07C33"
+    },
+    {
+      "path": "gfx/map/terrain/detail_intensity.tga",
+      "bytes": 118489132,
+      "sha256": "427B703A30A7020390B12C07977D4252736C2C40BE7BA861C722F436395B0431"
+    },
+    {
+      "path": "gfx/map/terrain/devastation_mud_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "3522CA50FD653C8A4B18B8258E860E1544E5F612288C61D7A5908B169067978A"
+    },
+    {
+      "path": "gfx/map/terrain/devastation_mud_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "90FBA6C7FFB49CB291B6D5D4F09969A7A7A87056BDFD8A7A3F046738CE1DE609"
+    },
+    {
+      "path": "gfx/map/terrain/devastation_mud_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "0C80820337A0306850E3598CA6337BEF44C71359B31822903DF437D4772D6DD3"
+    },
+    {
+      "path": "gfx/map/terrain/earthquake_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "A071B867B28CF3DADD0FC5D166104B898C99A021BFD711EAEBA217FC1ABD084B"
+    },
+    {
+      "path": "gfx/map/terrain/earthquake_normal.dds",
+      "bytes": 5592560,
+      "sha256": "2F79F8A9311FA4077F248A779005C0CA0B52849C4360CE46D0F55BEE706E2288"
+    },
+    {
+      "path": "gfx/map/terrain/earthquake_properties.dds",
+      "bytes": 5592560,
+      "sha256": "9B50A66C7A4D59662378F05E1C39C5317AB01F5CCD1198B27629407B100083B3"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "3807686E3117B6B9E7E40716309EF3E2BBC09CD38A79EEB6340D3DAB72B67BD8"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "6B10EB9100C6FF6A9523A8CE2D1270C10FC977C65341CE52FC5F2D8C1718FA33"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "76FA913D57037AF49928A155DF76AC65956D80E93B8B9191F2626A7933B60A26"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "3629D9485AE83D40D85D0D3F04495848547D68B8E6961CAEA9ED3385FF3B5989"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "BF9B8E20D52CE54BAD0AA816DFE9152419068981F10F289E4463754B57DD7F36"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "741E29A03C2F609CE82153B54C9338062CAE7EED9ABDE8584F93C196C5FFD9BC"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "3B8D5BBEF1E2443BC65A5D098D7E49030774A58F5050FF8C3C07CBE9F62C9272"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "CF69676559E670A98C69F1AA804694A2F51AA2E70E11E1534D3D07D681508425"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "614D6673CE3DB7D1A6A9556904806CC336148C7182D8A64D90E06C50CDB6835C"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_05_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "FBDB9DC93F74622026841C1D846AC1B5EE03CAE11DBDCE26B53E35FF1679FADB"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_05_normal.dds",
+      "bytes": 5592560,
+      "sha256": "A98614CC01BCCF4F66545A9CFB2865F32EF2CE1C6AB2EB8C0CB9825FF7FDA058"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_05_properties.dds",
+      "bytes": 5592560,
+      "sha256": "F00E08D11C76827BD94E9CA07EBB713A77BEEA37BEEFA7B74188BA0B9DB6D12C"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_06_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "DADD9B03B96B5C6D1B516068D77B22683095D51517B28BD00E4A88A12CF760F6"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_06_normal.dds",
+      "bytes": 5592560,
+      "sha256": "993E2BC9C857D79DB49CB533E187F0FFA6E2849AECBC9ADFC8FF061433D32400"
+    },
+    {
+      "path": "gfx/map/terrain/farmlands_06_properties.dds",
+      "bytes": 5592560,
+      "sha256": "3695D1DD73E17D5A1364A5C0DBE50F4C7E0E5F0A046D7B5A450EAD36E1E78E73"
+    },
+    {
+      "path": "gfx/map/terrain/forestry_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "D33EA10C1C49DFCEAF2923018B471E05023331E0C42EEA1C45AB438251DD12A8"
+    },
+    {
+      "path": "gfx/map/terrain/forestry_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "20559296CBB3EBBC9F81834789FBBC94C8327EF68CF8833FD5E2301742B68963"
+    },
+    {
+      "path": "gfx/map/terrain/forestry_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "6DB68E07C818CDAE71A01459448F46A85538EF8CC53ED98E917FDB968A6306F9"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "E0A8C1C9DE057C30CB6AD729FA51BD9A81FF8AAF30A4A0B8F88202B065381302"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "B0F6664579AACD4A3D9A2A78B43C7E61BE367BECA29EEE8A8FA00733DA84F73C"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "E8B154482DE161040A8B5D7C4D3B8F2B0F2F18F1494B3598B14730128C9826E6"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "C28DD864803EF90944A9BE0A8947D88425569F8D7C64C50870DDE92E41B6811B"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "F037D5FD65ECC939E342B6316FDAF1347AC50BA1AFFCE582E969A356455FC263"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "B8A507DA95AD32FCDCB1F8FD5387EDF7D0304315B2036D4C90E009A282A0877A"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_05_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "038E4EB4F06F5A00F7BF6FE500820FF07930E98C54978C2EA7A30559DB8EDE7C"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_05_normal.dds",
+      "bytes": 5592560,
+      "sha256": "9D1CCCC1AD98F118ED48A73E9FC0452419BEBD05D71F9DBB94B2D85F1605BA09"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_05_properties.dds",
+      "bytes": 5592560,
+      "sha256": "F3CBCBFB5F65530D63F1F24CE3C4F406F942AC82CC417C6B40CD6DB49418ED45"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_06_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "7DB877B36E2ABFF55385036360A28AAE141C1FB4C49740D80B976BB964917D5E"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_06_normal.dds",
+      "bytes": 5592560,
+      "sha256": "75B29065083282FFEEE039D7A4DEA05F4B3EEA481EC855254D00E61E878AA400"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_06_properties.dds",
+      "bytes": 5592560,
+      "sha256": "D5696CE49AE808107C9CE101BCB4351AFA41AECDA31BB994B9E1A5C8D6819839"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_07_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "63E3AB2C527698F06A3BDAFAC6115A9FC6888D7CAFC30E8641C012B1266B9D27"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_07_normal.dds",
+      "bytes": 5592560,
+      "sha256": "0D9E4522018D5EA25AAAA6A345EEB9C55BAFF867913518700CD903FDF5962EB8"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_07_properties.dds",
+      "bytes": 5592560,
+      "sha256": "26FB79EC081D0962B23286E7A49A09DB6FD448C9560FA5302AD0F5889477D026"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_08_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "C32B32B5B14B62CEFD5FD7A93E04E7C1FC3522764642F25267B694596A8F3F7F"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_08_normal.dds",
+      "bytes": 5592560,
+      "sha256": "3A9333B9C9023B4E3E59A391160B0389A3FBEDEEE1D9F9ED670A741CC11347DB"
+    },
+    {
+      "path": "gfx/map/terrain/grasslands_08_properties.dds",
+      "bytes": 5592560,
+      "sha256": "9BD84EE600D4160B0D8B4E47089CB93ACEC23315F120B022E5EF2E1D6DB30085"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "BBE723011D0A3A7C31E8C75A800481746F86018C7DDC05A482EFF2865E81FD8E"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "B743EA2FAD928F2F7938FE439303335F7D062BD8B339CF85B85BA43DBC88BEE0"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "C547A3D6ABC0BB5DADF3C1113E467FFA2FB81C9E3C646C7DBF7EA8A4C8FF12F3"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "968A74DBDEB1186BF9F0E8BA30BF01ED7AD0BF327A8E40D9813804063AF7DD18"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "939EB672C727547C327331ECF26855BD90DB57C504E330688032ACBC7CEE5B2E"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "725A37AF52F1EA8A79A6515B1CB0A0A5449BB9A0D8C093BA428AF3F1A60CB635"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "DAD0F2E52A5CAAA7517005281D615E6F30E22B66629FFF15D15F6308343504C2"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "A1CA1A3C730404645F029A1B41E500D08B5D201F8EBF629BFC9807DE128D7E98"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "7817ECA3DE1159B0D6F12F7B30C3455BB747899281FACA65216F9116E8B08BEC"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_04_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "A3E196B64B802125A5DFBB7294067532ACA421DE623E24195F78FE2FF2D78A2F"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_04_normal.dds",
+      "bytes": 5592560,
+      "sha256": "897A55CF0D5065315F7B37E7B4AEFCBFE6917801D49A75029B11CB48DC1AD854"
+    },
+    {
+      "path": "gfx/map/terrain/marchlands_04_properties.dds",
+      "bytes": 5592560,
+      "sha256": "D01E82AFE15737E67E9A3D020F3CD57ADD0FB4B99EF9B330F9AA85F7C21E41F4"
+    },
+    {
+      "path": "gfx/map/terrain/mask_beach_01.png",
+      "bytes": 938654,
+      "sha256": "DB6CA939DE49F7F1D72EC07A36F343F5207E875C402C4AD837D4B9EA2653A52E"
+    },
+    {
+      "path": "gfx/map/terrain/mask_beach_02.png",
+      "bytes": 964987,
+      "sha256": "12AD79709C7C560BD3D6B27609CE08A147518E861A1C4039D35C65462E0F75E2"
+    },
+    {
+      "path": "gfx/map/terrain/mask_beach_03.png",
+      "bytes": 1863081,
+      "sha256": "72FAC84400FF2A43F21DC0BDD583A8BB8E55AC310B6EDDA783F048FE0FD55ED0"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_granite_01.png",
+      "bytes": 518295,
+      "sha256": "D7CFE5F114B36C6B20B964F171EE8589C9AA4E700A83DB01573436412919CA6D"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_granite_02.png",
+      "bytes": 2334951,
+      "sha256": "FA0F399528B242BBC63CD637D123F9C0BB9366CE9C783FE0AA54786C719A3415"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_granite_06.png",
+      "bytes": 731999,
+      "sha256": "EF7A85439A071C335C77A25529F63B686854A8C2A798BDC923D0814BDE059D8C"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_granite_07.png",
+      "bytes": 1217458,
+      "sha256": "F0394BBE551F3CAF2411AD5E5774C9BFE8E6EEC2560E07D02C8FA6B0A696DA95"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_limestone_02.png",
+      "bytes": 463757,
+      "sha256": "3D5F137748BA1087D40FC15A92027B3600D74FCE0890FA10C2BC30CB80AE8BB8"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_limestone_03.png",
+      "bytes": 1569908,
+      "sha256": "81878750FC770121BB5BF393C30C8ABF44135424375C8F6552D7B6823248105B"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_sandstone_03.png",
+      "bytes": 609271,
+      "sha256": "37E4D6A61060F0085B9CEDDEC34BFCA722233903C2709C01F3D32775681511E1"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_sandstone_04.png",
+      "bytes": 1107785,
+      "sha256": "5B7D3F87BD2AA6528872006B3EC77E2053D4FD270EBFB54164F22A8F76D29E3A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_cliff_sandstone_05.png",
+      "bytes": 484995,
+      "sha256": "0BE59033235D4DA1442236A301FB89A97A55E698E462DBE81E423975D33F049D"
+    },
+    {
+      "path": "gfx/map/terrain/mask_desert_01.png",
+      "bytes": 393819,
+      "sha256": "1C652FABBCF70FF9EF1E319A19A47DE9B1A4854E09F32C3ED5996BD708C8EB8C"
+    },
+    {
+      "path": "gfx/map/terrain/mask_desert_03.png",
+      "bytes": 357384,
+      "sha256": "9E4548B50A34E6AE37A83750E4FD7204483689285648020BC171EF7D4D8D503A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_desert_04.png",
+      "bytes": 1038231,
+      "sha256": "624F962883529C009D27E23A9A6BA0F70E210818966D4D00F88A8F60FAB2D047"
+    },
+    {
+      "path": "gfx/map/terrain/mask_desert_05.png",
+      "bytes": 1151256,
+      "sha256": "328D685B68DF3CEF4AD5F386AB7D957A7BC310CEC99E31804DED1D52153E4E8C"
+    },
+    {
+      "path": "gfx/map/terrain/mask_desert_06.png",
+      "bytes": 2238135,
+      "sha256": "8B4715C1EAF7D542031E9C9FD50C1D94D6C0B267F083AD0ACE464C3EA9DCD5EC"
+    },
+    {
+      "path": "gfx/map/terrain/mask_devastation_mud_01.png",
+      "bytes": 129558,
+      "sha256": "4ECD32962C5BC5D6D0F4049F6D9319CC462CE3DE0B81C398F22A328C205DF01A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_earthquake_01.png",
+      "bytes": 129558,
+      "sha256": "4ECD32962C5BC5D6D0F4049F6D9319CC462CE3DE0B81C398F22A328C205DF01A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_farmlands_01.png",
+      "bytes": 129614,
+      "sha256": "D20680447B8B2BE867F6432FFCBD929C0374B0B47F3085FD35C85A9564D90013"
+    },
+    {
+      "path": "gfx/map/terrain/mask_farmlands_02.png",
+      "bytes": 129558,
+      "sha256": "4ECD32962C5BC5D6D0F4049F6D9319CC462CE3DE0B81C398F22A328C205DF01A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_farmlands_03.png",
+      "bytes": 129796,
+      "sha256": "790BFEAFF43833A9F5E9E9F3994FBFF8ABD570E2E13C0611640941E536CAAF46"
+    },
+    {
+      "path": "gfx/map/terrain/mask_farmlands_04.png",
+      "bytes": 129695,
+      "sha256": "A5703E25DDB4ACC0899070B4C37F4BF9D2D9DB21E0F6F7954D601A51B3481BB4"
+    },
+    {
+      "path": "gfx/map/terrain/mask_farmlands_05.png",
+      "bytes": 129849,
+      "sha256": "256BA2419A62F5131929A2E153F108743C7E5579F66683439A472B8941047134"
+    },
+    {
+      "path": "gfx/map/terrain/mask_farmlands_06.png",
+      "bytes": 130063,
+      "sha256": "91E4B2F2CD197F864EEA56CD572120329192CC0187AF93AD61CEBCDF617B6BE5"
+    },
+    {
+      "path": "gfx/map/terrain/mask_forestry_01.png",
+      "bytes": 129558,
+      "sha256": "4ECD32962C5BC5D6D0F4049F6D9319CC462CE3DE0B81C398F22A328C205DF01A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_01.png",
+      "bytes": 1269837,
+      "sha256": "70603777F59ED92B336A1B78EE1B38E79AB2ACA08156F70A48E463F8C40A90DF"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_02.png",
+      "bytes": 4426541,
+      "sha256": "C84F55BD47B93C5464456AAAA8D3CE4B9D58A9D598763400F10C9139165B2FBC"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_03.png",
+      "bytes": 649424,
+      "sha256": "81C800E7D5493C55586BDCE031A91D0C9F057FB9572C63F4C66936CA24A463F8"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_04.png",
+      "bytes": 705234,
+      "sha256": "AC47FDAAE784FB7CAB618F17E7275915E0EB31C51B5596F9FCBA9C3D5E1CA25E"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_05.png",
+      "bytes": 5863631,
+      "sha256": "35B53083567E92E340294C4E35D40BABB23CDD652C832B8D98E706CA19B882BD"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_06.png",
+      "bytes": 2190728,
+      "sha256": "BF5ABC2F1CAD428515117544569F6EC061206CC860DDA29BCAF16AC1FED952E4"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_07.png",
+      "bytes": 3021523,
+      "sha256": "19DBB05129E3F5A74B832F246808AAA99ED91ABAFCF54AE5AF663055E99192AA"
+    },
+    {
+      "path": "gfx/map/terrain/mask_grasslands_08.png",
+      "bytes": 257786,
+      "sha256": "6F3D5139F51B4FD0B34627D5A269D175B0FF4E7823208D8C99C3ABDAC7BDB458"
+    },
+    {
+      "path": "gfx/map/terrain/mask_marchlands_01.png",
+      "bytes": 823986,
+      "sha256": "25F0CA95CB6737B7815A0E8384A6E25B6C541EA9192DF824D1BEC97B64F4CEF7"
+    },
+    {
+      "path": "gfx/map/terrain/mask_marchlands_02.png",
+      "bytes": 1159371,
+      "sha256": "51221CA417E59ADC3E779323DA599889E7310FCE1C2749654C4AAC9A69FA9AB1"
+    },
+    {
+      "path": "gfx/map/terrain/mask_marchlands_03.png",
+      "bytes": 1002054,
+      "sha256": "EB489982558299089B2E2A21EFEBC08000ACFA6EA305911AFC552FF530BF1C16"
+    },
+    {
+      "path": "gfx/map/terrain/mask_marchlands_04.png",
+      "bytes": 691684,
+      "sha256": "33427586351389E80DAF072DDC10AD0FB1BCE137874CFFAB083A605E33DD34E0"
+    },
+    {
+      "path": "gfx/map/terrain/mask_mining_01.png",
+      "bytes": 129558,
+      "sha256": "4ECD32962C5BC5D6D0F4049F6D9319CC462CE3DE0B81C398F22A328C205DF01A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_permafrost_01.png",
+      "bytes": 2626509,
+      "sha256": "3DE798DEEA25A7D627F3217983EC29EE928FFE4DD23C73C4216F43A362B067D4"
+    },
+    {
+      "path": "gfx/map/terrain/mask_permafrost_03.png",
+      "bytes": 482329,
+      "sha256": "2C952087D003687C09F64824E4C2CB398D2E2288BE1F7C02A4986C900A177823"
+    },
+    {
+      "path": "gfx/map/terrain/mask_pollution_01.png",
+      "bytes": 129558,
+      "sha256": "4ECD32962C5BC5D6D0F4049F6D9319CC462CE3DE0B81C398F22A328C205DF01A"
+    },
+    {
+      "path": "gfx/map/terrain/mask_rocks_01.png",
+      "bytes": 202588,
+      "sha256": "30732E67669CE3C3DF670ABC392D3B8E35113D886869D30ED259E456DB6E7B00"
+    },
+    {
+      "path": "gfx/map/terrain/mask_savanna_01.png",
+      "bytes": 271820,
+      "sha256": "8BB79CB8B742DFC7CAD99F73D51884F88C36C378801E95D295D0FAC0623D979B"
+    },
+    {
+      "path": "gfx/map/terrain/mask_savanna_03.png",
+      "bytes": 194296,
+      "sha256": "DECC3FF5020EA88457615D6566D2F6C33BF1D29F7374ABF2B9A05DD7E826D890"
+    },
+    {
+      "path": "gfx/map/terrain/mask_snow_02.png",
+      "bytes": 1406490,
+      "sha256": "406D7286DE683AF046CD994CDCEEE068BE3F09339B3CB29164A540B05877EBFA"
+    },
+    {
+      "path": "gfx/map/terrain/mask_woodlands_01.png",
+      "bytes": 1100712,
+      "sha256": "853D8EF74750D5DF9A29CD7319E34E93B7BBF853AD61B32C09A8701313BFD9D6"
+    },
+    {
+      "path": "gfx/map/terrain/mask_woodlands_02.png",
+      "bytes": 2161751,
+      "sha256": "48CA707ACAA172BAAC599511180FF3DBA5719F21944C2738B4A2B79E306158E5"
+    },
+    {
+      "path": "gfx/map/terrain/mask_woodlands_03.png",
+      "bytes": 1755026,
+      "sha256": "1AC1328F83BCFD62E921F40C00185C52F7ACB86BFA9C4ECE4E3C68127A41600F"
+    },
+    {
+      "path": "gfx/map/terrain/materials.settings",
+      "bytes": 9798,
+      "sha256": "8BB5B6365E3001FC1ED036F064B7D64A24870180EFF2FF6BF396D3BA6C647A23"
+    },
+    {
+      "path": "gfx/map/terrain/mining_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "94FB1E25F29FEC01879F42171C4BC9B1499452F5147AA55375DC62FDDBCF6371"
+    },
+    {
+      "path": "gfx/map/terrain/mining_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "3E3F50B653A4934FE4711561F726A938A2A32F9700E515080A71EAF8D4E68C79"
+    },
+    {
+      "path": "gfx/map/terrain/mining_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "36CDEBB312E867B5202261BF632CEEA54A1F5202F98A9A3927FFFD274E1B6AD4"
+    },
+    {
+      "path": "gfx/map/terrain/permafrost_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "98EAB116EF6C93651BCB989D9D1587B85E75895F261E5AEFF5E72BC8349E02E4"
+    },
+    {
+      "path": "gfx/map/terrain/permafrost_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "E6749CAF66B2A9C915E04F246BEDFE551B90AF307F7B2EABD2E955E767B556D9"
+    },
+    {
+      "path": "gfx/map/terrain/permafrost_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "826CFBBB2C8A37EF7B5E19B039E377974A14F011BAA985F150E2DB1F1E289D64"
+    },
+    {
+      "path": "gfx/map/terrain/permafrost_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "FC95CA3DED6686001B598FFB5E2FFEC83926E9265D3B0480E1F2168CFE94F49A"
+    },
+    {
+      "path": "gfx/map/terrain/permafrost_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "63D7731FEC9AE01B7BA56A6DA6094E8282DE216A560EBAEC5759EB20594C4DB1"
+    },
+    {
+      "path": "gfx/map/terrain/permafrost_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "1A5805641344CAE9F61D2AB178B7C7248BAC446838ADAB52EDA70472ACB27B41"
+    },
+    {
+      "path": "gfx/map/terrain/pollution_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "EDD6B2E555166E30B7793DDF9A24A9E80944D1B813F0E1B67EBD2CB55FA88612"
+    },
+    {
+      "path": "gfx/map/terrain/pollution_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "F23E3515239DD0CA9A9B27AB749AE518735A6E5C96702B8BB6121D586EAD5474"
+    },
+    {
+      "path": "gfx/map/terrain/pollution_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "F831ADDBA68CC52330FC05E27E256812A93613534DFCCCF101533BEA6EC88ACA"
+    },
+    {
+      "path": "gfx/map/terrain/rocks_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "FCDE5827D8698B9327213D8B55365597BB16593A2BD72116BF8E1A9458AA2B6E"
+    },
+    {
+      "path": "gfx/map/terrain/rocks_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "7985E2699C5D95BAC9FC3D599B2872FF9E99546958444F00796F55E6B1CCD8AA"
+    },
+    {
+      "path": "gfx/map/terrain/rocks_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "6F93420D5EA3669A79F231AB5A134A965DF639628AB5AEA8C695DA17F2F5B66B"
+    },
+    {
+      "path": "gfx/map/terrain/settings.terrain",
+      "bytes": 100,
+      "sha256": "8856A0EDBBDE64BD896F9A56CC039CB49B92CE388935E8E8AE6AD75F3B278DDD"
+    },
+    {
+      "path": "gfx/map/terrain/snow_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "1DD82EDFCC1990E2A92886A574AD6CD0E25C155CE3D312C363B907C7C2655FC6"
+    },
+    {
+      "path": "gfx/map/terrain/snow_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "99DBDE5956AC754A5819485D3E318BAF037E52CEF48E06EE989F2929330B7519"
+    },
+    {
+      "path": "gfx/map/terrain/snow_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "6AAB75995C118822AB19D2F4F836417174CEFB21EB0E0E25D72DA0388F0DFCF2"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_01_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "5AF2278EDFDC2765B82389B343F984B414016599666E47A6D3B40D9751529021"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_01_normal.dds",
+      "bytes": 5592560,
+      "sha256": "349F5AFCED27A78B0C46B0E999C97E941953141AE119130363D156ED75694754"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_01_properties.dds",
+      "bytes": 5592560,
+      "sha256": "84A7A5543DB93A2BCC02755F3276C7E253F5C1756A6759DD3AC9777AB75E5318"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_02_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "E4C050F37CB87771774ED1C8B469E775D6A39C0C585DEF1538051AE1886FE913"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_02_normal.dds",
+      "bytes": 5592560,
+      "sha256": "47CA6D8415B193B870AD8BA07879BE0E6A1DAA0F8CC19D7EE8F4D0C4D0EE45B6"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_02_properties.dds",
+      "bytes": 5592560,
+      "sha256": "A5A0C2D4DF303A71D218D290318C4AFA93ABD1061E803FBC6E216DCFCBA9FB75"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_03_diffuse.dds",
+      "bytes": 5592560,
+      "sha256": "25D99F9472EF800B1C788C2D2C1D421CD9A3492D290CEC6844798958B169386F"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_03_normal.dds",
+      "bytes": 5592560,
+      "sha256": "2CC547547D01B1E4DF9B41285518CB90C8EED36C98780F2CF1EEA9E7DD3DABB1"
+    },
+    {
+      "path": "gfx/map/terrain/woodlands_03_properties.dds",
+      "bytes": 5592560,
+      "sha256": "94E0C8EC481435D8B6CC4DE7C246EA1C37EFE986049594AB8A8B1803BBD8C8A6"
+    },
+    {
+      "path": "gfx/map/textures/bronze_diff.dds",
+      "bytes": 349680,
+      "sha256": "DA7BC30B7AE71713DE544F7B6EF38E9265CFC6B55331AFA48B9E39FF53390E73"
+    },
+    {
+      "path": "gfx/map/textures/cloth.dds",
+      "bytes": 22369748,
+      "sha256": "29425CB3BC03A1D5FC68235EF1CE44FB04BBEBECCF3D1CAAD1E6BE1D218F1A69"
+    },
+    {
+      "path": "gfx/map/textures/cohesion_tear_shadow.dds",
+      "bytes": 699192,
+      "sha256": "01D69B590FA86AABF00A678384E5BD6B64B43B178D7C20D7F610501C2AD82655"
+    },
+    {
+      "path": "gfx/map/textures/cohesion_tear.dds",
+      "bytes": 699192,
+      "sha256": "B81FBBF7BAD55EFE297EE12E6AF1A21D7C49C6BB6A63B20E5031EDE024F166A7"
+    },
+    {
+      "path": "gfx/map/textures/colormap_tree.dds",
+      "bytes": 262272,
+      "sha256": "636AEC298817616EE5B17421154A60B8CF1F84FCC584F4878ABD2A549AF78094"
+    },
+    {
+      "path": "gfx/map/textures/colormap.dds",
+      "bytes": 22369768,
+      "sha256": "55FF6A47F8F9065EBFE367046A2E8A4D7A090D061BFC8A0995541EC2792C41CE"
+    },
+    {
+      "path": "gfx/map/textures/common_noise.dds",
+      "bytes": 174904,
+      "sha256": "727056820DDA4697158ACF7E60808FD0B06F692DDF5C5D37EAA2FAC073315C78"
+    },
+    {
+      "path": "gfx/map/textures/edgeofworld_clouds.dds",
+      "bytes": 1556896,
+      "sha256": "DEC2359B09D3A1EA4065BEFE714A1B2A7A9B8684BAFCDED604B660CFF8CD3848"
+    },
+    {
+      "path": "gfx/map/textures/equator_line.dds",
+      "bytes": 875416,
+      "sha256": "C9CDFE24B108C271890653D3CD4BE89982AC4A4A2384EB37E1CCDAB0FBEECD92"
+    },
+    {
+      "path": "gfx/map/textures/flatmap_newsletter_bonus.dds",
+      "bytes": 19749224,
+      "sha256": "A157B5B8228A407613A459AA78528AA10541708254A2C3C97E07AF5EAE9888DC"
+    },
+    {
+      "path": "gfx/map/textures/flatmap_noise.dds",
+      "bytes": 174904,
+      "sha256": "600F8D1D80E3FA6F3C4D0786947C8BE5EAB56FC9E6246F5084B8B605594C4C37"
+    },
+    {
+      "path": "gfx/map/textures/flatmap_overlay_newsletter_bonus.dds",
+      "bytes": 39498320,
+      "sha256": "29F60F3FFF4C6A52FFF0158660B294F61CF3C7856B6E69C6CB8DA37FC18E5DFE"
+    },
+    {
+      "path": "gfx/map/textures/flatmap_overlay.dds",
+      "bytes": 39498320,
+      "sha256": "477611CD5BD1277B60425EF5D7472E4B9536D6BBAA8D4786AF2DE70F2677C2FC"
+    },
+    {
+      "path": "gfx/map/textures/flatmap.dds",
+      "bytes": 157985212,
+      "sha256": "1D340244AF21B009336AE2EC6CFD0658C4C137FCDD7D2E14CD1253583890046C"
+    },
+    {
+      "path": "gfx/map/textures/gametextures.settings",
+      "bytes": 514,
+      "sha256": "11D6CB0A840BDBAA4B831F85AE82AC3E4DD7CBD076B0E44BD81B5CAA961D256A"
+    },
+    {
+      "path": "gfx/map/textures/hail_ground_mask.dds",
+      "bytes": 5592560,
+      "sha256": "F2A4BA45988C3BB95852E04CE3FEFEB48C1D8F7956882ABDAD6E14C04BCA3A7F"
+    },
+    {
+      "path": "gfx/map/textures/hail_mask.dds",
+      "bytes": 5592560,
+      "sha256": "2889CAEEEBF4277F396A5F26C685C1C6CEA4F5EB0675F9973419B039FECD03DF"
+    },
+    {
+      "path": "gfx/map/textures/impassableterrain.dds",
+      "bytes": 699192,
+      "sha256": "46812A325EB096A94803439E88F7EF8FFDECD1CF271F56C0BB77F90AA8115983"
+    },
+    {
+      "path": "gfx/map/textures/land_mask.dds",
+      "bytes": 19749224,
+      "sha256": "B2C1AE26F89472D26CDAB845DFC6553F12F88AD2A675BC130446DEC6F2D4FDCC"
+    },
+    {
+      "path": "gfx/map/textures/maptextures_newsletter_bonus.settings",
+      "bytes": 335,
+      "sha256": "6BE9C818C175F50E28390564658B93E191A593CE749DB63D52BD56F169F9C004"
+    },
+    {
+      "path": "gfx/map/textures/maptextures.settings",
+      "bytes": 300,
+      "sha256": "30F3911ED26E1EA9D188E9F1754F21EEB60E588C53E1EEF3A8EDA68F037F7289"
+    },
+    {
+      "path": "gfx/map/textures/rain_mask.dds",
+      "bytes": 5592560,
+      "sha256": "EF047538235335CCCABB21837558B61E969D43457F21EFD7B8E5EE9DD17B5A15"
+    },
+    {
+      "path": "gfx/map/textures/tavern.dds",
+      "bytes": 1048784,
+      "sha256": "D85A742D773FE1A1A81E9380891CE7538D1388AFDFE54E6F6B6260A8D04C27D8"
+    },
+    {
+      "path": "gfx/map/textures/wavy_noise.dds",
+      "bytes": 349680,
+      "sha256": "110A3B0AB6C1F7558F2CAA9B1195FA40823B9E29FB4978EA2FFA974DA5B5CAFC"
+    },
+    {
+      "path": "gfx/map/textures/windmap_tree.dds",
+      "bytes": 309608,
+      "sha256": "B4688038C8648ABDB3EBE2E326D934A206B0DCFE33B387DFA1E5E4C59564DA9F"
+    },
+    {
+      "path": "gfx/map/water/ambient_normal.dds",
+      "bytes": 1398256,
+      "sha256": "418E7B1A37F24B3C98CD031E2EB7B1708AC3052A35D279CACFB96DF7D1B0D213"
+    },
+    {
+      "path": "gfx/map/water/citrus_orchard_road_puresky_16f.dds",
+      "bytes": 8388916,
+      "sha256": "8A2B4270346F3AFCB2C15B48E2D28C483FD4627E065401FD040BB3C595C37147"
+    },
+    {
+      "path": "gfx/map/water/cubemap_clouds.dds",
+      "bytes": 8388728,
+      "sha256": "88CA12733BA75BCA7D36CE5DC14E4C15821B6C5C6FB86A2BE93F29CD0DF2C4E9"
+    },
+    {
+      "path": "gfx/map/water/flow_normal_temporary.dds",
+      "bytes": 262272,
+      "sha256": "9AF92ABE8CA8BBEDF8CF5869BC8DA7AECB767E51C9D6EC473FB0AEF150D42F66"
+    },
+    {
+      "path": "gfx/map/water/flowmap.dds",
+      "bytes": 2468284,
+      "sha256": "CB34F40AE9D080A917047F71E264346BAAD3F70B6E9ED0A2F8A6AE7C55A6B80F"
+    },
+    {
+      "path": "gfx/map/water/foam_map.dds",
+      "bytes": 2470480,
+      "sha256": "956436548D5A2FAA155204FD416E80320D8D6779827E644B81E75CA751A8ADA7"
+    },
+    {
+      "path": "gfx/map/water/foam_noise.dds",
+      "bytes": 349680,
+      "sha256": "EB7F42A73A6272738C315C9F4983A31DA7D1D7C4436564D8AF881A0F1E49BC95"
+    },
+    {
+      "path": "gfx/map/water/foam_ramp.dds",
+      "bytes": 2192,
+      "sha256": "76DDBEDF32C810E6E0CF550BAC0FFA5A0C3829F37EE5804D1449DF833729BE42"
+    },
+    {
+      "path": "gfx/map/water/foam.dds",
+      "bytes": 1398256,
+      "sha256": "F152890A94FCE49A499120A283C5CBC8A092031169F1AF93771A26C5F89F323D"
+    },
+    {
+      "path": "gfx/map/water/water.settings",
+      "bytes": 3717,
+      "sha256": "6711272C9BD8A616CB3C9B844C643BA3D1885564C9FFD0F65BFD0164DCD2BB3E"
+    },
+    {
+      "path": "gfx/map/water/watercolor_rgb_waterspec_a.dds",
+      "bytes": 9876048,
+      "sha256": "E0B2C785496C2FE331BA4C75C7A5CF1CEBBE1C9CF21EB75AEB0D1B35B1C0B4C5"
+    },
+    {
+      "path": "common/country_definitions/00_countries.txt",
+      "bytes": 72779,
+      "sha256": "D13A2A5DDFE9391287BE287041C28611599FED537D1D41C3FB5691DE08872A74"
+    },
+    {
+      "path": "common/country_definitions/01_africa.txt",
+      "bytes": 28135,
+      "sha256": "DD89615390FC8051E818C1EB8AA8B96964BE2257019C740EAA00DD2339D152CD"
+    },
+    {
+      "path": "common/country_definitions/01_pacific_and_australasia.txt",
+      "bytes": 12069,
+      "sha256": "5AE9B975DE47C9D23DC2CA671BAC878CE1C7DB2013163948885C32F496578B83"
+    },
+    {
+      "path": "common/country_definitions/99_dynamic.txt",
+      "bytes": 4502,
+      "sha256": "D7827BAAF6B6F53912204541888CEFCC64309D52A2B03B9B51581655D32D80E7"
+    },
+    {
+      "path": "common/history/states/00_states.txt",
+      "bytes": 476391,
+      "sha256": "D8408FEFF70DA84E50D5CBF3FCC552841CB2BF8C0338BF997CE127F10423C50E"
+    }
+  ]
+}

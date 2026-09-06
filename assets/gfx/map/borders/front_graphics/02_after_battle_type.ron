@@ -1,0 +1,28 @@
+// Source line 7:  smoke pillars after the battle
+// Source line 29:  one-time explosion on battle end
+(schema_version: 1, entries: [
+    Property(key: "frontline_side_entity_01", operator: Assign, value: Block([
+        Property(key: "type", operator: Assign, value: Symbol("after_battle")),
+        Property(key: "weight", operator: Assign, value: Block([
+            Property(key: "value", operator: Assign, value: Number("1")),
+        ])),
+        Property(key: "participant_entities", operator: Assign, value: Block([
+            Property(key: "side_entity", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("war_side_after_entity")),
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "always", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+        ])),
+        Property(key: "environment_entity", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("war_center_after_entity")),
+        ])),
+    ])),
+    Property(key: "frontline_center_entity_02", operator: Assign, value: Block([
+        Property(key: "type", operator: Assign, value: Symbol("on_battle_ended")),
+        Property(key: "weight", operator: Assign, value: Block([
+            Property(key: "value", operator: Assign, value: Number("1")),
+        ])),
+        Property(key: "participant_entities", operator: Assign, value: Block([])),
+    ])),
+])

@@ -11,6 +11,9 @@ aggregate-client -> aggregate-ui -> Bevy
                  -> aggregate-localization -> Fluent
                  -> aggregate-simulation-core
                  -> aggregate-scenario / aggregate-world
+                 -> aggregate-map-view -> aggregate-geography -> aggregate-world
+
+aggregate-asset-data -> structural RON import schema
 
 aggregate-simulation-core -> bevy_ecs
                           -> aggregate-world
@@ -64,7 +67,7 @@ Mechanisms are Rust functions and systems. Serde maps JSON presets and saves to 
 
 Definitions describe goods, per-level staffing, per-worker-day input/output recipes and construction costs. State describes countries, provinces, population groups, completed facilities and active construction projects. Goods are counted in integer scenario units; population, workers, stock and work quantities use checked `u64` arithmetic. Production operates in whole worker-day batches. The fixture values in `scenarios/foundation.json` are synthetic and have no empirical calibration.
 
-`GoodId` and `FacilityDefinitionId` are typed string keys for authored content. `CountryId` and `ProvinceId` are also string keys in the current preset model. `FacilityId` and `PopulationGroupId` wrap UUIDs for instances. The caller assigns a new facility UUID before submitting a command, and replay reuses that recorded value. The core does not generate random identities during a day. Nil, duplicate and conflicting instance IDs are rejected; ECS entity IDs are never persisted or used as domain identities.
+`GoodId` and `FacilityDefinitionId` are typed string keys for authored content. `CountryId`, `ProvinceId`, `RegionId`, `FacilityId` and `PopulationGroupId` wrap UUIDs. New managed instances receive UUIDv7 at creation; authored geographic UUIDs are persisted once and never regenerated at load. Scenario and save schemas are version 2; native ruleset remains version 1. The caller assigns a new facility UUID before submitting a command, and replay reuses that recorded value. The core does not generate random identities during a day. Nil, duplicate and conflicting instance IDs are rejected; ECS entity IDs are never persisted or used as domain identities.
 
 Scenario loading rejects unsupported versions, unknown fields and references, invalid quantities and unsupported aggregate ranges, with field paths and source paths when loaded from a file. Scenarios begin at day zero without pending construction; commands create projects. Saved snapshots can contain validated projects in progress.
 
@@ -94,6 +97,8 @@ Replay starts from the initial scenario, advances the same daily schedule, and s
 `state_hash` hashes the normalized snapshot with BLAKE3 after sorting state vectors by persistent ID and serializing ordered maps. It excludes definitions, rules, command history, reports and ECS layout. Compare hashes within the same scenario and ruleset; the hash is a state-comparison aid, not save authentication. The headless example verifies its final state against both save/load and command replay.
 
 ## Next integration
+
+The native World Map route now renders imported geography; the synthetic management fixture remains a separate simulation. The default modern scenario is intended to represent 2026, but current historical ownership is not modernized. Map resources live directly under `assets/map_data/`, `assets/gfx/map/` and `assets/common/`. They are editable Aggregate assets to adapt and improve, without a vendor wrapper or read-only source-pack contract. The 218 text definitions now use RON via `aggregate-asset-data`; this structural import schema preserves data and does not execute imported scripts. `aggregate-geography` now owns validated UUID catalogs, dense province rasters, heightfields and ray intersection. `aggregate-map-view` owns asynchronous loading, shared terrain meshes, province coloring/picking, wrapping and camera controls. Derived raster/heightfield caches use source-content fingerprints and checksums; authored RON/PNG remains authoritative. Initial provenance is recorded separately in documentation. Binary assets and large generated placement data are configured for Git LFS. Commit and push only on explicit user request. See [map assets](MAP_ASSETS.md). Geographic province/state contracts and map selection must be connected to management; asset conversion alone does not provide that integration.
 
 Add preset selection and save/load controls to the management session, then richer province/facility inspection. UI state must not become a second simulation authority. Education, logistics, military, politics and diplomacy can add concrete mechanisms against shared contracts; do not create empty domain crates or cyclic Cargo dependencies to represent reciprocal effects.
 

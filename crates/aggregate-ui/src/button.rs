@@ -44,6 +44,12 @@ pub struct ButtonActivated(pub Entity);
 #[derive(Resource, Default)]
 pub struct KeyboardFocus(pub Option<Entity>);
 
+/// Screens can reserve plain Tab for a domain shortcut while keeping Ctrl+Tab available.
+#[derive(Resource, Default)]
+pub struct UiKeyboardPolicy {
+    pub reserve_plain_tab: bool,
+}
+
 #[derive(Component)]
 pub struct ButtonLabel;
 
@@ -64,8 +70,18 @@ impl Default for ButtonMotion {
     }
 }
 
+impl ButtonMotion {
+    pub(crate) fn hover_amount(&self) -> f32 {
+        self.hover.current()
+    }
+    pub(crate) fn press_amount(&self) -> f32 {
+        self.press.current()
+    }
+}
+
 pub fn keyboard_navigation(
     keys: Res<ButtonInput<KeyCode>>,
+    policy: Option<Res<UiKeyboardPolicy>>,
     buttons: Query<(Entity, &UiButton)>,
     mut focus: ResMut<KeyboardFocus>,
     mut input_focus: ResMut<InputFocus>,
@@ -76,7 +92,10 @@ pub fn keyboard_navigation(
         focus.0 = None;
         input_focus.clear();
     }
-    if keys.just_pressed(KeyCode::Tab) {
+    if keys.just_pressed(KeyCode::Tab)
+        && (!policy.is_some_and(|policy| policy.reserve_plain_tab)
+            || keys.any_pressed([KeyCode::ControlLeft, KeyCode::ControlRight]))
+    {
         let mut available: Vec<_> = buttons
             .iter()
             .filter(|(_, button)| button.enabled)
@@ -132,29 +151,42 @@ pub fn pointer_interaction(
     }
 }
 
+#[derive(bevy::ecs::query::QueryData)]
+#[query_data(mutable)]
+pub struct AnimatedButton {
+    entity: Entity,
+    interaction: &'static Interaction,
+    button: &'static UiButton,
+    background: &'static mut BackgroundColor,
+    border: &'static mut BorderColor,
+    motion: &'static mut ButtonMotion,
+    children: &'static Children,
+    surface: Option<&'static MaterialNode<crate::skin::SurfaceMaterial>>,
+}
+
 pub fn animate_buttons(
     focus: Res<KeyboardFocus>,
     time: Res<Time<Real>>,
     preferences: Res<MotionPreferences>,
     mut activated: MessageReader<ButtonActivated>,
-    mut buttons: Query<(
-        Entity,
-        &Interaction,
-        &UiButton,
-        &mut BackgroundColor,
-        &mut BorderColor,
-        &mut ButtonMotion,
-        &Children,
-    )>,
+    mut buttons: Query<AnimatedButton>,
     mut labels: Query<(&mut UiTransform, &mut TextColor), With<ButtonLabel>>,
 ) {
     for event in activated.read() {
-        if let Ok((_, _, _, _, _, mut motion, _)) = buttons.get_mut(event.0) {
-            motion.flash = 1.;
+        if let Ok(mut button) = buttons.get_mut(event.0) {
+            button.motion.flash = 1.;
         }
     }
-    for (entity, interaction, button, mut background, mut border, mut motion, children) in
-        &mut buttons
+    for AnimatedButtonItem {
+        entity,
+        interaction,
+        button,
+        mut background,
+        mut border,
+        mut motion,
+        children,
+        surface,
+    } in &mut buttons
     {
         let hovering =
             button.enabled && (focus.0 == Some(entity) || *interaction == Interaction::Hovered);
@@ -191,8 +223,16 @@ pub fn animate_buttons(
             .mix(&theme::PANEL_LIGHT, hover)
             .mix(&theme::GOLD, motion.flash.powi(3) * 0.22);
         let outline = base_outline.mix(&theme::GOLD_BRIGHT, hover);
-        background.set_if_neq(BackgroundColor(fill));
-        border.set_if_neq(BorderColor::all(outline));
+        background.set_if_neq(BackgroundColor(if surface.is_some() {
+            Color::NONE
+        } else {
+            fill
+        }));
+        border.set_if_neq(BorderColor::all(if surface.is_some() {
+            Color::NONE
+        } else {
+            outline
+        }));
         // Only the label moves. The button's hitbox and surrounding layout stay stable.
         for child in children {
             if let Ok((mut transform, mut color)) = labels.get_mut(*child) {

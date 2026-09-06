@@ -17,10 +17,19 @@ pub struct ProvinceDayReport {
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct FacilityDayReport {
     pub facility: FacilityId,
+    /// Initial allocation. Workers blocked by inputs may subsequently build instead.
     pub assigned_workers: u64,
     pub active_workers: u64,
     pub inputs: BTreeMap<GoodId, u64>,
     pub outputs: BTreeMap<GoodId, u64>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ConstructionDayReport {
+    pub facility: FacilityId,
+    pub requested_workers: u64,
+    pub active_workers: u64,
+    pub remaining_worker_days: u64,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -64,6 +73,7 @@ pub struct DayReport {
     pub day: u64,
     pub provinces: Vec<ProvinceDayReport>,
     pub facilities: Vec<FacilityDayReport>,
+    pub constructions: Vec<ConstructionDayReport>,
     pub goods_flows: Vec<GoodsFlow>,
     pub events: Vec<SimulationEvent>,
 }

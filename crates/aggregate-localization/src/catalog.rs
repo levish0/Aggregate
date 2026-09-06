@@ -112,6 +112,8 @@ mod tests {
                 "consumed",
                 "shortfall",
                 "level",
+                "provinces",
+                "regions",
             ] {
                 arguments.set(name, "7");
             }

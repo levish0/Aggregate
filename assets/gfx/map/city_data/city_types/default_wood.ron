@@ -1,0 +1,52 @@
+// Source line 8: default wood is always down prioritized
+// Source line 16: in grid-space units. 1.0 means the mesh can be placed anywhere inside its allotted cell
+// Source line 17: in degrees
+// Source line 38: offsets for regular buildings
+(schema_version: 1, entries: [
+    Property(key: "default_wood", operator: Assign, value: Block([
+        Property(key: "city_type", operator: Assign, value: Symbol("wood")),
+        Property(key: "min_residential_buildings", operator: Assign, value: Number("2")),
+        Property(key: "max_residential_buildings", operator: Assign, value: Number("50")),
+        Property(key: "max_residence_points", operator: Assign, value: Number("100")),
+        Property(key: "weight", operator: Assign, value: Number("-1")),
+        Property(key: "rich_building_meshes", operator: Assign, value: Block([
+            Item(Text("european_rural_building_rich_03_mesh")),
+            Item(Text("european_rural_building_rich_02_mesh")),
+            Item(Text("european_rural_building_rich_01_mesh")),
+        ])),
+        Property(key: "rich_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.0")),
+            Property(key: "rotation", operator: Assign, value: Number("0.0")),
+        ])),
+        Property(key: "mid_building_meshes", operator: Assign, value: Block([
+            Item(Text("european_rural_building_mid_03_mesh")),
+            Item(Text("european_rural_building_mid_02_mesh")),
+            Item(Text("european_rural_building_mid_01_mesh")),
+        ])),
+        Property(key: "mid_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.1")),
+            Property(key: "rotation", operator: Assign, value: Number("180.0")),
+        ])),
+        Property(key: "poor_building_meshes", operator: Assign, value: Block([
+            Item(Text("generic_forestry_lumberpile_02_mesh")),
+            Item(Text("european_rural_building_poor_03_mesh")),
+            Item(Text("european_rural_building_poor_02_mesh")),
+            Item(Text("european_rural_building_poor_01_mesh")),
+        ])),
+        Property(key: "poor_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.2")),
+            Property(key: "rotation", operator: Assign, value: Number("360.0")),
+        ])),
+        Property(key: "building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.2")),
+            Property(key: "rotation", operator: Assign, value: Number("360.0")),
+        ])),
+        Property(key: "building_logging_camp", operator: Assign, value: Block([
+            Item(Text("generic_forestry_lumberdepo_01_mesh")),
+            Item(Text("generic_forestry_lumberdepo_02_mesh")),
+        ])),
+        Property(key: "building_rubber_plantation", operator: Assign, value: Block([
+            Item(Text("rubber_lodge_01_mesh")),
+        ])),
+    ])),
+])

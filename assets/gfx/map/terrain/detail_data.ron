@@ -1,0 +1,6 @@
+(schema_version: 1, entries: [
+    Item(Block([
+        Property(key: "materials_limit", operator: Assign, value: Number("3")),
+        Property(key: "material_intensity_bias", operator: Assign, value: Number("0.500000")),
+    ])),
+])

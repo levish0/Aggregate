@@ -68,11 +68,13 @@ pub(super) fn spawn_panel(
                 ..default()
             },
             BackgroundColor(theme::INK),
+            crate::skin::PanelSkin::Tooltip,
             BorderColor::all(theme::GOLD),
             theme::shadow(),
             GlobalZIndex(100 + depth as i32),
             bevy::ui::FocusPolicy::Block,
             crate::scroll::ScrollRegion::default(),
+            crate::layout::UiPointerBlocker,
             TooltipPanel { source },
             PanelEntrance::new(Vec2::new(7., 0.)),
             UiTransform::default(),

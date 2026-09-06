@@ -1,0 +1,75 @@
+(schema_version: 1, entries: [
+    Property(key: "african_farm_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_farm")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_farm_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_farm_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_farm")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_farm")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_rural_farm_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_farm_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_farm")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_rural_farm_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_farm_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_farm")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_rural_center_piece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_farm_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_farm")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_rural_farm_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "wild_west_farm", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("wild_west_farm")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("wild_west_town_entity")),
+            ])),
+        ])),
+    ])),
+])

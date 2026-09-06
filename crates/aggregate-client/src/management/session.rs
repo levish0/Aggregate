@@ -93,7 +93,7 @@ impl ManagementSession {
         let command = SimulationCommand::StartConstruction {
             country: self.player_country.clone(),
             province: province.clone(),
-            facility: uuid::Uuid::new_v4().into(),
+            facility: uuid::Uuid::now_v7().into(),
             definition: definition.clone(),
             workers: recipe.construction.max_workers,
             production_priority: priority,

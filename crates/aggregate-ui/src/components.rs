@@ -54,6 +54,7 @@ pub fn panel(commands: &mut Commands, parent: Entity, layout: Node) -> Entity {
         },
     );
     commands.entity(entity).insert((
+        crate::skin::PanelSkin::Panel,
         theme::panel_gradient(),
         BorderColor::all(theme::BORDER),
         theme::shadow(),
@@ -133,7 +134,7 @@ pub fn button(
     );
     commands
         .entity(label)
-        .insert((ButtonLabel, UiTransform::default()));
+        .insert((ButtonLabel, UiTransform::default(), ZIndex(1)));
     entity
 }
 

@@ -1,0 +1,856 @@
+(schema_version: 1, entries: [
+    Property(key: "STATE_NORTHERN_BALTIC_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3000")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x08FAFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("-7.0")),
+        ])),
+    ])),
+    Property(key: "STATE_MICRONESIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3002")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x341ABA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EQUATORIAL_PACIFIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3006")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x6644E1")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_NORTH_PACIFIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3011")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xA87DDC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTHERN_OCEAN_02", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3015")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x316868")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x316868")),
+        ])),
+    ])),
+    Property(key: "STATE_GREENLAND_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3016")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x709ACF")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x709ACF")),
+        ])),
+    ])),
+    Property(key: "STATE_NORTHEAST_ATLANTIC_COAST", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3017")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0ECACA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_ZANZIBAR_COAST", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3018")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2B5CB8")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_BALTIC_ENTRANCES", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3019")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0AC8FA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("1.5")),
+    ])),
+    Property(key: "STATE_NORWEGIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3020")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0FDCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_LABRADOR_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3021")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x69C9C9")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_LAPTEV_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3022")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x16FAFA")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x16FAFA")),
+        ])),
+    ])),
+    Property(key: "STATE_DAVIS_STRAIT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3023")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x6DFBFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GALAPAGOS_RISE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3024")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0D61DC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EASTERN_CARIBBEAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3025")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xA3CDF4")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("55.0")),
+        ])),
+    ])),
+    Property(key: "STATE_WESTERN_CARIBBEAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3026")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x1FC9E5")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_NORTH_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3027")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x14FAFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_ENGLISH_CHANNEL", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3028")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x15C8C8")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("1.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("25.0")),
+            Item(Number("1.0")),
+        ])),
+    ])),
+    Property(key: "STATE_BAY_OF_BISCAY", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3029")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2A95FA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("55.0")),
+            Item(Number("-15.0")),
+        ])),
+    ])),
+    Property(key: "STATE_IRISH_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3030")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x1B77CD")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("1.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-1.0")),
+            Item(Number("3.0")),
+        ])),
+    ])),
+    Property(key: "STATE_WESTERN_MEDITERRANEAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3032")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x40D9DB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("1.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("4.0")),
+        ])),
+    ])),
+    Property(key: "STATE_CENTRAL_MEDITERRANEAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3033")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x3BDCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EASTERN_MEDITERRANEAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3034")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x46C8FA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SEA_OF_MARMARA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3035")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x47DCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("0.8")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("3.0")),
+            Item(Number("0.0")),
+        ])),
+    ])),
+    Property(key: "STATE_WESTERN_BLACK_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3036")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x48FAFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_CHUCKCHI_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3037")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x39CACA")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x39CACA")),
+        ])),
+    ])),
+    Property(key: "STATE_NORTHWEST_PASSAGE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3038")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x70FBFB")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x70FBFB")),
+        ])),
+    ])),
+    Property(key: "STATE_BARENTS_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3039")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0EC8FA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_KARA_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3040")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0D61A4")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x0D61A4")),
+        ])),
+    ])),
+    Property(key: "STATE_BERING_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3041")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x20CCE0")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EAST_SIBERIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3042")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x43DDFB")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x43DDFB")),
+        ])),
+    ])),
+    Property(key: "STATE_HUDSON_BAY", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3044")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x6FDDFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-55.0")),
+            Item(Number("-10.0")),
+        ])),
+    ])),
+    Property(key: "STATE_GULF_OF_SAINT_LAWRENCE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3045")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x74FBFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("35.0")),
+            Item(Number("-10.0")),
+        ])),
+    ])),
+    Property(key: "STATE_PERSIAN_GULF", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3046")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x56C8FA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.2")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("15.0")),
+            Item(Number("-35.0")),
+        ])),
+    ])),
+    Property(key: "STATE_RED_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3047")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x4FDCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("15.0")),
+            Item(Number("-35.0")),
+        ])),
+    ])),
+    Property(key: "STATE_ARABIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3048")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x54FAFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_LACCADIVE_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3049")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x6FDEFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_BAY_OF_BENGAL", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3050")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x5CFAFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_MALACCA_STRAIT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3051")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x61C8C8")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("0.0")),
+            Item(Number("-35.0")),
+        ])),
+    ])),
+    Property(key: "STATE_JAVA_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3052")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x63DCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-60.0")),
+            Item(Number("0.0")),
+        ])),
+    ])),
+    Property(key: "STATE_SOUTH_CHINA_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3056")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x7BDCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EAST_CHINA_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3058")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0FDDFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SEA_OF_JAPAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3059")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x00FBFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-70.0")),
+            Item(Number("-40.0")),
+        ])),
+    ])),
+    Property(key: "STATE_GULF_OF_MEXICO", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3060")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0D74CA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_BAHAMA_BANKS", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3061")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x0DCACA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("35.0")),
+            Item(Number("-5.0")),
+        ])),
+    ])),
+    Property(key: "STATE_COAST_OF_GUYANA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3062")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x18FCFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_CAPE_ST_ROQUE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3063")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x1ACAFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTH_BRAZIL_BIGHT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3064")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x4499CD")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_RIVER_PLATE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3065")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x1FDEFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_PATAGONIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3066")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x858CBF")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_MID_ATLANTIC_COAST", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3067")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xA3CEF4")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SARGASSO_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3068")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x43DEFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EQUATORIAL_ATLANTIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3069")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x3DCACA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_NORTHERN_NORTH_ATLANTIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3070")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2DAEF1")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GRAND_BANKS", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3071")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x837BBA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_MALAY_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3072")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x807D97")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("35.0")),
+            Item(Number("-5.0")),
+        ])),
+    ])),
+    Property(key: "STATE_HORN_OF_AFRICA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3073")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x807D98")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-5.0")),
+            Item(Number("-5.0")),
+        ])),
+    ])),
+    Property(key: "STATE_SOUTHERN_BALTIC_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3074")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x807D99")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.0")),
+    ])),
+    Property(key: "STATE_BAFFIN_BAY", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3076")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xC64499")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("xC64499")),
+        ])),
+    ])),
+    Property(key: "STATE_CELTIC_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3077")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xDA6DF6")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-20.0")),
+            Item(Number("-5.0")),
+        ])),
+    ])),
+    Property(key: "STATE_NORTHEAST_PACIFIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3081")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xCF4DEF")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GULF_OF_FINLAND", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3082")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x9F5EB0")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("1.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("9.0")),
+            Item(Number("0.0")),
+        ])),
+    ])),
+    Property(key: "STATE_BEAUFORT_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3083")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xD55EAD")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("xD55EAD")),
+        ])),
+    ])),
+    Property(key: "STATE_NORTH_ATLANTIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3085")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x9137A4")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_JAPAN_CURRENT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3086")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x9F5EAE")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_CAPE_VERDE_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3088")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x4989FF")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_LUSITANIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3089")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x5FDDFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_MAIN_EQUATORIAL_CRURRENT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3090")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x6DC9F4")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GULF_OF_GUINEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3091")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x386DCD")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_ADRIATIC_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3093")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2861CB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.0")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("-17.0")),
+            Item(Number("10.0")),
+        ])),
+    ])),
+    Property(key: "STATE_EASTERN_BLACK_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3094")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x405E94")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_BALEARIC_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3098")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x8ADE90")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTH_ATLANTIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3099")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x9F2781")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_TYRRHENIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3102")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xB56DB4")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_BENGUELA_COAST", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3104")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x51B8B8")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTHERN_BIGHT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3105")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x56C9FB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("1.0")),
+        ])),
+    ])),
+    Property(key: "STATE_CAPE_OF_GOOD_HOPE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3106")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x78FCFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_MOZAMBIQUE_CHANNEL", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3107")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x4FDDFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_WESTERN_INDIAN_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3108")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x65CDFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTH_INDIAN_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3110")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x49C9C9")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_AEGEAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3117")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x6640E1")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("1.1")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("13.0")),
+        ])),
+    ])),
+    Property(key: "STATE_SEA_OF_OKHOTSK", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3118")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x03DDFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GULF_OF_ALASKA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3119")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x36CAFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GREAT_AUSTRALIAN_BIGHT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3121")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x28FBFB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_TASMAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3122")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x32C9FB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_MOLUCCA_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3125")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x16C9FB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_CORAL_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3129")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x39C9C9")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_NORTH_ATLANTIC_CURRENT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3131")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x80C2E0")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_NORTHWEST_PACIFIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3132")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x405B92")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_GUINEA_CURRENT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3136")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x755BD2")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_YELLOW_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3138")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xA63FD5")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.2")),
+        Property(key: "diorama_center_offset", operator: Assign, value: Block([
+            Item(Number("25.0")),
+            Item(Number("8.0")),
+        ])),
+    ])),
+    Property(key: "STATE_AMAZON_DELTA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3142")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x3B70B1")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTH_PACIFIC_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3143")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2D4F87")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTHERN_ATLANTIC_CRURRENT", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3144")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2863CB")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTH_ATLANTIC_COAST", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3146")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x340EED")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_NORTHERN_POLYNESIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3147")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x92AED0")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EASTERN_POLYNESIA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3150")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x81A0D2")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_PATAGONIAN_CHANNELS", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3151")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x26CAFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_PERUVIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3152")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x29CACA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_PACIFIC_SEABOARD", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3153")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x31CACA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_INSIDE_PASSAGE", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3154")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x16FCFA")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_CENTROAMERICAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3155")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x2BDEFC")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_WESTERN_POLYNESIAN_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3156")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x48FDFD")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_PHILIPPINES_SEA", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3157")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x3D6A6A")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_EASTERN_INDIAN_OCEAN", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3158")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("xB6CECE")),
+        ])),
+        Property(key: "diorama_radius_multiplier", operator: Assign, value: Number("2.5")),
+    ])),
+    Property(key: "STATE_SOUTHERN_OCEAN_01", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3148")),
+        Property(key: "provinces", operator: Assign, value: Block([
+            Item(Text("x619BED")),
+        ])),
+        Property(key: "impassable", operator: Assign, value: Block([
+            Item(Text("x619BED")),
+        ])),
+    ])),
+])

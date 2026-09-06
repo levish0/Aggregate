@@ -1,0 +1,208 @@
+(schema_version: 1, entries: [
+    Property(key: "african_city_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_city")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_city_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_city_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_city")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_city")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_city_townsquare_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_city_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_city")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_city_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_city_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_city")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_city_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_city_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_city")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_urban_city_townsquare_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "african_skyscraper_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_city")),
+        Property(key: "priority", operator: Assign, value: Number("10")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "b(building_skyscraper)", operator: Exists, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "is_under_construction", operator: Assign, value: Boolean(true)),
+                        Property(key: "level", operator: GreaterThan, value: Number("0")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_city_centerpiece_skyscraper_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_skyscraper")),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_skyscraper_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_city")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_city")),
+        Property(key: "priority", operator: Assign, value: Number("10")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "b(building_skyscraper)", operator: Exists, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "is_under_construction", operator: Assign, value: Boolean(true)),
+                        Property(key: "level", operator: GreaterThan, value: Number("0")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_urban_city_townsquare_skyscraper_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_skyscraper")),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_skyscraper_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_city")),
+        Property(key: "priority", operator: Assign, value: Number("10")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "b(building_skyscraper)", operator: Exists, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "is_under_construction", operator: Assign, value: Boolean(true)),
+                        Property(key: "level", operator: GreaterThan, value: Number("0")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_city_centerpiece_skyscraper_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_skyscraper")),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_skyscraper_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_city")),
+        Property(key: "priority", operator: Assign, value: Number("10")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "b(building_skyscraper)", operator: Exists, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "is_under_construction", operator: Assign, value: Boolean(true)),
+                        Property(key: "level", operator: GreaterThan, value: Number("0")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_city_centerpiece_skyscraper_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_skyscraper")),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_skyscraper_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_city")),
+        Property(key: "priority", operator: Assign, value: Number("10")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "b(building_skyscraper)", operator: Exists, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "is_under_construction", operator: Assign, value: Boolean(true)),
+                        Property(key: "level", operator: GreaterThan, value: Number("0")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_urban_city_townsquare_skyscraper_01_entity")),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_skyscraper")),
+            ])),
+        ])),
+    ])),
+    Property(key: "power_bloc_statue_01", operator: Assign, value: Block([
+        Property(key: "city_type", operator: Assign, value: Symbol("city")),
+        Property(key: "priority", operator: Assign, value: Number("20")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "any_scope_state", operator: Assign, value: Block([
+                Property(key: "b(building_power_bloc_statue)", operator: Exists, value: Block([
+                    Property(key: "OR", operator: Assign, value: Block([
+                        Property(key: "is_under_construction", operator: Assign, value: Boolean(true)),
+                        Property(key: "level", operator: GreaterThan, value: Number("0")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "is_power_bloc_statue", operator: Assign, value: Boolean(true)),
+                Property(key: "building_type", operator: Assign, value: Symbol("building_power_bloc_statue")),
+            ])),
+        ])),
+    ])),
+])

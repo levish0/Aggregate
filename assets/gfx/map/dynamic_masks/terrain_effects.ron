@@ -1,0 +1,10 @@
+(schema_version: 1, entries: [
+    Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/dynamic_mask.shader")),
+    Property(key: "effectname", operator: Assign, value: Text("CreateDynamicMask")),
+    Property(key: "noise_texture", operator: Assign, value: Text("gfx/map/dynamic_masks/common_noise.dds")),
+    Property(key: "mask_size", operator: Assign, value: Block([
+        Item(Number("2048")),
+        Item(Number("1024")),
+    ])),
+    Property(key: "mask_channels", operator: Assign, value: Number("2")),
+])

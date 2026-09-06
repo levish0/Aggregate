@@ -8,7 +8,7 @@
 - Fix root causes rather than adding temporary workarounds.
 - Do not modify, revert, reformat, or clean up unrelated user changes.
 - Validate changes with the relevant tests, type checks, linting, formatting, or builds. Never claim validation that was not performed.
-- Commit completed changes in coherent logical units. Keep unrelated changes separate and write concise English commit messages.
+- Commit changes only when the user explicitly asks. When authorized, keep coherent logical units separate and write concise English commit messages. Do not push without an explicit request.
 - Do not rewrite existing commits or use destructive Git operations unless explicitly requested.
 
 ## Memory Workflow

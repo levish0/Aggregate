@@ -1,0 +1,230 @@
+// Source line 1:  Blockade diorama
+// Source line 21:  Port bombardment diorama
+(schema_version: 1, entries: [
+    Property(key: "blockade_diorama_00", operator: Assign, value: Block([
+        Property(key: "group", operator: Assign, value: Symbol("blockade")),
+        Property(key: "composition", operator: Assign, value: Block([
+            Property(key: "ship_group_capital_ships", operator: Assign, value: Number("1")),
+            Property(key: "ship_group_cruisers", operator: Assign, value: Number("1")),
+            Property(key: "ship_group_torpedo_craft", operator: Assign, value: Number("1")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("10")),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("90")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("blockade")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0")),
+                Item(Number("0")),
+                Item(Number("3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("180")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_capital_ships")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("blockade")),
+            Property(key: "entity", operator: Assign, value: Text("military_navy_blockade_generic_entity")),
+        ])),
+    ])),
+    Property(key: "port_bombardment_diorama_00", operator: Assign, value: Block([
+        Property(key: "group", operator: Assign, value: Symbol("port_bombardment")),
+        Property(key: "composition", operator: Assign, value: Block([
+            Property(key: "ship_group_capital_ships", operator: Assign, value: Number("1")),
+            Property(key: "ship_group_cruisers", operator: Assign, value: Number("1")),
+            Property(key: "ship_group_torpedo_craft", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("12")),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_01")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("90")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_02")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.5")),
+                Item(Number("0.0")),
+                Item(Number("2.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("58")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_03")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.2")),
+                Item(Number("0.0")),
+                Item(Number("2.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("118")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_01")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_capital_ships")),
+            Property(key: "main", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_02")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_cruisers")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_03")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_cruisers")),
+        ])),
+    ])),
+    Property(key: "port_bombardment_diorama_01", operator: Assign, value: Block([
+        Property(key: "group", operator: Assign, value: Symbol("port_bombardment")),
+        Property(key: "composition", operator: Assign, value: Block([
+            Property(key: "ship_group_capital_ships", operator: Assign, value: Number("1")),
+            Property(key: "ship_group_cruisers", operator: Assign, value: Number("0")),
+            Property(key: "ship_group_torpedo_craft", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("12")),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_01")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("90")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_02")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.5")),
+                Item(Number("0.0")),
+                Item(Number("2.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("58")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_03")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.2")),
+                Item(Number("0.0")),
+                Item(Number("2.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("118")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_01")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_capital_ships")),
+            Property(key: "main", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_02")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_capital_ships")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_03")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_capital_ships")),
+        ])),
+    ])),
+    Property(key: "port_bombardment_diorama_02", operator: Assign, value: Block([
+        Property(key: "group", operator: Assign, value: Symbol("port_bombardment")),
+        Property(key: "composition", operator: Assign, value: Block([
+            Property(key: "ship_group_capital_ships", operator: Assign, value: Number("0")),
+            Property(key: "ship_group_cruisers", operator: Assign, value: Number("1")),
+            Property(key: "ship_group_torpedo_craft", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("12")),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_01")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("90")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_02")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.5")),
+                Item(Number("0.0")),
+                Item(Number("2.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("58")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Symbol("ship_03")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.2")),
+                Item(Number("0.0")),
+                Item(Number("2.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("118")),
+                Item(Number("0")),
+                Item(Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_01")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_cruisers")),
+            Property(key: "main", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_02")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_cruisers")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("ship_03")),
+            Property(key: "group", operator: Assign, value: Symbol("ship_group_cruisers")),
+        ])),
+    ])),
+])

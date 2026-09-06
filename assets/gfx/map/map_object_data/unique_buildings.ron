@@ -1,0 +1,693 @@
+(schema_version: 1, entries: [
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("angkor_wat_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("6465.549805")),
+                    Item(Number("0.000000")),
+                    Item(Number("1825.500000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("argebam_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("5435.600098")),
+                    Item(Number("0.000000")),
+                    Item(Number("2195.844971")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("-0.091850")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.995000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("big_ben_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4090.840088")),
+                    Item(Number("0.000000")),
+                    Item(Number("2798.989990")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("-0.382683")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.923880")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("canal_kiel_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(true)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4308.840820")),
+                    Item(Number("0.000000")),
+                    Item(Number("2885.845947")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("canal_panama_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(true)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("2275.778076")),
+                    Item(Number("0.000000")),
+                    Item(Number("1717.770996")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.404315")),
+                    Item(Number("0.000000")),
+                    Item(Number("-0.914000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("canal_suez_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(true)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4837.185059")),
+                    Item(Number("0.000000")),
+                    Item(Number("2221.669922")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.658000")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.752000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("chhatrapati_shivaji_terminus_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("0")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("5758.364258")),
+                    Item(Number("0.000000")),
+                    Item(Number("1950.097900")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.691578")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.722302")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("5757.289551")),
+                    Item(Number("0.000000")),
+                    Item(Number("1951.637695")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.591956")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.805970")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("chichen_itza_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("2078.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("1988.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("-0.300706")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.953717")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("easter_island_heads_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("1602.531250")),
+                    Item(Number("0.000000")),
+                    Item(Number("878.737122")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("1.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("eiffel_tower_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4144.299805")),
+                    Item(Number("0.000000")),
+                    Item(Number("2720.459961")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.200000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.950000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("eye_of_sahara_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("3838.021484")),
+                    Item(Number("0.000000")),
+                    Item(Number("1999.368774")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("1.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("forbidden_city_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("6748.419922")),
+                    Item(Number("0.000000")),
+                    Item(Number("2472.649902")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.350000")),
+                    Item(Number("0.000000")),
+                    Item(Number("-0.720000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.500000")),
+                    Item(Number("1.500000")),
+                    Item(Number("1.500000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("giza_necropolis_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4793.680176")),
+                    Item(Number("0.000000")),
+                    Item(Number("2208.621826")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.823280")),
+                    Item(Number("0.000000")),
+                    Item(Number("-0.720155")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("hagia_sophia_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4750.356445")),
+                    Item(Number("0.000000")),
+                    Item(Number("2503.515869")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("0.373223")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.927741")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("halloween_castledracula_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4642.506348")),
+                    Item(Number("0.000000")),
+                    Item(Number("2678.339355")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("khaju_bridge_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("5282.500000")),
+                    Item(Number("0.000000")),
+                    Item(Number("2281.000000")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.600000")),
+                    Item(Number("0.000000")),
+                    Item(Number("-0.800000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("machu_picchu_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("2436.326660")),
+                    Item(Number("-0.285645")),
+                    Item(Number("1213.135254")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("-0.057646")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.998337")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("0.111245")),
+                    Item(Number("0.111245")),
+                    Item(Number("0.111245")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("mosque_of_djenne_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("3983.100098")),
+                    Item(Number("0.000000")),
+                    Item(Number("1826.300049")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("3.000000")),
+                    Item(Number("3.000000")),
+                    Item(Number("3.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("petra_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4911.708008")),
+                    Item(Number("-0.735596")),
+                    Item(Number("2226.567139")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("0.849451")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.527667")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.464854")),
+                    Item(Number("1.464854")),
+                    Item(Number("1.464854")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("saint_basils_cathedral_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4947.000000")),
+                    Item(Number("0.000000")),
+                    Item(Number("2944.199951")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.090000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.250000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("3.000000")),
+                    Item(Number("3.000000")),
+                    Item(Number("3.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("statue_of_liberty_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(true)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(true)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("2414.729980")),
+                    Item(Number("0.000000")),
+                    Item(Number("2487.379883")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("taj_mahal_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("5869.939941")),
+                    Item(Number("0.000000")),
+                    Item(Number("2137.639893")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.000000")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("vatican_city_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("4379.340332")),
+                    Item(Number("0.000000")),
+                    Item(Number("2534.114990")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("0.000000")),
+                    Item(Number("0.707107")),
+                    Item(Number("0.000000")),
+                    Item(Number("0.707107")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("0.750000")),
+                    Item(Number("0.750000")),
+                    Item(Number("0.750000")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "game_object_locator", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("white_house_locator")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("static")),
+        Property(key: "instances", operator: Assign, value: Block([
+            Item(Block([
+                Property(key: "id", operator: Assign, value: Number("1")),
+                Property(key: "position", operator: Assign, value: Block([
+                    Item(Number("2343.350098")),
+                    Item(Number("0.000000")),
+                    Item(Number("2438.699951")),
+                ])),
+                Property(key: "rotation", operator: Assign, value: Block([
+                    Item(Number("-0.000000")),
+                    Item(Number("0.103938")),
+                    Item(Number("-0.000000")),
+                    Item(Number("0.994584")),
+                ])),
+                Property(key: "scale", operator: Assign, value: Block([
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                    Item(Number("1.000000")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

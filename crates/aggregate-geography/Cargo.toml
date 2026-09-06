@@ -1,0 +1,21 @@
+[package]
+name = "aggregate-geography"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+aggregate-world.workspace = true
+serde = { workspace = true, features = ["derive"] }
+ron.workspace = true
+anyhow.workspace = true
+image.workspace = true
+glam.workspace = true
+uuid.workspace = true
+blake3.workspace = true
+bytemuck.workspace = true
+zstd.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

@@ -3,9 +3,9 @@ use aggregate_scenario::{validate_scenario, validate_world_state};
 use aggregate_world::{Scenario, WorldSnapshot};
 use serde::{Deserialize, Serialize};
 
-pub const SAVE_SCHEMA_VERSION: u32 = 1;
+pub const SAVE_SCHEMA_VERSION: u32 = 2;
 /// Increment when the semantics/order of native rules change. Saves include their definitions.
-pub const RULESET_VERSION: &str = "aggregate-native-economy/1";
+pub const RULESET_VERSION: &str = "aggregate-native-economy/2";
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]

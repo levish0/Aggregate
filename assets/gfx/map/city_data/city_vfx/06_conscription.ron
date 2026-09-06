@@ -1,0 +1,8 @@
+(schema_version: 1, entries: [
+    Property(key: "conscription", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "has_active_building", operator: Assign, value: Symbol("building_conscription_center")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("vfx_conscription_entity")),
+    ])),
+])

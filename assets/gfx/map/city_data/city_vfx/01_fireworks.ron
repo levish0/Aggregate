@@ -1,0 +1,14 @@
+(schema_version: 1, entries: [
+    Property(key: "fireworks", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "OR", operator: Assign, value: Block([
+                Property(key: "AND", operator: Assign, value: Block([
+                    Property(key: "loyalists", operator: GreaterThan, value: Number("0.3")),
+                    Property(key: "turmoil", operator: LessThan, value: Number("0.2")),
+                ])),
+                Property(key: "has_variable", operator: Assign, value: Symbol("fireworks_variable")),
+            ])),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("fireworks")),
+    ])),
+])

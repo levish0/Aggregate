@@ -1,0 +1,10 @@
+(schema_version: 1, entries: [
+    Property(key: "Flatmap", operator: Assign, value: Text("flatmap.dds")),
+    Property(key: "FlatmapOverlay", operator: Assign, value: Text("flatmap_overlay.dds")),
+    Property(key: "ImpassableTerrain", operator: Assign, value: Text("impassableterrain.dds")),
+    Property(key: "EdgeOfWorldClouds", operator: Assign, value: Text("edgeofworld_clouds.dds")),
+    Property(key: "ColormapTree", operator: Assign, value: Text("colormap_tree.dds")),
+    Property(key: "WindmapTree", operator: Assign, value: Text("windmap_tree.dds")),
+    Property(key: "SolLowTexture", operator: Assign, value: Text("bronze_diff.dds")),
+    Property(key: "PapermapCubemap", operator: Assign, value: Text("tavern.dds")),
+])

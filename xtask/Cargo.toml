@@ -3,5 +3,12 @@ name = "xtask"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
+
+[dependencies]
+aggregate-asset-data.workspace = true
+aggregate-geography.workspace = true
+anyhow.workspace = true
+ron.workspace = true
+
 [lints]
 workspace = true

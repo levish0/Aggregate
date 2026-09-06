@@ -1,0 +1,14 @@
+(schema_version: 1, entries: [
+    Property(key: "MapPaintingPrimaryRed", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingPrimaryGreen", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingPrimaryBlue", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingPrimaryAlpha", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingSecondaryRed", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingSecondaryGreen", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingSecondaryBlue", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingSecondaryAlpha", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingAlternateRed ", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingAlternateGreen", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingAlternateBlue", operator: Assign, value: Text("neutral.dds")),
+    Property(key: "MapPaintingAlternateAlpha", operator: Assign, value: Text("neutral.dds")),
+])

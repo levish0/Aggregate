@@ -1,0 +1,122 @@
+// Source line 1: #####################################################
+// Source line 2: #####				HEAD PIECES					######
+// Source line 3: #####################################################
+// Source line 33: #####################################################
+// Source line 34: #####				HANDHELD PIECES				######
+// Source line 35: #####################################################
+// Source line 118: #####################################################
+// Source line 119: #####				BACK PIECES					######
+// Source line 120: #####################################################
+// Source line 143: #####################################################
+// Source line 144: #####			HERO AS ACCESSORIES				######
+// Source line 145: #####################################################
+(schema_version: 1, entries: [
+    Property(key: "tophat", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_tophat_entity")),
+    ])),
+    Property(key: "academyhat", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_academyhat_entity")),
+    ])),
+    Property(key: "laurelwreath", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_laurelwreath_01_entity")),
+    ])),
+    Property(key: "crown", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_crown_01_entity")),
+    ])),
+    Property(key: "romanhelmet", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_romanhelmet_entity")),
+    ])),
+    Property(key: "halo", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_halo_01_entity")),
+    ])),
+    Property(key: "picklehelmet", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_picklehelmet_01_entity")),
+    ])),
+    Property(key: "banner", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_banner_01_entity")),
+    ])),
+    Property(key: "laurusbranch", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_laurusbranch_01_entity")),
+    ])),
+    Property(key: "umbrella", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_umbrella_entity")),
+    ])),
+    Property(key: "walkingcane", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_walkingcane_entity")),
+    ])),
+    Property(key: "wrench", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_wrench_entity")),
+    ])),
+    Property(key: "book", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_book_entity")),
+    ])),
+    Property(key: "crudehoe", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_crudehoe_entity")),
+    ])),
+    Property(key: "eagle", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_eagle_entity")),
+    ])),
+    Property(key: "flame", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_flame_entity")),
+    ])),
+    Property(key: "gun", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_gun_entity")),
+    ])),
+    Property(key: "handheldfan", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_handheldfan_entity")),
+    ])),
+    Property(key: "parasol", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_parasol_entity")),
+    ])),
+    Property(key: "pitchfork", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_pitchfork_entity")),
+    ])),
+    Property(key: "shield", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_shield_entity")),
+    ])),
+    Property(key: "shovel", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_shovel_entity")),
+    ])),
+    Property(key: "sickle", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_sickle_entity")),
+    ])),
+    Property(key: "sword", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_sword_entity")),
+    ])),
+    Property(key: "trumpet", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_trumpet_entity")),
+    ])),
+    Property(key: "sextant", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_sextant_01_entity")),
+    ])),
+    Property(key: "scale", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_scale_01_entity")),
+    ])),
+    Property(key: "wings", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_wings_01_entity")),
+    ])),
+    Property(key: "royalcape", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_royalcape_01_entity")),
+    ])),
+    Property(key: "backpack", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_attachment_backpack_entity")),
+    ])),
+    Property(key: "basket", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_basket_01_entity")),
+    ])),
+    Property(key: "hands", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_supportelement_hands_01_entity")),
+    ])),
+    Property(key: "armillary", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_hero_armillary_entity")),
+    ])),
+    Property(key: "globe", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_hero_globe_entity")),
+    ])),
+    Property(key: "skull", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_hero_skull_entity")),
+    ])),
+    Property(key: "sun", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_statue_hero_sun_entity")),
+    ])),
+])

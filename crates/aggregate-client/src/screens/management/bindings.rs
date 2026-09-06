@@ -48,7 +48,11 @@ pub fn update_management_labels(
                 .iter()
                 .find(|country| country.id == session.player_country)
                 .map(|country| {
-                    presentation::content_name(&state, "country", &country.id.0, &country.name)
+                    country
+                        .name_key
+                        .as_ref()
+                        .and_then(|key| state.localization.text(key).ok())
+                        .unwrap_or_else(|| country.name.clone())
                 })
                 .unwrap_or_default(),
             ManagementLabel::Day => state.format(
@@ -194,13 +198,34 @@ pub fn update_management_labels(
                 .iter()
                 .find(|project| project.facility_id == *id)
                 .map(|project| {
-                    state.format(
+                    let progress = state.format(
                         "management-project-progress",
                         &[
                             ("work", project.remaining_worker_days.to_string()),
                             ("workers", project.requested_workers.to_string()),
                         ],
-                    )
+                    );
+                    let allocation = session.last_report.as_ref().and_then(|report| {
+                        report
+                            .constructions
+                            .iter()
+                            .find(|report| report.facility == *id)
+                    });
+                    let status = match allocation {
+                        None => state.text("management-project-awaiting-allocation"),
+                        Some(report) => state.format(
+                            if report.active_workers < report.requested_workers {
+                                "management-project-labor-shortage"
+                            } else {
+                                "management-project-workers"
+                            },
+                            &[
+                                ("active", report.active_workers.to_string()),
+                                ("requested", report.requested_workers.to_string()),
+                            ],
+                        ),
+                    };
+                    format!("{progress}\n{status}")
                 })
                 .unwrap_or_default(),
         };

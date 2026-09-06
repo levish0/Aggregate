@@ -1,0 +1,37 @@
+(schema_version: 1, entries: [
+    Property(key: "heightmap_file", operator: Assign, value: Text("map_data/packed_heightmap.png")),
+    Property(key: "indirection_file", operator: Assign, value: Text("map_data/indirection_heightmap.png")),
+    Property(key: "original_heightmap_size", operator: Assign, value: Block([
+        Item(Number("16384")),
+        Item(Number("7232")),
+    ])),
+    Property(key: "tile_size", operator: Assign, value: Number("65")),
+    Property(key: "should_wrap_x", operator: Assign, value: Boolean(true)),
+    Property(key: "level_offsets", operator: Assign, value: Block([
+        Item(Block([
+            Item(Number("0")),
+            Item(Number("0")),
+        ])),
+        Item(Block([
+            Item(Number("0")),
+            Item(Number("6695")),
+        ])),
+        Item(Block([
+            Item(Number("0")),
+            Item(Number("7569")),
+        ])),
+        Item(Block([
+            Item(Number("0")),
+            Item(Number("7662")),
+        ])),
+        Item(Block([
+            Item(Number("0")),
+            Item(Number("7680")),
+        ])),
+    ])),
+    Property(key: "max_compress_level", operator: Assign, value: Number("4")),
+    Property(key: "empty_tile_offset", operator: Assign, value: Block([
+        Item(Number("201")),
+        Item(Number("76")),
+    ])),
+])

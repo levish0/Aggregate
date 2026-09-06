@@ -24,7 +24,7 @@ fn project(
 ) -> ConstructionProjectState {
     ConstructionProjectState {
         facility_id: FacilityId::from(Uuid::from_u128(identifier)),
-        province: ProvinceId::from(province),
+        province: province.parse::<ProvinceId>().unwrap(),
         definition: FacilityDefinitionId::from(definition),
         requested_workers,
         remaining_worker_days,
@@ -34,7 +34,10 @@ fn project(
 
 #[test]
 fn future_facility_capacity_is_checked_with_existing_province_and_country_capacity() {
-    for province in ["north_valley", "south_ridge"] {
+    for province in [
+        "01a07577-e209-792a-aba0-8dba97d92ac6",
+        "01a07577-e209-7938-8120-efb504849d04",
+    ] {
         let mut scenario = fixture_with_one_operating_farm(u64::MAX - 5);
         scenario.definitions.facilities[1].workers_per_level = 6;
         scenario.initial_state.construction_projects.push(project(
@@ -63,8 +66,20 @@ fn future_capacity_accumulates_all_pending_projects() {
     scenario.initial_state.facilities.clear();
     scenario.definitions.facilities[1].workers_per_level = u64::MAX / 2 + 1;
     scenario.initial_state.construction_projects = vec![
-        project(10, "logging_camp", "north_valley", 1, 1),
-        project(11, "logging_camp", "north_valley", 1, 1),
+        project(
+            10,
+            "logging_camp",
+            "01a07577-e209-792a-aba0-8dba97d92ac6",
+            1,
+            1,
+        ),
+        project(
+            11,
+            "logging_camp",
+            "01a07577-e209-792a-aba0-8dba97d92ac6",
+            1,
+            1,
+        ),
     ];
     let error = validate_world_state(
         &scenario.definitions,
@@ -85,7 +100,7 @@ fn current_construction_demand_is_checked_with_operating_capacity() {
     scenario.initial_state.construction_projects.push(project(
         10,
         "logging_camp",
-        "north_valley",
+        "01a07577-e209-792a-aba0-8dba97d92ac6",
         6,
         6,
     ));
@@ -108,7 +123,7 @@ fn current_construction_demand_is_limited_by_remaining_work() {
     scenario.initial_state.construction_projects.push(project(
         10,
         "logging_camp",
-        "north_valley",
+        "01a07577-e209-792a-aba0-8dba97d92ac6",
         20,
         5,
     ));
@@ -126,8 +141,20 @@ fn mixed_completion_states_must_fit_even_when_both_endpoints_fit() {
     scenario.initial_state.facilities.clear();
     scenario.definitions.facilities[1].workers_per_level = 1;
     scenario.initial_state.construction_projects = vec![
-        project(10, "grain_farm", "north_valley", 1, 1),
-        project(11, "logging_camp", "north_valley", 20, 20),
+        project(
+            10,
+            "grain_farm",
+            "01a07577-e209-792a-aba0-8dba97d92ac6",
+            1,
+            1,
+        ),
+        project(
+            11,
+            "logging_camp",
+            "01a07577-e209-792a-aba0-8dba97d92ac6",
+            20,
+            20,
+        ),
     ];
     let error = validate_world_state(
         &scenario.definitions,
@@ -145,8 +172,20 @@ fn every_completion_subset_of_an_accepted_project_set_remains_valid() {
     scenario.definitions.facilities[1].workers_per_level = 5;
     scenario.definitions.facilities[2].workers_per_level = 10;
     scenario.initial_state.construction_projects = vec![
-        project(10, "logging_camp", "north_valley", 10, 10),
-        project(11, "tool_workshop", "north_valley", 10, 10),
+        project(
+            10,
+            "logging_camp",
+            "01a07577-e209-792a-aba0-8dba97d92ac6",
+            10,
+            10,
+        ),
+        project(
+            11,
+            "tool_workshop",
+            "01a07577-e209-792a-aba0-8dba97d92ac6",
+            10,
+            10,
+        ),
     ];
     for completed_mask in 0..4 {
         let mut state = scenario.initial_state.clone();

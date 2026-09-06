@@ -1,0 +1,1321 @@
+// Source line 1: AFRICAN CITY	AFRICAN CITY	AFRICAN CITY	AFRICAN CITY	AFRICAN CITY#
+// Source line 98: AFRICAN PORT 	AFRICAN PORT 	AFRICAN PORT 	AFRICAN PORT 	AFRICAN PORT#
+// Source line 108: AFRICAN FARM	AFRICAN FARM	AFRICAN FARM	AFRICAN FARM	AFRICAN FARM#
+// Source line 200: AFRICAN MANUFACTORY	AFRICAN MANUFACTORY	AFRICAN MANUFACTORY	AFRICAN MANUFACTORY 	AFRICAN MANUFACTORY#
+// Source line 304: AFRICAN FORESTRY	AFRICAN FORESTRY	AFRICAN FORESTRY	AFRICAN FORESTRY	AFRICAN FORESTRY#
+// Source line 334: AFRICAN MINING	AFRICAN MINING	AFRICAN MINING	AFRICAN MINING	AFRICAN MINING#
+// Source line 359: ARABIAN CITY	ARABIAN CITY	ARABIAN CITY	ARABIAN CITY	ARABIAN CITY#
+// Source line 456: ARABIAN PORT 	ARABIAN PORT 	ARABIAN PORT 	ARABIAN PORT 	ARABIAN PORT#
+// Source line 466: ARABIAN FARM	ARABIAN FARM	ARABIAN FARM	ARABIAN FARM	ARABIAN FARM#
+// Source line 558: ARABIAN MANUFACTORY 	ARABIAN MANUFACTORY	ARABIAN MANUFACTORY	ARABIAN MANUFACTORY 	ARABIAN MANUFACTORY#
+// Source line 662: ARABIAN FORESTRY	ARABIAN FORESTRY	ARABIAN FORESTRY	ARABIAN FORESTRY	ARABIAN FORESTRY#
+// Source line 692: ARABIAN MINING	ARABIAN MINING	ARABIAN MINING	ARABIAN MINING	ARABIAN MINING#
+// Source line 717: ASIAN CITY	ASIAN CITY	ASIAN CITY	ASIAN CITY	ASIAN CITY#
+// Source line 819: ASIAN PORT 	ASIAN PORT 	ASIAN PORT 	ASIAN PORT 	ASIAN PORT#
+// Source line 829: ASIAN FARM	ASIAN FARM	ASIAN FARM	ASIAN FARM	ASIAN FARM#
+// Source line 921: ASIAN MANUFACTORY	ASIAN MANUFACTORY	ASIAN MANUFACTORY	ASIAN MANUFACTORY 	ASIAN MANUFACTORY#
+// Source line 1025: ASIAN FORESTRY	ASIAN FORESTRY	ASIAN FORESTRY	ASIAN FORESTRY	ASIAN FORESTRY#
+// Source line 1055: ASIAN MINING	ASIAN MINING	ASIAN MINING	ASIAN MINING	ASIAN MINING#
+// Source line 1080: EUROPEAN CITY	EUROPEAN CITY	EUROPEAN CITY	EUROPEAN CITY	EUROPEAN CITY#
+// Source line 1176: EUROPEAN PORT 	EUROPEAN PORT 	EUROPEAN PORT 	EUROPEAN PORT 	EUROPEAN PORT#
+// Source line 1186: EUROPEAN FARM	EUROPEAN FARM	EUROPEAN FARM	EUROPEAN FARM	EUROPEAN FARM#
+// Source line 1278: EUROPEAN MANUFACTORY	EUROPEAN MANUFACTORY	EUROPEAN MANUFACTORY	EUROPEAN MANUFACTORY 	EUROPEAN MANUFACTORY#
+// Source line 1393: EUROPEAN FORESTRY	EUROPEAN FORESTRY	EUROPEAN FORESTRY	EUROPEAN FORESTRY	EUROPEAN FORESTRY#
+// Source line 1423: EUROPEAN MINING	EUROPEAN MINING	EUROPEAN MINING	EUROPEAN MINING	EUROPEAN MINING#
+// Source line 1458: LATIN CITY	LATIN CITY	LATIN CITY	LATIN CITY	LATIN CITY#
+// Source line 1555: LATIN PORT 	LATIN PORT 	LATIN PORT 	LATIN PORT 	LATIN PORT#
+// Source line 1565: LATIN FARM	LATIN FARM	LATIN FARM	LATIN FARM	LATIN FARM#
+// Source line 1657: LATIN MANUFACTORY	LATIN MANUFACTORY	LATIN MANUFACTORY	LATIN MANUFACTORY 	LATIN MANUFACTORY#
+// Source line 1761: LATIN FORESTRY	LATIN FORESTRY	LATIN FORESTRY	LATIN FORESTRY	LATIN FORESTRY#
+// Source line 1791: LATIN MINING	LATIN MINING	LATIN MINING	LATIN MINING	LATIN MINING#
+// Source line 1818: ###################################################################################
+// Source line 1819: ##GENERIC BUILDINGS####GENERIC BUILDINGS###GENERIC BUILDINGS###GENERIC BUILDINGS###
+// Source line 1820: ###################################################################################
+(schema_version: 1, entries: [
+    Property(key: "african_city_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_city_centerpiece_skyscraper_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Text("particle_skyscraper_light")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_skyscraper_entity")),
+    ])),
+    Property(key: "african_city_university_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_city_academy_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_city_barracks_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "african_city_govadmin_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_city_tradecenter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_city_financialdistrict_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_urban_city_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_port_navalbase_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "african_farm_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_farm_farmstead_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_farm_farmstead_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_farm_scatter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_farm_scatter_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_farm_plantation_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_farm_ranch_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_rural_manorhouse_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_rural_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_rural_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_colonial_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_colonial_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_colonial_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "african_furniture_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_glassworks_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_tools_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_forestry_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "african_forestry_loggingcamp_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_forestry_loggingcamp_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_forestry_scatter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_forestry_scatter_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_mininghub_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/smoke_chimney")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "african_mining_coaldepo_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "african_mining_processing_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_townsquare_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_urban_city_townsquare_skyscraper_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Text("particle_skyscraper_light")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_skyscraper_entity")),
+    ])),
+    Property(key: "arabic_city_university_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_city_academy_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_city_barracks_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "arabic_city_govadmin_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_city_tradecenter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_city_financialdistrict_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_urban_city_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_port_navalbase_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_rural_farm_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_farm_farmstead_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_farm_farmstead_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_farm_scatter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_farm_scatter_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_farm_plantation_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_farm_ranch_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_rural_manorhouse_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_rural_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_factory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_factory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_factory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_factory_colonial_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_factory_colonial_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_factory_colonial_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "arabic_factory_furniture_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_factory_glassworks_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_factory_tools_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_forestry_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "arabic_forestry_loggingcamp_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_forestry_loggingcamp_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_forestry_scatter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "arabic_forestry_scatter_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "mininghub_centerpiece_sandstone_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/smoke_chimney")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "generic_rural_mining_coaldepo_sandstone_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_rural_mining_processing_sandstone_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_city_townsquare_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_city_centerpiece_skyscraper_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Text("particle_skyscraper_light")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_skyscraper_entity")),
+    ])),
+    Property(key: "asian_urban_city_university_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_urban_city_academy_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_city_barracks_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "asian_urban_city_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_city_tradecenter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_city_govadmin_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_city_financialdistrict_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_urban_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_urban_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_port_navalbase_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_rural_farm_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_farm_farmstead_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_farm_farmstead_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_province_subfarm_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_province_subfarm_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_rural_plantation_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_rural_ranch_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_rural_manorhouse_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_rural_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_rural_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_colonial_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_colonial_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_colonial_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "asian_furniture_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_glassworks_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_tools_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_forestry_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "asian_forestry_lumberdepo_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_forestry_lumberdepo_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_forestry_camp_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_forestry_camp_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_mining_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/smoke_chimney")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "asian_mining_coaldepo_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "asian_mining_processing_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_city_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_city_centerpiece_skyscraper_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Text("particle_skyscraper_light")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_skyscraper_entity")),
+    ])),
+    Property(key: "european_city_university_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_city_academy_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_city_barracks_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "european_city_government_administration_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_city_tradecenter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_city_financialdistrict_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_urban_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_urban_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_port_naval_base_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_rural_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_province_farm_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "european_province_farm_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "european_farm_farmhouse_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "european_farm_farmhouse_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "european_rural_plantation_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "european_rural_ranch_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "european_rural_manorhouse_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "european_rural_building_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_rural_building_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "generic_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "generic_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "colonial_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "colonial_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "colonial_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "furniture_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "glassworks_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "tools_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "war_machines_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "european_forestry_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "generic_forestry_lumberdepo_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_forestry_lumberdepo_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic__rural_forestry_camp_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_rural_forestry_camp_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "mininghub_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/smoke_chimney")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "generic_mining_coaldepo_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_rural_mining_coaldepo_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_mining_processing_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "generic_oil_drill_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_townsquare_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_urban_city_townsquare_skyscraper_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Text("particle_skyscraper_light")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_skyscraper_entity")),
+    ])),
+    Property(key: "latin_city_university_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_city_academy_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_city_barracks_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "latin_urban_city_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_city_tradecenter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_city_financialdistrict_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_urban_city_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_port_navalbase_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "latin_rural_farm_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_farm_farmstead_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_farm_farmstead_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_farm_scatter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_farm_scatter_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_farm_plantation_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_farm_ranch_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_rural_manorhouse_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_rural_residential_poor_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_poor_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_poor_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_mid_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_mid_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_mid_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_rich_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_rich_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_rural_residential_rich_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_colonial_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_colonial_manufactory_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_colonial_manufactory_03_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_3x3_entity")),
+    ])),
+    Property(key: "latin_furniture_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_glassworks_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_tools_manufactory_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_forestry_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "latin_forestry_loggingcamp_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_forestry_loggingcamp_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_forestry_scatter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_forestry_scatter_02_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_mininghub_centerpiece_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("3")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/smoke_chimney")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_6x6_entity")),
+    ])),
+    Property(key: "latin_mining_coaldepo_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "latin_mining_processing_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_2x2_entity")),
+    ])),
+    Property(key: "french_revolutioncamp_placeholder_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "generic_companyhq_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "generic_regionalcompanyhq_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "generic_logisticscenter_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("2")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+])

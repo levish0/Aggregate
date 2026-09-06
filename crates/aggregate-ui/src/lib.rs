@@ -2,8 +2,11 @@
 pub mod button;
 pub mod components;
 pub mod fonts;
+pub mod layout;
 pub mod motion;
 pub mod scroll;
+pub mod select;
+pub mod skin;
 pub mod theme;
 pub mod tooltip;
 
@@ -23,12 +26,16 @@ pub struct AggregateUiPlugin;
 
 impl Plugin for AggregateUiPlugin {
     fn build(&self, app: &mut App) {
-        app.init_resource::<InputFocus>()
+        app.add_plugins(UiMaterialPlugin::<skin::SurfaceMaterial>::default())
+            .init_resource::<InputFocus>()
             .init_resource::<InputFocusVisible>()
             .init_resource::<motion::MotionPreferences>()
             .init_resource::<KeyboardFocus>()
+            .init_resource::<button::UiKeyboardPolicy>()
             .init_resource::<TooltipState>()
             .init_resource::<tooltip::TooltipSettings>()
+            .init_resource::<select::SelectInteractionState>()
+            .add_message::<select::SelectChanged>()
             .add_message::<ButtonActivated>()
             .add_systems(Startup, fonts::load_fonts)
             .add_systems(
@@ -36,12 +43,22 @@ impl Plugin for AggregateUiPlugin {
                 (
                     button::keyboard_navigation,
                     button::pointer_interaction,
+                    select::interact,
                     button::animate_buttons,
                     tooltip::update_tooltips,
                 )
                     .chain()
                     .in_set(UiSystems::Interaction),
             )
-            .add_systems(Update, (motion::animate_panels, scroll::scroll_regions));
+            .add_systems(Update, (motion::animate_panels, scroll::scroll_regions))
+            .add_systems(
+                PostUpdate,
+                (
+                    select::update_labels,
+                    skin::apply_surfaces,
+                    skin::animate_surfaces,
+                )
+                    .chain(),
+            );
     }
 }

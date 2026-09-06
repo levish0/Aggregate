@@ -15,8 +15,8 @@ fn facility_id(value: u64) -> FacilityId {
 }
 fn build_command() -> SimulationCommand {
     SimulationCommand::StartConstruction {
-        country: "example_republic".into(),
-        province: "north_valley".into(),
+        country: "01a07577-e203-76f4-8315-dae6c69b13bb".parse().unwrap(),
+        province: "01a07577-e209-792a-aba0-8dba97d92ac6".parse().unwrap(),
         facility: facility_id(100),
         definition: "grain_farm".into(),
         workers: 10,
@@ -34,6 +34,70 @@ fn stockpiles(snapshot: &WorldSnapshot) -> BTreeMap<(ProvinceId, GoodId), i128> 
                 .map(|(good, amount)| ((province.id.clone(), good.clone()), i128::from(*amount)))
         })
         .collect()
+}
+
+#[test]
+fn workers_blocked_by_production_inputs_finish_waiting_construction_without_double_work() {
+    let mut fixture = scenario();
+    let north = fixture.initial_state.provinces[0].id.clone();
+    fixture.initial_state.provinces[0]
+        .stockpile
+        .insert("timber".into(), 0);
+    fixture.initial_state.population_groups[0].workforce = 2;
+    fixture.initial_state.facilities.retain(|facility| {
+        facility.province != north || facility.definition == "tool_workshop".into()
+    });
+    fixture
+        .initial_state
+        .facilities
+        .iter_mut()
+        .find(|facility| facility.province == north)
+        .unwrap()
+        .level = 2;
+    let recipe = fixture
+        .definitions
+        .facilities
+        .iter_mut()
+        .find(|definition| definition.id == "grain_farm".into())
+        .unwrap();
+    recipe.construction.goods.clear();
+    recipe.construction.worker_days = 1;
+    recipe.construction.max_workers = 1;
+    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    for number in [100, 101] {
+        let mut command = build_command();
+        let SimulationCommand::StartConstruction {
+            facility, workers, ..
+        } = &mut command;
+        *facility = facility_id(number);
+        *workers = 1;
+        simulation.execute(command).unwrap();
+    }
+    let report = simulation.step().unwrap();
+    let province = report
+        .provinces
+        .iter()
+        .find(|province| province.province == north)
+        .unwrap();
+    assert_eq!(province.production_workers, 0);
+    assert_eq!(
+        province.construction_workers, 2,
+        "idle workers must not remain reserved at an input-starved factory"
+    );
+    assert_eq!(
+        province.production_workers + province.construction_workers,
+        province.available_workers
+    );
+    assert!(simulation.snapshot().construction_projects.is_empty());
+    assert!(
+        report
+            .facilities
+            .iter()
+            .filter(|facility| facility.facility == facility_id(3))
+            .all(|facility| facility.outputs.values().all(|amount| *amount == 0))
+    );
+    let mut resumed = Simulation::from_save_json(&simulation.save_json().unwrap()).unwrap();
+    assert_eq!(resumed.step().unwrap(), simulation.step().unwrap());
 }
 
 #[test]
@@ -68,7 +132,7 @@ fn production_and_consumption_have_explicit_balanced_goods_flows() {
     let north = report
         .provinces
         .iter()
-        .find(|province| province.province.0 == "north_valley")
+        .find(|province| province.province.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6")
         .unwrap();
     assert_eq!(
         (
@@ -102,12 +166,12 @@ fn construction_uses_real_stock_and_competes_with_existing_jobs() {
     let north = first
         .provinces
         .iter()
-        .find(|province| province.province.0 == "north_valley")
+        .find(|province| province.province.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6")
         .unwrap();
     let baseline_north = baseline_report
         .provinces
         .iter()
-        .find(|province| province.province.0 == "north_valley")
+        .find(|province| province.province.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6")
         .unwrap();
     assert!(north.construction_workers > 0);
     assert!(north.production_workers < baseline_north.production_workers);
@@ -143,7 +207,7 @@ fn rejected_commands_do_not_partially_spend_stock_or_append_history() {
         .initial_state
         .provinces
         .iter_mut()
-        .find(|province| province.id.0 == "north_valley")
+        .find(|province| province.id.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6")
         .unwrap();
     north.stockpile.insert("tools".into(), 0); // timber validates first; later failure must undo nothing.
     let mut simulation = Simulation::from_scenario(fixture).unwrap();
@@ -153,7 +217,7 @@ fn rejected_commands_do_not_partially_spend_stock_or_append_history() {
     assert!(simulation.command_log().is_empty());
     let mut foreign = build_command();
     let SimulationCommand::StartConstruction { country, .. } = &mut foreign;
-    *country = "another_country".into();
+    *country = "00000000-0000-0000-0000-0000000003e7".parse().unwrap();
     assert!(simulation.execute(foreign).is_err());
     assert_eq!(simulation.snapshot(), before);
 }
@@ -219,18 +283,18 @@ fn lower_production_priority_reserves_scarce_inputs_first() {
     fixture
         .initial_state
         .facilities
-        .retain(|facility| facility.province.0 != "north_valley");
+        .retain(|facility| facility.province.to_string() != "01a07577-e209-792a-aba0-8dba97d92ac6");
     fixture.initial_state.facilities.extend([
         FacilityState {
             id: facility_id(90),
-            province: "north_valley".into(),
+            province: "01a07577-e209-792a-aba0-8dba97d92ac6".parse().unwrap(),
             definition: "tool_workshop".into(),
             level: 1,
             production_priority: 0,
         },
         FacilityState {
             id: facility_id(80),
-            province: "north_valley".into(),
+            province: "01a07577-e209-792a-aba0-8dba97d92ac6".parse().unwrap(),
             definition: "tool_workshop".into(),
             level: 1,
             production_priority: 10,
@@ -240,7 +304,7 @@ fn lower_production_priority_reserves_scarce_inputs_first() {
         .initial_state
         .provinces
         .iter_mut()
-        .find(|province| province.id.0 == "north_valley")
+        .find(|province| province.id.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6")
         .unwrap()
         .stockpile
         .insert("timber".into(), 1);
@@ -271,7 +335,7 @@ fn failed_day_leaves_all_authoritative_state_unchanged() {
     for province in &mut fixture.initial_state.provinces {
         province.stockpile.insert(
             "grain".into(),
-            if province.id.0 == "north_valley" {
+            if province.id.to_string() == "01a07577-e209-792a-aba0-8dba97d92ac6" {
                 u64::MAX
             } else {
                 0
@@ -351,7 +415,7 @@ fn capacity_boundary_scenario(
     let mut fixture = scenario();
     fixture.initial_state.facilities = vec![FacilityState {
         id: facility_id(1),
-        province: "north_valley".into(),
+        province: "01a07577-e209-792a-aba0-8dba97d92ac6".parse().unwrap(),
         definition: "logging_camp".into(),
         level: 1,
         production_priority: 10,
@@ -379,7 +443,7 @@ fn construction_rejects_future_country_capacity_overflow_before_spending() {
     let SimulationCommand::StartConstruction {
         province, workers, ..
     } = &mut command;
-    *province = "south_ridge".into();
+    *province = "01a07577-e209-7938-8120-efb504849d04".parse().unwrap();
     *workers = 1;
     assert!(matches!(
         simulation.execute(command),

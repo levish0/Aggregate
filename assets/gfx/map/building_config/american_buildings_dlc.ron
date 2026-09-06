@@ -1,0 +1,14 @@
+(schema_version: 1, entries: [
+    Property(key: "southern_plantation_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("4")),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_4x4_entity")),
+    ])),
+    Property(key: "american_mining_oilrig_01_mesh", operator: Assign, value: Block([
+        Property(key: "size", operator: Assign, value: Number("1")),
+        Property(key: "particles", operator: Assign, value: Block([
+            Property(key: "locator_chimney", operator: Assign, value: Text("infrastructure/factory_smoke")),
+            Property(key: "locator_chimney_02", operator: Assign, value: Text("infrastructure/factory_smoke")),
+        ])),
+        Property(key: "construction_entity", operator: Assign, value: Text("building_construction_1x1_entity")),
+    ])),
+])

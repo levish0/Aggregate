@@ -11,14 +11,27 @@ pub fn apply_actions(
     mut state: ResMut<InterfaceState>,
     keys: Res<ButtonInput<KeyCode>>,
     tooltip: Res<TooltipState>,
+    select: Res<aggregate_ui::select::SelectInteractionState>,
     mut focus: ResMut<KeyboardFocus>,
     mut exit: MessageWriter<AppExit>,
+    mut map: ResMut<aggregate_map_view::MapViewState>,
 ) {
     let requested: Vec<_> = activated
         .read()
         .filter_map(|event| actions.get(event.0).ok().copied())
         .collect();
-    let escape = keys.just_pressed(KeyCode::Escape) && !tooltip.dismissed_this_frame;
+    let escape = keys.just_pressed(KeyCode::Escape)
+        && !tooltip.dismissed_this_frame
+        && !select.dismissed_this_frame;
+    if escape && state.screen == Screen::WorldMap {
+        if map.overview_active {
+            return;
+        }
+        if map.selected_index != 0 {
+            map.selected_index = 0;
+            return;
+        }
+    }
     if requested.is_empty() && !escape {
         return;
     }
@@ -28,6 +41,7 @@ pub fn apply_actions(
     {
         match action {
             InterfaceAction::OpenManagement => state.screen = Screen::Management,
+            InterfaceAction::OpenWorldMap => state.screen = Screen::WorldMap,
             InterfaceAction::OpenPreview => state.screen = Screen::Preview,
             InterfaceAction::OpenSettings => state.screen = Screen::Settings,
             InterfaceAction::Back => state.screen = Screen::MainMenu,
@@ -53,6 +67,7 @@ pub fn apply_actions(
             action,
             InterfaceAction::OpenPreview
                 | InterfaceAction::OpenManagement
+                | InterfaceAction::OpenWorldMap
                 | InterfaceAction::OpenSettings
                 | InterfaceAction::Back
                 | InterfaceAction::SwitchLanguage

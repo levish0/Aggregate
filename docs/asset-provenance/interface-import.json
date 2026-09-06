@@ -1,0 +1,1622 @@
+{
+  "source": "Local Victoria 3 installation",
+  "purpose": "Editable local interface resources",
+  "importedOn": "2026-09-06",
+  "files": [
+    {
+      "path": "gfx/interface/buttons/button_disabled_stripes.dds",
+      "bytes": 120080,
+      "sha256": "bbffc15680b784fa9c8c191ee60051a9c4d0f6b698b8acac2cfe1b4e8633c866"
+    },
+    {
+      "path": "gfx/interface/buttons/check_button.dds",
+      "bytes": 68380,
+      "sha256": "e111d9b6a2fd3da756f0f42fbea1ec0976dfcbf994bad51fc8f50d2dd0c11213"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bevel_action.dds",
+      "bytes": 821008,
+      "sha256": "6a0effbaafc0e7a228051095036f4a297285a1eab348d1e074376b6e16e6b057"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bevel_map_interaction.dds",
+      "bytes": 821008,
+      "sha256": "9d5714453d11582b672a5e7c7cddd66c6dced9f668290d428427c9e062418afd"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bevel.dds",
+      "bytes": 821008,
+      "sha256": "104d8c5a6b4ffac3d897b42277567d25ea1b4c9d696fab14f9a7b8f6692e633a"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bg_action.dds",
+      "bytes": 23092,
+      "sha256": "e218938794736b991a716bbaa72adf6c9925402be23ddf9e380bb193d163761d"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bg_gradient.dds",
+      "bytes": 426704,
+      "sha256": "b033262bc6bc4091eb9f99f38d25b809b619cf6f8d088a2b1b8f12f19701fc8b"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bg_map_interaction.dds",
+      "bytes": 23092,
+      "sha256": "f4172bee8d5ae4c23ba4c2dbdb78578a46ef5b1d5e9b997d026aff41acfdab59"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_bg.dds",
+      "bytes": 23092,
+      "sha256": "e9c95c925e048722634de99a1f019c5093b5f81a00be8c47417c9ef3ea680bb7"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_frame_fancy_big.dds",
+      "bytes": 117324,
+      "sha256": "d7934a124adb1c31a9430c9a0cb5bf0c41059a1bf21b56730c6e9687fd66b157"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_frame_fancy_small.dds",
+      "bytes": 117324,
+      "sha256": "46023ca3f42c0b56dd92729a77cb5d46acb491d05b39dcc603e1d104e83e28f9"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_frame_map_interaction.dds",
+      "bytes": 117324,
+      "sha256": "c63c23d83538414eb323bcc827b3fd6c7863149b76b57818b7f1ad964c6ad19e"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_frame_mouse_enter.dds",
+      "bytes": 426704,
+      "sha256": "d7f9178295e97d8cfabf23003a2a8b9c9565466c55a504ccd7af7608f7d0748e"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_frame.dds",
+      "bytes": 117324,
+      "sha256": "18e630c66bd6931cd10e967a8b47fff6c0730648d83ed76806d5c86c89b575b7"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_mouseover.dds",
+      "bytes": 426704,
+      "sha256": "d832cee9a074eeb434202491120f9d5c371a403b17aa6409d59adf934df4e995"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_mousepress.dds",
+      "bytes": 426704,
+      "sha256": "fce98a157905b13cee14a5a96350c3d8ba3f14db93a75028557ed6eedac124d1"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_texture.dds",
+      "bytes": 821008,
+      "sha256": "18559e3496f7b83de729cff25b8c661d5871ce866fcb4151bb06fa3c0997a8c3"
+    },
+    {
+      "path": "gfx/interface/buttons/default_button_wood_border.dds",
+      "bytes": 821008,
+      "sha256": "b69b24557524d49569bdda3ad8acbb4a37935b550d13df8951bda931de817f95"
+    },
+    {
+      "path": "gfx/interface/buttons/expand_arrow_expanded.dds",
+      "bytes": 53388,
+      "sha256": "383a6ced7f9c2c592a397895efa10f0d7d4c7ed2f4eb50e8284ae6a655f794b9"
+    },
+    {
+      "path": "gfx/interface/buttons/expand_arrow_frontend.dds",
+      "bytes": 106704,
+      "sha256": "8c693ecbb29437ff35970f0b6b63b0328d41475076e184f07e0ec2b5b4e1ae1e"
+    },
+    {
+      "path": "gfx/interface/buttons/expand_arrow.dds",
+      "bytes": 53388,
+      "sha256": "4f7acaa600d4d4f5431726c2b8d9e764c4328ffbd3fe980669901bec4da801c6"
+    },
+    {
+      "path": "gfx/interface/buttons/expand_button_bg_dropdown.dds",
+      "bytes": 213312,
+      "sha256": "a15e25ac93f6e8b80113b1cf37faf130accd2e2b660996296fa267f0980182b7"
+    },
+    {
+      "path": "gfx/interface/buttons/expand_button_bg_mouse_enter.dds",
+      "bytes": 213312,
+      "sha256": "d0050924c13f242f1e3d063a387a2bb5050ee005c23abb017897caf941d6c2a1"
+    },
+    {
+      "path": "gfx/interface/buttons/expand_button_bg.dds",
+      "bytes": 213312,
+      "sha256": "a15e25ac93f6e8b80113b1cf37faf130accd2e2b660996296fa267f0980182b7"
+    },
+    {
+      "path": "gfx/interface/buttons/glow_button_border.dds",
+      "bytes": 359540,
+      "sha256": "2c66a45a4b63ed5a3cc2cb4b8f783bbca38aaef05ee3c0049d78e92ceadba805"
+    },
+    {
+      "path": "gfx/interface/buttons/glow_button.dds",
+      "bytes": 287888,
+      "sha256": "463e548bf8ff9cd9c0c821ac0f3c0de66b3de6f12f0e15f12a67926d07d65f38"
+    },
+    {
+      "path": "gfx/interface/buttons/radio_button.dds",
+      "bytes": 68380,
+      "sha256": "74b1a2fdd94f8bf484fab7dd2c382f499ed80adf6cf703f62ce5825e74f7185b"
+    },
+    {
+      "path": "gfx/interface/buttons/red_button_bevel.dds",
+      "bytes": 821008,
+      "sha256": "21fb5492269addd4ad1d88cba493db53470938fc5289629839a415316c1ff77e"
+    },
+    {
+      "path": "gfx/interface/buttons/red_button_bg.dds",
+      "bytes": 23092,
+      "sha256": "877b133c83b4662092919373f470a929e0dd04a481f0bf12a0a265715882fc77"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_big_bg.dds",
+      "bytes": 136648,
+      "sha256": "5393ef4943135b2e4d0fac61e91b08965e8859ae598b8529ef870a677a5733a5"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_big_frame.dds",
+      "bytes": 136648,
+      "sha256": "d26ab519b595129f36268c9f14c0048bbb42fa526980d5d649b4efb306b79d64"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_big_wood_action.dds",
+      "bytes": 136648,
+      "sha256": "a375eba2735a9b8a68f00c5a6eec6bdba40ad4c09a9cf8022c7109c6e89d3e8e"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_big_wood_map_interaction.dds",
+      "bytes": 136648,
+      "sha256": "6fbbfc571219d52ebd5f3d605205bfec07370c62851b6351e13b8de248775521"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_big_wood.dds",
+      "bytes": 136648,
+      "sha256": "856104e2a83a11f24c967a538c5d959d4ce4e977fb9d905f38f7a8d707cba22a"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_frame_mouse_enter.dds",
+      "bytes": 136648,
+      "sha256": "7251dab3cfa199410f6e117d74cfcbe7fd57471a543457044cceff6b6252eb78"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_selected_icon.dds",
+      "bytes": 136648,
+      "sha256": "e0ae556074b7c3e66ad2286590214b733347fd2c93b62a38376fd71ff1c49de5"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_selected.dds",
+      "bytes": 136648,
+      "sha256": "cc04e9c5fe8d0235f4d57d65660d55c20f4d120a2cc45deed77d4d1f1a8c8f3d"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_small_bg.dds",
+      "bytes": 71792,
+      "sha256": "40e8eb09ddff43bb9efcd565a13089c394985e3eb4e4f0904dcec9681be695ed"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_small_frame.dds",
+      "bytes": 71792,
+      "sha256": "bb48a72cc4e07bb1fc8993d1d31bd91f6d4df197c495847587cfb24b8c6de608"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_small_wood_action.dds",
+      "bytes": 71792,
+      "sha256": "9c521b4800194902ab8aa595d717e259bb5a59d67985eaae3d1175d03a91c505"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_small_wood_map_interaction.dds",
+      "bytes": 71792,
+      "sha256": "0d4067bc5de3de7ddb508591b23f0cdaf8ed3a3f89e25f6c7240872de6043225"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_small_wood.dds",
+      "bytes": 71792,
+      "sha256": "fafa9f24cfdecef0422334354743bf728daf790ca5a286b6c4964c5da9aeaf72"
+    },
+    {
+      "path": "gfx/interface/buttons/round_button_wood_mouse_enter.dds",
+      "bytes": 136648,
+      "sha256": "13c8a60b5ccdb36b944cad814ec8d74b20f14b682c4ce8e15fc2fd431d546ba1"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button.dds",
+      "bytes": 213312,
+      "sha256": "530f48d32e1b300ae15bfa89642e7ab9b9e1f150bf4a7667b6e5ab4c86b23cc9"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/areacharts.dds",
+      "bytes": 71792,
+      "sha256": "507bdfc05cfffff83b36c2a05452aeef2882f2a7c6602fc745902ea657c5dab4"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/back.dds",
+      "bytes": 71792,
+      "sha256": "f8c17921dea7d91097ac907b13fc6daf5428c3f2642018d7e2b6de872d03b44c"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/bloc_interaction.dds",
+      "bytes": 71792,
+      "sha256": "9bd272057608a204019084f0a0f33b0cbcda01c552aee9d1323cb8ae78a317e2"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/character_interaction.dds",
+      "bytes": 71792,
+      "sha256": "f3c0fd594e928034110db2c6452a978e38c62f5ea260311d93fb07162b3acba2"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/check.dds",
+      "bytes": 71792,
+      "sha256": "6597ae0a19270770a3b6f645971ae31a886abfad0d8393f1c11db4a13e3dbf96"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/close.dds",
+      "bytes": 71792,
+      "sha256": "b7ce8823831ebd4f348f9c8f56fac68bfa427f8cc48e2c3449c367f794c4c9e3"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/edit.dds",
+      "bytes": 71792,
+      "sha256": "041676bd64d38f26c8b3b00fdef1c20e9bfd2606a737152d6925cb3cbb7770dc"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/foreign_invest.dds",
+      "bytes": 71792,
+      "sha256": "49dfbf1de3483dd2508b534b6e2f1c367854d59bcee23585344cd9d109beac34"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/goto.dds",
+      "bytes": 71792,
+      "sha256": "ecf07c1e3ffb20c026a6b526a12af0dfbbac8a619e19366df95cd20aa5841b91"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/gotostore.dds",
+      "bytes": 71792,
+      "sha256": "11272833458d041cdaa52ef47795b9311fe763e3a3a8d189eed25694de929c6e"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/grid.dds",
+      "bytes": 71792,
+      "sha256": "88aaf9b16396983963e38f599e2a0fb0d67f212af4c562c530f60ecfa9a604f9"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/icon_button_mouse_enter.dds",
+      "bytes": 71792,
+      "sha256": "d9406444aee45be8459099152c787ead4ec7f56d15caf818a35248249cafaa4b"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/kick_out.dds",
+      "bytes": 71792,
+      "sha256": "aab7d2233be695612fa1014dce747fdb200b22fffdf863bf3a3089f283aa0438"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/list.dds",
+      "bytes": 71792,
+      "sha256": "4945ad61b81cd610da8587be0a8f8f7b755d2d0aca81894016217953be340c90"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/location_finder.dds",
+      "bytes": 71792,
+      "sha256": "e35263a071351bf7415e1b9b9d51686ed640b5bdeb587a6b6aab6b4b484de22b"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/lock.dds",
+      "bytes": 71792,
+      "sha256": "bc3d0c47cebdc4f50dd5019a40e178f02338d32dd8c2227f0c1f1d50f8a0841a"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/make_this_work.dds",
+      "bytes": 71792,
+      "sha256": "be92efab3fa328466c08ffd9818c4c7257a82fca6264ddce1c03e3fc1ac38513"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/menu.dds",
+      "bytes": 71792,
+      "sha256": "248b29d2d5ff964b8a75bca6f3a1ba04769eccfc9b796ab0d8b218e34ba5ebef"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/message_settings.dds",
+      "bytes": 71792,
+      "sha256": "a174decc250699a5f46acacb3f075b736b3d407f250ba5b1b53b307ff037b132"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/minimize.dds",
+      "bytes": 71792,
+      "sha256": "1d7d364a13427d0c6ea2f7ff723952a7bba20773b39bf112116fea505a934809"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/minus.dds",
+      "bytes": 71792,
+      "sha256": "0e0a7033458736ebc44b5e779e63d02325939fb5f09bb114894df459866310aa"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/move_left.dds",
+      "bytes": 71792,
+      "sha256": "17eac62d64cb9c9f7ae1b94d38cafde81c61e6b30c8563c86be35a473d22070a"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/move_right.dds",
+      "bytes": 71792,
+      "sha256": "faddb6e5bc08e3ed1956f2a574f9b970754c162d8b8be8fcda55a1750c375abf"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/music_player.dds",
+      "bytes": 71792,
+      "sha256": "2ddc086b834daf426327c18b3571e4adc7f9bf112d0da57524adbe2c9d071f9a"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/other.dds",
+      "bytes": 71792,
+      "sha256": "13ab25d7f665081886b9295213e991f92d2ff61ccd66c418a267bd92be9ce3f5"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/overlord_interaction.dds",
+      "bytes": 71792,
+      "sha256": "25db1f0ffe1dbd88354c5056426cf6cfb7f8047039aa2dbeb8a547dc7c28368c"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/piecharts.dds",
+      "bytes": 71792,
+      "sha256": "b73d6223fa9cbbd2b59893a3c652f8bb965e817bf517c5a5d1c2b385e6863405"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/plus.dds",
+      "bytes": 71792,
+      "sha256": "a1b39d3edd06b96f7468dc14f4ad23eab8d80b73061b25e241b36242033fd9e8"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/randomise.dds",
+      "bytes": 71792,
+      "sha256": "3b3641e2da942a2b368796fbb1da0e969fc90b233568b3d044909fbcde6285ba"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/reset_camera.dds",
+      "bytes": 71792,
+      "sha256": "d7159dc7cf392c247546acbb61e2e8b4841cd2b87fec83cda89e240c6db4744d"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/reset.dds",
+      "bytes": 71792,
+      "sha256": "dbe727ae28b36ba81f4ac94b12a89e8aacda1dd075a4cafc143e74eadb4082ee"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/search.dds",
+      "bytes": 71792,
+      "sha256": "18099f6422d5e6911ea14afc30a388608748a94083d293a45e329ca84d8c0bae"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/subject_interaction.dds",
+      "bytes": 71792,
+      "sha256": "2e93fa4036a559a06ab2563eabec4a654f68adba9e5176eb026313c7c7f93456"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/thumbsupdown.dds",
+      "bytes": 143532,
+      "sha256": "fc18de03c28c94c1948963743cbd529677b0c797f618ab43c72fdf08ee0409ac"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/unlock.dds",
+      "bytes": 71792,
+      "sha256": "6131032b7893b873eda37b75fd5c46f590994e7a629f30c3132838f0bb213835"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/vickypedia.dds",
+      "bytes": 71792,
+      "sha256": "5786c5dfca8dfc3332598b04affd027659bb659f0d3d8da627bcfc15976bfed1"
+    },
+    {
+      "path": "gfx/interface/buttons/button_icons/unused/help.dds",
+      "bytes": 71792,
+      "sha256": "32841188b61f8c2501ace4d5e071634f58e4a32b7577f7f3b3b8fe7fbe905706"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_balance.dds",
+      "bytes": 13388,
+      "sha256": "f0ea3898dfcec53d8d9e753009d598dc1550f501b6ca9590a5971c4577b8ce2c"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_buy_orders.dds",
+      "bytes": 13388,
+      "sha256": "c0ffe1728e9648e9d72bda40505d6471819520a32b76c64936ee75e94a569d91"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_consumption.dds",
+      "bytes": 13388,
+      "sha256": "0849cc60ff8ffb428a54542486132173528b95662d6f40ab2fd6d2055fdabc8f"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_exports.dds",
+      "bytes": 13388,
+      "sha256": "f494fd3ed97c7344d349bb02cd8d645efbf7b28199ad32a2c08aa5a8cd37e233"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_acceptance.dds",
+      "bytes": 13388,
+      "sha256": "d02eb09d000f5a7cc292cec6db70c775fdafe6a1bcc451733a312bd035a90470"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_fervor.dds",
+      "bytes": 13388,
+      "sha256": "a2a949e9a99ed037493a81b2c844b92a19ccfa899c4d2aba27f55fad7a23631b"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_good.dds",
+      "bytes": 13388,
+      "sha256": "f7531639cf25f99e05b8e8f98a97e53f7f8f8d39ce90ac1415d09651c81675af"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_political_strength.dds",
+      "bytes": 13388,
+      "sha256": "1cc2bfea25c933989f26338700bc65eccd36ec19fb86603f5004a9fc6eca05ab"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_population.dds",
+      "bytes": 13388,
+      "sha256": "0b99ad237795b58366fdb36409dd2686c1f3345345f6d2a2368fd75b2e589f6a"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_profitability.dds",
+      "bytes": 13588,
+      "sha256": "1dce33952183fcaeb2408181303f3b05f6632bfe92d819a7c52eba3e14c85198"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_progress.dds",
+      "bytes": 13588,
+      "sha256": "a6c6e07a3c35b5295875b8fc9c6c182bda918084d9defe9d1806651bd3c8f047"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_rank.dds",
+      "bytes": 13388,
+      "sha256": "e5ef640a836669e7b1aa0f8b2c3d4f5d1a208b2bffa8043aa046b84a1e4dcff7"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_religion.dds",
+      "bytes": 13588,
+      "sha256": "f426e39500176e29f89d2dea412c1d967b48050cd445bfddc15cca8c952bc71c"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_size.dds",
+      "bytes": 13588,
+      "sha256": "9eea3bde6f2c89d9e3652bbb77ed90ffaee755f5f5dce550500b17d407450d8c"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_status.dds",
+      "bytes": 13588,
+      "sha256": "db7b4f46abd8d9050361c0f3b365971c927195aea9ff34e685dbe5c3b12606e9"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_icon_turmoil.dds",
+      "bytes": 13388,
+      "sha256": "abe84948130522401d49bea1b79b050cb1e3a04a77cd82256c99749b396b509c"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_imports.dds",
+      "bytes": 13388,
+      "sha256": "7ba3219484298b47f0c77eb5fda5cf3da2fff336c42194c3299ebe1531c58df3"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_production.dds",
+      "bytes": 13388,
+      "sha256": "680a8a1b188b6d70abf7c2a71a63f0b6176d07b8eeb29370b4362dda6dcd3464"
+    },
+    {
+      "path": "gfx/interface/buttons/sort_button_icons/sort_sell_orders.dds",
+      "bytes": 13388,
+      "sha256": "73e4351bf1d2f816db5775e7e50176aadaf20e5969a6c00f064cde138b218059"
+    },
+    {
+      "path": "gfx/interface/backgrounds/bg_bronze_with_frame.dds",
+      "bytes": 53856,
+      "sha256": "835df759d6da3f20f950a11ac43c8d6170d79353a93eed86528b69e090eb3fa9"
+    },
+    {
+      "path": "gfx/interface/backgrounds/bg_frame_small_mask_top.dds",
+      "bytes": 200544,
+      "sha256": "02b948ddd68ea09fd9ead39bf8750ef93c20996d333a007cf6523be640989e30"
+    },
+    {
+      "path": "gfx/interface/backgrounds/bg_frame_small_mask.dds",
+      "bytes": 902024,
+      "sha256": "f724fcb322a26a16a99ec3fc490e6b68af46d02705d1d07b65e07980060fc5c3"
+    },
+    {
+      "path": "gfx/interface/backgrounds/bg_frame_small.dds",
+      "bytes": 902024,
+      "sha256": "967cf564eb69af6eb66ad3df8b8aa67f3c93cb281368eb0ec90153d9351d9132"
+    },
+    {
+      "path": "gfx/interface/backgrounds/bg_tiling_pattern.dds",
+      "bytes": 7344,
+      "sha256": "7abf9f8b11d8de23c7a84fd6971e405bde48575b51f4edc343620c949605067f"
+    },
+    {
+      "path": "gfx/interface/backgrounds/big_header_pattern.dds",
+      "bytes": 857920,
+      "sha256": "5c4d2fdf05644023f9b20ec06ddb6a0a82ede60f4dd5088251c44bc6eb19c00d"
+    },
+    {
+      "path": "gfx/interface/backgrounds/blurry_dark_bg.dds",
+      "bytes": 10128,
+      "sha256": "c374ef87d7475e3e6a3c09be27b269f80a892830fafc485bc64b156ca5c1a5aa"
+    },
+    {
+      "path": "gfx/interface/backgrounds/circle_bg_simple_dark.dds",
+      "bytes": 104524,
+      "sha256": "ed0f0efe738e4e6bc65de103b40c8a0d524eb7ab0ab6e569037f3dd40fc5399c"
+    },
+    {
+      "path": "gfx/interface/backgrounds/circle_bg_simple.dds",
+      "bytes": 104524,
+      "sha256": "15d6903890971118b279318e128546f7f98357c04d8dac0d7a92bf351a8e3617"
+    },
+    {
+      "path": "gfx/interface/backgrounds/colored_header.dds",
+      "bytes": 13388,
+      "sha256": "9e614a40b225cdc53a63c643145f614fb02a23add38fee5304e1c816e5e56354"
+    },
+    {
+      "path": "gfx/interface/backgrounds/dark_area_rounded.dds",
+      "bytes": 19264,
+      "sha256": "5de56fbaa841a60d0490e243607f2539a68706a7594540e72a08cfc120815ea8"
+    },
+    {
+      "path": "gfx/interface/backgrounds/dark_area.dds",
+      "bytes": 19264,
+      "sha256": "5d79cefb57928d98edf15f18ebe1321474ee36d2f041120c2967c70e9c47b83a"
+    },
+    {
+      "path": "gfx/interface/backgrounds/dark_sides_shading.dds",
+      "bytes": 3413388,
+      "sha256": "2d6b4a25a62b8d111255b30e9ddf8051cd48b3fad2bf91503182f35f4ed721eb"
+    },
+    {
+      "path": "gfx/interface/backgrounds/default_bg_shading.dds",
+      "bytes": 2560128,
+      "sha256": "fa04f910ba94a746ad716043dd05c7afe6833b4b8e31947f0a306098e3e36a4d"
+    },
+    {
+      "path": "gfx/interface/backgrounds/default_bg_sidebar.dds",
+      "bytes": 194396,
+      "sha256": "5a326c3b9bf7969f18ddb636fd0d8b04726d7a080615972a4893523dc8a1380e"
+    },
+    {
+      "path": "gfx/interface/backgrounds/default_bg.dds",
+      "bytes": 213388,
+      "sha256": "2c9047e76666dd92eda7b67885d5b44cea61fcb537cf2591275a02e601b5585b"
+    },
+    {
+      "path": "gfx/interface/backgrounds/divider_gold_center.dds",
+      "bytes": 21856,
+      "sha256": "e76a37ff8cf96750ce5c69a49d5144c647cce43098850b56c88862f6694084bf"
+    },
+    {
+      "path": "gfx/interface/backgrounds/divider_gold.dds",
+      "bytes": 13804,
+      "sha256": "ec7658053f7bb18711ac31a34151ba5a10f129b1d0db05bcc21a90149906abc5"
+    },
+    {
+      "path": "gfx/interface/backgrounds/dropdown_bg.dds",
+      "bytes": 13672,
+      "sha256": "73286b4e7099dd515a59be03ccf20a1f5d61fe1a27ecec8e4d5acc45830eba9e"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_fancy_dark.dds",
+      "bytes": 243908,
+      "sha256": "caa30badb2eca926eb4a3ed98ea9cb839bac3f51ec7795c271b1f645bb2c2d05"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_mask.dds",
+      "bytes": 213388,
+      "sha256": "4cbe03732b528aa68fa2afaa9b1381f2b26d2c54436f8420f8114a72240ff090"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_simple_colored.dds",
+      "bytes": 213388,
+      "sha256": "1512e767ba82bc7f8e878b3d585e8959576d3d1776727bc6644840aa97dbf8b6"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_simple_solid.dds",
+      "bytes": 213388,
+      "sha256": "f198b2e4b83deef62bdc1bede1ba75c109402ba51026e47bfc9288f3503a7119"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_simple_with_header.dds",
+      "bytes": 213388,
+      "sha256": "2b9d001a2848009e63daed258119bd7992c9102c72d68ec3a5d09744aa699e7c"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_simple.dds",
+      "bytes": 213388,
+      "sha256": "2a7dd3d761bb4bc5554d155d52c0bbf7a63eaf0ad8b35e7cf3b1360d33636241"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_top_mask.dds",
+      "bytes": 53856,
+      "sha256": "a302f946a827c0f8b6a800552e0263a539e86fa60e8b865e5cd21263b0a78891"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_unit_dark.dds",
+      "bytes": 213388,
+      "sha256": "25f95329e2c43c7b6e3c3349aa0143e8d833e12abb33194e25149ba4dc0f5f98"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg_unit.dds",
+      "bytes": 213388,
+      "sha256": "32bd794a4b9329c157b4e53e39f25006449fffcda71b08af39de45934f1aa22e"
+    },
+    {
+      "path": "gfx/interface/backgrounds/entry_bg.dds",
+      "bytes": 213388,
+      "sha256": "14aa7252b676217906126483f0e50d97f16e0093b0c025bfac221fefc12b697a"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fancy_frame_mask.dds",
+      "bytes": 625280,
+      "sha256": "5ee62678f6c196712ca12cd8b117471b362e927f8547b20c2e1c0097143074e2"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fancy_pattern_2.dds",
+      "bytes": 539972,
+      "sha256": "6e93245dd2886ee2cedb423b13e302ddb5b45ed22c1383c4081a350273d95f72"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fancy_pattern.dds",
+      "bytes": 1382328,
+      "sha256": "644800b7955b8f881e8a87f8bffbe214fe2bd05c46f8b5bd0bebef77af60f2a9"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fullscreen_header_behind.dds",
+      "bytes": 2448844,
+      "sha256": "392c891c612274a26436ef8dafaa2a2d20ed325de20a471cf2c318212256d783"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fullscreen_header_dec.dds",
+      "bytes": 1864036,
+      "sha256": "843f9458400a43d9d4a8cb4a36a099eeee34ed4317951b089a89d4e7770c3f1e"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fullscreen_header_frame.dds",
+      "bytes": 2507600,
+      "sha256": "3ef07bd0bd0df487dbdcf4a6ad86ae74ccb2ec5667023310f7b42422e026aad1"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fullscreen_header_title_mask_half.dds",
+      "bytes": 1224476,
+      "sha256": "fa6d1b78c08b873c3c4d7c02eb30bace4091a1d6da8462044e16bdc314980802"
+    },
+    {
+      "path": "gfx/interface/backgrounds/fullscreen_header_title_mask.dds",
+      "bytes": 2448844,
+      "sha256": "aa003a61bc76ac1a2c7e4047715e0d2db7be295a57d0489b1969f7c5f7492548"
+    },
+    {
+      "path": "gfx/interface/backgrounds/gradient_overlay.dds",
+      "bytes": 213388,
+      "sha256": "1bb9c270c9ad9f8c5249ddd36e833f4f424a81f24b9b57c6ae57217e1855ee44"
+    },
+    {
+      "path": "gfx/interface/backgrounds/header_bg_dec.dds",
+      "bytes": 12840,
+      "sha256": "c700416f3d4127ba62bc5221f62b3d8aafb9dbbdc437ffff03473dfdbc75e7bd"
+    },
+    {
+      "path": "gfx/interface/backgrounds/header_bg_shading.dds",
+      "bytes": 223908,
+      "sha256": "b3093f194dcca00f415dea38d8620114659dc119273f6056d680c3f91de0eeb1"
+    },
+    {
+      "path": "gfx/interface/backgrounds/header_borders.dds",
+      "bytes": 223908,
+      "sha256": "998f318bb072870f2f8ce0de8aafdb8bad820c39891631ff9cb7fe2de7de4d83"
+    },
+    {
+      "path": "gfx/interface/backgrounds/header_color.dds",
+      "bytes": 19264,
+      "sha256": "5590fd5b0cb3ce0ae5c7ce59f214c4a5d143a37331341bc983aa39050bc2d1e6"
+    },
+    {
+      "path": "gfx/interface/backgrounds/illu_color.dds",
+      "bytes": 34248,
+      "sha256": "5662c856e6674ce43ec825da1067e62daa19b9c875e1fff25142032e5d448adb"
+    },
+    {
+      "path": "gfx/interface/backgrounds/light_bg.dds",
+      "bytes": 19264,
+      "sha256": "0e14e672bdc4afcea3f76c8f63163a19735a624500020b265c93393112ac0fb4"
+    },
+    {
+      "path": "gfx/interface/backgrounds/not_yet_initialized.dds",
+      "bytes": 3192,
+      "sha256": "73824604d142e7f73ba4a96da96c712c999ef9983a60b4496f35c3fd78d3f613"
+    },
+    {
+      "path": "gfx/interface/backgrounds/paper_bg_dark.dds",
+      "bytes": 1919808,
+      "sha256": "7df116b5b07d088f3602ef789d5584512db57eca8b2c7870f8671a6c51e294cc"
+    },
+    {
+      "path": "gfx/interface/backgrounds/paper_bg_light.dds",
+      "bytes": 1919808,
+      "sha256": "50ce91675ab4bc4e5f6fff6edb03d0865b79270fa893fb4b112bca9dd37b75ed"
+    },
+    {
+      "path": "gfx/interface/backgrounds/paper_bg.dds",
+      "bytes": 1919808,
+      "sha256": "ad372440765a4b6fba5497cdc851f8561b7d618dc649fb863ce8106ee60ba697"
+    },
+    {
+      "path": "gfx/interface/backgrounds/paper_texture.dds",
+      "bytes": 5332984,
+      "sha256": "265e4864fd70613ca09732c58ebdee50d92975a6b14dc59a22baa491c2f65054"
+    },
+    {
+      "path": "gfx/interface/backgrounds/player_liberty_desire_bar.dds",
+      "bytes": 419288,
+      "sha256": "c78f898f9cecae964a751248fdbe780e21abbb5773e9a62cf0a5a0f0144b696c"
+    },
+    {
+      "path": "gfx/interface/backgrounds/player_liberty_desire_frame.dds",
+      "bytes": 649504,
+      "sha256": "e1bfada4c5dc1aa493e1cc380b333fdef9792d976f17447dd106dba403f491e5"
+    },
+    {
+      "path": "gfx/interface/backgrounds/popup_bg_frame_frontend.dds",
+      "bytes": 2252368,
+      "sha256": "648db3361c58050df12d862db44e10d3f3d4624de4d9f98bd6e28e50df84cbd4"
+    },
+    {
+      "path": "gfx/interface/backgrounds/popup_bg_frame_mask.dds",
+      "bytes": 1399016,
+      "sha256": "a8bffad0d68e54ace68e379c006e2fa3196934fb8ff00108788bd3091bbf483d"
+    },
+    {
+      "path": "gfx/interface/backgrounds/popup_bg_frame.dds",
+      "bytes": 5119684,
+      "sha256": "47743cc122c51e73a377bb3543ab956ffc80d5039126eea2a43335930144a563"
+    },
+    {
+      "path": "gfx/interface/backgrounds/popup_bg.dds",
+      "bytes": 5119684,
+      "sha256": "d3ba6d5c359d0ceb11f736ea38ebcca5555ba40e3ce830a1c62c6d93a169ed6b"
+    },
+    {
+      "path": "gfx/interface/backgrounds/popup_header_divider.dds",
+      "bytes": 136916,
+      "sha256": "74be1249bfaed915b748d681568c19477211fe98ff127a4b0872061a8bf12791"
+    },
+    {
+      "path": "gfx/interface/backgrounds/revolution_clock_frame.dds",
+      "bytes": 479808,
+      "sha256": "074ab86aa929216af2a10240ed694dffdf24a43e57dbfd8602d1f0c74d445480"
+    },
+    {
+      "path": "gfx/interface/backgrounds/round_button_bg.dds",
+      "bytes": 59872,
+      "sha256": "2ab6db619f28e4d25ff91f89d6cee51e4ac07857fa848785e35cc6a381ee4258"
+    },
+    {
+      "path": "gfx/interface/backgrounds/round_frame_dec.dds",
+      "bytes": 435668,
+      "sha256": "71edc2a09082cd2ae82bea9035c384a95561da0e9c46a4ce92c95de0114d0b28"
+    },
+    {
+      "path": "gfx/interface/backgrounds/rounded_bg_blue.dds",
+      "bytes": 17968,
+      "sha256": "303255cfed5ad5144623d0ed503feeee064105084749b3ff2eb70e88356cfe8b"
+    },
+    {
+      "path": "gfx/interface/backgrounds/rounded_bg.dds",
+      "bytes": 17968,
+      "sha256": "3ef77c1dab6480fd169876f423961f136d4dd74bfbb8af28b7be003ea926794d"
+    },
+    {
+      "path": "gfx/interface/backgrounds/side_frame.dds",
+      "bytes": 79896,
+      "sha256": "3ee50702fa43d5790f4554dc73f5579fd9d7334c3d70b272d08068effec3ef75"
+    },
+    {
+      "path": "gfx/interface/backgrounds/sidepanel_filler.dds",
+      "bytes": 38448,
+      "sha256": "f4e5d94fb81f3a84620b2ead4b7066642578f5c7b51cf7d508c5060f586fdbd4"
+    },
+    {
+      "path": "gfx/interface/backgrounds/sidepanel_shadow.dds",
+      "bytes": 53388,
+      "sha256": "c6603fbf98f3a1bf83eaf4fe4095c39e5d9048ae33004cf98a8582f7068e4c0a"
+    },
+    {
+      "path": "gfx/interface/backgrounds/simple_frame_mask.dds",
+      "bytes": 53388,
+      "sha256": "33189a761087930a952cd5b34e66a845792f49e040ba885f1b28feb177b5766c"
+    },
+    {
+      "path": "gfx/interface/backgrounds/simple_frame.dds",
+      "bytes": 53388,
+      "sha256": "51915c7d0f1540b7ed29f878c8bd8babd4288da19315e0fcd0df99d1ee885833"
+    },
+    {
+      "path": "gfx/interface/backgrounds/subject_liberty_desire_bar.dds",
+      "bytes": 255552,
+      "sha256": "d4f13252fb15236e8e2a2c7f9c4ae96b8ec1486be29b1173c402a6ad6cfa11cd"
+    },
+    {
+      "path": "gfx/interface/backgrounds/subject_liberty_desire_frame.dds",
+      "bytes": 1232128,
+      "sha256": "90d067c01ff299b9715551f76f7a425e9e5bda347df009f72b8dfca7f4578f68"
+    },
+    {
+      "path": "gfx/interface/backgrounds/text_edit_bg.dds",
+      "bytes": 3692,
+      "sha256": "532994ad3afa3cbfec8deaf49fa812849847c85cc5b52c49f48d4c0051513975"
+    },
+    {
+      "path": "gfx/interface/backgrounds/top_header_bg_shading.dds",
+      "bytes": 914760,
+      "sha256": "4dbb44bd0f5b45e2235f3ba00c587d05b2e79320839d7305a17fb85c06774c0e"
+    },
+    {
+      "path": "gfx/interface/backgrounds/top_header_dec.dds",
+      "bytes": 1288512,
+      "sha256": "48f7553cd2da989909cd106d562d564123f4b2dca3520b3707f37e4b6491f71f"
+    },
+    {
+      "path": "gfx/interface/backgrounds/top_header_frame_mask.dds",
+      "bytes": 1288512,
+      "sha256": "5a3ccbd05fe2faa510c014acbc10efc92df5ff61f0e3812249c9c16fb0dc495b"
+    },
+    {
+      "path": "gfx/interface/backgrounds/top_header_frame.dds",
+      "bytes": 1288512,
+      "sha256": "88e8b0214a56a30d86c5cc886310338b7d58cc0e8c0e6699235a8c06e03bf80f"
+    },
+    {
+      "path": "gfx/interface/backgrounds/top_header_side_bar.dds",
+      "bytes": 23300,
+      "sha256": "06a581b334adde3a9d2a33dbb2067cc97d3d9c52a3ecf917b164ad974ef1de47"
+    },
+    {
+      "path": "gfx/interface/backgrounds/track_line_arrow.dds",
+      "bytes": 20812,
+      "sha256": "fa6b1fb4ae45a058496524fdffb54ddbdbcf5495648c41657808ca0cbd114b5a"
+    },
+    {
+      "path": "gfx/interface/backgrounds/track_line.dds",
+      "bytes": 1668,
+      "sha256": "4006d82815b185f7bfe1400cbaea25a5068d47c3659ee55854cf7903dc4d79bd"
+    },
+    {
+      "path": "gfx/interface/backgrounds/transparent.dds",
+      "bytes": 10128,
+      "sha256": "3775bd319158c92a2915379c65442853dbed5788434c60d47e5f3e096030fc0a"
+    },
+    {
+      "path": "gfx/interface/backgrounds/tutorial_bg.dds",
+      "bytes": 213388,
+      "sha256": "d77aebd3085631e42db4d69698228869bebac296f65d198b30951c2295971052"
+    },
+    {
+      "path": "gfx/interface/backgrounds/white.dds",
+      "bytes": 132,
+      "sha256": "19f1e2ccd4754099001727ee65c9ffbd17f4c04c6ff1ef4804a5401306f717b6"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/colored_header_bright.dds",
+      "bytes": 13388,
+      "sha256": "cef1c9d25e2f437ee78437054ba4a8bd058edcc9839119cbce9527f846cb4299"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/colored_header_dark.dds",
+      "bytes": 13388,
+      "sha256": "788bdc885af8844285ffc4a42cd5c42b0f4fe0739c4898fa1a9c4ac1ddc2b7ae"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/darker_bg.dds",
+      "bytes": 4864,
+      "sha256": "5dab1f3a3d587f630cdf5780f51f4946e1d7f20e2d3c52ee6c00b24cfea4720b"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/fullscreen_header_overlay.dds",
+      "bytes": 2448844,
+      "sha256": "d904e5826ad9dd0ca18e2fbff9518fffc8692c159161f9c6c40e997821350471"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/lighter_bg.dds",
+      "bytes": 4864,
+      "sha256": "3fa531a662b39c7e2662e766e55d2ba506d0b12c32b897951c660c106c276189"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/popup_header.dds",
+      "bytes": 1399016,
+      "sha256": "0ad4d91355df8df2e2f3f6b99181047af8d71a5f444bd8a12d004cb73283a8f6"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/top_frame_mask.dds",
+      "bytes": 40128,
+      "sha256": "8541572cc103dbc274bb126d5a78f39eea1a65724f4b267a8316dafa47a98522"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/top_header_side_bars.dds",
+      "bytes": 940412,
+      "sha256": "642b6627bc2b6ac606472494e5e95334eea4d7d7a8b4521e3ebdd5f300e671eb"
+    },
+    {
+      "path": "gfx/interface/backgrounds/unused/tutorial_header.dds",
+      "bytes": 106704,
+      "sha256": "13803656eebb8712e0a33900e2a38fe3fe9a728f5e0bfe7c7ec2b880c3258e7f"
+    },
+    {
+      "path": "gfx/interface/textures/cloth_texture.dds",
+      "bytes": 1332984,
+      "sha256": "7638f566c4d98a8cb6e4f92b6e406c2679ccdd00e6f8abba9a39cb16b4ddbfb0"
+    },
+    {
+      "path": "gfx/interface/textures/default_noise_texture.dds",
+      "bytes": 360128,
+      "sha256": "dedf093da4c4294674ed5bbb18f82615043f806def5b5f184446611e824a8273"
+    },
+    {
+      "path": "gfx/interface/textures/velvet_texture.dds",
+      "bytes": 4104180,
+      "sha256": "2fd292a317119e042a211a61842e4646ad3011e03fc81e8111a58c4ede6998f5"
+    },
+    {
+      "path": "gfx/interface/textures/unused/leaf_pattern.dds",
+      "bytes": 332984,
+      "sha256": "c08e3ac56888bc786c8afb9aab80423841b8dc72d82a27e6c8056716270e2642"
+    },
+    {
+      "path": "gfx/interface/main_hud/budget_btn.dds",
+      "bytes": 45168,
+      "sha256": "5ece18cdd727558fb358b38b3deb5e1add0224a253c58644f7016b5823990f8b"
+    },
+    {
+      "path": "gfx/interface/main_hud/companies_btn.dds",
+      "bytes": 30860,
+      "sha256": "35eb54aac00ba9f6baf0daf7b72734263bf178bdc97755eb7fae35583112dda9"
+    },
+    {
+      "path": "gfx/interface/main_hud/culture_overview_btn.dds",
+      "bytes": 30860,
+      "sha256": "e2b76a0e3f8cf5cfb7302e67cea54d61be52fca09ce347b79772b93f906e42ba"
+    },
+    {
+      "path": "gfx/interface/main_hud/dip_btn.dds",
+      "bytes": 30860,
+      "sha256": "62d7485eebd972cd992bd00fe7673212416168a2ec7e21590ef5baba74fcbbd9"
+    },
+    {
+      "path": "gfx/interface/main_hud/journal_btn.dds",
+      "bytes": 30860,
+      "sha256": "49e9a448fcec0e61697e14f6f1e9d25ec9fb0d9cc142430a87be584e29a8c567"
+    },
+    {
+      "path": "gfx/interface/main_hud/lens_action_button_selected.dds",
+      "bytes": 149716,
+      "sha256": "eb6ff35afd19776a44d82398eb30441af10bc1b9607cd5498ddcebe6e0312f7b"
+    },
+    {
+      "path": "gfx/interface/main_hud/lens_map_info.dds",
+      "bytes": 26124,
+      "sha256": "431a57664ce74cfc85c718b03c208dc69609d9f808ce309e057205f851378469"
+    },
+    {
+      "path": "gfx/interface/main_hud/lens_toolbar_bg.dds",
+      "bytes": 785124,
+      "sha256": "be218e7a4193266f8ef7bc224cdc08063e4ecb44d6dc6e0d3ce022a663461e0e"
+    },
+    {
+      "path": "gfx/interface/main_hud/map_mode_locked.dds",
+      "bytes": 26124,
+      "sha256": "92c6d2de5cd4a8ef512284f7e9090084da73c4ff509655e1b483a49b9210306e"
+    },
+    {
+      "path": "gfx/interface/main_hud/maplist_btn.dds",
+      "bytes": 30860,
+      "sha256": "c481a45d164d086448d03c51c66998f163c13c531fb50f8849b9a195178d8fbe"
+    },
+    {
+      "path": "gfx/interface/main_hud/mil_btn.dds",
+      "bytes": 45168,
+      "sha256": "5241ea67035751835e475aef10274975ea418ba6d6b983a04674d49e50487614"
+    },
+    {
+      "path": "gfx/interface/main_hud/outliner_btn.dds",
+      "bytes": 30860,
+      "sha256": "fb8422239267aa0c1d33924b5e3c776a2744255b18187d15ac00a3bd5681614b"
+    },
+    {
+      "path": "gfx/interface/main_hud/pause_button.dds",
+      "bytes": 78044,
+      "sha256": "adc5473f779844c4de0cd4dbac421aeea23d68b43b3db1e548e7b2474235aa57"
+    },
+    {
+      "path": "gfx/interface/main_hud/pause_icon.dds",
+      "bytes": 26072,
+      "sha256": "2b6f7ad31b3267589cd740f813b579fc23723ef562c407fa7ae56232480d4759"
+    },
+    {
+      "path": "gfx/interface/main_hud/paused_bg_text.dds",
+      "bytes": 118284,
+      "sha256": "3f189758edbc997d15641f66f1a9bb5d7acbd06c9b0d1b6b8481f106ad769055"
+    },
+    {
+      "path": "gfx/interface/main_hud/paused_symbol.dds",
+      "bytes": 124496,
+      "sha256": "710e9f2dab29d8be0b8d3b6b4511b785924eacbf30607d15c6c22d504731f3f6"
+    },
+    {
+      "path": "gfx/interface/main_hud/play_button.dds",
+      "bytes": 60352,
+      "sha256": "feec23ce959b585f13f8131779c3e81ad37de529dfd26d8e31c08f96a28993d0"
+    },
+    {
+      "path": "gfx/interface/main_hud/play_icon.dds",
+      "bytes": 20164,
+      "sha256": "cbaa719509308b38f8e504908d6ed6620f44cb2de31fa198b8d511accc7b5fb1"
+    },
+    {
+      "path": "gfx/interface/main_hud/play_pause_lever_mask_shadow.dds",
+      "bytes": 57596,
+      "sha256": "3916919fd95b006d6c2fa4f619e289e1d27f931fba99d1150fa6786e12415a28"
+    },
+    {
+      "path": "gfx/interface/main_hud/play_pause_lever_mask.dds",
+      "bytes": 57596,
+      "sha256": "bc149dd77658b0cde0d38ddb1f2c325b15828e8d25db0f899e6bfc3822dba942"
+    },
+    {
+      "path": "gfx/interface/main_hud/play_pause_lever_texture_shadow.dds",
+      "bytes": 57596,
+      "sha256": "2f718f3ac4805f9399b037a1236ec2bd688f02a6e67cbf60ee6c4492e95579bb"
+    },
+    {
+      "path": "gfx/interface/main_hud/play_pause_lever_texture.dds",
+      "bytes": 57596,
+      "sha256": "56ddeac713753bcdee8dc9bfdf8fc9a4f00b8d2264367f126a52cf55dcb392c7"
+    },
+    {
+      "path": "gfx/interface/main_hud/pol_btn.dds",
+      "bytes": 45168,
+      "sha256": "406342108d076ecf2cff27f5e5e4eeaeb620b189c8e0a561ce74720b87201da4"
+    },
+    {
+      "path": "gfx/interface/main_hud/pops_btn.dds",
+      "bytes": 30860,
+      "sha256": "c2931cafc7865ddd80253f16adf56541e601c3dad62496cbd3b0f04c863d69bf"
+    },
+    {
+      "path": "gfx/interface/main_hud/powerblocs.dds",
+      "bytes": 45168,
+      "sha256": "11bb870aa8aa1d71e5ebd97045e9a3f76e84cdb7a1531f55173ffe7c33d337f5"
+    },
+    {
+      "path": "gfx/interface/main_hud/production_overview_btn.dds",
+      "bytes": 45168,
+      "sha256": "2007b32a8fee4b5a13f45fbbf4b88c8e3e280cc7cb118f37748e15338fda035e"
+    },
+    {
+      "path": "gfx/interface/main_hud/selected_arrow.dds",
+      "bytes": 13388,
+      "sha256": "efc7c949f96ae2e0165f63e969e1b257476924928b29b2ec5c50d524cc95358f"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_bg.dds",
+      "bytes": 661012,
+      "sha256": "ed8934f8441c39aca8bd6efc39c550c27de73747a768baa550fef95439a1c724"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_progress_red.dds",
+      "bytes": 106704,
+      "sha256": "de939c04a10d87c1dd577a8b077b018dc5e3395dcb1d079613449bf32608c232"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_progress.dds",
+      "bytes": 106704,
+      "sha256": "9f83378cdce437724758c8289a598a1aa441328f5b26a53f99de2eae9c426a90"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_skin_bg_1.dds",
+      "bytes": 137728,
+      "sha256": "fa77cfb94ade05364c79fdb0828ba74cabfe164dcb76cbffb70978283566ae40"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_skin_bg_2.dds",
+      "bytes": 40128,
+      "sha256": "734ae1071586cf4688511ce498346916d95dd53190f3ceb01442c27bf38d8f47"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_skin_bg_3.dds",
+      "bytes": 184128,
+      "sha256": "5dc5437067b6bcc278418a45e687693197ae66380383e8ef0c826bfa1f121782"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_skin_bg_4.dds",
+      "bytes": 32128,
+      "sha256": "e306416f5e3fc807895918cbb6a845bed63c1485dbeaf151604cbf00573ceccf"
+    },
+    {
+      "path": "gfx/interface/main_hud/sidebar_skin_bg_5.dds",
+      "bytes": 102528,
+      "sha256": "e78765ca6008670e00f6fc509968736712ae98d53db56bf37800deb557637fba"
+    },
+    {
+      "path": "gfx/interface/main_hud/society_btn.dds",
+      "bytes": 30860,
+      "sha256": "a01bdc42c1944efb6297d8c5d14e3bf63a6b4a21d425277daac2d8986221a522"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_bg_behind.dds",
+      "bytes": 251980,
+      "sha256": "17a861d019462b81c0089523b0bd45c94091f140998ab34681ef6ac88b004ac5"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_bg.dds",
+      "bytes": 251980,
+      "sha256": "b10586acb5abfd6e0450dd2aac146fc6ec1eac6cf9b4aa2e9a103880516fdb66"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_cog_01.dds",
+      "bytes": 30860,
+      "sha256": "d3d2e592799d0b7de2d38b70d1d0ffc4f920fcdfb1b54a172e359e9ad7b6700d"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_cog_02.dds",
+      "bytes": 30860,
+      "sha256": "a1b9ae48bf9f579c74e6454a6fb3a83ff0d0610f441e9def69b3dc82969f0215"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_cog_alpha_small.dds",
+      "bytes": 30860,
+      "sha256": "65990f6df32cb41e745dd405eb42945d1e20636b1bf39604ad87190fb6967242"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_cog_alpha.dds",
+      "bytes": 30860,
+      "sha256": "ff76094315a5cf4b1629683e2e875d5018c10ce260d2ae7d86b227b21856e22a"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_cogwheel_mask.dds",
+      "bytes": 19264,
+      "sha256": "ebe27bb4ae4436c1091283ceb584b310a8d2371a29fa5f2fcc7dc944c191cd05"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_cogwheel_texture.dds",
+      "bytes": 19264,
+      "sha256": "566a700c4d8e3da5b7790c4e046b07f9b48299ece863caadd2bfc6f7ebdb3013"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_current_speed.dds",
+      "bytes": 1501868,
+      "sha256": "7ca36ce081b437970c272402537fe9f934b0085f949ed560283cc4e87cb3c0ba"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_pointer.dds",
+      "bytes": 853312,
+      "sha256": "d131349d6ef842ac4c6818e43ace8134f8272157da181aa40b894bceb78332a7"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_set_speed_1.dds",
+      "bytes": 47568,
+      "sha256": "45c94b11e0b52507fe8d0d38f3e6bdaf362e49424c30c061a39944902aad7fcc"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_set_speed_2.dds",
+      "bytes": 69696,
+      "sha256": "8a8067a6c67b62395de93630ef9aecdde3d809f16e5df9c8d2e5d8a10ee6c3e7"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_set_speed_3.dds",
+      "bytes": 54292,
+      "sha256": "6528a96f6fb267c4a7d7d49951f8e3616d522287a50e778d31dc84949ab4fb02"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_set_speed_4.dds",
+      "bytes": 69696,
+      "sha256": "b9796ebf35861745ad1cb558426c6e9b2e724282e3f7353c640b7bc866e67a72"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_set_speed_5.dds",
+      "bytes": 47568,
+      "sha256": "a67234f31ac2a86a44bd90497427acedb9171e3b0e173ce32b28234311f16b7a"
+    },
+    {
+      "path": "gfx/interface/main_hud/speedometer_steam.dds",
+      "bytes": 149336,
+      "sha256": "9d59b74c450ecbd92ad4ce3d60979ee7b13ad749d50a370e48329e5d12df8e81"
+    },
+    {
+      "path": "gfx/interface/main_hud/tech_btn.dds",
+      "bytes": 30860,
+      "sha256": "0b4b6d34f5e9f00eef28e03b3685d92f179cfb2a15e77b4980dbb832dd138436"
+    },
+    {
+      "path": "gfx/interface/main_hud/topbar_bg_border.dds",
+      "bytes": 7804,
+      "sha256": "e73af1491ecf14cd059386e1068f35263b81dbfc985f2cd02dd8eefc5d41ee66"
+    },
+    {
+      "path": "gfx/interface/main_hud/topbar_bg.dds",
+      "bytes": 355092,
+      "sha256": "4d9e7477fbac13bde0209ae3f6ef7d424664322c125de6ccdaaea9f4b756a178"
+    },
+    {
+      "path": "gfx/interface/main_hud/topbar_side_dec_simple.dds",
+      "bytes": 355092,
+      "sha256": "da87c72cca351f21dd56a8b147471a118c5a434d829730f451cc47e0c9a42dfd"
+    },
+    {
+      "path": "gfx/interface/main_hud/topbar_side_dec.dds",
+      "bytes": 355092,
+      "sha256": "762846b2bbe90126a8adbcd9261f797157452411bfb76803bd308d7f0ed927cf"
+    },
+    {
+      "path": "gfx/interface/main_hud/trade_overview_btn.dds",
+      "bytes": 45168,
+      "sha256": "848cb994bdcee49914959524b2044bc478ad5f318a0b5b58cd16020bce3e839d"
+    },
+    {
+      "path": "gfx/interface/main_hud/ui_paus_frame.dds",
+      "bytes": 44236348,
+      "sha256": "105c9ce3d229ffac1470f23b9d0b9327a604f9afd68d2dc6cdb37c8d22aebace"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/lens_action_button_mouseover.dds",
+      "bytes": 149716,
+      "sha256": "43ce84e89f2c927c5a1f2dff0ffba18a1f6dac56deb2cfae00d9c7e11bc3c706"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/lens_actions_bg.dds",
+      "bytes": 447452,
+      "sha256": "a65e01ce096816dc23eb118d6f3c81eda52829fb583f92c8fff82d9500430677"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/lens_button_highlight.dds",
+      "bytes": 8592,
+      "sha256": "6df6887acae5e16f4e7fead408d16523dc9881157d7c9ef51a0a6faea89c5abe"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/map_list_toggle_button.dds",
+      "bytes": 185876,
+      "sha256": "b8bb5fd0283d4a17f9ee09d500e0e0f61ca08d08d267edc35ff59a4a074c372e"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/map_list_toggle_icon_mask.dds",
+      "bytes": 7200,
+      "sha256": "9e411f44d6885c5bc45e4de1d6ebaf6357cdcb1cbf683d4551386c9e5f7c12d4"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/map_list_toggle_icon_texture.dds",
+      "bytes": 27752,
+      "sha256": "9eb20a87d38243e3c2ac9050a949599b19d37def0b2d2a8aa283768fc6e51734"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/sidebar_frame.dds",
+      "bytes": 18020,
+      "sha256": "482ccbc722a6a1fa5f4a092696b9ef8cc78777fd32dea3895a22d4ae6494ae05"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/speedometer_1_active.dds",
+      "bytes": 34248,
+      "sha256": "fd8886bd51db38afcdf04885e5e365520ccbc8863d7899de1eb9f6fc520ce53c"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/speedometer_1_set.dds",
+      "bytes": 34248,
+      "sha256": "1ddbc0a0090b7c257d5870821178594922078c235d200a74a114d5d031d8445d"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/speedometer_2_active.dds",
+      "bytes": 34248,
+      "sha256": "8105a13fee158bedab3accb6fbde20a30eb4c2eeca992b12d688c6b44c1cdd7c"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/speedometer_2_not_active.dds",
+      "bytes": 34248,
+      "sha256": "f09b5e61dc3429347d371088b751b56f80e6a860d501498fdcfd0a74ecdb98b9"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/speedometer_2_set.dds",
+      "bytes": 34248,
+      "sha256": "f8bf0da482c73fa539b5566fd30fc0364f4585315465bb90c9e6335199e5369c"
+    },
+    {
+      "path": "gfx/interface/main_hud/unused/speedometer_pointer_3.dds",
+      "bytes": 15460,
+      "sha256": "9f49b427d7af6c4fab143b495d4d569256f23ca593bacc93521e9a706c641bb4"
+    },
+    {
+      "path": "gfx/interface/tooltip/stacked_barchart_small_frame.dds",
+      "bytes": 704,
+      "sha256": "a7acfbc6cce5c13929a48056e09e8d2dd94c9922f1a68cfc4865b0d8ae96b41a"
+    },
+    {
+      "path": "gfx/interface/tooltip/stacked_barchart_small_item.dds",
+      "bytes": 704,
+      "sha256": "7f677f20a70572310f315b8a3f558caf9d8ba9f6ce63d418c32c6875b6667ffc"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_bg_texture.dds",
+      "bytes": 1382328,
+      "sha256": "644800b7955b8f881e8a87f8bffbe214fe2bd05c46f8b5bd0bebef77af60f2a9"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_bg.dds",
+      "bytes": 213388,
+      "sha256": "9af87309e7abb343f43417ea6c832606c8d90adad34335f9145a48543ba1a968"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_divider_end.dds",
+      "bytes": 6500,
+      "sha256": "19d290925d15b333c655dffe793c8ff501cfe702f5cd1199110ff948698d5c3c"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_divider_mid.dds",
+      "bytes": 6500,
+      "sha256": "8a0161816990f6e8b070d75ff8a6e52e37531a2d1d4de88db20e73e7df4e993d"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_divider_start.dds",
+      "bytes": 6500,
+      "sha256": "e8bde4cb3b924a73cc69006a38b480ad03f012aa0c0aac20ae3e0efb62892048"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_frame.dds",
+      "bytes": 213388,
+      "sha256": "d9489dec5b3fb3d785e208f74eb95d276391e6ea0a81bff137a07b9cfa817719"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_icon_bg.dds",
+      "bytes": 69264,
+      "sha256": "9634e8e067ed716933212ae293d409b9590b122cb26c3927718168899dc3d74e"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_icon_frame.dds",
+      "bytes": 69264,
+      "sha256": "da25fbdb11ef3ef7b452e74e30c5f19e7a39f36be14904d8ff7860b126d2c55d"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_lock_timer.dds",
+      "bytes": 24696,
+      "sha256": "cd5c5bac7d1f4c6f5a6d767a007c62375015c1b9b98bd0e971ef37e4dc01481f"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_locked.dds",
+      "bytes": 172768,
+      "sha256": "a56b28e21f1df93e4983080a7a81d75aac95a04c1b4d232c65acf70103e8fcdf"
+    },
+    {
+      "path": "gfx/interface/tooltip/tooltip_title_bg.dds",
+      "bytes": 380608,
+      "sha256": "34bea7fe31b440c1471f79b53e7e7a5c7119abbd35ff7b9da5fe5ab20277419f"
+    },
+    {
+      "path": "gfx/interface/tooltip/unused/alpha_edge_fade_1px.dds",
+      "bytes": 40128,
+      "sha256": "f73893b4522a1e6e42b2e91b7c4f60d06c3bceaf9714e4ba047157800d18607e"
+    },
+    {
+      "path": "gfx/interface/tooltip/unused/stretch_bottom_fade.dds",
+      "bytes": 119808,
+      "sha256": "76aaed9a9b5535274e0a01dca6a703d7dfc2fa353064befa8369d31b4d6b0491"
+    },
+    {
+      "path": "gfx/interface/tooltip/unused/tile_progress_overlay.dds",
+      "bytes": 43328,
+      "sha256": "88072ca40235153e9e20be20e516624c0d6cb2d03d56574cec98a864ffa5c85a"
+    },
+    {
+      "path": "gfx/interface/outliner/diplo_play_dec_outliner.dds",
+      "bytes": 146988,
+      "sha256": "a7745d43f12ff7d29c2305a88fcdfc5a5f069951a7343394b9fea80d22fecdbc"
+    },
+    {
+      "path": "gfx/interface/outliner/outliner_all.dds",
+      "bytes": 13388,
+      "sha256": "0bd664e2555125f56d3ddb449ba43229dab216ae78458f133966d53bf290db46"
+    },
+    {
+      "path": "gfx/interface/outliner/outliner_diplomacy.dds",
+      "bytes": 13388,
+      "sha256": "de2c6535e19dade791821d09bb8f09f1c344abe040d2050300d63f4bd88a8a2a"
+    },
+    {
+      "path": "gfx/interface/outliner/outliner_economy.dds",
+      "bytes": 13388,
+      "sha256": "17f868981fa160271d8f97b0dd519ffa4a9299167866a6eabf95806479a808f7"
+    },
+    {
+      "path": "gfx/interface/outliner/outliner_military.dds",
+      "bytes": 13388,
+      "sha256": "cc591aa40e1efb97fc5fe6479bfeb4d43d13c51fed9b6a0ea8e7b444df1cd5c2"
+    },
+    {
+      "path": "gfx/interface/outliner/outliner_pinned.dds",
+      "bytes": 13388,
+      "sha256": "a5c32b75c918900ed168dd8584a35f866f6e6e933a925777a77d7195e05a4c1f"
+    },
+    {
+      "path": "gfx/interface/outliner/outliner_politics.dds",
+      "bytes": 13388,
+      "sha256": "0c23cb74f09d3e981f904852f1af6b6212d5fd23da11d899933cc86d146ebf17"
+    },
+    {
+      "path": "gfx/interface/outliner/pinned_icon.dds",
+      "bytes": 11312,
+      "sha256": "0d87c593f3eb2aacec33de50255d501b34c9829ae3c2835b534febfbd277968a"
+    },
+    {
+      "path": "gfx/interface/outliner/unpinned_icon.dds",
+      "bytes": 11312,
+      "sha256": "4f4958d92bd6c55a03858817d24c098726d6e3a197b00fa9ba20ceab6c6c4ac9"
+    },
+    {
+      "path": "gfx/interface/outliner/war_button_icon_outliner.dds",
+      "bytes": 210236,
+      "sha256": "d2a86a350f3c660c82e2e562868fefd28aa628583467c183348a04a0b2469fe8"
+    },
+    {
+      "path": "gfx/interface/outliner/war_button_icon.dds",
+      "bytes": 16928,
+      "sha256": "78a0b0e8409acf82658e88ab92032c89b83da2d713405cf8a1fc81f1fbf0c21f"
+    },
+    {
+      "path": "gfx/interface/scrollbars/scrollbar_slider_horizontal.dds",
+      "bytes": 2688,
+      "sha256": "41cb95972cf4bd108ac96f05066df060236d2ba3104a1198e43bc3d4d73d365c"
+    },
+    {
+      "path": "gfx/interface/scrollbars/scrollbar_slider.dds",
+      "bytes": 3540,
+      "sha256": "742131c3b5c41fc3b89494bb488649f47ec0d7dd0db89a48a7bdca32f615d1e9"
+    },
+    {
+      "path": "gfx/interface/scrollbars/scrollbar_track_horizontal.dds",
+      "bytes": 384,
+      "sha256": "8d2c6fe65e6c51279e9256d66cdf235d3ba6d68f47036264b8a843367133c60d"
+    },
+    {
+      "path": "gfx/interface/scrollbars/scrollbar_track.dds",
+      "bytes": 468,
+      "sha256": "e3565606b120add6c3060ab482a132b745dd7aad866e5688db123a088e765fcf"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_button_1_selected.dds",
+      "bytes": 18860,
+      "sha256": "060a0a5ad1f44dde47a88a1c145eb4f6bab9af8c21cf15d5c3c92adfa55095ab"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_button_1.dds",
+      "bytes": 56332,
+      "sha256": "dfbccb6d5853298f7e6df8c4c029a23f4b78179fca08a49b87d171c29f291f7c"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_button_frontend.dds",
+      "bytes": 75080,
+      "sha256": "c09ec8b565460d2ab8ee8cdc55536398c1ff4df7ef4f0e122eb55ddc4435f878"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_button_outliner_not_selected.dds",
+      "bytes": 63880,
+      "sha256": "85d35e766374d2bc21a0e6fe77cde31210da84e4f7bb3a31054b5cd99f02925e"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_button_outliner_selected.dds",
+      "bytes": 63880,
+      "sha256": "646499fefe713c40b26d29c956afe1d4087a0bc1c1671e930b764d013411bee0"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_button_vertical.dds",
+      "bytes": 206956,
+      "sha256": "ec9dc3157f7c52a769fab1d47334e375fca2d09d2ff7d311212653171c422ae4"
+    },
+    {
+      "path": "gfx/interface/tabs/tab_divider.dds",
+      "bytes": 1084,
+      "sha256": "6ab3e911f2d332020bb8294485e2c1d0816bf7888c818350564b1ebc0b840f56"
+    },
+    {
+      "path": "gfx/interface/tabs/unused/tabs_bottom.dds",
+      "bytes": 7664,
+      "sha256": "1a40673ae88755d887c1e3004701c2e8b37b08a67c6c3736649db29eecf0a9be"
+    },
+    {
+      "path": "gfx/interface/menu/menu_frame_bottom_mask.dds",
+      "bytes": 7199056,
+      "sha256": "525267c7f1438b1188e71950983900045d4d5e0b2e9eb9ac8c73885d2678f36d"
+    },
+    {
+      "path": "gfx/interface/menu/menu_frame_bottom.dds",
+      "bytes": 7199056,
+      "sha256": "d665b07cdc0e6bfaf3b063e38b60a47f2b1879c2442f9529009957775f6238f6"
+    },
+    {
+      "path": "gfx/interface/menu/menu_frame_top_mask.dds",
+      "bytes": 1706704,
+      "sha256": "a7f6f5adfa730b058545a8096900741f825077e0bd549b1b2a206a4e52f6c9d0"
+    },
+    {
+      "path": "gfx/interface/menu/menu_frame_top.dds",
+      "bytes": 1706704,
+      "sha256": "6f2ffad146f7b45e8976c452e4b03c49436d15a6115f47cc78bf1ffc26e9d90a"
+    },
+    {
+      "path": "gfx/interface/menu/menu_header_dec.dds",
+      "bytes": 1706704,
+      "sha256": "e6ca011cdb3c4f95171cfad8ae350dffec2ab2e25345c127ad49ee2dcb5c8b42"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_3_bottom_mask.dds",
+      "bytes": 181424,
+      "sha256": "ac30709a04c74d424aadeb02bd1e3d12f5e65b32017d70a577f3fc47a0934a62"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_3_bottom.dds",
+      "bytes": 181424,
+      "sha256": "10a327f3a6cfbaf18dd55fd2eda79b7f53638affbceae2f5c095d5eadb2cbdde"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_3_top_mask.dds",
+      "bytes": 122608,
+      "sha256": "2b40fd1e8ba114ac0820e193278ce2b12c6afee12db6b57c3bcf6f3b44790935"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_3_top.dds",
+      "bytes": 122608,
+      "sha256": "86c45ce9abd043266f9cbabc0e1bc63ac921cb618c6d965c6d9f0c184aea1fa6"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_a.dds",
+      "bytes": 281780,
+      "sha256": "fb755da1a3f1c82eead068cd65405fafd8de79710fdabaeab209a2137b46ed69"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_c.dds",
+      "bytes": 90088,
+      "sha256": "1fe4d89af2113cdec26bc40c78d9123476a8e1db030614ff9bf5177680a1af6f"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_i.dds",
+      "bytes": 90088,
+      "sha256": "ebf2946a8c750b4d03e5a65e026083e449502b02218388de12b3811570928ab2"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_i2.dds",
+      "bytes": 90088,
+      "sha256": "8fd3c340c74dcbad7a98ef0f1017cfafdb34c8dfb879cc455a7cf81b0fcd0337"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_lines.dds",
+      "bytes": 480080,
+      "sha256": "3d8a8ec1fb320896013276cffb785d3b96ad4a99a8e57e54a0f8759aa84afbfe"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_o.dds",
+      "bytes": 94828,
+      "sha256": "ebad8bda3396124d4e9a00bfb7d187014436c140490990ed11f6b5d447cc6fc8"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_r.dds",
+      "bytes": 90088,
+      "sha256": "0123a36e56d2ccd8e9979710f99609fdcae522643c0cf7f5f25b0ecaf6cdc314"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_t.dds",
+      "bytes": 90088,
+      "sha256": "efc26de2152edb60f95c81776a4218f4b3a579e7d4e88a01b1fa31a5d527e889"
+    },
+    {
+      "path": "gfx/interface/menu/menu_logo_v.dds",
+      "bytes": 281780,
+      "sha256": "34b616df0a789bef14dc5d58cdff512bbc5f67b3df955f48dfadf0bd9a4d307a"
+    },
+    {
+      "path": "gfx/interface/menu/menu_top_corner_overlay.dds",
+      "bytes": 394160,
+      "sha256": "f68c93115de27eadb72d93c3e942b198b1f748c2444acf5e999c4f15c21d3f1e"
+    },
+    {
+      "path": "gfx/interface/menu/menu_top_corner.dds",
+      "bytes": 9459580,
+      "sha256": "60368fc5ac95aebce15d377ded90c1fec949bd80bc34b1791ce0e4fe0fbdbf1a"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+(schema_version: 1, entries: [
+    Property(key: "mobilization", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "has_mobilizing_unit", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("vfx_mobilization_entity")),
+    ])),
+])

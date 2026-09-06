@@ -1,0 +1,120 @@
+(schema_version: 1, entries: [
+    Property(key: "@height", operator: Assign, value: Number("1.0")),
+    Property(key: "@clouds1scale", operator: Assign, value: Number("1.0")),
+    Property(key: "@clouds2scale", operator: Assign, value: Number("1.0")),
+    Property(key: "@clouds3scale", operator: Assign, value: Number("1.0")),
+    Property(key: "war_border", operator: Assign, value: Block([
+        Property(key: "height", operator: Assign, value: Symbol("@height")),
+        Property(key: "linear_angle", operator: Assign, value: Number("0")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+        ])),
+        Property(key: "shader_file", operator: Assign, value: Text("gfx/FX/pdxverticalborder.shader")),
+        Property(key: "effectname", operator: Assign, value: Text("Vertical_War_Border")),
+        Property(key: "masks", operator: Assign, value: Block([
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_cloud.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("0.0")),
+                    Item(Number("0.0")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[1/height]")),
+                    Item(Number("1.0")),
+                ])),
+            ])),
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_cloud.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("-0.01")),
+                    Item(Number("1.05")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[clouds1scale/height]")),
+                    Item(Symbol("@clouds1scale")),
+                ])),
+            ])),
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_cloud.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("-0.01")),
+                    Item(Number("1.05")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[clouds2scale/height]")),
+                    Item(Symbol("@clouds2scale")),
+                ])),
+            ])),
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_cloud.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("-0.01")),
+                    Item(Number("1.05")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[clouds3scale/height]")),
+                    Item(Symbol("@clouds3scale")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "escalation_border", operator: Assign, value: Block([
+        Property(key: "height", operator: Assign, value: Symbol("@height")),
+        Property(key: "linear_angle", operator: Assign, value: Number("0")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("1.0")),
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+        ])),
+        Property(key: "shader_file", operator: Assign, value: Text("gfx/FX/pdxverticalborder.shader")),
+        Property(key: "effectname", operator: Assign, value: Text("Vertical_Escalation_Border")),
+        Property(key: "masks", operator: Assign, value: Block([
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_smoke.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("0.0")),
+                    Item(Number("0.0")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[1/height]")),
+                    Item(Number("1.0")),
+                ])),
+            ])),
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_smoke.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("0.0")),
+                    Item(Number("0.0")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[clouds1scale/height]")),
+                    Item(Symbol("@clouds1scale")),
+                ])),
+            ])),
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_smoke.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("0.0")),
+                    Item(Number("0.0")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[clouds2scale/height]")),
+                    Item(Symbol("@clouds2scale")),
+                ])),
+            ])),
+            Property(key: "mask", operator: Assign, value: Block([
+                Property(key: "texture", operator: Assign, value: Text("vertical_border_smoke.dds")),
+                Property(key: "speed", operator: Assign, value: Block([
+                    Item(Number("0.0")),
+                    Item(Number("0.0")),
+                ])),
+                Property(key: "uv_scale", operator: Assign, value: Block([
+                    Item(Symbol("@[clouds3scale/height]")),
+                    Item(Symbol("@clouds3scale")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

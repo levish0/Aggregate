@@ -1,0 +1,18 @@
+(schema_version: 1, entries: [
+    Item(Block([
+        Property(key: "masks", operator: Assign, value: Array([
+            Block([
+                Property(key: "key", operator: Assign, value: Text("mask_dynamic_mining")),
+                Property(key: "filename", operator: Assign, value: Text("mask_dynamic_mining.png")),
+            ]),
+            Block([
+                Property(key: "key", operator: Assign, value: Text("mask_dynamic_forestry")),
+                Property(key: "filename", operator: Assign, value: Text("mask_dynamic_forestry.png")),
+            ]),
+            Block([
+                Property(key: "key", operator: Assign, value: Text("mask_dynamic_farmland")),
+                Property(key: "filename", operator: Assign, value: Text("mask_dynamic_farmland.png")),
+            ]),
+        ])),
+    ])),
+])

@@ -1,0 +1,22 @@
+(schema_version: 1, entries: [
+    Property(key: "devastation_stage_3", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "devastation", operator: GreaterThanOrEqual, value: Number("0.5")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("vfx_entity_devastation_stage_3")),
+    ])),
+    Property(key: "devastation_stage_2", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "devastation", operator: GreaterThanOrEqual, value: Number("0.35")),
+            Property(key: "devastation", operator: LessThan, value: Number("0.5")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("vfx_entity_devastation_stage_2")),
+    ])),
+    Property(key: "devastation_stage_1", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "devastation", operator: GreaterThanOrEqual, value: Number("0.2")),
+            Property(key: "devastation", operator: LessThan, value: Number("0.35")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("vfx_entity_devastation_stage_1")),
+    ])),
+])

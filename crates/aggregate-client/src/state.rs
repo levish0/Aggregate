@@ -6,6 +6,7 @@ pub enum Screen {
     #[default]
     MainMenu,
     Management,
+    WorldMap,
     Preview,
     Settings,
 }
@@ -69,6 +70,7 @@ impl InterfaceState {
 #[derive(Component, Clone, Copy, PartialEq, Eq)]
 pub enum InterfaceAction {
     OpenManagement,
+    OpenWorldMap,
     OpenPreview,
     OpenSettings,
     Back,

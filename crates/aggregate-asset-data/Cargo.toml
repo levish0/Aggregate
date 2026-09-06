@@ -1,0 +1,12 @@
+[package]
+name = "aggregate-asset-data"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+ron.workspace = true
+
+[lints]
+workspace = true

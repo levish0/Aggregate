@@ -1,0 +1,22 @@
+(schema_version: 1, entries: [
+    Property(key: "smog_stage_3", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "pollution_generation", operator: GreaterThanOrEqual, value: Number("350")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("pollution_stage_3")),
+    ])),
+    Property(key: "smog_stage_2", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "pollution_generation", operator: GreaterThanOrEqual, value: Number("150")),
+            Property(key: "pollution_generation", operator: LessThan, value: Number("350")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("pollution_stage_2")),
+    ])),
+    Property(key: "smog_stage_1", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "pollution_generation", operator: GreaterThanOrEqual, value: Number("50")),
+            Property(key: "pollution_generation", operator: LessThan, value: Number("150")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("pollution_stage_1")),
+    ])),
+])

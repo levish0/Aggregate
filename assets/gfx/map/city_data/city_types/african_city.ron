@@ -1,0 +1,137 @@
+// Source line 15: in grid-space units. 1.0 means the mesh can be placed anywhere inside its allotted cell
+// Source line 16: in degrees
+// Source line 36: offsets for regular buildings
+(schema_version: 1, entries: [
+    Property(key: "african_city", operator: Assign, value: Block([
+        Property(key: "graphical_culture", operator: Assign, value: Text("african")),
+        Property(key: "city_type", operator: Assign, value: Symbol("city")),
+        Property(key: "min_residential_buildings", operator: Assign, value: Number("2")),
+        Property(key: "max_residential_buildings", operator: Assign, value: Number("150")),
+        Property(key: "max_residence_points", operator: Assign, value: Number("200")),
+        Property(key: "rich_building_meshes", operator: Assign, value: Block([
+            Item(Text("african_urban_city_residential_rich_01_mesh")),
+            Item(Text("african_urban_city_residential_rich_02_mesh")),
+            Item(Text("african_urban_city_residential_rich_03_mesh")),
+        ])),
+        Property(key: "rich_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.0")),
+            Property(key: "rotation", operator: Assign, value: Number("0.0")),
+        ])),
+        Property(key: "mid_building_meshes", operator: Assign, value: Block([
+            Item(Text("african_urban_city_residential_mid_01_mesh")),
+            Item(Text("african_urban_city_residential_mid_02_mesh")),
+            Item(Text("african_urban_city_residential_mid_03_mesh")),
+        ])),
+        Property(key: "mid_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.2")),
+            Property(key: "rotation", operator: Assign, value: Number("6.25")),
+        ])),
+        Property(key: "poor_building_meshes", operator: Assign, value: Block([
+            Item(Text("african_urban_city_residential_poor_01_mesh")),
+            Item(Text("african_urban_city_residential_poor_02_mesh")),
+            Item(Text("african_urban_city_residential_poor_03_mesh")),
+        ])),
+        Property(key: "poor_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.2")),
+            Property(key: "rotation", operator: Assign, value: Number("20.0")),
+        ])),
+        Property(key: "building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.0")),
+            Property(key: "rotation", operator: Assign, value: Number("0.0")),
+        ])),
+        Property(key: "building_construction_sector", operator: Assign, value: Block([
+            Item(Text("african_manufactory_03_mesh")),
+        ])),
+        Property(key: "building_food_industry", operator: Assign, value: Block([
+            Item(Text("african_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_textile_mill", operator: Assign, value: Block([
+            Item(Text("african_tools_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_furniture_manufactory", operator: Assign, value: Block([
+            Item(Text("african_furniture_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_glassworks", operator: Assign, value: Block([
+            Item(Text("african_glassworks_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_tooling_workshop", operator: Assign, value: Block([
+            Item(Text("african_tools_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_paper_mill", operator: Assign, value: Block([
+            Item(Text("african_manufactory_02_mesh")),
+        ])),
+        Property(key: "building_chemical_plant", operator: Assign, value: Block([
+            Item(Text("african_colonial_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_steel_mill", operator: Assign, value: Block([
+            Item(Text("african_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_arms_industry", operator: Assign, value: Block([
+            Item(Text("african_colonial_manufactory_03_mesh")),
+        ])),
+        Property(key: "building_artillery_foundry", operator: Assign, value: Block([
+            Item(Text("african_colonial_manufactory_03_mesh")),
+        ])),
+        Property(key: "building_automotive_industry", operator: Assign, value: Block([
+            Item(Text("war_machines_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_motor_industry", operator: Assign, value: Block([
+            Item(Text("african_colonial_manufactory_02_mesh")),
+        ])),
+        Property(key: "building_munition_plant", operator: Assign, value: Block([
+            Item(Text("african_colonial_manufactory_03_mesh")),
+        ])),
+        Property(key: "building_synthetics_plant", operator: Assign, value: Block([
+            Item(Text("african_glassworks_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_electrics_industry", operator: Assign, value: Block([
+            Item(Text("african_manufactory_02_mesh")),
+        ])),
+        Property(key: "building_power_plant", operator: Assign, value: Block([
+            Item(Text("african_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_explosives_factory", operator: Assign, value: Block([
+            Item(Text("african_colonial_manufactory_01_mesh")),
+        ])),
+        Property(key: "building_suez_canal", operator: Assign, value: Block([
+            Item(Text("canal_suezcanal_01_mesh")),
+        ])),
+        Property(key: "building_panama_canal", operator: Assign, value: Block([
+            Item(Text("canal_panamacanal_01_mesh")),
+        ])),
+        Property(key: "building_eiffel_tower", operator: Assign, value: Block([
+            Item(Text("wonder_eiffel_tower_01_mesh")),
+        ])),
+        Property(key: "building_urban_center", operator: Assign, value: Block([])),
+        Property(key: "building_naval_administration", operator: Assign, value: Block([
+            Item(Text("african_port_navalbase_01_mesh")),
+        ])),
+        Property(key: "building_government_administration", operator: Assign, value: Block([
+            Item(Text("african_city_govadmin_01_mesh")),
+        ])),
+        Property(key: "building_trade_center", operator: Assign, value: Block([
+            Item(Text("african_city_tradecenter_01_mesh")),
+        ])),
+        Property(key: "building_university", operator: Assign, value: Block([
+            Item(Text("african_city_university_01_mesh")),
+        ])),
+        Property(key: "building_art_academy", operator: Assign, value: Block([
+            Item(Text("african_city_academy_01_mesh")),
+        ])),
+        Property(key: "building_barrack", operator: Assign, value: Block([
+            Item(Text("african_city_barracks_01_mesh")),
+        ])),
+        Property(key: "building_financial_district", operator: Assign, value: Block([
+            Item(Text("african_city_financialdistrict_01_mesh")),
+        ])),
+        Property(key: "building_company_headquarter", operator: Assign, value: Block([
+            Item(Text("generic_companyhq_01_mesh")),
+        ])),
+        Property(key: "building_company_regional_headquarter", operator: Assign, value: Block([
+            Item(Text("generic_regionalcompanyhq_01_mesh")),
+        ])),
+        Property(key: "building_army_logistics_center", operator: Assign, value: Block([
+            Item(Text("generic_logisticscenter_01_mesh")),
+        ])),
+    ])),
+])

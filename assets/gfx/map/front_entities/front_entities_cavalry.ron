@@ -1,0 +1,399 @@
+// Source line 1: diorama_entity_example = {
+// Source line 2: 	# The asset to show
+// Source line 3: 	entity = "military_barricade_irregular_01_entity"
+// Source line 4: 
+// Source line 5: 	# Group is used in diorama script to determine which entities to pick the entity from for each diorama locator
+// Source line 6: 	group = "barricade"
+// Source line 7: 
+// Source line 8: 	# Trigger to check if the current entity is valid to show in the diorama
+// Source line 9: 	# root - country of the unit
+// Source line 10: 	# scope:country - country of the unit (same as root)
+// Source line 11: 	# scope:culture - culture of the unit
+// Source line 12: 	# scope:combat_unit_type - combat unit type
+// Source line 13: 	trigger = {
+// Source line 14: 		scope:country = {
+// Source line 15: 			has_technology_researched = rifling
+// Source line 16: 		}
+// Source line 17: 		scope:culture = {
+// Source line 18: 			has_culture_graphics = european
+// Source line 19: 		}
+// Source line 20: 		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+// Source line 21: 	}
+// Source line 22: }
+// Source line 26: ################################################################
+// Source line 27: ####					CAVALRY UNITS						#####
+// Source line 28: ################################################################
+// Source line 31: ################################################
+// Source line 32: ##       			Generic     			  ###
+// Source line 33: ################################################
+// Source line 45: ################################################
+// Source line 46: ##       			Carlists!	     		  ###
+// Source line 47: ################################################
+// Source line 61: ################################################
+// Source line 62: ##       			European     			  ###
+// Source line 63: ################################################
+// Source line 158: ################################################
+// Source line 159: ##       			African     			  ###
+// Source line 160: ################################################
+// Source line 225: ################################################
+// Source line 226: ##       			Arabic     				  ###
+// Source line 227: ################################################
+// Source line 292: ################################################
+// Source line 293: ##       			East Asian     			  ###
+// Source line 294: ################################################
+// Source line 359: ################################################
+// Source line 360: ##       			South Asian     		  ###
+// Source line 361: ################################################
+// Source line 426: ################################################
+// Source line 427: ##       		 Native American     		  ###
+// Source line 428: ################################################
+(schema_version: 1, entries: [
+    Property(key: "military_tank_light_generic_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_tank_light_generic_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_light_tanks")),
+        ])),
+    ])),
+    Property(key: "military_infantry_carlist_cavalry_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_infantry_carlists_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:country", operator: Assign, value: Block([
+                Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+            ])),
+            Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics")),
+            Property(key: "NOT", operator: Assign, value: Block([
+                Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_light_tanks")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_cavalry_european_hussar_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_european_hussar_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("french")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("brazilian")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("balkan")),
+                ])),
+            ])),
+            Property(key: "NOT", operator: Assign, value: Block([
+                Property(key: "scope:country", operator: Assign, value: Block([
+                    Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+                ])),
+                Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_hussars")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_european_dragoon_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_european_dragoon_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("french")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("brazilian")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("balkan")),
+                ])),
+            ])),
+            Property(key: "NOT", operator: Assign, value: Block([
+                Property(key: "scope:country", operator: Assign, value: Block([
+                    Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+                ])),
+                Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_dragoons")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_european_cuirassier_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_european_cuirassier_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("french")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("brazilian")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("balkan")),
+                ])),
+            ])),
+            Property(key: "NOT", operator: Assign, value: Block([
+                Property(key: "scope:country", operator: Assign, value: Block([
+                    Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+                ])),
+                Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_cuirassiers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_european_lancer_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_european_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("european")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("french")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("brazilian")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("balkan")),
+                ])),
+            ])),
+            Property(key: "NOT", operator: Assign, value: Block([
+                Property(key: "scope:country", operator: Assign, value: Block([
+                    Property(key: "c:SPC", operator: Exists, value: Symbol("this")),
+                ])),
+                Property(key: "has_dlc_feature", operator: Assign, value: Symbol("ip4_cosmetics")),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_lancers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_african_hussar_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_african_hussar_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_hussars")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_african_dragoon_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_african_dragoon_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_dragoons")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_african_cuirassier_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_african_cuirassier_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_cuirassiers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_african_lancer_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_african_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("african")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_lancers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_arabic_hussar_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_arabic_hussar_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_hussars")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_arabic_dragoon_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_arabic_dragoon_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_dragoons")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_arabic_cuirassier_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_arabic_cuirassier_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_cuirassiers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_arabic_lancer_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_arabic_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("arabic")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_lancers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_eastasian_hussar_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_eastasian_hussar_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_hussars")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_eastasian_dragoon_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_eastasian_dragoon_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_dragoons")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_eastasian_cuirassier_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_eastasian_cuirassier_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_cuirassiers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_eastasian_lancer_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_eastasian_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("east_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_lancers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_southasian_hussar_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_southasian_hussar_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_hussars")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_southasian_dragoon_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_southasian_dragoon_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_dragoons")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_southasian_cuirassier_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_southasian_cuirassier_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_cuirassiers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_southasian_lancer_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_southasian_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("south_asian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_lancers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_nativeamerican_hussar_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_nativeamerican_hussar_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("decentralised_americas")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("polynesian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_hussars")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_nativeamerican_dragoon_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_nativeamerican_dragoon_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("decentralised_americas")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("polynesian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_dragoons")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_nativeamerican_cuirassier_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_nativeamerican_cuirassier_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("decentralised_americas")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("polynesian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_cuirassiers")),
+        ])),
+    ])),
+    Property(key: "military_cavalry_nativeamerican_lancer_diorama_entity", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("military_cavalry_nativeamerican_lancer_entity")),
+        Property(key: "group", operator: Assign, value: Text("cavalry")),
+        Property(key: "trigger", operator: Assign, value: Block([
+            Property(key: "scope:culture", operator: Assign, value: Block([
+                Property(key: "OR", operator: Assign, value: Block([
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("decentralised_americas")),
+                    Property(key: "has_culture_graphics", operator: Assign, value: Symbol("polynesian")),
+                ])),
+            ])),
+            Property(key: "scope:combat_unit_type", operator: Assign, value: Symbol("unit_type:combat_unit_type_lancers")),
+        ])),
+    ])),
+])

@@ -1,0 +1,1528 @@
+[
+  {
+    "source": "common/country_definitions/00_countries.txt",
+    "destination": "common/country_definitions/00_countries.ron",
+    "source_blake3": "1077b63f1ce1ae9ae0362fb7febf0e8a77d8f5c84dc9471cc48ea7c028c30de7",
+    "destination_blake3": "ab985014634b0b04b7e25d7bf5e5f11c023d2e932014eb7c7e3123a2c4c13532",
+    "rewritten_references": 0
+  },
+  {
+    "source": "common/country_definitions/01_africa.txt",
+    "destination": "common/country_definitions/01_africa.ron",
+    "source_blake3": "59057dba0818aee0ad616c4790f8af93396f1ac3f7c42094dd7233101221cf3a",
+    "destination_blake3": "92355a560cb1343eadb3e9fd10bf965ce0b0049edc6e37a8751837df99491b70",
+    "rewritten_references": 0
+  },
+  {
+    "source": "common/country_definitions/01_pacific_and_australasia.txt",
+    "destination": "common/country_definitions/01_pacific_and_australasia.ron",
+    "source_blake3": "10faf6bba98a54537c2ab20a18b5d6dfa037587e516c627c4e54928ec3159f96",
+    "destination_blake3": "674c95b96cbdeb7b78f6ce5277c4618511285a0e39ffff0b6ea0d5c79bddabde",
+    "rewritten_references": 0
+  },
+  {
+    "source": "common/country_definitions/99_dynamic.txt",
+    "destination": "common/country_definitions/99_dynamic.ron",
+    "source_blake3": "aa63a6bce3a116c177db2ac15bfc0922851cbc34233661bc69ad8eec133389f3",
+    "destination_blake3": "7910f81f5a4d3d4722103d7490b4c56b06e19427424967c6ddef4ef6736186d3",
+    "rewritten_references": 0
+  },
+  {
+    "source": "common/history/states/00_states.txt",
+    "destination": "common/history/states/00_states.ron",
+    "source_blake3": "84112cb8d02674716c33bd2271811084c09d48e2f1f0ffd3c017766ca2bf0e88",
+    "destination_blake3": "2e6db19437d8dda1f9f5016eed5ea3ae718aa6b445d0e09369a57f5f94b95efd",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/air_graphics/00_example.txt",
+    "destination": "gfx/map/air_graphics/00_example.ron",
+    "source_blake3": "e3e88f72bdbabf4ed32d8dafb67f90d09289efdb76258483d145108eeca32399",
+    "destination_blake3": "40a3a08a3e049c82730a84c1a7e1bfb786739f7d38e1f78a4c93f03ea68626f0",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/air_graphics/01_zeppelin.txt",
+    "destination": "gfx/map/air_graphics/01_zeppelin.ron",
+    "source_blake3": "7599de60a828dafa9142d4a2c5f742b117c9a27ca36eeca87b98658e9384dcb6",
+    "destination_blake3": "d6fdf4f8c5baaf0eff45985a1b2cdd151e866f4bbdb65a56397738ec6a941332",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/army_dioramas/military_diorama_battle.txt",
+    "destination": "gfx/map/army_dioramas/military_diorama_battle.ron",
+    "source_blake3": "869aedee53f3b9e0f76935fa05c75cd594ed2e7a8bb1a8209bd988c2b1a8f44c",
+    "destination_blake3": "d01715e3ef72dc42b993dc9eb3459b6b7423a6f1193546bd643cb2bb04a94ded",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/army_dioramas/military_diorama_frontline.txt",
+    "destination": "gfx/map/army_dioramas/military_diorama_frontline.ron",
+    "source_blake3": "3fa3d7c9c0d41183dab69dbc8f3030df2c6cf6a9cee3404752f7c4adddfd4d14",
+    "destination_blake3": "27d4932f99fcaf8cfb828858054539c088f883ecfbcb91be7d587fc23114ca42",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/borders/front_graphics/00_example.txt",
+    "destination": "gfx/map/borders/front_graphics/00_example.ron",
+    "source_blake3": "6a004965713c0b89a19e0aeb561105dde1818d350daf3206ec411b96a030b9df",
+    "destination_blake3": "66c9d9c9e163c1a1c309f8018666a841fc6bc93b0afb53ef72033f86d8983c8c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/borders/front_graphics/01_battle_type.txt",
+    "destination": "gfx/map/borders/front_graphics/01_battle_type.ron",
+    "source_blake3": "4f8da87bf291201566920b1146d8aa8aacd46a9bf7db1af5477cca84286b3600",
+    "destination_blake3": "5feda3b50c250babf91f0398858641d248071d73fb1511e294fa2a7856e4e85e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/borders/front_graphics/02_after_battle_type.txt",
+    "destination": "gfx/map/borders/front_graphics/02_after_battle_type.ron",
+    "source_blake3": "fe60bc789a175a348f234cbff021b88b947b41e83a967a7b123fdb2c5a994036",
+    "destination_blake3": "0aaec3b29a03c5065e0f47f33442382d47e562ea615bcef660c15f17b95f4235",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/borders/settings.vertical_borders",
+    "destination": "gfx/map/borders/settings.ron",
+    "source_blake3": "50b47dbce8b878569fd55f2f659b08fb7274a48eff02adb21ea91b5b49142659",
+    "destination_blake3": "a87c68a7f22c0c79de0ac8b33ddedb407084ee49e5334b47358a392fdcebb517",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/building_config/american_buildings_dlc.txt",
+    "destination": "gfx/map/building_config/american_buildings_dlc.ron",
+    "source_blake3": "8cd151baaf172d71c31de290a301f54926c4f0fcf625b195913648da40bf0fa7",
+    "destination_blake3": "9348edc77ed2490fba147f9201e0cc94b2e17961b395f75a1830fd2c90f60c55",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/building_config/default.txt",
+    "destination": "gfx/map/building_config/default.ron",
+    "source_blake3": "3cbdfd28d43b01f0a98ea31807d4f5d3e1e501c7b2c573334ed366170ea970a4",
+    "destination_blake3": "983b540c73437e92ad4f5cd04f648375723d219ffb2350443fb6ffb551687766",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_building_vfx/default.txt",
+    "destination": "gfx/map/city_data/city_building_vfx/default.ron",
+    "source_blake3": "81e63cb75f04e901816b4457a0b3f36a14420537cd2cf6a1eb20680509fc7380",
+    "destination_blake3": "ca887c7bd63cd8b8b4bb99800c816d5fc3c3fc8a516bad9fcdfa672078c1488d",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_centerpiece/cities.txt",
+    "destination": "gfx/map/city_data/city_centerpiece/cities.ron",
+    "source_blake3": "62174ddb64305e627f4d921ff3bdc4c748e0fd544243ef7795f873796d83548f",
+    "destination_blake3": "53f97f94c52aa57fed82f92e224f4cdef0e42583ed4b43e882204569556c0a84",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_centerpiece/farms.txt",
+    "destination": "gfx/map/city_data/city_centerpiece/farms.ron",
+    "source_blake3": "61e0fa8b8899d387e9da6c36041bdb40b59ca868515f357c8e0def77c6a8459f",
+    "destination_blake3": "08d0f4a4c054b2927726e3bfbd0275a0928d0887404d823dba87c1eb91ac62a2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_centerpiece/mines.txt",
+    "destination": "gfx/map/city_data/city_centerpiece/mines.ron",
+    "source_blake3": "2e15c15729e85b62c0afd80c6f0abe060d158df062cc86e785f2100481f6e157",
+    "destination_blake3": "37eb9b57751bbb2281d4f5d2bffcf772fd491b8f171cefaf31c26786d1fd4702",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_centerpiece/ports.txt",
+    "destination": "gfx/map/city_data/city_centerpiece/ports.ron",
+    "source_blake3": "90361dc37c33a4ee5779dadb30c2022f69926197435e712ecdb4472a82fa47e4",
+    "destination_blake3": "163b601e42338522579774510ec73a8e67f7edb0312b10a73b8a57891ce5a16a",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_centerpiece/wood.txt",
+    "destination": "gfx/map/city_data/city_centerpiece/wood.ron",
+    "source_blake3": "309981fa19d3164647cda75b2f27167801311dda8fe2d966eebbdd6a24e46e77",
+    "destination_blake3": "85820e6671362c928f8e721dec97399027c4f3ff7b8596d32ba443d7ee0eb3f6",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_graphics_data.settings",
+    "destination": "gfx/map/city_data/city_graphics_data.ron",
+    "source_blake3": "e6546a26bbec1ee75a6080ba305d087f583f951278093763ada7c35936c26645",
+    "destination_blake3": "4934106339bd2873c2eaf072ecb6cba321bde88e5ab1bdb8d1e3ef5bf73f0a5b",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/00_example.txt",
+    "destination": "gfx/map/city_data/city_types/00_example.ron",
+    "source_blake3": "932d7d3cc21b739ba473c3101b91e7f823a8defd7dc2c5856bc5b16d3353a716",
+    "destination_blake3": "c88dd79dd0553ce0dfc4359174523cc8430a8d7d183bfcccc4d6c5520ac3b46e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/african_city.txt",
+    "destination": "gfx/map/city_data/city_types/african_city.ron",
+    "source_blake3": "a024fb6d3f914fee4723a4fd665d38258d7e311e3920275942402d87e6b6952a",
+    "destination_blake3": "6d50f71e2466edbebe75fdfe675abdd077605444080fab5373a82113e4c22aee",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/african_farm.txt",
+    "destination": "gfx/map/city_data/city_types/african_farm.ron",
+    "source_blake3": "749be3b23f71ececf26c0867541b5d3bbc4f85e4cd7ccd22bd74f4aebd845ee5",
+    "destination_blake3": "e67efde1738381de407b0fb8553c7aca5ad328564864f630c4c49402d93abecc",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/african_mine.txt",
+    "destination": "gfx/map/city_data/city_types/african_mine.ron",
+    "source_blake3": "013e90c44ca2a1516aa51f1c76a3c5e5caa156bc6090efd399f22e573bb7583a",
+    "destination_blake3": "4c9ffd89d61b776d2d882f9827a6ff9e202d7fb89f9663689ec78d95d1b016cc",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/african_port.txt",
+    "destination": "gfx/map/city_data/city_types/african_port.ron",
+    "source_blake3": "09e939924cb9afb7e241ebd2fc715760f6cfed37bc96cc732faf98e47d6e60dd",
+    "destination_blake3": "0143534f3614dfdfbc3ab12509aa0d0ac70e514c3b877d500adfdac50c4fcf57",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/african_wood.txt",
+    "destination": "gfx/map/city_data/city_types/african_wood.ron",
+    "source_blake3": "2678aca7220d667e108e9dd06b72c7f133162553767d60950e0508c6c37df80b",
+    "destination_blake3": "8631b4f5c675fbde417754f06420a99d3165f37af63459525f2dc2c7945dab83",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/american_mining_oilrig.txt",
+    "destination": "gfx/map/city_data/city_types/american_mining_oilrig.ron",
+    "source_blake3": "dec34cd3dcb34cb2a9c84971203b3142cd3a8ee28a2748946ab22907553187ed",
+    "destination_blake3": "893fd2c3e5d62c778cc5bf41e139ffc62deb9e9b1d79ccf50d7322ce25498d32",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/arabic_city.txt",
+    "destination": "gfx/map/city_data/city_types/arabic_city.ron",
+    "source_blake3": "6912efaa9e027c7fa63460b27fa5b0e49c8c4521adb43b8c001b3890d6e4343f",
+    "destination_blake3": "710f4603e7081c5a108dcb4d44ce035a24133b234e751d5c67feb4c93442bf7f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/arabic_farm.txt",
+    "destination": "gfx/map/city_data/city_types/arabic_farm.ron",
+    "source_blake3": "2dc6941c64c9d04b2be7db2098d648f0402590b4a4fc54325f10ddc81dccb5a7",
+    "destination_blake3": "b280c8f836050a7207f5d97a776735b9c5a04a9135eacfac75005f4481e9a547",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/arabic_mine.txt",
+    "destination": "gfx/map/city_data/city_types/arabic_mine.ron",
+    "source_blake3": "c8e1884273f7fbdb51dfaf6a0ba929d1345012f1ee496635c4eaa272ca0d25a0",
+    "destination_blake3": "05cb37781408a408852632f44a45e511134965ca198e7fe5539b99b53caa7bf7",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/arabic_port.txt",
+    "destination": "gfx/map/city_data/city_types/arabic_port.ron",
+    "source_blake3": "354f511fed007544f3ecffc2821e30030bfdc79ebf5c4e31f394db6afab30499",
+    "destination_blake3": "93239d787d7b2e875603471ddb25d6d8d58e12e13294bf098f431eb8453d3354",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/arabic_wood.txt",
+    "destination": "gfx/map/city_data/city_types/arabic_wood.ron",
+    "source_blake3": "0efa6cfc8c2d42d33172f330ab946f388e3593cc458f49ccf067eabfc974341c",
+    "destination_blake3": "ed55adf13d003615a48451f326c409203f05488da08df3be79b35ab733dcbd7e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/asian_city.txt",
+    "destination": "gfx/map/city_data/city_types/asian_city.ron",
+    "source_blake3": "8b985b970175da96a69db2fd32952ad6598b1a2ce9f0f73a361a1b6a6aa211df",
+    "destination_blake3": "3c67ac1205486cad42482e5a6964a8566dae6fc914e175974aaad1120490a6d2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/asian_farm.txt",
+    "destination": "gfx/map/city_data/city_types/asian_farm.ron",
+    "source_blake3": "e65bae9f6a33b3af2770e37badf4745dbc399adcfa7779b94e0250f724ba090a",
+    "destination_blake3": "9af5db53b2657a0213bd734ef62cd5fb6af7c4d6e4896ffda1c8fa65b084db48",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/asian_mine.txt",
+    "destination": "gfx/map/city_data/city_types/asian_mine.ron",
+    "source_blake3": "01fe2bf997ea6cd4871d9b11ddb2067d73a785c459747ea7a4f9bfd689b66fb2",
+    "destination_blake3": "a8afc878e680fd7d8809ea5a78c3f23b3981d3896fde987a0b0879682bad21e3",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/asian_port.txt",
+    "destination": "gfx/map/city_data/city_types/asian_port.ron",
+    "source_blake3": "7cd5a7ce2e523ff93782f6e96c7faf9ac2a9c860214f0dd767e3678b03008707",
+    "destination_blake3": "6eee4ccee9c16ee96a52df3e1070fd5bc7672e99803f0b18d16594457fb10c60",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/asian_wood.txt",
+    "destination": "gfx/map/city_data/city_types/asian_wood.ron",
+    "source_blake3": "19055c1eb8bf69ad8e95a6504b72bef6365b4fd315fa20a9bc6d535cabcc1432",
+    "destination_blake3": "4b14efaf9076d646099ea75c6dbe366f88186c76f9bd80bda9cbbf2a69cd2005",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/default.txt",
+    "destination": "gfx/map/city_data/city_types/default.ron",
+    "source_blake3": "efb989e0648f16b0e604f0881e4d9d95cd10e0ec085c6dc2e00b42e54eff2223",
+    "destination_blake3": "8cd6f686048165f0820795e2eec5c34ce8a5797b7e2528c8e7c622796dfd5cac",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/default_city.txt",
+    "destination": "gfx/map/city_data/city_types/default_city.ron",
+    "source_blake3": "2730cc2a88ee00ab0d6705790c6ca7a10b4a4be2ba4a881e481a7f4ed519798e",
+    "destination_blake3": "d19b326e3eb718f0f4180ea728d517f3f9a354a74fec9d6fd5ef4aa22fa32c3c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/default_farm.txt",
+    "destination": "gfx/map/city_data/city_types/default_farm.ron",
+    "source_blake3": "7f468301cf771d62059cf366ceb8f2b3f4e2d24cfd3f76e5298967191f3faff2",
+    "destination_blake3": "b313f9a8baca7553c589cc60cb754d2861f42e66298e72a46112daf4c956cf86",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/default_mine.txt",
+    "destination": "gfx/map/city_data/city_types/default_mine.ron",
+    "source_blake3": "c66da70058510d333f92bec8ac432aedb617ec3bb5a6be175807cb52299fd772",
+    "destination_blake3": "de8018c27ac8fb5e9f4d9204cd737e23cbc7d3c9afb649edbbd3579990f7a782",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/default_port.txt",
+    "destination": "gfx/map/city_data/city_types/default_port.ron",
+    "source_blake3": "41a97801654e52a82ab8235943e05cfff7b77de9f5e15ef6c9800f0457ccd040",
+    "destination_blake3": "d6635bdbf557f24f2d0f721de77158d4d32f70db8521871eb7eb6e3b76e19e78",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/default_wood.txt",
+    "destination": "gfx/map/city_data/city_types/default_wood.ron",
+    "source_blake3": "4f26501fd62c0bec14011e3ea527320188093e6b283ac57f183e159579088f23",
+    "destination_blake3": "94319a278fa720eb8e476d03f8c4799a3734869fe8182224d89c236f909901f0",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/latin_city.txt",
+    "destination": "gfx/map/city_data/city_types/latin_city.ron",
+    "source_blake3": "3ef359678a870e6d038317b5873f7b53cc864e67bd612b7984a23ccc53d30d52",
+    "destination_blake3": "a7348989be7fd57e833146251b77f2eb51fae9ddd9fc2655dd4491009d1fa61a",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/latin_farm.txt",
+    "destination": "gfx/map/city_data/city_types/latin_farm.ron",
+    "source_blake3": "380efd9f9959f15f8ccb70ffdc10c506b8f1a4b609a6288ad243120319963214",
+    "destination_blake3": "507be9dec709b8c8952b2b363c04945599d0ae80c1ac3f639b021bf703bcb9f2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/latin_mine.txt",
+    "destination": "gfx/map/city_data/city_types/latin_mine.ron",
+    "source_blake3": "aec3f71fe2638f2dd7d2712aab5e62816d78393971c8d376c826f7c4a06b0819",
+    "destination_blake3": "43ae43616d6d59fd76200bdf5bff52675e0beb1ad9cabc8227c50c477e3b09ec",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/latin_port.txt",
+    "destination": "gfx/map/city_data/city_types/latin_port.ron",
+    "source_blake3": "5b9913cdd751705926049966538a601199f62afcaac8e63c98b5eb46aefb0f98",
+    "destination_blake3": "bce5d23e20d73bae96c90f02de68f6d4a8fbf5e397b44d355142fd91893ff234",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/latin_wood.txt",
+    "destination": "gfx/map/city_data/city_types/latin_wood.ron",
+    "source_blake3": "726fff3694ce8018352a33e1fb88246b99cc5c56eb15e59ee6390125659293d6",
+    "destination_blake3": "8cc4612d6c1732a8112bb606027a92a6c949543973637e17b570053b36c684c9",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/southasian_city.txt",
+    "destination": "gfx/map/city_data/city_types/southasian_city.ron",
+    "source_blake3": "4fe4a8aedacd333722cb91b87d6565b789fbc0dab8260e08cec4c0a26e1f1be4",
+    "destination_blake3": "c64ef1db2d0554861a0c81319dec7a859b9f9630f00326ea083d428d3bff33cf",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/southasian_farm.txt",
+    "destination": "gfx/map/city_data/city_types/southasian_farm.ron",
+    "source_blake3": "884baa92882d4b7b315b8bfd8f1c32f36ed9b88a21cd80eb8bffb60117d7729e",
+    "destination_blake3": "907b2a408b43714001b764af1aeac47c2d4a8e634caac8ffe93cc2a593bcd200",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/southasian_mine.txt",
+    "destination": "gfx/map/city_data/city_types/southasian_mine.ron",
+    "source_blake3": "bb69e0bcf0033bf6ddf5931c2df320a382767cf6f7c1a6cd540b52d0b8e08408",
+    "destination_blake3": "e8f2b8b410f2c7cd28bf0099181fb625e07b87c281d315bdb728b7d2e84573da",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/southasian_port.txt",
+    "destination": "gfx/map/city_data/city_types/southasian_port.ron",
+    "source_blake3": "89b5c7ae3e1933c8483a78141da31188a2a1577d1fa39c008c2d90aa31d8f19b",
+    "destination_blake3": "a3d7c7c9dd6032181b3a25d2f2fe45b46992acf6653c847682d28987f81d5193",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/southasian_wood.txt",
+    "destination": "gfx/map/city_data/city_types/southasian_wood.ron",
+    "source_blake3": "e2215723c1f063cb282ea303f4f686fada5ad9f24a280cb415fb89109fcd8bea",
+    "destination_blake3": "1a592043c4a729dcfa670f6854edb73dfd8d8b7c9012850105bdcd3a2581fba1",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_types/wild_west_farm.txt",
+    "destination": "gfx/map/city_data/city_types/wild_west_farm.ron",
+    "source_blake3": "c2421a540f09d2100db7488287bbf10d15d901343f64d900f9f6fe5036b73704",
+    "destination_blake3": "0ca88f67d99952df7e604a1acf048a26ec6bb9dca751b7d4fb3b4b18de6ccf20",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/00_example.txt",
+    "destination": "gfx/map/city_data/city_vfx/00_example.ron",
+    "source_blake3": "3ed36d0f8f466f3e75a948417f00e61a43de4e242729bffe490bddf652a1ecc3",
+    "destination_blake3": "c03c401d4299963f9280e8e09717b609433bc1ead90b082f9436cb35581961c0",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/01_fireworks.txt",
+    "destination": "gfx/map/city_data/city_vfx/01_fireworks.ron",
+    "source_blake3": "b83050e63fd2b5010af21c2d146406651a9b70bfd1d7b9ae67d017f71d477c19",
+    "destination_blake3": "4e564fb0ef29ef898f0919480c8ec40fb2a3e367866a311418206bda4a803dd5",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/02_unrest.txt",
+    "destination": "gfx/map/city_data/city_vfx/02_unrest.ron",
+    "source_blake3": "9c4957ccd4d1a34bb5b73d64a632000111806861e5144397ac01de18e22cc5b9",
+    "destination_blake3": "607270631cf03ddf6866418cc2ecfeb53c062606acbc6b5f66569099b27e8840",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/03_revolution.txt",
+    "destination": "gfx/map/city_data/city_vfx/03_revolution.ron",
+    "source_blake3": "d0640c440b86d37c76d774d2f5efdf8e3e617961d1ba9bde273e138d349b21cc",
+    "destination_blake3": "de2f03783c3ffb8d6ecd42030c53c8e67515d968fcc6726905531eb75453b102",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/04_smog.txt",
+    "destination": "gfx/map/city_data/city_vfx/04_smog.ron",
+    "source_blake3": "bafd1233c49b54fea97ba45e0354fa77adfcdc1196c8b4c3bfc75eb475516847",
+    "destination_blake3": "2d29edd4969644fa257b9f230cde46cec6cdc5c629eb0fbbf62ac819f21f4e79",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/05_devastation.txt",
+    "destination": "gfx/map/city_data/city_vfx/05_devastation.ron",
+    "source_blake3": "a438b52a74a784c3652bad595a42917151ec98ceeb78630115bf2b7c92bafc77",
+    "destination_blake3": "5cfb12637cc82e87f25b23863f7032f468edbcc0c1f4c01b90442722dd5ed9d8",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/06_conscription.txt",
+    "destination": "gfx/map/city_data/city_vfx/06_conscription.ron",
+    "source_blake3": "a43eafd19dd204451ae6a89745ea760c66485a8486e431b77e31cebd01bab12d",
+    "destination_blake3": "0984ab7aa5989234cb2a7d8b8fa3379380fcf71c44312b54d293b3a589657bf7",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/city_data/city_vfx/07_mobilization.txt",
+    "destination": "gfx/map/city_data/city_vfx/07_mobilization.ron",
+    "source_blake3": "9af52d9fb182f15e523804338f71659946d319ee1cd77c6baf8af0253f88ecd1",
+    "destination_blake3": "0e4169915cce5cd95149099149399bb66d339ad96e4cf0499191515796203b60",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/dynamic_masks/devastation.settings",
+    "destination": "gfx/map/dynamic_masks/devastation.ron",
+    "source_blake3": "8858bfa156939f4854b197787faa9054187d4b491db865fe14e848f9ca00ab73",
+    "destination_blake3": "90e64171e8735e989ad264e8f2d558537b7d1fc9b0297f06b2780d1bb6e0242d",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/dynamic_masks/pollution.settings",
+    "destination": "gfx/map/dynamic_masks/pollution.ron",
+    "source_blake3": "754d425ce91871756a3d769b162367cc68af76eee395bc42a191869c1bedc5a7",
+    "destination_blake3": "5d550f2bf31b5b5b7997a9d59423a198bfa1711e67f3038e2ff206f7f1547dce",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/dynamic_masks/terrain_effects.settings",
+    "destination": "gfx/map/dynamic_masks/terrain_effects.ron",
+    "source_blake3": "657fdf9e600b2165409753d87df07e5fd1835d77962dfa0cf160cd480cc81430",
+    "destination_blake3": "8ab2d7baaa279a6eadb4ac9a72af8fef4a15faa78725e86d2a9ddf58325574da",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/daynight_settings.txt",
+    "destination": "gfx/map/environment/daynight_settings.ron",
+    "source_blake3": "43a2395eba4a14c16f61560eb6920b691cc7a3043f8427dab87d5469d8f4d75e",
+    "destination_blake3": "b9dfe1615a4bde69970cffef75cfde7b6ed6e479f4c8c59b4790e9cbf302a1e4",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/environment.txt",
+    "destination": "gfx/map/environment/environment.ron",
+    "source_blake3": "aa0fd360def71f6e0d826a72e0efb60ae17bea29bbe98a3ee2306e98507919c1",
+    "destination_blake3": "b720d60e8ae613abd36fc18b5ab110215848b2c73e8a51eb077e2c8f81ce3a42",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/environment_accurate.txt",
+    "destination": "gfx/map/environment/environment_accurate.ron",
+    "source_blake3": "e094bb5899eea25d4f05d6c534ad583596cc53825296f89c71989254990dc89e",
+    "destination_blake3": "46aa78e1cfbe81946f53c8ba36d164998faf1be8b198f23d468f1907a2ea05ea",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/environment_backsun.txt",
+    "destination": "gfx/map/environment/environment_backsun.ron",
+    "source_blake3": "39ff9d277701c018d89daf75f5bc9aae29d21471b8841b97629c874013972f6c",
+    "destination_blake3": "624a37092352035d8c665ee9c33e44b39f6e178df4ab7450198877d8321ecde5",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/environment_game.txt",
+    "destination": "gfx/map/environment/environment_game.ron",
+    "source_blake3": "95c4ae6fa0073b759bae63ca49d74f1dc9cdbea53174de070f5762996916d410",
+    "destination_blake3": "ef61f7ffca6cfbb01b311131bbb8de0801260910c2cb8fa9497690b5f580b06a",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/environment_greyscale.txt",
+    "destination": "gfx/map/environment/environment_greyscale.ron",
+    "source_blake3": "d27344fe0c5c9912d61d9adfa8d2362d0bb5595c3aecc7b827c53b49555b5649",
+    "destination_blake3": "4fbc06600b0bfe273239549f7c2c194b67d71e521f848b6a53d575ef981e30d6",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/ui_flag_environment.txt",
+    "destination": "gfx/map/environment/ui_flag_environment.ron",
+    "source_blake3": "53b23de00978984f5d45b9d73983cf239949e51678915c33ce2b460ca970d969",
+    "destination_blake3": "2318804d1432f153bd5d400e12a0d00a0432ae1f98494fd6f79769edbe3ed726",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/ui_power_bloc_statues_environment.txt",
+    "destination": "gfx/map/environment/ui_power_bloc_statues_environment.ron",
+    "source_blake3": "e78b81a902bb24938c108436bc5e4c993f5f21b5fbcb8a078d22470050e22169",
+    "destination_blake3": "058b1bbd2bd328aca939cfaccc93590f4e011c019bcb116aeaa6566ad14d383d",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/environment/ui_ship_viewer_environment.txt",
+    "destination": "gfx/map/environment/ui_ship_viewer_environment.ron",
+    "source_blake3": "6e3d54fe12ed85d1697e46e2a7ef6d25542829748cc57116ac2cd5d8c8a1fcd0",
+    "destination_blake3": "f52ff06cd658b4fcd5afc579a7af3a7bc924d75eaffac89e40fedc36dee139f1",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/flagship_ornaments/00_figureheads.txt",
+    "destination": "gfx/map/flagship_ornaments/00_figureheads.ron",
+    "source_blake3": "34f7da0d2c4aaece39f20769acec372e82a0ff8e7310dff118439205e2cf92f9",
+    "destination_blake3": "9886d2a85a6471c5555d4d78cf26b6c775e1fe31a6b0017f643edbfc42584ddc",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/fleet_dioramas/fleet_dioramas.txt",
+    "destination": "gfx/map/fleet_dioramas/fleet_dioramas.ron",
+    "source_blake3": "6e4d5a42cd0c903cb01db8d881107e55fc3e30e29e7d4d6f25253f9e5d509682",
+    "destination_blake3": "0df7a279e1dcfb6a874e7aae3500739d82e0d35c466e0a07887a6115eb62e829",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/fleet_dioramas/mission_dioramas.txt",
+    "destination": "gfx/map/fleet_dioramas/mission_dioramas.ron",
+    "source_blake3": "7292ca582dc941625b7dbadeb6f8ec4244f092ea9e56793bc2523b4c2bb438cc",
+    "destination_blake3": "e2b13e452583ffc43430285d5d2da53953efac60cde5a6bff0bc2f975c510b5f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/fleet_entities/01_fleet_entities.txt",
+    "destination": "gfx/map/fleet_entities/01_fleet_entities.ron",
+    "source_blake3": "21dd3120181b7b58ef087f23cde91330fef933ca72865d048849ed4c035ab144",
+    "destination_blake3": "0abed638af69a96caada0545755b7738f0fe6569f3fa09a4e2fdf089a86b70a5",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/fog_of_war/fog_of_war.settings",
+    "destination": "gfx/map/fog_of_war/fog_of_war.ron",
+    "source_blake3": "e7452ddef14e5e1bd5e07f5187e6480d77c694aeac9d033e32da3d97c40d2049",
+    "destination_blake3": "c5c117d21aeba1089000dae98bfd20114fabfa6f236e8e67a8ab1486b21e4984",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_artillery.txt",
+    "destination": "gfx/map/front_entities/front_entities_artillery.ron",
+    "source_blake3": "23cfde7c6c073d2331a17662fa59e3a1370100806608556fc3dbbf54109b67a1",
+    "destination_blake3": "b528ec79a8211d141df8b31e58e1e979e581d3d0e4ce787f2065e3ee13b2b525",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_artillery_props.txt",
+    "destination": "gfx/map/front_entities/front_entities_artillery_props.ron",
+    "source_blake3": "63465a644e94d2bbb498b6f3ce1fbd8896a8f912de4110cfce9286b66c02de90",
+    "destination_blake3": "933b6caf0e2a0fd4713318917c6608b5f822d882b75cda9e660239c85fb83155",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_barricades.txt",
+    "destination": "gfx/map/front_entities/front_entities_barricades.ron",
+    "source_blake3": "79b05ae9fc7683be4b55853cdf669bd62e0948f03a60e9d5895575b92a61c115",
+    "destination_blake3": "38dddc91afc24636ec45d844c77a401f9eb6a337123824840b0e516de495d43f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_basecamps.txt",
+    "destination": "gfx/map/front_entities/front_entities_basecamps.ron",
+    "source_blake3": "726c29e01d722b5b7f9b23263c24148f0b83b341e2448171c4e73695b9ccc8a2",
+    "destination_blake3": "47ea518b327f4dd42a3e45213fbc5451bba1939bfa528630efcb7fe4a1d39d18",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_cavalry.txt",
+    "destination": "gfx/map/front_entities/front_entities_cavalry.ron",
+    "source_blake3": "aea90e713cc1f8bc22e1b84b8fb211fdd29542a3e4bca7ac6f3beeaf74409b60",
+    "destination_blake3": "b1a07bdc65f3a37379c4e2d1444316502c74f5c5804d5f6943bcf7ddb18853f9",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_generals.txt",
+    "destination": "gfx/map/front_entities/front_entities_generals.ron",
+    "source_blake3": "f981f55bd2857a2604658a3ff5a1bec64e74a1f07d3a75d60e81bcab39159c4d",
+    "destination_blake3": "adb05c4502df8062903058c8b40e5812590871cdea67277ef443aaa79b867ff5",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_infantry.txt",
+    "destination": "gfx/map/front_entities/front_entities_infantry.ron",
+    "source_blake3": "6308e42ab9610f3a24808383248c4cc13e6970ce4ad16e1bab8cdd92cd53a373",
+    "destination_blake3": "f58bcbfd026df608270e80812e55b679e2a3126f285fee5ac40b723c83e69d2c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_misc.txt",
+    "destination": "gfx/map/front_entities/front_entities_misc.ron",
+    "source_blake3": "6c0d6dffe274a720ec5bbab53642bc09dbd58d0e8cef1f322bd7850c14a845b4",
+    "destination_blake3": "80d22109f48c866fc8a8af337d8c40b89008cd6ffa2030109de4548d51fbe2b3",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/front_entities/front_entities_support.txt",
+    "destination": "gfx/map/front_entities/front_entities_support.ron",
+    "source_blake3": "c21d7cf993b55efde005dbe1b486d107f414d9a7128b82a5353b946eecabe44f",
+    "destination_blake3": "7ad63291b1f5803edcf5d59b7a94c34e77e044022a8a1a78d8c072f1cb2ce033",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/gradient_border_settings/gradient_border_settings.txt",
+    "destination": "gfx/map/gradient_border_settings/gradient_border_settings.ron",
+    "source_blake3": "eb2b5064731ad371bf905d3ce6b3f5b4be8ebf1874e1eb82718b778927d27cc5",
+    "destination_blake3": "cf3d83e8bdb772400376a5b5fd757e7f35dc70c8b40397204aed2b978bc0732f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_modes/map_modes.txt",
+    "destination": "gfx/map/map_modes/map_modes.ron",
+    "source_blake3": "d139fad6d2682563b3c66fced86c95aee8e74df33d754a91010d16cc658163bd",
+    "destination_blake3": "8f3dddb6f30c8acb6828f0bb67aa921263351e4a0ffe2414b391be0d31b97d2c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/american_unique_buildings.txt",
+    "destination": "gfx/map/map_object_data/american_unique_buildings.ron",
+    "source_blake3": "6460243ec8de2f27a77d9d0bb188a81d1268718f7d4db4545b64691126a2002f",
+    "destination_blake3": "efaa1b1c39d14471d77824e02c698d10905d7f6bbc82d5ce406227c18e2b3f35",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/ap1_unique_buildings.txt",
+    "destination": "gfx/map/map_object_data/ap1_unique_buildings.ron",
+    "source_blake3": "dbb99d35e7080e967aaf8af2d01f3ab6470a92cc29bbc485d5cf825150d136c0",
+    "destination_blake3": "9ba3c35e3dcdbb7d6270cad0a63e117142489302699353e80d61cdda74395a24",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/bp1_unique_buildings.txt",
+    "destination": "gfx/map/map_object_data/bp1_unique_buildings.ron",
+    "source_blake3": "74fe8aac17846d0f91d086de1fd6a7280b56595b515227eef3c702be4f4cf969",
+    "destination_blake3": "5b194e0fc9c0bbadcfc6f84e52a212f7d2d15c0ccdbf04f0b924160016520f0b",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/env_effects.txt",
+    "destination": "gfx/map/map_object_data/env_effects.ron",
+    "source_blake3": "0e88c94f3fa77633bfc9ef8ffdcce07e3f3815aecfcacd266255b167a5cdec71",
+    "destination_blake3": "3a0629993160839d153c0b4152357d6b9debf2be4cf3e02d3c7f7b122aed6a6e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/fortification_locators.txt",
+    "destination": "gfx/map/map_object_data/fortification_locators.ron",
+    "source_blake3": "fcebb856dcf1ed7560cb91d3a47b03881bf18cf58abd435f76061c11e0c6da00",
+    "destination_blake3": "2bff58071ae5b7248c17da0d1f4d212331543ac1e9944296d8883c41945f7562",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/african_dynamic_farmland_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/african_dynamic_farmland_objects_generator_1.ron",
+    "source_blake3": "55502b537d0116e52d376fdec7a0190080e5e81a54cdf5e89611f3675238e9c1",
+    "destination_blake3": "30650a0bfe7a60eea1bc09e7b8f823bcbc9b2e3a9db192949c66521f476ba848",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/african_dynamic_forestry_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/african_dynamic_forestry_objects_generator_1.ron",
+    "source_blake3": "08013397814db020687bf2cbc8e23ecda041c4a8f342db4bca7e38b26e36ef15",
+    "destination_blake3": "4eab28c6d031b45af2c1dd479d4a0fc992e32f9e8a59e8601540b642bb94ef2a",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/african_dynamic_forestry_objects_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/african_dynamic_forestry_objects_generator_2.ron",
+    "source_blake3": "1b2521fba5267bb3f06e8f168ca5b8e460d3ad6b0c8effbbeed2da20fdb11b3c",
+    "destination_blake3": "3c096879da01cf43e3d2d7bf6ad047fa6ea2b72ba0e1e56542fa3a04e33f8a79",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/african_dynamic_mining_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/african_dynamic_mining_objects_generator_1.ron",
+    "source_blake3": "c1eb24ca7a00184207cb55699fa064291402aa12fb9ffa48cfdb3bb9054bdaf4",
+    "destination_blake3": "1b8d78424233ef0df19d3072941870b759d2428173ea95f1a0d435a54e268129",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/arabic_dynamic_farmland_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/arabic_dynamic_farmland_objects_generator_1.ron",
+    "source_blake3": "dc89569a46ba58f31d3fdfbd7bdb95430c62d7249130e95e5c5b91caf7345516",
+    "destination_blake3": "e537c80cfcb023d8dc6889b7ba738d2a5dc24e3b557ddc733189dc40d27d1e69",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/arabic_dynamic_forestry_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/arabic_dynamic_forestry_objects_generator_1.ron",
+    "source_blake3": "04e03cae6e01d9441e899fd3a4dec44325cde471caed166b8619a98d1cc70c75",
+    "destination_blake3": "64bb2d1e8c973c8567daa0416aadc9483b9a6eb6b84f4cd7b6287d3b71ee8588",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/arabic_dynamic_forestry_objects_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/arabic_dynamic_forestry_objects_generator_2.ron",
+    "source_blake3": "a70626eb17ac3eba5c2f17cb2d5344274e92cb6220c352a17b2a22ce329baaa5",
+    "destination_blake3": "bff21d5524b6043a67edfd4ef64ccefaf4e15297f8e65592a34abf9ef1ef7fa4",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/arabic_dynamic_mining_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/arabic_dynamic_mining_objects_generator_1.ron",
+    "source_blake3": "fe35d3693aa6236cac76e673e6e64256d5e4eeeb5fac419d0ac780975b64beea",
+    "destination_blake3": "9ecaea2f61fa4abae0fc0d1ae8ecde4b4e6b5cdaecab59fbd6945f2815358f0c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/asian_dynamic_farmland_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/asian_dynamic_farmland_objects_generator_1.ron",
+    "source_blake3": "69dcc579ef70b00b508fa6947d808b4d71a344421d21ce3d4936fa4dcf14d3d2",
+    "destination_blake3": "5db89d139c9a11a31e34d0b2d72832d43801cb424005b88ea5b528276ab2e055",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/asian_dynamic_forestry_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/asian_dynamic_forestry_objects_generator_1.ron",
+    "source_blake3": "58f3d0c5c316874b8c9c6ae47d1a62a30c7d183820044431b2d34a42c14998f7",
+    "destination_blake3": "e9d2e2f4009264df86bdf963873186d797a8c33d66a8b172ff446e3c7ac66c9d",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/asian_dynamic_forestry_objects_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/asian_dynamic_forestry_objects_generator_2.ron",
+    "source_blake3": "9c3df9c2e74ad09c3562dbe270da9dd436b3a9ad0bc5ba87167c0e6d4272194f",
+    "destination_blake3": "49221bb3bacf369b2522dddcb1fab2917d5ae74dba3bb3b571f9af02595ee205",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/asian_dynamic_mining_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/asian_dynamic_mining_objects_generator_1.ron",
+    "source_blake3": "36dfdc4b5c2cacd891294fbe9f14d989c1057c6d83f2bab6befb77cea2443f9b",
+    "destination_blake3": "7c15c2a81d85aa59a19a1d0cfccc044ce5fbacdc221f95ec9451b6593ed81f14",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/baobab_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/baobab_generator_1.ron",
+    "source_blake3": "7fbe86c52095343cf3efbee70a85092fd720f77ddb8641fc442bfa16e030750c",
+    "destination_blake3": "0e7909ad1071ee882ef8acd581051770962a14a531beed5cf115a5eae92f9d49",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/baobab_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/baobab_generator_2.ron",
+    "source_blake3": "30255e9eda6b5164e0a3f286ae970e8a81db26884c42c0a485a5bea04a813f12",
+    "destination_blake3": "ce4c4abba94e581b4e7f72cea5487c4338a27e0a073850de3a8b821dede4251e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/baobab_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/baobab_generator_3.ron",
+    "source_blake3": "9a87e5fcce71ca0ef2005a1218ab05c5ffd4c0eca9205e8222f33e6be12ce1a6",
+    "destination_blake3": "9480d92321fdb2dc6de01acd41b2a590836fd1ac703a22e4d23b46c0b18637f8",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/bush_01_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/bush_01_generator_1.ron",
+    "source_blake3": "410019d4c09d97232b01ef8d9903426f85ca6394ac6a2995f81005c410fdbc3c",
+    "destination_blake3": "392b44649c4c9d4b4087ebbb2d2477217b6221f86ca08487442cc0fd5a38afeb",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/bush_01_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/bush_01_generator_2.ron",
+    "source_blake3": "15b4a0fdb9cb145c03bb498dd23b3db362b046623966538e9fe87ba3e1ab09d7",
+    "destination_blake3": "2c7e4e1b7190dcb7984310cc51fe8c46457ab59d46af7df24c0705d55693c195",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/bush_02_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/bush_02_generator_1.ron",
+    "source_blake3": "34abd749656ed4947b70e1f81875df37824ab4e47f70120c9faac93bb3d1303b",
+    "destination_blake3": "2542b7c2b892ee72e9d78b2a1a21521652ec7fb3beee73ac184ad6210d24881a",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/bush_02_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/bush_02_generator_2.ron",
+    "source_blake3": "4ca839a5df83875eee35853ade6b31742d0c5ee1a5c6d9049ae8af309228f61d",
+    "destination_blake3": "0b2c5c50b4a4e38ebaa442395f19d132949e00e800dd2d7a3fdbcea18b8e3e33",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/bush_dry_02_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/bush_dry_02_generator_1.ron",
+    "source_blake3": "c25c7e969239ea874a42f55d22401bd7f1a3dc3e3adbbd2604e6d282485b68e3",
+    "destination_blake3": "af0f09bf802de7f7c0c0f05ae84fc6a38a9c619b7dec721a8e4f7c20b182bde7",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/bush_dry_02_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/bush_dry_02_generator_2.ron",
+    "source_blake3": "b7833f6a9ee5e049460f4c86d5f8c1ec62e81d5f8696c7a7db75e0acb1a5131a",
+    "destination_blake3": "d6f8e97e17369ec390b3fc87e29b6cb76ba4a1e9f8b4794e571a0541da41909d",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_dense_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_dense_generator_1.ron",
+    "source_blake3": "a31812099f77a4379c2d7da7a5f0fbacddcbf0496556e54c9504477ecf873851",
+    "destination_blake3": "8076c9b169dff4283ceb29ec7c9f12c85524206f38f377e32c26d4da4b33a00e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_dense_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_dense_generator_2.ron",
+    "source_blake3": "b9967aa68f03d4058b244514caa89f82feb6f1bc455d761f12f04b5f0ac6d7b5",
+    "destination_blake3": "86b762e198777e752a899673d5e6ba6aa4824557f63c3b9ea61661a7b93d9560",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_dense_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_dense_generator_3.ron",
+    "source_blake3": "9fe00548c53d5eeb3c91390777387e85de0df01ffcf23dcebbfa51ad94c1822f",
+    "destination_blake3": "155766993ec0f802580bb47c4ee39f77d19065e3dd96dcf8227108d8553cebe6",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_1.ron",
+    "source_blake3": "bdb60ed1bcba91ddf6587aad756d7f85b54fe63687d362b50881e27f0673287a",
+    "destination_blake3": "2384f1ba9989b2d1bd3c63d28764a1018261dce9c2770ec7e35466c15d45118c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_2.ron",
+    "source_blake3": "e16184ba94d19b01bf45bb453955fe08de376a765b83eb0f9ea0bf51fe4dc5b5",
+    "destination_blake3": "f9866658e1060ec48719f5cf5353f3343bd0e9d2359efd92777de413eeb2b39f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_mediterranean_dense_generator_3.ron",
+    "source_blake3": "d70e5dfa998b93ec39b185dd7cfd3fdad5ec3a7be2f11c75950833cf55b9c994",
+    "destination_blake3": "c22b415d4d65a4c873f999f0779863b75ece370888e4222cbbbc273b3575cc7f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_1.ron",
+    "source_blake3": "24c81028a06857114f72fbe9f6943647d1601f0d8a9d74882cfe26dca70c4819",
+    "destination_blake3": "9c06db3839a2ed70c6da9d1802d895b7927f09d781d8bb7c8ca91e1b6a492ef2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_2.ron",
+    "source_blake3": "b56b1c8a7e3d58ce9993c05887c25981e3df0a0e83160bd96907787e4900ff33",
+    "destination_blake3": "1fb440796de305ebb40b45b219754a3ff75888b1cb75db1834c5d9606bdfa0d6",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/cypress_mediterranean_sparse_generator_3.ron",
+    "source_blake3": "52711966b75162d27e14393c6e76d0c35bad6aa39ff9f057d6867e727d246654",
+    "destination_blake3": "4f6e250eaa272be18458095fb651f0a5868ee54bee4094e48afae5774247dc66",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/european_dynamic_farmland_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/european_dynamic_farmland_objects_generator_1.ron",
+    "source_blake3": "d2e799464389da5b374bb9876801a330ce143131d14eab6980e85778cbb82085",
+    "destination_blake3": "ba408d391b6e9fe767231b12312a1892e02735eb3e11455c969382f947512140",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/european_dynamic_forestry_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/european_dynamic_forestry_objects_generator_1.ron",
+    "source_blake3": "58dd21d432194a1591168a2a32e32e6b842df27e5d6009bb1437c04f96303a02",
+    "destination_blake3": "d983c9d861b9762701a17df1f4e5ba6b1db2ec36511d4b588e55daf92c4d2e89",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/european_dynamic_forestry_objects_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/european_dynamic_forestry_objects_generator_2.ron",
+    "source_blake3": "2f903817276a4c787d9d6ce443df1174fcc4347d369cb6f17026b9360ed4088f",
+    "destination_blake3": "c9e361e9151d380346f93e657d7556dd43372860e08af209129633a7d54eb239",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/european_dynamic_mining_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/european_dynamic_mining_objects_generator_1.ron",
+    "source_blake3": "ef1917f0e79e3e5753b0601709e8f1002bb3996f3fa03ebf3f17a2acd7f4d142",
+    "destination_blake3": "118db2adcc18248e9598f11e476a5a0c610939ea2f0bc744477d8af160978bc0",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/iceberg_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/iceberg_generator_1.ron",
+    "source_blake3": "2436c372a1be243443300cf15034ca8b1e768a2da7157d45c27eded6957dd94b",
+    "destination_blake3": "ba57cab65450d6aa0f0a883bf63e86d4157c867c8236d75e9c235c02e3623dae",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/latin_dynamic_farmland_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/latin_dynamic_farmland_objects_generator_1.ron",
+    "source_blake3": "8107ebbb0a1a1fc66b129c94789f0e1e315c7bcbfb67acf604e2889f4500acab",
+    "destination_blake3": "49a80206df4c7059e12082ced97db6468e76076a2f2d0e0bf54f3cd9dfa0d8d0",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/latin_dynamic_forestry_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/latin_dynamic_forestry_objects_generator_1.ron",
+    "source_blake3": "46ee0d7ba8a809a3a0e1b67574fa23358327d66b500324112ce5f03867c24ca4",
+    "destination_blake3": "a66aa77b8eb44d54a26b28f48a7eb130c362517ac670faf7b233a387acdf1849",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/latin_dynamic_forestry_objects_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/latin_dynamic_forestry_objects_generator_2.ron",
+    "source_blake3": "a0759ffb15e48079cdc223a45b1c74fb11307a0a0c813e1a3181ed76d12ef385",
+    "destination_blake3": "9f2203760b1d684b9351af08cd3595f3e230b1b42dbaa8f8b3de4cd60c80576f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/latin_dynamic_mining_objects_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/latin_dynamic_mining_objects_generator_1.ron",
+    "source_blake3": "4e77739ce11cfd9dfe63e2ef99c1d42a98759574f71a5978bebd52589ddff43c",
+    "destination_blake3": "dac360ae88a9af7ea5509296fb1a82992e713e4f8ba33309c4ab93d7a0742723",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/oak_dense_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/oak_dense_generator_1.ron",
+    "source_blake3": "20e97b73ee0759ce2a3b140a968c7fa59d0507de24c639fb6c6197f0f4bbba08",
+    "destination_blake3": "3353e97cb9f290e81176bdf2368d16f4f6e14dc94e3f351dc9a0ebd3763edb86",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/oak_dense_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/oak_dense_generator_2.ron",
+    "source_blake3": "4543a14fbb3b9bc52a29694b68f193788a73290c69c0fed810a6620bb007b86a",
+    "destination_blake3": "be99a665c8977d99767efda9e7b210fa893013e6f9f133108578c16ae3863242",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/oak_dense_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/oak_dense_generator_3.ron",
+    "source_blake3": "25625e4bec5b6dde18f1061165f3ccaec37adaf0aa2281969249382c617c8433",
+    "destination_blake3": "62ccfea58fa4fdcc37e6f4cb57c862c91655526df18662d2004d9847933a286c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/oak_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/oak_generator_1.ron",
+    "source_blake3": "af8b5d03f945536e2416e7f49568f24279a495cbb3444fef4aad928f5e325119",
+    "destination_blake3": "08021f5c5ac1a98c76a59085c2ca392b1bb295f4673a9450398a9537731ecd1f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/oak_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/oak_generator_2.ron",
+    "source_blake3": "40ee139588fa8df5a20042549a4cfb193eb3e3b4fc9132909bda9f1e080de1ab",
+    "destination_blake3": "166de7bbad56545696b6069c2332fe510b0f16044a6d2b140219fdb9b9efed99",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/oak_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/oak_generator_3.ron",
+    "source_blake3": "92fb95e465e415549c2037df601de53af7f1af25fbd30fa83e7459cb71e5ad00",
+    "destination_blake3": "c674910b43aef0f28103740a9405efc9ed964fae9b344f2d4237322782d16845",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/palm_dense_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/palm_dense_generator_1.ron",
+    "source_blake3": "2e995e69ef5b1c54f0dd6b5817b8f7ca24e141c1699a082efaa0af74c55ae653",
+    "destination_blake3": "485d33d3f1479b9b780bbaf7ccfa3299c83df91d174616f0568d509aeb0901db",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/palm_dense_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/palm_dense_generator_2.ron",
+    "source_blake3": "01890d9f4cefb45722b1a126ed11e36a2b4ee7279c87c2e43a8f793134a85796",
+    "destination_blake3": "bfa4480d18c7b7de747f60f77500fc9d41cdcbaec1c0ada80c0e111715493525",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/palm_dense_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/palm_dense_generator_3.ron",
+    "source_blake3": "6b2f13687d1d542ccdd9239a2279881c55f207a9da12ac7ab3d2ccf0ca1535d1",
+    "destination_blake3": "d4fb6fb782e13bd4f7335e81dc2ddfd42030dd82e071322650f94c2256821ad2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/pine_dense_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/pine_dense_generator_1.ron",
+    "source_blake3": "2f14e20f09a473deaa44c4e3af54898d501f5f985df488afa8a0146b7042ce0a",
+    "destination_blake3": "388ae542c41301c091f1ec27910e353c0dbd23291d558f256f1994be9dbc20f6",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/pine_dense_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/pine_dense_generator_2.ron",
+    "source_blake3": "818cdeff92abc1d58443930464e94eba6286420577aa93171d9463d98f82e8a1",
+    "destination_blake3": "484f0d8cb7fa7c719af64327e7ef281101cd23d3ee82617815043c0844b09f40",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/pine_dense_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/pine_dense_generator_3.ron",
+    "source_blake3": "26e47f9ea624250342a25f1391e3697fe68bcf1b123560b1f2630bb2f92972f4",
+    "destination_blake3": "f87fcee2a0d1f6fd8ed379d26a8fbcfb5d5a46ec40712684f0240290a8a31d09",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/pine_sparse_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/pine_sparse_generator_1.ron",
+    "source_blake3": "a57ac1ef0ae344a5a9317e08529b2fcf9bd34e1ef5a7e1300dc1c832d353104c",
+    "destination_blake3": "58db21c3eaf5ec0f78483501b11e96cefac903f11b0388d32a8b79d93812b35e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/pine_sparse_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/pine_sparse_generator_2.ron",
+    "source_blake3": "2cad80db24c9345ca31b775e86d28260916901fc1b16a7ee50c18edeaffcc225",
+    "destination_blake3": "b403ed5e734e79cb94ca417453b2eb0b90109be525ff6b12f2c9685f46ebe2ec",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/pine_sparse_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/pine_sparse_generator_3.ron",
+    "source_blake3": "03d299656aa3dd3bf488567ddfd67ba5d6385ff04ebb668eafd8f638c5c21550",
+    "destination_blake3": "4dde5b6d4d534624392fd918f7dd041a28f672417af418644dbfa7583b070a31",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/rainforest_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/rainforest_generator_1.ron",
+    "source_blake3": "b19235b66f5edc38f048c33fd9f637d03d9927a8b2fa5c33d8ab6bee7bae87c9",
+    "destination_blake3": "e40de93a3dbf8d35eb6549d0a9c52ba6eaafb0f6a4b566063e21d68d3046acdd",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/rainforest_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/rainforest_generator_2.ron",
+    "source_blake3": "24abb4d570fbef513cea006909eb2f8453f93710706481dcd877e2c7d7de4fcf",
+    "destination_blake3": "16d747d20ebdf98f8c1f06321e0ef083eb633d2219e520a3099219b585aad16c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/rainforest_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/rainforest_generator_3.ron",
+    "source_blake3": "21075e6599d47ecc46d5676f980182483ca6a784791075fd6c2a04df31413a19",
+    "destination_blake3": "6e1e29a240e955e1ec84f6c08b2e7e47d38f249d004d7e864dc7989269e59247",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/rainforest_sparse_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/rainforest_sparse_generator_1.ron",
+    "source_blake3": "106e858c98a1dfb3c864ac3e3d4672bedf7096813cf2b38695d682be204e6adc",
+    "destination_blake3": "6484fb98823199293a059d5ef86dfa72f8892965efff59e33c4053b72dddb09c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/rainforest_sparse_generator_2.txt",
+    "destination": "gfx/map/map_object_data/generated/rainforest_sparse_generator_2.ron",
+    "source_blake3": "3ec70115fdaaaeeafb744c7d791a03e1d665bd34e20ad5034814df31d817c943",
+    "destination_blake3": "77d4960bdc1fa32cb28658778a66945788eb63286f2fb5842d96579cef39e0ff",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/rainforest_sparse_generator_3.txt",
+    "destination": "gfx/map/map_object_data/generated/rainforest_sparse_generator_3.ron",
+    "source_blake3": "3585b79dc985fa0ec65d7f571a1c1402540da76ba8f772e8644cb8974a3a9a50",
+    "destination_blake3": "ecd672183406760aa9c4fbc9ce7a3652e2a73a1df8fcbe5ae544177c874f3557",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated/savanna_tree_generator_1.txt",
+    "destination": "gfx/map/map_object_data/generated/savanna_tree_generator_1.ron",
+    "source_blake3": "0b84db5991cd0d085aeca42ed36bb15dfee96436a0d8c292e039b1ddb13770ac",
+    "destination_blake3": "5056bca235e043d8e31459c5e82d66be6b7794e49cb7dc4c90b77879384c7620",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated_map_object_locators_city.txt",
+    "destination": "gfx/map/map_object_data/generated_map_object_locators_city.ron",
+    "source_blake3": "894d7a62ff675e0278604695da8e10274108733161000ddfbdc2ec542f0a5f9a",
+    "destination_blake3": "6cabdd611886a11e9102d390c31f176e0e435a20ca2052bcdff9f05f32c24f26",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated_map_object_locators_farm.txt",
+    "destination": "gfx/map/map_object_data/generated_map_object_locators_farm.ron",
+    "source_blake3": "483f56f3093a0391b928bf7b6861ab0bed9b037d52f571085e3d8a36b0a4b63b",
+    "destination_blake3": "312fc3420132941d557dbdb45abef4187d58238bb17f4e7f01b8c70c81b48079",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated_map_object_locators_mine.txt",
+    "destination": "gfx/map/map_object_data/generated_map_object_locators_mine.ron",
+    "source_blake3": "4fefa3d65d533b64c7b89c6f5a0ad824e0c88386897eeb33f9ac5813a087e0e7",
+    "destination_blake3": "1c0ac51e0103e3752c15c1bc8e91fe322aa11dde08bc3d732399076b911ddc5f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated_map_object_locators_port.txt",
+    "destination": "gfx/map/map_object_data/generated_map_object_locators_port.ron",
+    "source_blake3": "8323660049ece05e17081f9a304ef23117fe779805a9c536c144941e54f82abb",
+    "destination_blake3": "0664613340452dcbb536e50e436a686badb8eb3ab579e7a512931790252d8efe",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/generated_map_object_locators_wood.txt",
+    "destination": "gfx/map/map_object_data/generated_map_object_locators_wood.ron",
+    "source_blake3": "0a0e39dccfe5c713003ed350f97300fd5e854964becb0b451ad37cb761ebe3fe",
+    "destination_blake3": "1338540b8d6eddb2740781b7e25cf9f814ec0b73b0c90ffa13af3aa534e9af8f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/lakes.txt",
+    "destination": "gfx/map/map_object_data/lakes.ron",
+    "source_blake3": "27657ea58502d48cb22e171bef99b7b02e3fd04cf2c941ccc1ab69b1d67ca15a",
+    "destination_blake3": "df83dd08bfc5fd6d30826e4badc49aedab2727c01ca3dfb4b49e8f2ea9a0e047",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/layers.txt",
+    "destination": "gfx/map/map_object_data/layers.ron",
+    "source_blake3": "dbd976510ecec066d19b8d9a0c65c64fea06e806f02199850916828bbc640be2",
+    "destination_blake3": "1505629aa1c3c59268c2d60426ea0ccfd2c37db6489b2b849fe5b1ee0027c0ac",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/papermap_edge.txt",
+    "destination": "gfx/map/map_object_data/papermap_edge.ron",
+    "source_blake3": "f3fd3e8dfefda0bd81d424c453c805ff51e2b5fa05ae0d4b932a7f9608e1d32b",
+    "destination_blake3": "47031e957a95c00dc3d8224a3a24f994bf7071096a27e4f602e11502b12ac078",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/papermap_extensions_locators.txt",
+    "destination": "gfx/map/map_object_data/papermap_extensions_locators.ron",
+    "source_blake3": "9d34991bb14b2148521408c89f3b915cdb6e48e4bf86976943d8b806558b28d5",
+    "destination_blake3": "10eeb537aeee5845c3a6bf7a80082a647e123a4f587169372614243fbe4a4e01",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/papermap_items_locators.txt",
+    "destination": "gfx/map/map_object_data/papermap_items_locators.ron",
+    "source_blake3": "cf2c189c2b258258d00500f627b632beaa3fde3971c0ec37613e3688bd18401b",
+    "destination_blake3": "ccf29f737d5cbf55a9be8d58b8b7b690cfdfe654351d1293537602ce4ffdef73",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/papermap_table_ip2_locators.txt",
+    "destination": "gfx/map/map_object_data/papermap_table_ip2_locators.ron",
+    "source_blake3": "fb1985b135eb13ebf8bccabc2f1d598d80061104063aa865d157351721b3b97e",
+    "destination_blake3": "af985a512804c5ae22e4d32234f83d3245938b3a2533565583c73a2488725795",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/papermap_table_ip3_locators.txt",
+    "destination": "gfx/map/map_object_data/papermap_table_ip3_locators.ron",
+    "source_blake3": "4661a85d974772532a50c8ae9ea0d3dcc3981560d9e11ada05c22237c96616c5",
+    "destination_blake3": "0d2360262dd3b7878782301156a0fac61a8a2e34aff21f7f17c0da2c4cb27369",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/papermap_table_ip4_locators.txt",
+    "destination": "gfx/map/map_object_data/papermap_table_ip4_locators.ron",
+    "source_blake3": "8ebd344abf02037a98f0c601a36e6af6c2847bd5b5147c4c502625ac75e54524",
+    "destination_blake3": "a55b18d9af0ff19f81210f07e555c9411531adf2eaaa17c11d54384cab27fa50",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/sandstone_monument.txt",
+    "destination": "gfx/map/map_object_data/sandstone_monument.ron",
+    "source_blake3": "e9a6ec94aa4b1387879b91adfc6f0bba8b69f11573fb08ccfe2d07b9e87442e2",
+    "destination_blake3": "42f92196d4fa3be29184cc11f01c0033bb80c19328b3ed1fb20cfa0ee6cddd65",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/static.txt",
+    "destination": "gfx/map/map_object_data/static.ron",
+    "source_blake3": "d86d503da3b7dde1b59c83663f8fb0cdceb85eaf4af57a69609d04d9759e61dc",
+    "destination_blake3": "2386c6ba86b400956c9d0d79f328e19bc50ed13d9adecdfa783a4ab7be2c33b2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/unique_buildings.txt",
+    "destination": "gfx/map/map_object_data/unique_buildings.ron",
+    "source_blake3": "7f3a2cdbf3427a6b90c0b7e3bbbf21b5fc9f6f1a6ec8e681d7d0ecdf444a9cf8",
+    "destination_blake3": "dd4004aab67ad2f691349d579ce4f01ad2aa914310cd7011fbb123504b5774d8",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/map_object_data/wonder_great_wall_of_china.txt",
+    "destination": "gfx/map/map_object_data/wonder_great_wall_of_china.ron",
+    "source_blake3": "aa15ee704a40adb48670dde316346c29f670d94e11eae3da834118429f2dae23",
+    "destination_blake3": "3d4cc4a97867060922f6920f4ed81fe8889b6cd2229993d5dc24cfabb101ef6a",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/masks/manifest.json",
+    "destination": "gfx/map/masks/manifest.ron",
+    "source_blake3": "594967b9f4e979b2bea11381fb3ea061a6001dad273a1bf7045eace1e2be3632",
+    "destination_blake3": "8f1afa2ec557a91d8aeabf0b277b9f887aad41bbe5046d98c5c1719fe4f8272c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/post_effects/posteffect_volumes.txt",
+    "destination": "gfx/map/post_effects/posteffect_volumes.ron",
+    "source_blake3": "8b97a1a97f03319ae07ef4decfc5dc3b6d7ec841ab5336abd998f41cef3c5120",
+    "destination_blake3": "35ab46e7968d76636a39d8a6e2e40346cba3708721f8f5f517631961158ee318",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/power_block_statues/accessories/00_accessories.txt",
+    "destination": "gfx/map/power_block_statues/accessories/00_accessories.ron",
+    "source_blake3": "110ba3654f84ff5db6b12ef8509185c20b5392ec4646b013f8d4ec334d1038bf",
+    "destination_blake3": "2cfbd3390015d31bdcc11bb36166779072838dd174ececdf3a087862a6b0861c",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/power_block_statues/heroes/00_heroes.txt",
+    "destination": "gfx/map/power_block_statues/heroes/00_heroes.ron",
+    "source_blake3": "f1a95dbc0a2fb32ecd3893a139873d5e1b373b05818b7413811d299bfdad0b70",
+    "destination_blake3": "3434badcacfc990e15eed431218d326fa18ba2daa3f9bc8f88e622d0c0903261",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/power_block_statues/pedestals/00_pedestals.txt",
+    "destination": "gfx/map/power_block_statues/pedestals/00_pedestals.ron",
+    "source_blake3": "c5cafd8fce66e9b57145df9ba614cde432ea38ed350c2486cb0be8f949680293",
+    "destination_blake3": "e6e9bf8ec12ce5fe1c2d1c01b7b6adfc6e2d35cdb28a7bac6bb1fd2441cc06a2",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/rivers/rivers.settings",
+    "destination": "gfx/map/rivers/rivers.ron",
+    "source_blake3": "a9c453254abf7e820d5149acb93562b05a9cf8b008b04d21f60af542da7ccbf7",
+    "destination_blake3": "03ce70d17ea6e3be787391b8c0df03ebd4aa1f0a99c4db2df195bbec7f5bb7f3",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/rivers/riverwater.settings",
+    "destination": "gfx/map/rivers/riverwater.ron",
+    "source_blake3": "f34d96eb6e91e42362c37fa50074d01eb02677b7592eff507451d60538c85f4b",
+    "destination_blake3": "b8d09e29eaf248615d20fccb70559a1591aadc69b56c0a3cbe277e9061f7dd6d",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/game_road_data.txt",
+    "destination": "gfx/map/spline_network/game_road_data.ron",
+    "source_blake3": "879e2b1a107cb8e867ec5a59fe74d89dada4218cc3e348448abcbd3c03ff3855",
+    "destination_blake3": "9c7b4c7d5e0d46f566e87610e9697aeeb90b4e6210fe7e7ebeb541ae26dbc081",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/military_route_graphics/01_road_vehicles.txt",
+    "destination": "gfx/map/spline_network/military_route_graphics/01_road_vehicles.ron",
+    "source_blake3": "aa2046b3a8b5c8188ea5dea3085b6259b3f02c36587bfdf1f603dd5909ea091d",
+    "destination_blake3": "c3cf15b2e77038d29e72bdfe0b80266752814e28a18924a06cd5ae5fbcf48bf4",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/military_route_graphics/02_railroad_vehicles.txt",
+    "destination": "gfx/map/spline_network/military_route_graphics/02_railroad_vehicles.ron",
+    "source_blake3": "4905a714c4ea36d40fd0934d5903fd42d42ea822078b2b2dc62400f1335cda86",
+    "destination_blake3": "d6e97606dc2070188a4f52f9146fbd16909d336142a80fef22e2a6c1fdc229af",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/route_graphics/01_road_vehicles.txt",
+    "destination": "gfx/map/spline_network/route_graphics/01_road_vehicles.ron",
+    "source_blake3": "7b86a2f95029e62576c6c1ef46f2263a1b6fde047229a55f981eb022fb38c1f2",
+    "destination_blake3": "aff4a1e271dfdd2326c4ece71af09e1f26557c0f39c274a94812580768bcaae9",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/route_graphics/02_railroad_vehicles.txt",
+    "destination": "gfx/map/spline_network/route_graphics/02_railroad_vehicles.ron",
+    "source_blake3": "7ec845bf167835238cec10fad9d210781caf1a7c8c6924f662b50155c0fa434c",
+    "destination_blake3": "2af0125eaab55e2ca6b1fc69e8c926fddc4e1b9f319fab301f5914a77bd29fc5",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/route_graphics/03_naval_vehicles.txt",
+    "destination": "gfx/map/spline_network/route_graphics/03_naval_vehicles.ron",
+    "source_blake3": "48d2e78a777883d06a53c864a3113e72a7324645beda4b4aee2ff0064a6fa035",
+    "destination_blake3": "90b18fef42ccf64d936c805b875fd1ecdaf443d98d99aa19ad6a9e00342fd654",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/route_graphics/03_sailingships.txt",
+    "destination": "gfx/map/spline_network/route_graphics/03_sailingships.ron",
+    "source_blake3": "cb7a4bad48e8dccd8c04f8afc31e651e033e99488a863b40d20534aa682825fd",
+    "destination_blake3": "8cd2abfc2070c39056ae81eae73c8c1b6953b91c4a806217e7f9c5d2eb05a562",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/spline_styles/00_default.txt",
+    "destination": "gfx/map/spline_network/spline_styles/00_default.ron",
+    "source_blake3": "f3192950072a5ec47695e905dd37fa64ed36825161952320e82bad98497bd52a",
+    "destination_blake3": "96e36500e94d2d8a0ca5b171adf1a0ad75b2a8a43b7b3b3c638cf4d22789d9df",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/spline_network/spline_types/00_default.txt",
+    "destination": "gfx/map/spline_network/spline_types/00_default.ron",
+    "source_blake3": "a385cd726f0c30dbce099ff8fa8e62b16f42bdde168cc2e1892840e725a8b083",
+    "destination_blake3": "300c1572d9e895fb7cc7a9ea75a2a5f8bf050bd3641624615cb34c78e96ef538",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/terrain/detail_data.settings",
+    "destination": "gfx/map/terrain/detail_data.ron",
+    "source_blake3": "d395e2d6c58d15a14c611225336c6f9c0df5f6ad1f24bfc788ecf1dddaafe8d4",
+    "destination_blake3": "a18892ca6a05497d5c87c7bff9d77ad007a0bcb8c28f61612f6e5c91b0b39617",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/terrain/materials.settings",
+    "destination": "gfx/map/terrain/materials.ron",
+    "source_blake3": "efaac6027ba2dfa9b5862e3ad7f7b37f52bcf8130b3be4521617cea4435be18c",
+    "destination_blake3": "cf57a344b6097ae076d5d7eba84247098a082a562ae617d29a4ec7990d99cc1f",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/terrain/settings.terrain",
+    "destination": "gfx/map/terrain/settings.ron",
+    "source_blake3": "ac7009e8c7e056382afdb8a31030d5905a681e769fedd4ffb0ecb038f263fd62",
+    "destination_blake3": "a57e52b983f377a8a2d49bacbe60121bd157cc531a1bb72886e0b2a013f80d57",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/textures/gametextures.settings",
+    "destination": "gfx/map/textures/gametextures.ron",
+    "source_blake3": "30967dfaff36b9dfb6a7c1049d70aa666a03091b870361bdff5aeee0b9c9a84f",
+    "destination_blake3": "5f0ec2573bc0802bce21f85169815263a38e70eeae5df6c5a3f0b8048c2390e1",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/textures/maptextures.settings",
+    "destination": "gfx/map/textures/maptextures.ron",
+    "source_blake3": "50b04fd1baf1d037a0e4e97ad57e159beb95897142314d9f68172fbe006fc5d1",
+    "destination_blake3": "ce9015895a0d78606b2d7d8157fb15f19cdde9fba155dc2fc48eb114bbe5db1e",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/textures/maptextures_newsletter_bonus.settings",
+    "destination": "gfx/map/textures/maptextures_newsletter_bonus.ron",
+    "source_blake3": "1ddbb532c1047fdbc221f757910919170dec9698f35ec2e6dc6d199f051b2aa5",
+    "destination_blake3": "24c367049f6315a02e8119c13cc7d485560b132750c31989bbf531bd22190d54",
+    "rewritten_references": 0
+  },
+  {
+    "source": "gfx/map/water/water.settings",
+    "destination": "gfx/map/water/water.ron",
+    "source_blake3": "f15a2e3e9fef03fb7338bf98f7b425520e8c08b860c354fc7478ace0e10a453b",
+    "destination_blake3": "aa57732e37f0694078b3601c9330bf1aaec9c5ad283f329ce5c6f6d575e48653",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/default.map",
+    "destination": "map_data/default.ron",
+    "source_blake3": "ecf419835496417676d1307bcedc0e5bab896a1a639f1a789669e6e9c86f4ada",
+    "destination_blake3": "6867f912bc1447ae34d409e54c0fc18728dbbf7d66edcb25b9095e729867cfda",
+    "rewritten_references": 1
+  },
+  {
+    "source": "map_data/heightmap.heightmap",
+    "destination": "map_data/heightmap.ron",
+    "source_blake3": "1b3b3df12036932f40d0ca07140f6ed4ca42c30ed75bf4ac206ee54b048bdbb0",
+    "destination_blake3": "a3deaa63ceab2319d13c224d2ba88d34d27fc89b906325c4d9a5d5cb76ccd743",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/province_terrains.txt",
+    "destination": "map_data/province_terrains.ron",
+    "source_blake3": "950b2b4d138029d89343423cfc1a0b4e91a3d32736e1c0f04c4ae22b79c8ac0f",
+    "destination_blake3": "b2b4c72b3bbb4384390dd70d53bdddf45b3b4474d20b1ab2edb20f6bbb7da8cf",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/00_west_europe.txt",
+    "destination": "map_data/state_regions/00_west_europe.ron",
+    "source_blake3": "678490c43dacaf08024f65b20fbf50ed9f05e6bbd7106e81a0a1a3be25da75f0",
+    "destination_blake3": "33fbb5ce31f82a2877be007e59294b0ae210195497fb88f7a07e655fd59b46e1",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/01_south_europe.txt",
+    "destination": "map_data/state_regions/01_south_europe.ron",
+    "source_blake3": "c6fcc8eac52af3bb9c656c369f536739b9a6f78e2f2c8e60bc53584aed60968f",
+    "destination_blake3": "d2aee6634c6fc15fdd484628e1e0a12b3a70167dac8e6723327b507ea052cf2b",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/02_east_europe.txt",
+    "destination": "map_data/state_regions/02_east_europe.ron",
+    "source_blake3": "b040b4bac8146baefcbec110952e43cf1fa3d07f06c75b604650d77a2754791c",
+    "destination_blake3": "863595803af6b2a3e3ea1b3202660650b07f071df85ba9449647453d2c1f3b34",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/03_north_africa.txt",
+    "destination": "map_data/state_regions/03_north_africa.ron",
+    "source_blake3": "6bd55d07bb98fe335d994f23e4eecd02406ac16bc588c023a28423e407acff80",
+    "destination_blake3": "d27fe97c5479c0d9242c7059813601279ad4f182e348003baaed5e5ccb0d8d45",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/04_subsaharan_africa.txt",
+    "destination": "map_data/state_regions/04_subsaharan_africa.ron",
+    "source_blake3": "b1e08658c4a271e4f77dfd23d9471de8a4c235ccef296428b554f015860e7553",
+    "destination_blake3": "071c4041a8185ab295b9a1260b7b3ab4c4742ad19aac8bd1c6e7876109984abf",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/05_north_america.txt",
+    "destination": "map_data/state_regions/05_north_america.ron",
+    "source_blake3": "056bd19378de4355abfed6b39ba26e3a0ff69057b4a2ae8e8a4d41b17cf1f7d8",
+    "destination_blake3": "8be0e1f277cdeb1ad0a0dee2a90081c6bec0116340fbfb350960784ea680a737",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/06_central_america.txt",
+    "destination": "map_data/state_regions/06_central_america.ron",
+    "source_blake3": "b3ad7a214d65c88e9c000a05ef6fc777fd8da06cf85ecdf4e18a23f389fa3457",
+    "destination_blake3": "6c73b48b396346ef4b1017b6934ae18fe55ee398ad2ea89d997990cc6981807b",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/07_south_america.txt",
+    "destination": "map_data/state_regions/07_south_america.ron",
+    "source_blake3": "043662b701f0714bc709b3bfee9d8f118dfc3de2300f13c76ddaa31423348056",
+    "destination_blake3": "9e31a613f315125adde88775e3e099a3a2d1e055ce81e68508ae28f8b15b7f91",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/08_middle_east.txt",
+    "destination": "map_data/state_regions/08_middle_east.ron",
+    "source_blake3": "57f3ebc8c839e12fb8fe65fa7c75c8ef6ca3620221ba86ff39f8a0eaa19bab50",
+    "destination_blake3": "51777efebe32f73043089c5f124de149aba857a4ecdd0e6f68a13cc98dd5fafd",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/09_central_asia.txt",
+    "destination": "map_data/state_regions/09_central_asia.ron",
+    "source_blake3": "3cefa9b0838175d5b8505318421715ad4e89fbfe1467c12ef3067e350bccfe7e",
+    "destination_blake3": "4177e4747e4c42ae8a95ccb13ea9aa216f7277b5c620d7f7f7c87748ea97450b",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/10_india.txt",
+    "destination": "map_data/state_regions/10_india.ron",
+    "source_blake3": "7791fe1457635d8f7604a98e4439118ba0113c963994a214b49e0a78256aa7a4",
+    "destination_blake3": "474f780b83bc272ea193bb657043c950fe99147dbe29a2e48b57088096a37fc7",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/11_east_asia.txt",
+    "destination": "map_data/state_regions/11_east_asia.ron",
+    "source_blake3": "17a73ad74d1994bf1ddadf1fd99e509df506f2dac457f27e4790a55ddcd84f9d",
+    "destination_blake3": "373938497f447e9510eed1dc8edb1d1a5bc2caa0900f75923963ff97181eda80",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/12_indonesia.txt",
+    "destination": "map_data/state_regions/12_indonesia.ron",
+    "source_blake3": "59f819a79002546826aae70d108946eabd14ecf9502af535cffdea14c876fafb",
+    "destination_blake3": "46fc829e2ea25e9d9f478884b2479943bf3d8f083c8c8691c9c27f45c765ede6",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/13_australasia.txt",
+    "destination": "map_data/state_regions/13_australasia.ron",
+    "source_blake3": "179f9c06a596306aab64d29531f79fccca96b3070d5fa8676cfd57a8e8128d9d",
+    "destination_blake3": "3ac455c18b8cd08f62ac8122496576894167dfaba63440bff640274073a905e4",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/14_siberia.txt",
+    "destination": "map_data/state_regions/14_siberia.ron",
+    "source_blake3": "a474e1c45a259661ea57e0625c7b7bcb209e897cf65dba4bcd29d5d32b1b071d",
+    "destination_blake3": "69d2529a4a8837be07f7901b39f5f88bf2d177c73ff3775cb77538d049cea31b",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/15_russia.txt",
+    "destination": "map_data/state_regions/15_russia.ron",
+    "source_blake3": "d3618fbdcf09badb0a06bc00d41a81e709050d1532e6bc449c4791bccbaa106f",
+    "destination_blake3": "76310d4719cab62d492111b760f8207924fab758822d5c84d33deb5786d3fb82",
+    "rewritten_references": 0
+  },
+  {
+    "source": "map_data/state_regions/99_seas.txt",
+    "destination": "map_data/state_regions/99_seas.ron",
+    "source_blake3": "60febb8defde77b1abb707a1b8fd0ea3fd303cfd8076bea14065be37b688e52f",
+    "destination_blake3": "7ac9868c9877d1b810c07ef1f1f41daad301713d6b54ca915486f6cedd88b68d",
+    "rewritten_references": 0
+  }
+]

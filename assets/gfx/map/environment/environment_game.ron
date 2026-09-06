@@ -1,0 +1,34 @@
+// Source line 1: # Global environment settings
+// Source line 3:  Second Sun | Extra light used only for buildings and map objects
+// Source line 6: 	-Left/+Right	Height  -Front/+Back
+// Source line 8:  Height of tint from top
+// Source line 9:  Contrast of height gradient
+// Source line 11:  Hue multiplier
+// Source line 12:  Saturation multiplier
+// Source line 13:  Value multiplier
+// Source line 15:  Height of tint from top
+// Source line 16:  Contrast of height gradient
+// Source line 18:  Debug high SoL
+// Source line 19:  Debug low SoL
+(schema_version: 1, entries: [
+    Property(key: "SecondSun.Color", operator: Assign, value: Block([
+        Item(Number("1.2")),
+        Item(Number("1.1")),
+        Item(Number("0.6")),
+    ])),
+    Property(key: "SecondSun.Intensity", operator: Assign, value: Number("3.0")),
+    Property(key: "SecondSun.Direction", operator: Assign, value: Block([
+        Item(Number("-1.4")),
+        Item(Number("0.1")),
+        Item(Number("-0.3")),
+    ])),
+    Property(key: "Sol.High.Tint.Height", operator: Assign, value: Number("0.6")),
+    Property(key: "Sol.High.Tint.Contrast", operator: Assign, value: Number("0.5")),
+    Property(key: "Sol.High.Hue", operator: Assign, value: Number("1.0")),
+    Property(key: "Sol.High.Saturation", operator: Assign, value: Number("1.3")),
+    Property(key: "Sol.High.Value", operator: Assign, value: Number("1.5")),
+    Property(key: "Sol.Low.Tint.Height", operator: Assign, value: Number("0.0")),
+    Property(key: "Sol.Low.Tint.Contrast", operator: Assign, value: Number("1.0")),
+    Property(key: "Sol.Debug.High", operator: Assign, value: Number("0.0")),
+    Property(key: "Sol.Debug.Low", operator: Assign, value: Number("0.0")),
+])

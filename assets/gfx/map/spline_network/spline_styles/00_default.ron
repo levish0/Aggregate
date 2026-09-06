@@ -1,0 +1,330 @@
+// Source line 219:  Undeveloped splines are not rendered, but are used for placing entities on them.
+// Source line 220:  They have similar settings to dirt roads.
+(schema_version: 1, entries: [
+    Property(key: "dirtroad", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("0")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.015625")),
+            Property(key: "width", operator: Assign, value: Number("2")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(false)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("SingleTexturePass")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/road_mulpass.shader")),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_dirt_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_dirt_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_dirt_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("none")),
+    ])),
+    Property(key: "railroad", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("1")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.015625")),
+            Property(key: "width", operator: Assign, value: Number("2")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(false)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+            Property(key: "end_fadeout_distance", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("SingleTexturePass")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/road_mulpass.shader")),
+            Property(key: "show_as_terminator_in_junction", operator: Assign, value: Boolean(true)),
+            Property(key: "show_as_inner_connection_in_junction", operator: Assign, value: Boolean(false)),
+            Property(key: "show_as_outer_connection_in_junction", operator: Assign, value: Boolean(false)),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_rail_ground_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_rail_ground_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_rail_ground_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("SingleTexturePass")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/road_mulpass.shader")),
+            Property(key: "show_as_terminator_in_junction", operator: Assign, value: Boolean(true)),
+            Property(key: "show_as_inner_connection_in_junction", operator: Assign, value: Boolean(true)),
+            Property(key: "show_as_outer_connection_in_junction", operator: Assign, value: Boolean(true)),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_rail_rails_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_rail_rails_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_rail_rails_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("visible")),
+        Property(key: "max_connection_angle", operator: Assign, value: Number("180")),
+    ])),
+    Property(key: "naval_route", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("2")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.03125")),
+            Property(key: "width", operator: Assign, value: Number("8")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(true)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+            Property(key: "end_fadeout_distance", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("NavalRoute")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/naval_route.shader")),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("Default")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse_flatmap.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+            ])),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("Highlight")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse_highlight.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("hidden")),
+        Property(key: "max_connection_angle", operator: Assign, value: Number("180")),
+    ])),
+    Property(key: "coastal_naval_route", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.25")),
+            Property(key: "width", operator: Assign, value: Number("1")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(true)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+            Property(key: "end_fadeout_distance", operator: Assign, value: Number("0")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("NavalRoute")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/naval_route.shader")),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("Default")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse_flatmap.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+            ])),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("Highlight")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse_highlight.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_diffuse_flatmap_highlight.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/models/debug/no_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/naval_route_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("hidden")),
+        Property(key: "max_connection_angle", operator: Assign, value: Number("180")),
+    ])),
+    Property(key: "pavedroad", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("4")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.015625")),
+            Property(key: "width", operator: Assign, value: Number("2")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(false)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("SingleTexturePass")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/road_mulpass.shader")),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_paved_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_paved_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_paved_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("none")),
+    ])),
+    Property(key: "pavedroadsandstone", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("5")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.015625")),
+            Property(key: "width", operator: Assign, value: Number("2")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(false)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("SingleTexturePass")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/road_mulpass.shader")),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_paved_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_paved_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_paved_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("none")),
+    ])),
+    Property(key: "undeveloped", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("6")),
+        Property(key: "spline", operator: Assign, value: Block([
+            Property(key: "uv_scale", operator: Assign, value: Number("0.015625")),
+            Property(key: "width", operator: Assign, value: Number("2")),
+            Property(key: "uv_rounding", operator: Assign, value: Boolean(false)),
+            Property(key: "smooth_fade_distance", operator: Assign, value: Number("10")),
+            Property(key: "smooth_iterations", operator: Assign, value: Number("0")),
+            Property(key: "smooth_kernel_size", operator: Assign, value: Number("1")),
+            Property(key: "tesselation_max_angle", operator: Assign, value: Number("5.0")),
+            Property(key: "tesselation_min_distance", operator: Assign, value: Number("0.1")),
+            Property(key: "tesselation_max_distance", operator: Assign, value: Number(".25")),
+            Property(key: "opacity_fade_distance", operator: Assign, value: Number("0.0625")),
+        ])),
+        Property(key: "effect", operator: Assign, value: Block([
+            Property(key: "effectname", operator: Assign, value: Text("SingleTexturePass")),
+            Property(key: "shaderfile", operator: Assign, value: Text("gfx/FX/road_mulpass.shader")),
+            Property(key: "texture_set", operator: Assign, value: Block([
+                Property(key: "name", operator: Assign, value: Text("")),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_dirt_diffuse.dds")),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_dirt_normal.dds")),
+                    Property(key: "srgb", operator: Assign, value: Boolean(false)),
+                ])),
+                Property(key: "texture", operator: Assign, value: Block([
+                    Property(key: "file", operator: Assign, value: Text("gfx/map/spline_network/road_dirt_properties.dds")),
+                ])),
+            ])),
+        ])),
+        Property(key: "connections", operator: Assign, value: Symbol("none")),
+    ])),
+])

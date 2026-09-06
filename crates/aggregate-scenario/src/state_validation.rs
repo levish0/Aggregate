@@ -1,9 +1,6 @@
 use crate::{
     ScenarioError,
-    validation::{
-        add_checked, require_positive, validate_name, validate_unique_identifiers,
-        validate_unique_uuid_identifiers,
-    },
+    validation::{add_checked, require_positive, validate_name, validate_unique_uuid_identifiers},
 };
 use aggregate_world::{ContentDefinitions, CountryId, ProvinceId, WorldRules, WorldSnapshot};
 use std::collections::{BTreeMap, BTreeSet};
@@ -14,16 +11,13 @@ pub(crate) fn validate_state(
     state: &WorldSnapshot,
     path: &str,
 ) -> Result<(), ScenarioError> {
-    validate_unique_identifiers(
-        state.countries.iter().map(|country| country.id.0.as_str()),
+    validate_unique_uuid_identifiers(
+        state.countries.iter().map(|country| country.id.0),
         &format!("{path}.countries"),
         "id",
     )?;
-    validate_unique_identifiers(
-        state
-            .provinces
-            .iter()
-            .map(|province| province.id.0.as_str()),
+    validate_unique_uuid_identifiers(
+        state.provinces.iter().map(|province| province.id.0),
         &format!("{path}.provinces"),
         "id",
     )?;

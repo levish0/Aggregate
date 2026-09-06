@@ -61,6 +61,7 @@ fn begin_day(clock: Res<SimulationClock>, provinces: Query<&Province>, mut work:
         day,
         provinces: Vec::new(),
         facilities: Vec::new(),
+        constructions: Vec::new(),
         goods_flows: Vec::new(),
         events: Vec::new(),
     });

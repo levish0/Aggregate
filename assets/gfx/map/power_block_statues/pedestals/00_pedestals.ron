@@ -1,0 +1,55 @@
+(schema_version: 1, entries: [
+    Property(key: "pedestal_01", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_01_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_trade_league")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+    Property(key: "pedestal_02", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_02_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_trade_league")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+    Property(key: "pedestal_03", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_03_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_sovereign_empire")),
+            Item(Symbol("identity_military_treaty_organization")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+    Property(key: "pedestal_04", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_04_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_military_treaty_organization")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+    Property(key: "pedestal_05", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_05_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_sovereign_empire")),
+            Item(Symbol("identity_ideological_union")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+    Property(key: "pedestal_06", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_06_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_ideological_union")),
+            Item(Symbol("identity_religious")),
+            Item(Symbol("identity_cultural")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+    Property(key: "pedestal_07", operator: Assign, value: Block([
+        Property(key: "entity", operator: Assign, value: Text("powerbloc_pedestal_07_entity")),
+        Property(key: "default_choice_for_identities", operator: Assign, value: Block([
+            Item(Symbol("identity_religious")),
+        ])),
+        Property(key: "hero_locator", operator: Assign, value: Text("loc_hero")),
+    ])),
+])

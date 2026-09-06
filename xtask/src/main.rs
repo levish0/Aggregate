@@ -1,3 +1,5 @@
+mod asset_validation;
+
 use std::{
     env,
     error::Error,
@@ -39,7 +41,8 @@ fn run() -> Result<(), Box<dyn Error>> {
             "headless",
             "--locked",
         ])?,
-        "help" => println!("cargo run -p xtask -- <check|headless>"),
+        "validate-map-assets" => asset_validation::validate().map_err(|error| error.to_string())?,
+        "help" => println!("cargo run -p xtask -- <check|headless|validate-map-assets>"),
         _ => return Err(format!("unknown task: {action}").into()),
     }
     Ok(())

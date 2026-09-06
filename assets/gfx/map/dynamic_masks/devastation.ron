@@ -1,0 +1,29 @@
+// Source line 2:  Set texture in 00_graphics.txt
+(schema_version: 1, entries: [
+    Property(key: "Texture_Index_Offset", operator: Assign, value: Number("0")),
+    Property(key: "Noise_Tiling", operator: Assign, value: Number("50")),
+    Property(key: "Texture_Tiling", operator: Assign, value: Number("1")),
+    Property(key: "Texture_Hue", operator: Assign, value: Number("-0")),
+    Property(key: "Texture_Saturation", operator: Assign, value: Number("1")),
+    Property(key: "Texture_Value", operator: Assign, value: Number("1")),
+    Property(key: "Tree_Hue", operator: Assign, value: Number("-0.075")),
+    Property(key: "Tree_Saturation", operator: Assign, value: Number("0.75")),
+    Property(key: "Tree_Value", operator: Assign, value: Number("0.75")),
+    Property(key: "Area_Position", operator: Assign, value: Number("0.65")),
+    Property(key: "Area_Constrast", operator: Assign, value: Number("0.6")),
+    Property(key: "Area_Max", operator: Assign, value: Number("0.33")),
+    Property(key: "BezierPoint_1", operator: Assign, value: Block([
+        Item(Number("0.05")),
+        Item(Number("0.9")),
+    ])),
+    Property(key: "BezierPoint_2", operator: Assign, value: Block([
+        Item(Number("0.3")),
+        Item(Number("0.6")),
+    ])),
+    Property(key: "Height_Weight", operator: Assign, value: Number("0.35")),
+    Property(key: "Height_Contrast", operator: Assign, value: Number("0.7")),
+    Property(key: "ExclusionMask_Min", operator: Assign, value: Number("0.6")),
+    Property(key: "ExclusionMask_Max", operator: Assign, value: Number("0.9")),
+    Property(key: "Tree_Alpha_Reduce", operator: Assign, value: Number("0.5")),
+    Property(key: "Force_Add_Global_Devastation", operator: Assign, value: Number("0.0")),
+])

@@ -12,7 +12,7 @@ pub use definitions::{
     ConstructionDefinition, ContentDefinitions, FacilityDefinition, GoodDefinition, WorldRules,
 };
 pub use identifiers::{
-    CountryId, FacilityDefinitionId, FacilityId, GoodId, PopulationGroupId, ProvinceId,
+    CountryId, FacilityDefinitionId, FacilityId, GoodId, PopulationGroupId, ProvinceId, RegionId,
 };
 pub use scenario::{SCENARIO_SCHEMA_VERSION, Scenario};
 pub use state::{

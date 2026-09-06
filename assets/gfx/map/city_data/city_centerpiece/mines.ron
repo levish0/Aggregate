@@ -1,0 +1,64 @@
+(schema_version: 1, entries: [
+    Property(key: "african_mine_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_mine")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_mininghub_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_mine_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_mine")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_mine")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("mininghub_centerpiece_sandstone_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_mine_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_mine")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_mining_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_mine_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_mine")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("american_oilrig_mine")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("mininghub_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_mine_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_mine")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("3")),
+            Item(Number("3")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_mininghub_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+])

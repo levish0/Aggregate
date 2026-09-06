@@ -1,0 +1,2156 @@
+// Source line 3:  Unit composition is checked when picking a diorama for a certain province
+// Source line 4:  The closer the composition of the army in the province corresponds to the percentage, the higher the chance of choosing this diorama
+// Source line 11:  Distance between the center of the diorama and the frontline
+// Source line 16:  Define all locators for the different assets
+// Source line 18: ####		BARRICADE LOCATORS		#####
+// Source line 29: ####		INFANTRY LOCATORS		#####
+// Source line 55: ####		ARTILLERY LOCATORS		#####
+// Source line 71: ####		PROPS LOCATORS		#####
+// Source line 92: ####		CAVALRY LOCATORS		#####
+// Source line 98: ####		GENERAL LOCATORS		#####
+// Source line 104: ####		FLAG LOCATORS		#####
+// Source line 110: ####		AERIALRECON LOCATORS		#####
+// Source line 116: ####		BALLOONRECON LOCATORS		#####
+// Source line 124:  Attach all the correct units to locators
+// Source line 127: ####		01 BARRICADES		#####
+// Source line 131: ####		02 INFANTRY		#####
+// Source line 138: ####		02 MARINES		#####
+// Source line 145: ####		03 ARTILLERY		#####
+// Source line 150: ####		04 PROPS		#####
+// Source line 156: ####		05 CAVALRY		#####
+// Source line 159: ####		06 GENERAL		#####
+// Source line 162: ####		07 FLAG		#####
+// Source line 165: ####		08 AERIALRECON 		#####
+// Source line 168: ####		09 BALLOONRECON 		#####
+// Source line 176:  Unit composition is checked when picking a diorama for a certain province
+// Source line 177:  The closer the composition of the army in the province corresponds to the percentage, the higher the chance of choosing this diorama
+// Source line 184:  Distance between the center of the diorama and the frontline
+// Source line 189:  Define all locators for the different assets
+// Source line 191: ####		BARRICADE LOCATORS		#####
+// Source line 202: ####		INFANTRY LOCATORS		#####
+// Source line 248: ####		ARTILLERY LOCATORS		#####
+// Source line 259: ####		PROPS LOCATORS		#####
+// Source line 275: ####		CAVALRY LOCATORS		#####
+// Source line 291: ####		GENERAL LOCATORS		#####
+// Source line 297: ####		FLAG LOCATORS		#####
+// Source line 303: ####		BASECAMP LOCATORS		#####
+// Source line 309: ####		MEDICALCAMP LOCATORS		#####
+// Source line 320: ####		AERIALRECON LOCATORS		#####
+// Source line 326: ####		BALLOONRECON LOCATORS		#####
+// Source line 334:  Attach all the correct units to locators
+// Source line 337: ####		01 BARRICADE		#####
+// Source line 341: ####		02 INFANTRY		#####
+// Source line 352: ####		02 MARINES		#####
+// Source line 363: ####		03 ARTILLERY		#####
+// Source line 367: ####		04 PROPS		#####
+// Source line 372: ####		05 CAVALRY		#####
+// Source line 377: ####		06 GENERAL		#####
+// Source line 380: ####		07 FLAG		#####
+// Source line 383: ####		08 AERIALRECON 		#####
+// Source line 386: ####		09 BALLOONRECON 		#####
+// Source line 389: ####		10 BASECAMP		#####
+// Source line 392: ####		11 MEDICALCAMP	    #####
+// Source line 410:  Define all locators for the different assets
+// Source line 412: ####		BARRICADE LOCATORS		#####
+// Source line 423: ####		INFANTRY LOCATORS		#####
+// Source line 449: ####		ARTILLERY LOCATORS		#####
+// Source line 465: ####		PROPS LOCATORS		#####
+// Source line 486: ####		CAVALRY LOCATORS		#####
+// Source line 492: ####		GENERAL LOCATORS		#####
+// Source line 498: ####		FLAG LOCATORS		#####
+// Source line 504: ####		AERIALRECON LOCATORS		#####
+// Source line 510: ####		BALLOONRECON LOCATORS		#####
+// Source line 518:  Attach all the correct units to locators
+// Source line 521: ####		01 BARRICADES		#####
+// Source line 525: ####		02 MARINES		#####
+// Source line 532: ####		03 ARTILLERY		#####
+// Source line 537: ####		04 PROPS		#####
+// Source line 543: ####		05 CAVALRY		#####
+// Source line 546: ####		06 GENERAL		#####
+// Source line 549: ####		07 FLAG		#####
+// Source line 552: ####		08 AERIALRECON 		#####
+// Source line 555: ####		09 BALLOONRECON 		#####
+// Source line 572:  Define all locators for the different assets
+// Source line 574: ####		BARRICADE LOCATORS		#####
+// Source line 585: ####		INFANTRY LOCATORS		#####
+// Source line 631: ####		ARTILLERY LOCATORS		#####
+// Source line 642: ####		PROPS LOCATORS		#####
+// Source line 658: ####		CAVALRY LOCATORS		#####
+// Source line 674: ####		GENERAL LOCATORS		#####
+// Source line 680: ####		FLAG LOCATORS		#####
+// Source line 686: ####		BASECAMP LOCATORS		#####
+// Source line 692: ####		MEDICALCAMP LOCATORS		#####
+// Source line 703: ####		AERIALRECON LOCATORS		#####
+// Source line 709: ####		BALLOONRECON LOCATORS		#####
+// Source line 717:  Attach all the correct units to locators
+// Source line 720: ####		01 BARRICADE		#####
+// Source line 724: ####		02 MARINES		#####
+// Source line 735: ####		03 ARTILLERY		#####
+// Source line 739: ####		04 PROPS		#####
+// Source line 744: ####		05 CAVALRY		#####
+// Source line 749: ####		06 GENERAL		#####
+// Source line 752: ####		07 FLAG		#####
+// Source line 755: ####		08 AERIALRECON 		#####
+// Source line 758: ####		09 BALLOONRECON 		#####
+// Source line 761: ####		10 BASECAMP		#####
+// Source line 764: ####		11 MEDICALCAMP	    #####
+(schema_version: 1, entries: [
+    Property(key: "front_diorama_01", operator: Assign, value: Block([
+        Property(key: "unit_composition", operator: Assign, value: Block([
+            Property(key: "combat_unit_group_infantry", operator: Assign, value: Number("56")),
+            Property(key: "combat_unit_group_artillery", operator: Assign, value: Number("39")),
+            Property(key: "combat_unit_group_cavalry", operator: Assign, value: Number("5")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("8")),
+        Property(key: "basecamp", operator: Assign, value: Boolean(false)),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.0")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("3.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-5.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.65")),
+                Item(Number("0.0")),
+                Item(Number("3.25")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("30.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.25")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-12.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_04_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.65")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("8.75")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_05_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.4")),
+                Item(Number("0.0")),
+                Item(Number("3.65")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-31.25")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.3")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-15.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.5")),
+                Item(Number("0.0")),
+                Item(Number("-1.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-12.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.26")),
+                Item(Number("0.0")),
+                Item(Number("-1.49")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-130.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.45")),
+                Item(Number("0.0")),
+                Item(Number("-2.3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-320.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-0.92")),
+                Item(Number("0.0")),
+                Item(Number("-0.22")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-20.213")),
+                Item(Number("363.12")),
+                Item(Number("355.545")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_04_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.34")),
+                Item(Number("0.0")),
+                Item(Number("-1.14")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-190.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.95")),
+                Item(Number("0.0")),
+                Item(Number("1.075")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("12.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("general_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-2.25")),
+                Item(Number("0.0")),
+                Item(Number("3.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("flag_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.0")),
+                Item(Number("0.0")),
+                Item(Number("1.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("aerialrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("balloonrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_05_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_05_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_02")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_02")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("general_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("general")),
+            Property(key: "general", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("flag_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("flag")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("aerialrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("aerialrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("balloonrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("balloonrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+    ])),
+    Property(key: "front_diorama_basecamp_01", operator: Assign, value: Block([
+        Property(key: "unit_composition", operator: Assign, value: Block([
+            Property(key: "combat_unit_group_infantry", operator: Assign, value: Number("69")),
+            Property(key: "combat_unit_group_artillery", operator: Assign, value: Number("19")),
+            Property(key: "combat_unit_group_cavalry", operator: Assign, value: Number("12")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("10")),
+        Property(key: "basecamp", operator: Assign, value: Boolean(true)),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("6.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("30.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("5.0")),
+                Item(Number("0.0")),
+                Item(Number("5.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-30.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.65")),
+                Item(Number("0.0")),
+                Item(Number("3.95")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("60.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-2.7")),
+                Item(Number("0.0")),
+                Item(Number("5.4")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.8")),
+                Item(Number("0.0")),
+                Item(Number("6.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_04_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.5")),
+                Item(Number("0.0")),
+                Item(Number("5.45")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_05_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.3")),
+                Item(Number("0.0")),
+                Item(Number("5.3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_06_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.9")),
+                Item(Number("0.0")),
+                Item(Number("3.9")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_07_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.25")),
+                Item(Number("0.0")),
+                Item(Number("3.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_08_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.95")),
+                Item(Number("0.0")),
+                Item(Number("4.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_09_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.55")),
+                Item(Number("0.0")),
+                Item(Number("3.45")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.0")),
+                Item(Number("0.0")),
+                Item(Number("-1.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("6.0")),
+                Item(Number("0.0")),
+                Item(Number("-1.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-35.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("6.0")),
+                Item(Number("0.0")),
+                Item(Number("-3.28")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("150.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.41")),
+                Item(Number("0.0")),
+                Item(Number("-3.37")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.3")),
+                Item(Number("0.0")),
+                Item(Number("-4.07")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-140.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("1.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("25.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-6.25")),
+                Item(Number("0.0")),
+                Item(Number("-0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("15.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.75")),
+                Item(Number("0.0")),
+                Item(Number("1.1")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("general_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.6")),
+                Item(Number("0.0")),
+                Item(Number("2.3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("flag_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.75")),
+                Item(Number("0.0")),
+                Item(Number("1.75")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("basecamp_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("medical_fieldhospital_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.25")),
+                Item(Number("0.0")),
+                Item(Number("-5.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("medical_firstaid_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-5.0")),
+                Item(Number("0.0")),
+                Item(Number("-1.65")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("aerialrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("balloonrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_05_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_06_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_07_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_08_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1.5")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_09_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_infantry")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_05_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_06_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_07_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_08_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1.5")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_09_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_02")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("general_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("general")),
+            Property(key: "general", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("flag_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("flag")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("aerialrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("aerialrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("balloonrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("balloonrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("basecamp_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("basecamp")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("medical_fieldhospital_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("fieldhospital")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("medical_firstaid_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("firstaid")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+    ])),
+    Property(key: "front_diorama_marines_01", operator: Assign, value: Block([
+        Property(key: "unit_composition", operator: Assign, value: Block([
+            Property(key: "combat_unit_group_marines", operator: Assign, value: Number("56")),
+            Property(key: "combat_unit_group_artillery", operator: Assign, value: Number("39")),
+            Property(key: "combat_unit_group_cavalry", operator: Assign, value: Number("5")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("8")),
+        Property(key: "basecamp", operator: Assign, value: Boolean(false)),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.0")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("3.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-5.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.65")),
+                Item(Number("0.0")),
+                Item(Number("3.25")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("30.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.25")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-12.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_04_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.65")),
+                Item(Number("0.0")),
+                Item(Number("4.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("8.75")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_05_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.4")),
+                Item(Number("0.0")),
+                Item(Number("3.65")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-31.25")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.3")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-15.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.5")),
+                Item(Number("0.0")),
+                Item(Number("-1.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-12.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.26")),
+                Item(Number("0.0")),
+                Item(Number("-1.49")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-130.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.45")),
+                Item(Number("0.0")),
+                Item(Number("-2.3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-320.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-0.92")),
+                Item(Number("0.0")),
+                Item(Number("-0.22")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-20.213")),
+                Item(Number("363.12")),
+                Item(Number("355.545")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_04_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.34")),
+                Item(Number("0.0")),
+                Item(Number("-1.14")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-190.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.95")),
+                Item(Number("0.0")),
+                Item(Number("1.075")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("12.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("general_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-2.25")),
+                Item(Number("0.0")),
+                Item(Number("3.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("flag_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.0")),
+                Item(Number("0.0")),
+                Item(Number("1.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("aerialrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("balloonrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_05_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_02")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_02")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("general_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("general")),
+            Property(key: "general", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("flag_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("flag")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("aerialrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("aerialrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("balloonrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("balloonrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+    ])),
+    Property(key: "front_diorama_basecamp_marines_01", operator: Assign, value: Block([
+        Property(key: "unit_composition", operator: Assign, value: Block([
+            Property(key: "combat_unit_group_marines", operator: Assign, value: Number("69")),
+            Property(key: "combat_unit_group_artillery", operator: Assign, value: Number("19")),
+            Property(key: "combat_unit_group_cavalry", operator: Assign, value: Number("12")),
+        ])),
+        Property(key: "distance", operator: Assign, value: Number("10")),
+        Property(key: "basecamp", operator: Assign, value: Boolean(true)),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("6.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("30.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("barricade_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("5.0")),
+                Item(Number("0.0")),
+                Item(Number("5.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-30.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.65")),
+                Item(Number("0.0")),
+                Item(Number("3.95")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("60.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-2.7")),
+                Item(Number("0.0")),
+                Item(Number("5.4")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.8")),
+                Item(Number("0.0")),
+                Item(Number("6.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_04_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("2.5")),
+                Item(Number("0.0")),
+                Item(Number("5.45")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_05_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.3")),
+                Item(Number("0.0")),
+                Item(Number("5.3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_06_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.9")),
+                Item(Number("0.0")),
+                Item(Number("3.9")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_07_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.25")),
+                Item(Number("0.0")),
+                Item(Number("3.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_08_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-1.95")),
+                Item(Number("0.0")),
+                Item(Number("4.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("20.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("infantry_09_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.55")),
+                Item(Number("0.0")),
+                Item(Number("3.45")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("4.0")),
+                Item(Number("0.0")),
+                Item(Number("-1.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("6.0")),
+                Item(Number("0.0")),
+                Item(Number("-1.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-35.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("6.0")),
+                Item(Number("0.0")),
+                Item(Number("-3.28")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("150.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("3.41")),
+                Item(Number("0.0")),
+                Item(Number("-3.37")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("props_artillery_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.3")),
+                Item(Number("0.0")),
+                Item(Number("-4.07")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-140.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-3.0")),
+                Item(Number("0.0")),
+                Item(Number("1.5")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("25.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_02_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-6.25")),
+                Item(Number("0.0")),
+                Item(Number("-0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("15.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("cavalry_03_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.75")),
+                Item(Number("0.0")),
+                Item(Number("1.1")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("40.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("general_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.6")),
+                Item(Number("0.0")),
+                Item(Number("2.3")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("flag_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("1.75")),
+                Item(Number("0.0")),
+                Item(Number("1.75")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("basecamp_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("medical_fieldhospital_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-4.25")),
+                Item(Number("0.0")),
+                Item(Number("-5.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("-10.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("medical_firstaid_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("-5.0")),
+                Item(Number("0.0")),
+                Item(Number("-1.65")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("aerialrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("10.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "locator", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("balloonrecon_01_loc")),
+            Property(key: "position", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "rotation", operator: Assign, value: Block([
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+                Item(Number("0.0")),
+            ])),
+            Property(key: "scale", operator: Assign, value: Number("1.0")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("barricade_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("barricade")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_04_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_05_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_06_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0.25")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_07_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_08_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1.5")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("infantry_09_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_marines")),
+            Property(key: "entity_group", operator: Assign, value: Text("infantry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("artillery")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_02")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("props_artillery_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_artillery")),
+            Property(key: "entity_group", operator: Assign, value: Text("props_artillery_01")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_01_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("0")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_02_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("1")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("cavalry_03_loc")),
+            Property(key: "combat_unit_group", operator: Assign, value: Symbol("combat_unit_group_cavalry")),
+            Property(key: "entity_group", operator: Assign, value: Text("cavalry")),
+            Property(key: "is_visible", operator: Assign, value: Block([
+                Property(key: "scope:num_units", operator: GreaterThan, value: Number("2")),
+            ])),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("general_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("general")),
+            Property(key: "general", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("flag_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("flag")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("aerialrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("aerialrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("balloonrecon_01_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("balloonrecon")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("basecamp_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("basecamp")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("medical_fieldhospital_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("fieldhospital")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "locator", operator: Assign, value: Symbol("medical_firstaid_loc")),
+            Property(key: "entity_group", operator: Assign, value: Text("firstaid")),
+            Property(key: "ignore_terrain", operator: Assign, value: Boolean(true)),
+        ])),
+    ])),
+])

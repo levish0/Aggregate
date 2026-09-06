@@ -1,0 +1,12 @@
+(schema_version: 1, entries: [
+    Property(key: "object", operator: Assign, value: Block([
+        Property(key: "name", operator: Assign, value: Text("sandstone_monument_01")),
+        Property(key: "clamp_to_water_level", operator: Assign, value: Boolean(false)),
+        Property(key: "render_under_water", operator: Assign, value: Boolean(false)),
+        Property(key: "generated_content", operator: Assign, value: Boolean(false)),
+        Property(key: "layer", operator: Assign, value: Text("massive_environment")),
+        Property(key: "pdxmesh", operator: Assign, value: Text("sandstone_monument_01_mesh")),
+        Property(key: "count", operator: Assign, value: Number("1")),
+        Property(key: "transform", operator: Assign, value: Text("1592.226929 0.236816 2395.148438 0.000000 0.823001 0.000000 0.568039 0.109807 0.109807 0.109807\n")),
+    ])),
+])

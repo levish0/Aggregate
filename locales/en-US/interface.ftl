@@ -102,6 +102,9 @@ management-food = Food: required { $required } · consumed { $consumed } · shor
 management-stock-change = Last day { $amount }
 management-facility-staffing = Total level { $level } · Active workers last day: { $workers }
 management-project-progress = { $work } worker-days remaining · Up to { $workers } builders
+management-project-awaiting-allocation = Awaiting the next daily labor allocation
+management-project-workers = Last workday: { $active } / { $requested } local workers
+management-project-labor-shortage = Last workday: { $active } / { $requested } workers · Local labor shortage
 management-no-construction = No active construction in this province.
 management-labor-title = One shared workforce
 management-labor-help = Production and construction share the same workers. When demand exceeds the workforce, workers are divided proportionally. Missing materials can leave assigned workers inactive. A new building needs workers to operate after completion.
@@ -115,3 +118,47 @@ world-good-tools = Tools
 world-facility-grain-farm = Grain farm
 world-facility-logging-camp = Logging camp
 world-facility-tool-workshop = Tool workshop
+
+menu-world-map = World map
+map-title = World map
+map-atlas = WORLD / TERRAIN & TERRITORY
+map-mode-terrain = Terrain map
+map-mode-political = Political map
+map-select-province = Select a region
+map-select-hint = Select a province on the map to inspect its country and terrain.
+map-hover-hint = Point at the map to explore a region
+map-loading = Loading terrain and provinces…
+map-load-failed = Unable to load the map
+map-counts = { $provinces } provinces · { $regions } regions
+map-country = Country
+map-terrain = Terrain
+map-water = Water
+map-land = Land
+map-unassigned = Unassigned
+map-controls-title = EXPLORE THE MAP
+map-controls = Hold Tab · World overview
+    Wheel · Zoom
+    Middle drag · Pan
+    Right drag · Tilt / rotate; heading returns on release
+    WASD / Arrow keys · Pan
+    Alt+2 · Political map
+    Left click · Select province
+terrain-plains = Plains
+terrain-hills = Hills
+terrain-mountain = Mountains
+terrain-mountains = Mountains
+terrain-desert = Desert
+terrain-jungle = Jungle
+terrain-forest = Forest
+terrain-snow = Snow
+terrain-tundra = Tundra
+terrain-ocean = Ocean
+terrain-lake = Lake
+terrain-wetland = Wetland
+terrain-unknown = Unclassified
+map-overview-hint = Click a destination, then release Tab to move there
+map-keyboard = Hold Tab · World overview    Ctrl+Tab · UI focus    Esc · Return
+map-nav-management = Nation
+map-nav-settings = Setup
+map-outliner-title = Regions
+map-lens-title = Map modes

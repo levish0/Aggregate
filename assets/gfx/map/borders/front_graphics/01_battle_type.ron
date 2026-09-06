@@ -1,0 +1,12 @@
+(schema_version: 1, entries: [
+    Property(key: "frontline_center_entity_01", operator: Assign, value: Block([
+        Property(key: "type", operator: Assign, value: Symbol("battle")),
+        Property(key: "weight", operator: Assign, value: Block([
+            Property(key: "value", operator: Assign, value: Number("1")),
+        ])),
+        Property(key: "environment_entity", operator: Assign, value: Block([
+            Property(key: "name", operator: Assign, value: Text("war_center_active_entity")),
+            Property(key: "one_time_action", operator: Assign, value: Boolean(true)),
+        ])),
+    ])),
+])

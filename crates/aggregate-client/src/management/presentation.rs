@@ -15,14 +15,20 @@ pub fn province_name(
     state: &InterfaceState,
     id: &ProvinceId,
 ) -> String {
-    let name = session
+    let province = session
         .snapshot
         .provinces
         .iter()
-        .find(|item| item.id == *id)
-        .map(|item| item.name.as_str())
-        .unwrap_or(&id.0);
-    content_name(state, "province", &id.0, name)
+        .find(|item| item.id == *id);
+    province
+        .map(|province| {
+            province
+                .name_key
+                .as_ref()
+                .and_then(|key| state.localization.text(key).ok())
+                .unwrap_or_else(|| province.name.clone())
+        })
+        .unwrap_or_else(|| id.to_string())
 }
 
 pub fn facility_name(

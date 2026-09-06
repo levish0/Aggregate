@@ -1,0 +1,302 @@
+(schema_version: 1, entries: [
+    Property(key: "D00", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D01", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D02", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D03", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D04", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D05", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D06", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D07", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D08", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D09", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D10", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D11", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D12", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D13", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D14", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D15", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D16", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D17", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D18", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D19", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D20", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D21", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D22", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D23", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D24", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D25", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D26", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D27", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D28", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D29", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D30", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D31", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D32", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D33", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D34", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D35", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D36", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D37", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D38", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D39", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D40", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D41", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D42", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D43", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D44", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D45", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D46", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D47", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D48", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D49", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D50", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D51", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D52", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D53", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D54", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D55", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D56", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D57", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D58", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D59", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D60", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D61", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D62", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D63", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D64", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D65", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D66", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D67", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D68", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D69", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D70", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D71", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D72", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D73", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D74", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D75", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D76", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D77", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D78", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D79", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D80", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D81", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D82", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D83", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D84", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D85", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D86", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D87", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D88", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D89", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D90", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D91", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D92", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D93", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D94", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D95", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D96", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D97", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D98", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+    Property(key: "D99", operator: Assign, value: Block([
+        Property(key: "dynamic_country_definition", operator: Assign, value: Boolean(true)),
+    ])),
+])

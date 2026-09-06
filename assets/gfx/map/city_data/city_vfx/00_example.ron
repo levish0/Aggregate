@@ -1,0 +1,8 @@
+// Source line 1:  City VFX is a way to show additional graphics for cities placed in the center of the city on condition
+// Source line 2:  test_city_vfx = { 		# vfx name key is never used
+// Source line 3: 	entity = <entity_name> 	# entity type scripted in an .asset file
+// Source line 4: 	visible = {}			# visible trigger in a state scope that defines visual effect show condition
+// Source line 5: 							# in case if visible trigger became false entity will finish latest state and get destroyed
+// Source line 6: 							# !IMPORTANT! Keep visible trigger simple it is called for every vfx for every city in view each frame
+// Source line 7: }
+(schema_version: 1, entries: [])

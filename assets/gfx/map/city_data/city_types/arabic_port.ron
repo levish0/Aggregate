@@ -1,0 +1,47 @@
+// Source line 11: in grid-space units. 1.0 means the mesh can be placed anywhere inside its allotted cell
+// Source line 12: in degrees
+// Source line 32: offsets for regular buildings
+(schema_version: 1, entries: [
+    Property(key: "arabic_port", operator: Assign, value: Block([
+        Property(key: "graphical_culture", operator: Assign, value: Text("arabic")),
+        Property(key: "city_type", operator: Assign, value: Symbol("port")),
+        Property(key: "rich_building_meshes", operator: Assign, value: Block([
+            Item(Text("arabic_urban_city_residential_rich_01_mesh")),
+            Item(Text("arabic_urban_city_residential_rich_02_mesh")),
+            Item(Text("arabic_urban_city_residential_rich_03_mesh")),
+        ])),
+        Property(key: "rich_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.0")),
+            Property(key: "rotation", operator: Assign, value: Number("0.0")),
+        ])),
+        Property(key: "mid_building_meshes", operator: Assign, value: Block([
+            Item(Text("arabic_urban_city_residential_mid_01_mesh")),
+            Item(Text("arabic_urban_city_residential_mid_02_mesh")),
+            Item(Text("arabic_urban_city_residential_mid_03_mesh")),
+        ])),
+        Property(key: "mid_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.2")),
+            Property(key: "rotation", operator: Assign, value: Number("6.25")),
+        ])),
+        Property(key: "poor_building_meshes", operator: Assign, value: Block([
+            Item(Text("arabic_urban_city_residential_poor_01_mesh")),
+            Item(Text("arabic_urban_city_residential_poor_02_mesh")),
+            Item(Text("arabic_urban_city_residential_poor_03_mesh")),
+        ])),
+        Property(key: "poor_building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.2")),
+            Property(key: "rotation", operator: Assign, value: Number("20.0")),
+        ])),
+        Property(key: "building_offsets", operator: Assign, value: Block([
+            Property(key: "position", operator: Assign, value: Number("0.0")),
+            Property(key: "rotation", operator: Assign, value: Number("0.0")),
+        ])),
+        Property(key: "building_fishing_wharf", operator: Assign, value: Block([])),
+        Property(key: "building_whaling_station", operator: Assign, value: Block([])),
+        Property(key: "building_port", operator: Assign, value: Block([])),
+        Property(key: "building_shipyard", operator: Assign, value: Block([])),
+        Property(key: "building_naval_logistics_center", operator: Assign, value: Block([
+            Item(Text("generic_logisticscenter_01_mesh")),
+        ])),
+    ])),
+])

@@ -8,10 +8,26 @@ fn fixture() -> Scenario {
     parse_scenario(include_str!("../../../scenarios/foundation.json")).unwrap()
 }
 
+#[test]
+fn managed_geographic_ids_reject_nil_and_duplicate_uuids() {
+    let mut scenario = fixture();
+    scenario.initial_state.countries[0].id = Uuid::nil().into();
+    assert!(validate_scenario(&scenario).is_err());
+    let mut scenario = fixture();
+    scenario.initial_state.provinces[0].id = Uuid::nil().into();
+    assert!(validate_scenario(&scenario).is_err());
+    let mut scenario = fixture();
+    scenario.initial_state.provinces[1].id = scenario.initial_state.provinces[0].id.clone();
+    assert!(validate_scenario(&scenario).is_err());
+    assert!("northern_province".parse::<ProvinceId>().is_err());
+}
+
 fn project() -> ConstructionProjectState {
     ConstructionProjectState {
         facility_id: FacilityId::from(Uuid::from_u128(10)),
-        province: ProvinceId::from("north_valley"),
+        province: "01a07577-e209-792a-aba0-8dba97d92ac6"
+            .parse::<ProvinceId>()
+            .unwrap(),
         definition: FacilityDefinitionId::from("grain_farm"),
         requested_workers: 10,
         remaining_worker_days: 10,

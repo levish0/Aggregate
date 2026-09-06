@@ -2,6 +2,7 @@ mod main_menu;
 pub mod management;
 mod preview;
 mod settings;
+pub mod world_map;
 
 use crate::state::{InterfaceAction, InterfaceState, Screen};
 use aggregate_ui::{button::UiButton, components, fonts::UiFonts, theme};
@@ -51,6 +52,7 @@ pub fn rebuild(
     match state.screen {
         Screen::MainMenu => main_menu::build(&mut commands, root, &fonts, &state),
         Screen::Management => management::build(&mut commands, root, &fonts, &state, &session),
+        Screen::WorldMap => world_map::build(&mut commands, root, &fonts, &state),
         Screen::Preview => preview::build(&mut commands, root, &fonts, &state),
         Screen::Settings => settings::build(&mut commands, root, &fonts, &state),
     }
@@ -85,9 +87,10 @@ fn footer(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Interf
             ..default()
         },
     );
-    commands
-        .entity(row)
-        .insert(BackgroundColor(theme::INK.with_alpha(0.92)));
+    commands.entity(row).insert((
+        BackgroundColor(theme::INK.with_alpha(0.92)),
+        aggregate_ui::layout::UiPointerBlocker,
+    ));
     components::text(
         commands,
         row,
@@ -101,7 +104,11 @@ fn footer(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Interf
         commands,
         row,
         fonts,
-        state.text("status-keyboard"),
+        state.text(if state.screen == Screen::WorldMap {
+            "map-keyboard"
+        } else {
+            "status-keyboard"
+        }),
         12.,
         theme::MUTED,
         false,

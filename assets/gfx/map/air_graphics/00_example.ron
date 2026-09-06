@@ -1,0 +1,16 @@
+// Source line 1: Air graphics type is used for generating entities flying between regions
+// Source line 2: 
+// Source line 3: 	air_graphics_type = {			# Air graphics type key
+// Source line 4: 		entities = {				# Entities that could be used for this air type
+// Source line 5: 			air_entity_1 = {	
+// Source line 6: 				name = "entity_1"	# Entity name from .asset files
+// Source line 7: 				weight = {}			# Weight for 
+// Source line 8: 				possible = {}
+// Source line 9: 			}
+// Source line 10: 		possible = {}				# Trigger to determine if the entity is possible at all for country scope both 'region' and 'target_region'
+// Source line 11: 		entity_length = 3.0			# Entity length is the length used for placing entities on the air route, default 3
+// Source line 12: 		speed = 0.5					# Speed is how fast the entity of this type is moving, default 0.5
+// Source line 13: 		max_count = 20				# Max count is max amount of those air entities shown on the map, default 100
+// Source line 14: 		height = 1.0				# Air offset for entity, default 1.0
+// Source line 15: 	}
+(schema_version: 1, entries: [])

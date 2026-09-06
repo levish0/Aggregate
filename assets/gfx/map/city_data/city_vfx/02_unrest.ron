@@ -1,0 +1,22 @@
+(schema_version: 1, entries: [
+    Property(key: "unrest_stage_4", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "turmoil", operator: GreaterThanOrEqual, value: Number("0.5")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("turmoil_stage_4")),
+    ])),
+    Property(key: "unrest_stage_3", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "turmoil", operator: GreaterThanOrEqual, value: Number("0.35")),
+            Property(key: "turmoil", operator: LessThan, value: Number("0.5")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("turmoil_stage_3")),
+    ])),
+    Property(key: "unrest_stage_2", operator: Assign, value: Block([
+        Property(key: "visible", operator: Assign, value: Block([
+            Property(key: "turmoil", operator: GreaterThanOrEqual, value: Number("0.2")),
+            Property(key: "turmoil", operator: LessThan, value: Number("0.35")),
+        ])),
+        Property(key: "entity", operator: Assign, value: Text("turmoil_stage_2")),
+    ])),
+])

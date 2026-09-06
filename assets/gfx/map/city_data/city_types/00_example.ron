@@ -1,0 +1,83 @@
+// Source line 1: default_city = {
+// Source line 2: 	city_type = city
+// Source line 3: #	
+// Source line 4: 	trigger = {} 		# trigger is a state region scope
+// Source line 5: 	weight = -1 		# default weight is -1, anything above that will be treated as more prioritized city type
+// Source line 6: 	
+// Source line 7: 	min_residential_buildings = 2				# min amount of residential buildings
+// Source line 8: 	max_residential_buildings = 150          	# max amount of residential buildings
+// Source line 9: 	max_residence_points = 200
+// Source line 10: 
+// Source line 11: 	rich_building_meshes = {
+// Source line 12: 		"european_urban_residential_rich_01_mesh"
+// Source line 13: 		"european_urban_residential_rich_03_mesh"
+// Source line 14: 		"european_urban_residential_rich_02_mesh"	
+// Source line 15: 	}
+// Source line 16: 	rich_building_offsets = {
+// Source line 17: 		position = 0.0	#in grid-space units. 1.0 means the mesh can be placed anywhere inside its allotted cell
+// Source line 18: 		rotation = 0.0	#in degrees
+// Source line 19: 	}
+// Source line 20: 	mid_building_meshes = {
+// Source line 21: 		"european_urban_residential_mid_01_mesh"
+// Source line 22: 		"european_urban_residential_mid_03_mesh"
+// Source line 23: 		"european_urban_residential_mid_02_mesh"
+// Source line 24: 	}
+// Source line 25: 	mid_building_offsets = {
+// Source line 26: 		position = 0.0
+// Source line 27: 		rotation = 0.0
+// Source line 28: 	}
+// Source line 29: 	poor_building_meshes = {
+// Source line 30: 		"european_urban_residential_poor_02_mesh"
+// Source line 31: 		"european_urban_residential_poor_03_mesh"
+// Source line 32: 		"european_urban_residential_poor_01_mesh"
+// Source line 33: 	}
+// Source line 34: 	poor_building_offsets = {
+// Source line 35: 		position = 0.1
+// Source line 36: 		rotation = 12.5
+// Source line 37: 	}
+// Source line 38: 	building_offsets = {	#offsets for regular buildings
+// Source line 39: 		position = 0.0
+// Source line 40: 		rotation = 0.0
+// Source line 41: 	}
+// Source line 42: 	
+// Source line 43: 	building_construction_sector = {"furniture_manufactory_01_mesh"}
+// Source line 44: 	building_food_industry = {"furniture_manufactory_01_mesh"}
+// Source line 45: 	building_textile_mill = {
+// Source line 46: 		#"generic_manufactory_01_mesh"
+// Source line 47: 		"tools_manufactory_01_mesh"
+// Source line 48: 		#"generic_manufactory_03_mesh"
+// Source line 49: 	}
+// Source line 50: 	building_furniture_manufactory= {"furniture_manufactory_01_mesh"}
+// Source line 51: 	building_glassworks = {"glassworks_manufactory_01_mesh"}
+// Source line 52: 	building_tooling_workshop = {"tools_manufactory_01_mesh"}
+// Source line 53: 	building_paper_mill = {"tools_manufactory_01_mesh"}
+// Source line 54: 	building_chemical_plant = {"glassworks_manufactory_01_mesh"}
+// Source line 55: 	building_steel_mill = {"glassworks_manufactory_01_mesh"}
+// Source line 56: 	building_arms_industry = {"tools_manufactory_01_mesh"}
+// Source line 57: 	building_automotive_industry = {"war_machines_manufactory_01_mesh"}
+// Source line 58: 	building_motor_industry = {"furniture_manufactory_01_mesh"}
+// Source line 59: 	building_munition_plant = {"tools_manufactory_01_mesh"}
+// Source line 60: 	building_synthetics_plant = {"tools_manufactory_01_mesh"}
+// Source line 61: 	building_electrics_industry = {"tools_manufactory_01_mesh"}
+// Source line 62: 	building_power_plant = {"furniture_manufactory_01_mesh"}
+// Source line 63: 
+// Source line 64: 	building_suez_canal = {"generic_manufactory_01_mesh"}
+// Source line 65: 	building_panama_canal = {"generic_manufactory_01_mesh"}
+// Source line 66: 	building_eiffel_tower = {"wonder_eiffel_tower_01_mesh"}
+// Source line 67: 	
+// Source line 68: 	building_religious = {"european_city_catholic_cathedral_01_mesh"}
+// Source line 69: 	
+// Source line 70: 	building_urban_center = {}
+// Source line 71: 	
+// Source line 72: 	building_government_administration = {"european_city_government_administration_01_mesh"}
+// Source line 73: 	building_trade_center = {"european_city_tradecenter_01_mesh"}
+// Source line 74: 	building_university = {"european_city_university_01_mesh"}
+// Source line 75: 	building_art_academy = {"european_city_academy_01_mesh"}
+// Source line 76: 	building_skyscraper = {"wonder_big_ben_01_mesh"}
+// Source line 77: 	building_barrack = {"european_city_barracks_01_mesh"}
+// Source line 78: 	building_manor_house = {"european_city_tradecenter_01_mesh"}
+// Source line 79: 	building_financial_district = {"european_city_tradecenter_01_mesh"}
+// Source line 80: 	building_company_headquarter = {"generic_companyhq_01_mesh"}
+// Source line 81: 	building_company_headquarter = {"generic_regionalcompanyhq_01_mesh"}
+// Source line 82: }
+(schema_version: 1, entries: [])

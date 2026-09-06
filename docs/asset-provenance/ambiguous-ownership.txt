@@ -1,0 +1,2 @@
+Source history assigns these RGB colors to multiple countries. Ownership remains unset in geography.ron pending an explicit scenario decision.
+{19041, fa44f, 1c026d, 1f8376, 23f98b, 256aee, 26a0ba, 2790a8, 2ee19c, 40b080, 418b71, 4de76b, 53c5ef, 56fd87, 5c1ada, 5c9007, 5f1d19, 63a92c, 665e5b, 668a47, 74c317, 810c1a, 83f33b, 84f73c, 88c527, 8acede, 8dcd09, 92d597, 9660d3, 9a78b7, 9e582e, a0b0c0, ac39a0, aeef76, afd438, b7d6f2, bcf376, c05001, ca9f75, d34bb3, d5c61d, da8ef4, e27dfb, e5bcc5, e80e2e, e90347, f1e6c3, f414b2, f423db, f56448, f9f60a}

@@ -1,0 +1,115 @@
+// Source line 5:  Specifed with id numbers
+// Source line 6:  Number of NavMesh vertices to skip between each anchor
+// Source line 15:  Number of NavMesh vertices to skip between each anchor
+// Source line 24:  Number of NavMesh vertices to skip between each anchor
+// Source line 33:  Number of NavMesh vertices to skip between each anchor
+// Source line 41:  Specifed with id numbers
+// Source line 42:  Number of NavMesh vertices to skip between each anchor
+// Source line 50:  Specifed with id numbers
+// Source line 51:  Number of NavMesh vertices to skip between each anchor
+// Source line 59:  Specifed with id numbers
+// Source line 60:  Number of NavMesh vertices to skip between each anchor
+// Source line 68:  Specifed with id numbers
+(schema_version: 1, entries: [
+    Property(key: "dirtroad", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("0")),
+        Property(key: "default_style", operator: Assign, value: Number("0")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.75")),
+            Item(Number("0.75")),
+            Item(Number("0")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("1")),
+        Property(key: "anchor_type", operator: Assign, value: Number("0")),
+    ])),
+    Property(key: "railroad", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("1")),
+        Property(key: "default_style", operator: Assign, value: Number("1")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.875")),
+            Item(Number("0")),
+            Item(Number("0")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("1")),
+        Property(key: "anchor_type", operator: Assign, value: Number("0")),
+    ])),
+    Property(key: "naval_route", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("2")),
+        Property(key: "default_style", operator: Assign, value: Number("2")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0")),
+            Item(Number("0")),
+            Item(Number("0.80")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("3")),
+        ])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("8")),
+        Property(key: "anchor_type", operator: Assign, value: Number("1")),
+    ])),
+    Property(key: "coastal_naval_route", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("3")),
+        Property(key: "default_style", operator: Assign, value: Number("3")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.40")),
+            Item(Number("0")),
+            Item(Number("0.80")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("3")),
+        ])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("8")),
+        Property(key: "anchor_type", operator: Assign, value: Number("1")),
+    ])),
+    Property(key: "pavedroad", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("4")),
+        Property(key: "default_style", operator: Assign, value: Number("4")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.75")),
+            Item(Number("0.75")),
+            Item(Number("0.5")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("1")),
+        Property(key: "anchor_type", operator: Assign, value: Number("0")),
+    ])),
+    Property(key: "pavedroadsandstone", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("5")),
+        Property(key: "default_style", operator: Assign, value: Number("5")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.75")),
+            Item(Number("0.75")),
+            Item(Number("1")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("1")),
+        Property(key: "anchor_type", operator: Assign, value: Number("0")),
+    ])),
+    Property(key: "undeveloped", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("6")),
+        Property(key: "default_style", operator: Assign, value: Number("6")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.25")),
+            Item(Number("0.25")),
+            Item(Number("0.25")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([])),
+        Property(key: "anchor_sparsity", operator: Assign, value: Number("1")),
+        Property(key: "anchor_type", operator: Assign, value: Number("0")),
+    ])),
+    Property(key: "river", operator: Assign, value: Block([
+        Property(key: "id", operator: Assign, value: Number("15")),
+        Property(key: "default_style", operator: Assign, value: Number("255")),
+        Property(key: "color", operator: Assign, value: Block([
+            Item(Number("0.0")),
+            Item(Number("0.0")),
+            Item(Number("1.0")),
+        ])),
+        Property(key: "merge_with_types", operator: Assign, value: Block([])),
+        Property(key: "anchor_type", operator: Assign, value: Number("0")),
+    ])),
+])

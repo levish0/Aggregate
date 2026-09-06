@@ -2,14 +2,21 @@ use serde::{Deserialize, Serialize};
 use std::{fmt, str::FromStr};
 use uuid::Uuid;
 
-/// Stable country key authored in a scenario, independent of its display name.
+/// Persistent country identity, independent of its name, tag or ECS allocation.
 #[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 #[serde(transparent)]
-pub struct CountryId(pub String);
+pub struct CountryId(pub Uuid);
 
-impl From<&str> for CountryId {
-    fn from(value: &str) -> Self {
-        Self(value.to_owned())
+impl From<Uuid> for CountryId {
+    fn from(value: Uuid) -> Self {
+        Self(value)
+    }
+}
+
+impl FromStr for CountryId {
+    type Err = uuid::Error;
+    fn from_str(value: &str) -> Result<Self, Self::Err> {
+        Uuid::parse_str(value).map(Self)
     }
 }
 
@@ -19,14 +26,45 @@ impl fmt::Display for CountryId {
     }
 }
 
-/// Stable province key authored in a scenario, independent of ECS entity allocation.
+/// Persistent province identity. Raster colors and render indices are separate lookup keys.
 #[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 #[serde(transparent)]
-pub struct ProvinceId(pub String);
+pub struct ProvinceId(pub Uuid);
 
-impl From<&str> for ProvinceId {
-    fn from(value: &str) -> Self {
-        Self(value.to_owned())
+impl From<Uuid> for ProvinceId {
+    fn from(value: Uuid) -> Self {
+        Self(value)
+    }
+}
+
+impl FromStr for ProvinceId {
+    type Err = uuid::Error;
+    fn from_str(value: &str) -> Result<Self, Self::Err> {
+        Uuid::parse_str(value).map(Self)
+    }
+}
+
+/// Persistent administrative/geographic grouping of map provinces.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
+#[serde(transparent)]
+pub struct RegionId(pub Uuid);
+
+impl From<Uuid> for RegionId {
+    fn from(value: Uuid) -> Self {
+        Self(value)
+    }
+}
+
+impl FromStr for RegionId {
+    type Err = uuid::Error;
+    fn from_str(value: &str) -> Result<Self, Self::Err> {
+        Uuid::parse_str(value).map(Self)
+    }
+}
+
+impl fmt::Display for RegionId {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        self.0.fmt(formatter)
     }
 }
 

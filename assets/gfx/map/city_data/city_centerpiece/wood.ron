@@ -1,0 +1,63 @@
+(schema_version: 1, entries: [
+    Property(key: "african_wood_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("african_wood")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("african_forestry_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "arabic_wood_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("arabic_wood")),
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("southasian_wood")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("arabic_forestry_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "asian_wood_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("asian_wood")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("asian_forestry_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "european_wood_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("default_wood")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("european_forestry_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+    Property(key: "latin_wood_01", operator: Assign, value: Block([
+        Property(key: "city_graphics_type", operator: Assign, value: Symbol("latin_wood")),
+        Property(key: "grid_size", operator: Assign, value: Block([
+            Item(Number("2")),
+            Item(Number("2")),
+        ])),
+        Property(key: "attach", operator: Assign, value: Block([
+            Property(key: "variant", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Symbol("latin_forestry_centerpiece_01_entity")),
+            ])),
+        ])),
+    ])),
+])

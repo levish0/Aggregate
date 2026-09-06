@@ -4,8 +4,8 @@
     "sequence": 1,
     "command": {
       "type": "start_construction",
-      "country": "example_republic",
-      "province": "north_valley",
+      "country": "01a07577-e203-76f4-8315-dae6c69b13bb",
+      "province": "01a07577-e209-792a-aba0-8dba97d92ac6",
       "facility": "00000000-0000-0000-0000-000000000010",
       "definition": "grain_farm",
       "workers": 10,

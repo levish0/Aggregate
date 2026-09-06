@@ -1,0 +1,897 @@
+// Source line 1: ################################################################
+// Source line 2: ####				TRADE ROUTE GRAPHICS					#####
+// Source line 3: ################################################################
+// Source line 6: ################################################
+// Source line 7: ##       			HORSE 		 			  ###
+// Source line 8: ################################################
+// Source line 48: ################################################
+// Source line 49: ##       			MOTORS 		 			  ###
+// Source line 50: ################################################
+// Source line 102: ################################################################
+// Source line 103: ####				TRADE ROUTE GRAPHICS END				#####
+// Source line 104: ################################################################
+// Source line 106: ################################################################
+// Source line 107: ####				MILITARY MOBILIZATION					#####
+// Source line 108: ################################################################
+// Source line 204: ################################################################
+// Source line 205: ####				INFANTRY UNITS, FIRST					#####
+// Source line 206: ################################################################
+// Source line 209: ################################################
+// Source line 210: ##       			European     			  ###
+// Source line 211: ################################################
+// Source line 255: ################################################
+// Source line 256: ##       			African     			  ###
+// Source line 257: ################################################
+// Source line 301: ################################################
+// Source line 302: ##       			Arabic     				  ###
+// Source line 303: ################################################
+// Source line 347: ################################################
+// Source line 348: ##       			East Asian     			  ###
+// Source line 349: ################################################
+// Source line 393: ################################################
+// Source line 394: ##       			South Asian     		  ###
+// Source line 395: ################################################
+// Source line 440: ################################################################
+// Source line 441: ####						CARGO							#####
+// Source line 442: ################################################################
+// Source line 472: ################################################################
+// Source line 473: ####				INFANTRY UNITS, LAST					#####
+// Source line 474: ################################################################
+// Source line 477: ################################################
+// Source line 478: ##       			European     			  ###
+// Source line 479: ################################################
+// Source line 547: ################################################
+// Source line 548: ##       			African     			  ###
+// Source line 549: ################################################
+// Source line 617: ################################################
+// Source line 618: ##       			Arabic     				  ###
+// Source line 619: ################################################
+// Source line 687: ################################################
+// Source line 688: ##       			East Asian     			  ###
+// Source line 689: ################################################
+// Source line 757: ################################################
+// Source line 758: ##       			South Asian     		  ###
+// Source line 759: ################################################
+// Source line 827: ################################################
+// Source line 828: ##       	MILITARY MOBILIZATION END   	  ###
+// Source line 829: ################################################
+(schema_version: 1, entries: [
+    Property(key: "horse_cart_dirtroad_route_graphics", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("dirtroad")),
+            Item(Text("pavedroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("0.5")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("10.0")),
+        Property(key: "max_count", operator: Assign, value: Number("400")),
+        Property(key: "max_path_length", operator: Assign, value: Number("2")),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "NOR", operator: Assign, value: Block([
+                Property(key: "gfx_car_condition_trigger", operator: Assign, value: Boolean(true)),
+                Property(key: "gfx_truck_condition_trigger", operator: Assign, value: Boolean(true)),
+                Property(key: "gfx_tracktor_condition_trigger", operator: Assign, value: Boolean(true)),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "horses_01", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("horses_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("0.7")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "integer_range", operator: Assign, value: Block([
+                        Property(key: "min", operator: Assign, value: Number("1")),
+                        Property(key: "max", operator: Assign, value: Number("2")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "cart_01", operator: Assign, value: Block([
+                Property(key: "entity", operator: Assign, value: Text("horse_cart_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("0.9")),
+            ])),
+        ])),
+    ])),
+    Property(key: "motor_dirt_road_route_graphics", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("dirtroad")),
+            Item(Text("pavedroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("0.5")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("10.0")),
+        Property(key: "max_count", operator: Assign, value: Number("400")),
+        Property(key: "max_path_length", operator: Assign, value: Number("4")),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "car", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_car_condition_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "truck", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_truck_condition_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "tractor", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_tracktor_condition_trigger", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "car_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("car")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("european_car_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("3.0")),
+            ])),
+            Property(key: "truck_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("truck")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("flatbed_truck_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("3.0")),
+            ])),
+            Property(key: "tractor_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("tractor")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("tractor_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("3.0")),
+            ])),
+        ])),
+    ])),
+    Property(key: "military_mobilization_dirtroad", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("dirtroad")),
+            Item(Text("pavedroad")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("0.5")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("10.0")),
+        Property(key: "max_count", operator: Assign, value: Number("400")),
+        Property(key: "max_path_length", operator: Assign, value: Number("2")),
+        Property(key: "possible", operator: Assign, value: Block([
+            Property(key: "any_military_formation", operator: Assign, value: Block([
+                Property(key: "is_mobilized", operator: Assign, value: Boolean(true)),
+            ])),
+        ])),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "european", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_culture_is_european", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "african", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_culture_is_african", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "arabic", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_culture_is_arabic", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "east_asian", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_culture_is_east_asian", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "south_asian", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_culture_is_south_asian", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "irregular", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_is_irregular", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "line", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_is_line", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "skirmish", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_is_skirmish", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "trench", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_is_trench", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "squad", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_is_squad", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "mechanized", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "gfx_military_mobilization_is_mechanized", operator: Assign, value: Boolean(true)),
+                ])),
+            ])),
+            Property(key: "truck", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "army_mobilization_option_fraction", operator: Assign, value: Block([
+                        Property(key: "target", operator: Assign, value: Symbol("mobilization_option:mobilization_option_truck_transport")),
+                        Property(key: "value", operator: GreaterThanOrEqual, value: Number("0.2")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "horse_and_cart", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "army_mobilization_option_fraction", operator: Assign, value: Block([
+                        Property(key: "target", operator: Assign, value: Symbol("mobilization_option:mobilization_option_truck_transport")),
+                        Property(key: "value", operator: LessThan, value: Number("0.2")),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "infantry_european_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_european_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_european_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_european_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_european_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_european_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_african_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_african_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_african_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_african_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_african_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_african_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_arabic_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_arabic_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_arabic_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_arabic_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_arabic_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_arabic_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_eastasian_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_eastasian_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_eastasian_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_eastasian_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_eastasian_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_eastasian_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_southasian_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_southasian_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_southasian_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_southasian_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_southasian_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "infantry_southasian_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+            ])),
+            Property(key: "generic_military_truck_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("truck")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_transport_road_truck_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("2.0")),
+            ])),
+            Property(key: "military_horses_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("horse_and_cart")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("horses_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("1")),
+                Property(key: "entity_length", operator: Assign, value: Number("0.7")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "integer_range", operator: Assign, value: Block([
+                        Property(key: "min", operator: Assign, value: Number("1")),
+                        Property(key: "max", operator: Assign, value: Number("2")),
+                    ])),
+                ])),
+            ])),
+            Property(key: "military_cart_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("horse_and_cart")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_transport_road_horsecart_generic_entity")),
+                Property(key: "position", operator: Assign, value: Number("2")),
+                Property(key: "entity_length", operator: Assign, value: Number("0.9")),
+            ])),
+            Property(key: "infantry_european_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_european_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_european_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_european_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_european_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_european_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("european")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_european_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_african_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_african_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_african_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_african_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_african_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_african_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("african")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_african_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_arabic_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_arabic_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_arabic_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_arabic_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_arabic_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_arabic_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("arabic")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_arabic_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_eastasian_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_eastasian_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_eastasian_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_eastasian_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_eastasian_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_eastasian_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("east_asian")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_eastasian_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_southasian_irregular", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("irregular")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_irregular_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_southasian_line", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("line")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_line_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_southasian_skirmish", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("skirmish")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_skirmish_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_southasian_trench", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("trench")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_trench_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_southasian_squad", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("squad")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_squad_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+            Property(key: "infantry_southasian_mechanized", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("south_asian")),
+                    Item(Symbol("mechanized")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("military_infantry_southasian_mechanized_entity")),
+                Property(key: "position", operator: Assign, value: Number("3")),
+                Property(key: "entity_length", operator: Assign, value: Number("1.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "add", operator: Assign, value: Symbol("gfx_infantry_mobilization_count")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

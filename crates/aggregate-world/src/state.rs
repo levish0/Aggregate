@@ -7,6 +7,8 @@ use std::collections::BTreeMap;
 pub struct CountryState {
     pub id: CountryId,
     pub name: String,
+    #[serde(default)]
+    pub name_key: Option<String>,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -15,6 +17,8 @@ pub struct ProvinceState {
     pub id: ProvinceId,
     pub country: CountryId,
     pub name: String,
+    #[serde(default)]
+    pub name_key: Option<String>,
     pub stockpile: BTreeMap<GoodId, u64>,
 }
 

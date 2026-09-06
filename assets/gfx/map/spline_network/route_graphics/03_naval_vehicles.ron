@@ -1,0 +1,87 @@
+// Source line 18:  Let's have a 'significant' amount of sales
+// Source line 38:  Let's have a 'significant' amount of sales
+// Source line 67:  Let's have a 'significant' amount of sales
+// Source line 87:  Let's have a 'significant' amount of sales
+(schema_version: 1, entries: [
+    Property(key: "screw_frigates", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("naval_route")),
+            Item(Text("coastal_naval_route")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("1.5")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("35.0")),
+        Property(key: "max_count", operator: Assign, value: Number("50")),
+        Property(key: "max_path_length", operator: Assign, value: Number("10")),
+        Property(key: "side_offset", operator: Assign, value: Number("1")),
+        Property(key: "path_generation_mode", operator: Assign, value: Symbol("naval")),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "cargo", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "has_technology_researched", operator: Assign, value: Symbol("screw_frigate")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:clippers", operator: Assign, value: Block([Property(key: "market_goods_sell_orders", operator: GreaterThan, value: Number("10"))]))])),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "generic_ship_cargo_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("cargo")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("generic_ship_cargo_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("3.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:clippers", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("5000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("3")),
+                ])),
+            ])),
+        ])),
+    ])),
+    Property(key: "steam_boats", operator: Assign, value: Block([
+        Property(key: "valid_spline_styles", operator: Assign, value: Block([
+            Item(Text("naval_route")),
+            Item(Text("coastal_naval_route")),
+        ])),
+        Property(key: "speed", operator: Assign, value: Number("1.5")),
+        Property(key: "min_caravan_distance", operator: Assign, value: Number("35.0")),
+        Property(key: "max_count", operator: Assign, value: Number("50")),
+        Property(key: "max_path_length", operator: Assign, value: Number("10")),
+        Property(key: "side_offset", operator: Assign, value: Number("1")),
+        Property(key: "path_generation_mode", operator: Assign, value: Symbol("naval")),
+        Property(key: "tags", operator: Assign, value: Block([
+            Property(key: "steam", operator: Assign, value: Block([
+                Property(key: "trigger", operator: Assign, value: Block([
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:steamers", operator: Assign, value: Block([Property(key: "market_goods_sell_orders", operator: GreaterThan, value: Number("10"))]))])),
+                    ])),
+                ])),
+            ])),
+        ])),
+        Property(key: "route_entities", operator: Assign, value: Block([
+            Property(key: "steam_transport_ship_01", operator: Assign, value: Block([
+                Property(key: "tags", operator: Assign, value: Block([
+                    Item(Symbol("steam")),
+                ])),
+                Property(key: "entity", operator: Assign, value: Text("steam_transport_ship_01_entity")),
+                Property(key: "position", operator: Assign, value: Number("0")),
+                Property(key: "entity_length", operator: Assign, value: Number("3.0")),
+                Property(key: "count", operator: Assign, value: Block([
+                    Property(key: "value", operator: Assign, value: Number("0")),
+                    Property(key: "scope:state", operator: Assign, value: Block([
+                        Property(key: "market", operator: Assign, value: Block([Property(key: "mg:steamers", operator: Assign, value: Block([Property(key: "add", operator: Assign, value: Symbol("market_goods_sell_orders"))]))])),
+                    ])),
+                    Property(key: "divide", operator: Assign, value: Number("4000")),
+                    Property(key: "add", operator: Assign, value: Number("1")),
+                    Property(key: "max", operator: Assign, value: Number("3")),
+                ])),
+            ])),
+        ])),
+    ])),
+])

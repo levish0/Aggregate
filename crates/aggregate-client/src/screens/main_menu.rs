@@ -122,6 +122,14 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         commands,
         panel,
         fonts,
+        &state.text("menu-world-map"),
+        UiButton::secondary(1),
+        InterfaceAction::OpenWorldMap,
+    );
+    action_button(
+        commands,
+        panel,
+        fonts,
         &state.text("menu-management"),
         UiButton::primary(0),
         InterfaceAction::OpenManagement,
@@ -131,7 +139,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         panel,
         fonts,
         &state.text("menu-preview"),
-        UiButton::secondary(1),
+        UiButton::secondary(2),
         InterfaceAction::OpenPreview,
     );
     action_button(
@@ -139,7 +147,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         panel,
         fonts,
         &state.text("menu-settings"),
-        UiButton::secondary(2),
+        UiButton::secondary(3),
         InterfaceAction::OpenSettings,
     );
     action_button(
@@ -147,7 +155,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         panel,
         fonts,
         &state.text("menu-exit"),
-        UiButton::secondary(3),
+        UiButton::secondary(4),
         InterfaceAction::Exit,
     );
     ui::rule(commands, panel);
@@ -156,7 +164,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         panel,
         fonts,
         "한국어  /  ENGLISH",
-        UiButton::secondary(4),
+        UiButton::secondary(5),
         InterfaceAction::SwitchLanguage,
     );
     ui::text(

@@ -58,7 +58,9 @@ fn drive_capture(
     let action = match run.frame {
         55 => Some(ManagementAction::StartConstruction("grain_farm".into())),
         60 | 120 | 125 | 130 | 135 => Some(ManagementAction::StepDay),
-        205 => Some(ManagementAction::SelectProvince("south_ridge".into())),
+        205 => Some(ManagementAction::SelectProvince(
+            "01a07577-e209-7938-8120-efb504849d04".parse().unwrap(),
+        )),
         _ => None,
     };
     if let Some(action) = action {
