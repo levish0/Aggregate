@@ -116,27 +116,27 @@ fn terrain_soft_light(detail: vec3<f32>, tint: vec3<f32>) -> vec3<f32> {
 }
 
 fn water_surface(uv: vec2<f32>, world: vec3<f32>, dx: vec2<f32>, dy: vec2<f32>) -> vec3<f32> {
-    let drift = globals.time * vec2<f32>(0.008,-0.004);
+    let drift = globals.time * vec2<f32>(1.0/120.0,-1.0/240.0);
     let wave_uv = world.xz * 0.3125;
     let flow_sample = textureSample(water_flow,water_flow_sampler,uv).rgb;
     let flow = (flow_sample.rg*2.0-1.0)*vec2<f32>(1.0,-1.0)*flow_sample.b;
     // Two bounded phases avoid accumulating distortion as a session gets longer.
-    let phase = fract(globals.time*0.04);
+    let phase = fract(globals.time*0.12);
     let next_phase = fract(phase+0.5);
     let flow_first = textureSampleGrad(water_normal,water_normal_sampler,wave_uv-flow*phase,dx*1.28,dy*1.28).rgb*2.0-1.0;
     let flow_second = textureSampleGrad(water_normal,water_normal_sampler,wave_uv-flow*next_phase,dx*1.28,dy*1.28).rgb*2.0-1.0;
     let current = mix(flow_first,flow_second,abs(phase*2.0-1.0));
     let first = textureSampleGrad(water_normal,water_normal_sampler,wave_uv+drift,dx*1.28,dy*1.28).rgb*2.0-1.0;
-    let second = textureSampleGrad(water_normal,water_normal_sampler,wave_uv*0.63-drift*0.8,dx*0.8064,dy*0.8064).rgb*2.0-1.0;
+    let second = textureSampleGrad(water_normal,water_normal_sampler,wave_uv*0.625-drift*0.8,dx*0.8064,dy*0.8064).rgb*2.0-1.0;
     let waves = first+second+current*0.4;
-    let normal = normalize(vec3<f32>(waves.x*0.45,1.0,waves.y*0.45));
+    let normal = normalize(vec3<f32>(waves.x*0.7,1.0,waves.y*0.7));
     let eye = normalize(view.world_position-world);
     let light = normalize(vec3<f32>(-0.5,0.85,-0.35));
     let halfway = normalize(eye+light);
     let fresnel = 0.04+0.65*pow(1.0-max(dot(eye,normal),0.0),5.0);
     let source = textureSample(water_color,water_sampler,uv);
     let reflection = vec3<f32>(0.24,0.36,0.54);
-    let specular = pow(max(dot(normal,halfway),0.0),96.0) * source.a * 0.14;
+    let specular = pow(max(dot(normal,halfway),0.0),96.0) * source.a * 0.22;
     let ripple_light = 0.72+0.45*max(dot(normal,light),0.0);
     return mix(source.rgb*0.78,reflection,fresnel)*ripple_light + vec3<f32>(specular);
 }

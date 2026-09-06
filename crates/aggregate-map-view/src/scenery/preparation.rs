@@ -20,7 +20,9 @@ fn records(root: &Path, name: &str, magic: &[u8; 4]) -> Result<Vec<[f32; 4]>, St
         return Err(format!("Invalid scenery length: {name}"));
     }
     bytes[12..]
-        .chunks_exact(16)
+        .as_chunks::<16>()
+        .0
+        .iter()
         .map(|record| {
             let values = std::array::from_fn(|i| {
                 f32::from_le_bytes(record[i * 4..i * 4 + 4].try_into().unwrap())

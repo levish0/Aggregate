@@ -21,10 +21,10 @@ fn weather_coverage(point: vec2<f32>) -> f32 {
 
 fn cloud_field(world: vec2<f32>, width: f32, time: f32, density_map: texture_2d<f32>, density_sampler: sampler) -> CloudField {
     let normalized = world/width;
-    let primary_uv = normalized*18.0+time*vec2<f32>(0.0003,0.00008);
+    let primary_uv = normalized*18.0+time*vec2<f32>(1.0/900.0,1.0/3600.0);
     // Different scale, rotation and wind. Integer horizontal periods retain the map seam.
     let rotated = vec2<f32>(normalized.x*0.6+normalized.y*0.8,-normalized.x*0.8+normalized.y*0.6);
-    let secondary_uv = rotated*25.0+vec2<f32>(0.37,0.61)+time*vec2<f32>(-0.00013,0.00018);
+    let secondary_uv = rotated*25.0+vec2<f32>(0.37,0.61)+time*vec2<f32>(-1.0/1800.0,1.0/1200.0);
     let primary = textureSample(density_map,density_sampler,primary_uv).g;
     let secondary = textureSample(density_map,density_sampler,secondary_uv).g;
     let coverage = weather_coverage(normalized*8.0+time*vec2<f32>(0.00005,0.00002));

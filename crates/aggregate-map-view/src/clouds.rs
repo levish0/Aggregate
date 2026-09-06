@@ -43,7 +43,7 @@ pub fn spawn_clouds(
     *spawned = true;
     let size = map.0.terrain.size;
     let material = materials.add(MapCloudMaterial {
-        visibility: Vec4::new(0.,size.x,0.,0.),
+        visibility: Vec4::new(0., size.x, 0., 0.),
         density: crate::loading::repeating_texture(&server, "gfx/map/fog_of_war/cloud.dds", false),
         normal: crate::loading::repeating_texture(
             &server,
@@ -61,7 +61,7 @@ pub fn spawn_clouds(
 
 pub fn opacity(distance: f32) -> f32 {
     let near = ((distance - 35.) / 45.).clamp(0., 1.);
-    let far = ((distance - 220.) / 180.).clamp(0., 1.);
+    let far = ((distance - 110.) / 70.).clamp(0., 1.);
     near * near * (3. - 2. * near) * (1. - far * far * (3. - 2. * far))
 }
 
@@ -73,8 +73,8 @@ pub fn update_visibility(
         return;
     }
     let opacity = opacity(controller.distance);
-    for (_, mut material) in materials.iter_mut() {
-        let visibility = Vec4::new(opacity,material.visibility.y,0.,0.);
+    for (_, material) in materials.iter_mut() {
+        let visibility = Vec4::new(opacity, material.visibility.y, 0., 0.);
         if material.visibility != visibility {
             material.visibility = visibility;
         }
@@ -88,6 +88,7 @@ mod tests {
         assert_eq!(super::opacity(25.), 0.);
         assert_eq!(super::opacity(95.), 1.);
         assert_eq!(super::opacity(450.), 0.);
+        assert_eq!(super::opacity(180.), 0.);
         assert!(super::opacity(55.) > 0. && super::opacity(55.) < 1.);
     }
 }
