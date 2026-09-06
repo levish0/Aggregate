@@ -32,6 +32,14 @@ fn coverage(group: u32, channel: u32, ids: vec4<u32>, weights: vec4<f32>) -> f32
     return dot(select(vec4<f32>(0.0), vec4<f32>(1.0), matches), weights);
 }
 
+fn province_coverage(province: u32, ids: vec4<u32>, weights: vec4<f32>, fraction: vec2<f32>, footprint: f32) -> f32 {
+    if province == 0u { return 0.0; }
+    let values = select(vec4<f32>(0.0), vec4<f32>(1.0), ids == vec4<u32>(province));
+    let gradient = vec2<f32>(mix(values.y-values.x, values.w-values.z, fraction.y), mix(values.z-values.x, values.w-values.y, fraction.x));
+    let signed_distance = (dot(values, weights)-0.5) / max(length(gradient),0.001);
+    return smoothstep(-footprint*0.6,footprint*0.6,signed_distance);
+}
+
 fn boundary(group: u32, channel: u32, ids: vec4<u32>, weights: vec4<f32>, fraction: vec2<f32>, footprint: f32) -> f32 {
     let values = select(vec4<f32>(0.0), vec4<f32>(1.0), vec4<bool>(styles[ids.x].grouping[channel] == group, styles[ids.y].grouping[channel] == group, styles[ids.z].grouping[channel] == group, styles[ids.w].grouping[channel] == group));
     let gradient = vec2<f32>(mix(values.y-values.x, values.w-values.z, fraction.y), mix(values.z-values.x, values.w-values.y, fraction.x));
@@ -61,11 +69,6 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let water = style.grouping.z != 0u;
     let normal = normalize(in.world_normal);
     let light = 0.48 + 0.52 * max(dot(normal, normalize(vec3<f32>(-0.5,0.85,-0.35))),0.0);
-    let grain = sin(in.world_position.x*1.8)*sin(in.world_position.z*1.3)*0.01;
-    let near_x = styles[province_at(pixel+vec2<i32>(8,0))].terrain.rgb;
-    let near_z = styles[province_at(pixel+vec2<i32>(0,8))].terrain.rgb;
-    let far_x = styles[province_at(pixel-vec2<i32>(8,0))].terrain.rgb;
-    let far_z = styles[province_at(pixel-vec2<i32>(0,8))].terrain.rgb;
     let atlas = textureSample(color_map,color_sampler,in.uv).rgb;
     let grass = textureSample(grass_detail,grass_sampler,fract(in.world_position.xz*0.12)).rgb;
     let rock_detail_color = textureSample(rock_detail,rock_sampler,fract(in.world_position.xz*0.16)).rgb;
@@ -87,25 +90,18 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
         let waves = sin(in.world_position.x*0.7)*sin(in.world_position.z*0.9)*0.0006;
         color = mix(vec3<f32>(0.025,0.10,0.18),sea,0.6)+waves;
     }
-    let offset = max(vec2<i32>(1),vec2<i32>(ceil(fwidth(in.uv)*dimensions*0.8)));
-    let right = province_at(pixel+vec2<i32>(offset.x,0));
-    let below = province_at(pixel+vec2<i32>(0,offset.y));
-    let border = styles[right].grouping.y != style.grouping.y || styles[below].grouping.y != style.grouping.y;
-    let state_border = styles[right].grouping.w != style.grouping.w || styles[below].grouping.w != style.grouping.w;
-    let coast = styles[right].grouping.z != style.grouping.z || styles[below].grouping.z != style.grouping.z;
     if !water { color *= 1.0-country_outline*0.55; }
     if !water && selection.z != 0u { color *= 1.0-state_outline*0.22; }
     color = mix(color,vec3<f32>(0.40,0.55,0.52),coast_outline*0.3);
     if !water { color = mix(color,vec3<f32>(0.045,0.19,0.26),river_coverage*0.80); }
-    if id == selection.y && id != 0u { color = mix(color,vec3<f32>(0.78,0.69,0.38),0.24); }
-    let selected_state = styles[selection.x].grouping.w;
-    let selected_country = styles[selection.x].grouping.y;
-    let in_selection = select(selected_state != 0u && style.grouping.w == selected_state, selected_country != 0u && style.grouping.y == selected_country, selection.w != 0u);
+    let hovered_coverage = province_coverage(selection.y,ids,weights,fraction,footprint);
+    color = mix(color,vec3<f32>(1.0),hovered_coverage*0.12);
     if selected_group != 0u {
-        color = mix(color,vec3<f32>(0.70,0.78,0.83),selected_coverage*0.16);
-        color = mix(color,vec3<f32>(0.93,0.96,1.0),selection_outline*0.92);
-    } else if id == selection.x && id != 0u {
-        color = mix(color,vec3<f32>(0.85,0.60,0.20),0.35);
+        color = mix(color,vec3<f32>(1.0),selected_coverage*0.12);
+        color = mix(color,vec3<f32>(1.0),selection_outline*0.92);
+    } else {
+        let selected_province_coverage = province_coverage(selection.x,ids,weights,fraction,footprint);
+        color = mix(color,vec3<f32>(1.0),selected_province_coverage*0.20);
     }
     return vec4<f32>(color,1.0);
 }

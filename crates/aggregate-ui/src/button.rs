@@ -123,12 +123,16 @@ fn next_index(current: Option<usize>, length: usize, reverse: bool) -> usize {
 
 pub fn pointer_interaction(
     mouse: Res<ButtonInput<MouseButton>>,
+    window_interaction: Option<Res<crate::window::WindowInteraction>>,
     buttons: Query<(Entity, &Interaction, &UiButton), Changed<Interaction>>,
     mut activated: MessageWriter<ButtonActivated>,
     mut focus: ResMut<KeyboardFocus>,
     mut input_focus: ResMut<InputFocus>,
     mut focus_visible: ResMut<InputFocusVisible>,
 ) {
+    if window_interaction.is_some_and(|interaction| interaction.is_captured()) {
+        return;
+    }
     if mouse.just_pressed(MouseButton::Left) {
         focus_visible.0 = false;
     }
