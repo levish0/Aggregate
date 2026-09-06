@@ -180,3 +180,6 @@ inspection-no-program-data = No enabled program provides information for this se
 inspection-program-error = Program information could not be calculated. See the diagnostic log.
 inspection-statistics-unavailable = Population and economy data have not been assigned to this territory.
 inspection-return-state = Return to selected state
+
+map-player-country = Player country
+map-elapsed-time = Elapsed time

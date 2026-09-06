@@ -24,9 +24,20 @@ pub struct MapLoadTask(Task<Result<PreparedWorldMap, String>>);
 #[derive(Resource)]
 pub struct PendingMapTextures(Vec<Handle<Image>>);
 
-pub fn finish_textures(mut commands: Commands, pending: Option<Res<PendingMapTextures>>, server: Res<AssetServer>, mut state: ResMut<MapViewState>) {
-    let Some(pending) = pending else { return; };
-    if pending.0.iter().all(|handle| server.is_loaded_with_dependencies(handle.id())) {
+pub fn finish_textures(
+    mut commands: Commands,
+    pending: Option<Res<PendingMapTextures>>,
+    server: Res<AssetServer>,
+    mut state: ResMut<MapViewState>,
+) {
+    let Some(pending) = pending else {
+        return;
+    };
+    if pending
+        .0
+        .iter()
+        .all(|handle| server.is_loaded_with_dependencies(handle.id()))
+    {
         state.loading = false;
         commands.remove_resource::<PendingMapTextures>();
         info!("Map textures ready");
@@ -217,9 +228,20 @@ pub fn finish_loading(
         grass_detail: server.load("gfx/map/terrain/grasslands_01_diffuse.dds"),
         rock_detail: server.load("gfx/map/terrain/rocks_01_diffuse.dds"),
         water_color: server.load("gfx/map/water/watercolor_rgb_waterspec_a.dds"),
-        river_distance: server.load_builder().with_settings(|settings: &mut bevy::image::ImageLoaderSettings| { settings.is_srgb = false; }).load("map_data/river_distance.png"),
+        river_distance: server
+            .load_builder()
+            .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
+                settings.is_srgb = false;
+            })
+            .load("map_data/river_distance.png"),
     };
-    commands.insert_resource(PendingMapTextures(vec![terrain_material.color_map.clone(),terrain_material.grass_detail.clone(),terrain_material.rock_detail.clone(),terrain_material.water_color.clone(),terrain_material.river_distance.clone()]));
+    commands.insert_resource(PendingMapTextures(vec![
+        terrain_material.color_map.clone(),
+        terrain_material.grass_detail.clone(),
+        terrain_material.rock_detail.clone(),
+        terrain_material.water_color.clone(),
+        terrain_material.river_distance.clone(),
+    ]));
     let material = materials.add(terrain_material);
     for mesh in prepared_meshes {
         let mesh = meshes.add(mesh);

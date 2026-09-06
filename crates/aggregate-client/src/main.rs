@@ -11,6 +11,7 @@ mod native_capture;
 mod native_map_capture;
 mod screens;
 mod state;
+mod world_setup;
 
 use aggregate_ui::{AggregateUiPlugin, UiSystems};
 use bevy::{
@@ -57,6 +58,7 @@ fn create_app() -> App {
     app.add_plugins(AggregateUiPlugin)
         .add_plugins(aggregate_map_view::MapViewPlugin { asset_root })
         .init_resource::<state::InterfaceState>()
+        .init_resource::<world_setup::WorldSetup>()
         .init_resource::<country_presentation::CountryFlags>()
         .init_resource::<screens::world_map::inspection::InspectionView>()
         .insert_resource(session)
@@ -68,9 +70,12 @@ fn create_app() -> App {
             (
                 (
                     interaction::apply_actions,
+                    world_setup::apply_actions,
+                    world_setup::finish_initialization,
                     management::apply_management_actions,
                     management::advance_running_session,
                     screens::rebuild,
+                    world_setup::rebuild,
                     screens::world_map::configure_view,
                     screens::world_map::outliner::apply_jumps,
                     screens::world_map::inspection::apply_actions,

@@ -71,6 +71,7 @@ impl InterfaceState {
 pub enum InterfaceAction {
     OpenManagement,
     OpenWorldMap,
+    ConfigureWorld,
     OpenPreview,
     OpenSettings,
     Back,

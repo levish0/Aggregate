@@ -1,5 +1,7 @@
 # Aggregate milestones
 
+- [2026-09-06 — Programs and inspection windows](2026-09-06-programs-and-inspection-windows.md): Rust programs, modern ownership baseline, administrative inspection, monochrome windows, licensed flags, diagnostics and current validation limits; supersedes earlier UI/ownership status.
+
 - [2026-09-06 — Native geography and interface](2026-09-06-native-map-interface.md): UUID geography, terrain picking/wrapping, verified mouse/Tab controls, derived cache, DDS UI surfaces and native validation; 2026 scenario remains pending.
 
 - [2026-09-06 — RON map conversion](2026-09-06-ron-map-conversion.md): 218 structural RON documents, reusable converter/reader, LFS rules and explicit-only commit policy; recent asset commit undone.

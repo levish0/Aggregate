@@ -180,3 +180,6 @@ inspection-no-program-data = 현재 선택에 정보를 제공하는 활성 프�
 inspection-program-error = 프로그램 정보를 계산하지 못했습니다. 진단 로그를 확인하세요.
 inspection-statistics-unavailable = 이 영토에는 아직 인구·경제 초기 데이터가 배정되지 않았습니다.
 inspection-return-state = 선택한 주로 돌아가기
+
+map-player-country = 플레이 국가
+map-elapsed-time = 경과 시간

@@ -30,6 +30,8 @@ pub struct ManagementSession {
     pub news: Vec<NewsEntry>,
     pub feedback: SessionFeedback,
     pub running: bool,
+    pub session_id: uuid::Uuid,
+    pub geographic: bool,
 }
 
 #[derive(Resource)]
@@ -61,8 +63,22 @@ impl ManagementSession {
             news: Vec::new(),
             feedback: SessionFeedback::Ready,
             running: false,
+            session_id: uuid::Uuid::now_v7(),
+            geographic: false,
         }
     }
+
+    pub fn geographic(scenario: aggregate_world::Scenario, player_country: CountryId, programs: Vec<std::sync::Arc<dyn aggregate_programs::SimulationProgram>>) -> Result<Self, SimulationError> {
+        if !scenario.initial_state.provinces.iter().any(|province| province.country == player_country) {
+            return Err(SimulationError::CommandRejected("selected country has no playable land".into()));
+        }
+        let definitions = scenario.definitions.clone();
+        let mut simulation = Simulation::from_scenario_with_programs(scenario, programs)?;
+        let snapshot = simulation.snapshot();
+        Ok(Self { simulation, snapshot, definitions, player_country, last_report: None, news: Vec::new(), feedback: SessionFeedback::Ready, running: false, session_id: uuid::Uuid::now_v7(), geographic: true })
+    }
+
+    pub fn enabled_programs(&self) -> Vec<aggregate_programs::SavedProgramState> { self.simulation.program_states() }
 
     pub fn initial_view(&self) -> ManagementViewState {
         ManagementViewState {

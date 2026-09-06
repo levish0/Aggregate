@@ -8,6 +8,7 @@ use bevy::prelude::*;
 pub enum ManagementAction {
     SelectProvince(ProvinceId),
     StartConstruction(FacilityDefinitionId),
+    StartConstructionAt { province: ProvinceId, definition: FacilityDefinitionId },
     StepDay,
     ToggleRunning,
 }
@@ -20,7 +21,7 @@ pub fn apply_management_actions(
     mut view: ResMut<ManagementViewState>,
 ) {
     for event in activated.read() {
-        if state.screen != Screen::Management {
+        if state.screen != Screen::Management && !(state.screen == Screen::WorldMap && session.geographic) {
             continue;
         }
         let Ok((action, button)) = actions.get(event.0) else {
@@ -44,6 +45,7 @@ pub fn apply_management_actions(
             ManagementAction::StartConstruction(definition) => {
                 session.start_construction(&view.selected_province, definition)
             }
+            ManagementAction::StartConstructionAt { province, definition } => session.start_construction(province, definition),
             ManagementAction::StepDay => {
                 session.running = false;
                 session.step();
@@ -61,7 +63,7 @@ pub fn advance_running_session(
     time: Res<Time<Real>>,
     mut elapsed: Local<f32>,
 ) {
-    if state.screen != Screen::Management || !session.running {
+    if !(state.screen == Screen::Management || (state.screen == Screen::WorldMap && session.geographic)) || !session.running {
         if session.running {
             session.running = false;
         }

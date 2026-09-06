@@ -29,26 +29,30 @@ pub struct WindowInteraction {
 }
 
 impl WindowInteraction {
-    pub fn is_captured(&self) -> bool { self.capture.is_some() }
+    pub fn is_captured(&self) -> bool {
+        self.capture.is_some()
+    }
 }
 
 /// Shared title bar: callers add their title and window action buttons as children.
 pub fn title_bar(commands: &mut Commands, parent: Entity, window: Entity) -> Entity {
-    let entity = commands.spawn((
-        Node {
-            width: percent(100),
-            min_height: px(40),
-            flex_shrink: 0.,
-            align_items: AlignItems::Center,
-            column_gap: px(10),
-            padding: UiRect::axes(px(12), px(6)),
-            border: UiRect::bottom(px(1)),
-            ..default()
-        },
-        BackgroundColor(crate::theme::TITLE_BAR),
-        BorderColor::all(crate::theme::BORDER),
-        WindowDragHandle(window),
-    )).id();
+    let entity = commands
+        .spawn((
+            Node {
+                width: percent(100),
+                min_height: px(40),
+                flex_shrink: 0.,
+                align_items: AlignItems::Center,
+                column_gap: px(10),
+                padding: UiRect::axes(px(12), px(6)),
+                border: UiRect::bottom(px(1)),
+                ..default()
+            },
+            BackgroundColor(crate::theme::TITLE_BAR),
+            BorderColor::all(crate::theme::BORDER),
+            WindowDragHandle(window),
+        ))
+        .id();
     commands.entity(parent).add_child(entity);
     entity
 }
@@ -67,11 +71,7 @@ pub fn interact(
         &mut Node,
         Option<&GlobalZIndex>,
     )>,
-    handles: Query<(
-        &ComputedNode,
-        &UiGlobalTransform,
-        &WindowDragHandle,
-    )>,
+    handles: Query<(&ComputedNode, &UiGlobalTransform, &WindowDragHandle)>,
     buttons: Query<(&ComputedNode, &UiGlobalTransform), With<Button>>,
 ) {
     let Ok((window_entity, window)) = windows.single() else {
@@ -105,18 +105,32 @@ pub fn interact(
             };
             let edges = ResizeEdges::at(pointer, geometry);
             let over_title = handles.iter().any(|(node, transform, drag)| {
-                drag.0 == entity && Rect::from_center_size(transform.translation, node.size()).contains(cursor)
+                drag.0 == entity
+                    && Rect::from_center_size(transform.translation, node.size()).contains(cursor)
             });
             let over_button = buttons.iter().any(|(node, transform)| {
                 node.size().min_element() > 0.
                     && Rect::from_center_size(transform.translation, node.size()).contains(cursor)
             });
-            cursor_icon = edges.map_or_else(|| if over_title && !over_button { SystemCursorIcon::Grab } else { SystemCursorIcon::Default }, ResizeEdges::cursor);
+            cursor_icon = edges.map_or_else(
+                || {
+                    if over_title && !over_button {
+                        SystemCursorIcon::Grab
+                    } else {
+                        SystemCursorIcon::Default
+                    }
+                },
+                ResizeEdges::cursor,
+            );
             if mouse.just_pressed(MouseButton::Left) {
                 interaction.next_order += 1;
-                commands.entity(entity).insert(GlobalZIndex(20 + interaction.next_order));
+                commands
+                    .entity(entity)
+                    .insert(GlobalZIndex(20 + interaction.next_order));
             }
-            if mouse.just_pressed(MouseButton::Left) && (edges.is_some() || (over_title && !over_button)) {
+            if mouse.just_pressed(MouseButton::Left)
+                && (edges.is_some() || (over_title && !over_button))
+            {
                 interaction.capture = Some(WindowCapture {
                     entity,
                     pointer,
@@ -146,7 +160,9 @@ pub fn interact(
         interaction.positions.insert(window.key.clone(), geometry);
     }
     if interaction.cursor != Some(cursor_icon) {
-        commands.entity(window_entity).insert(CursorIcon::System(cursor_icon));
+        commands
+            .entity(window_entity)
+            .insert(CursorIcon::System(cursor_icon));
         interaction.cursor = Some(cursor_icon);
     }
     for (_, window, computed, _, mut node, _) in &mut floating {

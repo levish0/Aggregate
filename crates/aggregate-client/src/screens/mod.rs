@@ -28,10 +28,11 @@ pub fn rebuild(
             Screen,
             crate::state::PreviewTab,
             aggregate_localization::Language,
+            uuid::Uuid,
         )>,
     >,
 ) {
-    let view = (state.screen, state.tab, state.localization.language());
+    let view = (state.screen, state.tab, state.localization.language(), session.session_id);
     if *previous == Some(view) && !fonts.is_changed() {
         return;
     }
@@ -52,7 +53,7 @@ pub fn rebuild(
     match state.screen {
         Screen::MainMenu => main_menu::build(&mut commands, root, &fonts, &state),
         Screen::Management => management::build(&mut commands, root, &fonts, &state, &session),
-        Screen::WorldMap => world_map::build(&mut commands, root, &fonts, &state),
+        Screen::WorldMap => world_map::build(&mut commands, root, &fonts, &state, &session),
         Screen::Preview => preview::build(&mut commands, root, &fonts, &state),
         Screen::Settings => settings::build(&mut commands, root, &fonts, &state),
     }

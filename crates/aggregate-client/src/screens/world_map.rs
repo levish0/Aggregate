@@ -20,6 +20,8 @@ pub struct MapOutlinerPanel;
 pub enum MapLabel {
     Status,
     Hover,
+    Population,
+    Day,
 }
 
 pub fn configure_view(
@@ -102,6 +104,7 @@ pub fn configure_keyboard_policy(
 
 pub fn update_labels(
     interface: Res<InterfaceState>,
+    session: Res<crate::management::ManagementSession>,
     state: Res<MapViewState>,
     map: Option<Res<LoadedWorldMap>>,
     mut labels: Query<(&MapLabel, &mut Text)>,
@@ -139,18 +142,33 @@ pub fn update_labels(
                     format!("{}\n{error}", interface.text("map-load-failed"))
                 } else if state.loading {
                     interface.text("map-loading")
-                } else if let Some(map) = &map {
-                    interface.format(
-                        "map-counts",
-                        &[
-                            ("provinces", map.0.catalog.provinces.len().to_string()),
-                            ("regions", map.0.catalog.regions.len().to_string()),
-                        ],
-                    )
+                } else if map.is_some() {
+                    String::new()
                 } else {
                     interface.text("map-loading")
                 }
             }
+            MapLabel::Population => {
+                let owned: std::collections::BTreeSet<_> = session
+                    .snapshot
+                    .provinces
+                    .iter()
+                    .filter(|province| province.country == session.player_country)
+                    .map(|province| &province.id)
+                    .collect();
+                session
+                    .snapshot
+                    .population_groups
+                    .iter()
+                    .filter(|group| owned.contains(&group.province))
+                    .map(|group| u128::from(group.population))
+                    .sum::<u128>()
+                    .to_string()
+            }
+            MapLabel::Day => interface.format(
+                "management-day",
+                &[("day", session.snapshot.day.to_string())],
+            ),
             MapLabel::Hover if state.overview_active => interface.text("map-overview-hint"),
             MapLabel::Hover => {
                 region_name(state.hovered_index).unwrap_or_else(|| interface.text("map-hover-hint"))

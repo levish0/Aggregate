@@ -109,10 +109,12 @@ dependencies = [
  "aggregate-localization",
  "aggregate-map-view",
  "aggregate-programs",
+ "aggregate-public-health",
  "aggregate-scenario",
  "aggregate-simulation-core",
  "aggregate-ui",
  "aggregate-world",
+ "aggregate-world-generation",
  "anyhow",
  "bevy",
  "ron",
@@ -178,6 +180,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "aggregate-public-health"
+version = "0.1.0"
+dependencies = [
+ "aggregate-programs",
+ "aggregate-world",
+ "semver",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "aggregate-scenario"
 version = "0.1.0"
 dependencies = [
@@ -215,6 +228,17 @@ dependencies = [
 name = "aggregate-world"
 version = "0.1.0"
 dependencies = [
+ "serde",
+ "uuid",
+]
+
+[[package]]
+name = "aggregate-world-generation"
+version = "0.1.0"
+dependencies = [
+ "aggregate-geography",
+ "aggregate-scenario",
+ "aggregate-world",
  "serde",
  "uuid",
 ]

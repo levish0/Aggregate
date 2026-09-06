@@ -15,6 +15,9 @@ pub fn apply_actions(
     mut focus: ResMut<KeyboardFocus>,
     mut exit: MessageWriter<AppExit>,
     mut map: ResMut<aggregate_map_view::MapViewState>,
+    mut setup: ResMut<crate::world_setup::WorldSetup>,
+    initialization: Option<Res<crate::world_setup::WorldInitializationTask>>,
+    mut session: ResMut<crate::management::ManagementSession>,
 ) {
     let requested: Vec<_> = activated
         .read()
@@ -23,6 +26,10 @@ pub fn apply_actions(
     let escape = keys.just_pressed(KeyCode::Escape)
         && !tooltip.dismissed_this_frame
         && !select.dismissed_this_frame;
+    if escape && setup.open {
+        if initialization.is_none() { setup.open = false; }
+        return;
+    }
     if escape && state.screen == Screen::WorldMap {
         if map.overview_active {
             return;
@@ -43,6 +50,7 @@ pub fn apply_actions(
         match action {
             InterfaceAction::OpenManagement => state.screen = Screen::Management,
             InterfaceAction::OpenWorldMap => state.screen = Screen::WorldMap,
+            InterfaceAction::ConfigureWorld => { state.screen = Screen::WorldMap; setup.open = true; session.running = false; }
             InterfaceAction::OpenPreview => state.screen = Screen::Preview,
             InterfaceAction::OpenSettings => state.screen = Screen::Settings,
             InterfaceAction::Back => state.screen = Screen::MainMenu,
@@ -69,6 +77,7 @@ pub fn apply_actions(
             InterfaceAction::OpenPreview
                 | InterfaceAction::OpenManagement
                 | InterfaceAction::OpenWorldMap
+                | InterfaceAction::ConfigureWorld
                 | InterfaceAction::OpenSettings
                 | InterfaceAction::Back
                 | InterfaceAction::SwitchLanguage

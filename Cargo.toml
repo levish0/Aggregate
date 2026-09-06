@@ -26,6 +26,8 @@ aggregate-world = { path = "crates/aggregate-world" }
 aggregate-scenario = { path = "crates/aggregate-scenario" }
 aggregate-economy = { path = "crates/aggregate-economy" }
 aggregate-programs = { path = "crates/aggregate-programs" }
+aggregate-world-generation = { path = "crates/aggregate-world-generation" }
+aggregate-public-health = { path = "crates/aggregate-public-health" }
 aggregate-simulation-core = { path = "crates/aggregate-simulation-core" }
 
 # External dependencies

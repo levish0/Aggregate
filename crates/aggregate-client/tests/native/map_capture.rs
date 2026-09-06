@@ -19,6 +19,9 @@ struct MapCapture {
     initial_target: Vec3,
     initial_pitch: f32,
     initial_yaw: f32,
+    window_position: Vec2,
+    window_size: Vec2,
+    window_pointer: Vec2,
 }
 
 #[test]
@@ -58,6 +61,14 @@ fn drive_capture(
     ),
     mut exit: MessageWriter<AppExit>,
     mut controller: ResMut<MapCameraController>,
+    window_layout: (
+        Res<UiScale>,
+        Query<(
+            &aggregate_ui::window::FloatingWindow,
+            &ComputedNode,
+            &UiGlobalTransform,
+        )>,
+    ),
 ) {
     let (mut mouse, mut keys, mut motion) = input;
     capture.frame += 1;
@@ -75,7 +86,9 @@ fn drive_capture(
             .0;
         activated.write(ButtonActivated(entity));
     }
-    if let Some(map) = map && !state.loading {
+    if let Some(map) = map
+        && !state.loading
+    {
         capture.ready_frames += 1;
         let frame = capture.ready_frames;
         // Choose an actual on-screen land pixel. Recover the ID through the camera ray,
@@ -121,6 +134,31 @@ fn drive_capture(
             assert!(state.political);
             assert!(!selects.single().unwrap().open);
         }
+        if frame == 105 {
+            let (_, node, transform) = window_layout.1.single().unwrap();
+            let scale = window.scale_factor() * window_layout.0.0;
+            capture.window_position = (transform.translation - node.size() / 2.) / scale;
+            capture.window_size = node.size() / scale;
+            capture.window_pointer =
+                capture.window_position + capture.window_size - Vec2::splat(2.);
+            window.set_cursor_position(Some(capture.window_pointer * window_layout.0.0));
+            mouse.press(MouseButton::Left);
+        }
+        if frame == 106 {
+            window.set_cursor_position(Some(
+                (capture.window_pointer + Vec2::new(70., 35.)) * window_layout.0.0,
+            ));
+        }
+        if frame == 108 {
+            let (_, node, _) = window_layout.1.single().unwrap();
+            let size = node.size() / (window.scale_factor() * window_layout.0.0);
+            assert!(
+                (size - capture.window_size - Vec2::new(70., 35.)).length() < 2.,
+                "window border resize: {size:?}"
+            );
+            assert_eq!(state.selected_index, capture.expected_index);
+            mouse.release(MouseButton::Left);
+        }
         if frame == 115 {
             window.set_cursor_position(Some(Vec2::new(80., 180.)));
             mouse.press(MouseButton::Left);
@@ -132,6 +170,29 @@ fn drive_capture(
         }
         if frame == 140 {
             activated.write(ButtonActivated(triggers.single().unwrap()));
+        }
+        if frame == 133 {
+            let (_, node, transform) = window_layout.1.single().unwrap();
+            let scale = window.scale_factor() * window_layout.0.0;
+            capture.window_position = (transform.translation - node.size() / 2.) / scale;
+            capture.window_pointer = capture.window_position + Vec2::new(260., 24.);
+            window.set_cursor_position(Some(capture.window_pointer * window_layout.0.0));
+            mouse.press(MouseButton::Left);
+        }
+        if frame == 134 {
+            window.set_cursor_position(Some(
+                (capture.window_pointer + Vec2::new(40., 24.)) * window_layout.0.0,
+            ));
+        }
+        if frame == 136 {
+            let (_, node, transform) = window_layout.1.single().unwrap();
+            let position = (transform.translation - node.size() / 2.)
+                / (window.scale_factor() * window_layout.0.0);
+            assert!(
+                (position - capture.window_position - Vec2::new(40., 24.)).length() < 2.,
+                "window title drag: {position:?}"
+            );
+            mouse.release(MouseButton::Left);
         }
         if frame == 143 {
             keys.press(KeyCode::Escape);
@@ -218,12 +279,22 @@ fn drive_capture(
                 .set_language(aggregate_localization::Language::English);
             window.resolution.set(960., 640.);
         }
+        if frame == 300 {
+            window.resolution.set(1440., 900.);
+            let uv = map.0.provinces.centroids[capture.expected_index as usize];
+            controller.target =
+                Vec3::new(uv.x * map.0.terrain.size.x, 0., uv.y * map.0.terrain.size.y);
+            controller.distance = 60.;
+            controller.desired_distance = 60.;
+            window.set_cursor_position(Some(Vec2::new(720., 450.)));
+        }
         let name = match frame {
             60 => Some("world-map-terrain-ko.png"),
             85 => Some("world-map-select-ko.png"),
             130 => Some("world-map-political-ko.png"),
             190 => Some("world-map-overview-ko.png"),
             290 => Some("world-map-small-en.png"),
+            330 => Some("world-map-province-hover.png"),
             _ => None,
         };
         if let Some(name) = name {
@@ -244,7 +315,7 @@ fn drive_capture(
                 },
             );
         }
-        if frame > 320 && capture.captures == 5 {
+        if frame > 360 && capture.captures == 6 {
             exit.write(AppExit::Success);
         }
     }

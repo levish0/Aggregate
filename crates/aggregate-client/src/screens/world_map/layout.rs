@@ -12,7 +12,13 @@ use aggregate_ui::{
 };
 use bevy::prelude::*;
 
-pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &InterfaceState) {
+pub fn build(
+    commands: &mut Commands,
+    root: Entity,
+    fonts: &UiFonts,
+    state: &InterfaceState,
+    session: &crate::management::ManagementSession,
+) {
     let header = ui::panel(
         commands,
         root,
@@ -27,19 +33,27 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         },
     );
     commands.entity(header).insert(UiPointerBlocker);
-    aggregate_ui::icon::icon(
-        commands,
-        header,
-        aggregate_ui::icon::Icon::Globe,
-        30.,
-        theme::TEXT,
-    );
+    crate::country_presentation::flag(commands, header, session.player_country.clone(), 38.);
+    let country = session
+        .snapshot
+        .countries
+        .iter()
+        .find(|country| country.id == session.player_country);
+    let country_name = country
+        .map(|country| {
+            country
+                .name_key
+                .as_ref()
+                .and_then(|key| state.localization.text(key).ok())
+                .unwrap_or_else(|| country.name.clone())
+        })
+        .unwrap_or_default();
     let title = layout::column(commands, header, 2.);
     ui::text(
         commands,
         title,
         fonts,
-        "AGGREGATE",
+        country_name,
         20.,
         theme::ACCENT_BRIGHT,
         true,
@@ -48,7 +62,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         commands,
         title,
         fonts,
-        state.text("map-title"),
+        state.text("map-player-country"),
         12.,
         theme::MUTED,
         false,
@@ -63,6 +77,23 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         false,
     );
     commands.entity(totals).insert(MapLabel::Status);
+    for (label, marker) in [
+        ("management-population", MapLabel::Population),
+        ("map-elapsed-time", MapLabel::Day),
+    ] {
+        let column = layout::column(commands, header, 2.);
+        ui::text(
+            commands,
+            column,
+            fonts,
+            state.text(label),
+            11.,
+            theme::MUTED,
+            false,
+        );
+        let value = ui::text(commands, column, fonts, "—", 18., theme::TEXT, true);
+        commands.entity(value).insert(marker);
+    }
     ui::node(
         commands,
         header,
@@ -72,6 +103,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         },
     );
     for (key, action, order) in [
+        ("setup-new-world", InterfaceAction::ConfigureWorld, 0),
         ("settings-language", InterfaceAction::SwitchLanguage, 1),
         ("menu-back", InterfaceAction::Back, 2),
     ] {
@@ -91,6 +123,18 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
             UiButton::secondary(order),
             action,
         );
+    }
+
+    let clock = ui::node(commands, root, Node { position_type: PositionType::Absolute, right: px(260), top: px(84), column_gap: px(6), align_items: AlignItems::Center, ..default() });
+    commands.entity(clock).insert(UiPointerBlocker);
+    for (key, action, order) in [
+        ("management-step", crate::management::ManagementAction::StepDay, 10),
+        ("management-run", crate::management::ManagementAction::ToggleRunning, 11),
+    ] {
+        let slot = ui::node(commands,clock,Node { width: px(115), ..default() });
+        let mut style = UiButton::secondary(order); style.enabled = session.geographic;
+        let button = ui::button(commands,slot,fonts,&state.text(key),style);
+        commands.entity(button).insert(action);
     }
 
     let rail = ui::panel(
@@ -125,7 +169,9 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
             min_height: px(60),
             padding: UiRect::all(px(5)),
             border: UiRect::all(px(1)),
-            border_radius: BorderRadius::all(px(22)),
+            border_radius: BorderRadius::all(px(3)),
+            flex_direction: FlexDirection::ColumnReverse,
+            row_gap: px(4),
             align_items: AlignItems::Center,
             justify_content: JustifyContent::Center,
             ..default()

@@ -1,0 +1,13 @@
+[package]
+name = "aggregate-world-generation"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+[dependencies]
+aggregate-world.workspace = true
+aggregate-geography.workspace = true
+aggregate-scenario.workspace = true
+serde.workspace = true
+uuid.workspace = true
+[lints]
+workspace = true
