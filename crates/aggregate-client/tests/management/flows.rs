@@ -31,6 +31,7 @@ fn app() -> App {
             (
                 apply_management_actions,
                 advance_running_session,
+                poll_simulation,
                 screens::rebuild,
                 screens::management::update_management_lists,
                 screens::management::update_management_labels,
@@ -51,6 +52,7 @@ fn activate(app: &mut App, action: ManagementAction) -> Entity {
         .expect("visible action");
     app.world_mut().write_message(ButtonActivated(entity));
     app.update();
+    wait_for_worker(app);
     entity
 }
 
@@ -231,6 +233,7 @@ fn real_time_playback_steps_once_and_manual_step_pauses() {
     ));
     activate(&mut app, ManagementAction::ToggleRunning);
     app.update();
+    wait_for_worker(&mut app);
     assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 1);
     activate(&mut app, ManagementAction::StepDay);
     assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 2);
@@ -249,6 +252,7 @@ fn speed_buttons_change_tick_frequency_and_keep_pause_and_daily_results() {
     assert!(!app.world().resource::<ManagementSession>().running);
     activate(&mut app, ManagementAction::ToggleRunning);
     app.update();
+    wait_for_worker(&mut app);
     assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 1);
     activate(&mut app, ManagementAction::SetSpeed(SimulationSpeed::Five));
     assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 2);
@@ -256,8 +260,20 @@ fn speed_buttons_change_tick_frequency_and_keep_pause_and_daily_results() {
         std::time::Duration::from_secs(30),
     ));
     app.update();
+    wait_for_worker(&mut app);
     assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 3, "a slow frame must not trigger an unbounded catch-up burst");
-    let mut manually_advanced = ManagementSession::foundation();
-    for _ in 0..3 { manually_advanced.step(); }
-    assert_eq!(app.world().resource::<ManagementSession>().snapshot, manually_advanced.snapshot);
+    let mut manual = self::app();
+    for _ in 0..3 { activate(&mut manual, ManagementAction::StepDay); }
+    assert_eq!(app.world().resource::<ManagementSession>().snapshot, manual.world().resource::<ManagementSession>().snapshot);
+}
+
+fn wait_for_worker(app: &mut App) {
+    let deadline = std::time::Instant::now() + std::time::Duration::from_secs(5);
+    while app.world().resource::<ManagementSession>().is_busy() {
+        app.world_mut().run_system_cached(poll_simulation).unwrap();
+        assert!(std::time::Instant::now() < deadline, "simulation worker timed out");
+        std::thread::yield_now();
+    }
+    app.world_mut().run_system_cached(screens::management::update_management_lists).unwrap();
+    app.world_mut().run_system_cached(screens::management::update_management_labels).unwrap();
 }

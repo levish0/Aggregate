@@ -1,0 +1,57 @@
+name: simulation performance
+
+on:
+  pull_request:
+    paths:
+      - 'Cargo.toml'
+      - 'Cargo.lock'
+      - 'crates/aggregate-world/**'
+      - 'crates/aggregate-programs/**'
+      - 'crates/aggregate-economy/**'
+      - 'crates/aggregate-simulation-core/**'
+      - '.github/workflows/performance.yml'
+  workflow_dispatch:
+    inputs:
+      long_run:
+        description: Also measure a world after 100 simulated years
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: performance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          lfs: false
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Record environment
+        run: |
+          mkdir -p target/performance
+          rustc -Vv > target/performance/environment.txt
+          lscpu >> target/performance/environment.txt
+          echo "commit=${GITHUB_SHA}" >> target/performance/environment.txt
+      - name: Measure simulation and read models
+        env:
+          AGGREGATE_BENCH_LONG_RUN: ${{ inputs.long_run && '1' || '0' }}
+        run: |
+          set -o pipefail
+          cargo bench -p aggregate-simulation-core --bench simulation_performance --locked -- --noplot 2>&1 | tee target/performance/benchmarks.txt
+      - name: Save measurements
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulation-performance-${{ github.sha }}
+          path: |
+            target/criterion
+            target/performance
+          retention-days: 30

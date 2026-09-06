@@ -1,4 +1,4 @@
-use aggregate_world::{CountryId, ProvinceId, WorldSnapshot};
+use crate::{CountryId, ProvinceId, WorldSnapshot};
 use std::collections::BTreeMap;
 
 #[derive(Default)]
@@ -10,12 +10,12 @@ pub struct CountryStatistics {
 
 /// Built alongside a committed snapshot on the simulation worker, never per UI row.
 #[derive(Default)]
-pub struct SnapshotIndex {
+pub struct WorldSnapshotIndex {
     pub provinces: BTreeMap<ProvinceId, usize>,
     pub countries: BTreeMap<CountryId, CountryStatistics>,
 }
 
-impl SnapshotIndex {
+impl WorldSnapshotIndex {
     pub fn build(snapshot: &WorldSnapshot) -> Self {
         let mut index = Self::default();
         for (position, province) in snapshot.provinces.iter().enumerate() {

@@ -3,7 +3,6 @@ pub mod construction;
 pub mod presentation;
 mod session;
 mod playback;
-mod snapshot_index;
 mod worker;
 #[cfg(test)]
 #[path = "../../tests/management/flows.rs"]

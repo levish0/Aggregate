@@ -7,6 +7,8 @@ mod definitions;
 mod identifiers;
 mod scenario;
 mod state;
+mod snapshot_index;
+pub use snapshot_index::{CountryStatistics, WorldSnapshotIndex};
 
 pub use definitions::{
     ConstructionDefinition, ContentDefinitions, FacilityDefinition, GoodDefinition, WorldRules,

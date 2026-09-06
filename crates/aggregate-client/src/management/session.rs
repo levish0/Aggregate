@@ -1,9 +1,9 @@
 use aggregate_scenario::parse_scenario;
 use aggregate_simulation_core::{DayReport, Simulation, SimulationCommand, SimulationError, SimulationEvent};
 use aggregate_programs::{InspectionScope, InspectionSection};
-use aggregate_world::{ContentDefinitions, CountryId, FacilityDefinitionId, ProvinceId, WorldSnapshot};
+use aggregate_world::{ContentDefinitions, CountryId, FacilityDefinitionId, ProvinceId, WorldSnapshot, WorldSnapshotIndex};
 use bevy::prelude::*;
-use super::{snapshot_index::SnapshotIndex, worker::{SimulationWorker, WorkRequest, WorkOutcome}};
+use super::worker::{SimulationWorker, WorkRequest, WorkOutcome};
 
 pub struct NewsEntry { pub day: u64, pub event: SimulationEvent }
 pub enum SessionFeedback { Ready, ConstructionStarted(FacilityDefinitionId), Error(SimulationError) }
@@ -16,7 +16,7 @@ pub struct ManagementSession {
     inspection: Option<(InspectionScope, u64, Result<Vec<InspectionSection>, String>)>,
     pub inspection_revision: u64,
     pub snapshot: WorldSnapshot,
-    pub index: SnapshotIndex,
+    pub index: WorldSnapshotIndex,
     pub definitions: ContentDefinitions,
     pub player_country: CountryId,
     pub last_report: Option<DayReport>,
@@ -65,7 +65,7 @@ impl ManagementSession {
         let definitions = scenario.definitions.clone();
         let mut simulation = Simulation::from_scenario_with_programs(scenario, programs)?;
         let snapshot = simulation.snapshot();
-        let index = SnapshotIndex::build(&snapshot);
+        let index = WorldSnapshotIndex::build(&snapshot);
         let worker = SimulationWorker::spawn(simulation)?;
         Ok(Self { worker, pending_jobs: 0, inspection: None, inspection_revision: 0, snapshot, index, definitions, player_country, last_report: None, news: Vec::new(), feedback: SessionFeedback::Ready, running: false, speed: super::SimulationSpeed::default(), session_id: uuid::Uuid::now_v7(), geographic, revision: 0, province_page: 0 })
     }

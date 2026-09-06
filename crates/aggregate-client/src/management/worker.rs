@@ -1,4 +1,4 @@
-use super::snapshot_index::SnapshotIndex;
+use aggregate_world::WorldSnapshotIndex;
 use aggregate_programs::{InspectionScope, InspectionSection};
 use aggregate_simulation_core::{CommandOutcome, DayReport, Simulation, SimulationCommand, SimulationError};
 use aggregate_world::{FacilityDefinitionId, WorldSnapshot};
@@ -18,7 +18,7 @@ pub(super) enum WorkOutcome {
 
 pub(super) struct CompletedWork {
     pub result: Result<WorkOutcome, SimulationError>,
-    pub snapshot: Option<(WorldSnapshot, SnapshotIndex)>,
+    pub snapshot: Option<(WorldSnapshot, WorldSnapshotIndex)>,
 }
 
 /// A dedicated thread owns the sole Simulation. Requests are serialized between
@@ -46,7 +46,7 @@ impl SimulationWorker {
                 let calculation_ms = started.elapsed().as_secs_f64() * 1000.;
                 let snapshot = if matches!(&result, Ok(WorkOutcome::Day(_) | WorkOutcome::Construction(..))) {
                     let snapshot = simulation.snapshot();
-                    let index = SnapshotIndex::build(&snapshot);
+                    let index = WorldSnapshotIndex::build(&snapshot);
                     Some((snapshot, index))
                 } else { None };
                 tracing::debug!(target: "aggregate_client::simulation_performance", day = simulation.clock().day(), calculation_ms, snapshot_ms = started.elapsed().as_secs_f64() * 1000. - calculation_ms, "Simulation worker completed request");
