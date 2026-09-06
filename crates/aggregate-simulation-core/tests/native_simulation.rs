@@ -145,6 +145,60 @@ fn production_and_consumption_have_explicit_balanced_goods_flows() {
 }
 
 #[test]
+fn finishing_jobs_cannot_round_to_zero_forever_when_local_workforce_exists() {
+    let mut fixture = scenario();
+    let north = fixture.initial_state.provinces[0].id.clone();
+    fixture.initial_state.facilities.extend([
+        FacilityState {
+            id: facility_id(50),
+            province: north.clone(),
+            definition: "grain_farm".into(),
+            level: 1,
+            production_priority: 20,
+        },
+        FacilityState {
+            id: facility_id(51),
+            province: north.clone(),
+            definition: "tool_workshop".into(),
+            level: 1,
+            production_priority: 10,
+        },
+    ]);
+    let recipe = fixture
+        .definitions
+        .facilities
+        .iter_mut()
+        .find(|definition| definition.id == "grain_farm".into())
+        .unwrap();
+    recipe.construction.worker_days = 1;
+    recipe.construction.max_workers = 1;
+    let mut simulation = Simulation::from_scenario(fixture).unwrap();
+    for number in [100, 101] {
+        let mut command = build_command();
+        let SimulationCommand::StartConstruction {
+            facility, workers, ..
+        } = &mut command;
+        *facility = facility_id(number);
+        *workers = 1;
+        simulation.execute(command).unwrap();
+    }
+    for _ in 0..2 {
+        let report = simulation.step().unwrap();
+        let province = report
+            .provinces
+            .iter()
+            .find(|province| province.province == north)
+            .unwrap();
+        assert!(province.construction_workers > 0);
+        assert!(
+            province.production_workers + province.construction_workers
+                <= province.available_workers
+        );
+    }
+    assert!(simulation.snapshot().construction_projects.is_empty());
+}
+
+#[test]
 fn construction_uses_real_stock_and_competes_with_existing_jobs() {
     let fixture = scenario();
     let mut baseline = Simulation::from_scenario(fixture.clone()).unwrap();

@@ -2,7 +2,7 @@ use crate::world_storage::{
     ConstructionProject, DayWork, DefinitionRegistry, Facility, PopulationGroup, WorkforceLimits,
 };
 use aggregate_economy::{LaborRequest, allocate_labor};
-use aggregate_world::ProvinceId;
+use aggregate_world::{FacilityId, ProvinceId};
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
 
@@ -61,6 +61,7 @@ fn plan(
             .ok_or("province workforce overflow")?;
     }
     let mut requests: BTreeMap<ProvinceId, Vec<LaborRequest>> = BTreeMap::new();
+    let mut oldest_project: BTreeMap<ProvinceId, FacilityId> = BTreeMap::new();
     for facility in facilities {
         let definition = definitions
             .facilities
@@ -79,6 +80,14 @@ fn plan(
             });
     }
     for project in projects {
+        oldest_project
+            .entry(project.0.province.clone())
+            .and_modify(|id| {
+                if project.0.facility_id < *id {
+                    *id = project.0.facility_id.clone();
+                }
+            })
+            .or_insert_with(|| project.0.facility_id.clone());
         requests
             .entry(project.0.province.clone())
             .or_default()
@@ -91,15 +100,34 @@ fn plan(
             });
     }
     for (province_id, province) in &mut work.provinces {
+        let mut requests = requests.remove(province_id).unwrap_or_default();
+        // One worker-day guarantees progress for the oldest persistent project.
+        // Otherwise small finishing jobs can round to zero forever under load.
+        let guaranteed = oldest_project
+            .get(province_id)
+            .filter(|_| province.report.available_workers > 0);
+        if let Some(id) = guaranteed {
+            requests
+                .iter_mut()
+                .find(|request| &request.facility_id == id)
+                .expect("project labor request")
+                .requested_workers -= 1;
+        }
         let allocations = allocate_labor(
-            province.report.available_workers,
-            requests.get(province_id).map(Vec::as_slice).unwrap_or(&[]),
+            province.report.available_workers - u64::from(guaranteed.is_some()),
+            &requests,
         )
         .map_err(|error| error.to_string())?;
         province.allocations = allocations
             .into_iter()
             .map(|allocation| (allocation.facility_id, allocation.allocated_workers))
             .collect();
+        if let Some(id) = guaranteed {
+            *province
+                .allocations
+                .get_mut(id)
+                .expect("project allocation") += 1;
+        }
     }
     Ok(())
 }
