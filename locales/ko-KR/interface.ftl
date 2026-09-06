@@ -220,3 +220,5 @@ inspection-construction-service = 건설력 { $work } / 일
 inspection-construction-applied = 일일 진행 { $work } · 건설업 공급 { $amount }
 
 inspection-construction-shortcut = 건설 · B
+
+notification-dismiss = 알림 닫기

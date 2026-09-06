@@ -106,7 +106,9 @@ dependencies = [
 name = "aggregate-client"
 version = "0.1.0"
 dependencies = [
+ "ab_glyph",
  "aggregate-economy",
+ "aggregate-geography",
  "aggregate-localization",
  "aggregate-map-view",
  "aggregate-programs",

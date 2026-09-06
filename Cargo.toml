@@ -31,6 +31,7 @@ aggregate-public-health = { path = "crates/aggregate-public-health" }
 aggregate-simulation-core = { path = "crates/aggregate-simulation-core" }
 
 # External dependencies
+ab_glyph = "0.2.32"
 # Native terrain rendering and interface.
 bevy = { version = "0.19.1", default-features = false, features = ["2d", "3d", "ui", "dds"] }
 glam = "0.32.1"

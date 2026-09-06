@@ -303,7 +303,7 @@ pub fn poll_simulation(mut session: ResMut<ManagementSession>) {
         let Some(completed) = session.worker.try_receive() else { break; };
         let started = std::time::Instant::now();
         session.accept(completed);
-        if !session.is_busy() { break; }
         tracing::debug!(target: "aggregate_client::simulation_performance", apply_ms = started.elapsed().as_secs_f64() * 1000., "Committed UI snapshot published");
+        if !session.is_busy() { break; }
     }
 }

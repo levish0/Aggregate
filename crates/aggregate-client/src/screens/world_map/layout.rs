@@ -10,6 +10,9 @@ use aggregate_ui::{
 };
 use bevy::prelude::*;
 
+pub(super) const OUTLINER_WIDTH: f32 = 232.;
+pub(super) const OUTLINER_RIGHT: f32 = 14.;
+
 pub fn build(
     commands: &mut Commands,
     root: Entity,
@@ -204,10 +207,10 @@ pub fn build(
         root,
         Node {
             position_type: PositionType::Absolute,
-            right: px(14),
+            right: px(OUTLINER_RIGHT),
             top: px(100),
             bottom: px(80),
-            width: px(232),
+            width: px(OUTLINER_WIDTH),
             padding: UiRect::all(px(14)),
             flex_direction: FlexDirection::Column,
             row_gap: px(8),

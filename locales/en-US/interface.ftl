@@ -220,3 +220,5 @@ inspection-construction-service = Construction { $work } / day
 inspection-construction-applied = Daily progress { $work } · sector contribution { $amount }
 
 inspection-construction-shortcut = Construction · B
+
+notification-dismiss = Dismiss notification

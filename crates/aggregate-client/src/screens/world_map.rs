@@ -14,8 +14,6 @@ use bevy::prelude::*;
 pub use layout::build;
 
 #[derive(Component)]
-pub struct MapModeSelect;
-#[derive(Component)]
 pub struct MapInspectionPanel;
 #[derive(Component)]
 pub struct MapOutlinerPanel;
@@ -33,8 +31,6 @@ pub fn configure_view(
     window: Single<&Window>,
     blockers: Query<(&ComputedNode, &UiGlobalTransform), With<UiPointerBlocker>>,
     select_state: Res<select::SelectInteractionState>,
-    mut changed: MessageReader<select::SelectChanged>,
-    mut modes: Query<(Entity, &mut select::Select), With<MapModeSelect>>,
     mut backdrop: Query<&mut Visibility, With<CartographicBackdrop>>,
     mut camera: Single<&mut Camera, With<Camera2d>>,
     policy: Res<aggregate_ui::button::UiKeyboardPolicy>,
@@ -57,21 +53,6 @@ pub fn configure_view(
                     && Rect::from_center_size(transform.translation, node.size()).contains(cursor)
             })
         });
-    for event in changed.read() {
-        if modes.contains(event.root) {
-            map.political = event.value == "political";
-        }
-    }
-    for (_, mut select) in &mut modes {
-        let value = if map.political {
-            "political"
-        } else {
-            "terrain"
-        };
-        if select.value != value {
-            select.value = value.into();
-        }
-    }
     camera.clear_color = if map.enabled {
         ClearColorConfig::None
     } else {
@@ -91,20 +72,13 @@ pub fn configure_keyboard_policy(
     select: Res<select::SelectInteractionState>,
     keys: Res<ButtonInput<KeyCode>>,
     mut policy: ResMut<aggregate_ui::button::UiKeyboardPolicy>,
-    mut map: ResMut<MapViewState>,
     setup: Res<crate::world_setup::WorldSetup>,
 ) {
     policy.reserve_plain_tab = interface.screen == Screen::WorldMap
         && !setup.open
         && !select.any_open
         && !keys.any_pressed([KeyCode::ControlLeft, KeyCode::ControlRight]);
-    if interface.screen != Screen::WorldMap {
-        return;
-    }
-    if keys.any_pressed([KeyCode::AltLeft, KeyCode::AltRight]) && keys.just_pressed(KeyCode::Digit2)
-    {
-        map.political = true;
-    }
+
 }
 
 pub fn update_clock_controls(

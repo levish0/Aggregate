@@ -20,6 +20,7 @@ struct LargeWorldCapture {
     captured: bool,
     started: std::time::Instant,
     building_site: Option<aggregate_world::ProvinceId>,
+    building_button: Option<Entity>,
     camera_target: Vec3,
 }
 
@@ -35,6 +36,7 @@ fn native_large_world_capture() {
             captured: false,
             started: std::time::Instant::now(),
             building_site: None,
+            building_button: None,
             camera_target: Vec3::ZERO,
         })
         .add_systems(Update, drive.before(aggregate_ui::UiSystems::Interaction));
@@ -61,9 +63,10 @@ fn drive(
         Single<&mut Window>,
         ResMut<ButtonInput<MouseButton>>,
         ResMut<bevy::input::mouse::AccumulatedMouseMotion>,
+        ResMut<ButtonInput<KeyCode>>,
     ),
 ) {
-    let (mut window, mut mouse, mut motion) = input;
+    let (mut window, mut mouse, mut motion, mut keys) = input;
     capture.frames += 1;
     assert!(
         capture.started.elapsed().as_secs() < 120,
@@ -181,28 +184,22 @@ fn drive(
             if let ManagementAction::StartConstructionAt { province, .. } = action {
                 capture.building_site = Some(province.clone());
             }
-            activated.write(ButtonActivated(entity));
+            capture.building_button = Some(entity);
+            for _ in 0..3 { activated.write(ButtonActivated(entity)); }
             capture.phase = 8;
             capture.frames = 0;
         }
         8 if capture.frames >= 10 && !session.is_busy() => {
             assert_eq!(interface.screen, Screen::WorldMap);
-            assert!(
-                session
-                    .snapshot
-                    .construction_projects
-                    .iter()
-                    .any(|project| Some(&project.province) == capture.building_site.as_ref())
-            );
-            let (entity, _) = inspection_buttons
-                .iter()
-                .find(|(_, action)| matches!(action, InspectionAction::Construction))
-                .unwrap();
-            activated.write(ButtonActivated(entity));
+            assert_eq!(session.snapshot.construction_projects.iter().filter(|project| Some(&project.province) == capture.building_site.as_ref()).count(), 3);
+            assert!(management_buttons.contains(capture.building_button.unwrap()), "construction updates must retain the existing card controls");
+            keys.press(KeyCode::KeyB);
             capture.phase = 9;
             capture.frames = 0;
         }
         9 if capture.frames >= 10 => {
+            keys.release(KeyCode::KeyB);
+            assert!(inspection_buttons.iter().any(|(_, action)| matches!(action, InspectionAction::Tab(InspectionTab::Construction))));
             let cursor = Vec2::new(window.width() * 0.60, window.height() * 0.55);
             window.set_cursor_position(Some(cursor));
             capture.camera_target = camera.target;

@@ -13,7 +13,7 @@ pub struct DismissNotification(u64);
 
 pub fn build(commands: &mut Commands, parent: Entity) {
     let root = ui::node(commands, parent, Node {
-        position_type: PositionType::Absolute, right: px(14), bottom: px(70), width: px(300),
+        position_type: PositionType::Absolute, right: px(super::layout::OUTLINER_RIGHT + super::layout::OUTLINER_WIDTH + 12.), bottom: px(70), width: px(300),
         flex_direction: FlexDirection::Column, row_gap: px(8), ..default()
     });
     commands.entity(root).insert((NotificationStack, GlobalZIndex(40), bevy::ui::FocusPolicy::Pass));
@@ -52,7 +52,7 @@ pub fn refresh(
         aggregate_ui::icon::icon(&mut commands, card, Icon::Buildings, 20., theme::TEXT);
         let text = ui::text(&mut commands, card, &fonts, presentation::event_text(&session, &interface, &toast.entry.event), 13., theme::TEXT, false);
         commands.entity(text).insert(Node { flex_grow: 1., flex_basis: px(0), ..default() });
-        let close = super::controls::icon_button(&mut commands, card, &fonts, &interface, Icon::Close, "menu-back", UiButton::secondary(1500 + order as u32));
+        let close = super::controls::icon_button(&mut commands, card, &fonts, &interface, Icon::Close, "notification-dismiss", UiButton::secondary(1500 + order as u32));
         commands.entity(close).insert(DismissNotification(toast.entry.sequence));
     }
 }
