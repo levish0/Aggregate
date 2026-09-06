@@ -265,7 +265,8 @@ pub fn update_management_labels(
                 .find(|definition| definition.id == project.definition)
         {
             let completed = 1.
-                - project.remaining_construction_points as f64 / definition.construction.construction_points as f64;
+                - project.remaining_construction_points as f64
+                    / definition.construction.construction_points as f64;
             let width = percent((completed * 100.) as f32);
             if node.width != width {
                 node.width = width;

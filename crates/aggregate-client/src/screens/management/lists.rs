@@ -48,7 +48,9 @@ pub fn update_management_lists(
             rendered.initialized
                 && match kind {
                     ManagementList::Projects => rendered.projects == projects,
-                    ManagementList::News => rendered.notifications_count == session.notifications.len(),
+                    ManagementList::News => {
+                        rendered.notifications_count == session.notifications.len()
+                    }
                 }
         });
         if unchanged {

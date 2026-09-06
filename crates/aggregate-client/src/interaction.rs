@@ -73,7 +73,7 @@ pub fn apply_actions(
             InterfaceAction::OpenWorldMap => {
                 state.screen = Screen::WorldMap;
                 setup.open = !session.geographic;
-            },
+            }
             InterfaceAction::ConfigureWorld => {
                 state.screen = Screen::WorldMap;
                 setup.open = true;
@@ -83,11 +83,17 @@ pub fn apply_actions(
             InterfaceAction::OpenSettings => {
                 state.return_screen = state.screen;
                 state.screen = Screen::Settings;
-            },
+            }
             InterfaceAction::Back => {
-                state.screen = if state.screen == Screen::Settings { state.return_screen } else { Screen::MainMenu };
-                if state.screen == Screen::MainMenu { session.running = false; }
-            },
+                state.screen = if state.screen == Screen::Settings {
+                    state.return_screen
+                } else {
+                    Screen::MainMenu
+                };
+                if state.screen == Screen::MainMenu {
+                    session.running = false;
+                }
+            }
             InterfaceAction::Exit => {
                 exit.write(AppExit::Success);
             }

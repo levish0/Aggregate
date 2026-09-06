@@ -55,20 +55,43 @@ struct RenderUpdates(usize);
 fn repeated_clicks_create_immediate_targets_and_failed_commands_remove_only_their_target() {
     let (started, notification) = mpsc::channel();
     let (resume, gate) = mpsc::channel();
-    let mut scenario = aggregate_scenario::parse_scenario(include_str!("../../../../scenarios/foundation.json")).unwrap();
+    let mut scenario =
+        aggregate_scenario::parse_scenario(include_str!("../../../../scenarios/foundation.json"))
+            .unwrap();
     scenario.initial_state.facilities.clear();
     let province = scenario.initial_state.provinces[0].id.clone();
     let country = scenario.initial_state.provinces[0].country.clone();
-    scenario.initial_state.provinces[0].stockpile.insert("timber".into(), 25);
-    scenario.initial_state.provinces[0].stockpile.insert("tools".into(), 15);
-    let mut session = ManagementSession::geographic(scenario, country, vec![Arc::new(aggregate_economy::EconomyProgram), Arc::new(PausedCalculation { started, resume: Mutex::new(gate) })]).unwrap();
+    scenario.initial_state.provinces[0]
+        .stockpile
+        .insert("timber".into(), 25);
+    scenario.initial_state.provinces[0]
+        .stockpile
+        .insert("tools".into(), 15);
+    let mut session = ManagementSession::geographic(
+        scenario,
+        country,
+        vec![
+            Arc::new(aggregate_economy::EconomyProgram),
+            Arc::new(PausedCalculation {
+                started,
+                resume: Mutex::new(gate),
+            }),
+        ],
+    )
+    .unwrap();
     session.step();
-    notification.recv_timeout(std::time::Duration::from_secs(5)).unwrap();
-    for _ in 0..3 { session.start_construction(&province, &"grain_farm".into()); }
+    notification
+        .recv_timeout(std::time::Duration::from_secs(5))
+        .unwrap();
+    for _ in 0..3 {
+        session.start_construction(&province, &"grain_farm".into());
+    }
     assert_eq!(session.pending_construction.len(), 3);
     assert!(session.snapshot.construction_projects.is_empty());
     let mut app = App::new();
-    app.add_plugins(MinimalPlugins).insert_resource(session).add_systems(Update, poll_simulation);
+    app.add_plugins(MinimalPlugins)
+        .insert_resource(session)
+        .add_systems(Update, poll_simulation);
     resume.send(()).unwrap();
     let deadline = std::time::Instant::now() + std::time::Duration::from_secs(5);
     while app.world().resource::<ManagementSession>().is_busy() {

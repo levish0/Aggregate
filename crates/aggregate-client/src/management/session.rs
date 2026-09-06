@@ -187,7 +187,13 @@ impl ManagementSession {
             production_priority: priority,
         };
         if self.submit(WorkRequest::Construction(command, definition.clone())) {
-            self.pending_construction.insert(facility, PendingConstruction { province: province.clone(), definition: definition.clone() });
+            self.pending_construction.insert(
+                facility,
+                PendingConstruction {
+                    province: province.clone(),
+                    definition: definition.clone(),
+                },
+            );
             self.revision += 1;
         }
     }
@@ -207,7 +213,10 @@ impl ManagementSession {
             self.worker.submit(request)
         };
         match result {
-            Ok(()) => { self.pending_jobs += 1; true },
+            Ok(()) => {
+                self.pending_jobs += 1;
+                true
+            }
             Err(error) => {
                 self.running = false;
                 self.feedback = SessionFeedback::Error(error);
@@ -219,8 +228,12 @@ impl ManagementSession {
 
     fn accept(&mut self, completed: super::worker::CompletedWork) {
         self.pending_jobs = self.pending_jobs.saturating_sub(1);
-        if let Some(id) = &completed.construction_id { self.pending_construction.remove(id); }
-        if self.pending_jobs == 0 { self.pending_construction.clear(); }
+        if let Some(id) = &completed.construction_id {
+            self.pending_construction.remove(id);
+        }
+        if self.pending_jobs == 0 {
+            self.pending_construction.clear();
+        }
         if let Some((snapshot, index)) = completed.snapshot {
             let retired = (
                 std::mem::replace(&mut self.snapshot, snapshot),
@@ -284,7 +297,10 @@ impl ManagementSession {
             }
         }
         for entry in &mut self.notifications[previous_count..] {
-            self.notifications_emitted = self.notifications_emitted.checked_add(1).expect("notification sequence exhausted");
+            self.notifications_emitted = self
+                .notifications_emitted
+                .checked_add(1)
+                .expect("notification sequence exhausted");
             entry.sequence = self.notifications_emitted;
         }
         if self.notifications.len() > 200 {
@@ -300,10 +316,14 @@ pub fn poll_simulation(mut session: ResMut<ManagementSession>) {
         return;
     }
     for _ in 0..32 {
-        let Some(completed) = session.worker.try_receive() else { break; };
+        let Some(completed) = session.worker.try_receive() else {
+            break;
+        };
         let started = std::time::Instant::now();
         session.accept(completed);
         tracing::debug!(target: "aggregate_client::simulation_performance", apply_ms = started.elapsed().as_secs_f64() * 1000., "Committed UI snapshot published");
-        if !session.is_busy() { break; }
+        if !session.is_busy() {
+            break;
+        }
     }
 }

@@ -16,9 +16,25 @@ pub fn apply_actions(
     setup: Res<crate::world_setup::WorldSetup>,
     select: Res<aggregate_ui::select::SelectInteractionState>,
 ) {
-    if interface.screen != crate::state::Screen::WorldMap || !session.geographic || setup.open { activated.clear(); return; }
-    let mut requested: Vec<_> = activated.read().filter_map(|event| actions.get(event.0).ok().cloned()).collect();
-    if keys.just_pressed(KeyCode::KeyB) && !select.any_open && !keys.any_pressed([KeyCode::ControlLeft, KeyCode::ControlRight, KeyCode::AltLeft, KeyCode::AltRight]) { requested.push(InspectionAction::Construction); }
+    if interface.screen != crate::state::Screen::WorldMap || !session.geographic || setup.open {
+        activated.clear();
+        return;
+    }
+    let mut requested: Vec<_> = activated
+        .read()
+        .filter_map(|event| actions.get(event.0).ok().cloned())
+        .collect();
+    if keys.just_pressed(KeyCode::KeyB)
+        && !select.any_open
+        && !keys.any_pressed([
+            KeyCode::ControlLeft,
+            KeyCode::ControlRight,
+            KeyCode::AltLeft,
+            KeyCode::AltRight,
+        ])
+    {
+        requested.push(InspectionAction::Construction);
+    }
     for action in &requested {
         match action {
             InspectionAction::Construction | InspectionAction::NationalTab(_) => {
@@ -29,7 +45,10 @@ pub fn apply_actions(
                 {
                     map.selected_index = index as u32 + 1;
                     map.inspect_country = true;
-                    view.tab = match action { InspectionAction::NationalTab(tab) => *tab, _ => InspectionTab::Construction };
+                    view.tab = match action {
+                        InspectionAction::NationalTab(tab) => *tab,
+                        _ => InspectionTab::Construction,
+                    };
                     view.page = 0;
                 }
             }

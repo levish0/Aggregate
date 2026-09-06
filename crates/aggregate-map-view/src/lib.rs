@@ -72,6 +72,7 @@ impl Plugin for MapViewPlugin {
                     camera::control,
                     camera::update_camera,
                     material::update_selection,
+                    clouds::update_visibility,
                     scenery::update_visibility,
                 )
                     .chain()

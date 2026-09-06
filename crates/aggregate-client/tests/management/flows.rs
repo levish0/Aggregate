@@ -175,7 +175,11 @@ fn rejected_construction_shows_error_without_spending_or_creating_news() {
         );
     }
     let before = app.world().resource::<ManagementSession>().snapshot.clone();
-    let news_count = app.world().resource::<ManagementSession>().notifications.len();
+    let news_count = app
+        .world()
+        .resource::<ManagementSession>()
+        .notifications
+        .len();
     activate(
         &mut app,
         ManagementAction::StartConstruction("grain_farm".into()),

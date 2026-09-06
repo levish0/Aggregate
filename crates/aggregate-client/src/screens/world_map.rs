@@ -78,7 +78,6 @@ pub fn configure_keyboard_policy(
         && !setup.open
         && !select.any_open
         && !keys.any_pressed([KeyCode::ControlLeft, KeyCode::ControlRight]);
-
 }
 
 pub fn update_clock_controls(

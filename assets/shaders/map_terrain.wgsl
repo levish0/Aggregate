@@ -33,6 +33,8 @@ struct ProvinceStyle {
 
 @group(#{MATERIAL_BIND_GROUP}) @binding(23) var cloud_density: texture_2d<f32>;
 @group(#{MATERIAL_BIND_GROUP}) @binding(24) var cloud_sampler: sampler;
+@group(#{MATERIAL_BIND_GROUP}) @binding(25) var water_flow: texture_2d<f32>;
+@group(#{MATERIAL_BIND_GROUP}) @binding(26) var water_flow_sampler: sampler;
 
 struct TerrainSurface {
     diffuse: vec3<f32>,
@@ -112,9 +114,18 @@ fn terrain_soft_light(detail: vec3<f32>, tint: vec3<f32>) -> vec3<f32> {
 fn water_surface(uv: vec2<f32>, world: vec3<f32>, dx: vec2<f32>, dy: vec2<f32>) -> vec3<f32> {
     let drift = globals.time * vec2<f32>(0.008,-0.004);
     let wave_uv = world.xz * 0.32;
+    let flow_sample = textureSample(water_flow,water_flow_sampler,uv).rgb;
+    let flow = (flow_sample.rg*2.0-1.0)*vec2<f32>(1.0,-1.0)*flow_sample.b;
+    // Two bounded phases avoid accumulating distortion as a session gets longer.
+    let phase = fract(globals.time*0.04);
+    let next_phase = fract(phase+0.5);
+    let flow_first = textureSampleGrad(water_normal,water_normal_sampler,wave_uv-flow*phase,dx*1.28,dy*1.28).rgb*2.0-1.0;
+    let flow_second = textureSampleGrad(water_normal,water_normal_sampler,wave_uv-flow*next_phase,dx*1.28,dy*1.28).rgb*2.0-1.0;
+    let current = mix(flow_first,flow_second,abs(phase*2.0-1.0));
     let first = textureSampleGrad(water_normal,water_normal_sampler,wave_uv+drift,dx*1.28,dy*1.28).rgb*2.0-1.0;
     let second = textureSampleGrad(water_normal,water_normal_sampler,wave_uv*0.63-drift*0.8,dx*0.8064,dy*0.8064).rgb*2.0-1.0;
-    let normal = normalize(vec3<f32>((first.x+second.x)*0.45,1.0,(first.y+second.y)*0.45));
+    let waves = first+second+current*0.4;
+    let normal = normalize(vec3<f32>(waves.x*0.45,1.0,waves.y*0.45));
     let eye = normalize(view.world_position-world);
     let light = normalize(vec3<f32>(-0.5,0.85,-0.35));
     let halfway = normalize(eye+light);
@@ -166,6 +177,7 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let selected_coverage = coverage(selected_group,selected_channel,ids,weights);
     let selection_outline = boundary(selected_group,selected_channel,ids,weights,fraction,footprint);
     let water = style.grouping.z != 0u;
+    let land_coverage = coverage(0u,2u,ids,weights);
     let relief = textureSample(terrain_relief,terrain_relief_sampler,in.uv);
     let normal = normalize(relief.rgb*2.0-1.0);
     let atlas = textureSample(color_map,color_sampler,in.uv).rgb;
@@ -173,7 +185,7 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let detail_dx = dpdx(detail_uv);
     let detail_dy = dpdy(detail_uv);
     var surface = TerrainSurface(atlas,vec3<f32>(0.0,0.0,1.0),vec4<f32>(0.0,0.0,0.1,0.9));
-    if !water {
+    if land_coverage > 0.001 {
         surface = terrain_surface(in.uv,detail_uv,detail_dx,detail_dy);
     }
     let tangent = normalize(vec3<f32>(normal.y,-normal.x,0.0));
@@ -191,17 +203,17 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let specular = pow(max(dot(shaded_normal,normalize(sun+eye)),0.0),mix(96.0,4.0,roughness))
         * surface.properties.b * (1.0-roughness) * 0.15;
     var color = albedo*light*1.6+vec3<f32>(specular);
-    if !water {
+    {
         let political = styles[ids.x].political.rgb*weights.x + styles[ids.y].political.rgb*weights.y + styles[ids.z].political.rgb*weights.z + styles[ids.w].political.rgb*weights.w;
         let political_surface = mix(political, vec3<f32>(0.93,0.90,0.81),0.24);
         color = mix(color,political_surface*(0.80+light*0.20),0.025+map_view.x*0.895);
-    } else {
-        color = water_surface(in.uv,in.world_position.xyz,detail_dx,detail_dy);
     }
+    let sea_color = water_surface(in.uv,in.world_position.xyz,detail_dx,detail_dy);
+    color = mix(sea_color,color,smoothstep(0.25,0.75,land_coverage));
     if !water { color *= 1.0-country_outline*0.55; }
     if !water { color *= 1.0-state_outline*(0.16+map_view.x*0.06); }
     color = mix(color,vec3<f32>(0.40,0.55,0.52),coast_outline*0.3);
-    if !water { color = mix(color,vec3<f32>(0.025,0.09,0.12),river_coverage*0.85); }
+    if !water { color = mix(color,mix(vec3<f32>(0.025,0.09,0.12),sea_color,0.35),river_coverage*0.85); }
     let hovered_group = styles[selection.y].grouping.w;
     if hovered_group != 0u && !water {
         let hover_coverage = coverage(hovered_group,3u,ids,weights);
@@ -213,8 +225,8 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
         color = mix(color,vec3<f32>(1.0),selected_coverage*0.12);
         color = mix(color,vec3<f32>(1.0),selection_outline*0.92);
     }
-    let cloud_uv = (in.world_position.xz+vec2<f32>(-0.5,-0.35)*(14.0-in.world_position.y)/0.85)/180.0+globals.time*vec2<f32>(0.0003,0.00008);
-    let cloud_shadow = smoothstep(0.1,0.7,textureSample(cloud_density,cloud_sampler,cloud_uv).g);
-    color *= 1.0-cloud_shadow*0.16*(1.0-map_view.x);
+    let cloud_uv = (in.world_position.xz+vec2<f32>(-0.5,-0.35)*max(3.5-in.world_position.y,0.0)/0.85)/110.0+globals.time*vec2<f32>(0.0003,0.00008);
+    let cloud_shadow = smoothstep(0.28,0.92,textureSample(cloud_density,cloud_sampler,cloud_uv).g);
+    color *= 1.0-cloud_shadow*0.16*map_view.y;
     return vec4<f32>(color,1.0);
 }

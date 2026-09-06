@@ -59,7 +59,9 @@ pub fn rebuild(
         ))
         .id();
     match state.screen {
-        Screen::MainMenu => main_menu::build(&mut commands, root, &fonts, &state, session.geographic),
+        Screen::MainMenu => {
+            main_menu::build(&mut commands, root, &fonts, &state, session.geographic)
+        }
         Screen::Management => management::build(&mut commands, root, &fonts, &state, &session),
         Screen::WorldMap => world_map::build(&mut commands, root, &fonts, &state, &session),
         Screen::Preview => preview::build(&mut commands, root, &fonts, &state),

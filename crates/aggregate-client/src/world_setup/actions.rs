@@ -58,7 +58,10 @@ pub fn apply_actions(
             continue;
         };
         match action {
-            SetupAction::Close => { setup.open = false; interface.screen = Screen::MainMenu; },
+            SetupAction::Close => {
+                setup.open = false;
+                interface.screen = Screen::MainMenu;
+            }
             SetupAction::Start => {
                 let (Some(map), Some(country)) = (map.as_ref(), setup.country.clone()) else {
                     continue;
@@ -69,7 +72,9 @@ pub fn apply_actions(
                 info!(country = %country, population_per_province = settings.population_per_province, "World initialization requested");
                 commands.insert_resource(WorldInitializationTask(
                     AsyncComputeTaskPool::get().spawn(async move {
-                        let programs: Vec<std::sync::Arc<dyn aggregate_programs::SimulationProgram>> = vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)];
+                        let programs: Vec<
+                            std::sync::Arc<dyn aggregate_programs::SimulationProgram>,
+                        > = vec![std::sync::Arc::new(aggregate_economy::EconomyProgram)];
                         let definitions = aggregate_programs::ProgramRuntime::collect_definitions(
                             programs.clone(),
                         )?;

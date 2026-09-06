@@ -42,8 +42,9 @@ pub fn construction_site(
         .iter()
         .filter(|project| provinces.contains(&project.province))
     {
-        *demand.entry(&project.province).or_default() +=
-            project.requested_workers.min(project.remaining_construction_points);
+        *demand.entry(&project.province).or_default() += project
+            .requested_workers
+            .min(project.remaining_construction_points);
         *queues.entry(&project.province).or_default() += 1;
     }
     session

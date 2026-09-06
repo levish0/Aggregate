@@ -50,6 +50,9 @@ pub struct MapTerrainMaterial {
     #[texture(23)]
     #[sampler(24)]
     pub cloud_density: Handle<Image>,
+    #[texture(25)]
+    #[sampler(26)]
+    pub water_flow: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]
@@ -96,8 +99,15 @@ pub fn update_selection(
             u32::from(state.inspect_country),
         );
         let blend = ((camera.distance - 130.) / 400.).clamp(0., 1.);
-        let view = Vec4::new(blend * blend * (3. - 2. * blend), 0., 0., 0.);
-        if material.view != view { material.view = view; }
+        let view = Vec4::new(
+            blend * blend * (3. - 2. * blend),
+            crate::clouds::opacity(camera.distance),
+            0.,
+            0.,
+        );
+        if material.view != view {
+            material.view = view;
+        }
         if material.selection != selection {
             material.selection = selection;
         }

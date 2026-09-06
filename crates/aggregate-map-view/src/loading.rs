@@ -234,7 +234,11 @@ pub fn finish_loading(
         color_map: server.load("gfx/map/textures/colormap.dds"),
         terrain_diffuse: repeating_texture(&server, "gfx/map/derived/terrain_diffuse.dds", true),
         terrain_normal: repeating_texture(&server, "gfx/map/derived/terrain_normal.dds", false),
-        terrain_properties: repeating_texture(&server, "gfx/map/derived/terrain_material.dds", false),
+        terrain_properties: repeating_texture(
+            &server,
+            "gfx/map/derived/terrain_material.dds",
+            false,
+        ),
         terrain_relief: server
             .load_builder()
             .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
@@ -242,6 +246,7 @@ pub fn finish_loading(
             })
             .load("gfx/map/derived/terrain_relief.dds"),
         cloud_density: repeating_texture(&server, "gfx/map/fog_of_war/cloud.dds", false),
+        water_flow: repeating_texture(&server, "gfx/map/water/flowmap.dds", false),
         water_normal: repeating_texture(&server, "gfx/map/water/ambient_normal.dds", false),
         terrain_weights: server
             .load_builder()
@@ -271,6 +276,7 @@ pub fn finish_loading(
         terrain_material.terrain_relief.clone(),
         terrain_material.water_normal.clone(),
         terrain_material.cloud_density.clone(),
+        terrain_material.water_flow.clone(),
         terrain_material.terrain_weights.clone(),
         terrain_material.terrain_indices.clone(),
         terrain_material.water_color.clone(),
@@ -290,9 +296,20 @@ pub fn finish_loading(
     }
     let forest = forest_materials.add(crate::scenery::ForestMaterial { tint: Vec4::ONE });
     let road = road_materials.add(crate::scenery::RoadMaterial {
-        diffuse: repeating_texture(&server,"gfx/map/spline_network/road_paved_diffuse.dds",true),
+        diffuse: repeating_texture(
+            &server,
+            "gfx/map/spline_network/road_paved_diffuse.dds",
+            true,
+        ),
     });
-    crate::scenery::spawn(&mut commands,scenery,map.terrain.size.x,&mut meshes,forest,road);
+    crate::scenery::spawn(
+        &mut commands,
+        scenery,
+        map.terrain.size.x,
+        &mut meshes,
+        forest,
+        road,
+    );
     controller.target = Vec3::new(map.terrain.size.x * 0.51, 0., map.terrain.size.y * 0.24);
     controller.distance = 360.;
     controller.desired_distance = 360.;
@@ -301,7 +318,11 @@ pub fn finish_loading(
     commands.insert_resource(LoadedWorldMap(Arc::new(map)));
 }
 
-pub(crate) fn repeating_texture(server: &AssetServer, path: &'static str, is_srgb: bool) -> Handle<Image> {
+pub(crate) fn repeating_texture(
+    server: &AssetServer,
+    path: &'static str,
+    is_srgb: bool,
+) -> Handle<Image> {
     server
         .load_builder()
         .with_settings(move |settings: &mut bevy::image::ImageLoaderSettings| {
