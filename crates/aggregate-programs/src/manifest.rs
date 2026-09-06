@@ -1,28 +1,28 @@
 use semver::{Version, VersionReq};
 use serde::{Deserialize, Serialize};
 
-pub const MODULE_API_VERSION: u32 = 1;
+pub const PROGRAM_API_VERSION: u32 = 1;
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
-pub struct ModuleDependency {
+pub struct ProgramDependency {
     pub id: String,
     pub version: VersionReq,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
-pub struct ModuleManifest {
+pub struct ProgramManifest {
     /// Authored namespaced key, for example `community.health`; not an entity UUID.
     pub id: String,
     pub version: Version,
     pub api_version: u32,
     pub state_schema_version: u32,
-    pub dependencies: Vec<ModuleDependency>,
+    pub dependencies: Vec<ProgramDependency>,
     pub conflicts: Vec<String>,
 }
 
-impl ModuleManifest {
+impl ProgramManifest {
     pub fn validate(&self) -> Result<(), String> {
         let valid_id = |id: &str| {
             id.contains('.')
@@ -37,11 +37,11 @@ impl ModuleManifest {
                 })
         };
         if !valid_id(&self.id)
-            || self.api_version != MODULE_API_VERSION
+            || self.api_version != PROGRAM_API_VERSION
             || self.state_schema_version == 0
         {
             return Err(format!(
-                "invalid identity, API or state schema for module {}",
+                "invalid identity, API or state schema for program {}",
                 self.id
             ));
         }

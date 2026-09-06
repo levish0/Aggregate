@@ -65,7 +65,7 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
             .ok_or("daily workforce overallocated")?;
         for allocation in allocate_labor(available, &requests).map_err(|error| error.to_string())? {
             if allocation.allocated_workers > 0 {
-                tracing::debug!(day = work.day, province = %province_id, facility = %allocation.facility_id, workers = allocation.allocated_workers, "Unused workforce reassigned to construction");
+                tracing::debug!(day = work.day, province = %province_id, facility = %allocation.facility_id, workers = allocation.allocated_workers, committed = false, "Unused workforce reassignment planned");
             }
             let current = province
                 .allocations
@@ -100,7 +100,7 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
                 .requested_workers
                 .min(project.0.remaining_worker_days)
         {
-            tracing::debug!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, active_workers = actual, remaining_worker_days = remaining, "Construction limited by local workforce");
+            tracing::debug!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, active_workers = actual, remaining_worker_days = remaining, committed = false, "Construction plan limited by local workforce");
         }
         work.constructions.insert(
             project.0.facility_id.clone(),
@@ -122,7 +122,6 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
                 remaining_worker_days: remaining,
             });
         if remaining == 0 {
-            tracing::info!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, "Construction completed");
             work.report
                 .as_mut()
                 .expect("initialized report")

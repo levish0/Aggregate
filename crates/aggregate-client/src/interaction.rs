@@ -39,6 +39,7 @@ pub fn apply_actions(
         .into_iter()
         .chain(escape.then_some(InterfaceAction::Back))
     {
+        info!(?action, screen = ?state.screen, "Interface action requested");
         match action {
             InterfaceAction::OpenManagement => state.screen = Screen::Management,
             InterfaceAction::OpenWorldMap => state.screen = Screen::WorldMap,

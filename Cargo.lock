@@ -165,7 +165,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "aggregate-modules"
+name = "aggregate-programs"
 version = "0.1.0"
 dependencies = [
  "aggregate-world",
@@ -190,7 +190,7 @@ name = "aggregate-simulation-core"
 version = "0.1.0"
 dependencies = [
  "aggregate-economy",
- "aggregate-modules",
+ "aggregate-programs",
  "aggregate-scenario",
  "aggregate-world",
  "bevy_ecs",

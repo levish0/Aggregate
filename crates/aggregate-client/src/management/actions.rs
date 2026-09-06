@@ -29,6 +29,7 @@ pub fn apply_management_actions(
         if !button.enabled {
             continue;
         }
+        info!(?action, province = %view.selected_province, day = session.snapshot.day, "Management action requested");
         match action {
             ManagementAction::SelectProvince(province) => {
                 if session

@@ -1,4 +1,4 @@
-use crate::{ModuleContext, ModuleManifest, SimulationModule};
+use crate::{ProgramContext, ProgramManifest, SimulationProgram};
 use aggregate_world::{PopulationGroupId, WorldSnapshot};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
@@ -9,45 +9,45 @@ use std::{
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
-pub struct SavedModuleState {
-    pub manifest: ModuleManifest,
+pub struct SavedProgramState {
+    pub manifest: ProgramManifest,
     pub payload: Value,
 }
 
-struct EnabledModule {
-    implementation: Arc<dyn SimulationModule>,
-    saved: SavedModuleState,
+struct EnabledProgram {
+    implementation: Arc<dyn SimulationProgram>,
+    saved: SavedProgramState,
 }
 
 #[derive(Default)]
-pub struct ModuleRuntime {
-    modules: Vec<EnabledModule>,
+pub struct ProgramRuntime {
+    programs: Vec<EnabledProgram>,
 }
 
-pub struct PreparedModules {
+pub struct PreparedPrograms {
     pub workforce_limits: BTreeMap<PopulationGroupId, u64>,
     states: Vec<Value>,
 }
 
-impl ModuleRuntime {
-    /// Supplied modules are the enabled loadout. Dependencies must also be enabled.
+impl ProgramRuntime {
+    /// Supplied programs are the enabled loadout. Dependencies must also be enabled.
     pub fn initialize(
-        implementations: Vec<Arc<dyn SimulationModule>>,
+        implementations: Vec<Arc<dyn SimulationProgram>>,
         world: &WorldSnapshot,
     ) -> Result<Self, String> {
-        let modules = resolve(implementations)?.into_iter().map(|(manifest, implementation)| {
+        let programs = resolve(implementations)?.into_iter().map(|(manifest, implementation)| {
             let payload = implementation.initialize(world).map_err(|error| format!("{} initialization: {error}", manifest.id))?;
             implementation.validate_state(world, &payload).map_err(|error| format!("{} state: {error}", manifest.id))?;
-            tracing::info!(module = %manifest.id, version = %manifest.version, "Module enabled");
-            Ok(EnabledModule { implementation, saved: SavedModuleState { manifest, payload } })
+            tracing::info!(program = %manifest.id, version = %manifest.version, "Program enabled");
+            Ok(EnabledProgram { implementation, saved: SavedProgramState { manifest, payload } })
         }).collect::<Result<Vec<_>, String>>()?;
-        Ok(Self { modules })
+        Ok(Self { programs })
     }
 
     /// Save requirements choose the enabled loadout; other installed providers stay off.
     pub fn restore(
-        available: Vec<Arc<dyn SimulationModule>>,
-        saved: Vec<SavedModuleState>,
+        available: Vec<Arc<dyn SimulationProgram>>,
+        saved: Vec<SavedProgramState>,
         world: &WorldSnapshot,
     ) -> Result<Self, String> {
         let mut providers = BTreeMap::new();
@@ -58,7 +58,7 @@ impl ModuleRuntime {
                 .insert(manifest.id.clone(), implementation)
                 .is_some()
             {
-                return Err(format!("duplicate installed module {}", manifest.id));
+                return Err(format!("duplicate installed program {}", manifest.id));
             }
         }
         let mut snapshots = BTreeMap::new();
@@ -68,80 +68,80 @@ impl ModuleRuntime {
             let id = state.manifest.id.clone();
             let implementation = providers
                 .remove(&id)
-                .ok_or_else(|| format!("save requires unavailable module {id}"))?;
+                .ok_or_else(|| format!("save requires unavailable program {id}"))?;
             if implementation.manifest() != state.manifest {
                 return Err(format!(
-                    "saved module {id} version/schema/manifest does not match; migration required"
+                    "saved program {id} version/schema/manifest does not match; migration required"
                 ));
             }
             implementation
                 .validate_state(world, &state.payload)
                 .map_err(|error| format!("{id} saved state: {error}"))?;
             if snapshots.insert(id.clone(), state).is_some() {
-                return Err(format!("duplicate saved module {id}"));
+                return Err(format!("duplicate saved program {id}"));
             }
             enabled.push(implementation);
         }
-        let modules = resolve(enabled)?
+        let programs = resolve(enabled)?
             .into_iter()
-            .map(|(manifest, implementation)| EnabledModule {
+            .map(|(manifest, implementation)| EnabledProgram {
                 implementation,
                 saved: snapshots
                     .remove(&manifest.id)
-                    .expect("resolved saved module"),
+                    .expect("resolved saved program"),
             })
             .collect();
-        Ok(Self { modules })
+        Ok(Self { programs })
     }
 
     pub fn is_empty(&self) -> bool {
-        self.modules.is_empty()
+        self.programs.is_empty()
     }
 
-    pub fn snapshot(&self) -> Vec<SavedModuleState> {
-        self.modules
+    pub fn snapshot(&self) -> Vec<SavedProgramState> {
+        self.programs
             .iter()
-            .map(|module| module.saved.clone())
+            .map(|program| program.saved.clone())
             .collect()
     }
 
     #[tracing::instrument(level = "debug", skip_all, fields(day))]
-    pub fn prepare_day(&self, world: &WorldSnapshot, day: u64) -> Result<PreparedModules, String> {
+    pub fn prepare_day(&self, world: &WorldSnapshot, day: u64) -> Result<PreparedPrograms, String> {
         let previous: BTreeMap<_, _> = self
-            .modules
+            .programs
             .iter()
-            .map(|module| (module.saved.manifest.id.as_str(), &module.saved.payload))
+            .map(|program| (program.saved.manifest.id.as_str(), &program.saved.payload))
             .collect();
         let workforce: BTreeMap<_, _> = world
             .population_groups
             .iter()
             .map(|group| (&group.id, group.workforce))
             .collect();
-        let mut proposed = PreparedModules {
+        let mut proposed = PreparedPrograms {
             workforce_limits: BTreeMap::new(),
             states: Vec::new(),
         };
-        for module in &self.modules {
-            let id = &module.saved.manifest.id;
-            let span = tracing::debug_span!("module_calculation", module = %id, version = %module.saved.manifest.version);
+        for program in &self.programs {
+            let id = &program.saved.manifest.id;
+            let span = tracing::debug_span!("program_calculation", program = %id, version = %program.saved.manifest.version);
             let _entered = span.enter();
-            let dependencies = module
+            let dependencies = program
                 .saved
                 .manifest
                 .dependencies
                 .iter()
                 .map(|dependency| (dependency.id.as_str(), previous[dependency.id.as_str()]))
                 .collect();
-            let context = ModuleContext {
+            let context = ProgramContext {
                 day,
                 world,
                 dependencies,
             };
-            let plan = module
+            let plan = program
                 .implementation
-                .plan_day(&context, &module.saved.payload)
+                .plan_day(&context, &program.saved.payload)
                 .map_err(|error| format!("{id} calculation: {error}"))?;
-            module
+            program
                 .implementation
                 .validate_state(world, &plan.next_state)
                 .map_err(|error| format!("{id} proposed state: {error}"))?;
@@ -166,32 +166,32 @@ impl ModuleRuntime {
     }
 
     /// Called only after the core day commits. No validation or fallible work remains.
-    pub fn commit(&mut self, proposed: PreparedModules) {
-        for (module, state) in self.modules.iter_mut().zip(proposed.states) {
-            module.saved.payload = state;
+    pub fn commit(&mut self, proposed: PreparedPrograms) {
+        for (program, state) in self.programs.iter_mut().zip(proposed.states) {
+            program.saved.payload = state;
         }
     }
 }
 
-type ResolvedModule = (ModuleManifest, Arc<dyn SimulationModule>);
+type ResolvedProgram = (ProgramManifest, Arc<dyn SimulationProgram>);
 
-fn resolve(implementations: Vec<Arc<dyn SimulationModule>>) -> Result<Vec<ResolvedModule>, String> {
-    let mut modules = BTreeMap::new();
+fn resolve(implementations: Vec<Arc<dyn SimulationProgram>>) -> Result<Vec<ResolvedProgram>, String> {
+    let mut programs = BTreeMap::new();
     for implementation in implementations {
         let manifest = implementation.manifest();
         manifest.validate()?;
-        if modules
+        if programs
             .insert(manifest.id.clone(), (manifest.clone(), implementation))
             .is_some()
         {
-            return Err(format!("duplicate enabled module {}", manifest.id));
+            return Err(format!("duplicate enabled program {}", manifest.id));
         }
     }
-    for (manifest, _) in modules.values() {
+    for (manifest, _) in programs.values() {
         for dependency in &manifest.dependencies {
-            let Some((required, _)) = modules.get(&dependency.id) else {
+            let Some((required, _)) = programs.get(&dependency.id) else {
                 return Err(format!(
-                    "{} requires disabled/missing module {}",
+                    "{} requires disabled/missing program {}",
                     manifest.id, dependency.id
                 ));
             };
@@ -203,15 +203,15 @@ fn resolve(implementations: Vec<Arc<dyn SimulationModule>>) -> Result<Vec<Resolv
             }
         }
         for conflict in &manifest.conflicts {
-            if modules.contains_key(conflict) {
+            if programs.contains_key(conflict) {
                 return Err(format!("{} conflicts with {conflict}", manifest.id));
             }
         }
     }
     let mut resolved = Vec::new();
     let mut completed = BTreeSet::new();
-    while !modules.is_empty() {
-        let ready = modules
+    while !programs.is_empty() {
+        let ready = programs
             .iter()
             .find(|(_, (manifest, _))| {
                 manifest
@@ -222,12 +222,12 @@ fn resolve(implementations: Vec<Arc<dyn SimulationModule>>) -> Result<Vec<Resolv
             .map(|(id, _)| id.clone());
         let Some(id) = ready else {
             return Err(format!(
-                "module dependency cycle: {}",
-                modules.keys().cloned().collect::<Vec<_>>().join(", ")
+                "program dependency cycle: {}",
+                programs.keys().cloned().collect::<Vec<_>>().join(", ")
             ));
         };
         completed.insert(id.clone());
-        resolved.push(modules.remove(&id).expect("ready module"));
+        resolved.push(programs.remove(&id).expect("ready program"));
     }
     Ok(resolved)
 }

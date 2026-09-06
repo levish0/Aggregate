@@ -54,20 +54,20 @@ impl InterfaceState {
         self.localization
             .format(key, Some(&arguments))
             .unwrap_or_else(|error| {
-                error!("{error}");
+                error!(key, reason = %error, "Localization formatting failed");
                 format!("[{key}]")
             })
     }
 
     pub fn text(&self, key: &str) -> String {
         self.localization.text(key).unwrap_or_else(|error| {
-            error!("{error}");
+            error!(key, reason = %error, "Localization lookup failed");
             format!("[{key}]")
         })
     }
 }
 
-#[derive(Component, Clone, Copy, PartialEq, Eq)]
+#[derive(Component, Debug, Clone, Copy, PartialEq, Eq)]
 pub enum InterfaceAction {
     OpenManagement,
     OpenWorldMap,

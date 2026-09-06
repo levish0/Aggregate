@@ -2,6 +2,7 @@
 //! One authoritative ECS World, staged daily commits, validated commands and portable saves.
 mod clock;
 mod command;
+mod diagnostics;
 mod error;
 mod report;
 mod save;

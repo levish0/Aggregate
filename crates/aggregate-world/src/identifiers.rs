@@ -2,6 +2,24 @@ use serde::{Deserialize, Serialize};
 use std::{fmt, str::FromStr};
 use uuid::Uuid;
 
+/// Persistent identity of a country's administrative portion of a geographic region.
+#[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
+#[serde(transparent)]
+pub struct StateId(pub Uuid);
+
+impl From<Uuid> for StateId {
+    fn from(value: Uuid) -> Self { Self(value) }
+}
+
+impl FromStr for StateId {
+    type Err = uuid::Error;
+    fn from_str(value: &str) -> Result<Self, Self::Err> { Uuid::parse_str(value).map(Self) }
+}
+
+impl fmt::Display for StateId {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result { self.0.fmt(formatter) }
+}
+
 /// Persistent country identity, independent of its name, tag or ECS allocation.
 #[derive(Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 #[serde(transparent)]

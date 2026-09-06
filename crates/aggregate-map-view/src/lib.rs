@@ -35,6 +35,9 @@ pub struct MapViewState {
 pub struct LoadedWorldMap(pub Arc<WorldMap>);
 
 #[derive(Resource)]
+pub struct LoadedAdministration(pub aggregate_geography::AdministrativeIndex);
+
+#[derive(Resource)]
 struct MapAssetRoot(PathBuf);
 
 #[derive(Resource)]

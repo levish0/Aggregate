@@ -6,7 +6,7 @@ use crate::{
     schedule::create_schedule,
     world_storage::{self, DayWork},
 };
-use aggregate_modules::{ModuleRuntime, SavedModuleState, SimulationModule};
+use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram};
 use aggregate_scenario::validate_scenario;
 use aggregate_world::{Scenario, WorldSnapshot};
 use bevy_ecs::prelude::*;
@@ -19,23 +19,23 @@ pub struct Simulation {
     schedule: Schedule,
     pub(crate) initial_scenario: Scenario,
     pub(crate) commands: Vec<RecordedCommand>,
-    pub(crate) modules: ModuleRuntime,
+    pub(crate) programs: ProgramRuntime,
 }
 
 impl Simulation {
-    pub fn from_scenario_with_modules(
+    pub fn from_scenario_with_programs(
         scenario: Scenario,
-        modules: Vec<Arc<dyn SimulationModule>>,
+        programs: Vec<Arc<dyn SimulationProgram>>,
     ) -> Result<Self, SimulationError> {
         let mut simulation = Self::from_scenario(scenario)?;
-        simulation.modules =
-            ModuleRuntime::initialize(modules, &simulation.initial_scenario.initial_state)
-                .map_err(SimulationError::InvalidModules)?;
+        simulation.programs =
+            ProgramRuntime::initialize(programs, &simulation.initial_scenario.initial_state)
+                .map_err(SimulationError::InvalidPrograms)?;
         Ok(simulation)
     }
 
-    pub fn module_states(&self) -> Vec<SavedModuleState> {
-        self.modules.snapshot()
+    pub fn program_states(&self) -> Vec<SavedProgramState> {
+        self.programs.snapshot()
     }
 
     pub fn from_scenario(mut scenario: Scenario) -> Result<Self, SimulationError> {
@@ -59,7 +59,7 @@ impl Simulation {
             schedule: create_schedule(),
             initial_scenario: scenario,
             commands,
-            modules: ModuleRuntime::default(),
+            programs: ProgramRuntime::default(),
         }
     }
 
@@ -93,7 +93,8 @@ impl Simulation {
         .inspect_err(|error| {
             tracing::warn!(?command, reason = %error, "Simulation command rejected");
         })?;
-        tracing::info!(sequence, ?command, "Simulation command accepted");
+        tracing::info!(day = self.clock().day(), sequence, ?command, "Simulation command accepted");
+        crate::diagnostics::log_committed_event(self.clock().day(), &outcome.event);
         self.commands.push(RecordedCommand {
             day: self.clock().day(),
             sequence,
@@ -105,13 +106,13 @@ impl Simulation {
     #[tracing::instrument(level = "debug", skip_all, fields(day = self.clock().day().saturating_add(1)))]
     pub fn step(&mut self) -> Result<DayReport, SimulationError> {
         let next_day = self.clock().day().saturating_add(1);
-        let prepared_modules = if self.modules.is_empty() {
+        let prepared_programs = if self.programs.is_empty() {
             None
         } else {
             let state = self.snapshot();
-            let prepared = self.modules.prepare_day(&state, next_day).map_err(|reason| {
-                tracing::error!(day = next_day, %reason, "Module calculation failed; state not committed");
-                SimulationError::DayFailed { day: next_day, phase: "modules", reason }
+            let prepared = self.programs.prepare_day(&state, next_day).map_err(|reason| {
+                tracing::error!(day = next_day, %reason, "Program calculation failed; state not committed");
+                SimulationError::DayFailed { day: next_day, phase: "programs", reason }
             })?;
             self.world
                 .resource_mut::<world_storage::WorkforceLimits>()
@@ -138,8 +139,11 @@ impl Simulation {
             events = report.events.len(),
             "Daily state committed"
         );
-        if let Some(prepared) = prepared_modules {
-            self.modules.commit(prepared);
+        if let Some(prepared) = prepared_programs {
+            self.programs.commit(prepared);
+        }
+        for event in &report.events {
+            crate::diagnostics::log_committed_event(report.day, event);
         }
         Ok(report)
     }
@@ -150,17 +154,18 @@ impl Simulation {
         commands: &[RecordedCommand],
         through_day: u64,
     ) -> Result<Self, SimulationError> {
-        Self::replay_with_modules(scenario, commands, through_day, Vec::new())
+        Self::replay_with_programs(scenario, commands, through_day, Vec::new())
     }
 
-    pub fn replay_with_modules(
+    #[tracing::instrument(level = "info", skip_all, fields(through_day, commands = commands.len()), err)]
+    pub fn replay_with_programs(
         scenario: Scenario,
         commands: &[RecordedCommand],
         through_day: u64,
-        modules: Vec<Arc<dyn SimulationModule>>,
+        programs: Vec<Arc<dyn SimulationProgram>>,
     ) -> Result<Self, SimulationError> {
         crate::save::validate_command_log(commands, through_day)?;
-        let mut simulation = Self::from_scenario_with_modules(scenario, modules)?;
+        let mut simulation = Self::from_scenario_with_programs(scenario, programs)?;
         for record in commands {
             while simulation.clock().day() < record.day {
                 simulation.step()?;

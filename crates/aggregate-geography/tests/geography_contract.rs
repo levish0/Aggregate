@@ -4,7 +4,8 @@ use uuid::Uuid;
 
 fn catalog() -> GeographyCatalog {
     GeographyCatalog {
-        schema_version: 1,
+        schema_version: 2,
+        states: vec![aggregate_geography::MapState { id: Uuid::from_u128(5).into(), region: Uuid::from_u128(2).into(), country: Uuid::from_u128(1).into() }],
         countries: vec![MapCountry {
             id: Uuid::from_u128(1).into(),
             key: "country".into(),

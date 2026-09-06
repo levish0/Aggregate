@@ -1,5 +1,5 @@
 use crate::{Simulation, SimulationError, command::RecordedCommand};
-use aggregate_modules::{ModuleRuntime, SavedModuleState, SimulationModule};
+use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram};
 use aggregate_scenario::{validate_scenario, validate_world_state};
 use aggregate_world::{Scenario, WorldSnapshot};
 use serde::{Deserialize, Serialize};
@@ -17,10 +17,11 @@ struct SimulationSave {
     scenario: Scenario,
     current_state: WorldSnapshot,
     commands: Vec<RecordedCommand>,
-    modules: Vec<SavedModuleState>,
+    programs: Vec<SavedProgramState>,
 }
 
 impl Simulation {
+    #[tracing::instrument(level = "info", skip_all, fields(day = self.clock().day()), err)]
     pub fn save_json(&mut self) -> Result<String, SimulationError> {
         let save = SimulationSave {
             schema_version: SAVE_SCHEMA_VERSION,
@@ -28,19 +29,22 @@ impl Simulation {
             scenario: self.initial_scenario.clone(),
             current_state: self.snapshot(),
             commands: self.commands.clone(),
-            modules: self.modules.snapshot(),
+            programs: self.programs.snapshot(),
         };
-        serde_json::to_string_pretty(&save)
-            .map_err(|error| SimulationError::InvalidSave(error.to_string()))
+        let encoded = serde_json::to_string_pretty(&save)
+            .map_err(|error| SimulationError::InvalidSave(error.to_string()))?;
+        tracing::info!(day = save.current_state.day, bytes = encoded.len(), programs = save.programs.len(), "Save serialized");
+        Ok(encoded)
     }
 
     pub fn from_save_json(source: &str) -> Result<Self, SimulationError> {
-        Self::from_save_json_with_modules(source, Vec::new())
+        Self::from_save_json_with_programs(source, Vec::new())
     }
 
-    pub fn from_save_json_with_modules(
+    #[tracing::instrument(level = "info", skip_all, fields(bytes = source.len()), err)]
+    pub fn from_save_json_with_programs(
         source: &str,
-        available: Vec<Arc<dyn SimulationModule>>,
+        available: Vec<Arc<dyn SimulationProgram>>,
     ) -> Result<Self, SimulationError> {
         let mut deserializer = serde_json::Deserializer::from_str(source);
         let mut save: SimulationSave = serde_path_to_error::deserialize(&mut deserializer)
@@ -68,17 +72,18 @@ impl Simulation {
         )?;
         validate_command_log(&save.commands, save.current_state.day)?;
         save.current_state.normalize();
-        let modules = ModuleRuntime::restore(available, save.modules, &save.current_state)
-            .map_err(SimulationError::InvalidModules)?;
+        let programs = ProgramRuntime::restore(available, save.programs, &save.current_state)
+            .map_err(SimulationError::InvalidPrograms)?;
         let mut simulation =
             Self::from_validated_state(save.scenario, &save.current_state, save.commands);
-        simulation.modules = modules;
+        simulation.programs = programs;
+        tracing::info!(day = simulation.clock().day(), commands = simulation.commands.len(), "Save restored");
         Ok(simulation)
     }
 
     /// Hash canonical domain state, excluding ECS memory layout, transient reports and caches.
     pub fn state_hash(&mut self) -> Result<String, SimulationError> {
-        let canonical = serde_json::to_vec(&(self.snapshot(), self.modules.snapshot()))
+        let canonical = serde_json::to_vec(&(self.snapshot(), self.programs.snapshot()))
             .map_err(|error| SimulationError::InvalidSave(error.to_string()))?;
         Ok(blake3::hash(&canonical).to_hex().to_string())
     }

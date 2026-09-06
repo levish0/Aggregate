@@ -3,8 +3,10 @@ mod diagnostics;
 mod interaction;
 mod management;
 #[cfg(all(test, target_os = "windows"))]
+#[path = "../tests/native/management_capture.rs"]
 mod native_capture;
 #[cfg(all(test, target_os = "windows"))]
+#[path = "../tests/native/map_capture.rs"]
 mod native_map_capture;
 mod screens;
 mod state;
@@ -48,6 +50,7 @@ fn create_app() -> App {
                     ..default()
                 }),
         );
+    diagnostics::log_startup();
     let session = management::ManagementSession::foundation();
     let view = session.initial_view();
     app.add_plugins(AggregateUiPlugin)
@@ -57,7 +60,7 @@ fn create_app() -> App {
         .insert_resource(view)
         .add_systems(
             Startup,
-            (setup_camera, backdrop::setup, diagnostics::log_startup),
+            (setup_camera, backdrop::setup),
         )
         .add_systems(
             Update,

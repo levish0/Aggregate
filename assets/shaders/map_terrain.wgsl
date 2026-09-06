@@ -44,13 +44,18 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let right = province_at(pixel+vec2<i32>(offset.x,0));
     let below = province_at(pixel+vec2<i32>(0,offset.y));
     let border = styles[right].grouping.y != style.grouping.y || styles[below].grouping.y != style.grouping.y;
+    let state_border = styles[right].grouping.w != style.grouping.w || styles[below].grouping.w != style.grouping.w;
     let coast = styles[right].grouping.z != style.grouping.z || styles[below].grouping.z != style.grouping.z;
     if border && !water { color *= 0.55; }
+    else if state_border && !water && selection.z != 0u { color *= 0.82; }
     if coast { color = mix(color,vec3<f32>(0.40,0.55,0.52),0.5); }
     if id == selection.y && id != 0u { color = mix(color,vec3<f32>(0.78,0.69,0.38),0.24); }
-    if id == selection.x && id != 0u {
+    let selected_state = styles[selection.x].grouping.w;
+    if selected_state != 0u && style.grouping.w == selected_state {
         color = mix(color,vec3<f32>(0.85,0.60,0.20),0.35);
-        if right != id || below != id { color = vec3<f32>(1.0,0.8,0.35); }
+        if state_border { color = vec3<f32>(1.0,0.8,0.35); }
+    } else if id == selection.x && id != 0u {
+        color = mix(color,vec3<f32>(0.85,0.60,0.20),0.35);
     }
     return vec4<f32>(color,1.0);
 }
