@@ -56,6 +56,7 @@ fn create_app() -> App {
     app.add_plugins(AggregateUiPlugin)
         .add_plugins(aggregate_map_view::MapViewPlugin { asset_root })
         .init_resource::<state::InterfaceState>()
+        .init_resource::<screens::world_map::inspection::InspectionView>()
         .insert_resource(session)
         .insert_resource(view)
         .add_systems(
@@ -72,6 +73,8 @@ fn create_app() -> App {
                     screens::rebuild,
                     screens::world_map::configure_view,
                     screens::world_map::outliner::apply_jumps,
+                    screens::world_map::inspection::apply_actions,
+                    screens::world_map::inspection::refresh,
                     screens::world_map::outliner::rebuild,
                     screens::world_map::update_labels,
                     screens::management::update_management_lists,

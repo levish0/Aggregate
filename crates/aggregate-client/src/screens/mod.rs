@@ -97,7 +97,7 @@ fn footer(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Interf
         fonts,
         state.text("foundation-label"),
         12.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     components::text(

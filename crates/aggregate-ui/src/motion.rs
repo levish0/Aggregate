@@ -17,9 +17,6 @@ pub struct MotionValue {
 }
 
 impl MotionValue {
-    pub(crate) fn current(&self) -> f32 {
-        self.current
-    }
     pub fn new(value: f32) -> Self {
         Self {
             current: value,

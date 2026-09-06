@@ -3,12 +3,15 @@ pub mod button;
 pub mod components;
 pub mod fonts;
 pub mod layout;
+pub mod icon;
 pub mod motion;
 pub mod scroll;
+mod scrollbar;
 pub mod select;
 pub mod skin;
 pub mod theme;
 pub mod tooltip;
+pub mod window;
 
 use bevy::{
     input_focus::{InputFocus, InputFocusVisible},
@@ -26,8 +29,9 @@ pub struct AggregateUiPlugin;
 
 impl Plugin for AggregateUiPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(UiMaterialPlugin::<skin::SurfaceMaterial>::default())
-            .init_resource::<InputFocus>()
+        app.init_resource::<InputFocus>()
+            .init_resource::<window::WindowInteraction>()
+            .init_resource::<scrollbar::ScrollbarInteraction>()
             .init_resource::<InputFocusVisible>()
             .init_resource::<motion::MotionPreferences>()
             .init_resource::<KeyboardFocus>()
@@ -42,6 +46,8 @@ impl Plugin for AggregateUiPlugin {
                 Update,
                 (
                     button::keyboard_navigation,
+                    window::interact,
+                    scrollbar::interact,
                     button::pointer_interaction,
                     select::interact,
                     button::animate_buttons,
@@ -56,7 +62,9 @@ impl Plugin for AggregateUiPlugin {
                 (
                     select::update_labels,
                     skin::apply_surfaces,
-                    skin::animate_surfaces,
+                    icon::load,
+                    scrollbar::attach,
+                    scrollbar::update,
                 )
                     .chain(),
             );

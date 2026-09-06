@@ -117,7 +117,7 @@ pub fn update_management_lists(
                         },
                     );
                     commands.entity(fill).insert((
-                        BackgroundColor(theme::GOLD),
+                        BackgroundColor(theme::ACCENT),
                         ProjectProgressFill(id.clone()),
                     ));
                 }
@@ -152,7 +152,7 @@ pub fn update_management_lists(
                         &fonts,
                         state.format("management-day", &[("day", entry.day.to_string())]),
                         12.,
-                        theme::GOLD,
+                        theme::ACCENT,
                         true,
                     );
                     ui::text(

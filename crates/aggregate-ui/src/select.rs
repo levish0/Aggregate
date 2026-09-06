@@ -94,7 +94,7 @@ pub fn trigger(
         },
     );
     commands.entity(chevron).insert((
-        BorderColor::all(theme::GOLD),
+        BorderColor::all(theme::ACCENT),
         UiTransform::from_rotation(Rot2::degrees(45.)),
     ));
     entity
@@ -128,7 +128,7 @@ pub fn content_at(commands: &mut Commands, root: Entity, above: bool) -> Entity 
         crate::skin::PanelSkin::Panel,
         GlobalZIndex(100),
         BackgroundColor(theme::PANEL),
-        BorderColor::all(theme::GOLD),
+        BorderColor::all(theme::ACCENT),
         theme::shadow(),
     ));
     entity

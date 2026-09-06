@@ -1,4 +1,4 @@
-use super::{MapInspectionPanel, MapLabel, MapModeSelect, outliner::MapOutliner};
+use super::{MapLabel, MapModeSelect, outliner::MapOutliner};
 use crate::{
     screens::action_button,
     state::{InterfaceAction, InterfaceState},
@@ -27,7 +27,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         },
     );
     commands.entity(header).insert(UiPointerBlocker);
-    ui::seal(commands, header, 44.);
+    aggregate_ui::icon::icon(commands, header, aggregate_ui::icon::Icon::Globe, 30., theme::TEXT);
     let title = layout::column(commands, header, 2.);
     ui::text(
         commands,
@@ -35,7 +35,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         "AGGREGATE",
         20.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     ui::text(
@@ -124,78 +124,10 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
             justify_content: JustifyContent::Center,
             ..default()
         });
+        aggregate_ui::icon::icon(commands, button, if action == InterfaceAction::OpenManagement { aggregate_ui::icon::Icon::Government } else { aggregate_ui::icon::Icon::Settings }, 22., theme::TEXT);
     }
 
-    let panel = ui::panel(
-        commands,
-        root,
-        Node {
-            position_type: PositionType::Absolute,
-            left: px(96),
-            top: px(100),
-            bottom: px(150),
-            width: px(286),
-            flex_direction: FlexDirection::Column,
-            ..default()
-        },
-    );
-    commands
-        .entity(panel)
-        .insert((MapInspectionPanel, UiPointerBlocker));
-    let heading = ui::node(
-        commands,
-        panel,
-        Node {
-            padding: UiRect::all(px(18)),
-            width: percent(100),
-            flex_direction: FlexDirection::Column,
-            row_gap: px(7),
-            ..default()
-        },
-    );
-    commands
-        .entity(heading)
-        .insert(BackgroundColor(theme::BURGUNDY));
-    ui::text(
-        commands,
-        heading,
-        fonts,
-        state.text("map-atlas"),
-        11.,
-        theme::GOLD,
-        false,
-    );
-    let region = ui::text(
-        commands,
-        heading,
-        fonts,
-        state.text("map-select-province"),
-        25.,
-        theme::TEXT,
-        true,
-    );
-    commands.entity(region).insert(MapLabel::Region);
-    let scroll = layout::scroll_area(
-        commands,
-        panel,
-        Node {
-            padding: UiRect::all(px(22)),
-            flex_grow: 1.,
-            width: percent(100),
-            flex_direction: FlexDirection::Column,
-            ..default()
-        },
-    );
-    let details = ui::text(
-        commands,
-        scroll,
-        fonts,
-        state.text("map-select-hint"),
-        16.,
-        theme::TEXT,
-        false,
-    );
-    commands.entity(details).insert(MapLabel::Details);
+    super::inspection::build(commands, root);
 
     let outliner = ui::panel(
         commands,
@@ -221,7 +153,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         state.text("map-outliner-title"),
         16.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     ui::rule(commands, outliner);
@@ -257,7 +189,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         state.text("map-lens-title"),
         13.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     let mode = select::root(commands, dock, "terrain", 180.);

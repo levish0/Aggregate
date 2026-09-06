@@ -16,6 +16,18 @@ pub struct MapTerrainMaterial {
     pub province_indices: Handle<Image>,
     #[storage(2, read_only)]
     pub province_styles: Handle<ShaderBuffer>,
+    #[texture(3)]
+    #[sampler(4)]
+    pub color_map: Handle<Image>,
+    #[texture(5)]
+    #[sampler(6)]
+    pub grass_detail: Handle<Image>,
+    #[texture(7)]
+    #[sampler(8)]
+    pub rock_detail: Handle<Image>,
+    #[texture(9)]
+    #[sampler(10)]
+    pub water_color: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]

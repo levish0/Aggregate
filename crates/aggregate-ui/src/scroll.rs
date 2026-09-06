@@ -8,8 +8,8 @@ use bevy::{
 /// A vertically scrollable Node whose wheel input and motion are owned by the UI layer.
 #[derive(Component)]
 pub struct ScrollRegion {
-    target: f32,
-    motion: MotionValue,
+    pub(crate) target: f32,
+    pub(crate) motion: MotionValue,
 }
 
 impl Default for ScrollRegion {

@@ -1,8 +1,8 @@
 use crate::Language;
 use fluent_bundle::{FluentArgs, FluentResource, concurrent::FluentBundle};
 
-const KOREAN: &str = include_str!("../../../locales/ko-KR/interface.ftl");
-const ENGLISH: &str = include_str!("../../../locales/en-US/interface.ftl");
+const KOREAN: &str = concat!(include_str!("../../../locales/ko-KR/interface.ftl"), "\n", include_str!("../../../locales/ko-KR/countries.ftl"));
+const ENGLISH: &str = concat!(include_str!("../../../locales/en-US/interface.ftl"), "\n", include_str!("../../../locales/en-US/countries.ftl"));
 
 pub struct Localization {
     language: Language,

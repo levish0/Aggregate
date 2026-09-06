@@ -79,9 +79,9 @@ pub fn rule(commands: &mut Commands, parent: Entity) {
         .insert(BackgroundGradient::from(LinearGradient {
             angle: std::f32::consts::FRAC_PI_2,
             stops: vec![
-                theme::GOLD.with_alpha(0.1).into(),
-                theme::GOLD.with_alpha(0.65).into(),
-                theme::GOLD.with_alpha(0.1).into(),
+                theme::ACCENT.with_alpha(0.1).into(),
+                theme::ACCENT.with_alpha(0.65).into(),
+                theme::ACCENT.with_alpha(0.1).into(),
             ],
             ..default()
         }));
@@ -119,7 +119,7 @@ pub fn button(
     let color = if !properties.enabled {
         theme::DISABLED
     } else if properties.tone == ButtonTone::Primary {
-        theme::GOLD_BRIGHT
+        theme::ACCENT_BRIGHT
     } else {
         theme::TEXT
     };
@@ -156,7 +156,7 @@ pub fn seal(commands: &mut Commands, parent: Entity, size: f32) {
     );
     commands
         .entity(outer)
-        .insert((BorderColor::all(theme::GOLD), BackgroundColor(theme::INK)));
+        .insert((BorderColor::all(theme::ACCENT), BackgroundColor(theme::INK)));
     let inner = node(
         commands,
         outer,
@@ -186,7 +186,7 @@ pub fn seal(commands: &mut Commands, parent: Entity, size: f32) {
             },
         );
         commands.entity(diamond).insert((
-            BorderColor::all(theme::GOLD_BRIGHT),
+            BorderColor::all(theme::ACCENT_BRIGHT),
             UiTransform::from_rotation(Rot2::radians(angle + 0.785)),
         ));
     }

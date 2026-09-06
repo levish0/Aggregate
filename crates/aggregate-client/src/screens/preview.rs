@@ -41,10 +41,10 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
     commands.entity(header).insert((
         BackgroundGradient::from(LinearGradient {
             angle: 1.57,
-            stops: vec![theme::BURGUNDY.into(), theme::PANEL.into()],
+            stops: vec![theme::TITLE_BAR.into(), theme::PANEL.into()],
             ..default()
         }),
-        BorderColor::all(theme::GOLD),
+        BorderColor::all(theme::ACCENT),
     ));
     ui::seal(commands, header, 52.);
     let title = ui::node(
@@ -63,7 +63,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         state.text("preview-subtitle"),
         12.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     ui::text(
@@ -124,7 +124,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         "AGGREGATE",
         12.,
-        theme::GOLD,
+        theme::ACCENT,
         true,
     );
     ui::rule(commands, navigation);
@@ -217,7 +217,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         state.text(state.status_key),
         14.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     commands.entity(status_label).insert(super::StatusLabel);
@@ -247,7 +247,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         state.text("sidebar-title"),
         20.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     for (number, title, description) in [
@@ -256,7 +256,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         ("03", "sidebar-three", "sidebar-three-body"),
     ] {
         ui::rule(commands, aside);
-        ui::text(commands, aside, fonts, number, 25., theme::GOLD, false);
+        ui::text(commands, aside, fonts, number, 25., theme::ACCENT, false);
         ui::text(
             commands,
             aside,
@@ -285,7 +285,7 @@ fn panels(commands: &mut Commands, parent: Entity, fonts: &UiFonts, state: &Inte
         fonts,
         state.text("section-panels"),
         19.,
-        theme::GOLD,
+        theme::ACCENT,
         true,
     );
     let row = ui::node(
@@ -342,7 +342,7 @@ fn controls(commands: &mut Commands, parent: Entity, fonts: &UiFonts, state: &In
         fonts,
         state.text("section-controls"),
         19.,
-        theme::GOLD,
+        theme::ACCENT,
         true,
     );
     let row = ui::node(
@@ -417,7 +417,7 @@ fn typography(commands: &mut Commands, parent: Entity, fonts: &UiFonts, state: &
         fonts,
         state.text("section-type"),
         36.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     ui::text(
@@ -447,7 +447,7 @@ fn typography(commands: &mut Commands, parent: Entity, fonts: &UiFonts, state: &
         fonts,
         "0123456789   86,400   +12.5%   −3.2%",
         25.,
-        theme::GOLD,
+        theme::ACCENT,
         true,
     );
     ui::text(

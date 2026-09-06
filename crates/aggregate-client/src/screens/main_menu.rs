@@ -67,7 +67,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         "AGGREGATE",
         39.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     ui::text(
@@ -96,7 +96,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         "I  /  AGGREGATE",
         12.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     ui::text(
@@ -207,7 +207,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         "A T L A S   /   0 0 1",
         12.,
-        theme::GOLD.with_alpha(0.7),
+        theme::ACCENT.with_alpha(0.7),
         false,
     );
     let compass = ui::node(
@@ -223,7 +223,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
             ..default()
         },
     );
-    ui::text(commands, compass, fonts, "N", 16., theme::GOLD, true);
+    ui::text(commands, compass, fonts, "N", 16., theme::ACCENT, true);
     ui::seal(commands, compass, 90.);
     ui::text(
         commands,

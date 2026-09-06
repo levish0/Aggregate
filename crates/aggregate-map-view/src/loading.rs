@@ -90,6 +90,7 @@ pub fn start_loading(
 
 pub fn finish_loading(
     mut commands: Commands,
+    server: Res<AssetServer>,
     task: Option<ResMut<MapLoadTask>>,
     mut state: ResMut<MapViewState>,
     mut meshes: ResMut<Assets<Mesh>>,
@@ -181,6 +182,10 @@ pub fn finish_loading(
         selection: UVec4::ZERO,
         province_indices: image,
         province_styles: buffers.add(ShaderBuffer::from(styles)),
+        color_map: server.load("gfx/map/textures/colormap.dds"),
+        grass_detail: server.load("gfx/map/terrain/grasslands_01_diffuse.dds"),
+        rock_detail: server.load("gfx/map/terrain/rocks_01_diffuse.dds"),
+        water_color: server.load("gfx/map/water/watercolor_rgb_waterspec_a.dds"),
     });
     for mesh in prepared_meshes {
         let mesh = meshes.add(mesh);

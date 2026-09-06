@@ -35,7 +35,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         aggregate_ui::motion::PanelEntrance::new(Vec2::new(0., 18.)),
         UiTransform::default(),
     ));
-    ui::text(commands, panel, fonts, "AGGREGATE", 13., theme::GOLD, true);
+    ui::text(commands, panel, fonts, "AGGREGATE", 13., theme::ACCENT, true);
     ui::text(
         commands,
         panel,
@@ -61,7 +61,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         fonts,
         state.text("settings-language"),
         16.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     action_button(
@@ -82,7 +82,7 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
             state.scale * 100.
         ),
         16.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     commands.entity(scale_label).insert(super::ScaleLabel);

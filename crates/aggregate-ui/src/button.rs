@@ -70,14 +70,6 @@ impl Default for ButtonMotion {
     }
 }
 
-impl ButtonMotion {
-    pub(crate) fn hover_amount(&self) -> f32 {
-        self.hover.current()
-    }
-    pub(crate) fn press_amount(&self) -> f32 {
-        self.press.current()
-    }
-}
 
 pub fn keyboard_navigation(
     keys: Res<ButtonInput<KeyCode>>,
@@ -161,7 +153,6 @@ pub struct AnimatedButton {
     border: &'static mut BorderColor,
     motion: &'static mut ButtonMotion,
     children: &'static Children,
-    surface: Option<&'static MaterialNode<crate::skin::SurfaceMaterial>>,
 }
 
 pub fn animate_buttons(
@@ -185,7 +176,6 @@ pub fn animate_buttons(
         mut border,
         mut motion,
         children,
-        surface,
     } in &mut buttons
     {
         let hovering =
@@ -215,31 +205,23 @@ pub fn animate_buttons(
         let (base_fill, base_outline) = if !button.enabled {
             (theme::INK, theme::BORDER.with_alpha(0.5))
         } else if button.selected || button.tone == ButtonTone::Primary {
-            (Color::srgb(0.14, 0.21, 0.16), theme::GOLD)
+            (theme::PANEL_LIGHT, theme::ACCENT)
         } else {
             (theme::PANEL, theme::BORDER)
         };
         let fill = base_fill
             .mix(&theme::PANEL_LIGHT, hover)
-            .mix(&theme::GOLD, motion.flash.powi(3) * 0.22);
-        let outline = base_outline.mix(&theme::GOLD_BRIGHT, hover);
-        background.set_if_neq(BackgroundColor(if surface.is_some() {
-            Color::NONE
-        } else {
-            fill
-        }));
-        border.set_if_neq(BorderColor::all(if surface.is_some() {
-            Color::NONE
-        } else {
-            outline
-        }));
+            .mix(&theme::ACCENT, motion.flash.powi(3) * 0.22);
+        let outline = base_outline.mix(&theme::ACCENT_BRIGHT, hover);
+        background.set_if_neq(BackgroundColor(fill));
+        border.set_if_neq(BorderColor::all(outline));
         // Only the label moves. The button's hitbox and surrounding layout stay stable.
         for child in children {
             if let Ok((mut transform, mut color)) = labels.get_mut(*child) {
                 color.set_if_neq(TextColor(if !button.enabled {
                     theme::DISABLED
                 } else if button.tone == ButtonTone::Primary {
-                    theme::GOLD_BRIGHT
+                    theme::ACCENT_BRIGHT
                 } else {
                     theme::TEXT
                 }));

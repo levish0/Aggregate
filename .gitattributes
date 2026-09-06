@@ -7,6 +7,12 @@ assets/**/*.png filter=lfs diff=lfs merge=lfs -text
 assets/**/*.tga filter=lfs diff=lfs merge=lfs -text
 assets/**/*.splnet filter=lfs diff=lfs merge=lfs -text
 
+# Small UI icons use ordinary Git objects, including their raster derivatives.
+assets/icons/** -filter -diff -merge -text
+assets/icons/**/*.svg -filter diff merge text eol=lf
+assets/icons/**/LICENSE -filter diff merge text eol=lf
+assets/icons/**/*.md -filter diff merge text eol=lf
+
 # Generated placement data larger than 10 MiB.
 assets/gfx/map/map_object_data/generated/european_dynamic_farmland_objects_generator_1.ron filter=lfs diff=lfs merge=lfs -text
 assets/gfx/map/map_object_data/generated/rainforest_generator_2.ron filter=lfs diff=lfs merge=lfs -text

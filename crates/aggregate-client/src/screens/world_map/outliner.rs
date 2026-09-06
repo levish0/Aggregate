@@ -142,6 +142,7 @@ pub fn apply_jumps(
         {
             let index = index + 1;
             state.selected_index = index as u32;
+            state.inspect_country = false;
             let uv = map.0.provinces.centroids[index];
             camera.target = Vec3::new(uv.x * map.0.terrain.size.x, 0., uv.y * map.0.terrain.size.y);
         }

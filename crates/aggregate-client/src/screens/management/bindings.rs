@@ -137,7 +137,7 @@ pub fn update_management_labels(
                 let next_color = if matches!(session.feedback, SessionFeedback::Error(_)) {
                     Color::srgb(1., 0.57, 0.45)
                 } else {
-                    theme::GOLD_BRIGHT
+                    theme::ACCENT_BRIGHT
                 };
                 if color.0 != next_color {
                     color.0 = next_color;

@@ -1,4 +1,5 @@
 mod layout;
+pub mod inspection;
 pub mod outliner;
 use crate::{
     backdrop::CartographicBackdrop,
@@ -18,8 +19,6 @@ pub struct MapOutlinerPanel;
 #[derive(Component)]
 pub enum MapLabel {
     Status,
-    Region,
-    Details,
     Hover,
 }
 
@@ -111,12 +110,6 @@ pub fn update_labels(
         return;
     }
     for (label, mut text) in &mut labels {
-        let selected = map.as_ref().and_then(|map| {
-            state
-                .selected_index
-                .checked_sub(1)
-                .and_then(|i| map.0.catalog.provinces.get(i as usize))
-        });
         let region_name = |index: u32| {
             map.as_ref().and_then(|map| {
                 index
@@ -156,46 +149,11 @@ pub fn update_labels(
                     interface.text("map-loading")
                 }
             }
-            MapLabel::Region => region_name(state.selected_index)
-                .unwrap_or_else(|| interface.text("map-select-province")),
             MapLabel::Hover if state.overview_active => interface.text("map-overview-hint"),
             MapLabel::Hover => {
                 region_name(state.hovered_index).unwrap_or_else(|| interface.text("map-hover-hint"))
             }
-            MapLabel::Details => {
-                if let (Some(province), Some(map)) = (selected, &map) {
-                    let country = province
-                        .owner
-                        .as_ref()
-                        .and_then(|id| {
-                            map.0
-                                .catalog
-                                .countries
-                                .iter()
-                                .find(|country| &country.id == id)
-                        })
-                        .map(|country| country.key.clone())
-                        .unwrap_or_else(|| interface.text("map-unassigned"));
-                    let terrain = interface
-                        .localization
-                        .text(&format!("terrain-{}", province.terrain))
-                        .unwrap_or_else(|_| province.terrain.clone());
-                    format!(
-                        "{}\n{}\n\n{}\n{}\n\n{}",
-                        interface.text("map-country"),
-                        country,
-                        interface.text("map-terrain"),
-                        terrain,
-                        interface.text(if province.water {
-                            "map-water"
-                        } else {
-                            "map-land"
-                        })
-                    )
-                } else {
-                    interface.text("map-select-hint")
-                }
-            }
+
         };
         if text.0 != value {
             text.0 = value;

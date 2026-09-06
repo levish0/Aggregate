@@ -1,0 +1,4193 @@
+{
+  "source": "https://github.com/nvkelso/natural-earth-vector",
+  "source_file": "ne_10m_admin_0_countries.geojson",
+  "source_sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+  "retrieved_on": "2026-09-06",
+  "target_world_year": 2026,
+  "boundary_policy": "Natural Earth de facto baseline; not a survey of 2026 control lines",
+  "projection": {
+    "projection": "miller",
+    "scale_x": 1303.3275200577962,
+    "offset_x": 4094.5292622072643,
+    "scale_y": -1302.1189206539107,
+    "offset_y": 2099.908851803137,
+    "reference_size": [
+      8192,
+      3616
+    ],
+    "coast_mean_squared_error_at_1024": 11.122832620162107
+  },
+  "countries": 257,
+  "states": 885,
+  "assigned_land_provinces": 40717,
+  "review_required": [
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-8d6acf6db748",
+      "raster_color": 27632,
+      "country": "NAM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5284280936454849,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-8e86dc08070d",
+      "raster_color": 31921,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5619047619047619,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-908dc09a1675",
+      "raster_color": 41024,
+      "country": "CAN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6451612903225806,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-9a8420075af6",
+      "raster_color": 96355,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5405405405405406,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-9b3eb9ff4795",
+      "raster_color": 98736,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-9bd3a2f48a14",
+      "raster_color": 102624,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5935828877005348,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c40-70c3-aaa0-9cffd85a2b28",
+      "raster_color": 106704,
+      "country": "COG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4805194805194805,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-1f15095ad5df",
+      "raster_color": 122977,
+      "country": "BLR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5891891891891892,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-223103eb2cfb",
+      "raster_color": 142050,
+      "country": "MEX",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6436781609195402,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-26ffffebe485",
+      "raster_color": 177009,
+      "country": "AGO",
+      "mapped_pixel_share": 0.9843260188087775,
+      "majority_share": 0.5955414012738853,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-2b1949bc9e2f",
+      "raster_color": 203473,
+      "country": "PRK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5921787709497207,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-2e96c9f735de",
+      "raster_color": 224982,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6176470588235294,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-36cb426fad96",
+      "raster_color": 280062,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6194444444444445,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-3ad257310139",
+      "raster_color": 303658,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6065573770491803,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c41-7462-86b8-408207b10f00",
+      "raster_color": 346880,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.510752688172043,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-d1cbbe0b05ac",
+      "raster_color": 408733,
+      "country": "HUN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6052631578947368,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-da8fe2381385",
+      "raster_color": 471069,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6122448979591837,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-dc8ad94030fc",
+      "raster_color": 486834,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6459016393442623,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-dccc2bcde41f",
+      "raster_color": 488080,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5317919075144508,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-e24d51b15c56",
+      "raster_color": 529200,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5611510791366906,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-e39e015e3a7c",
+      "raster_color": 536621,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5240174672489083,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-e4c23bad5ac9",
+      "raster_color": 546176,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5393700787401575,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-ea21ac61c48b",
+      "raster_color": 580660,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6201923076923077,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-ebb4d0b9eed4",
+      "raster_color": 591510,
+      "country": "SAU",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5576923076923077,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c42-7443-b428-ebcde57dc3d4",
+      "raster_color": 591562,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5529411764705883,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c43-72e3-97f6-8ed08e291e45",
+      "raster_color": 649485,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5263157894736842,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c43-72e3-97f6-a6e065aa590b",
+      "raster_color": 814257,
+      "country": "IND",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-1aec05fc7918",
+      "raster_color": 903538,
+      "country": "OMN",
+      "mapped_pixel_share": 0.5628415300546448,
+      "majority_share": 0.5242718446601942,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-1de94e774ff2",
+      "raster_color": 920563,
+      "country": "SOM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5478723404255319,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-2540106b1a8b",
+      "raster_color": 969111,
+      "country": "ISR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6350710900473934,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-3172ff8e1a69",
+      "raster_color": 1061088,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5186721991701245,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-32fcf4d3c73e",
+      "raster_color": 1069910,
+      "country": "PAK",
+      "mapped_pixel_share": 0.9361702127659575,
+      "majority_share": 0.5511363636363636,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-33456370e773",
+      "raster_color": 1070473,
+      "country": "TCD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5197368421052632,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-339e29bc48fa",
+      "raster_color": 1072766,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5457627118644067,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-35168c0af880",
+      "raster_color": 1081377,
+      "country": "ITA",
+      "mapped_pixel_share": 0.9337349397590361,
+      "majority_share": 0.5548387096774193,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c44-7c72-a734-366f6da57cb6",
+      "raster_color": 1085472,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6094890510948905,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-636729eb3738",
+      "raster_color": 1100411,
+      "country": "MEX",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5526315789473685,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-64d804840976",
+      "raster_color": 1105887,
+      "country": "CZE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6324786324786325,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-6532db739ada",
+      "raster_color": 1107832,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6103286384976526,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-66a0a48aad96",
+      "raster_color": 1118432,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5205479452054794,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-68dbb29055e8",
+      "raster_color": 1130544,
+      "country": "AUS",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-6a05d0c25e8d",
+      "raster_color": 1137568,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4745762711864407,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-6d2fed0f535b",
+      "raster_color": 1150727,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6314102564102564,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-6e16dca93375",
+      "raster_color": 1155296,
+      "country": "HRV",
+      "mapped_pixel_share": 0.6692015209125475,
+      "majority_share": 0.5965909090909091,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-762cce4b2ba1",
+      "raster_color": 1212843,
+      "country": "TZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6345609065155807,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-7ae94f673f75",
+      "raster_color": 1244602,
+      "country": "SOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5175438596491229,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-7eb0f8f60fd9",
+      "raster_color": 1265205,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.624,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c45-7471-a065-85de49afec56",
+      "raster_color": 1314038,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5298013245033113,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c46-76c3-a83a-9e996b174497",
+      "raster_color": 1366101,
+      "country": "VEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6282722513089005,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c46-76c3-a83a-af7cf3a3a455",
+      "raster_color": 1482285,
+      "country": "BMU",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c46-76c3-a83a-b9366be5f67c",
+      "raster_color": 1553664,
+      "country": "IDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-7841a355db54",
+      "raster_color": 1654755,
+      "country": "FIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.576,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-8e6a2efa9136",
+      "raster_color": 1807395,
+      "country": "SDS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5027322404371585,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-9441c8dfb04b",
+      "raster_color": 1836854,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6178861788617886,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-95c7428f552e",
+      "raster_color": 1847224,
+      "country": "UZB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5483870967741935,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-97c530a73237",
+      "raster_color": 1860554,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5327868852459017,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-99d126a31e47",
+      "raster_color": 1873838,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6230366492146597,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-99fbc7222d11",
+      "raster_color": 1874434,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.509090909090909,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-a3907b0e46ba",
+      "raster_color": 1940331,
+      "country": "ABW",
+      "mapped_pixel_share": 0.06666666666666667,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c47-7fe1-9103-a9305fa96e05",
+      "raster_color": 1973743,
+      "country": "MDA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6066350710900474,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-cf72ed31f2fd",
+      "raster_color": 2062550,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5509259259259259,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-d18c561264d0",
+      "raster_color": 2078433,
+      "country": "CIV",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.621301775147929,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-d25279cb0666",
+      "raster_color": 2085788,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6115107913669064,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-d9529d06ac4c",
+      "raster_color": 2122001,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5953177257525084,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-da5ad9ce422a",
+      "raster_color": 2126048,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.504424778761062,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-e0b37e69c244",
+      "raster_color": 2154640,
+      "country": "SOM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.38926174496644295,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-e305dc6fdb64",
+      "raster_color": 2166701,
+      "country": "COG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6254180602006689,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-e825a73eeb10",
+      "raster_color": 2195304,
+      "country": "VNM",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-ea41b4779f9b",
+      "raster_color": 2205584,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6191860465116279,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-ecd0a909b95d",
+      "raster_color": 2220080,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6441717791411042,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c48-7f71-8db6-ee4863388d18",
+      "raster_color": 2230386,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-b5e003296e6d",
+      "raster_color": 2263962,
+      "country": "UGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5925925925925926,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-c5bd2fe3c3b5",
+      "raster_color": 2368793,
+      "country": "MYS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5264900662251656,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-ca66c705057d",
+      "raster_color": 2401880,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5098039215686274,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-cca855094807",
+      "raster_color": 2414781,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5968992248062015,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-d1e252343353",
+      "raster_color": 2448778,
+      "country": "CMR",
+      "mapped_pixel_share": 0.8484848484848485,
+      "majority_share": 0.6428571428571429,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-d44ba267d699",
+      "raster_color": 2462883,
+      "country": "PRY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6299435028248588,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-d54f9862831b",
+      "raster_color": 2468851,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5763888888888888,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-d73c96577d12",
+      "raster_color": 2480611,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5853658536585366,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c49-7b32-bd99-e080cbfb1ced",
+      "raster_color": 2550249,
+      "country": "DZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6498054474708171,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-53ef12d88fe7",
+      "raster_color": 2564677,
+      "country": "PAK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6410256410256411,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-5612f35d06cb",
+      "raster_color": 2576606,
+      "country": "MRT",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5212765957446809,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-65c444518cb2",
+      "raster_color": 2693121,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6132075471698113,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-6eb3a8b9c91b",
+      "raster_color": 2763269,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6218487394957983,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-6f7ae7428cc3",
+      "raster_color": 2766054,
+      "country": "COL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5725806451612904,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-6ffe79dd059d",
+      "raster_color": 2769728,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-73e1cfda1178",
+      "raster_color": 2797865,
+      "country": "ZWE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.524822695035461,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-756c17d64811",
+      "raster_color": 2811933,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6307692307692307,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-75a56b4b3685",
+      "raster_color": 2814247,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6071428571428571,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-7a21086012ac",
+      "raster_color": 2846507,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5401459854014599,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-81a08de09256",
+      "raster_color": 2895379,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c4a-7a11-ba04-84027c4bf0df",
+      "raster_color": 2911312,
+      "country": "PRY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6461538461538462,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-0d85e1d297dd",
+      "raster_color": 2956043,
+      "country": "MEX",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5294117647058824,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-0e64d1d66256",
+      "raster_color": 2962327,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-12c2242a4342",
+      "raster_color": 2993256,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.582089552238806,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-133bc8e5c071",
+      "raster_color": 2997634,
+      "country": "PAK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5100671140939598,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-15bffef5f513",
+      "raster_color": 3020568,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.609375,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-18717c15fc20",
+      "raster_color": 3048611,
+      "country": "KHM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5067114093959731,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-21c407ca7549",
+      "raster_color": 3112511,
+      "country": "CIV",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6483516483516484,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-2b7b4822d860",
+      "raster_color": 3174592,
+      "country": "GIN",
+      "mapped_pixel_share": 0.9568965517241379,
+      "majority_share": 0.527027027027027,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-2dd50321a3c4",
+      "raster_color": 3186720,
+      "country": "AUT",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5049180327868853,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-300526f38394",
+      "raster_color": 3194960,
+      "country": "ZAF",
+      "mapped_pixel_share": 0.9634551495016611,
+      "majority_share": 0.6206896551724138,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-3397e02f764b",
+      "raster_color": 3207296,
+      "country": "VIR",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-341227f7ffa8",
+      "raster_color": 3210804,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5639097744360902,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-38ef56bb4366",
+      "raster_color": 3240869,
+      "country": "KEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4277456647398844,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4b-7843-9e00-40845b02fe21",
+      "raster_color": 3281495,
+      "country": "IRN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.610738255033557,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4c-7302-9566-23cafadd0be6",
+      "raster_color": 3360903,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4c-7302-9566-3d6707b1b3c4",
+      "raster_color": 3543138,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5326797385620915,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4c-7302-9566-3ee5dde02d73",
+      "raster_color": 3550670,
+      "country": "SAH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5567010309278351,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4c-7302-9566-48d915a3937d",
+      "raster_color": 3615512,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6198347107438017,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3d-fe2899b15314",
+      "raster_color": 3631692,
+      "country": "COG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6423357664233577,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-0059304e0988",
+      "raster_color": 3643870,
+      "country": "PER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5609756097560976,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-0b7b29dfd61e",
+      "raster_color": 3719578,
+      "country": "RUS",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-0f6fe8d3fa8f",
+      "raster_color": 3744211,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6476683937823834,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-152000c0a26c",
+      "raster_color": 3780321,
+      "country": "MEX",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5705128205128205,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-211dd49f5da2",
+      "raster_color": 3871513,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6394557823129252,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-2311a1b8594c",
+      "raster_color": 3885849,
+      "country": "ZAF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-24b5bc89e03b",
+      "raster_color": 3898611,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5315315315315315,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-251d6f94c2e1",
+      "raster_color": 3901212,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5706806282722513,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-2a2cb9f7bd22",
+      "raster_color": 3935520,
+      "country": "PER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5987654320987654,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4d-71a0-ab3e-2d9173f3d72e",
+      "raster_color": 3958985,
+      "country": "MMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5291479820627802,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-d94cf1319095",
+      "raster_color": 4013784,
+      "country": "ARG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6438356164383562,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-df5e5316a757",
+      "raster_color": 4055987,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5870967741935483,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-e43002e13e28",
+      "raster_color": 4089505,
+      "country": "UKR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5748031496062992,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-ea8628e62c8f",
+      "raster_color": 4126019,
+      "country": "YEM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.576530612244898,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-ebd7be426392",
+      "raster_color": 4135450,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6009852216748769,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-eeb0763d88a1",
+      "raster_color": 4152214,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5683060109289617,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-f33f4aab6239",
+      "raster_color": 4175991,
+      "country": "MNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5520833333333334,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-f485208f6e12",
+      "raster_color": 4186891,
+      "country": "PRY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6474820143884892,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4e-7b81-8bfa-f5deac3cc19a",
+      "raster_color": 4194512,
+      "country": "ECU",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5588235294117647,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-ac39d913ba1a",
+      "raster_color": 4218992,
+      "country": "AGO",
+      "mapped_pixel_share": 0.9637096774193549,
+      "majority_share": 0.5523012552301255,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-ac4fc6a68607",
+      "raster_color": 4219024,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5023041474654378,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-b125a3229deb",
+      "raster_color": 4239392,
+      "country": "CYN",
+      "mapped_pixel_share": 0.6348684210526315,
+      "majority_share": 0.5699481865284974,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-b1e93f45b42d",
+      "raster_color": 4243473,
+      "country": "COL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5905172413793104,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-b3e7abfefd02",
+      "raster_color": 4251728,
+      "country": "SOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.47577092511013214,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-bcd276ed64ee",
+      "raster_color": 4300399,
+      "country": "MKD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6075949367088608,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-c436cd18b0d9",
+      "raster_color": 4342570,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-c88bafae5170",
+      "raster_color": 4377707,
+      "country": "CAN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6176470588235294,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c4f-7a03-9634-ccfef1e8f47d",
+      "raster_color": 4408115,
+      "country": "DZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5371900826446281,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-9be4684e4c61",
+      "raster_color": 4468950,
+      "country": "IRN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6495726495726496,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-9f4044b8512f",
+      "raster_color": 4489855,
+      "country": "BWA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6272727272727273,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a0b6d0daf14d",
+      "raster_color": 4500667,
+      "country": "POL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5466666666666666,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a45c6b811437",
+      "raster_color": 4525494,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5470085470085471,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a4e587f34b71",
+      "raster_color": 4527013,
+      "country": "COG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5240963855421686,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a5979792b14b",
+      "raster_color": 4530948,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5666666666666667,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a635c9a23292",
+      "raster_color": 4535823,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5140845070422535,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a92d706c10c9",
+      "raster_color": 4557041,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6319444444444444,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-a9af298a2b46",
+      "raster_color": 4559460,
+      "country": "PNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.502283105022831,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-ab98e159f9b0",
+      "raster_color": 4571542,
+      "country": "FIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.64,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-abc3fd3901fe",
+      "raster_color": 4571941,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5153846153846153,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-aca5d3be1634",
+      "raster_color": 4579401,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5255813953488372,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-b0ebd435b20c",
+      "raster_color": 4607850,
+      "country": "GTM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5692307692307692,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-b376ef6caae9",
+      "raster_color": 4620716,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5520833333333334,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-b66b66c17feb",
+      "raster_color": 4636947,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5076923076923077,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-c00fa9a4450d",
+      "raster_color": 4699489,
+      "country": "MMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5478260869565217,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c50-7ee1-b9a4-c2cf91d7ff08",
+      "raster_color": 4712466,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5483870967741935,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c51-7553-b506-0b41d50c22ca",
+      "raster_color": 4740924,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5412844036697247,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c51-7553-b506-0c30f2552d46",
+      "raster_color": 4747114,
+      "country": "BEL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5285714285714286,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c51-7553-b506-0e8ceed9f042",
+      "raster_color": 4760807,
+      "country": "USA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6071428571428571,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c51-7553-b506-1beea5cedd95",
+      "raster_color": 4850617,
+      "country": "MNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5454545454545454,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c51-7553-b506-22f84dfc2b3f",
+      "raster_color": 4899486,
+      "country": "ARG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5608108108108109,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-727cea8fbc24",
+      "raster_color": 5096310,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5573122529644269,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-7737caf10571",
+      "raster_color": 5128407,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6263157894736842,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-7add9d4c011c",
+      "raster_color": 5150874,
+      "country": "AFG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4244604316546763,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-865ee9f8fa0e",
+      "raster_color": 5234430,
+      "country": "PNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5724137931034483,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-8dda55fd54ae",
+      "raster_color": 5275648,
+      "country": "MEX",
+      "mapped_pixel_share": 0.9175257731958762,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-8e47dd22f15d",
+      "raster_color": 5275872,
+      "country": "FRA",
+      "mapped_pixel_share": 0.9491525423728814,
+      "majority_share": 0.6369047619047619,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-8e7c8f3bff45",
+      "raster_color": 5276587,
+      "country": "VNM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6108597285067874,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-8f26798698a7",
+      "raster_color": 5279904,
+      "country": "TCD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6200527704485488,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-8f5df7fb3e96",
+      "raster_color": 5280735,
+      "country": "BDI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.536723163841808,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-8ff6b2670268",
+      "raster_color": 5283857,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4927536231884058,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-93ea496079bd",
+      "raster_color": 5302770,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5343511450381679,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c52-74c3-9d17-9b738f52c498",
+      "raster_color": 5349473,
+      "country": "ALB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5955056179775281,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-11bd92f376de",
+      "raster_color": 5365857,
+      "country": "SVK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.640926640926641,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-193888ad6df3",
+      "raster_color": 5410619,
+      "country": "HND",
+      "mapped_pixel_share": 0.9932885906040269,
+      "majority_share": 0.581081081081081,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-1eab10050ad2",
+      "raster_color": 5450523,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5603448275862069,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-23333c2562eb",
+      "raster_color": 5488794,
+      "country": "AUS",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-2647fa574b76",
+      "raster_color": 5503814,
+      "country": "GAB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6271186440677966,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-26bdce4f3e21",
+      "raster_color": 5507610,
+      "country": "ZWE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5792682926829268,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-293812d7d00e",
+      "raster_color": 5522047,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5095541401273885,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-2dff289841a1",
+      "raster_color": 5552957,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-2e36096452ab",
+      "raster_color": 5554339,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5952380952380952,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-3b6dfdd41f3e",
+      "raster_color": 5638494,
+      "country": "SYR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.620253164556962,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-3e75a8da9d26",
+      "raster_color": 5659039,
+      "country": "POL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5174418604651163,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c53-7da0-8b60-4126063ec7c6",
+      "raster_color": 5676158,
+      "country": "ERI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6330275229357798,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c54-7293-ba82-fbc068311b15",
+      "raster_color": 5752394,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6363636363636364,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c54-7293-ba83-0a6beffbf420",
+      "raster_color": 5854378,
+      "country": "BDI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5153374233128835,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c54-7293-ba83-0c14f8bc9d39",
+      "raster_color": 5867614,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c54-7293-ba83-0c2284f58c89",
+      "raster_color": 5867866,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5520361990950227,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c54-7293-ba83-127127d7932e",
+      "raster_color": 5907669,
+      "country": "GNQ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.43703703703703706,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c54-7293-ba83-12b7d5323e70",
+      "raster_color": 5908353,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5289855072463768,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-aed2afa54cf1",
+      "raster_color": 5983586,
+      "country": "VNM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5058823529411764,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-b5c55c866ab7",
+      "raster_color": 6029438,
+      "country": "UGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.495,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-b736ebc21762",
+      "raster_color": 6038096,
+      "country": "IOA",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-b7c4aa51cad5",
+      "raster_color": 6041712,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4618181818181818,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-c9ed6f489f3e",
+      "raster_color": 6169700,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-dad1899c24f8",
+      "raster_color": 6291920,
+      "country": "NAM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6404494382022472,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-de5f99d6d41d",
+      "raster_color": 6308048,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5305343511450382,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c55-7df0-87ff-defe34df46f7",
+      "raster_color": 6312032,
+      "country": "ISR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5323741007194245,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-657e2af01804",
+      "raster_color": 6351309,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6134453781512605,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-6753d01198f4",
+      "raster_color": 6360775,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6095890410958904,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-67910e1cce6a",
+      "raster_color": 6362605,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6474820143884892,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-69dcc1bfbf96",
+      "raster_color": 6375311,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6242424242424243,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-83dab4d01c07",
+      "raster_color": 6551379,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6192307692307693,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-8559de628071",
+      "raster_color": 6562224,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5319148936170213,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-85c7563050d2",
+      "raster_color": 6566948,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-8a360df10f74",
+      "raster_color": 6602338,
+      "country": "VNM",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c56-7780-ab73-8c10ac189011",
+      "raster_color": 6619922,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6275862068965518,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-0684acf471c8",
+      "raster_color": 6623846,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.55,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-0788fd3bb0c1",
+      "raster_color": 6631584,
+      "country": "UGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5444015444015444,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-0ed3b1c9fca7",
+      "raster_color": 6686645,
+      "country": "DZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6056338028169014,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-1190270c0f83",
+      "raster_color": 6708827,
+      "country": "BTN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6054421768707483,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-189598eabaf6",
+      "raster_color": 6758760,
+      "country": "BEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6497890295358649,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-18af005aa87c",
+      "raster_color": 6758928,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5387453874538746,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c57-7ea3-a525-212a61d47454",
+      "raster_color": 6818651,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5120481927710844,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-0e967a0fc9bf",
+      "raster_color": 6866145,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5083333333333333,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-151cc9bf41ee",
+      "raster_color": 6902112,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5800865800865801,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-15b8dde8fb8c",
+      "raster_color": 6905048,
+      "country": "MMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.62751677852349,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-17a536b7ab8e",
+      "raster_color": 6918725,
+      "country": "IDN",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-18939cfd6228",
+      "raster_color": 6927720,
+      "country": "ARE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6438356164383562,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-199d829395df",
+      "raster_color": 6930497,
+      "country": "CUB",
+      "mapped_pixel_share": 0.4838709677419355,
+      "majority_share": 0.5333333333333333,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-1b9fff4bc35a",
+      "raster_color": 6946483,
+      "country": "AFG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5384615384615384,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-2b83089c096c",
+      "raster_color": 7055341,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5086206896551724,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-2bc3aed31c04",
+      "raster_color": 7057837,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6179775280898876,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-328d3c41e92e",
+      "raster_color": 7103322,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6330935251798561,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-349a8d443415",
+      "raster_color": 7116665,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5049019607843137,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-35ccf8dc47b2",
+      "raster_color": 7125186,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5208333333333334,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c58-7bf1-84ff-3b8d9b48c300",
+      "raster_color": 7159033,
+      "country": "IDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5783410138248848,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-38d8ac583f5b",
+      "raster_color": 7225862,
+      "country": "IDN",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-39e44bc1457b",
+      "raster_color": 7234014,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5986394557823129,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-3bc3ca163b68",
+      "raster_color": 7245002,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5977777777777777,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-4b8edd2cc116",
+      "raster_color": 7344544,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5828571428571429,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-50de85772650",
+      "raster_color": 7368736,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6261682242990654,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-511e8e24233e",
+      "raster_color": 7368864,
+      "country": "VNM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5469613259668509,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-5163967ccf00",
+      "raster_color": 7369955,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5223880597014925,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-53764b16fc0c",
+      "raster_color": 7381106,
+      "country": "ERI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5747126436781609,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-546a3ca4ec22",
+      "raster_color": 7385024,
+      "country": "YEM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5106382978723404,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-56d561bfb2b4",
+      "raster_color": 7393312,
+      "country": "ARE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5851528384279476,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-581ae0cc9947",
+      "raster_color": 7398748,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6095238095238096,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-5c31790cb3cf",
+      "raster_color": 7427321,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.517814726840855,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-5ee90ab7a4a6",
+      "raster_color": 7440517,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c59-7e00-ae4c-618634d8c17f",
+      "raster_color": 7454928,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6363636363636364,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-4da805cb3fd1",
+      "raster_color": 7467073,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6220735785953178,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-53de1a2639e5",
+      "raster_color": 7506033,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-57091c5f8d34",
+      "raster_color": 7531592,
+      "country": "COL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5661157024793388,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-586b979dd4f9",
+      "raster_color": 7545967,
+      "country": "SYR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5478260869565217,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-5e552e508c4e",
+      "raster_color": 7580131,
+      "country": "PAK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5625,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-678069077f3d",
+      "raster_color": 7642109,
+      "country": "SDS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5658914728682171,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5a-7e73-879c-76185fed2e08",
+      "raster_color": 7742083,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.54296875,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-7fe4cd3c56fe",
+      "raster_color": 7813651,
+      "country": "BWA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5586034912718204,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-89f4ed937eae",
+      "raster_color": 7885453,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5843520782396088,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-905bb247a875",
+      "raster_color": 7929820,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5979381443298969,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-9248a6eed687",
+      "raster_color": 7948779,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5849056603773585,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-94055799f859",
+      "raster_color": 7961851,
+      "country": "MNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5067114093959731,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-971724b60200",
+      "raster_color": 7979851,
+      "country": "BLR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.49411764705882355,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-9b0f5d71a1c2",
+      "raster_color": 8007761,
+      "country": "SPI",
+      "mapped_pixel_share": 0.9947643979057592,
+      "majority_share": 0.5052631578947369,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-9c81e9eb2f44",
+      "raster_color": 8018782,
+      "country": "KHM",
+      "mapped_pixel_share": 0.9352941176470588,
+      "majority_share": 0.5849056603773585,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-9dc288d3f5d5",
+      "raster_color": 8026191,
+      "country": "CAN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5619047619047619,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5b-7733-b87e-a149c0846e69",
+      "raster_color": 8047627,
+      "country": "CHE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6060606060606061,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-78d00fb4122f",
+      "raster_color": 8172574,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5347222222222222,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-80d2c2af12c7",
+      "raster_color": 8224098,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-86510ab1d931",
+      "raster_color": 8262712,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6284403669724771,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-89acf9e6c039",
+      "raster_color": 8285922,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-8cc5f3d2796e",
+      "raster_color": 8305920,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.536697247706422,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-8e134905aeca",
+      "raster_color": 8312676,
+      "country": "AUS",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-8f65329b4bfa",
+      "raster_color": 8322774,
+      "country": "SLE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5192307692307693,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-98fc784b888c",
+      "raster_color": 8388881,
+      "country": "JPN",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-9b071cb4138d",
+      "raster_color": 8397200,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6065573770491803,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-9b2f5aa5d40c",
+      "raster_color": 8397264,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5370370370370371,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-9e981c8c0f30",
+      "raster_color": 8413424,
+      "country": "NAM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5439330543933054,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-a0f6ff743c35",
+      "raster_color": 8421393,
+      "country": "KIR",
+      "mapped_pixel_share": 0.034129692832764506,
+      "majority_share": 0.4727272727272727,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-a12191369d18",
+      "raster_color": 8421488,
+      "country": "MYS",
+      "mapped_pixel_share": 0.48175182481751827,
+      "majority_share": 0.5909090909090909,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-a1315d3c4dc2",
+      "raster_color": 8421520,
+      "country": "TUV",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5c-79e0-a1be-a27f958204c4",
+      "raster_color": 8425473,
+      "country": "TUR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5283687943262412,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-7d5b7c23adfd",
+      "raster_color": 8437777,
+      "country": "MHL",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-7e3dcfb04793",
+      "raster_color": 8440327,
+      "country": "DZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5164319248826291,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-7e5cf94dfd5f",
+      "raster_color": 8441600,
+      "country": "HRV",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5988023952095808,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-7ff36ec89f30",
+      "raster_color": 8446192,
+      "country": "COG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5017064846416383,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-821c0d6a10c6",
+      "raster_color": 8459302,
+      "country": "AGO",
+      "mapped_pixel_share": 0.9272727272727272,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-8c3f3b1f48fb",
+      "raster_color": 8536503,
+      "country": "SAU",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5679012345679012,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-94759f6f61a8",
+      "raster_color": 8591208,
+      "country": "DZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6431535269709544,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-97b3c559c900",
+      "raster_color": 8606522,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5730337078651685,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-a02515ab8c2f",
+      "raster_color": 8660864,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5555555555555556,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-a201dc00c5af",
+      "raster_color": 8675685,
+      "country": "HUN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5732484076433121,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-a36122fcba55",
+      "raster_color": 8684599,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5746268656716418,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-a7fbf73d5de1",
+      "raster_color": 8714044,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5617283950617284,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5d-7301-b006-ae6d6059a8b9",
+      "raster_color": 8764077,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6230769230769231,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-1ef0d74a2eaf",
+      "raster_color": 8777712,
+      "country": "COL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5375722543352601,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-202bb1a45c22",
+      "raster_color": 8786371,
+      "country": "PNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5483870967741935,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-23218fdf0373",
+      "raster_color": 8804855,
+      "country": "NZL",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-26abf19a6a17",
+      "raster_color": 8836391,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.648854961832061,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-2b7eb760ae38",
+      "raster_color": 8866797,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5785714285714286,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-330c1f089aab",
+      "raster_color": 8916337,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5743589743589743,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-34e5f7fa044d",
+      "raster_color": 8928901,
+      "country": "SLE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5775862068965517,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-356a0c29ae45",
+      "raster_color": 8931638,
+      "country": "SWZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-372ad8ac0b8b",
+      "raster_color": 8943473,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-37677034eae0",
+      "raster_color": 8947289,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-37bd668d3fb8",
+      "raster_color": 8950735,
+      "country": "COL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5692307692307692,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-3ca5c8462be6",
+      "raster_color": 8991610,
+      "country": "MAF",
+      "mapped_pixel_share": 0.21621621621621623,
+      "majority_share": 0.4375,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-3e5653028728",
+      "raster_color": 9000415,
+      "country": "UKR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6494845360824743,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-413bad074a30",
+      "raster_color": 9020043,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5988700564971752,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-47bf48e2cbbf",
+      "raster_color": 9066019,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6108108108108108,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5e-76b3-b415-4c3bc64b81a1",
+      "raster_color": 9097688,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5121951219512195,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-6c4f536f06b3",
+      "raster_color": 9189814,
+      "country": "ZAF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-714ee82d0966",
+      "raster_color": 9216693,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6448598130841121,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-7f6a24baa06c",
+      "raster_color": 9301260,
+      "country": "JOR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-81b81c393370",
+      "raster_color": 9318936,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6040816326530613,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-84c4ed83e8d4",
+      "raster_color": 9342101,
+      "country": "MRT",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5157894736842106,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-866a3a51266a",
+      "raster_color": 9354439,
+      "country": "USA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5266666666666666,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-9129aacab2cb",
+      "raster_color": 9421542,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5699481865284974,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-9456bb2acdd7",
+      "raster_color": 9441569,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5887850467289719,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-9557abd075eb",
+      "raster_color": 9445649,
+      "country": "ZWE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5362318840579711,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-95942059bc36",
+      "raster_color": 9445856,
+      "country": "BIH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6174496644295302,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-98d32bb6a20c",
+      "raster_color": 9458488,
+      "country": "IDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5910780669144982,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-9abc5326b22b",
+      "raster_color": 9465920,
+      "country": "HND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-9d6cbbea06d6",
+      "raster_color": 9474208,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6419753086419753,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c5f-72c2-9eca-9e9d58766e2a",
+      "raster_color": 9478288,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5242718446601942,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-13eff43def92",
+      "raster_color": 9490464,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5647058823529412,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-15d0ab077fe0",
+      "raster_color": 9498591,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6398963730569949,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-18d0c89aa61f",
+      "raster_color": 9513946,
+      "country": "UZB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6228070175438597,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-192b231dfac1",
+      "raster_color": 9515168,
+      "country": "UGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5168539325842697,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-1a1812cf7d24",
+      "raster_color": 9523603,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5639097744360902,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-1d72b850abeb",
+      "raster_color": 9547135,
+      "country": "SLE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5073170731707317,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-2dfeddf7c8e6",
+      "raster_color": 9662938,
+      "country": "KAZ",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-32add24b44ba",
+      "raster_color": 9692026,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5641025641025641,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-32e55a4db623",
+      "raster_color": 9693684,
+      "country": "BGD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5644171779141104,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c60-7a31-86fb-34dc868d6ad2",
+      "raster_color": 9705973,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5681063122923588,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-05ee65958765",
+      "raster_color": 9800000,
+      "country": "BWA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6076923076923076,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-1f8bb798cbe7",
+      "raster_color": 9991545,
+      "country": "CAN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-20e16d7b0564",
+      "raster_color": 9998463,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5603448275862069,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-22b0cece2e97",
+      "raster_color": 10011590,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-22d480e5df00",
+      "raster_color": 10012316,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-28f1bc0741eb",
+      "raster_color": 10055840,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5714285714285714,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c61-7873-a95f-294fa62df9cc",
+      "raster_color": 10060435,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-a14464ee7ecb",
+      "raster_color": 10095625,
+      "country": "HND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5123152709359606,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-a51e3718ce29",
+      "raster_color": 10120520,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.59375,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-b28e1793abcc",
+      "raster_color": 10206395,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6049382716049383,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-b2c1597af4e4",
+      "raster_color": 10208685,
+      "country": "SLB",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-bc5163b608e4",
+      "raster_color": 10266632,
+      "country": "TCD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6198347107438017,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-bd6d466a0856",
+      "raster_color": 10273433,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5729537366548043,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-c394bdad3c74",
+      "raster_color": 10313696,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5271317829457365,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c62-7840-b1de-c45192a21d58",
+      "raster_color": 10316680,
+      "country": "EGY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6058394160583942,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-a216621df4eb",
+      "raster_color": 10395479,
+      "country": "TZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.569620253164557,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-a5c433af1739",
+      "raster_color": 10419330,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6421052631578947,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-a97a18de8d60",
+      "raster_color": 10448829,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6055045871559633,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-b13537082c82",
+      "raster_color": 10494225,
+      "country": "SDS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6133828996282528,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-b38a3330dc57",
+      "raster_color": 10502224,
+      "country": "GIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5352941176470588,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-b420bd3f2b48",
+      "raster_color": 10502837,
+      "country": "CHE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5303030303030303,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-b4eee5640012",
+      "raster_color": 10506464,
+      "country": "LBN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6037735849056604,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-b7dbef8af9ff",
+      "raster_color": 10518128,
+      "country": "ERI",
+      "mapped_pixel_share": 0.909433962264151,
+      "majority_share": 0.6016597510373444,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-b86705d1e5da",
+      "raster_color": 10518640,
+      "country": "BOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5576923076923077,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c63-7193-82c0-c4990508a24e",
+      "raster_color": 10564634,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5045045045045045,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-7bd9a83decfd",
+      "raster_color": 10670980,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6153846153846154,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-7de3429c1733",
+      "raster_color": 10682893,
+      "country": "VEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5087719298245614,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-879b5858cb8c",
+      "raster_color": 10760416,
+      "country": "NAM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5136363636363637,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-9482830b9c26",
+      "raster_color": 10844286,
+      "country": "ARG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5802469135802469,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-9570cb6c1bcd",
+      "raster_color": 10850764,
+      "country": "CMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5316455696202531,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-9b773a1b0990",
+      "raster_color": 10893480,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5056603773584906,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-a23009b80d50",
+      "raster_color": 10941111,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5689655172413793,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-a2f37087d84d",
+      "raster_color": 10943617,
+      "country": "PRY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6055555555555555,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c64-71f0-921b-a9fa38127b09",
+      "raster_color": 10995064,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5994152046783626,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c65-7401-a86e-b571510951b8",
+      "raster_color": 11022403,
+      "country": "BEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5052631578947369,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c65-7401-a86e-ba7490ab6116",
+      "raster_color": 11051767,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5636363636363636,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-8fb7b047e307",
+      "raster_color": 11412789,
+      "country": "NAM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5333333333333333,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-93d52268474c",
+      "raster_color": 11448025,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6266666666666667,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-96fbfbbdc876",
+      "raster_color": 11470848,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5299684542586751,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-9b6336defbd9",
+      "raster_color": 11494867,
+      "country": "GHA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5588235294117647,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-a24dbd3038f3",
+      "raster_color": 11538784,
+      "country": "YEM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5913312693498453,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-a57cbf591480",
+      "raster_color": 11550780,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5406976744186046,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-a6fd0d4ce8bb",
+      "raster_color": 11554848,
+      "country": "EGY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6239316239316239,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-a9221caed3c9",
+      "raster_color": 11563072,
+      "country": "SEN",
+      "mapped_pixel_share": 0.997093023255814,
+      "majority_share": 0.6034985422740525,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-a95998dd68a7",
+      "raster_color": 11563200,
+      "country": "MRT",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6118251928020566,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-b1c8b4b668fc",
+      "raster_color": 11595584,
+      "country": "SEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.622895622895623,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-b1d0f38f6c60",
+      "raster_color": 11595680,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.43089430894308944,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-b334c5d846fc",
+      "raster_color": 11600662,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.4864864864864865,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c66-79e1-8e89-b6cc4dd59219",
+      "raster_color": 11627068,
+      "country": "USA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5480769230769231,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-2abad8ebc842",
+      "raster_color": 11669454,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6196581196581197,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-2f3d27b1f069",
+      "raster_color": 11702929,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5983606557377049,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-34ca173eff80",
+      "raster_color": 11746850,
+      "country": "IRN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6498054474708171,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-36b695c14eff",
+      "raster_color": 11756035,
+      "country": "MMR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6484641638225256,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-3a3ca2a593a1",
+      "raster_color": 11773593,
+      "country": "CAN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6234309623430963,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-438a68a951ba",
+      "raster_color": 11845481,
+      "country": "DZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6228571428571429,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-4730a98fcd41",
+      "raster_color": 11875283,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.441340782122905,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-4bde96287ec3",
+      "raster_color": 11910348,
+      "country": "SOM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.616600790513834,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-54e9c9a05d7d",
+      "raster_color": 11973904,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6071428571428571,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-5629c39d6ff3",
+      "raster_color": 11979822,
+      "country": "NGA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6282722513089005,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c67-7213-9f36-5641aef54edc",
+      "raster_color": 11980614,
+      "country": "IRN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5597014925373134,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-d204546d55fa",
+      "raster_color": 12001970,
+      "country": "AUS",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-d3604a37a130",
+      "raster_color": 12011671,
+      "country": "ZAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5514018691588785,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-d5aec4b623dc",
+      "raster_color": 12029524,
+      "country": "JEY",
+      "mapped_pixel_share": 0.453125,
+      "majority_share": 0.5862068965517241,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-de0258df2373",
+      "raster_color": 12085534,
+      "country": "CAF",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.61,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-e14ea4216656",
+      "raster_color": 12108474,
+      "country": "UZB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5402298850574713,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-eb4cfe574a48",
+      "raster_color": 12175769,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5313351498637602,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-f18fdee30211",
+      "raster_color": 12216024,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6436170212765957,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-f1ef5d155c8f",
+      "raster_color": 12217941,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-f50222581743",
+      "raster_color": 12235549,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5882352941176471,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a1-fe2a708a926b",
+      "raster_color": 12298521,
+      "country": "SDS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6121794871794872,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c68-7ea2-82a2-014c1fba2fce",
+      "raster_color": 12321857,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5892857142857143,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-46eb3b934535",
+      "raster_color": 12350185,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5024875621890548,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-5edc9caa1600",
+      "raster_color": 12521663,
+      "country": "UZB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5029239766081871,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-65fb38e85a90",
+      "raster_color": 12570657,
+      "country": "LBY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5031055900621118,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-672b4e119934",
+      "raster_color": 12574959,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5272727272727272,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-68967672d1c3",
+      "raster_color": 12583216,
+      "country": "MYS",
+      "mapped_pixel_share": 0.6330935251798561,
+      "majority_share": 0.4318181818181818,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-6d0db13bc011",
+      "raster_color": 12599792,
+      "country": "NRU",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-75f1b32fb1d6",
+      "raster_color": 12638481,
+      "country": "MNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5425531914893617,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c69-7123-b555-7659b501b4b1",
+      "raster_color": 12640112,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6377708978328174,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-042ecc72dcfa",
+      "raster_color": 12672493,
+      "country": "FIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5094339622641509,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-09dea3a5ecbe",
+      "raster_color": 12716849,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5764705882352941,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-0f8feb7ea801",
+      "raster_color": 12768990,
+      "country": "KEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5119047619047619,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-15759c2ad339",
+      "raster_color": 12806792,
+      "country": "AUS",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-2a14d20070f8",
+      "raster_color": 12952639,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6261127596439169,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-2b912539d662",
+      "raster_color": 12964905,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6226415094339622,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-2d2b1713e19f",
+      "raster_color": 12975473,
+      "country": "ZWE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6172248803827751,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-3181c1bb3640",
+      "raster_color": 13007667,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6081871345029239,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-33e14ad302b9",
+      "raster_color": 13023128,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c6a-75b2-bd54-385f1636f0a8",
+      "raster_color": 13052193,
+      "country": "COG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5441176470588235,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-85624190878e",
+      "raster_color": 13175187,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5673469387755102,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-88dcd8b97240",
+      "raster_color": 13198233,
+      "country": "MEX",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5223880597014925,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-97157704b795",
+      "raster_color": 13294270,
+      "country": "TZA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5550239234449761,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-98dc0dc1bfc8",
+      "raster_color": 13305019,
+      "country": "FIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6497175141242938,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-9a84eabd6e9b",
+      "raster_color": 13315550,
+      "country": "GIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5645161290322581,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-9b730c7026d7",
+      "raster_color": 13320478,
+      "country": "USA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5481481481481482,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6b-7800-bac9-a0c56154e27e",
+      "raster_color": 13355414,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c6c-7d43-a152-53465db0cda7",
+      "raster_color": 13417753,
+      "country": "TUR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6384615384615384,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6c-7d43-a152-5d855b04fc0f",
+      "raster_color": 13481947,
+      "country": "PAK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.583941605839416,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6c-7d43-a152-5eee83c5b2b3",
+      "raster_color": 13490428,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6491228070175439,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-635db8e04092",
+      "raster_color": 13586592,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.49586776859504134,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-6aed23c5ffaa",
+      "raster_color": 13634962,
+      "country": "GIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5907335907335908,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-6c2d3a22c3c3",
+      "raster_color": 13640033,
+      "country": "KOS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5595238095238095,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-6e5178cebd3f",
+      "raster_color": 13648064,
+      "country": "USA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6178861788617886,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-6fee130ca5e1",
+      "raster_color": 13654445,
+      "country": "COL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.625,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-740d22c9e5d4",
+      "raster_color": 13668576,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5042735042735043,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-795b611a3efd",
+      "raster_color": 13688905,
+      "country": "UZB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5123152709359606,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-7fba848ff083",
+      "raster_color": 13728116,
+      "country": "TCD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5898876404494382,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-81e3375a3ef6",
+      "raster_color": 13740677,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5897435897435898,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-86e0c4ce2755",
+      "raster_color": 13780940,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5571428571428572,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-87c091de2e9a",
+      "raster_color": 13784118,
+      "country": "KAS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6210526315789474,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-8c7abb6d541b",
+      "raster_color": 13815259,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5402298850574713,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6d-73c3-b64b-8d4ebb004539",
+      "raster_color": 13819952,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.57,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c5-f5fa21e8cc2b",
+      "raster_color": 13854743,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.532051282051282,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c6-002a0e4b205d",
+      "raster_color": 13927953,
+      "country": "CIV",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5062240663900415,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c6-03193f494b2d",
+      "raster_color": 13944268,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6363636363636364,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c6-1b9bf5b6b884",
+      "raster_color": 14111103,
+      "country": "PAK",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5522388059701493,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c6-1de39abeabd3",
+      "raster_color": 14132399,
+      "country": "ETH",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.3819444444444444,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c6-1fe1fdd51808",
+      "raster_color": 14147361,
+      "country": "RUS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5165876777251185,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6e-7db2-87c6-216c690f750e",
+      "raster_color": 14158457,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5454545454545454,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-0e2d643e644c",
+      "raster_color": 14200047,
+      "country": "BWA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5384615384615384,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-0f4a5e656349",
+      "raster_color": 14205713,
+      "country": "TKM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-14d39848c552",
+      "raster_color": 14251801,
+      "country": "COD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.52,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-1652d2264194",
+      "raster_color": 14259564,
+      "country": "BLR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5357142857142857,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-1835d37dcc5c",
+      "raster_color": 14275125,
+      "country": "URY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6396396396396397,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-1cc8e886708b",
+      "raster_color": 14308314,
+      "country": "BGD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6228373702422145,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-292c9f353f0d",
+      "raster_color": 14397087,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c6f-7820-85d5-32602940403b",
+      "raster_color": 14464838,
+      "country": "AFG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6078431372549019,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fc-ea71ba67aa8f",
+      "raster_color": 14523646,
+      "country": "IDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5298804780876494,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fc-f77c87ec5a04",
+      "raster_color": 14623879,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5918367346938775,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fc-f7e80f024add",
+      "raster_color": 14627039,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5986159169550173,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fc-fb8623722087",
+      "raster_color": 14647947,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5743801652892562,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fc-fc58aaf26bb6",
+      "raster_color": 14652700,
+      "country": "SOL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5025641025641026,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fc-fe65ecd0c06d",
+      "raster_color": 14666408,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5771428571428572,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fd-02c533c5f6c4",
+      "raster_color": 14687790,
+      "country": "CAN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6491228070175439,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fd-05bdfc1eae06",
+      "raster_color": 14700640,
+      "country": "PSX",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.54,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fd-09823cb0036a",
+      "raster_color": 14721168,
+      "country": "SDS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6263345195729537,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fd-0cc8a3da35d4",
+      "raster_color": 14733408,
+      "country": "ISR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5555555555555556,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c70-7453-93fd-132cb8241d8b",
+      "raster_color": 14767793,
+      "country": "BFA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5507246376811594,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-6eba7350db11",
+      "raster_color": 14827529,
+      "country": "ZMB",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6386861313868614,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-8247b428653d",
+      "raster_color": 14957411,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5954198473282443,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-86b0f50bf3c0",
+      "raster_color": 14990414,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6204379562043796,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-87983859a4a2",
+      "raster_color": 14996269,
+      "country": "NOR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6474820143884892,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-8c3394494de4",
+      "raster_color": 15028551,
+      "country": "BMU",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-9390789398a3",
+      "raster_color": 15077248,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6153846153846154,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-a135eeebc70e",
+      "raster_color": 15174164,
+      "country": "SAU",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6455223880597015,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c71-7622-b42e-a182d6446ea7",
+      "raster_color": 15175406,
+      "country": "AFG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c72-7ef2-a545-7e4f6261a1a3",
+      "raster_color": 15235697,
+      "country": "PNG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6153846153846154,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c72-7ef2-a545-832fd8cf8bc5",
+      "raster_color": 15271744,
+      "country": "TLS",
+      "mapped_pixel_share": 0.06832298136645963,
+      "majority_share": 0.5454545454545454,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c72-7ef2-a545-937cae77ec61",
+      "raster_color": 15390493,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5235849056603774,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c72-7ef2-a545-953ef9ac350d",
+      "raster_color": 15403406,
+      "country": "SAU",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5880281690140845,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-92fbb921a00a",
+      "raster_color": 15518407,
+      "country": "SYR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5045045045045045,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-9a2a19f816b8",
+      "raster_color": 15571684,
+      "country": "TCD",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5494505494505495,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-9c5520437c2d",
+      "raster_color": 15584726,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5612903225806452,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-9fd0c22c3c24",
+      "raster_color": 15606610,
+      "country": "BEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6470588235294118,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-a19643b8ea59",
+      "raster_color": 15624765,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5721925133689839,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-a6eda13a6a6f",
+      "raster_color": 15660912,
+      "country": "ZWE",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5142857142857142,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-abe16eb6ff00",
+      "raster_color": 15683616,
+      "country": "SAU",
+      "mapped_pixel_share": 0.7235772357723578,
+      "majority_share": 0.5280898876404494,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-ac2fe481d447",
+      "raster_color": 15683776,
+      "country": "MNP",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-ad949ca4d7ac",
+      "raster_color": 15695380,
+      "country": "PRY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6309523809523809,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-b2781a4c84fa",
+      "raster_color": 15724320,
+      "country": "VNM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5313807531380753,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-b62c1e368f06",
+      "raster_color": 15740471,
+      "country": "KEN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5512820512820513,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-b6f7bf5cef85",
+      "raster_color": 15744373,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5297029702970297,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c73-7e11-abc9-bb2d295e1248",
+      "raster_color": 15760035,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5428571428571428,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-1fc3a3bc1973",
+      "raster_color": 15765537,
+      "country": "EGY",
+      "mapped_pixel_share": 0.922077922077922,
+      "majority_share": 0.6056338028169014,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-26069e062772",
+      "raster_color": 15790145,
+      "country": "MRT",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5882352941176471,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-26175413943d",
+      "raster_color": 15790177,
+      "country": "JPN",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-26ec5b74ef61",
+      "raster_color": 15792495,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6201117318435754,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-2ef30515249e",
+      "raster_color": 15850483,
+      "country": "PYF",
+      "mapped_pixel_share": 0.0,
+      "majority_share": 0.0,
+      "nearest_fallback": true
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-30758b34229b",
+      "raster_color": 15859614,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.510752688172043,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-344b3f9d72f2",
+      "raster_color": 15889409,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6136363636363636,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-3c1c1bd08b0f",
+      "raster_color": 15939011,
+      "country": "BWA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6130653266331658,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-400114cd52d6",
+      "raster_color": 15970458,
+      "country": "IND",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.562874251497006,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-42a05a7b5dad",
+      "raster_color": 15988540,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5607476635514018,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-4686809e32f9",
+      "raster_color": 16015754,
+      "country": "GIN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6396396396396397,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c74-7782-b281-4a1078ce9459",
+      "raster_color": 16037487,
+      "country": "NAM",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6257309941520468,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-d149d9f752b8",
+      "raster_color": 16082257,
+      "country": "PRY",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6234817813765182,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-d6cdb32887e9",
+      "raster_color": 16126241,
+      "country": "IDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.562962962962963,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-d6d6cc6fe399",
+      "raster_color": 16126677,
+      "country": "CHN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.589622641509434,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-dc3dfbe0d73b",
+      "raster_color": 16164295,
+      "country": "THA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6216216216216216,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-e0bf109d9b06",
+      "raster_color": 16199499,
+      "country": "GNQ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5207100591715976,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-e2fa69e8cca2",
+      "raster_color": 16214816,
+      "country": "ROU",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5794392523364486,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-e8996e0cc471",
+      "raster_color": 16259819,
+      "country": "ARG",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5380710659898477,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c75-77b1-a601-fbd195027c45",
+      "raster_color": 16389476,
+      "country": "AGO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.47651006711409394,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-84760a5c6648",
+      "raster_color": 16455864,
+      "country": "MYS",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6220472440944882,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-8c506574f5b5",
+      "raster_color": 16511140,
+      "country": "LAO",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5897435897435898,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-91c513d4908a",
+      "raster_color": 16552154,
+      "country": "KAZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-93f6572b83a1",
+      "raster_color": 16569429,
+      "country": "MAR",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5893719806763285,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-965638ecdd44",
+      "raster_color": 16582018,
+      "country": "CHL",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5766871165644172,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-9c3e320e7dba",
+      "raster_color": 16625457,
+      "country": "MOZ",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5988372093023255,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-9c65130246c5",
+      "raster_color": 16626152,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.6451612903225806,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-a1f3906b80f6",
+      "raster_color": 16661567,
+      "country": "SDN",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5688622754491018,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-a5a0b7861d63",
+      "raster_color": 16691574,
+      "country": "MLI",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5590551181102362,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-a70277d53f5e",
+      "raster_color": 16701153,
+      "country": "NER",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.5027322404371585,
+      "nearest_fallback": false
+    },
+    {
+      "province": "01a0758b-6c76-7703-8048-aa4087ff91a4",
+      "raster_color": 16723517,
+      "country": "BRA",
+      "mapped_pixel_share": 1.0,
+      "majority_share": 0.55,
+      "nearest_fallback": false
+    }
+  ]
+}

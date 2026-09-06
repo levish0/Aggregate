@@ -46,8 +46,8 @@ pub fn build(
         },
     );
     commands.entity(header).insert((
-        BackgroundColor(theme::BURGUNDY),
-        BorderColor::all(theme::GOLD),
+        BackgroundColor(theme::TITLE_BAR),
+        BorderColor::all(theme::ACCENT),
     ));
     ui::seal(commands, header, 44.);
     let title = column(commands, header, 4.);
@@ -63,7 +63,7 @@ pub fn build(
         fonts,
         state.text("management-title"),
         12.,
-        theme::GOLD,
+        theme::ACCENT,
         true,
     );
     label(
@@ -88,7 +88,7 @@ pub fn build(
             theme::MUTED,
             false,
         );
-        label(commands, stat, fonts, binding, 24., theme::GOLD_BRIGHT);
+        label(commands, stat, fonts, binding, 24., theme::ACCENT_BRIGHT);
     }
     let back = ui::node(
         commands,
@@ -187,7 +187,7 @@ pub fn build(
         fonts,
         ManagementLabel::Feedback,
         13.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
     );
     let body = ui::node(
         commands,
@@ -209,7 +209,7 @@ pub fn build(
         fonts,
         state.text("management-provinces"),
         17.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     ui::rule(commands, navigation);
@@ -265,7 +265,7 @@ pub fn build(
         fonts,
         ManagementLabel::Allocation,
         14.,
-        theme::GOLD,
+        theme::ACCENT,
     );
     commands.entity(allocation).insert(tooltip(
         state,
@@ -320,7 +320,7 @@ pub fn build(
             fonts,
             ManagementLabel::Stock(good.id.clone()),
             28.,
-            theme::GOLD_BRIGHT,
+            theme::ACCENT_BRIGHT,
         );
         label(
             commands,
@@ -387,7 +387,7 @@ pub fn build(
             fonts,
             ManagementLabel::FacilityStaffing(definition.id.clone()),
             13.,
-            theme::GOLD,
+            theme::ACCENT,
         );
         ui::text(
             commands,
@@ -409,7 +409,7 @@ pub fn build(
         fonts,
         state.text("management-news"),
         21.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     ui::text(
@@ -494,7 +494,7 @@ fn section(
         fonts,
         state.text(key),
         18.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
 }

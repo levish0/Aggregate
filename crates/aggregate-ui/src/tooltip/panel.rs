@@ -23,7 +23,7 @@ pub(crate) struct LockSegment {
 
 pub(super) fn segment_color(index: usize, progress: f32) -> Color {
     if (index as f32) < progress * RING_SEGMENTS as f32 {
-        theme::GOLD_BRIGHT
+        theme::ACCENT_BRIGHT
     } else {
         theme::BORDER
     }
@@ -69,7 +69,7 @@ pub(super) fn spawn_panel(
             },
             BackgroundColor(theme::INK),
             crate::skin::PanelSkin::Tooltip,
-            BorderColor::all(theme::GOLD),
+            BorderColor::all(theme::ACCENT),
             theme::shadow(),
             GlobalZIndex(100 + depth as i32),
             bevy::ui::FocusPolicy::Block,
@@ -86,7 +86,7 @@ pub(super) fn spawn_panel(
         fonts,
         &content.title,
         20.,
-        theme::GOLD_BRIGHT,
+        theme::ACCENT_BRIGHT,
         true,
     );
     components::text(
@@ -171,7 +171,7 @@ pub(super) fn spawn_panel(
             &content.locking_label
         },
         13.,
-        theme::GOLD,
+        theme::ACCENT,
         false,
     );
     commands.entity(label).insert(LockIndicator(source));
