@@ -68,10 +68,14 @@ fn plan(
             .facilities
             .get(&facility.0.definition)
             .ok_or("missing facility definition")?;
-        let requested = definition
+        let mut requested = definition
             .workers_per_level
             .checked_mul(facility.0.level)
             .ok_or("facility worker capacity overflow")?;
+        if definition.construction_points_per_worker_day > 0 {
+            let country = &work.provinces[&facility.0.province].country;
+            requested = requested.min(work.construction_demand.get(country).copied().unwrap_or(0).div_ceil(definition.construction_points_per_worker_day));
+        }
         requests
             .entry(facility.0.province.clone())
             .or_default()

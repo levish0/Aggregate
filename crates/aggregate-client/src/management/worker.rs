@@ -3,7 +3,7 @@ use aggregate_simulation_core::{
     CommandOutcome, DayReport, Simulation, SimulationCommand, SimulationError,
 };
 use aggregate_world::WorldSnapshotIndex;
-use aggregate_world::{FacilityDefinitionId, WorldSnapshot};
+use aggregate_world::{FacilityDefinitionId, FacilityId, WorldSnapshot};
 use std::{
     sync::{Mutex, mpsc},
     time::Instant,
@@ -22,6 +22,7 @@ pub(super) enum WorkOutcome {
 }
 
 pub(super) struct CompletedWork {
+    pub construction_id: Option<FacilityId>,
     pub result: Result<WorkOutcome, SimulationError>,
     pub snapshot: Option<(WorldSnapshot, WorldSnapshotIndex)>,
 }
@@ -40,42 +41,34 @@ impl SimulationWorker {
         std::thread::Builder::new()
             .name("aggregate-simulation".into())
             .spawn(move || {
-                while let Ok(request) = incoming.recv() {
+                while let Ok(first) = incoming.recv() {
                     let started = Instant::now();
-                    let result = match request {
-                        WorkRequest::Step => simulation.step().map(WorkOutcome::Day),
-                        WorkRequest::Construction(command, definition) => simulation
-                            .execute(command)
-                            .map(|outcome| WorkOutcome::Construction(definition, outcome)),
-                        WorkRequest::Inspect(scope, revision) => {
-                            let result = simulation
-                                .inspect_programs(&scope)
-                                .map_err(|error| error.to_string());
-                            Ok(WorkOutcome::Inspection(scope, revision, result))
-                        }
-                    };
+                    let mut responses = Vec::new();
+                    let mut changed = false;
+                    let requests = std::iter::once(first).chain(incoming.try_iter().take(31));
+                    for request in requests {
+                        let construction_id = match &request {
+                            WorkRequest::Construction(SimulationCommand::StartConstruction { facility, .. }, _) => Some(facility.clone()),
+                            _ => None,
+                        };
+                        let result = match request {
+                            WorkRequest::Step => simulation.step().map(WorkOutcome::Day),
+                            WorkRequest::Construction(command, definition) => simulation.execute(command).map(|outcome| WorkOutcome::Construction(definition, outcome)),
+                            WorkRequest::Inspect(scope, revision) => Ok(WorkOutcome::Inspection(scope.clone(), revision, simulation.inspect_programs(&scope).map_err(|error| error.to_string()))),
+                        };
+                        changed |= matches!(&result, Ok(WorkOutcome::Day(_) | WorkOutcome::Construction(..)));
+                        responses.push(CompletedWork { construction_id, result, snapshot: None });
+                    }
                     let calculation_ms = started.elapsed().as_secs_f64() * 1000.;
                     let snapshot_started = Instant::now();
-                    let snapshot = if matches!(
-                        &result,
-                        Ok(WorkOutcome::Day(_) | WorkOutcome::Construction(..))
-                    ) {
+                    if changed {
                         let snapshot = simulation.snapshot();
                         let index = WorldSnapshotIndex::build(&snapshot);
-                        Some((snapshot, index))
-                    } else {
-                        None
-                    };
-                    tracing::debug!(
-                        target: "aggregate_client::simulation_performance",
-                        day = simulation.clock().day(),
-                        calculation_ms,
-                        snapshot_ms = snapshot_started.elapsed().as_secs_f64() * 1000.,
-                        "Simulation worker completed request"
-                    );
-                    if outgoing.send(CompletedWork { result, snapshot }).is_err() {
-                        break;
+                        // Publish once per drained command batch, before the UI observes outcomes.
+                        responses[0].snapshot = Some((snapshot, index));
                     }
+                    tracing::debug!(target: "aggregate_client::simulation_performance", requests = responses.len(), day = simulation.clock().day(), calculation_ms, snapshot_ms = snapshot_started.elapsed().as_secs_f64() * 1000., "Simulation worker completed batch");
+                    if responses.into_iter().any(|response| outgoing.send(response).is_err()) { break; }
                 }
             })
             .map_err(|error| {
@@ -101,6 +94,7 @@ impl SimulationWorker {
             Ok(completed) => Some(completed),
             Err(mpsc::TryRecvError::Empty) => None,
             Err(mpsc::TryRecvError::Disconnected) => Some(CompletedWork {
+                construction_id: None,
                 result: Err(SimulationError::InvalidPrograms(
                     "simulation worker stopped".into(),
                 )),

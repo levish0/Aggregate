@@ -10,7 +10,7 @@ use bevy::prelude::*;
 #[derive(Component, Default)]
 pub struct RenderedList {
     projects: Vec<FacilityId>,
-    news_count: usize,
+    notifications_count: usize,
     initialized: bool,
 }
 
@@ -48,7 +48,7 @@ pub fn update_management_lists(
             rendered.initialized
                 && match kind {
                     ManagementList::Projects => rendered.projects == projects,
-                    ManagementList::News => rendered.news_count == session.news.len(),
+                    ManagementList::News => rendered.notifications_count == session.notifications.len(),
                 }
         });
         if unchanged {
@@ -123,7 +123,7 @@ pub fn update_management_lists(
                 }
             }
             ManagementList::News => {
-                if session.news.is_empty() {
+                if session.notifications.is_empty() {
                     ui::text(
                         &mut commands,
                         parent,
@@ -134,7 +134,7 @@ pub fn update_management_lists(
                         false,
                     );
                 }
-                for entry in session.news.iter().rev() {
+                for entry in session.notifications.iter().rev() {
                     let card = ui::panel(
                         &mut commands,
                         parent,
@@ -169,7 +169,7 @@ pub fn update_management_lists(
         }
         commands.entity(parent).insert(RenderedList {
             projects,
-            news_count: session.news.len(),
+            notifications_count: session.notifications.len(),
             initialized: true,
         });
     }

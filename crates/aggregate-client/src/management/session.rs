@@ -5,15 +5,22 @@ use aggregate_simulation_core::{
     DayReport, Simulation, SimulationCommand, SimulationError, SimulationEvent,
 };
 use aggregate_world::{
-    ContentDefinitions, CountryId, FacilityDefinitionId, ProvinceId, WorldSnapshot,
+    ContentDefinitions, CountryId, FacilityDefinitionId, FacilityId, ProvinceId, WorldSnapshot,
     WorldSnapshotIndex,
 };
 use bevy::prelude::*;
 
-pub struct NewsEntry {
+#[derive(Clone)]
+pub struct NotificationEntry {
+    pub sequence: u64,
     pub day: u64,
     pub event: SimulationEvent,
 }
+pub struct PendingConstruction {
+    pub province: ProvinceId,
+    pub definition: FacilityDefinitionId,
+}
+
 pub enum SessionFeedback {
     Ready,
     ConstructionStarted(FacilityDefinitionId),
@@ -25,6 +32,7 @@ pub enum SessionFeedback {
 pub struct ManagementSession {
     worker: SimulationWorker,
     pending_jobs: usize,
+    pub pending_construction: std::collections::BTreeMap<FacilityId, PendingConstruction>,
     inspection: Option<(InspectionScope, u64, Result<Vec<InspectionSection>, String>)>,
     pub inspection_revision: u64,
     pub snapshot: WorldSnapshot,
@@ -32,7 +40,8 @@ pub struct ManagementSession {
     pub definitions: ContentDefinitions,
     pub player_country: CountryId,
     pub last_report: Option<DayReport>,
-    pub news: Vec<NewsEntry>,
+    pub notifications: Vec<NotificationEntry>,
+    notifications_emitted: u64,
     pub feedback: SessionFeedback,
     pub running: bool,
     pub speed: super::SimulationSpeed,
@@ -118,6 +127,7 @@ impl ManagementSession {
         Ok(Self {
             worker,
             pending_jobs: 0,
+            pending_construction: Default::default(),
             inspection: None,
             inspection_revision: 0,
             snapshot,
@@ -125,7 +135,8 @@ impl ManagementSession {
             definitions,
             player_country,
             last_report: None,
-            news: Vec::new(),
+            notifications: Vec::new(),
+            notifications_emitted: 0,
             feedback: SessionFeedback::Ready,
             running: false,
             speed: super::SimulationSpeed::default(),
@@ -166,15 +177,19 @@ impl ManagementSession {
             .map(|facility| facility.production_priority)
             .min()
             .unwrap_or(100);
+        let facility: FacilityId = uuid::Uuid::now_v7().into();
         let command = SimulationCommand::StartConstruction {
             country: self.player_country.clone(),
             province: province.clone(),
-            facility: uuid::Uuid::now_v7().into(),
+            facility: facility.clone(),
             definition: definition.clone(),
             workers: recipe.construction.max_workers,
             production_priority: priority,
         };
-        self.submit(WorkRequest::Construction(command, definition.clone()));
+        if self.submit(WorkRequest::Construction(command, definition.clone())) {
+            self.pending_construction.insert(facility, PendingConstruction { province: province.clone(), definition: definition.clone() });
+            self.revision += 1;
+        }
     }
 
     pub fn step(&mut self) {
@@ -183,7 +198,7 @@ impl ManagementSession {
         }
     }
 
-    fn submit(&mut self, request: WorkRequest) {
+    fn submit(&mut self, request: WorkRequest) -> bool {
         let result = if self.pending_jobs >= 32 {
             Err(SimulationError::CommandRejected(
                 "simulation request queue is full".into(),
@@ -192,17 +207,20 @@ impl ManagementSession {
             self.worker.submit(request)
         };
         match result {
-            Ok(()) => self.pending_jobs += 1,
+            Ok(()) => { self.pending_jobs += 1; true },
             Err(error) => {
                 self.running = false;
                 self.feedback = SessionFeedback::Error(error);
                 self.revision += 1;
+                false
             }
         }
     }
 
     fn accept(&mut self, completed: super::worker::CompletedWork) {
         self.pending_jobs = self.pending_jobs.saturating_sub(1);
+        if let Some(id) = &completed.construction_id { self.pending_construction.remove(id); }
+        if self.pending_jobs == 0 { self.pending_construction.clear(); }
         if let Some((snapshot, index)) = completed.snapshot {
             let retired = (
                 std::mem::replace(&mut self.snapshot, snapshot),
@@ -214,6 +232,7 @@ impl ManagementSession {
                 })
                 .detach();
         }
+        let previous_count = self.notifications.len();
         match completed.result {
             Ok(WorkOutcome::Inspection(scope, revision, result)) => {
                 self.inspection = Some((scope, revision, result));
@@ -221,7 +240,7 @@ impl ManagementSession {
                 return;
             }
             Ok(WorkOutcome::Day(report)) => {
-                self.news.extend(
+                self.notifications.extend(
                     report
                         .events
                         .iter()
@@ -234,7 +253,8 @@ impl ManagementSession {
                             })
                         })
                         .cloned()
-                        .map(|event| NewsEntry {
+                        .map(|event| NotificationEntry {
+                            sequence: 0,
                             day: report.day,
                             event,
                         }),
@@ -251,7 +271,8 @@ impl ManagementSession {
                 }
             }
             Ok(WorkOutcome::Construction(definition, outcome)) => {
-                self.news.push(NewsEntry {
+                self.notifications.push(NotificationEntry {
+                    sequence: 0,
                     day: self.snapshot.day,
                     event: outcome.event,
                 });
@@ -262,8 +283,12 @@ impl ManagementSession {
                 self.feedback = SessionFeedback::Error(error);
             }
         }
-        if self.news.len() > 200 {
-            self.news.drain(..self.news.len() - 200);
+        for entry in &mut self.notifications[previous_count..] {
+            self.notifications_emitted = self.notifications_emitted.checked_add(1).expect("notification sequence exhausted");
+            entry.sequence = self.notifications_emitted;
+        }
+        if self.notifications.len() > 200 {
+            self.notifications.drain(..self.notifications.len() - 200);
         }
         self.revision += 1;
     }
@@ -274,9 +299,11 @@ pub fn poll_simulation(mut session: ResMut<ManagementSession>) {
     if !session.is_busy() {
         return;
     }
-    if let Some(completed) = session.worker.try_receive() {
+    for _ in 0..32 {
+        let Some(completed) = session.worker.try_receive() else { break; };
         let started = std::time::Instant::now();
         session.accept(completed);
+        if !session.is_busy() { break; }
         tracing::debug!(target: "aggregate_client::simulation_performance", apply_ms = started.elapsed().as_secs_f64() * 1000., "Committed UI snapshot published");
     }
 }

@@ -63,6 +63,7 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
             .report
             .available_workers
             .checked_sub(province.report.production_workers)
+            .and_then(|workers| workers.checked_sub(province.sector_workers))
             .and_then(|workers| workers.checked_sub(reserved[&province_id]))
             .ok_or("daily workforce overallocated")?;
         for allocation in allocate_labor(available, &requests).map_err(|error| error.to_string())? {
@@ -95,14 +96,17 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
             .checked_add(actual)
             .ok_or("construction workforce overflow")?;
         province.report.construction_workers = total;
-        let remaining = project.0.remaining_construction_points - actual;
+        let supply = work.construction_supply.entry(province.country.clone()).or_default();
+        let sector_points = (*supply).min(project.0.remaining_construction_points - actual);
+        *supply -= sector_points;
+        let remaining = project.0.remaining_construction_points - actual - sector_points;
         if actual
             < project
                 .0
                 .requested_workers
                 .min(project.0.remaining_construction_points)
         {
-            tracing::debug!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, active_workers = actual, remaining_construction_points = remaining, committed = false, "Construction plan limited by local workforce");
+            tracing::debug!(day = work.day, province = %project.0.province, facility = %project.0.facility_id, active_workers = actual, remaining_construction_points = remaining, committed = false, "Local construction labor allocation");
         }
         work.constructions.insert(
             project.0.facility_id.clone(),
@@ -121,6 +125,7 @@ fn plan(projects: &Query<&ConstructionProject>, work: &mut DayWork) -> Result<()
                     .requested_workers
                     .min(project.0.remaining_construction_points),
                 active_workers: actual,
+                sector_construction_points: sector_points,
                 remaining_construction_points: remaining,
             });
         if remaining == 0 {

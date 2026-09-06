@@ -1,7 +1,7 @@
 mod controls;
 pub mod inspection;
 mod layout;
-pub mod news;
+pub mod notifications;
 pub mod outliner;
 use crate::{
     backdrop::CartographicBackdrop,

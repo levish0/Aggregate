@@ -84,7 +84,7 @@ management-no-news = 아직 새로운 소식이 없습니다.
 management-build = 건설
 management-no-inputs = 없음
 management-recipe = 건설 자재: { $cost }
-    건설 인력 최대 { $workers }명 · 작업량 { $work }인일
+    건설 인력 최대 { $workers }명 · 작업량 { $work }건설력
     노동자 1명당 하루: { $inputs } → { $outputs }
 management-ready = 이 지역에 건설할 건물을 선택하세요.
 management-command-accepted = { $facility } 건설을 시작했습니다. 자재가 차감되었습니다.
@@ -101,7 +101,7 @@ management-before-allocation = 가용 노동력 { $workers }명 · 첫날부터 
 management-food = 식량: 필요 { $required } · 소비 { $consumed } · 부족 { $shortfall }
 management-stock-change = 지난 완료일 { $amount }
 management-facility-staffing = 총 { $level }단계 · 지난 완료일 가동 인력 { $workers }명
-management-project-progress = 남은 작업량 { $work }인일 · 건설 인력 최대 { $workers }명
+management-project-progress = 남은 작업량 { $work }건설력 · 건설 인력 최대 { $workers }명
 management-project-awaiting-allocation = 다음 일일 노동력 배정 대기
 management-project-workers = 지난 작업일: 지역 노동자 { $active } / { $requested }명 투입
 management-project-labor-shortage = 지난 작업일: { $active } / { $requested }명 투입 · 지역 노동력 부족
@@ -199,9 +199,6 @@ setup-country = 시작 국가
 setup-population = 지역당 인구 (사용자 설정)
 setup-workforce = 노동 가능 인구 비율
 setup-reserves = 초기 건설 자원
-setup-health-enabled = 질병 프로그램 켜짐
-setup-health-disabled = 질병 프로그램 꺼짐
-setup-health-description = 지역 내 전파와 회복을 계산하고 가용 노동력에 반영합니다.
 setup-start = 게임 시작
 setup-new-world = 게임 설정
 inspection-build-level = { $building } 증설
@@ -213,3 +210,13 @@ program-health-title = 공중 보건
 program-health-susceptible = 감염 가능 인구
 program-health-infected = 감염 인구
 program-health-recovered = 회복 인구
+
+menu-continue = 계속하기
+world-facility-construction-sector = 건설업
+inspection-production-workforce = 가동 인원 { $active } / { $requested }
+inspection-production-output = 일일 생산: { $outputs }
+inspection-production-input = 일일 소비: { $inputs }
+inspection-construction-service = 건설력 { $work } / 일
+inspection-construction-applied = 일일 진행 { $work } · 건설업 공급 { $amount }
+
+inspection-construction-shortcut = 건설 · B

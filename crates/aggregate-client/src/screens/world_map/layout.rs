@@ -189,18 +189,13 @@ pub fn build(
         );
         commands.entity(button).insert(action);
     }
-    let queue = icon_button(
-        commands,
-        rail,
-        fonts,
-        state,
-        Icon::Queue,
-        "inspection-construction",
-        UiButton::secondary(5),
-    );
-    commands
-        .entity(queue)
-        .insert(super::inspection::InspectionAction::Construction);
+    for (icon, label, action, order) in [
+        (Icon::Queue, "inspection-construction-shortcut", super::inspection::InspectionAction::Construction, 5),
+        (Icon::Population, "inspection-population", super::inspection::InspectionAction::NationalTab(super::inspection::InspectionTab::Population), 6),
+    ] {
+        let button = icon_button(commands, rail, fonts, state, icon, label, UiButton::secondary(order));
+        commands.entity(button).insert(action);
+    }
     super::inspection::build(commands, root);
 
     let outliner = ui::panel(
@@ -210,7 +205,7 @@ pub fn build(
             position_type: PositionType::Absolute,
             right: px(14),
             top: px(100),
-            bottom: px(370),
+            bottom: px(80),
             width: px(232),
             padding: UiRect::all(px(14)),
             flex_direction: FlexDirection::Column,
@@ -221,43 +216,7 @@ pub fn build(
     commands
         .entity(outliner)
         .insert((UiPointerBlocker, super::MapOutlinerPanel));
-    let news = ui::panel(
-        commands,
-        root,
-        Node {
-            position_type: PositionType::Absolute,
-            right: px(14),
-            bottom: px(140),
-            height: px(214),
-            width: px(232),
-            padding: UiRect::all(px(12)),
-            flex_direction: FlexDirection::Column,
-            row_gap: px(8),
-            ..default()
-        },
-    );
-    commands.entity(news).insert(UiPointerBlocker);
-    ui::text(
-        commands,
-        news,
-        fonts,
-        state.text("map-news-title"),
-        16.,
-        theme::TEXT,
-        true,
-    );
-    let feed = layout::scroll_area(
-        commands,
-        news,
-        Node {
-            width: percent(100),
-            min_height: px(0),
-            flex_grow: 1.,
-            flex_direction: FlexDirection::Column,
-            ..default()
-        },
-    );
-    commands.entity(feed).insert(super::news::NewsFeed);
+    super::notifications::build(commands, root);
     ui::text(
         commands,
         outliner,

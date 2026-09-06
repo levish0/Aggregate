@@ -84,7 +84,7 @@ management-no-news = No dispatches yet.
 management-build = Construct
 management-no-inputs = None
 management-recipe = Construction: { $cost }
-    Up to { $workers } builders · { $work } worker-days
+    Up to { $workers } builders · { $work } construction points
     Per worker/day: { $inputs } → { $outputs }
 management-ready = Choose a building to begin construction in this province.
 management-command-accepted = Construction accepted: { $facility }. Materials have been consumed.
@@ -101,7 +101,7 @@ management-before-allocation = { $workers } workers available · Allocation begi
 management-food = Food: required { $required } · consumed { $consumed } · shortfall { $shortfall }
 management-stock-change = Last day { $amount }
 management-facility-staffing = Total level { $level } · Active workers last day: { $workers }
-management-project-progress = { $work } worker-days remaining · Up to { $workers } builders
+management-project-progress = { $work } construction points remaining · Up to { $workers } builders
 management-project-awaiting-allocation = Awaiting the next daily labor allocation
 management-project-workers = Last workday: { $active } / { $requested } local workers
 management-project-labor-shortage = Last workday: { $active } / { $requested } workers · Local labor shortage
@@ -199,9 +199,6 @@ setup-country = Starting country
 setup-population = Population per province (custom)
 setup-workforce = Workforce share
 setup-reserves = Initial construction goods
-setup-health-enabled = Disease program enabled
-setup-health-disabled = Disease program disabled
-setup-health-description = Simulates local transmission and recovery, affecting available workers.
 setup-start = Start game
 setup-new-world = Game setup
 inspection-build-level = Expand { $building }
@@ -213,3 +210,13 @@ program-health-title = Public health
 program-health-susceptible = Susceptible population
 program-health-infected = Infected population
 program-health-recovered = Recovered population
+
+menu-continue = Continue
+world-facility-construction-sector = Construction sector
+inspection-production-workforce = Active workers { $active } / { $requested }
+inspection-production-output = Daily output: { $outputs }
+inspection-production-input = Daily inputs: { $inputs }
+inspection-construction-service = Construction { $work } / day
+inspection-construction-applied = Daily progress { $work } · sector contribution { $amount }
+
+inspection-construction-shortcut = Construction · B

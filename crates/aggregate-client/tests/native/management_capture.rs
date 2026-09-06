@@ -102,7 +102,7 @@ fn drive_capture(
     if run.frame >= 300 && run.captures == 4 {
         assert_eq!(session.snapshot.day, 5);
         assert!(session.snapshot.construction_projects.is_empty());
-        assert_eq!(session.news.len(), 2);
+        assert_eq!(session.notifications.len(), 2);
         exit.write(AppExit::Success);
     }
     assert!(

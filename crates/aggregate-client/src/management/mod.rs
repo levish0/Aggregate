@@ -15,5 +15,5 @@ pub use actions::{ManagementAction, apply_management_actions};
 pub use playback::{
     SimulationSpeed, advance_running_session, speed_controls, update_speed_controls,
 };
-pub use session::poll_simulation;
+pub use session::{poll_simulation, NotificationEntry};
 pub use session::{ManagementSession, ManagementViewState, SessionFeedback};

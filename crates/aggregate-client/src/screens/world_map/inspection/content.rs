@@ -46,17 +46,18 @@ pub fn refresh(
     else {
         return;
     };
+    let retained = matches!(view.tab, InspectionTab::Buildings | InspectionTab::Construction);
     let key = (
         root,
         map.selected_index,
         map.inspect_country,
         view.tab,
         interface.localization.language(),
-        session.snapshot.day,
-        session.snapshot.facilities.len(),
-        session.snapshot.construction_projects.len(),
-        session.revision,
-        session.inspection_revision,
+        if retained { 0 } else { session.snapshot.day },
+        if retained { 0 } else { session.snapshot.facilities.len() },
+        if retained { 0 } else { session.snapshot.construction_projects.len() },
+        if retained { 0 } else { session.revision },
+        if retained { 0 } else { session.inspection_revision },
         view.page,
     );
     if previous.as_ref() == Some(&key) {

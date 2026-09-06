@@ -1,5 +1,5 @@
 //! Real window/render acceptance; input is injected into Bevy, not sent to the OS.
-use crate::state::{InterfaceAction, InterfaceState, Screen};
+use crate::state::{InterfaceState, Screen};
 use aggregate_map_view::{LoadedWorldMap, MapCamera, MapCameraController, MapViewState};
 use aggregate_ui::{
     button::ButtonActivated,
@@ -61,7 +61,6 @@ fn drive_capture(
     mut interface: ResMut<InterfaceState>,
     mut window: Single<&mut Window>,
     camera: Single<(&Camera, &GlobalTransform), With<MapCamera>>,
-    buttons: Query<(Entity, &InterfaceAction)>,
     triggers: Query<Entity, With<SelectTrigger>>,
     items: Query<(Entity, &SelectItem)>,
     selects: Query<&Select>,

@@ -72,7 +72,7 @@ pub fn recipe_description(
             .collect::<Vec<_>>()
             .join(" · ")
     };
-    state.format(
+    let mut description = state.format(
         "management-recipe",
         &[
             ("cost", quantities(&definition.construction.goods)),
@@ -81,7 +81,11 @@ pub fn recipe_description(
             ("inputs", quantities(&definition.inputs_per_worker_day)),
             ("outputs", quantities(&definition.outputs_per_worker_day)),
         ],
-    )
+    );
+    if definition.construction_points_per_worker_day > 0 {
+        description.push_str(&format!("\n{}", state.format("inspection-construction-service", &[("work", (u128::from(definition.workers_per_level) * u128::from(definition.construction_points_per_worker_day)).to_string())])));
+    }
+    description
 }
 
 pub fn feedback(session: &ManagementSession, state: &InterfaceState) -> String {

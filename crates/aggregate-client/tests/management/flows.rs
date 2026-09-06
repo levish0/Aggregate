@@ -86,7 +86,7 @@ fn visible_build_and_time_buttons_drive_core_without_recreating_controls() {
             .get_version_num(),
         7
     );
-    assert_eq!(session.news.len(), 1);
+    assert_eq!(session.notifications.len(), 1);
     assert!(
         texts(&mut app)
             .iter()
@@ -175,14 +175,14 @@ fn rejected_construction_shows_error_without_spending_or_creating_news() {
         );
     }
     let before = app.world().resource::<ManagementSession>().snapshot.clone();
-    let news_count = app.world().resource::<ManagementSession>().news.len();
+    let news_count = app.world().resource::<ManagementSession>().notifications.len();
     activate(
         &mut app,
         ManagementAction::StartConstruction("grain_farm".into()),
     );
     let session = app.world().resource::<ManagementSession>();
     assert_eq!(session.snapshot, before);
-    assert_eq!(session.news.len(), news_count);
+    assert_eq!(session.notifications.len(), news_count);
     assert!(matches!(session.feedback, SessionFeedback::Error(_)));
     assert!(
         texts(&mut app)

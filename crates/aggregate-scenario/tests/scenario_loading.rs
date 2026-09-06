@@ -78,7 +78,7 @@ fn trailing_json_and_unsupported_schema_are_rejected() {
     scenario.schema_version = 999;
     let error = validate_scenario(&scenario).unwrap_err();
     assert_eq!(error.field_path, "schema_version");
-    assert!(error.message.contains("expected 2"));
+    assert!(error.message.contains(&format!("expected {}", aggregate_world::SCENARIO_SCHEMA_VERSION)));
 }
 
 #[test]

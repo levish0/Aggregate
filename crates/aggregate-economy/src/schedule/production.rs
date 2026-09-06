@@ -36,15 +36,21 @@ fn plan(
             .facilities
             .get(&facility.0.definition)
             .ok_or("missing facility definition")?;
+        let country = work.provinces[&facility.0.province].country.clone();
+        let service_rate = definition.construction_points_per_worker_day;
+        let demand = work.construction_demand.get(&country).copied().unwrap_or(0);
+        let supplied = work.construction_supply.get(&country).copied().unwrap_or(0);
+        let remaining_demand = demand.saturating_sub(supplied);
         let province = work
             .provinces
             .get_mut(&facility.0.province)
             .ok_or("missing facility province")?;
-        let assigned = province
+        let mut assigned = province
             .allocations
             .get(&facility.0.id)
             .copied()
             .unwrap_or(0);
+        if service_rate > 0 { assigned = assigned.min(remaining_demand.div_ceil(service_rate)); }
         let outcome = plan_production(definition, facility.0.level, assigned, &province.stockpile)
             .map_err(|error| error.to_string())?;
         for (good, amount) in &outcome.inputs {
@@ -68,11 +74,16 @@ fn plan(
                 })?,
             );
         }
-        province.report.production_workers = province
-            .report
-            .production_workers
-            .checked_add(outcome.active_workers)
-            .ok_or("production workers overflow")?;
+        let construction_points = outcome.active_workers.checked_mul(service_rate).ok_or("construction service overflow")?.min(remaining_demand);
+        if service_rate > 0 {
+            province.sector_workers = province.sector_workers.checked_add(outcome.active_workers).ok_or("construction sector workers overflow")?;
+            province.report.construction_workers = province.report.construction_workers.checked_add(outcome.active_workers).ok_or("construction workers overflow")?;
+        } else {
+            province.report.production_workers = province.report.production_workers.checked_add(outcome.active_workers).ok_or("production workers overflow")?;
+        }
+        if construction_points > 0 {
+            work.construction_supply.insert(country, supplied.checked_add(construction_points).ok_or("national construction service overflow")?);
+        }
         let report = work
             .report
             .as_mut()
@@ -107,6 +118,7 @@ fn plan(
             active_workers: outcome.active_workers,
             inputs: outcome.inputs,
             outputs: outcome.outputs,
+            construction_points,
         });
     }
     Ok(())
