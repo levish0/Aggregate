@@ -1,5 +1,7 @@
 # Aggregate milestones
 
+- [2026-09-07 — Terrain materials and scenery](2026-09-07-terrain-materials-and-scenery.md): derived terrain arrays/relief, animated water and low clouds, imported road/forest placement rendering, subtle country borders, final height calibration and native validation.
+
 - [2026-09-06 — Cartographic lettering and construction interface](2026-09-06-cartographic-lettering-and-construction-interface.md): flat country lettering fitted inside territory, non-overlapping toasts, retained construction controls, industry supply, 46-layer terrain, schema changes and native validation.
 
 - [2026-09-06 — Simulation worker and performance](2026-09-06-simulation-worker-performance.md): economy program extraction, authoritative background worker, paged read models, speeds 1–5, Criterion/CI measurements, native large-world acceptance, terrain material arrays and remaining 2026 initialization work.
