@@ -15,7 +15,11 @@ pub fn province_name(
     state: &InterfaceState,
     id: &ProvinceId,
 ) -> String {
-    let province = session.index.provinces.get(id).map(|position| &session.snapshot.provinces[*position]);
+    let province = session
+        .index
+        .provinces
+        .get(id)
+        .map(|position| &session.snapshot.provinces[*position]);
     province
         .map(|province| {
             province

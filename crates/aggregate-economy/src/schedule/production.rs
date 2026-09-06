@@ -1,9 +1,9 @@
 use crate::day_work::DayWork;
-use aggregate_programs::{
-    {FacilityDayReport, GoodsFlow, GoodsFlowCause},
-    world_storage::{DefinitionRegistry, Facility},
-};
 use crate::plan_production;
+use aggregate_programs::{
+    world_storage::{DefinitionRegistry, Facility},
+    {FacilityDayReport, GoodsFlow, GoodsFlowCause},
+};
 use bevy_ecs::prelude::*;
 
 #[tracing::instrument(level = "trace", skip_all)]

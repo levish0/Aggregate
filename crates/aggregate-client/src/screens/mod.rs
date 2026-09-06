@@ -17,23 +17,30 @@ pub struct StatusLabel;
 #[derive(Component)]
 pub struct ScaleLabel;
 
+#[derive(Clone, Copy, PartialEq, Eq)]
+pub struct ScreenLayoutState {
+    screen: Screen,
+    tab: crate::state::PreviewTab,
+    language: aggregate_localization::Language,
+    session_id: uuid::Uuid,
+    province_page: usize,
+}
+
 pub fn rebuild(
     mut commands: Commands,
     state: Res<InterfaceState>,
     fonts: Res<UiFonts>,
     session: Res<crate::management::ManagementSession>,
     roots: Query<Entity, With<ScreenRoot>>,
-    mut previous: Local<
-        Option<(
-            Screen,
-            crate::state::PreviewTab,
-            aggregate_localization::Language,
-            uuid::Uuid,
-            usize,
-        )>,
-    >,
+    mut previous: Local<Option<ScreenLayoutState>>,
 ) {
-    let view = (state.screen, state.tab, state.localization.language(), session.session_id, session.province_page);
+    let view = ScreenLayoutState {
+        screen: state.screen,
+        tab: state.tab,
+        language: state.localization.language(),
+        session_id: session.session_id,
+        province_page: session.province_page,
+    };
     if *previous == Some(view) && !fonts.is_changed() {
         return;
     }

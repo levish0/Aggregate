@@ -1,4 +1,4 @@
-use aggregate_programs::{DayReport,ProvinceDayReport};
+use aggregate_programs::{DayReport, ProvinceDayReport};
 use aggregate_world::*;
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
@@ -31,4 +31,3 @@ impl DayWork {
         }
     }
 }
-

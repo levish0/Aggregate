@@ -31,22 +31,43 @@ pub struct PreparedPrograms {
 }
 
 impl ProgramRuntime {
-    pub fn install(&mut self, world: &mut bevy_ecs::world::World) -> Result<(),String> {
-        for program in &mut self.programs { program.execution = program.implementation.install(world).map_err(|error|format!("{} installation: {error}", program.saved.manifest.id))?; }
+    pub fn install(&mut self, world: &mut bevy_ecs::world::World) -> Result<(), String> {
+        for program in &mut self.programs {
+            program.execution = program
+                .implementation
+                .install(world)
+                .map_err(|error| format!("{} installation: {error}", program.saved.manifest.id))?;
+        }
         Ok(())
     }
 
-    pub fn prepare_ecs(&mut self, world: &mut bevy_ecs::world::World) -> Result<(),(&'static str,String)> {
+    pub fn prepare_ecs(
+        &mut self,
+        world: &mut bevy_ecs::world::World,
+    ) -> Result<(), (&'static str, String)> {
         for program in &mut self.programs {
-            if let Some(execution) = &mut program.execution { execution.prepare(world).map_err(|(phase,error)|(phase,format!("{}: {error}", program.saved.manifest.id)))?; }
+            if let Some(execution) = &mut program.execution {
+                execution.prepare(world).map_err(|(phase, error)| {
+                    (phase, format!("{}: {error}", program.saved.manifest.id))
+                })?;
+            }
         }
         Ok(())
     }
 
     pub fn commit_ecs(&mut self, world: &mut bevy_ecs::world::World, day: u64) -> crate::DayReport {
-        let mut report = crate::DayReport { day, provinces: vec![], facilities: vec![], constructions: vec![], goods_flows: vec![], events: vec![] };
+        let mut report = crate::DayReport {
+            day,
+            provinces: vec![],
+            facilities: vec![],
+            constructions: vec![],
+            goods_flows: vec![],
+            events: vec![],
+        };
         for program in &mut self.programs {
-            if let Some(execution) = &mut program.execution && let Some(mut contribution) = execution.commit(world) {
+            if let Some(execution) = &mut program.execution
+                && let Some(mut contribution) = execution.commit(world)
+            {
                 report.provinces.append(&mut contribution.provinces);
                 report.facilities.append(&mut contribution.facilities);
                 report.constructions.append(&mut contribution.constructions);
@@ -57,22 +78,50 @@ impl ProgramRuntime {
         report
     }
 
-    pub fn execute_command(&mut self, world: &mut bevy_ecs::world::World, command: &crate::SimulationCommand, sequence: u64, scenario: &aggregate_world::Scenario) -> Result<crate::CommandOutcome,crate::SimulationError> {
+    pub fn execute_command(
+        &mut self,
+        world: &mut bevy_ecs::world::World,
+        command: &crate::SimulationCommand,
+        sequence: u64,
+        scenario: &aggregate_world::Scenario,
+    ) -> Result<crate::CommandOutcome, crate::SimulationError> {
         let id = command.program_id();
-        let execution = self.programs.iter_mut().find(|program|program.saved.manifest.id == id).and_then(|program|program.execution.as_mut())
-            .ok_or_else(||crate::SimulationError::CommandRejected(format!("command requires enabled program {id}")))?;
-        execution.execute_command(world,command,sequence,scenario)
+        let execution = self
+            .programs
+            .iter_mut()
+            .find(|program| program.saved.manifest.id == id)
+            .and_then(|program| program.execution.as_mut())
+            .ok_or_else(|| {
+                crate::SimulationError::CommandRejected(format!(
+                    "command requires enabled program {id}"
+                ))
+            })?;
+        execution.execute_command(world, command, sequence, scenario)
     }
 
     /// Content only comes from the enabled loadout; dependencies are resolved first.
-    pub fn collect_definitions(implementations: Vec<Arc<dyn SimulationProgram>>) -> Result<aggregate_world::ContentDefinitions,String> {
-        let mut goods = BTreeMap::new(); let mut facilities = BTreeMap::new();
-        for (manifest,implementation) in resolve(implementations)? {
+    pub fn collect_definitions(
+        implementations: Vec<Arc<dyn SimulationProgram>>,
+    ) -> Result<aggregate_world::ContentDefinitions, String> {
+        let mut goods = BTreeMap::new();
+        let mut facilities = BTreeMap::new();
+        for (manifest, implementation) in resolve(implementations)? {
             let content = implementation.definitions();
-            for good in content.goods { if goods.insert(good.id.clone(),good).is_some() { return Err(format!("{} registers a duplicate good",manifest.id)); } }
-            for facility in content.facilities { if facilities.insert(facility.id.clone(),facility).is_some() { return Err(format!("{} registers a duplicate facility",manifest.id)); } }
+            for good in content.goods {
+                if goods.insert(good.id.clone(), good).is_some() {
+                    return Err(format!("{} registers a duplicate good", manifest.id));
+                }
+            }
+            for facility in content.facilities {
+                if facilities.insert(facility.id.clone(), facility).is_some() {
+                    return Err(format!("{} registers a duplicate facility", manifest.id));
+                }
+            }
         }
-        Ok(aggregate_world::ContentDefinitions { goods: goods.into_values().collect(), facilities: facilities.into_values().collect() })
+        Ok(aggregate_world::ContentDefinitions {
+            goods: goods.into_values().collect(),
+            facilities: facilities.into_values().collect(),
+        })
     }
     /// Supplied programs are the enabled loadout. Dependencies must also be enabled.
     pub fn initialize(

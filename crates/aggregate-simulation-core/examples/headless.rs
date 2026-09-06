@@ -44,7 +44,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         .transpose()?
         .unwrap_or(10);
     println!("{} — native Rust rules, artificial fixture", scenario.name);
-    let mut simulation = Simulation::from_scenario_with_programs(scenario.clone(), economy_programs())?;
+    let mut simulation =
+        Simulation::from_scenario_with_programs(scenario.clone(), economy_programs())?;
     for record in &commands {
         if record.day < simulation.clock().day() || record.day > days {
             return Err("command day outside the requested ordered run".into());
@@ -67,7 +68,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let expected_hash = simulation.state_hash()?;
     let saved = simulation.save_json()?;
     let mut restored = Simulation::from_save_json_with_programs(&saved, economy_programs())?;
-    let mut replayed = Simulation::replay_with_programs(scenario, &commands, days, economy_programs())?;
+    let mut replayed =
+        Simulation::replay_with_programs(scenario, &commands, days, economy_programs())?;
     if restored.state_hash()? != expected_hash || replayed.state_hash()? != expected_hash {
         return Err("save/replay state mismatch".into());
     }

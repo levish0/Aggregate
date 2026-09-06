@@ -1,10 +1,10 @@
 use crate::day_work::ConstructionProgress;
 use crate::day_work::DayWork;
-use aggregate_programs::{
-    {ConstructionDayReport, SimulationEvent},
-    world_storage::ConstructionProject,
-};
 use crate::{LaborRequest, allocate_labor};
+use aggregate_programs::{
+    world_storage::ConstructionProject,
+    {ConstructionDayReport, SimulationEvent},
+};
 use aggregate_world::ProvinceId;
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;

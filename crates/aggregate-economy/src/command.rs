@@ -1,4 +1,7 @@
-use aggregate_programs::{SimulationCommand,SimulationError,CommandOutcome,GoodsFlow,GoodsFlowCause,SimulationEvent,world_storage::{self,ConstructionProject,DefinitionRegistry,Facility,Province}};
+use aggregate_programs::{
+    CommandOutcome, GoodsFlow, GoodsFlowCause, SimulationCommand, SimulationError, SimulationEvent,
+    world_storage::{self, ConstructionProject, DefinitionRegistry, Facility, Province},
+};
 use aggregate_scenario::validate_world_state;
 use aggregate_world::*;
 use bevy_ecs::prelude::*;
@@ -18,7 +21,12 @@ pub(crate) fn execute_command(
         definition,
         workers,
         production_priority,
-    } = command else { return Err(SimulationError::CommandRejected("unsupported economy command".into())); };
+    } = command
+    else {
+        return Err(SimulationError::CommandRejected(
+            "unsupported economy command".into(),
+        ));
+    };
     let reject = |reason: String| SimulationError::CommandRejected(reason);
     if facility.0.is_nil() {
         return Err(reject("facility ID must not be the nil UUID".into()));

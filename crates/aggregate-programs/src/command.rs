@@ -1,10 +1,14 @@
 use aggregate_world::*;
-use serde::{Deserialize,Serialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(tag = "type", rename_all = "snake_case", deny_unknown_fields)]
 pub enum SimulationCommand {
-    Program { program: String, command: String, payload: serde_json::Value },
+    Program {
+        program: String,
+        command: String,
+        payload: serde_json::Value,
+    },
     StartConstruction {
         country: CountryId,
         province: ProvinceId,
@@ -23,9 +27,11 @@ pub struct RecordedCommand {
     pub command: SimulationCommand,
 }
 
-
 impl SimulationCommand {
     pub fn program_id(&self) -> &str {
-        match self { Self::StartConstruction { .. } => "aggregate.economy", Self::Program { program, .. } => program }
+        match self {
+            Self::StartConstruction { .. } => "aggregate.economy",
+            Self::Program { program, .. } => program,
+        }
     }
 }

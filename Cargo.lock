@@ -119,6 +119,7 @@ dependencies = [
  "anyhow",
  "bevy",
  "ron",
+ "serde_json",
  "tracing",
  "tracing-appender",
  "tracing-subscriber",
@@ -223,6 +224,7 @@ dependencies = [
  "serde_json",
  "serde_path_to_error",
  "tracing",
+ "tracing-subscriber",
 ]
 
 [[package]]

@@ -125,15 +125,42 @@ pub fn build(
         );
     }
 
-    let clock = ui::node(commands, root, Node { position_type: PositionType::Absolute, right: px(260), top: px(84), column_gap: px(6), align_items: AlignItems::Center, ..default() });
+    let clock = ui::node(
+        commands,
+        root,
+        Node {
+            position_type: PositionType::Absolute,
+            right: px(260),
+            top: px(84),
+            column_gap: px(6),
+            align_items: AlignItems::Center,
+            ..default()
+        },
+    );
     commands.entity(clock).insert(UiPointerBlocker);
     for (key, action, order) in [
-        ("management-step", crate::management::ManagementAction::StepDay, 10),
-        ("management-play", crate::management::ManagementAction::ToggleRunning, 11),
+        (
+            "management-step",
+            crate::management::ManagementAction::StepDay,
+            10,
+        ),
+        (
+            "management-play",
+            crate::management::ManagementAction::ToggleRunning,
+            11,
+        ),
     ] {
-        let slot = ui::node(commands,clock,Node { width: px(115), ..default() });
-        let mut style = UiButton::secondary(order); style.enabled = session.geographic;
-        let button = ui::button(commands,slot,fonts,&state.text(key),style);
+        let slot = ui::node(
+            commands,
+            clock,
+            Node {
+                width: px(115),
+                ..default()
+            },
+        );
+        let mut style = UiButton::secondary(order);
+        style.enabled = session.geographic;
+        let button = ui::button(commands, slot, fonts, &state.text(key), style);
         commands.entity(button).insert(action);
     }
 
@@ -211,10 +238,42 @@ pub fn build(
     commands
         .entity(outliner)
         .insert((UiPointerBlocker, super::MapOutlinerPanel));
-    let news = ui::panel(commands,root,Node { position_type: PositionType::Absolute, right: px(14), bottom: px(140), height: px(214), width: px(232), padding: UiRect::all(px(12)), flex_direction: FlexDirection::Column, row_gap: px(8), ..default() });
+    let news = ui::panel(
+        commands,
+        root,
+        Node {
+            position_type: PositionType::Absolute,
+            right: px(14),
+            bottom: px(140),
+            height: px(214),
+            width: px(232),
+            padding: UiRect::all(px(12)),
+            flex_direction: FlexDirection::Column,
+            row_gap: px(8),
+            ..default()
+        },
+    );
     commands.entity(news).insert(UiPointerBlocker);
-    ui::text(commands,news,fonts,state.text("map-news-title"),16.,theme::TEXT,true);
-    let feed = layout::scroll_area(commands,news,Node { width: percent(100), min_height: px(0), flex_grow: 1., flex_direction: FlexDirection::Column, ..default() });
+    ui::text(
+        commands,
+        news,
+        fonts,
+        state.text("map-news-title"),
+        16.,
+        theme::TEXT,
+        true,
+    );
+    let feed = layout::scroll_area(
+        commands,
+        news,
+        Node {
+            width: percent(100),
+            min_height: px(0),
+            flex_grow: 1.,
+            flex_direction: FlexDirection::Column,
+            ..default()
+        },
+    );
     commands.entity(feed).insert(super::news::NewsFeed);
     ui::text(
         commands,
@@ -304,4 +363,3 @@ pub fn build(
     );
     commands.entity(text).insert(MapLabel::Hover);
 }
-

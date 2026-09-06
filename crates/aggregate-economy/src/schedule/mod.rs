@@ -7,8 +7,8 @@ mod production;
 
 use aggregate_programs::{
     SimulationClock,
-    {DayReport, ProvinceDayReport},
     world_storage::Province,
+    {DayReport, ProvinceDayReport},
 };
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;

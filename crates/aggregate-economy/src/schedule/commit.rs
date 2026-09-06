@@ -1,7 +1,5 @@
 use crate::day_work::DayWork;
-use aggregate_programs::{
-    world_storage::{ConstructionProject, Facility, Province},
-};
+use aggregate_programs::world_storage::{ConstructionProject, Facility, Province};
 use aggregate_world::FacilityState;
 use bevy_ecs::prelude::*;
 

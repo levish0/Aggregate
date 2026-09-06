@@ -225,8 +225,14 @@ pub fn finish_loading(
         province_indices: image,
         province_styles: buffers.add(ShaderBuffer::from(styles)),
         color_map: server.load("gfx/map/textures/colormap.dds"),
-        grass_detail: server.load("gfx/map/terrain/grasslands_01_diffuse.dds"),
-        rock_detail: server.load("gfx/map/terrain/rocks_01_diffuse.dds"),
+        terrain_diffuse: terrain_array(&server, "gfx/map/compiled/terrain_diffuse.dds", true),
+        terrain_normal: terrain_array(&server, "gfx/map/compiled/terrain_normal.dds", false),
+        terrain_weights: server
+            .load_builder()
+            .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
+                settings.is_srgb = false;
+            })
+            .load("gfx/map/compiled/terrain_weights.png"),
         water_color: server.load("gfx/map/water/watercolor_rgb_waterspec_a.dds"),
         river_distance: server
             .load_builder()
@@ -237,8 +243,9 @@ pub fn finish_loading(
     };
     commands.insert_resource(PendingMapTextures(vec![
         terrain_material.color_map.clone(),
-        terrain_material.grass_detail.clone(),
-        terrain_material.rock_detail.clone(),
+        terrain_material.terrain_diffuse.clone(),
+        terrain_material.terrain_normal.clone(),
+        terrain_material.terrain_weights.clone(),
         terrain_material.water_color.clone(),
         terrain_material.river_distance.clone(),
     ]));
@@ -260,4 +267,23 @@ pub fn finish_loading(
     commands.insert_resource(TerrainMaterialHandle(material));
     commands.insert_resource(LoadedAdministration(administration));
     commands.insert_resource(LoadedWorldMap(Arc::new(map)));
+}
+
+fn terrain_array(server: &AssetServer, path: &'static str, is_srgb: bool) -> Handle<Image> {
+    server
+        .load_builder()
+        .with_settings(move |settings: &mut bevy::image::ImageLoaderSettings| {
+            settings.is_srgb = is_srgb;
+            settings.sampler =
+                bevy::image::ImageSampler::Descriptor(bevy::image::ImageSamplerDescriptor {
+                    address_mode_u: bevy::image::ImageAddressMode::Repeat,
+                    address_mode_v: bevy::image::ImageAddressMode::Repeat,
+                    mag_filter: bevy::image::ImageFilterMode::Linear,
+                    min_filter: bevy::image::ImageFilterMode::Linear,
+                    mipmap_filter: bevy::image::ImageFilterMode::Linear,
+                    anisotropy_clamp: 8,
+                    ..default()
+                });
+        })
+        .load(path)
 }

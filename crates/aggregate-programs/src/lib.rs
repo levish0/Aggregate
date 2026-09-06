@@ -3,14 +3,14 @@
 mod clock;
 mod command;
 mod error;
-mod report;
 mod execution;
+mod report;
 pub mod world_storage;
 pub use clock::SimulationClock;
-pub use command::{SimulationCommand,RecordedCommand};
+pub use command::{RecordedCommand, SimulationCommand};
 pub use error::SimulationError;
-pub use report::*;
 pub use execution::ProgramExecution;
+pub use report::*;
 mod inspection;
 mod manifest;
 pub use inspection::{InspectionMetric, InspectionScope, InspectionSection, MetricValue};

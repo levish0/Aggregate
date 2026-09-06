@@ -1,9 +1,9 @@
 use crate::day_work::DayWork;
-use aggregate_programs::{
-    {GoodsFlow, GoodsFlowCause, SimulationEvent},
-    world_storage::SimulationRules,
-};
 use crate::plan_consumption;
+use aggregate_programs::{
+    world_storage::SimulationRules,
+    {GoodsFlow, GoodsFlowCause, SimulationEvent},
+};
 use bevy_ecs::prelude::*;
 
 #[tracing::instrument(level = "trace", skip_all)]

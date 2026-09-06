@@ -19,18 +19,21 @@ pub struct MapTerrainMaterial {
     #[texture(3)]
     #[sampler(4)]
     pub color_map: Handle<Image>,
-    #[texture(5)]
+    #[texture(5, dimension = "2d_array")]
     #[sampler(6)]
-    pub grass_detail: Handle<Image>,
-    #[texture(7)]
+    pub terrain_diffuse: Handle<Image>,
+    #[texture(7, dimension = "2d_array")]
     #[sampler(8)]
-    pub rock_detail: Handle<Image>,
+    pub terrain_normal: Handle<Image>,
     #[texture(9)]
     #[sampler(10)]
     pub water_color: Handle<Image>,
     #[texture(11)]
     #[sampler(12)]
     pub river_distance: Handle<Image>,
+    #[texture(13)]
+    #[sampler(14)]
+    pub terrain_weights: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]

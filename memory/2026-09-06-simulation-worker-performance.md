@@ -1,0 +1,32 @@
+# Simulation programs, asynchronous execution and performance measurements
+
+## Scope and status
+
+Supersedes program ownership, save schema, geographic-session separation and terrain-material status in `2026-09-06-programs-and-inspection-windows.md`. No Git commit, staging or push was performed by the agent. Remote CI has not run. The user's explicit-only commit instruction remains in force.
+
+## Architecture and decisions
+
+- `aggregate-programs` is the Rust program SDK: manifests/dependencies, content registration, saved state, pure daily plans, optional `ProgramExecution` ECS installation/prepare/commit/command handling and inspection sections. `aggregate-economy` now owns economic ECS schedules and construction execution; the simulation core has no normal dependency on economy. Providers are compiled Rust crates, not dynamically loaded folder mods. Shared economic state and report types still limit generalization to future military/company domains.
+- An empty program loadout advances only the clock; clients explicitly register economy. Restoring a save enables its recorded providers only. Save schema is **4**, ruleset **aggregate-program-runtime/1**. Initial-world schema remains 2. ECS prepare stages private work; commit is infallible. This is a trusted Rust contract, not an enforced sandbox for arbitrary `&mut World` implementations.
+- The dedicated `aggregate-simulation` thread owns the only `Simulation`. The client submits bounded nonblocking requests (maximum 32 pending), polls completed work and displays committed snapshots. Ticks and inspection execute off the UI thread. Old snapshots/indexes/reports are retired on Bevy's async compute pool. UI pause cannot cancel an already executing atomic day.
+- `aggregate-world::WorldSnapshotIndex` caches province lookup, country totals and country province lists per snapshot. This eliminates population-group-by-province nested scans. Management province navigation and large inspection lists are paged at 32 rows. Some read-model operations still scan collections and full snapshots are still copied each completed mutation; asynchronous execution alone does not establish acceptable frame-time or simulation throughput budgets.
+- Pause and speed buttons 1–5 share complete daily ticks. Intervals are 1/.5/.2/.1/0 seconds; five runs as fast as completion permits, at most one day request per rendered frame. No catch-up burst. Keyboard Space/1–5 bindings are not implemented here.
+- Geographic setup selects a player country and creates a playable economy on owned land. Population remains authored per-province sandbox data, **not a complete 2026 default world**. Optional `aggregate-public-health` implements a simple local SIR model with workforce effects; no cross-province transmission or dedicated health regression suite yet.
+- Terrain now loads five imported diffuse/normal material families and source geographic masks. `tools/build_terrain_materials.py` produces DDS texture arrays with complete mip chains plus weights under `assets/gfx/map/compiled/`. Source assets remain intact. Bevy uses linear/trilinear/anisotropic sampling. This is not full Victoria material/vegetation/road/city/water parity.
+- `tools/import_world_population.py` extracted 237 country/area 2026-01-01 medium projections from UN WPP 2024 into `assets/world/2026/population.json`. Attribution, CC BY 3.0 IGO source license and integration limitations are in the adjacent README. The workbook is under ignored `target/asset-tools/`. Runtime population integration is pending; missing territory coverage and provincial allocation must be explicit.
+
+## Performance workflow
+
+- Criterion 0.8.2 benchmark target: `cargo bench -p aggregate-simulation-core --bench simulation_performance --locked -- --noplot`. Asset-free deterministic worlds at 128, 4096 and 40000 provinces independently measure day, snapshot and country-index costs. See `crates/aggregate-simulation-core/benches/README.md` for baseline comparison commands and workload limits.
+- `AGGREGATE_BENCH_LONG_RUN=1` enables a fixed 64-province world pre-aged 0/365/36500 days. Printed save sizes/entity counts are measured before each continuously advancing benchmark. No commands or entity growth are modeled.
+- `.github/workflows/performance.yml` runs relevant PRs/manual dispatch with Rust 1.98.0 on Ubuntu; manual input enables the 100-year workload. Environment metadata and Criterion output are retained 30 days. This is measurement/artifact collection, not an automatic base-commit comparison or blocking regression threshold.
+- Local 40000-province daily mean was about 214.65 ms (95% interval 185.24–248.21 ms), snapshot about 29.44 ms, index about 5.54 ms. Fixed-64 day slopes were about 103.45/103.63/104.65 microseconds at starting age 0/365/36500. Measurements have shared-machine noise and are not game FPS claims. Save sizes were 97849/97915/98045 bytes with 64 groups/facilities and no commands.
+- Debug target `aggregate_client::simulation_performance` records calculation, snapshot/index and UI application times separately.
+
+## Validation
+
+- Economy, simulation, programs, world and localization command passed: 42 tests total (17 economy, 16 core integration, 2 execution atomicity/loadout, 4 program integration, 3 locale). Other selected crates contained no tests.
+- Client management flows: 6 passed. Worker barrier test: 1 passed; proves UI updates continue while the simulation worker is deliberately blocked and committed state remains unchanged until completion.
+- Windows `native_map_capture` passed after DDS mipmap integration; screenshot inspected at `target/screenshots/world-map-terrain-ko.png`. Windows `native_large_world_capture` passed using 40717 land provinces, Russia selected, a real daily update and at most 32 visible province buttons. Screenshot: `target/screenshots/management-russia-performance.png`. These tests do not enforce an FPS budget.
+- Local normal and opt-in 100-year benchmarks ran successfully. Selected-package all-target Clippy with `--no-deps -- -D warnings` passed; workspace formatting check passed. Dependency-inclusive Clippy stopped on existing `aggregate-ui` warnings: collapsible if in `scrollbar.rs:108`, query type complexity in `window.rs:66`; those unrelated files were not changed.
+- No full remote CI, growing-world/multi-program performance acceptance, complete 2026 demographic initialization or full Victoria visual parity claimed.

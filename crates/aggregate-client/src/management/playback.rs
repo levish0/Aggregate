@@ -28,22 +28,44 @@ impl SimulationSpeed {
     }
 }
 
-pub fn speed_controls(commands: &mut Commands, parent: Entity, fonts: &UiFonts, session: &ManagementSession, enabled: bool, order: u32) {
+pub fn speed_controls(
+    commands: &mut Commands,
+    parent: Entity,
+    fonts: &UiFonts,
+    session: &ManagementSession,
+    enabled: bool,
+    order: u32,
+) {
     for (index, speed) in SimulationSpeed::ALL.into_iter().enumerate() {
-        let slot = ui::node(commands, parent, Node { width: px(40), flex_shrink: 0., ..default() });
+        let slot = ui::node(
+            commands,
+            parent,
+            Node {
+                width: px(40),
+                flex_shrink: 0.,
+                ..default()
+            },
+        );
         let mut style = UiButton::secondary(order + index as u32);
         style.enabled = enabled;
         style.selected = session.speed == speed;
         let button = ui::button(commands, slot, fonts, &(index + 1).to_string(), style);
-        commands.entity(button).insert(ManagementAction::SetSpeed(speed));
+        commands
+            .entity(button)
+            .insert(ManagementAction::SetSpeed(speed));
     }
 }
 
-pub fn update_speed_controls(session: Res<ManagementSession>, mut buttons: Query<(&ManagementAction, &mut UiButton)>) {
+pub fn update_speed_controls(
+    session: Res<ManagementSession>,
+    mut buttons: Query<(&ManagementAction, &mut UiButton)>,
+) {
     for (action, mut button) in &mut buttons {
         if let ManagementAction::SetSpeed(speed) = action {
             let selected = session.speed == *speed;
-            if button.selected != selected { button.selected = selected; }
+            if button.selected != selected {
+                button.selected = selected;
+            }
         }
     }
 }
@@ -51,21 +73,34 @@ pub fn update_speed_controls(session: Res<ManagementSession>, mut buttons: Query
 /// No catch-up burst after a stall. Speed five advances at most once per rendered
 /// frame, so input handling continues between days even when the simulation is slow.
 pub fn advance_running_session(
-    state: Res<InterfaceState>, mut session: ResMut<ManagementSession>, time: Res<Time<Real>>,
+    state: Res<InterfaceState>,
+    mut session: ResMut<ManagementSession>,
+    time: Res<Time<Real>>,
     setup: Option<Res<crate::world_setup::WorldSetup>>,
-    mut elapsed: Local<f32>, mut previous: Local<Option<(uuid::Uuid, SimulationSpeed)>>,
+    mut elapsed: Local<f32>,
+    mut previous: Local<Option<(uuid::Uuid, SimulationSpeed)>>,
 ) {
     let key = (session.session_id, session.speed);
-    if previous.as_ref() != Some(&key) { *elapsed = 0.; *previous = Some(key); }
-    if !(state.screen == Screen::Management || (state.screen == Screen::WorldMap && session.geographic))
-        || !session.running || setup.is_some_and(|setup| setup.open)
+    if previous.as_ref() != Some(&key) {
+        *elapsed = 0.;
+        *previous = Some(key);
+    }
+    if !(state.screen == Screen::Management
+        || (state.screen == Screen::WorldMap && session.geographic))
+        || !session.running
+        || setup.is_some_and(|setup| setup.open)
     {
-        if session.running { session.running = false; }
+        if session.running {
+            session.running = false;
+        }
         *elapsed = 0.;
         return;
     }
     *elapsed += time.delta_secs();
-    if session.is_busy() { *elapsed = 0.; return; }
+    if session.is_busy() {
+        *elapsed = 0.;
+        return;
+    }
     if *elapsed >= session.speed.seconds_per_day() {
         *elapsed = 0.;
         session.step();

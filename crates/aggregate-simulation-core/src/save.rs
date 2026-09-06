@@ -1,4 +1,4 @@
-use crate::{Simulation, SimulationError, RecordedCommand};
+use crate::{RecordedCommand, Simulation, SimulationError};
 use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram};
 use aggregate_scenario::{validate_scenario, validate_world_state};
 use aggregate_world::{Scenario, WorldSnapshot};
@@ -82,7 +82,10 @@ impl Simulation {
         let mut simulation =
             Self::from_validated_state(save.scenario, &save.current_state, save.commands);
         simulation.programs = programs;
-        simulation.programs.install(&mut simulation.world).map_err(SimulationError::InvalidPrograms)?;
+        simulation
+            .programs
+            .install(&mut simulation.world)
+            .map_err(SimulationError::InvalidPrograms)?;
         tracing::info!(
             day = simulation.clock().day(),
             commands = simulation.commands.len(),

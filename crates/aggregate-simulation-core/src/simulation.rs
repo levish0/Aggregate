@@ -1,6 +1,5 @@
 use crate::{
-    SimulationClock,
-    RecordedCommand, SimulationCommand, SimulationError, CommandOutcome, DayReport,
+    CommandOutcome, DayReport, RecordedCommand, SimulationClock, SimulationCommand, SimulationError,
 };
 use aggregate_programs::{ProgramRuntime, SavedProgramState, SimulationProgram, world_storage};
 use aggregate_scenario::validate_scenario;
@@ -26,7 +25,10 @@ impl Simulation {
         simulation.programs =
             ProgramRuntime::initialize(programs, &simulation.initial_scenario.initial_state)
                 .map_err(SimulationError::InvalidPrograms)?;
-        simulation.programs.install(&mut simulation.world).map_err(SimulationError::InvalidPrograms)?;
+        simulation
+            .programs
+            .install(&mut simulation.world)
+            .map_err(SimulationError::InvalidPrograms)?;
         Ok(simulation)
     }
 
@@ -89,15 +91,12 @@ impl Simulation {
             .ok()
             .and_then(|length| length.checked_add(1))
             .ok_or_else(|| SimulationError::CommandRejected("command sequence exhausted".into()))?;
-        let outcome = self.programs.execute_command(
-            &mut self.world,
-            &command,
-            sequence,
-            &self.initial_scenario,
-        )
-        .inspect_err(|error| {
-            tracing::warn!(?command, reason = %error, "Simulation command rejected");
-        })?;
+        let outcome = self
+            .programs
+            .execute_command(&mut self.world, &command, sequence, &self.initial_scenario)
+            .inspect_err(|error| {
+                tracing::warn!(?command, reason = %error, "Simulation command rejected");
+            })?;
         tracing::info!(
             day = self.clock().day(),
             sequence,
@@ -115,10 +114,19 @@ impl Simulation {
 
     #[tracing::instrument(level = "debug", skip_all, fields(day = self.clock().day().saturating_add(1)))]
     pub fn step(&mut self) -> Result<DayReport, SimulationError> {
-        let next_day = self.clock().day().checked_add(1).ok_or_else(|| SimulationError::DayFailed {
-            day: self.clock().day(), phase: "clock", reason: "simulation day exhausted".into(),
-        })?;
-        self.world.resource_mut::<world_storage::WorkforceLimits>().0.clear();
+        let next_day =
+            self.clock()
+                .day()
+                .checked_add(1)
+                .ok_or_else(|| SimulationError::DayFailed {
+                    day: self.clock().day(),
+                    phase: "clock",
+                    reason: "simulation day exhausted".into(),
+                })?;
+        self.world
+            .resource_mut::<world_storage::WorkforceLimits>()
+            .0
+            .clear();
         let prepared_programs = if self.programs.is_empty() {
             None
         } else {

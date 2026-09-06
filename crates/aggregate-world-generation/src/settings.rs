@@ -11,7 +11,12 @@ pub struct WorldInitializationSettings {
 
 impl Default for WorldInitializationSettings {
     fn default() -> Self {
-        Self { population_per_province: 200, workforce_percent: 50, food_reserve_days: 30, construction_goods_per_province: 100 }
+        Self {
+            population_per_province: 200,
+            workforce_percent: 50,
+            food_reserve_days: 30,
+            construction_goods_per_province: 100,
+        }
     }
 }
 
@@ -23,7 +28,9 @@ impl WorldInitializationSettings {
         if !(40..=80).contains(&self.workforce_percent) {
             return Err("workforce percentage must be between 40 and 80".into());
         }
-        if !(1..=3650).contains(&self.food_reserve_days) || self.construction_goods_per_province > 1_000_000_000 {
+        if !(1..=3650).contains(&self.food_reserve_days)
+            || self.construction_goods_per_province > 1_000_000_000
+        {
             return Err("initial reserves exceed the supported range".into());
         }
         Ok(())

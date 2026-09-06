@@ -1,0 +1,960 @@
+{
+  "schema_version": 1,
+  "date": "2026-01-01",
+  "source_revision": "UN WPP 2024 / medium variant",
+  "source_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/EXCEL_FILES/1_General/WPP2024_GEN_F01_DEMOGRAPHIC_INDICATORS_COMPACT.xlsx",
+  "source_sha256": "98e34d9b65b53858cd08a57a566e45050b08093ad85ba5714fe6fbd78055ae6d",
+  "license": "CC BY 3.0 IGO",
+  "unit": "persons",
+  "kind": "projection",
+  "countries": {
+    "ABW": {
+      "name": "Aruba",
+      "population": 108173
+    },
+    "AFG": {
+      "name": "Afghanistan",
+      "population": 44437893
+    },
+    "AGO": {
+      "name": "Angola",
+      "population": 39621234
+    },
+    "AIA": {
+      "name": "Anguilla",
+      "population": 14782
+    },
+    "ALB": {
+      "name": "Albania",
+      "population": 2761147
+    },
+    "AND": {
+      "name": "Andorra",
+      "population": 83352
+    },
+    "ARE": {
+      "name": "United Arab Emirates",
+      "population": 11476873
+    },
+    "ARG": {
+      "name": "Argentina",
+      "population": 45928215
+    },
+    "ARM": {
+      "name": "Armenia",
+      "population": 2941486
+    },
+    "ASM": {
+      "name": "American Samoa",
+      "population": 45668
+    },
+    "ATG": {
+      "name": "Antigua and Barbuda",
+      "population": 94423
+    },
+    "AUS": {
+      "name": "Australia",
+      "population": 27103088
+    },
+    "AUT": {
+      "name": "Austria",
+      "population": 9110277
+    },
+    "AZE": {
+      "name": "Azerbaijan",
+      "population": 10427060
+    },
+    "BDI": {
+      "name": "Burundi",
+      "population": 14559334
+    },
+    "BEL": {
+      "name": "Belgium",
+      "population": 11767361
+    },
+    "BEN": {
+      "name": "Benin",
+      "population": 14991374
+    },
+    "BES": {
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "population": 31650
+    },
+    "BFA": {
+      "name": "Burkina Faso",
+      "population": 24337514
+    },
+    "BGD": {
+      "name": "Bangladesh",
+      "population": 176756539
+    },
+    "BGR": {
+      "name": "Bulgaria",
+      "population": 6691964
+    },
+    "BHR": {
+      "name": "Bahrain",
+      "population": 1660370
+    },
+    "BHS": {
+      "name": "Bahamas",
+      "population": 403865
+    },
+    "BIH": {
+      "name": "Bosnia and Herzegovina",
+      "population": 3127365
+    },
+    "BLM": {
+      "name": "Saint Barthélemy",
+      "population": 11489
+    },
+    "BLR": {
+      "name": "Belarus",
+      "population": 8967712
+    },
+    "BLZ": {
+      "name": "Belize",
+      "population": 425802
+    },
+    "BMU": {
+      "name": "Bermuda",
+      "population": 64508
+    },
+    "BOL": {
+      "name": "Bolivia (Plurinational State of)",
+      "population": 12665879
+    },
+    "BRA": {
+      "name": "Brazil",
+      "population": 213202121
+    },
+    "BRB": {
+      "name": "Barbados",
+      "population": 282688
+    },
+    "BRN": {
+      "name": "Brunei Darussalam",
+      "population": 468087
+    },
+    "BTN": {
+      "name": "Bhutan",
+      "population": 799420
+    },
+    "BWA": {
+      "name": "Botswana",
+      "population": 2582518
+    },
+    "CAF": {
+      "name": "Central African Republic",
+      "population": 5605434
+    },
+    "CAN": {
+      "name": "Canada",
+      "population": 40307070
+    },
+    "CHE": {
+      "name": "Switzerland",
+      "population": 8988922
+    },
+    "CHL": {
+      "name": "Chile",
+      "population": 19904730
+    },
+    "CHN": {
+      "name": "China",
+      "population": 1414458552
+    },
+    "CIV": {
+      "name": "Côte d'Ivoire",
+      "population": 33102421
+    },
+    "CMR": {
+      "name": "Cameroon",
+      "population": 30258728
+    },
+    "COD": {
+      "name": "Democratic Republic of the Congo",
+      "population": 114628568
+    },
+    "COG": {
+      "name": "Congo",
+      "population": 6560580
+    },
+    "COK": {
+      "name": "Cook Islands",
+      "population": 13035
+    },
+    "COL": {
+      "name": "Colombia",
+      "population": 53688245
+    },
+    "COM": {
+      "name": "Comoros",
+      "population": 890946
+    },
+    "CPV": {
+      "name": "Cabo Verde",
+      "population": 528511
+    },
+    "CRI": {
+      "name": "Costa Rica",
+      "population": 5164155
+    },
+    "CUB": {
+      "name": "Cuba",
+      "population": 10915434
+    },
+    "CUW": {
+      "name": "Curaçao",
+      "population": 185471
+    },
+    "CYM": {
+      "name": "Cayman Islands",
+      "population": 76528
+    },
+    "CYP": {
+      "name": "Cyprus",
+      "population": 1376781
+    },
+    "CZE": {
+      "name": "Czechia",
+      "population": 10538315
+    },
+    "DEU": {
+      "name": "Germany",
+      "population": 83741228
+    },
+    "DJI": {
+      "name": "Djibouti",
+      "population": 1191581
+    },
+    "DMA": {
+      "name": "Dominica",
+      "population": 65686
+    },
+    "DNK": {
+      "name": "Denmark",
+      "population": 6014093
+    },
+    "DOM": {
+      "name": "Dominican Republic",
+      "population": 11565848
+    },
+    "DZA": {
+      "name": "Algeria",
+      "population": 47739103
+    },
+    "ECU": {
+      "name": "Ecuador",
+      "population": 18366994
+    },
+    "EGY": {
+      "name": "Egypt",
+      "population": 119233883
+    },
+    "ERI": {
+      "name": "Eritrea",
+      "population": 3644580
+    },
+    "ESH": {
+      "name": "Western Sahara",
+      "population": 605978
+    },
+    "ESP": {
+      "name": "Spain",
+      "population": 47874678
+    },
+    "EST": {
+      "name": "Estonia",
+      "population": 1334598
+    },
+    "ETH": {
+      "name": "Ethiopia",
+      "population": 137179590
+    },
+    "FIN": {
+      "name": "Finland",
+      "population": 5624082
+    },
+    "FJI": {
+      "name": "Fiji",
+      "population": 935285
+    },
+    "FLK": {
+      "name": "Falkland Islands (Malvinas)",
+      "population": 3467
+    },
+    "FRA": {
+      "name": "France",
+      "population": 66700707
+    },
+    "FRO": {
+      "name": "Faroe Islands",
+      "population": 56281
+    },
+    "FSM": {
+      "name": "Micronesia (Fed. States of)",
+      "population": 113938
+    },
+    "GAB": {
+      "name": "Gabon",
+      "population": 2620218
+    },
+    "GBR": {
+      "name": "United Kingdom",
+      "population": 69749323
+    },
+    "GEO": {
+      "name": "Georgia",
+      "population": 3805841
+    },
+    "GGY": {
+      "name": "Guernsey",
+      "population": 64562
+    },
+    "GHA": {
+      "name": "Ghana",
+      "population": 35382175
+    },
+    "GIB": {
+      "name": "Gibraltar",
+      "population": 40513
+    },
+    "GIN": {
+      "name": "Guinea",
+      "population": 15271424
+    },
+    "GLP": {
+      "name": "Guadeloupe",
+      "population": 373126
+    },
+    "GMB": {
+      "name": "Gambia",
+      "population": 2853116
+    },
+    "GNB": {
+      "name": "Guinea-Bissau",
+      "population": 2273714
+    },
+    "GNQ": {
+      "name": "Equatorial Guinea",
+      "population": 1961447
+    },
+    "GRC": {
+      "name": "Greece",
+      "population": 9918577
+    },
+    "GRD": {
+      "name": "Grenada",
+      "population": 117347
+    },
+    "GRL": {
+      "name": "Greenland",
+      "population": 55693
+    },
+    "GTM": {
+      "name": "Guatemala",
+      "population": 18828237
+    },
+    "GUF": {
+      "name": "French Guiana",
+      "population": 316247
+    },
+    "GUM": {
+      "name": "Guam",
+      "population": 169598
+    },
+    "GUY": {
+      "name": "Guyana",
+      "population": 838431
+    },
+    "HKG": {
+      "name": "China, Hong Kong SAR",
+      "population": 7395411
+    },
+    "HND": {
+      "name": "Honduras",
+      "population": 11095684
+    },
+    "HRV": {
+      "name": "Croatia",
+      "population": 3835005
+    },
+    "HTI": {
+      "name": "Haiti",
+      "population": 11972272
+    },
+    "HUN": {
+      "name": "Hungary",
+      "population": 9602027
+    },
+    "IDN": {
+      "name": "Indonesia",
+      "population": 286820254
+    },
+    "IMN": {
+      "name": "Isle of Man",
+      "population": 84089
+    },
+    "IND": {
+      "name": "India",
+      "population": 1470295711
+    },
+    "IRL": {
+      "name": "Ireland",
+      "population": 5333468
+    },
+    "IRN": {
+      "name": "Iran (Islamic Republic of)",
+      "population": 92814664
+    },
+    "IRQ": {
+      "name": "Iraq",
+      "population": 47515421
+    },
+    "ISL": {
+      "name": "Iceland",
+      "population": 400481
+    },
+    "ISR": {
+      "name": "Israel",
+      "population": 9582136
+    },
+    "ITA": {
+      "name": "Italy",
+      "population": 59041927
+    },
+    "JAM": {
+      "name": "Jamaica",
+      "population": 2835627
+    },
+    "JEY": {
+      "name": "Jersey",
+      "population": 104052
+    },
+    "JOR": {
+      "name": "Jordan",
+      "population": 11466560
+    },
+    "JPN": {
+      "name": "Japan",
+      "population": 122772055
+    },
+    "KAZ": {
+      "name": "Kazakhstan",
+      "population": 20966575
+    },
+    "KEN": {
+      "name": "Kenya",
+      "population": 58083590
+    },
+    "KGZ": {
+      "name": "Kyrgyzstan",
+      "population": 7348645
+    },
+    "KHM": {
+      "name": "Cambodia",
+      "population": 17951445
+    },
+    "KIR": {
+      "name": "Kiribati",
+      "population": 137468
+    },
+    "KNA": {
+      "name": "Saint Kitts and Nevis",
+      "population": 46960
+    },
+    "KOR": {
+      "name": "Republic of Korea",
+      "population": 51636965
+    },
+    "KWT": {
+      "name": "Kuwait",
+      "population": 5067283
+    },
+    "LAO": {
+      "name": "Lao People's Democratic Republic",
+      "population": 7924127
+    },
+    "LBN": {
+      "name": "Lebanon",
+      "population": 5872709
+    },
+    "LBR": {
+      "name": "Liberia",
+      "population": 5790170
+    },
+    "LBY": {
+      "name": "Libya",
+      "population": 7497603
+    },
+    "LCA": {
+      "name": "Saint Lucia",
+      "population": 180334
+    },
+    "LIE": {
+      "name": "Liechtenstein",
+      "population": 40252
+    },
+    "LKA": {
+      "name": "Sri Lanka",
+      "population": 23290249
+    },
+    "LSO": {
+      "name": "Lesotho",
+      "population": 2376252
+    },
+    "LTU": {
+      "name": "Lithuania",
+      "population": 2808883
+    },
+    "LUX": {
+      "name": "Luxembourg",
+      "population": 684039
+    },
+    "LVA": {
+      "name": "Latvia",
+      "population": 1843068
+    },
+    "MAC": {
+      "name": "China, Macao SAR",
+      "population": 722357
+    },
+    "MAF": {
+      "name": "Saint Martin (French part)",
+      "population": 24395
+    },
+    "MAR": {
+      "name": "Morocco",
+      "population": 38600478
+    },
+    "MCO": {
+      "name": "Monaco",
+      "population": 38197
+    },
+    "MDA": {
+      "name": "Republic of Moldova",
+      "population": 2975706
+    },
+    "MDG": {
+      "name": "Madagascar",
+      "population": 33129834
+    },
+    "MDV": {
+      "name": "Maldives",
+      "population": 530598
+    },
+    "MEX": {
+      "name": "Mexico",
+      "population": 132480185
+    },
+    "MHL": {
+      "name": "Marshall Islands",
+      "population": 35650
+    },
+    "MKD": {
+      "name": "North Macedonia",
+      "population": 1809076
+    },
+    "MLI": {
+      "name": "Mali",
+      "population": 25562798
+    },
+    "MLT": {
+      "name": "Malta",
+      "population": 547990
+    },
+    "MMR": {
+      "name": "Myanmar",
+      "population": 55021595
+    },
+    "MNE": {
+      "name": "Montenegro",
+      "population": 627936
+    },
+    "MNG": {
+      "name": "Mongolia",
+      "population": 3537390
+    },
+    "MNP": {
+      "name": "Northern Mariana Islands",
+      "population": 43194
+    },
+    "MOZ": {
+      "name": "Mozambique",
+      "population": 36129468
+    },
+    "MRT": {
+      "name": "Mauritania",
+      "population": 5387859
+    },
+    "MSR": {
+      "name": "Montserrat",
+      "population": 4346
+    },
+    "MTQ": {
+      "name": "Martinique",
+      "population": 339065
+    },
+    "MUS": {
+      "name": "Mauritius",
+      "population": 1266738
+    },
+    "MWI": {
+      "name": "Malawi",
+      "population": 22497799
+    },
+    "MYS": {
+      "name": "Malaysia",
+      "population": 36184571
+    },
+    "MYT": {
+      "name": "Mayotte",
+      "population": 342263
+    },
+    "NAM": {
+      "name": "Namibia",
+      "population": 3123524
+    },
+    "NCL": {
+      "name": "New Caledonia",
+      "population": 296656
+    },
+    "NER": {
+      "name": "Niger",
+      "population": 28363276
+    },
+    "NGA": {
+      "name": "Nigeria",
+      "population": 239967749
+    },
+    "NIC": {
+      "name": "Nicaragua",
+      "population": 7052795
+    },
+    "NIU": {
+      "name": "Niue",
+      "population": 1819
+    },
+    "NLD": {
+      "name": "Netherlands",
+      "population": 18401709
+    },
+    "NOR": {
+      "name": "Norway",
+      "population": 5642601
+    },
+    "NPL": {
+      "name": "Nepal",
+      "population": 29608076
+    },
+    "NRU": {
+      "name": "Nauru",
+      "population": 12063
+    },
+    "NZL": {
+      "name": "New Zealand",
+      "population": 5270225
+    },
+    "OMN": {
+      "name": "Oman",
+      "population": 5591450
+    },
+    "PAK": {
+      "name": "Pakistan",
+      "population": 257236371
+    },
+    "PAN": {
+      "name": "Panama",
+      "population": 4598712
+    },
+    "PER": {
+      "name": "Peru",
+      "population": 34752525
+    },
+    "PHL": {
+      "name": "Philippines",
+      "population": 117257633
+    },
+    "PLW": {
+      "name": "Palau",
+      "population": 17641
+    },
+    "PNG": {
+      "name": "Papua New Guinea",
+      "population": 10855692
+    },
+    "POL": {
+      "name": "Poland",
+      "population": 37915155
+    },
+    "PRI": {
+      "name": "Puerto Rico",
+      "population": 3230204
+    },
+    "PRK": {
+      "name": "Dem. People's Republic of Korea",
+      "population": 26604741
+    },
+    "PRT": {
+      "name": "Portugal",
+      "population": 10403733
+    },
+    "PRY": {
+      "name": "Paraguay",
+      "population": 7054615
+    },
+    "PSE": {
+      "name": "State of Palestine",
+      "population": 5638786
+    },
+    "PYF": {
+      "name": "French Polynesia",
+      "population": 282783
+    },
+    "QAT": {
+      "name": "Qatar",
+      "population": 3147383
+    },
+    "REU": {
+      "name": "Réunion",
+      "population": 884305
+    },
+    "ROU": {
+      "name": "Romania",
+      "population": 18854963
+    },
+    "RUS": {
+      "name": "Russian Federation",
+      "population": 143559521
+    },
+    "RWA": {
+      "name": "Rwanda",
+      "population": 14731895
+    },
+    "SAU": {
+      "name": "Saudi Arabia",
+      "population": 34868384
+    },
+    "SDN": {
+      "name": "Sudan",
+      "population": 52474943
+    },
+    "SEN": {
+      "name": "Senegal",
+      "population": 19148038
+    },
+    "SGP": {
+      "name": "Singapore",
+      "population": 5889187
+    },
+    "SHN": {
+      "name": "Saint Helena",
+      "population": 5177
+    },
+    "SLB": {
+      "name": "Solomon Islands",
+      "population": 848434
+    },
+    "SLE": {
+      "name": "Sierra Leone",
+      "population": 8908448
+    },
+    "SLV": {
+      "name": "El Salvador",
+      "population": 6378605
+    },
+    "SMR": {
+      "name": "San Marino",
+      "population": 33590
+    },
+    "SOM": {
+      "name": "Somalia",
+      "population": 19977002
+    },
+    "SPM": {
+      "name": "Saint Pierre and Miquelon",
+      "population": 5545
+    },
+    "SRB": {
+      "name": "Serbia",
+      "population": 6663980
+    },
+    "SSD": {
+      "name": "South Sudan",
+      "population": 12310612
+    },
+    "STP": {
+      "name": "Sao Tome and Principe",
+      "population": 242620
+    },
+    "SUR": {
+      "name": "Suriname",
+      "population": 642582
+    },
+    "SVK": {
+      "name": "Slovakia",
+      "population": 5455816
+    },
+    "SVN": {
+      "name": "Slovenia",
+      "population": 2115975
+    },
+    "SWE": {
+      "name": "Sweden",
+      "population": 10680346
+    },
+    "SWZ": {
+      "name": "Eswatini",
+      "population": 1263011
+    },
+    "SXM": {
+      "name": "Sint Maarten (Dutch part)",
+      "population": 44201
+    },
+    "SYC": {
+      "name": "Seychelles",
+      "population": 133927
+    },
+    "SYR": {
+      "name": "Syrian Arab Republic",
+      "population": 26069962
+    },
+    "TCA": {
+      "name": "Turks and Caicos Islands",
+      "population": 47010
+    },
+    "TCD": {
+      "name": "Chad",
+      "population": 21279608
+    },
+    "TGO": {
+      "name": "Togo",
+      "population": 9825136
+    },
+    "THA": {
+      "name": "Thailand",
+      "population": 71592912
+    },
+    "TJK": {
+      "name": "Tajikistan",
+      "population": 10883318
+    },
+    "TKL": {
+      "name": "Tokelau",
+      "population": 2656
+    },
+    "TKM": {
+      "name": "Turkmenistan",
+      "population": 7679401
+    },
+    "TLS": {
+      "name": "Timor-Leste",
+      "population": 1427484
+    },
+    "TON": {
+      "name": "Tonga",
+      "population": 103512
+    },
+    "TTO": {
+      "name": "Trinidad and Tobago",
+      "population": 1512502
+    },
+    "TUN": {
+      "name": "Tunisia",
+      "population": 12383188
+    },
+    "TUR": {
+      "name": "Türkiye",
+      "population": 87794917
+    },
+    "TUV": {
+      "name": "Tuvalu",
+      "population": 9420
+    },
+    "TWN": {
+      "name": "China, Taiwan Province of China",
+      "population": 23061950
+    },
+    "TZA": {
+      "name": "United Republic of Tanzania",
+      "population": 71549625
+    },
+    "UGA": {
+      "name": "Uganda",
+      "population": 52071696
+    },
+    "UKR": {
+      "name": "Ukraine",
+      "population": 39681570
+    },
+    "URY": {
+      "name": "Uruguay",
+      "population": 3383680
+    },
+    "USA": {
+      "name": "United States of America",
+      "population": 348178045
+    },
+    "UZB": {
+      "name": "Uzbekistan",
+      "population": 37393592
+    },
+    "VAT": {
+      "name": "Holy See",
+      "population": 503
+    },
+    "VCT": {
+      "name": "Saint Vincent and the Grenadines",
+      "population": 99583
+    },
+    "VEN": {
+      "name": "Venezuela (Bolivarian Republic of)",
+      "population": 28573631
+    },
+    "VGB": {
+      "name": "British Virgin Islands",
+      "population": 39849
+    },
+    "VIR": {
+      "name": "United States Virgin Islands",
+      "population": 83770
+    },
+    "VNM": {
+      "name": "Viet Nam",
+      "population": 101896973
+    },
+    "VUT": {
+      "name": "Vanuatu",
+      "population": 338868
+    },
+    "WLF": {
+      "name": "Wallis and Futuna Islands",
+      "population": 11153
+    },
+    "WSM": {
+      "name": "Samoa",
+      "population": 219916
+    },
+    "XKX": {
+      "name": "Kosovo (under UNSC res. 1244)",
+      "population": 1669591
+    },
+    "YEM": {
+      "name": "Yemen",
+      "population": 42368687
+    },
+    "ZAF": {
+      "name": "South Africa",
+      "population": 65108150
+    },
+    "ZMB": {
+      "name": "Zambia",
+      "population": 22215385
+    },
+    "ZWE": {
+      "name": "Zimbabwe",
+      "population": 17111229
+    }
+  }
+}

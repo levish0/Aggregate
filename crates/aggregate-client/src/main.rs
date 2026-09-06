@@ -7,6 +7,9 @@ mod management;
 #[path = "../tests/native/management_capture.rs"]
 mod native_capture;
 #[cfg(all(test, target_os = "windows"))]
+#[path = "../tests/native/large_world_capture.rs"]
+mod native_large_world_capture;
+#[cfg(all(test, target_os = "windows"))]
 #[path = "../tests/native/map_capture.rs"]
 mod native_map_capture;
 mod screens;

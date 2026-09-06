@@ -6,9 +6,11 @@ on:
       - 'Cargo.toml'
       - 'Cargo.lock'
       - 'crates/aggregate-world/**'
+      - 'crates/aggregate-scenario/**'
       - 'crates/aggregate-programs/**'
       - 'crates/aggregate-economy/**'
       - 'crates/aggregate-simulation-core/**'
+      - 'scenarios/foundation.json'
       - '.github/workflows/performance.yml'
   workflow_dispatch:
     inputs:
@@ -32,7 +34,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           lfs: false
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@1.98.0
       - uses: Swatinem/rust-cache@v2
       - name: Record environment
         run: |

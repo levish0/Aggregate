@@ -18,11 +18,11 @@ blake3.workspace = true
 [dev-dependencies]
 aggregate-economy.workspace = true
 criterion = { version = "0.8.2", features = ["html_reports"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
 
 [[bench]]
 name = "simulation_performance"
 harness = false
-tracing-subscriber = { workspace = true, features = ["env-filter"] }
 
 [lints]
 workspace = true

@@ -16,7 +16,10 @@ pub fn apply_actions(
             continue;
         };
         match action {
-            InspectionAction::Tab(tab) => { view.tab = *tab; view.page = 0; }
+            InspectionAction::Tab(tab) => {
+                view.tab = *tab;
+                view.page = 0;
+            }
             InspectionAction::Page(page) => view.page = *page,
             InspectionAction::Country => {
                 view.page = 0;

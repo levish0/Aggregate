@@ -11,7 +11,11 @@ pub struct HealthParameters {
 }
 impl Default for HealthParameters {
     fn default() -> Self {
-        Self { transmission_per_thousand: 240, recovery_per_thousand: 100, initial_infected_per_thousand: 10 }
+        Self {
+            transmission_per_thousand: 240,
+            recovery_per_thousand: 100,
+            initial_infected_per_thousand: 10,
+        }
     }
 }
 

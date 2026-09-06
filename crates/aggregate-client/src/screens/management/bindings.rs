@@ -60,9 +60,18 @@ pub fn update_management_labels(
                 &[("day", session.snapshot.day.to_string())],
             ),
             ManagementLabel::Population | ManagementLabel::Workforce => {
-                let total = session.index.countries.get(&session.player_country).map_or(0, |country| {
-                    if matches!(binding, ManagementLabel::Population) { country.population } else { country.workforce }
-                });
+                let total =
+                    session
+                        .index
+                        .countries
+                        .get(&session.player_country)
+                        .map_or(0, |country| {
+                            if matches!(binding, ManagementLabel::Population) {
+                                country.population
+                            } else {
+                                country.workforce
+                            }
+                        });
                 total.to_string()
             }
             ManagementLabel::Province => {

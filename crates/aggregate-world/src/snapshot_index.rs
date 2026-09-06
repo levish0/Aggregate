@@ -20,7 +20,12 @@ impl WorldSnapshotIndex {
         let mut index = Self::default();
         for (position, province) in snapshot.provinces.iter().enumerate() {
             index.provinces.insert(province.id.clone(), position);
-            index.countries.entry(province.country.clone()).or_default().province_indices.push(position);
+            index
+                .countries
+                .entry(province.country.clone())
+                .or_default()
+                .province_indices
+                .push(position);
         }
         for group in &snapshot.population_groups {
             if let Some(position) = index.provinces.get(&group.province) {

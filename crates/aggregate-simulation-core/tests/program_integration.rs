@@ -70,8 +70,7 @@ fn scenario() -> Scenario {
 fn module_effects_are_opt_in_and_save_resume_replay_preserve_owned_state() {
     let provider: Arc<dyn SimulationProgram> = Arc::new(program("test.workforce", 5));
     let mut baseline = with_programs(scenario(), Vec::new()).unwrap();
-    let mut simulation =
-        with_programs(scenario(), vec![provider.clone()]).unwrap();
+    let mut simulation = with_programs(scenario(), vec![provider.clone()]).unwrap();
     assert_eq!(baseline.step().unwrap().provinces[0].available_workers, 20);
     let before = simulation.snapshot().population_groups;
     assert_eq!(simulation.step().unwrap().provinces[0].available_workers, 5);
@@ -80,7 +79,15 @@ fn module_effects_are_opt_in_and_save_resume_replay_preserve_owned_state() {
         before,
         "temporary availability must not destroy population/workforce"
     );
-    assert_eq!(simulation.program_states().iter().find(|state| state.manifest.id == "test.workforce").unwrap().payload["days"], 1);
+    assert_eq!(
+        simulation
+            .program_states()
+            .iter()
+            .find(|state| state.manifest.id == "test.workforce")
+            .unwrap()
+            .payload["days"],
+        1
+    );
     let save = simulation.save_json().unwrap();
     assert!(
         Simulation::from_save_json(&save).is_err(),
@@ -124,9 +131,7 @@ fn modules_reject_cycles_conflicts_missing_or_incompatible_dependencies() {
         id: "test.second".into(),
         version: "^1".parse().unwrap(),
     });
-    assert!(
-        with_programs(scenario(), vec![Arc::new(first.clone())]).is_err()
-    );
+    assert!(with_programs(scenario(), vec![Arc::new(first.clone())]).is_err());
     let mut second = program("test.second", 12);
     second.manifest.dependencies.push(ProgramDependency {
         id: "test.first".into(),
@@ -141,13 +146,7 @@ fn modules_reject_cycles_conflicts_missing_or_incompatible_dependencies() {
     );
     second.manifest.dependencies.clear();
     second.manifest.version = Version::new(2, 0, 0);
-    assert!(
-        with_programs(
-            scenario(),
-            vec![Arc::new(first.clone()), Arc::new(second)]
-        )
-        .is_err()
-    );
+    assert!(with_programs(scenario(), vec![Arc::new(first.clone()), Arc::new(second)]).is_err());
     first.manifest.dependencies.clear();
     first.manifest.conflicts.push("test.second".into());
     assert!(
@@ -190,20 +189,13 @@ fn order_is_stable_limits_combine_and_failed_modules_commit_nothing() {
     assert_eq!(forward.step().unwrap(), reverse.step().unwrap());
     assert_eq!(forward.step().unwrap().provinces[0].available_workers, 8);
     second.fail = true;
-    let mut failing = with_programs(
-        scenario(),
-        vec![Arc::new(first), Arc::new(second)],
-    )
-    .unwrap();
+    let mut failing = with_programs(scenario(), vec![Arc::new(first), Arc::new(second)]).unwrap();
     let before = failing.state_hash().unwrap();
     assert!(failing.step().is_err());
     assert_eq!(before, failing.state_hash().unwrap());
     assert_eq!(failing.clock().day(), 0);
-    let mut invalid = with_programs(
-        scenario(),
-        vec![Arc::new(program("test.invalid", 21))],
-    )
-    .unwrap();
+    let mut invalid =
+        with_programs(scenario(), vec![Arc::new(program("test.invalid", 21))]).unwrap();
     let before = invalid.state_hash().unwrap();
     assert!(invalid.step().is_err());
     assert_eq!(before, invalid.state_hash().unwrap());
@@ -215,24 +207,35 @@ fn core_failure_also_discards_successfully_prepared_module_state() {
     fixture.initial_state.provinces[0]
         .stockpile
         .insert("grain".into(), u64::MAX);
-    let mut simulation = with_programs(
-        fixture,
-        vec![Arc::new(program("test.workforce", 20))],
-    )
-    .unwrap();
+    let mut simulation =
+        with_programs(fixture, vec![Arc::new(program("test.workforce", 20))]).unwrap();
     let before = simulation.state_hash().unwrap();
     assert!(simulation.step().is_err());
     assert_eq!(before, simulation.state_hash().unwrap());
-    assert_eq!(simulation.program_states().iter().find(|state| state.manifest.id == "test.workforce").unwrap().payload["days"], 0);
+    assert_eq!(
+        simulation
+            .program_states()
+            .iter()
+            .find(|state| state.manifest.id == "test.workforce")
+            .unwrap()
+            .payload["days"],
+        0
+    );
 }
 
 fn with_economy(mut programs: Vec<Arc<dyn SimulationProgram>>) -> Vec<Arc<dyn SimulationProgram>> {
     programs.push(Arc::new(aggregate_economy::EconomyProgram));
     programs
 }
-fn with_programs(scenario: Scenario, programs: Vec<Arc<dyn SimulationProgram>>) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+fn with_programs(
+    scenario: Scenario,
+    programs: Vec<Arc<dyn SimulationProgram>>,
+) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
     Simulation::from_scenario_with_programs(scenario, with_economy(programs))
 }
-fn restore_programs(source: &str, programs: Vec<Arc<dyn SimulationProgram>>) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
+fn restore_programs(
+    source: &str,
+    programs: Vec<Arc<dyn SimulationProgram>>,
+) -> Result<Simulation, aggregate_simulation_core::SimulationError> {
     Simulation::from_save_json_with_programs(source, with_economy(programs))
 }

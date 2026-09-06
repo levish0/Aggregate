@@ -1,6 +1,4 @@
-use crate::{
-    SimulationClock,
-};
+use crate::SimulationClock;
 use aggregate_world::*;
 use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;

@@ -27,7 +27,9 @@ pub fn apply_actions(
         && !tooltip.dismissed_this_frame
         && !select.dismissed_this_frame;
     if escape && setup.open {
-        if initialization.is_none() { setup.open = false; }
+        if initialization.is_none() {
+            setup.open = false;
+        }
         return;
     }
     if escape && state.screen == Screen::WorldMap {
@@ -50,7 +52,11 @@ pub fn apply_actions(
         match action {
             InterfaceAction::OpenManagement => state.screen = Screen::Management,
             InterfaceAction::OpenWorldMap => state.screen = Screen::WorldMap,
-            InterfaceAction::ConfigureWorld => { state.screen = Screen::WorldMap; setup.open = true; session.running = false; }
+            InterfaceAction::ConfigureWorld => {
+                state.screen = Screen::WorldMap;
+                setup.open = true;
+                session.running = false;
+            }
             InterfaceAction::OpenPreview => state.screen = Screen::Preview,
             InterfaceAction::OpenSettings => state.screen = Screen::Settings,
             InterfaceAction::Back => state.screen = Screen::MainMenu,

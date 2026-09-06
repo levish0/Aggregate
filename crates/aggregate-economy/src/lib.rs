@@ -1,14 +1,14 @@
 //! Pure, deterministic economic plans. The caller owns state validation and commits.
 
+mod command;
 mod consumption;
+pub mod content;
+mod day_work;
 mod error;
 mod labor;
 mod production;
-mod command;
-mod day_work;
-mod schedule;
 mod program;
-pub mod content;
+mod schedule;
 pub use program::EconomyProgram;
 
 pub use consumption::{ConsumptionOutcome, plan_consumption};

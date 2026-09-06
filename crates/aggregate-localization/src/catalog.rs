@@ -108,6 +108,7 @@ mod tests {
                 "inputs",
                 "outputs",
                 "facility",
+                "building",
                 "error",
                 "province",
                 "good",

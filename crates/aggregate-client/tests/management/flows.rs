@@ -261,19 +261,35 @@ fn speed_buttons_change_tick_frequency_and_keep_pause_and_daily_results() {
     ));
     app.update();
     wait_for_worker(&mut app);
-    assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 3, "a slow frame must not trigger an unbounded catch-up burst");
+    assert_eq!(
+        app.world().resource::<ManagementSession>().snapshot.day,
+        3,
+        "a slow frame must not trigger an unbounded catch-up burst"
+    );
     let mut manual = self::app();
-    for _ in 0..3 { activate(&mut manual, ManagementAction::StepDay); }
-    assert_eq!(app.world().resource::<ManagementSession>().snapshot, manual.world().resource::<ManagementSession>().snapshot);
+    for _ in 0..3 {
+        activate(&mut manual, ManagementAction::StepDay);
+    }
+    assert_eq!(
+        app.world().resource::<ManagementSession>().snapshot,
+        manual.world().resource::<ManagementSession>().snapshot
+    );
 }
 
 fn wait_for_worker(app: &mut App) {
     let deadline = std::time::Instant::now() + std::time::Duration::from_secs(5);
     while app.world().resource::<ManagementSession>().is_busy() {
         app.world_mut().run_system_cached(poll_simulation).unwrap();
-        assert!(std::time::Instant::now() < deadline, "simulation worker timed out");
+        assert!(
+            std::time::Instant::now() < deadline,
+            "simulation worker timed out"
+        );
         std::thread::yield_now();
     }
-    app.world_mut().run_system_cached(screens::management::update_management_lists).unwrap();
-    app.world_mut().run_system_cached(screens::management::update_management_labels).unwrap();
+    app.world_mut()
+        .run_system_cached(screens::management::update_management_lists)
+        .unwrap();
+    app.world_mut()
+        .run_system_cached(screens::management::update_management_labels)
+        .unwrap();
 }

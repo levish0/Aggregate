@@ -1,10 +1,10 @@
 mod actions;
 mod layout;
 pub use actions::{apply_actions, finish_initialization};
-pub use layout::rebuild;
 use aggregate_world::CountryId;
 use aggregate_world_generation::WorldInitializationSettings;
 use bevy::{prelude::*, tasks::Task};
+pub use layout::rebuild;
 
 #[derive(Resource, Default)]
 pub struct WorldSetup {
@@ -22,6 +22,15 @@ pub struct WorldInitializationTask(pub Task<Result<crate::management::Management
 #[derive(Component)]
 pub struct SetupRoot;
 #[derive(Component)]
-pub enum SetupSelect { Country, Population, Workforce, Reserves }
+pub enum SetupSelect {
+    Country,
+    Population,
+    Workforce,
+    Reserves,
+}
 #[derive(Component)]
-pub enum SetupAction { Close, Start, TogglePublicHealth }
+pub enum SetupAction {
+    Close,
+    Start,
+    TogglePublicHealth,
+}

@@ -4,9 +4,9 @@ mod save;
 mod simulation;
 
 pub use aggregate_programs::{
-    RecordedCommand, SimulationClock, SimulationCommand, SimulationError,
     CommandOutcome, ConstructionDayReport, DayReport, FacilityDayReport, GoodsFlow, GoodsFlowCause,
-    ProvinceDayReport, SimulationEvent,
+    ProvinceDayReport, RecordedCommand, SimulationClock, SimulationCommand, SimulationError,
+    SimulationEvent,
 };
 pub use save::{RULESET_VERSION, SAVE_SCHEMA_VERSION};
 pub use simulation::Simulation;

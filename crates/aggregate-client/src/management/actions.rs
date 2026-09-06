@@ -8,7 +8,10 @@ use bevy::prelude::*;
 pub enum ManagementAction {
     SelectProvince(ProvinceId),
     StartConstruction(FacilityDefinitionId),
-    StartConstructionAt { province: ProvinceId, definition: FacilityDefinitionId },
+    StartConstructionAt {
+        province: ProvinceId,
+        definition: FacilityDefinitionId,
+    },
     StepDay,
     ToggleRunning,
     SetSpeed(super::SimulationSpeed),
@@ -23,7 +26,9 @@ pub fn apply_management_actions(
     mut view: ResMut<ManagementViewState>,
 ) {
     for event in activated.read() {
-        if state.screen != Screen::Management && !(state.screen == Screen::WorldMap && session.geographic) {
+        if state.screen != Screen::Management
+            && !(state.screen == Screen::WorldMap && session.geographic)
+        {
             continue;
         }
         let Ok((action, button)) = actions.get(event.0) else {
@@ -47,7 +52,10 @@ pub fn apply_management_actions(
             ManagementAction::StartConstruction(definition) => {
                 session.start_construction(&view.selected_province, definition)
             }
-            ManagementAction::StartConstructionAt { province, definition } => session.start_construction(province, definition),
+            ManagementAction::StartConstructionAt {
+                province,
+                definition,
+            } => session.start_construction(province, definition),
             ManagementAction::StepDay => {
                 session.running = false;
                 session.step();
@@ -55,7 +63,11 @@ pub fn apply_management_actions(
             ManagementAction::ToggleRunning => session.running = !session.running,
             ManagementAction::SetSpeed(speed) => session.speed = *speed,
             ManagementAction::ProvincePage(page) => {
-                let count = session.index.countries.get(&session.player_country).map_or(0, |country| country.province_indices.len());
+                let count = session
+                    .index
+                    .countries
+                    .get(&session.player_country)
+                    .map_or(0, |country| country.province_indices.len());
                 session.province_page = (*page).min(count.saturating_sub(1) / 32);
             }
         }

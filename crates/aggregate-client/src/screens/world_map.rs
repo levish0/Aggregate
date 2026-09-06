@@ -1,7 +1,7 @@
 pub mod inspection;
 mod layout;
-pub mod outliner;
 pub mod news;
+pub mod outliner;
 use crate::{
     backdrop::CartographicBackdrop,
     state::{InterfaceState, Screen},
@@ -105,12 +105,31 @@ pub fn configure_keyboard_policy(
     }
 }
 
-pub fn update_clock_controls(session: Res<crate::management::ManagementSession>,interface: Res<InterfaceState>,mut buttons: Query<(&crate::management::ManagementAction,&Children,&mut aggregate_ui::button::UiButton)>,mut labels: Query<&mut Text,With<aggregate_ui::button::ButtonLabel>>) {
-    if interface.screen != Screen::WorldMap { return; }
-    for (action,children,mut button) in &mut buttons {
-        if matches!(action,crate::management::ManagementAction::ToggleRunning) {
+pub fn update_clock_controls(
+    session: Res<crate::management::ManagementSession>,
+    interface: Res<InterfaceState>,
+    mut buttons: Query<(
+        &crate::management::ManagementAction,
+        &Children,
+        &mut aggregate_ui::button::UiButton,
+    )>,
+    mut labels: Query<&mut Text, With<aggregate_ui::button::ButtonLabel>>,
+) {
+    if interface.screen != Screen::WorldMap {
+        return;
+    }
+    for (action, children, mut button) in &mut buttons {
+        if matches!(action, crate::management::ManagementAction::ToggleRunning) {
             button.selected = session.running;
-            for child in children { if let Ok(mut text) = labels.get_mut(*child) { **text = interface.text(if session.running { "management-pause" } else { "management-play" }); } }
+            for child in children {
+                if let Ok(mut text) = labels.get_mut(*child) {
+                    **text = interface.text(if session.running {
+                        "management-pause"
+                    } else {
+                        "management-play"
+                    });
+                }
+            }
         }
     }
 }
@@ -161,7 +180,12 @@ pub fn update_labels(
                     interface.text("map-loading")
                 }
             }
-            MapLabel::Population => session.index.countries.get(&session.player_country).map_or(0, |country| country.population).to_string(),
+            MapLabel::Population => session
+                .index
+                .countries
+                .get(&session.player_country)
+                .map_or(0, |country| country.population)
+                .to_string(),
             MapLabel::Day => interface.format(
                 "management-day",
                 &[("day", session.snapshot.day.to_string())],

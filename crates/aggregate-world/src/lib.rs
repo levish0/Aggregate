@@ -6,8 +6,8 @@
 mod definitions;
 mod identifiers;
 mod scenario;
-mod state;
 mod snapshot_index;
+mod state;
 pub use snapshot_index::{CountryStatistics, WorldSnapshotIndex};
 
 pub use definitions::{

@@ -118,7 +118,14 @@ pub fn build(commands: &mut Commands, root: Entity, fonts: &UiFonts, state: &Int
         false,
     );
     ui::rule(commands, panel);
-    action_button(commands, panel, fonts, &state.text("setup-new-world"), UiButton::primary(0), InterfaceAction::ConfigureWorld);
+    action_button(
+        commands,
+        panel,
+        fonts,
+        &state.text("setup-new-world"),
+        UiButton::primary(0),
+        InterfaceAction::ConfigureWorld,
+    );
     action_button(
         commands,
         panel,
