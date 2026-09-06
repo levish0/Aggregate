@@ -38,6 +38,15 @@ pub struct MapTerrainMaterial {
     pub view: Vec4,
     #[texture(15)]
     pub terrain_indices: Handle<Image>,
+    #[texture(17, dimension = "2d_array")]
+    #[sampler(18)]
+    pub terrain_properties: Handle<Image>,
+    #[texture(19)]
+    #[sampler(20)]
+    pub terrain_relief: Handle<Image>,
+    #[texture(21)]
+    #[sampler(22)]
+    pub water_normal: Handle<Image>,
 }
 
 #[derive(Clone, Copy, ShaderType)]

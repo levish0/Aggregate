@@ -304,6 +304,15 @@ fn drive_capture(
             controller.pitch = 1.05;
             controller.yaw = 0.45;
         }
+        if frame == 430 {
+            // Baltic / Scandinavian terrain acceptance, matching the visual reference.
+            controller.target = Vec3::new(map.0.terrain.size.x * 0.545, 0., map.0.terrain.size.y * 0.185);
+            controller.distance = 95.;
+            controller.desired_distance = 95.;
+            controller.pitch = 0.9;
+            controller.yaw = 0.;
+            window.set_cursor_position(Some(Vec2::new(10.,10.)));
+        }
         let name = match frame {
             60 => Some("world-map-terrain-ko.png"),
             85 => Some("world-map-select-ko.png"),
@@ -313,6 +322,7 @@ fn drive_capture(
             330 => Some("world-map-state-hover.png"),
             370 => Some("world-map-asia-en.png"),
             410 => Some("world-map-asia-rotated-en.png"),
+            460 => Some("world-map-scandinavia.png"),
             _ => None,
         };
         if let Some(name) = name {
@@ -333,7 +343,7 @@ fn drive_capture(
                 },
             );
         }
-        if frame > 425 && capture.captures == 8 {
+        if frame > 475 && capture.captures == 9 {
             exit.write(AppExit::Success);
         }
     }

@@ -226,20 +226,28 @@ pub fn finish_loading(
         province_indices: image,
         province_styles: buffers.add(ShaderBuffer::from(styles)),
         color_map: server.load("gfx/map/textures/colormap.dds"),
-        terrain_diffuse: terrain_array(&server, "gfx/map/compiled/terrain_diffuse.dds", true),
-        terrain_normal: terrain_array(&server, "gfx/map/compiled/terrain_normal.dds", false),
+        terrain_diffuse: terrain_array(&server, "gfx/map/derived/terrain_diffuse.dds", true),
+        terrain_normal: terrain_array(&server, "gfx/map/derived/terrain_normal.dds", false),
+        terrain_properties: terrain_array(&server, "gfx/map/derived/terrain_material.dds", false),
+        terrain_relief: server
+            .load_builder()
+            .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
+                settings.is_srgb = false;
+            })
+            .load("gfx/map/derived/terrain_relief.dds"),
+        water_normal: terrain_array(&server, "gfx/map/water/ambient_normal.dds", false),
         terrain_weights: server
             .load_builder()
             .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
                 settings.is_srgb = false;
             })
-            .load("gfx/map/compiled/terrain_weights.png"),
+            .load("gfx/map/derived/terrain_weights.png"),
         terrain_indices: server
             .load_builder()
             .with_settings(|settings: &mut bevy::image::ImageLoaderSettings| {
                 settings.is_srgb = false;
             })
-            .load("gfx/map/compiled/terrain_indices.png"),
+            .load("gfx/map/derived/terrain_indices.png"),
         water_color: server.load("gfx/map/water/watercolor_rgb_waterspec_a.dds"),
         river_distance: server
             .load_builder()
@@ -252,6 +260,9 @@ pub fn finish_loading(
         terrain_material.color_map.clone(),
         terrain_material.terrain_diffuse.clone(),
         terrain_material.terrain_normal.clone(),
+        terrain_material.terrain_properties.clone(),
+        terrain_material.terrain_relief.clone(),
+        terrain_material.water_normal.clone(),
         terrain_material.terrain_weights.clone(),
         terrain_material.terrain_indices.clone(),
         terrain_material.water_color.clone(),
