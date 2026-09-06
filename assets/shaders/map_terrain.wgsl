@@ -174,6 +174,7 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     let weights = vec4<f32>((1.0-fraction.x)*(1.0-fraction.y), fraction.x*(1.0-fraction.y), (1.0-fraction.x)*fraction.y, fraction.x*fraction.y);
     let footprint = max(length(fwidth(in.uv)*dimensions),0.02);
     let country_outline = boundary(style.grouping.y,1u,ids,weights,fraction,footprint);
+    let country_color_band = boundary(style.grouping.y,1u,ids,weights,fraction,footprint*2.5);
     let state_outline = boundary(style.grouping.w,3u,ids,weights,fraction,footprint);
     let coast_outline = boundary(style.grouping.z,2u,ids,weights,fraction,footprint);
     let selected_group = select(styles[selection.x].grouping.w, styles[selection.x].grouping.y, selection.w != 0u);
@@ -214,7 +215,12 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     }
     let sea_color = water_surface(in.uv,in.world_position.xyz,detail_dx,detail_dy);
     color = mix(sea_color,color,smoothstep(0.25,0.75,land_coverage));
-    if !water { color *= 1.0-country_outline*0.55; }
+    if !water && style.grouping.y != 0u {
+        // A faint owner-colored rim stays legible over terrain at close zoom.
+        let country_border_color = mix(style.political.rgb,vec3<f32>(0.92),0.38);
+        color = mix(color,country_border_color,country_color_band*(0.58-map_view.x*0.25));
+        color *= 1.0-country_outline*0.20;
+    }
     if !water { color *= 1.0-state_outline*(0.16+map_view.x*0.06); }
     color = mix(color,vec3<f32>(0.40,0.55,0.52),coast_outline*0.3);
     if !water { color = mix(color,mix(vec3<f32>(0.025,0.09,0.12),sea_color,0.35),river_coverage*0.85); }

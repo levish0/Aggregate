@@ -326,6 +326,12 @@ fn drive_capture(
             controller.distance = 25.;
             controller.desired_distance = 25.;
         }
+        if frame == 560 {
+            // Norway / Sweden land border: owner color remains visible in terrain view.
+            controller.target = Vec3::new(map.0.terrain.size.x*0.530,0.,map.0.terrain.size.y*0.135);
+            controller.distance = 45.;
+            controller.desired_distance = 45.;
+        }
         let name = match frame {
             60 => Some("world-map-terrain-ko.png"),
             85 => Some("world-map-select-ko.png"),
@@ -338,6 +344,7 @@ fn drive_capture(
             460 => Some("world-map-scandinavia.png"),
             490 => Some("world-map-scandinavia-motion.png"),
             540 => Some("world-map-scandinavia-close.png"),
+            590 => Some("world-map-country-border-close.png"),
             _ => None,
         };
         if let Some(name) = name {
@@ -358,7 +365,7 @@ fn drive_capture(
                 },
             );
         }
-        if frame > 555 && capture.captures == 11 {
+        if frame > 605 && capture.captures == 12 {
             exit.write(AppExit::Success);
         }
     }
