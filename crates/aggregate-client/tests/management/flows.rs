@@ -238,3 +238,26 @@ fn real_time_playback_steps_once_and_manual_step_pauses() {
     app.update();
     assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 2);
 }
+
+#[test]
+fn speed_buttons_change_tick_frequency_and_keep_pause_and_daily_results() {
+    let mut app = app();
+    app.insert_resource(bevy::time::TimeUpdateStrategy::ManualDuration(
+        std::time::Duration::from_millis(100),
+    ));
+    activate(&mut app, ManagementAction::SetSpeed(SimulationSpeed::Three));
+    assert!(!app.world().resource::<ManagementSession>().running);
+    activate(&mut app, ManagementAction::ToggleRunning);
+    app.update();
+    assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 1);
+    activate(&mut app, ManagementAction::SetSpeed(SimulationSpeed::Five));
+    assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 2);
+    app.insert_resource(bevy::time::TimeUpdateStrategy::ManualDuration(
+        std::time::Duration::from_secs(30),
+    ));
+    app.update();
+    assert_eq!(app.world().resource::<ManagementSession>().snapshot.day, 3, "a slow frame must not trigger an unbounded catch-up burst");
+    let mut manually_advanced = ManagementSession::foundation();
+    for _ in 0..3 { manually_advanced.step(); }
+    assert_eq!(app.world().resource::<ManagementSession>().snapshot, manually_advanced.snapshot);
+}
