@@ -26,7 +26,7 @@ pub fn province_name(
                 .name_key
                 .as_ref()
                 .and_then(|key| state.localization.text(key).ok())
-                .unwrap_or_else(|| province.name.clone())
+                .unwrap_or_else(|| province.name.split(" · ").next().unwrap_or(&province.name).to_owned())
         })
         .unwrap_or_else(|| id.to_string())
 }

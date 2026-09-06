@@ -414,6 +414,7 @@ pub fn refresh(
             &session,
             &province_ids,
             has_statistics,
+            false,
         ),
         InspectionTab::Construction => super::construction_queue::build(
             &mut commands,

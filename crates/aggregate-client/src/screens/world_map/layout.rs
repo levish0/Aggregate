@@ -17,6 +17,7 @@ pub fn build(
     state: &InterfaceState,
     session: &crate::management::ManagementSession,
 ) {
+    super::country_labels::build(commands, root);
     if !session.geographic { return; }
     let header = ui::panel(
         commands,

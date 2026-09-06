@@ -15,7 +15,9 @@ pub struct QueueProgress(FacilityId);
 #[derive(Component)]
 pub struct QueueProgressBar(FacilityId);
 
-pub(super) fn build(commands: &mut Commands, parent: Entity, _fonts: &UiFonts, _interface: &InterfaceState, _session: &ManagementSession, provinces: &BTreeSet<ProvinceId>, page: usize) {
+pub(super) fn build(commands: &mut Commands, parent: Entity, fonts: &UiFonts, interface: &InterfaceState, session: &ManagementSession, provinces: &BTreeSet<ProvinceId>, page: usize) {
+    super::buildings::build(commands, parent, fonts, interface, session, provinces, true, true);
+    ui::rule(commands, parent);
     let root = ui::node(commands, parent, Node { width: percent(100), flex_direction: FlexDirection::Column, row_gap: px(8), ..default() });
     commands.entity(root).insert(QueueScope { provinces: provinces.clone(), page });
 }

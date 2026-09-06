@@ -17,14 +17,14 @@ pub struct ConstructionFeedback;
 #[derive(Clone, Copy)]
 enum BuildingField { Level, Workforce, Output }
 
-pub(super) fn build(commands: &mut Commands, parent: Entity, fonts: &UiFonts, interface: &InterfaceState, session: &ManagementSession, provinces: &BTreeSet<ProvinceId>, has_statistics: bool) {
+pub(super) fn build(commands: &mut Commands, parent: Entity, fonts: &UiFonts, interface: &InterfaceState, session: &ManagementSession, provinces: &BTreeSet<ProvinceId>, has_statistics: bool, sectors_only: bool) {
     if !has_statistics { return; }
     let grid = ui::node(commands, parent, Node { width: percent(100), flex_wrap: FlexWrap::Wrap, column_gap: px(8), row_gap: px(8), ..default() });
     commands.entity(grid).insert(BuildingScope(provinces.clone()));
     let owned = session.snapshot.provinces.iter().any(|province| provinces.contains(&province.id) && province.country == session.player_country);
-    for (order, definition) in session.definitions.facilities.iter().enumerate() {
+    for (order, definition) in session.definitions.facilities.iter().filter(|definition| !sectors_only || definition.construction_points_per_worker_day > 0).enumerate() {
         let name = presentation::facility_name(session, interface, &definition.id);
-        let card = ui::panel(commands, grid, Node { width: percent(48), min_height: px(170), padding: UiRect::all(px(10)), flex_direction: FlexDirection::Column, row_gap: px(8), flex_shrink: 0., ..default() });
+        let card = ui::panel(commands, grid, Node { width: percent(if sectors_only { 100. } else { 48. }), min_height: px(170), padding: UiRect::all(px(10)), flex_direction: FlexDirection::Column, row_gap: px(8), flex_shrink: 0., ..default() });
         aggregate_ui::icon::icon(commands, card, Icon::Buildings, 28., theme::TEXT);
         ui::text(commands, card, fonts, &name, 14., theme::TEXT, true);
         for field in [BuildingField::Level, BuildingField::Workforce, BuildingField::Output] {

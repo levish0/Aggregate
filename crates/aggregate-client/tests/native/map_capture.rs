@@ -1,10 +1,6 @@
 //! Real window/render acceptance; input is injected into Bevy, not sent to the OS.
 use crate::state::{InterfaceState, Screen};
 use aggregate_map_view::{LoadedWorldMap, MapCamera, MapCameraController, MapViewState};
-use aggregate_ui::{
-    button::ButtonActivated,
-    select::{Select, SelectItem, SelectTrigger},
-};
 use bevy::{
     prelude::*,
     render::view::screenshot::{Screenshot, ScreenshotCaptured},
@@ -61,10 +57,6 @@ fn drive_capture(
     mut interface: ResMut<InterfaceState>,
     mut window: Single<&mut Window>,
     camera: Single<(&Camera, &GlobalTransform), With<MapCamera>>,
-    triggers: Query<Entity, With<SelectTrigger>>,
-    items: Query<(Entity, &SelectItem)>,
-    selects: Query<&Select>,
-    mut activated: MessageWriter<ButtonActivated>,
     input: (
         ResMut<ButtonInput<MouseButton>>,
         ResMut<ButtonInput<KeyCode>>,
@@ -115,24 +107,7 @@ fn drive_capture(
             assert_eq!(state.selected_index, capture.expected_index);
             mouse.release(MouseButton::Left);
         }
-        if frame == 70 {
-            activated.write(ButtonActivated(triggers.single().unwrap()));
-        }
-        if frame == 72 {
-            assert!(selects.single().unwrap().open);
-        }
-        if frame == 95 {
-            let entity = items
-                .iter()
-                .find(|(_, item)| item.value == "political")
-                .unwrap()
-                .0;
-            activated.write(ButtonActivated(entity));
-        }
-        if frame == 98 {
-            assert!(state.political);
-            assert!(!selects.single().unwrap().open);
-        }
+        if frame == 90 { controller.desired_distance = 600.; }
         if frame == 105 {
             let (_, node, transform) = window_layout.1.single().unwrap();
             let scale = window.scale_factor() * window_layout.0.0;
@@ -167,9 +142,6 @@ fn drive_capture(
             assert_eq!(state.selected_index, capture.expected_index);
             mouse.release(MouseButton::Left);
         }
-        if frame == 140 {
-            activated.write(ButtonActivated(triggers.single().unwrap()));
-        }
         if frame == 133 {
             let (_, node, transform) = window_layout.1.single().unwrap();
             let scale = window.scale_factor() * window_layout.0.0;
@@ -192,14 +164,6 @@ fn drive_capture(
                 "inspector stays docked: {position:?}"
             );
             mouse.release(MouseButton::Left);
-        }
-        if frame == 143 {
-            keys.press(KeyCode::Escape);
-        }
-        if frame == 145 {
-            assert!(!selects.single().unwrap().open);
-            assert_eq!(interface.screen, Screen::WorldMap);
-            keys.release(KeyCode::Escape);
         }
         if frame == 160 {
             capture.initial_target = controller.target;

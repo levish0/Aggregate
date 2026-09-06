@@ -48,10 +48,20 @@ fn fixture(level: u64, same_country: bool, has_project: bool) -> Scenario {
     scenario
 }
 
+fn start(mut scenario: Scenario) -> Simulation {
+    let projects = std::mem::take(&mut scenario.initial_state.construction_projects);
+    let countries: std::collections::BTreeMap<_,_> = scenario.initial_state.provinces.iter().map(|province| (province.id.clone(), province.country.clone())).collect();
+    let mut simulation = Simulation::from_scenario_with_programs(scenario, programs()).unwrap();
+    for project in projects {
+        simulation.execute(aggregate_simulation_core::SimulationCommand::StartConstruction { country: countries[&project.province].clone(), province: project.province, facility: project.facility_id, definition: project.definition, workers: project.requested_workers, production_priority: project.production_priority }).unwrap();
+    }
+    simulation
+}
+
 #[test]
 fn construction_industry_consumes_inputs_and_supplies_other_provinces_without_double_labor() {
     for (level, workers, points) in [(1, 10, 40), (2, 20, 80)] {
-        let mut simulation = Simulation::from_scenario_with_programs(fixture(level, true, true), programs()).unwrap();
+        let mut simulation = start(fixture(level, true, true));
         let report = simulation.step().unwrap();
         let facility = &report.facilities[0];
         assert_eq!(facility.active_workers, workers);
@@ -71,7 +81,7 @@ fn construction_industry_consumes_inputs_and_supplies_other_provinces_without_do
 #[test]
 fn idle_or_foreign_construction_does_not_consume_domestic_materials() {
     for (same_country, has_project) in [(true, false), (false, true)] {
-        let mut simulation = Simulation::from_scenario_with_programs(fixture(1, same_country, has_project), programs()).unwrap();
+        let mut simulation = start(fixture(1, same_country, has_project));
         let report = simulation.step().unwrap();
         assert_eq!(report.facilities[0].active_workers, 0);
         assert_eq!(report.facilities[0].construction_points, 0);
@@ -84,7 +94,7 @@ fn idle_or_foreign_construction_does_not_consume_domestic_materials() {
 fn missing_materials_reduce_construction_supply_and_failure_remains_atomic() {
     let mut scenario = fixture(1, true, true);
     scenario.initial_state.provinces[0].stockpile.insert("tools".into(), 3);
-    let mut simulation = Simulation::from_scenario_with_programs(scenario, programs()).unwrap();
+    let mut simulation = start(scenario);
     let report = simulation.step().unwrap();
     assert_eq!(report.facilities[0].active_workers, 3);
     assert_eq!(report.constructions[0].sector_construction_points, 12);
@@ -93,7 +103,7 @@ fn missing_materials_reduce_construction_supply_and_failure_remains_atomic() {
     let sector = scenario.definitions.facilities.iter_mut().find(|item| item.id.0 == "construction_sector").unwrap();
     sector.outputs_per_worker_day.insert("grain".into(), 1);
     scenario.initial_state.provinces[0].stockpile.insert("grain".into(), u64::MAX);
-    let mut simulation = Simulation::from_scenario_with_programs(scenario, programs()).unwrap();
+    let mut simulation = start(scenario);
     let before = simulation.snapshot();
     assert!(simulation.step().is_err());
     assert_eq!(simulation.snapshot(), before);
