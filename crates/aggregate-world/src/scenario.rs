@@ -1,7 +1,7 @@
 use crate::{ContentDefinitions, WorldRules, WorldSnapshot};
 use serde::{Deserialize, Serialize};
 
-pub const SCENARIO_SCHEMA_VERSION: u32 = 2;
+pub const SCENARIO_SCHEMA_VERSION: u32 = 3;
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]

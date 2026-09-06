@@ -48,7 +48,7 @@ pub(crate) fn validate_definitions(
             &goods,
             &format!("{path}.inputs_per_worker_day"),
         )?;
-        if facility.outputs_per_worker_day.is_empty() {
+        if facility.outputs_per_worker_day.is_empty() && facility.construction_points_per_worker_day == 0 {
             return Err(ScenarioError::new(
                 format!("{path}.outputs_per_worker_day"),
                 "a production facility must define at least one output",

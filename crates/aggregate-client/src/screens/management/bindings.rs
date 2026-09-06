@@ -195,7 +195,7 @@ pub fn update_management_labels(
                     let progress = state.format(
                         "management-project-progress",
                         &[
-                            ("work", project.remaining_worker_days.to_string()),
+                            ("work", project.remaining_construction_points.to_string()),
                             ("workers", project.requested_workers.to_string()),
                         ],
                     );
@@ -265,7 +265,7 @@ pub fn update_management_labels(
                 .find(|definition| definition.id == project.definition)
         {
             let completed = 1.
-                - project.remaining_worker_days as f64 / definition.construction.worker_days as f64;
+                - project.remaining_construction_points as f64 / definition.construction.construction_points as f64;
             let width = percent((completed * 100.) as f32);
             if node.width != width {
                 node.width = width;

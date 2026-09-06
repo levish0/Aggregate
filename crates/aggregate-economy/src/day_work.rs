@@ -4,6 +4,8 @@ use bevy_ecs::prelude::*;
 use std::collections::BTreeMap;
 
 pub(crate) struct ProvincePlan {
+    pub country: CountryId,
+    pub sector_workers: u64,
     pub stockpile: BTreeMap<GoodId, u64>,
     pub allocations: BTreeMap<FacilityId, u64>,
     pub report: ProvinceDayReport,
@@ -19,6 +21,8 @@ pub(crate) struct ConstructionProgress {
 pub(crate) struct DayWork {
     pub day: u64,
     pub provinces: BTreeMap<ProvinceId, ProvincePlan>,
+    pub construction_demand: BTreeMap<CountryId, u64>,
+    pub construction_supply: BTreeMap<CountryId, u64>,
     pub constructions: BTreeMap<FacilityId, ConstructionProgress>,
     pub report: Option<DayReport>,
     pub failure: Option<(&'static str, String)>,

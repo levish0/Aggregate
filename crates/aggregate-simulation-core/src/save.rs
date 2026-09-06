@@ -5,9 +5,9 @@ use aggregate_world::{Scenario, WorldSnapshot};
 use serde::{Deserialize, Serialize};
 use std::sync::Arc;
 
-pub const SAVE_SCHEMA_VERSION: u32 = 4;
+pub const SAVE_SCHEMA_VERSION: u32 = 5;
 /// Increment when the semantics/order of native rules change. Saves include their definitions.
-pub const RULESET_VERSION: &str = "aggregate-program-runtime/1";
+pub const RULESET_VERSION: &str = "aggregate-program-runtime/2";
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]

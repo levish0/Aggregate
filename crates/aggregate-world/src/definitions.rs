@@ -24,6 +24,9 @@ pub struct FacilityDefinition {
     pub id: FacilityDefinitionId,
     pub name: String,
     pub workers_per_level: u64,
+    /// Non-storable national construction service, produced only against current demand.
+    #[serde(default)]
+    pub construction_points_per_worker_day: u64,
     pub inputs_per_worker_day: BTreeMap<GoodId, u64>,
     pub outputs_per_worker_day: BTreeMap<GoodId, u64>,
     pub construction: ConstructionDefinition,

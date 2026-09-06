@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "id": "foundation",
   "name": "Artificial production and construction fixture",
   "rules": {
@@ -20,7 +20,7 @@
         "inputs_per_worker_day": {},
         "outputs_per_worker_day": { "grain": 3 },
         "construction": {
-          "worker_days": 20,
+          "construction_points": 20,
           "max_workers": 10,
           "goods": { "timber": 10, "tools": 5 }
         }
@@ -32,7 +32,7 @@
         "inputs_per_worker_day": {},
         "outputs_per_worker_day": { "timber": 2 },
         "construction": {
-          "worker_days": 15,
+          "construction_points": 15,
           "max_workers": 5,
           "goods": { "tools": 5 }
         }
@@ -44,7 +44,7 @@
         "inputs_per_worker_day": { "timber": 1 },
         "outputs_per_worker_day": { "tools": 1 },
         "construction": {
-          "worker_days": 25,
+          "construction_points": 25,
           "max_workers": 5,
           "goods": { "timber": 15, "tools": 5 }
         }

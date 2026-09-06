@@ -96,7 +96,7 @@ pub(super) fn build(
             .find(|definition| definition.id == project.definition)
         {
             let fraction = 1.
-                - project.remaining_worker_days as f64 / definition.construction.worker_days as f64;
+                - project.remaining_construction_points as f64 / definition.construction.construction_points as f64;
             metric(
                 commands,
                 card,

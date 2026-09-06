@@ -22,6 +22,7 @@ pub struct FacilityDayReport {
     pub active_workers: u64,
     pub inputs: BTreeMap<GoodId, u64>,
     pub outputs: BTreeMap<GoodId, u64>,
+    pub construction_points: u64,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -30,6 +31,7 @@ pub struct ConstructionDayReport {
     pub requested_workers: u64,
     pub active_workers: u64,
     pub remaining_construction_points: u64,
+    pub sector_construction_points: u64,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

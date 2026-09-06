@@ -27,6 +27,7 @@ pub fn definitions() -> ContentDefinitions {
         id: FacilityDefinitionId(id.into()),
         name: name.into(),
         workers_per_level: workers,
+        construction_points_per_worker_day: 0,
         inputs_per_worker_day: amounts(inputs),
         outputs_per_worker_day: amounts(outputs),
         construction: ConstructionDefinition {
@@ -35,9 +36,12 @@ pub fn definitions() -> ContentDefinitions {
             goods: amounts(cost),
         },
     };
+    let mut construction_sector = facility("construction_sector", "Construction sector", 10, &[("timber", 2), ("tools", 1)], &[], 60, 10, &[("timber", 30), ("tools", 15)]);
+    construction_sector.construction_points_per_worker_day = 4;
     ContentDefinitions {
         goods,
         facilities: vec![
+            construction_sector,
             facility(
                 "grain_farm",
                 "Grain farm",

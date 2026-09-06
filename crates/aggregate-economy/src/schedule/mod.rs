@@ -7,7 +7,7 @@ mod production;
 
 use aggregate_programs::{
     SimulationClock,
-    world_storage::Province,
+    world_storage::{Province, ConstructionProject},
     {DayReport, ProvinceDayReport},
 };
 use bevy_ecs::prelude::*;
@@ -47,7 +47,7 @@ pub(crate) fn create_schedule() -> Schedule {
     schedule
 }
 
-fn begin_day(clock: Res<SimulationClock>, provinces: Query<&Province>, mut work: ResMut<DayWork>) {
+fn begin_day(clock: Res<SimulationClock>, provinces: Query<&Province>, projects: Query<&ConstructionProject>, mut work: ResMut<DayWork>) {
     *work = DayWork::default();
     let Some(day) = clock.day().checked_add(1) else {
         work.fail(
@@ -69,6 +69,8 @@ fn begin_day(clock: Res<SimulationClock>, provinces: Query<&Province>, mut work:
         work.provinces.insert(
             province.0.id.clone(),
             ProvincePlan {
+                country: province.0.country.clone(),
+                sector_workers: 0,
                 stockpile: province.0.stockpile.clone(),
                 allocations: BTreeMap::new(),
                 report: ProvinceDayReport {
@@ -83,5 +85,14 @@ fn begin_day(clock: Res<SimulationClock>, provinces: Query<&Province>, mut work:
                 },
             },
         );
+    }
+    for project in &projects {
+        let country = work.provinces[&project.0.province].country.clone();
+        let demand = work.construction_demand.entry(country).or_default();
+        let Some(total) = demand.checked_add(project.0.remaining_construction_points) else {
+            work.fail("begin_day", "national construction demand overflow");
+            return;
+        };
+        *demand = total;
     }
 }

@@ -77,7 +77,7 @@ pub fn recipe_description(
         &[
             ("cost", quantities(&definition.construction.goods)),
             ("workers", definition.construction.max_workers.to_string()),
-            ("work", definition.construction.worker_days.to_string()),
+            ("work", definition.construction.construction_points.to_string()),
             ("inputs", quantities(&definition.inputs_per_worker_day)),
             ("outputs", quantities(&definition.outputs_per_worker_day)),
         ],

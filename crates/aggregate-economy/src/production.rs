@@ -66,7 +66,7 @@ fn validate_production_definition(definition: &FacilityDefinition) -> Result<(),
             reason: "workers per level must be positive",
         });
     }
-    if definition.outputs_per_worker_day.is_empty() {
+    if definition.outputs_per_worker_day.is_empty() && definition.construction_points_per_worker_day == 0 {
         return Err(EconomyError::InvalidProductionDefinition {
             reason: "a production recipe must define at least one output",
         });
@@ -115,6 +115,7 @@ mod tests {
 
     fn steelworks() -> FacilityDefinition {
         FacilityDefinition {
+            construction_points_per_worker_day: 0,
             id: FacilityDefinitionId::from("steelworks"),
             name: "Steelworks".to_owned(),
             workers_per_level: 20,
