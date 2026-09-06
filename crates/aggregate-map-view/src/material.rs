@@ -58,7 +58,7 @@ pub fn update_selection(
             state.selected_index,
             state.hovered_index,
             u32::from(state.political),
-            0,
+            u32::from(state.inspect_country),
         );
         if material.selection != selection {
             material.selection = selection;

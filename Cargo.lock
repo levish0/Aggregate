@@ -108,6 +108,7 @@ version = "0.1.0"
 dependencies = [
  "aggregate-localization",
  "aggregate-map-view",
+ "aggregate-programs",
  "aggregate-scenario",
  "aggregate-simulation-core",
  "aggregate-ui",

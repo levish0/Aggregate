@@ -22,6 +22,7 @@ pub struct MapViewState {
     pub enabled: bool,
     pub pointer_blocked: bool,
     pub selected_index: u32,
+    pub inspect_country: bool,
     pub hovered_index: u32,
     pub political: bool,
     pub error: Option<String>,

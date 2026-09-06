@@ -38,6 +38,11 @@ impl Simulation {
         self.programs.snapshot()
     }
 
+    pub fn inspect_programs(&mut self, scope: &aggregate_programs::InspectionScope) -> Result<Vec<aggregate_programs::InspectionSection>, SimulationError> {
+        let snapshot = self.snapshot();
+        self.programs.inspect(scope, &snapshot).map_err(SimulationError::InvalidPrograms)
+    }
+
     pub fn from_scenario(mut scenario: Scenario) -> Result<Self, SimulationError> {
         validate_scenario(&scenario)?;
         scenario.initial_state.normalize();

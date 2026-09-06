@@ -1,5 +1,7 @@
 //! Native extension contracts. No renderer, ECS access, or dynamic-library ABI.
 mod manifest;
+mod inspection;
+pub use inspection::{InspectionScope, InspectionSection, InspectionMetric, MetricValue};
 mod runtime;
 mod simulation;
 

@@ -51,9 +51,11 @@ fn fragment(in: VertexOutput) -> @location(0) vec4<f32> {
     if coast { color = mix(color,vec3<f32>(0.40,0.55,0.52),0.5); }
     if id == selection.y && id != 0u { color = mix(color,vec3<f32>(0.78,0.69,0.38),0.24); }
     let selected_state = styles[selection.x].grouping.w;
-    if selected_state != 0u && style.grouping.w == selected_state {
+    let selected_country = styles[selection.x].grouping.y;
+    let in_selection = select(selected_state != 0u && style.grouping.w == selected_state, selected_country != 0u && style.grouping.y == selected_country, selection.w != 0u);
+    if in_selection {
         color = mix(color,vec3<f32>(0.85,0.60,0.20),0.35);
-        if state_border { color = vec3<f32>(1.0,0.8,0.35); }
+        if select(state_border, border, selection.w != 0u) { color = vec3<f32>(1.0,0.8,0.35); }
     } else if id == selection.x && id != 0u {
         color = mix(color,vec3<f32>(0.85,0.60,0.20),0.35);
     }

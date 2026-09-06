@@ -286,6 +286,7 @@ pub fn pick(
             saved.target = Vec3::new(point.x.rem_euclid(map.0.terrain.size.x), 0., point.z);
         } else {
             state.selected_index = state.hovered_index;
+            state.inspect_country = false;
         }
     }
 }

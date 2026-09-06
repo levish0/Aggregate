@@ -12,7 +12,7 @@ pub struct ProgramContext<'a> {
 }
 
 pub struct ProgramPlan {
-    /// Module-owned serialized typed state, validated before publication.
+    /// Program-owned serialized typed state, validated before publication.
     pub next_state: Value,
     /// Temporary effective workforce limits; multiple limits combine by minimum.
     /// Population and underlying workforce are not permanently changed.
@@ -27,4 +27,8 @@ pub trait SimulationProgram: Send + Sync {
     fn initialize(&self, world: &WorldSnapshot) -> Result<Value, String>;
     fn validate_state(&self, world: &WorldSnapshot, state: &Value) -> Result<(), String>;
     fn plan_day(&self, context: &ProgramContext<'_>, state: &Value) -> Result<ProgramPlan, String>;
+
+    fn inspect(&self, _scope: &crate::InspectionScope, _world: &WorldSnapshot, _state: &Value) -> Result<Vec<crate::InspectionSection>, String> {
+        Ok(Vec::new())
+    }
 }

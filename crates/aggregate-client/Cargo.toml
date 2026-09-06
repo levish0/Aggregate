@@ -13,6 +13,7 @@ aggregate-simulation-core.workspace = true
 aggregate-scenario.workspace = true
 aggregate-world.workspace = true
 aggregate-map-view.workspace = true
+aggregate-programs.workspace = true
 uuid.workspace = true
 anyhow = "1.0.104"
 tracing.workspace = true

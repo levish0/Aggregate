@@ -38,6 +38,10 @@ pub struct ManagementViewState {
 }
 
 impl ManagementSession {
+    pub fn inspect_programs(&mut self, scope: &aggregate_programs::InspectionScope) -> Result<Vec<aggregate_programs::InspectionSection>, SimulationError> {
+        self.simulation.inspect_programs(scope)
+    }
+
     pub fn foundation() -> Self {
         let scenario = parse_scenario(include_str!("../../../../scenarios/foundation.json"))
             .expect("validated bundled scenario");
