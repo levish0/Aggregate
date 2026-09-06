@@ -1,9 +1,11 @@
 use crate::{Simulation, SimulationError, command::RecordedCommand};
+use aggregate_modules::{ModuleRuntime, SavedModuleState, SimulationModule};
 use aggregate_scenario::{validate_scenario, validate_world_state};
 use aggregate_world::{Scenario, WorldSnapshot};
 use serde::{Deserialize, Serialize};
+use std::sync::Arc;
 
-pub const SAVE_SCHEMA_VERSION: u32 = 2;
+pub const SAVE_SCHEMA_VERSION: u32 = 3;
 /// Increment when the semantics/order of native rules change. Saves include their definitions.
 pub const RULESET_VERSION: &str = "aggregate-native-economy/2";
 
@@ -15,6 +17,7 @@ struct SimulationSave {
     scenario: Scenario,
     current_state: WorldSnapshot,
     commands: Vec<RecordedCommand>,
+    modules: Vec<SavedModuleState>,
 }
 
 impl Simulation {
@@ -25,12 +28,20 @@ impl Simulation {
             scenario: self.initial_scenario.clone(),
             current_state: self.snapshot(),
             commands: self.commands.clone(),
+            modules: self.modules.snapshot(),
         };
         serde_json::to_string_pretty(&save)
             .map_err(|error| SimulationError::InvalidSave(error.to_string()))
     }
 
     pub fn from_save_json(source: &str) -> Result<Self, SimulationError> {
+        Self::from_save_json_with_modules(source, Vec::new())
+    }
+
+    pub fn from_save_json_with_modules(
+        source: &str,
+        available: Vec<Arc<dyn SimulationModule>>,
+    ) -> Result<Self, SimulationError> {
         let mut deserializer = serde_json::Deserializer::from_str(source);
         let mut save: SimulationSave = serde_path_to_error::deserialize(&mut deserializer)
             .map_err(|error| SimulationError::InvalidSave(error.to_string()))?;
@@ -57,16 +68,17 @@ impl Simulation {
         )?;
         validate_command_log(&save.commands, save.current_state.day)?;
         save.current_state.normalize();
-        Ok(Self::from_validated_state(
-            save.scenario,
-            &save.current_state,
-            save.commands,
-        ))
+        let modules = ModuleRuntime::restore(available, save.modules, &save.current_state)
+            .map_err(SimulationError::InvalidModules)?;
+        let mut simulation =
+            Self::from_validated_state(save.scenario, &save.current_state, save.commands);
+        simulation.modules = modules;
+        Ok(simulation)
     }
 
     /// Hash canonical domain state, excluding ECS memory layout, transient reports and caches.
     pub fn state_hash(&mut self) -> Result<String, SimulationError> {
-        let canonical = serde_json::to_vec(&self.snapshot())
+        let canonical = serde_json::to_vec(&(self.snapshot(), self.modules.snapshot()))
             .map_err(|error| SimulationError::InvalidSave(error.to_string()))?;
         Ok(blake3::hash(&canonical).to_hex().to_string())
     }

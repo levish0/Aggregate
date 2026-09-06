@@ -18,6 +18,7 @@ pub enum SimulationError {
     },
     InvalidSave(String),
     InvalidReplay(String),
+    InvalidModules(String),
 }
 
 impl fmt::Display for SimulationError {
@@ -39,6 +40,7 @@ impl fmt::Display for SimulationError {
             }
             Self::InvalidSave(reason) => write!(formatter, "invalid save: {reason}"),
             Self::InvalidReplay(reason) => write!(formatter, "invalid replay: {reason}"),
+            Self::InvalidModules(reason) => write!(formatter, "invalid modules: {reason}"),
         }
     }
 }

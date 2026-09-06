@@ -22,8 +22,6 @@ fn main() {
 
 fn create_app() -> App {
     let asset_root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../assets");
-    let session = management::ManagementSession::foundation();
-    let view = session.initial_view();
     let mut app = App::new();
     app.insert_resource(ClearColor(aggregate_ui::theme::INK))
         .add_plugins(
@@ -49,8 +47,10 @@ fn create_app() -> App {
                     }),
                     ..default()
                 }),
-        )
-        .add_plugins(AggregateUiPlugin)
+        );
+    let session = management::ManagementSession::foundation();
+    let view = session.initial_view();
+    app.add_plugins(AggregateUiPlugin)
         .add_plugins(aggregate_map_view::MapViewPlugin { asset_root })
         .init_resource::<state::InterfaceState>()
         .insert_resource(session)

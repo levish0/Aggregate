@@ -24,6 +24,9 @@ pub(crate) struct DefinitionRegistry {
 #[derive(Resource)]
 pub(crate) struct SimulationRules(pub WorldRules);
 
+#[derive(Resource, Default)]
+pub(crate) struct WorkforceLimits(pub BTreeMap<PopulationGroupId, u64>);
+
 pub(crate) struct ProvincePlan {
     pub stockpile: BTreeMap<GoodId, u64>,
     pub allocations: BTreeMap<FacilityId, u64>,
@@ -66,6 +69,7 @@ pub(crate) fn create_world(scenario: &Scenario, state: &WorldSnapshot) -> World 
             .collect(),
     });
     world.init_resource::<DayWork>();
+    world.init_resource::<WorkforceLimits>();
     for country in &state.countries {
         world.spawn(Country(country.clone()));
     }

@@ -1,5 +1,5 @@
 use crate::world_storage::{
-    ConstructionProject, DayWork, DefinitionRegistry, Facility, PopulationGroup,
+    ConstructionProject, DayWork, DefinitionRegistry, Facility, PopulationGroup, WorkforceLimits,
 };
 use aggregate_economy::{LaborRequest, allocate_labor};
 use aggregate_world::ProvinceId;
@@ -12,12 +12,20 @@ pub(super) fn allocate_workers(
     facilities: Query<&Facility>,
     projects: Query<&ConstructionProject>,
     definitions: Res<DefinitionRegistry>,
+    workforce_limits: Res<WorkforceLimits>,
     mut work: ResMut<DayWork>,
 ) {
     if work.failure.is_some() {
         return;
     }
-    if let Err(reason) = plan(&population, &facilities, &projects, &definitions, &mut work) {
+    if let Err(reason) = plan(
+        &population,
+        &facilities,
+        &projects,
+        &definitions,
+        &workforce_limits,
+        &mut work,
+    ) {
         work.fail("labor_allocation", reason);
     }
 }
@@ -27,6 +35,7 @@ fn plan(
     facilities: &Query<&Facility>,
     projects: &Query<&ConstructionProject>,
     definitions: &DefinitionRegistry,
+    workforce_limits: &WorkforceLimits,
     work: &mut DayWork,
 ) -> Result<(), String> {
     for group in population {
@@ -42,7 +51,13 @@ fn plan(
         province.report.available_workers = province
             .report
             .available_workers
-            .checked_add(group.0.workforce)
+            .checked_add(
+                workforce_limits
+                    .0
+                    .get(&group.0.id)
+                    .copied()
+                    .unwrap_or(group.0.workforce),
+            )
             .ok_or("province workforce overflow")?;
     }
     let mut requests: BTreeMap<ProvinceId, Vec<LaborRequest>> = BTreeMap::new();

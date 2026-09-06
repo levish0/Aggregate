@@ -25,6 +25,7 @@ aggregate-map-view = { path = "crates/aggregate-map-view" }
 aggregate-world = { path = "crates/aggregate-world" }
 aggregate-scenario = { path = "crates/aggregate-scenario" }
 aggregate-economy = { path = "crates/aggregate-economy" }
+aggregate-modules = { path = "crates/aggregate-modules" }
 aggregate-simulation-core = { path = "crates/aggregate-simulation-core" }
 
 # External dependencies
@@ -53,6 +54,7 @@ serde_with = "3.22.0"
 serde_json = "1.0.151"
 serde_json_canonicalizer = "0.3.2"
 ron = "0.12.2"
+semver = { version = "1.0.27", features = ["serde"] }
 
 [profile.dev]
 debug = 0
