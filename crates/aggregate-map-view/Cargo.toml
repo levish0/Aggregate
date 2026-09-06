@@ -9,6 +9,7 @@ bevy.workspace = true
 aggregate-geography.workspace = true
 aggregate-world.workspace = true
 bytemuck.workspace = true
+tracing.workspace = true
 
 [lints]
 workspace = true

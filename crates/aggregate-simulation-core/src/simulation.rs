@@ -23,6 +23,7 @@ impl Simulation {
     pub fn from_scenario(mut scenario: Scenario) -> Result<Self, SimulationError> {
         validate_scenario(&scenario)?;
         scenario.initial_state.normalize();
+        tracing::info!(preset = %scenario.id, countries = scenario.initial_state.countries.len(), provinces = scenario.initial_state.provinces.len(), "World initialized");
         Ok(Self::from_validated_state(
             scenario.clone(),
             &scenario.initial_state,
@@ -55,6 +56,7 @@ impl Simulation {
         &self.commands
     }
 
+    #[tracing::instrument(level = "debug", skip_all, fields(day = self.clock().day()))]
     pub fn execute(
         &mut self,
         command: SimulationCommand,
@@ -68,7 +70,11 @@ impl Simulation {
             &command,
             sequence,
             &self.initial_scenario,
-        )?;
+        )
+        .inspect_err(|error| {
+            tracing::warn!(?command, reason = %error, "Simulation command rejected");
+        })?;
+        tracing::info!(sequence, ?command, "Simulation command accepted");
         self.commands.push(RecordedCommand {
             day: self.clock().day(),
             sequence,
@@ -77,21 +83,29 @@ impl Simulation {
         Ok(outcome)
     }
 
+    #[tracing::instrument(level = "debug", skip_all, fields(day = self.clock().day().saturating_add(1)))]
     pub fn step(&mut self) -> Result<DayReport, SimulationError> {
         let next_day = self.clock().day().saturating_add(1);
         self.schedule.run(&mut self.world);
         let mut work = self.world.resource_mut::<DayWork>();
         if let Some((phase, reason)) = work.failure.take() {
+            tracing::error!(day = next_day, phase, %reason, "Daily calculation failed; state not committed");
             return Err(SimulationError::DayFailed {
                 day: next_day,
                 phase,
                 reason,
             });
         }
-        Ok(work
+        let report = work
             .report
             .take()
-            .expect("successful commit creates a day report"))
+            .expect("successful commit creates a day report");
+        tracing::debug!(
+            day = report.day,
+            events = report.events.len(),
+            "Daily state committed"
+        );
+        Ok(report)
     }
 
     /// Replay uses the same validated command path. Log order is semantic, never ECS order.

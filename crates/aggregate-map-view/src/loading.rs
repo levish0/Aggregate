@@ -16,6 +16,7 @@ use bevy::{
     tasks::{AsyncComputeTaskPool, Task, block_on, futures_lite::future},
 };
 use std::{collections::BTreeMap, sync::Arc};
+use tracing::Instrument;
 
 #[derive(Resource)]
 pub struct MapLoadTask(Task<Result<PreparedWorldMap, String>>);
@@ -38,32 +39,53 @@ pub fn start_loading(
     }
     state.loading = true;
     let root = root.0.clone();
-    commands.insert_resource(MapLoadTask(AsyncComputeTaskPool::get().spawn(async move {
-        let cache = std::env::var_os("LOCALAPPDATA")
-            .map(std::path::PathBuf::from)
-            .unwrap_or_else(std::env::temp_dir)
-            .join("Aggregate/cache/geography");
-        let (map, report) =
-            WorldMap::load_with_cache(&root, Some(&cache)).map_err(|error| format!("{error:#}"))?;
-        info!("Map data load: {report:?}");
-        let started = std::time::Instant::now();
-        let province_texture = if cfg!(target_endian = "little") {
-            bytemuck::cast_slice(&map.provinces.indices).to_vec()
-        } else {
-            map.provinces
-                .indices
-                .iter()
-                .flat_map(|index| index.to_le_bytes())
-                .collect()
-        };
-        let meshes = terrain_mesh::chunks(&map.terrain);
-        info!("Map render preparation: {:?}", started.elapsed());
-        Ok(PreparedWorldMap {
-            map,
-            province_texture,
-            meshes,
-        })
-    })));
+    let span = info_span!("map_preparation", asset_root = %root.display());
+    commands.insert_resource(MapLoadTask(
+        AsyncComputeTaskPool::get().spawn(
+            async move {
+                let cache = std::env::var_os("LOCALAPPDATA")
+                    .map(std::path::PathBuf::from)
+                    .unwrap_or_else(std::env::temp_dir)
+                    .join("Aggregate/cache/geography");
+                let (map, report) = WorldMap::load_with_cache(&root, Some(&cache))
+                    .map_err(|error| format!("{error:#}"))?;
+                info!(
+                    cache_hit = report.cache_hit,
+                    total_ms = report.total.as_secs_f64() * 1000.,
+                    catalog_ms = report.catalog.as_secs_f64() * 1000.,
+                    raster_ms = report.raster.as_secs_f64() * 1000.,
+                    heightfield_ms = report.heightfield.as_secs_f64() * 1000.,
+                    cache_ms = report.cache.as_secs_f64() * 1000.,
+                    "Map data loaded"
+                );
+                if let Some(reason) = &report.cache_warning {
+                    warn!(%reason, "Map cache fallback");
+                }
+                let started = std::time::Instant::now();
+                let province_texture = if cfg!(target_endian = "little") {
+                    bytemuck::cast_slice(&map.provinces.indices).to_vec()
+                } else {
+                    map.provinces
+                        .indices
+                        .iter()
+                        .flat_map(|index| index.to_le_bytes())
+                        .collect()
+                };
+                let meshes = terrain_mesh::chunks(&map.terrain);
+                info!(
+                    elapsed_ms = started.elapsed().as_secs_f64() * 1000.,
+                    mesh_count = meshes.len(),
+                    "Map meshes prepared"
+                );
+                Ok(PreparedWorldMap {
+                    map,
+                    province_texture,
+                    meshes,
+                })
+            }
+            .instrument(span),
+        ),
+    ));
 }
 
 pub fn finish_loading(
@@ -87,6 +109,7 @@ pub fn finish_loading(
     let prepared = match result {
         Ok(map) => map,
         Err(error) => {
+            error!(%error, "Map preparation failed");
             state.error = Some(error);
             return;
         }
