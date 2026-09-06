@@ -155,6 +155,7 @@ pub fn build(
         2,
         142.,
     );
+    crate::management::speed_controls(commands, toolbar, fonts, session, true, 20);
     let lang = ui::node(
         commands,
         toolbar,

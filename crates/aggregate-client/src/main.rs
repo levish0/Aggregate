@@ -74,6 +74,7 @@ fn create_app() -> App {
                     world_setup::finish_initialization,
                     management::apply_management_actions,
                     management::advance_running_session,
+                    management::update_speed_controls,
                     screens::rebuild,
                     world_setup::rebuild,
                     screens::world_map::configure_view,

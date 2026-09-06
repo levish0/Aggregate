@@ -137,6 +137,8 @@ pub fn build(
         commands.entity(button).insert(action);
     }
 
+    crate::management::speed_controls(commands, clock, fonts, session, session.geographic, 20);
+
     let rail = ui::panel(
         commands,
         root,

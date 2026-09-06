@@ -11,6 +11,7 @@ pub enum ManagementAction {
     StartConstructionAt { province: ProvinceId, definition: FacilityDefinitionId },
     StepDay,
     ToggleRunning,
+    SetSpeed(super::SimulationSpeed),
 }
 
 pub fn apply_management_actions(
@@ -51,28 +52,7 @@ pub fn apply_management_actions(
                 session.step();
             }
             ManagementAction::ToggleRunning => session.running = !session.running,
+            ManagementAction::SetSpeed(speed) => session.speed = *speed,
         }
-    }
-}
-
-/// One day per real second, with at most one day per rendered frame. Slow frames do not
-/// create a catch-up burst. Leaving management pauses the session, preserving its state.
-pub fn advance_running_session(
-    state: Res<InterfaceState>,
-    mut session: ResMut<ManagementSession>,
-    time: Res<Time<Real>>,
-    mut elapsed: Local<f32>,
-) {
-    if !(state.screen == Screen::Management || (state.screen == Screen::WorldMap && session.geographic)) || !session.running {
-        if session.running {
-            session.running = false;
-        }
-        *elapsed = 0.;
-        return;
-    }
-    *elapsed += time.delta_secs();
-    if *elapsed >= 1. {
-        *elapsed = 0.;
-        session.step();
     }
 }

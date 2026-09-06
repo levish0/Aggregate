@@ -30,6 +30,7 @@ pub struct ManagementSession {
     pub news: Vec<NewsEntry>,
     pub feedback: SessionFeedback,
     pub running: bool,
+    pub speed: super::SimulationSpeed,
     pub session_id: uuid::Uuid,
     pub geographic: bool,
     pub revision: u64,
@@ -64,6 +65,7 @@ impl ManagementSession {
             news: Vec::new(),
             feedback: SessionFeedback::Ready,
             running: false,
+            speed: super::SimulationSpeed::default(),
             session_id: uuid::Uuid::now_v7(),
             geographic: false,
             revision: 0,
@@ -77,7 +79,7 @@ impl ManagementSession {
         let definitions = scenario.definitions.clone();
         let mut simulation = Simulation::from_scenario_with_programs(scenario, programs)?;
         let snapshot = simulation.snapshot();
-        Ok(Self { simulation, snapshot, definitions, player_country, last_report: None, news: Vec::new(), feedback: SessionFeedback::Ready, running: false, session_id: uuid::Uuid::now_v7(), geographic: true, revision: 0 })
+        Ok(Self { simulation, snapshot, definitions, player_country, last_report: None, news: Vec::new(), feedback: SessionFeedback::Ready, running: false, speed: super::SimulationSpeed::default(), session_id: uuid::Uuid::now_v7(), geographic: true, revision: 0 })
     }
 
 
