@@ -50,7 +50,7 @@ tracing-subscriber = { version = "0.3.23", features = ["json", "env-filter"] }
 tracing-appender = "0.2.5"
 blake3 = "1.8.7"
 bytemuck = "1.25.2"
-zstd = "0.13.3"
+zstd = "0.14.0"
 serde = { version = "1.0.229", features = ["derive"] }
 serde_path_to_error = "0.1.20"
 serde_with = "3.22.0"
