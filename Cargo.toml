@@ -34,7 +34,7 @@ aggregate-simulation-core = { path = "crates/aggregate-simulation-core" }
 ab_glyph = "0.2.32"
 # Native terrain rendering and interface.
 bevy = { version = "0.19.1", default-features = false, features = ["2d", "3d", "ui", "dds"] }
-glam = "0.32.1"
+glam = "0.33.7"
 image = { version = "0.25.10", default-features = false, features = ["png"] }
 bevy_ecs = "0.19.1"
 fluent-bundle = "0.16"
